@@ -1,76 +1,51 @@
 $(document).ready(function () {
-    $('.search-block__input').on('focus', function () {
-        const $searchBlockInput = $(this);
-        const $searchBlock = $searchBlockInput.closest('form');
-        const $searchBlockPlaceholder = $searchBlock.find('.search-block__placeholder');
+    $('.search-form__btn').on('click', function() {
+        const $searchFormBtn = $(this);
+        const $searchForm = $searchFormBtn.closest('.search-form');
+        const $searchFormInput = $searchForm.find('.search-form__input');
+        const $dropSearch = $searchForm.find('.drop-search');
 
-        $searchBlock.addClass('active');
-        $searchBlockPlaceholder.addClass('active');
-        $('.search-block__form-btn').attr('type', 'submit');
+        $searchForm.addClass('active');
+        $searchFormInput.addClass('active');
 
-        if ($(window).width() > 1024) {
-            $('.header__menu').fadeOut('300');
-        }
-    });
-
-    $('.search-block__input').on('focusout', function () {
-        const $searchBlockInput = $(this);
-        const $searchBlock = $searchBlockInput.closest('form');
-        const $searchBlockPlaceholder = $searchBlock.find('.search-block__placeholder');
-
-        $searchBlockInput.val('');
-        $searchBlockPlaceholder.removeClass('active');
-        $searchBlock.removeClass('active');
-
-        if ($(window).width() > 767) {
-            $('.search-block__form-btn').attr('type', 'button');
-        }
-
-        $('.drop-search').hide();
-
-        if ($(window).width() > 1024) {
-            $('.header__menu').fadeIn('300');
-        }
-    });
-
-    if ($(window).width() < 768) {
-        $('.search-block__form-btn').attr('type', 'submit');
-    }
-
-    $(window).on('resize', function () {
-        if ($(window).width() < 768) {
-            $('.search-block__form-btn').attr('type', 'submit');
+        if ($searchFormInput.val() !== '') {
+            $dropSearch.addClass('active');
+            setTimeout(() => {
+                $searchFormBtn.attr('type', 'submit');
+            }, 300);
         } else {
-            $('.search-block__form-btn').attr('type', 'button');
+            $dropSearch.removeClass('active');
+            $searchFormBtn.attr('type', 'button');
         }
     });
 
-    $('.search-block__input').on('keyup', function () {
-        const $searchBlockInput = $(this);
-        const inputVal = $searchBlockInput.val();
-        const $searchBlock = $searchBlockInput.closest('form');
-        const $searchBlockPlaceholder = $searchBlock.find('.search-block__placeholder');
+    $('.search-form__input').on('change keyup', function() {
+        const $searchFormInput = $(this);
+        const $searchForm = $searchFormInput.closest('.search-form');
+        const $dropSearch = $searchForm.find('.drop-search');
+        const $searchFormBtn = $searchForm.find('.search-form__btn');
 
-        if (inputVal !== '') {
-            $('.drop-search').fadeIn('slow');
-            $searchBlockPlaceholder.removeClass('active');
+        if ($searchFormInput.val() !== '') {
+            $dropSearch.addClass('active');
+            $searchFormBtn.attr('type', 'submit');
         } else {
-            $('.drop-search').fadeOut('slow');
-            $searchBlockPlaceholder.addClass('active');
+            $dropSearch.removeClass('active');
+            $searchFormBtn.attr('type', 'button');
         }
-    });
-
-    $('.mob-search-btn').on('click', function () {
-        $('.search-block').slideDown('300');
     });
 
     $(document).on('mouseup', function (e) {
-        const $searchBlock = $('.search-block');
-        const $searchBlockPlaceholder = $searchBlock.find('.search-block__placeholder');
+        const $searchForm = $('.search-form');
+        const $searchFormInput = $searchForm.find('.search-form__input');
+        const $searchFormBtn = $searchForm.find('.search-form__btn');
+        const $dropSearch = $searchForm.find('.drop-search');
+        //const asidePopup = $('.aside-popup');
 
-        if ($(window).width() < 768 && !$searchBlock.is(e.target) && $searchBlock.has(e.target).length === 0) {
-            $searchBlock.slideUp();
-            $searchBlockPlaceholder.removeClass('active');
+        if (!$searchForm.is(e.target) && $searchForm.has(e.target).length === 0) {
+            $searchForm.removeClass('active');
+            $searchFormInput.removeClass('active');
+            $dropSearch.removeClass('active');
+            $searchFormBtn.attr('type', 'button');
         }
     });
 });

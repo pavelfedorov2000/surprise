@@ -165,11 +165,16 @@
 	// .footer__menu
 
 	&__menu {
-		@include row-grid(var(--offset-s));
+		@include margin-y(calc(var(--offset-xxs) * (-1)));
 
 		@media(max-width: $md) {
-			justify-items: center;
+			text-align: center;
 		}
+	}
+
+	&__menu-link {
+		display: block;
+		@include padding-y(var(--offset-xxs));
 	}
 
 	// .footer__address-items
@@ -217,10 +222,6 @@
 		display: flex;
 		justify-content: center;
 		flex-wrap: wrap;
-
-		/* @media(max-width: $md) {
-			@include margin-x(calc(var(--offset-xs) * (-1)));
-		} */
 
 		>* {
 			display: inline-flex;

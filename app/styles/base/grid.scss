@@ -38,7 +38,29 @@
 	}
 
 	&--with {
-		&_decor {}
+		&_decor {
+			&::before {
+				content: '';
+				position: absolute;
+				top: -283px;
+				right: calc(var(--offset-xs) * (-1));
+				z-index: -1;
+				width: var(--page-decor-w);
+				height: var(--page-decor-h);
+				background-image: url(../images/decor/page-top-decor.svg);
+				background-position: center;
+				//background-size: contain;
+				background-repeat: no-repeat;
+
+				@media(max-width: $lg) {
+					top: -95px;
+					right: -38px;
+					width: 260px;
+					height: 263px;
+					background-image: url(../images/decor/page-top-decor-mob.svg);
+				}
+			}
+		}
 	}
 }
 
@@ -53,7 +75,7 @@
 }
 
 .row {
-	@include grid-auto-fit(350px, var(--offset-xxl));
+	@include grid-auto-fit(calc(375px - var(--container-padding) * 2), var(--offset-xxl));
 
 	@media(max-width: $xl) {
 		gap: var(--offset-l);

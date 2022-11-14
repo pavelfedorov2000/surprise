@@ -42,7 +42,7 @@
 	</div>
 	<div class="header__bottom">
 		<div class="container header__inner">
-			<button class="menu-btn" type="button">
+			<button class="menu-btn" type="button" aria-expanded="false">
 				<picture class="menu-btn__icon">
 					<source media="(max-width: 1024px)" srcset="assets/images/icons/burger.svg">
 					<img class="logo__img" src="assets/images/icons/catalog.svg" alt="">
@@ -57,7 +57,8 @@
 			</a>
 			<div class="header__actions actions-header">
 				<div class="actions-header__items">
-					<form action="#" class="actions-header__item search-form">
+					<form action="#" class="actions-header__search search-form">
+						<input class="search-form__input input" placeholder="Поиск...">
 						<button class="search-form__btn" type="button" aria-label="Открыть поиск по сайту">
 							<svg width="24" height="24" viewBox="0 0 24 24" fill="none"
 								xmlns="http://www.w3.org/2000/svg">
@@ -65,6 +66,43 @@
 								<path d="M19 20L16 17" stroke="#1E1E1E" stroke-width="2" stroke-linecap="round" />
 							</svg>
 						</button>
+						<div class="drop-search">
+							<ul class="drop-search__list">
+								<li>
+									<a href="#" class="drop-search__link">
+										<svg class="icon" viewBox="0 0 24 24" fill="none"
+											xmlns="http://www.w3.org/2000/svg">
+											<circle cx="12" cy="12" r="9" stroke="#1E1E1E" stroke-width="2" />
+											<path d="M16.5 12H12.25C12.1119 12 12 11.8881 12 11.75V8.5" stroke="#1E1E1E"
+												stroke-width="2" stroke-linecap="round" />
+										</svg>
+										<span>спа</span>
+									</a>
+								</li>
+								<li>
+									<a href="#" class="drop-search__link">
+										<svg class="icon" viewBox="0 0 24 24" fill="none"
+											xmlns="http://www.w3.org/2000/svg">
+											<circle cx="12" cy="12" r="9" stroke="#1E1E1E" stroke-width="2" />
+											<path d="M16.5 12H12.25C12.1119 12 12 11.8881 12 11.75V8.5" stroke="#1E1E1E"
+												stroke-width="2" stroke-linecap="round" />
+										</svg>
+										<span>спасатель</span>
+									</a>
+								</li>
+								<li>
+									<a href="#" class="drop-search__link">
+										<svg class="icon" viewBox="0 0 24 24" fill="none"
+											xmlns="http://www.w3.org/2000/svg">
+											<circle cx="12" cy="12" r="9" stroke="#1E1E1E" stroke-width="2" />
+											<path d="M16.5 12H12.25C12.1119 12 12 11.8881 12 11.75V8.5" stroke="#1E1E1E"
+												stroke-width="2" stroke-linecap="round" />
+										</svg>
+										<span>спарринг</span>
+									</a>
+								</li>
+							</ul>
+						</div>
 					</form>
 					<button class="actions-header__item" type="button" aria-label="Авторизоваться">
 						<svg class="icon" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
