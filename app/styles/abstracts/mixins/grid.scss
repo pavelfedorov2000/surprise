@@ -1,0 +1,17 @@
+@mixin grid-row($gap) {
+	display: grid;
+	grid-auto-columns: max-content;
+	grid-auto-flow: column;
+	column-gap: $gap;
+}
+
+@mixin row-grid($row-gap) {
+	display: grid;
+	row-gap: $row-gap;
+}
+
+@mixin grid-auto-fit($min-width, $gap) {
+	display: grid;
+	grid-template-columns: repeat(auto-fit, minmax($min-width, 1fr));
+	gap: $gap;
+}

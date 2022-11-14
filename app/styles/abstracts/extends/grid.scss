@@ -1,0 +1,10 @@
+%grid-center {
+    display: grid;
+    place-items: center;
+}
+
+%grid-row {
+    display: grid;
+    grid-auto-columns: max-content;
+    grid-auto-flow: column;
+}

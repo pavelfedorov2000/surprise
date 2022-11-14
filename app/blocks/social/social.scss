@@ -1,0 +1,72 @@
+.social {
+	$this: &;
+
+	@include grid-row(28px);
+	// .social__item
+
+	&__item {
+		border-radius: 50%;
+		transition: $transition background-color;
+
+		.icon {
+			fill: var(--text-color);
+			stroke: none;
+		}
+
+		@media (any-hover: hover) {
+			&:hover {
+				background-color: var(--pink-light);
+
+				#{$this}__link {
+					border-color: var(--pink-light);
+				}
+
+				.icon {
+					fill: var(--black);
+				}
+			}
+		}
+
+		&--inst {
+			background-color: var(--pink);
+
+			#{$this}__link {
+				border-color: var(--pink);
+			}
+
+			.icon {
+				fill: #fff;
+			}
+
+			@media (any-hover: hover) {
+				&:hover {
+					background-color: var(--pink-hover);
+
+					#{$this}__link {
+						border-color: var(--pink-hover);
+					}
+
+					.icon {
+						fill: #fff;
+					}
+				}
+			}
+
+			&[disabled] {
+				background-color: var(--pink-disabled);
+			}
+		}
+	}
+
+	// .social__link
+
+	&__link {
+		font-size: 20px;
+		@include grid-center;
+		width: var(--offset-xxl);
+		height: var(--offset-xxl);
+		border-radius: 50%;
+		border: 1px solid var(--text-color);
+		transition: $transition border-color;
+	}
+}

@@ -1,0 +1,33 @@
+@@include("blocks/head/head.html", {"title": "Избранные товары"})
+@@include("blocks/head/no-js.html")
+<div class="wrapper">
+    @@include("blocks/header/header.html")
+    <main class="page catalog">
+        <div class="container">
+            <nav class="breadcrumbs"
+                 aria-label="breadcrumbs">
+                <ol class="breadcrumbs__list">
+                    <li class="breadcrumbs__item">
+                        <a href="#">
+                            Главная
+                        </a>
+                    </li>
+                    <li class="breadcrumbs__item">
+                        <span>
+                            Избранное
+                        </span>
+                    </li>
+                </ol>
+            </nav>
+            <div class="catalog__page">
+                <div class="page__top">
+                    <h1>Избранное</h1>
+                </div>
+            </div>
+        </div>
+    </main>
+</div>
+@@include("blocks/link/link.html")
+</body>
+
+</html>

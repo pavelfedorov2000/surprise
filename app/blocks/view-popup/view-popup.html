@@ -1,0 +1,68 @@
+@@include("blocks/head/head.html", {"title": "@@title"})
+@@include("blocks/head/no-js.html")
+<div class="wrapper">
+    @@include("blocks/header/header.html")
+    <main class="page">
+
+    </main>
+    @@include("blocks/footer/footer.html")
+    @@include("@@popupPath")
+</div>
+@@include("blocks/link/link.html")
+
+@@if(context.popupName == 'pickup-popup') {
+<script src="https://api-maps.yandex.ru/2.1.79/?lang=ru_RU"></script>
+<script>
+    ymaps.ready(init);
+
+    function init() {
+        var pickupMap = new ymaps.Map('pickup-map', {
+                center: [53.91108907066282, 27.41543249999999],
+                zoom: 7,
+                controls: []
+            }, {
+                searchControlProvider: 'yandex#search'
+            }),
+            objectManager = new ymaps.ObjectManager({
+                clusterize: true,
+                clusterIconColor: '#ff3916',
+                gridSize: 64,
+                clusterDisableClickZoom: true,
+            });
+        pickupMap.geoObjects.add(objectManager);
+
+        $.ajax({
+            url: "assets/shops.json",
+            cash: false,
+        }).done(function(data) {
+            objectManager.add(data);
+        });
+    }
+
+</script>
+}
+
+<script>
+    $.fancybox.open({
+        src: '#@@popupName',
+        type: 'inline',
+    });
+
+</script>
+
+@@if(context.popupName == 'cancel-order') {
+<script>
+    // Кнопка подтверждения отмены заказа в попапе
+    $('.cancel-order__btn').on('click', function() {
+        $.fancybox.close({
+            src: '#cancel-order',
+            type: 'inline',
+            touch: false
+        });
+    });
+
+</script>
+}
+</body>
+
+</html>

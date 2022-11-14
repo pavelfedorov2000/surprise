@@ -1,0 +1,61 @@
+@@include("blocks/head/head.html", {"title": "Оформить заказ"})
+@@include("blocks/head/no-js.html")
+<div class="wrapper">
+    @@include("blocks/header/header.html")
+    <main class="page">
+        <div class="container">
+            <nav class="breadcrumbs"
+                 aria-label="breadcrumbs">
+                <ol class="breadcrumbs__list">
+                    <li class="breadcrumbs__item">
+                        <a href="#">Главная</a>
+                    </li>
+                    <li class="breadcrumbs__item">
+                        <a href="#">Корзина</a>
+                    </li>
+                    <li class="breadcrumbs__item">
+                        <span>Оформить заказ</span>
+                    </li>
+                </ol>
+            </nav>
+
+            <div class="page__top">
+                <h1>Оформить заказ</h1>
+            </div>
+        </div>
+    </main>
+    @@include("blocks/footer/footer.html")
+</div>
+@@include("blocks/link/link.html")
+<!-- <script src="https://api-maps.yandex.ru/2.1.79/?lang=ru_RU"></script> -->
+<!-- <script src="./assets/libs/js/sticky-sidebar.min.js"></script> -->
+<!-- <script>
+	ymaps.ready(init);
+
+	function init() {
+		var pickupMap = new ymaps.Map('pickup-map', {
+				center: [53.91108907066282, 27.41543249999999],
+				zoom: 7,
+				controls: []
+			}, {
+				searchControlProvider: 'yandex#search'
+			}),
+			objectManager = new ymaps.ObjectManager({
+				clusterize: true,
+				clusterIconColor: '#ff3916',
+				gridSize: 64,
+				clusterDisableClickZoom: true
+			});
+		pickupMap.geoObjects.add(objectManager);
+
+		$.ajax({
+			url: "assets/shops.json",
+			cash: false,
+		}).done(function (data) {
+			objectManager.add(data);
+		});
+	}
+</script> -->
+</body>
+
+</html>

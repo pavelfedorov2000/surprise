@@ -1,0 +1,9 @@
+@mixin circle() {
+	position: relative;
+	@include grid-center;
+	width: var(--offset-xxl);
+	height: var(--offset-xxl);
+	border-radius: 50%;
+	background-color: #fff;
+	box-shadow: $bsh-3;
+}

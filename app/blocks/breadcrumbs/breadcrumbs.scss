@@ -1,0 +1,51 @@
+.breadcrumbs {
+	$this: &;
+
+	padding-bottom: var(--offset-xxs);
+
+	@media(max-width: $sm) {
+		padding-bottom: var(--offset-xxxs);
+	}
+
+	&__list {
+		display: flex;
+	}
+
+	&__item {
+		position: relative;
+
+		a {
+			transition: $transition color;
+
+			@media (any-hover: hover) {
+				&:hover {
+					color: var(--green);
+				}
+			}
+		}
+
+		&:not(:first-child) {
+			>* {
+				padding-left: var(--offset-s);
+			}
+		}
+
+		&:not(:last-child) {
+			>* {
+				padding-right: calc(var(--offset-s) + var(--offset-m));
+
+				&::after {
+					content: '';
+					position: absolute;
+					right: 0;
+					top: 50%;
+					transform: translateY(-50%);
+					width: var(--offset-m);
+					height: var(--offset-m);
+					background-image: url(../images/icons/crumb-arrow.svg);
+					@extend %bg-contain;
+				}
+			}
+		}
+	}
+}

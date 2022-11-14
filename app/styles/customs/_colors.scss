@@ -1,0 +1,31 @@
+.color {
+    &-inherit {
+        color: inherit;
+    }
+}
+
+.fill {
+    &-none {
+        fill: none;
+    }
+
+    &-inherit {
+        fill: inherit;
+    }
+
+    &-currentColor {
+        fill: currentColor;
+    }
+}
+
+.bg {
+    &c {
+        &-inherit {
+            background-color: inherit;
+        }
+
+        &-currentColor {
+            background-color: currentColor;
+        }
+    }
+}

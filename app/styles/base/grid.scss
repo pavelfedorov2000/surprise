@@ -1,0 +1,61 @@
+.container {
+	width: calc(var(--container-width) + var(--container-padding) * 2);
+	max-width: 100%;
+	@include padding-x(var(--container-padding));
+	margin: 0 auto;
+}
+
+.wrapper {
+	position: relative;
+	display: flex;
+	flex-direction: column;
+	min-height: 100vh;
+	overflow-x: hidden;
+
+	/* @media(max-width: $lg) {
+        overflow-x: hidden;
+    } */
+}
+
+.page {
+	position: relative;
+	flex: 1 0 auto; // Footer at bottom
+
+	&__title {
+		margin-bottom: var(--section-padding);
+
+		@media(max-width: $lg) {
+			margin-bottom: var(--offset-xxl);
+		}
+	}
+
+	&--padding {
+		@include padding-y(var(--section-padding));
+
+		@media(max-width: $lg) {
+			@include padding-y(var(--offset-xxl));
+		}
+	}
+
+	&--with {
+		&_decor {}
+	}
+}
+
+.section {
+	padding-bottom: var(--section-padding);
+
+	&--padding {
+		&_xl {
+			padding-bottom: var(--section-padding-xl);
+		}
+	}
+}
+
+.row {
+	@include grid-auto-fit(350px, var(--offset-xxl));
+
+	@media(max-width: $xl) {
+		gap: var(--offset-l);
+	}
+}

@@ -1,0 +1,94 @@
+@@include("blocks/head/head.html", {"title": "Магазины"})
+@@include("blocks/head/no-js.html")
+<div class="wrapper">
+    @@include("blocks/header/header.html")
+    <main class="page">
+        <div class="container">
+            <nav class="breadcrumbs"
+                 aria-label="breadcrumbs">
+                <ol class="breadcrumbs__list">
+                    <li class="breadcrumbs__item">
+                        <a href="#">Главная</a>
+                    </li>
+                    <li class="breadcrumbs__item">
+                        <span>Магазины</span>
+                    </li>
+                </ol>
+            </nav>
+
+            <div class="page__top">
+                <h1>Магазины</h1>
+            </div>
+        </div>
+    </main>
+    @@include("blocks/footer/footer.html")
+</div>
+@@include("blocks/link/link.html")
+<!-- <script src="https://api-maps.yandex.ru/2.1.79/?lang=ru_RU"></script> -->
+<!-- <script>
+    // Функция фильтрации по городам
+    function filterCities() {
+        $('.shop-item__link').on('click', function() {
+            const $shopLink = $(this);
+            const $links = $shopLink.parents('.shop-item').siblings().find('.shop-item__link');
+            $links.removeClass('active');
+            $shopLink.addClass('active');
+        });
+    }
+    filterCities();
+
+    ymaps.ready(init);
+
+    function init() {
+
+        let shopsMap = new ymaps.Map('shops-map', {
+                center: [53.91108907066282, 27.41543249999999],
+                zoom: 6,
+            }, {
+                searchControlProvider: 'yandex#search'
+            }),
+            shopsMapObjectManager = new ymaps.ObjectManager({
+                clusterize: true,
+                clusterIconColor: '#ff3916',
+                gridSize: 32,
+                groupByCoordinates: false,
+                clusterDisableClickZoom: false,
+                clusterHideIconOnBalloonOpen: false,
+                geoObjectHideIconOnBalloonOpen: false,
+                hasBalloon: false
+            });
+        shopsMap.geoObjects.add(shopsMapObjectManager);
+
+        shopsMap.behaviors.disable('scrollZoom');
+
+        function filterCity(cityName) {
+            let filterStr = 'options.city == "' + cityName + '"';
+            shopMapObjectManager.setFilter(filterStr);
+        }
+
+        let shopsData;
+
+        shopsMapObjectManager.objects.events.add('click', function(e) {
+            
+        });
+
+        $.ajax({
+            url: "assets/shops.json",
+            cash: false,
+        }).done(function(data) {
+            shopsData = data.features;
+            shopsMapObjectManager.add(data);
+            shopMapObjectManager.add(data);
+            //filterCity($('.shop-item__link.active').attr('data-city'));
+            var objectState = shopMapObjectManager.getObjectState(1);
+            if (objectState.isClustered) {
+                shopMapObjectManager.clusters.state.set('activeObject', shopMapObjectManager.objects.getById(1));
+                shopMapObjectManager.clusters.balloon.open(objectState.cluster.id);
+            }
+        });
+    }
+
+</script> -->
+</body>
+
+</html>

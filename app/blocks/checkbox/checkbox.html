@@ -1,0 +1,12 @@
+<div class="checkbox@@if(context.class){ @@class}@@if(context.size){ checkbox--size_@@size}">
+    <label class="checkbox__wrap">
+        @@if(context.check) {
+        <input class="checkbox__input"
+               type="checkbox">
+        <span class="checkbox__style"></span>
+        }
+        @@if(context.text){
+        <span class="checkbox__text">@@text</span>
+        }
+    </label>
+</div>

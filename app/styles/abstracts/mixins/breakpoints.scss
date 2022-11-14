@@ -1,0 +1,22 @@
+$breakpoints: (
+    xxl: 1920,
+    xl: 1600,
+    l: 1440,
+    m: 1280,
+    s: 1024,
+    xs: 768,
+    xxs: 520,
+    xxxs: 375
+);
+
+@mixin _media($size, $min: max-width) {
+    $i: 1;
+
+    @if $min == min-width {
+        $i: -1;
+    }
+
+    @media screen and ($min: map-get($breakpoints, #{$size}) - $i + 'px') {
+        @content;
+    }
+}

@@ -1,0 +1,202 @@
+.fancybox-content {
+    padding: 0;
+    overflow: visible;
+
+    /* @media(max-width: 767px) {
+		vertical-align: top;
+	} */
+}
+
+.fancybox-can-swipe .fancybox-content {
+    cursor: default;
+}
+
+.fancybox-toolbar {
+    background: transparent;
+
+    > *:not(.fancybox-button--close) {
+        display: none;
+    }
+}
+
+.fancybox-infobar {
+    @extend %pos-center-x;
+    bottom: 5.6rem;
+    top: auto;
+    color: #fff;
+    @extend %text-16;
+
+    @media (max-width: 1024px) {
+        bottom: 3rem;
+    }
+
+    span {
+        position: relative;
+
+        &::before {
+            content: '0';
+            position: absolute;
+            top: -0.2rem;
+            left: -1rem;
+            @extend %text-16;
+        }
+
+        &[data-fancybox-index] {
+            margin-right: 2rem;
+        }
+
+        &[data-fancybox-count] {
+            margin-left: 2rem;
+        }
+    }
+}
+
+.fancybox-bg {
+    z-index: 99991;
+    background: var(--default);
+}
+
+.fancybox-is-open .fancybox-bg {
+    opacity: 0.8;
+}
+
+.fancybox-slide {
+    padding: 0;
+}
+
+.fancybox-slide--image {
+    .fancybox-content {
+        left: 50%;
+        transform: translate(-50%, -50%) !important;
+        top: 50%;
+    }
+}
+
+.fancybox-slide--video .fancybox-content {
+    @media (min-width: 1025px) {
+        width: 67rem !important;
+    }
+}
+
+.fancybox-button {
+    width: 3.6rem * 3;
+    height: 3.6rem * 3;
+    padding: 3.6rem;
+    background: transparent;
+
+    svg {
+        width: 3.6rem;
+        height: 3.6rem;
+
+        path {
+            fill: #fff;
+            transition: 0.3s fill;
+        }
+    }
+}
+
+.fancybox-button--close {
+    @media (any-hover: hover) {
+        &:hover {
+            svg path {
+                fill: var(--accent);
+            }
+        }
+    }
+}
+
+.fancybox-slide--html {
+    @media (max-width: 500px) {
+        padding: 0;
+    }
+
+    .fancybox-close-small {
+        top: 2rem;
+        right: 2rem;
+        z-index: 99995;
+        padding: 0;
+        width: 3.6rem;
+        height: 3.6rem;
+        opacity: 1;
+
+        @media (max-width: 500px) {
+            top: 1.5rem;
+            right: 1.5rem;
+        }
+
+        svg {
+            width: 3.6rem;
+            height: 3.6rem;
+
+            path {
+                fill: var(--gray-9e);
+                transition: 0.3s fill;
+
+                @media (any-hover: hover) {
+                    &:hover {
+                        fill: var(--dark-text);
+                    }
+                }
+            }
+        }
+    }
+}
+
+.fancybox-button--zoom {
+    display: none !important;
+}
+
+.fancybox-navigation .fancybox-button {
+    width: 3.6rem;
+    height: 3.6rem;
+    background: transparent;
+    opacity: 1;
+    top: 50%;
+    transform: translateY(-50%);
+
+    div {
+        padding: 0;
+        position: relative;
+
+        svg {
+            display: none;
+        }
+
+        &::before {
+            content: '';
+            position: absolute;
+            @extend %pos-center-xy;
+            @extend %bg-contain;
+            width: 3.6rem;
+            height: 3.6rem;
+        }
+    }
+
+    &--arrow {
+        &_left {
+            left: 4.8rem;
+            padding: 0;
+
+            @media (max-width: 1024px) {
+                left: 1.6rem;
+            }
+
+            div:before {
+                background-image: url(../images/icons/arr-l-white.svg);
+            }
+        }
+
+        &_right {
+            right: 4.8rem;
+            padding: 0;
+
+            @media (max-width: 1024px) {
+                right: 1.6rem;
+            }
+
+            div:before {
+                background-image: url(../images/icons/arr-r-white.svg);
+            }
+        }
+    }
+}

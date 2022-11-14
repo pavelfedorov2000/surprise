@@ -1,0 +1,96 @@
+// ===================== CHECKBOXES ==================== //
+.checkbox {
+    $this: &; // .checkbox
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    &__input {
+        width: 1px;
+        height: 1px;
+        overflow: hidden;
+        position: absolute;
+        clip: rect(0 0 0 0);
+
+        &:checked ~ #{$this} {
+            &__style {
+                //background-color: $green-text;
+                //border-color: $green-text;
+
+                &:before {
+                    content: '';
+                    position: absolute;
+                    top: 50%;
+                    left: 50%;
+                    transform: translate(-50%, -50%);
+                    //background-image: url(../images/check.svg);
+                    background-size: contain;
+                    background-position: center;
+                    background-repeat: no-repeat;
+                }
+            }
+        }
+    }
+
+    &__style {
+        position: relative;
+        flex-shrink: 0;
+        margin-right: 10px;
+        width: 20px;
+        height: 20px;
+        //border: 1px solid $gray-hover;
+        border-radius: 2px;
+        transition: .3s border-color, .3s background-color;
+    }
+
+    &__wrap {
+        cursor: pointer;
+        display: flex;
+        align-items: center;
+
+        @media (any-hover: hover) {
+            &:hover {
+                #{$this} {
+                    &__input {
+                        &:not(:checked) + #{$this}__style {
+                            //border-color: $gray-text;
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    &__text {
+        transition: .3s color;
+    }
+
+    a {
+        &#{$this}__text {
+            @media (any-hover: hover) {
+                &:hover {
+                    //color: $green-text;
+                }
+            }
+        }
+    }
+
+    &--size {
+        &_xs {
+            #{$this} {
+                &__style {
+                    width: 16px;
+                    height: 16px;
+                }
+            }
+        }
+
+        &_xl {
+            font-size: 16px;
+            line-height: 20px;
+        }
+    }
+
+    //&.error ~ .check-style {}
+}

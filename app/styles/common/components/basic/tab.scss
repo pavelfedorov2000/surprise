@@ -1,0 +1,29 @@
+.tabs {
+	display: flex;
+	flex-wrap: wrap;
+	margin-left: calc(var(--offset-s) * (-1));
+	margin-bottom: var(--offset-xl);
+}
+
+.tab {
+	padding: var(--offset-xxs) var(--offset-m);
+	background-color: #F5F8F8;
+	border-radius: $brs;
+	font-size: 16px;
+	line-height: 1.5;
+	margin-left: var(--offset-s);
+	margin-bottom: var(--offset-xxs);
+	transition: $transition all;
+
+	&.active {
+		background-color: var(--green);
+		color: #fff;
+	}
+
+	@media (any-hover: hover) {
+		&:hover {
+			background-color: var(--green);
+			color: #fff;
+		}
+	}
+}

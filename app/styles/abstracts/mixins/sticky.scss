@@ -1,0 +1,5 @@
+@mixin sticky($top) {
+	position: sticky;
+	top: $top;
+	height: fit-content;
+}

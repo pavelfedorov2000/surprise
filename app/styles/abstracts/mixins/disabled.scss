@@ -1,0 +1,4 @@
+@mixin disabled() {
+    opacity: $op-disabled;
+    pointer-events: none !important;
+}

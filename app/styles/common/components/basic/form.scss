@@ -1,0 +1,79 @@
+// input number
+input[type='number'] {
+    &::-webkit-inner-spin-button {
+        -webkit-appearance: none;
+    }
+
+    &::-webkit-outer-spin-button {
+        -webkit-appearance: none;
+    }
+}
+
+input[type='number'] {
+    -moz-appearance: textfield;
+}
+
+input[type='number']:hover,
+input[type='number']:focus {
+    -moz-appearance: number-input;
+}
+
+// jquery ui range slider
+/* .ui-widget-content {
+	background-color: #c7d8ce;
+	border-radius: 1rem;
+	height: 1.4rem;
+}
+
+.ui-state-default,
+.ui-widget-content .ui-state-default {
+	width: 1.6rem;
+	height: 1.6rem;
+	border-radius: 50%;
+	background-color: $accent;
+	border: none;
+}
+
+.ui-slider-horizontal .ui-slider-handle {
+	top: -0.2rem;
+} */
+
+// SWITCHER
+/* .switcher-input {
+	display: none;
+}
+
+.switcher-input+.switcher-style {
+	position: relative;
+	padding: 0 0 0 6rem;
+	cursor: pointer;
+
+	&:before,
+	&:after {
+		content: '';
+		position: absolute;
+		transition: .2s;
+	}
+
+	&:before {
+		top: -0.8rem;
+		left: 0;
+		width: 4rem;
+		height: 2.4rem;
+		border: 0.1rem solid $dark-gray;
+		border-radius: 3.4rem;
+	}
+
+	&:after {
+		top: -0.4rem;
+		left: 0.4rem;
+		width: 1.6rem;
+		height: 1.6rem;
+		background: $dark-gray;
+		border-radius: 50%;
+	}
+}
+
+.switcher-input:checked+.switcher-style::after {
+	left: 2rem;
+} */

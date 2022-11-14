@@ -1,0 +1,8 @@
+label.error {
+    @extend %text-12;
+    color: red;
+}
+
+.input.error {
+    border-color: red;
+}

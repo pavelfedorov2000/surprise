@@ -1,0 +1,5 @@
+$transition-timing: cubic-bezier(0.4, 0, 0.2, 1);
+$duration: 0.3s; // указывать только в секундах!
+$duration--long: 1s; // указывать только в секундах!
+$delay: $duration;
+$transition: $duration $transition-timing;

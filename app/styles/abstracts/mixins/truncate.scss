@@ -1,0 +1,7 @@
+// Добавление троеточия в конце строки
+@mixin truncate($truncation-boundary) {
+    max-width: $truncation-boundary;
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+}

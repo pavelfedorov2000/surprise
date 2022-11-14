@@ -1,0 +1,55 @@
+body {
+	min-width: 320px;
+	font-style: normal;
+	font-family: $ff;
+	font-size: #{$fz}px;
+	line-height: 1.5;
+	font-weight: 500;
+	color: $color-default;
+	overflow-x: hidden;
+
+	/* @media(max-width: $lg) {
+		overflow-x: hidden;
+	} */
+
+	&._lock {
+		overflow-y: hidden;
+	}
+}
+
+address {
+	font-style: normal;
+}
+
+button,
+input,
+textarea {
+	font-family: $ff;
+}
+
+img {
+	max-width: 100%;
+	height: auto;
+	vertical-align: top;
+	border: none;
+
+	table & {
+		max-width: none;
+	}
+}
+
+p {
+	font-family: 'Museo Sans Cyrl 300', sans-serif;
+	font-weight: 300;
+	color: var(--text-color);
+}
+
+.menu-link {
+	transition: $transition color;
+
+	@media (any-hover: hover) {
+		&:hover {
+			color: var(--green);
+		}
+	}
+}

@@ -1,0 +1,43 @@
+:root {
+	--pink: #F395A9;
+	--pink-hover: #E6859A;
+	--pink-pressed: #EDA2B2;
+	--pink-light: #F6DFE3;
+	--pink-disabled: #F6DFE3;
+	--yellow: #EEF651;
+	--yellow-hover: #E4ED36;
+	--yellow-pressed: #F0F592;
+	--yellow-light: #FDFFC7;
+	--green: #258884;
+	--green-hover: #1F6F6C;
+	--green-pressed: #369A96;
+	//#D7EDEC
+	--green-light: #D7EDEC;
+	--black: #1E1E1E;
+	--text-color: #535353;
+	--gray: #F6F6F6;
+	--light-gray: #d7dded;
+	--red: #e73656;
+	--line-color: #BDBDBD;
+	--light-blue: #ecf1ff;
+
+	//--mob-padding: 1.2rem;
+	//--gap: 20rem;
+	--container-width: 1440px;
+	--container-padding: 16px;
+	--header-height: 140px;
+	//--input-height: 5.6rem;
+	--section-padding: 100px;
+	--section-padding-xl: 120px;
+
+	// offsets (gaps)
+	--offset-xxxl: 64px;
+	--offset-xxl: 56px;
+	--offset-xl: 40px;
+	--offset-l: 32px;
+	--offset-m: 24px;
+	--offset-s: 16px;
+	--offset-xs: 12px;
+	--offset-xxs: 8px;
+	--offset-xxxs: 4px;
+}

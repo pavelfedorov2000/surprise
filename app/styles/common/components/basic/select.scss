@@ -1,0 +1,97 @@
+// Only arrow styling
+.select {
+	-webkit-appearance: none;
+	-moz-appearance: none;
+	background-image: url(../img/select-drop.svg);
+	background-position: calc(100% - 20px) 50%;
+	background-repeat: no-repeat;
+}
+
+// Custom select
+.select {
+	position: relative;
+	@extend %text-14;
+
+	&[data-state="active"] {
+		.select {
+			&__title {
+
+				&::after {
+					transform: rotate(180deg);
+				}
+			}
+
+			&__content {
+				opacity: 1;
+				pointer-events: all;
+			}
+		}
+	}
+
+	&__title {
+		@extend %vertical-align;
+		height: 4.7rem;
+		padding-left: 2rem;
+		padding-right: 5rem;
+		background-color: #FFF;
+		border: 0.1rem solid #000;
+		cursor: pointer;
+
+		&::after {
+			content: "";
+			position: absolute;
+			top: calc(50% - 0.7rem / 2);
+			right: 1.8rem;
+			width: 1rem;
+			height: 0.7rem;
+			background-color: #000;
+			clip-path: polygon(0% 0%, 100% 0%, 50% 100%);
+			transition: all 0.3s ease-out;
+		}
+	}
+
+	&__content {
+		position: absolute;
+		top: 4.7rem;
+		left: 0;
+		right: 0;
+		@extend %flex-col;
+		width: 100%;
+		border: 0.1rem solid #000;
+		border-top: none;
+		transition: all 0.3s ease-out;
+		opacity: 0;
+		z-index: 30;
+		background-color: #fff;
+		pointer-events: none;
+	}
+
+	&__input {
+		display: none;
+
+		&:checked+label {
+			background-color: $accent;
+			color: #fff;
+		}
+	}
+
+	&__label {
+		display: flex;
+		align-items: center;
+		width: 100%;
+		cursor: pointer;
+		overflow: hidden;
+		padding: 1rem 1.4rem;
+
+		@media(max-width: 500px) {
+			padding: 0.7rem;
+		}
+
+		@media (any-hover: hover) {
+			&:hover {
+				background-color: $accent;
+				color: #fff;
+			}
+		}
+	}
+}

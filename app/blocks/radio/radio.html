@@ -1,0 +1,16 @@
+<div class="radiobutton@@if(context.class){ @@class}">
+    @@if(context.check){
+    <label class="radiobutton__wrap" for="@@id">
+        @@if(context.check) {
+        <input class="radiobutton__input"
+               name="@@name"
+               id="@@id"
+               type="radio">
+        <span class="radiobutton__style"></span>
+        }
+        @@if(context.text){
+        <span class="radiobutton__text">@@text</span>
+        }
+    </label>
+    }
+</div>

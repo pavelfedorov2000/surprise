@@ -1,0 +1,11 @@
+.bsh {
+    box-shadow: $bsh;
+
+    &-2 {
+        box-shadow: $bsh-2;
+    }
+
+    &-3 {
+        box-shadow: $bsh-3;
+    }
+}

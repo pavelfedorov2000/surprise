@@ -1,0 +1,87 @@
+.radio {
+    $this: &; // .radio
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    &__input {
+        width: 1px;
+        height: 1px;
+        overflow: hidden;
+        position: absolute;
+        clip: rect(0 0 0 0);
+
+        &:checked ~ #{$this} {
+            &__style {
+                //background-color: $green-text;
+                //border-color: $green-text;
+
+                &:before {
+                    content: '';
+                    position: absolute;
+                    top: -1px;
+                    left: -1px;
+                    width: 20px;
+                    height: 20px;
+                    border-radius: 50%;
+                    box-sizing: border-box;
+                    //border: 7px solid $green-text;
+                    background: #fff;
+
+                    @media (max-width: $md) {
+                        width: 16px;
+                        height: 16px;
+                        border-width: 5.5px;
+                    }
+                }
+            }
+        }
+    }
+
+    &__style {
+        position: relative;
+        flex-shrink: 0;
+        margin-right: 16px;
+        width: 20px;
+        height: 20px;
+        box-sizing: border-box;
+        //border: 1px solid $gray-hover;
+        border-radius: 50%;
+        transition: .3s border-color, .3s background-color;
+
+        @media (max-width: $md) {
+            width: 16px;
+            height: 16px;
+            margin-right: 18px;
+        }
+    }
+
+    &__wrap {
+        cursor: pointer;
+        display: flex;
+        align-items: center;
+
+        @media (any-hover: hover) {
+            &:hover {
+                #{$this} {
+                    &__input {
+                        &:not(:checked) + #{$this}__style {
+                            //border-color: $gray-text;
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    &__text {
+        font-size: 20px;
+        line-height: 30px;
+        transition: .3s color;
+
+        @media (max-width: $md) {
+            font-size: 16px;
+        }
+    }
+}

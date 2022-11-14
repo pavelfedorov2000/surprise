@@ -1,0 +1,6 @@
+@mixin border-text($color, $fill-color) {
+    color: $color;
+    -webkit-text-fill-color: $fill-color;
+    -webkit-text-stroke-width: 0.1rem;
+    -webkit-text-stroke-color: $color;
+}
