@@ -1,83 +1,87 @@
 .container {
-	width: calc(var(--container-width) + var(--container-padding) * 2);
-	max-width: 100%;
-	@include padding-x(var(--container-padding));
-	margin: 0 auto;
+    width: calc(var(--container-width) + var(--container-padding) * 2);
+    max-width: 100%;
+    @include padding-x(var(--container-padding));
+    margin: 0 auto;
 }
 
 .wrapper {
-	position: relative;
-	display: flex;
-	flex-direction: column;
-	min-height: 100vh;
-	overflow-x: hidden;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    overflow-x: hidden;
 
-	/* @media(max-width: $lg) {
+    /* @media(max-width: $lg) {
         overflow-x: hidden;
     } */
 }
 
 .page {
-	position: relative;
-	flex: 1 0 auto; // Footer at bottom
+    position: relative;
+    flex: 1 0 auto; // Footer at bottom
 
-	&__title {
-		margin-bottom: var(--section-padding);
+    &__title {
+        margin-bottom: var(--section-padding);
 
-		@media(max-width: $lg) {
-			margin-bottom: var(--offset-xxl);
-		}
-	}
+        @media(max-width: $lg) {
+            margin-bottom: var(--offset-xxl);
+        }
+    }
 
-	&--padding {
-		@include padding-y(var(--section-padding));
+    &--padding {
+        @include padding-y(var(--section-padding));
 
-		@media(max-width: $lg) {
-			@include padding-y(var(--offset-xxl));
-		}
-	}
+        @media(max-width: $lg) {
+            @include padding-y(var(--offset-xxl));
+        }
+    }
 
-	&--with {
-		&_decor {
-			&::before {
-				content: '';
-				position: absolute;
-				top: -283px;
-				right: calc(var(--offset-xs) * (-1));
-				z-index: -1;
-				width: var(--page-decor-w);
-				height: var(--page-decor-h);
-				background-image: url(../images/decor/page-top-decor.svg);
-				background-position: center;
-				//background-size: contain;
-				background-repeat: no-repeat;
+    &--with {
+        &_decor {
+            &::before {
+                content: '';
+                position: absolute;
+                top: -283px;
+                right: calc(var(--offset-xs) * (-1));
+                z-index: -1;
+                width: var(--page-decor-w);
+                height: var(--page-decor-h);
+                background-image: url(../images/decor/page-top-decor.svg);
+                background-position: center;
+                //background-size: contain;
+                background-repeat: no-repeat;
 
-				@media(max-width: $lg) {
-					top: -95px;
-					right: -38px;
-					width: 260px;
-					height: 263px;
-					background-image: url(../images/decor/page-top-decor-mob.svg);
-				}
-			}
-		}
-	}
+                @media(max-width: $lg) {
+                    top: -95px;
+                    right: -38px;
+                    width: 260px;
+                    height: 263px;
+                    background-image: url(../images/decor/page-top-decor-mob.svg);
+                }
+            }
+        }
+    }
 }
 
 .section {
-	padding-bottom: var(--section-padding);
+    padding-bottom: var(--section-padding);
 
-	&--padding {
-		&_xl {
-			padding-bottom: var(--section-padding-xl);
-		}
-	}
+    &--padding {
+        &_xl {
+            padding-bottom: var(--section-padding-xl);
+        }
+    }
 }
 
 .row {
-	@include grid-auto-fit(calc(375px - var(--container-padding) * 2), var(--offset-xxl));
+    @include grid-auto-fit(350px, var(--offset-xxl));
 
-	@media(max-width: $xl) {
-		gap: var(--offset-l);
-	}
+    @media(max-width: $xl) {
+        gap: var(--offset-l);
+    }
+
+    @media(max-width: $md) {
+        grid-template-columns: repeat(auto-fit, minmax(calc(320px - var(--container-padding) * 2)));
+    }
 }

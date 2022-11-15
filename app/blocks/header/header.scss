@@ -11,19 +11,7 @@
 			display: block;
 			@include padding-y(var(--offset-xs));
 			background-color: var(--gray);
-
-			/* #{$this}__inner {
-				display: flex;
-				flex-direction: column;
-				align-items: flex-start;
-			} */
 		}
-
-		/* @media(min-width: 1201px) {
-			#{$this}__inner {
-				flex-direction: row;
-			}
-		} */
 	}
 
 	// .header__inner
@@ -195,7 +183,7 @@
 	&__btn {
 		margin-left: calc(var(--offset-xxxl) - var(--offset-xxxs));
 
-		@media(max-width: $lg) {
+		@media(max-width: $xl) {
 			display: none;
 		}
 	}

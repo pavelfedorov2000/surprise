@@ -1,8 +1,17 @@
 .tabs {
 	display: flex;
-	flex-wrap: wrap;
-	margin-left: calc(var(--offset-s) * (-1));
-	margin-bottom: var(--offset-xl);
+	margin-bottom: var(--offset-xxxl);
+    overflow-x: auto;
+
+    @media(max-width: $md) {
+       margin-bottom: var(--offset-l);
+    }
+
+    &::-webkit-scrollbar {
+		width: 0;
+		-webkit-appearance: none;
+		scrollbar-width: 0;
+	}
 }
 
 .tab {
@@ -11,8 +20,8 @@
 	border-radius: $brs;
 	font-size: 16px;
 	line-height: 1.5;
-	margin-left: var(--offset-s);
-	margin-bottom: var(--offset-xxs);
+    white-space: nowrap;
+	margin-right: var(--offset-s);
 	transition: $transition all;
 
 	&.active {

@@ -11,7 +11,7 @@ $(document).ready(function () {
         const $menuBtn = $(this);
 
         if ($menuBtn.attr('aria-expanded') === 'false') {
-            //$('html').addClass('disable-fix');
+            $('html').addClass('disable-fix');
             $('body').addClass('_lock');
             $('.overlay--menu').fadeIn();
             $('.menu').addClass('active');
@@ -21,7 +21,7 @@ $(document).ready(function () {
             $('.menu').removeClass('active');
             $('.overlay').fadeOut();
             $('body').removeClass('_lock');
-            //$('html').removeClass('disable-fix');
+            $('html').removeClass('disable-fix');
         }
     });
 
@@ -30,20 +30,19 @@ $(document).ready(function () {
         $('.menu').removeClass('active');
         $('.overlay').fadeOut();
         $('body').removeClass('_lock');
-        //$('html').removeClass('disable-fix');
+        $('html').removeClass('disable-fix');
     });
 
     $(document).on('mouseup', function (e) {
         const $menu = $('.menu');
         const $menuBtn = $('.menu-btn');
-        //const asidePopup = $('.aside-popup');
 
         if (!$menu.is(e.target) && $menu.has(e.target).length === 0 && !$menuBtn.is(e.target) && $menuBtn.has(e.target).length === 0) {
             $menuBtn.attr('aria-expanded', false);
             $menu.removeClass('active');
             $('.overlay').fadeOut();
             $('body').removeClass('_lock');
-            //$('html').removeClass('disable-fix');
+            $('html').removeClass('disable-fix');
         }
     });
 
