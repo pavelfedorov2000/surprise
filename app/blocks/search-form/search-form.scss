@@ -1,0 +1,64 @@
+.search-form {
+    position: relative;
+    width: 296px;
+
+    @media(max-width: $md) {
+        width: auto;
+        transition: $transition all;
+    }
+
+    &.active {
+        @media(max-width: $md) {
+            position: fixed;
+            top: 0;
+            left: 0;
+            z-index: 11;
+            margin-left: 0;
+            width: 100%;
+            height: var(--header-height-mob);
+            background-color: #fff;
+        }
+    }
+
+    &__input {
+        width: 100%;
+        padding: 0;
+        opacity: 0;
+        visibility: hidden;
+        pointer-events: none;
+        transition: $transition all;
+
+        @media(max-width: $md) {
+            height: 100%;
+            border: none;
+        }
+
+        &.active {
+            padding: 15.5px calc(var(--offset-m) * 3) 17.5px var(--offset-m);
+            opacity: 1;
+            visibility: visible;
+            pointer-events: all;
+        }
+    }
+
+    // .search-form__btn
+
+    &__btn {
+        position: absolute;
+        top: 50%;
+        transform: translateY(-50%);
+        right: calc(var(--offset-m) - var(--offset-xxxs));
+        display: inline-flex;
+        align-items: center;
+        border-radius: 50%;
+        padding: var(--offset-xxxs);
+        font-size: 24px;
+        transition: $transition background-color;
+
+        @media (any-hover: hover) {
+            &:hover {
+                background-color: var(--gray);
+            }
+        }
+    }
+}

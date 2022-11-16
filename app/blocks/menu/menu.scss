@@ -9,8 +9,11 @@
     background-color: rgba(0, 0, 0, 0.28);
 
     &--menu {
-        @media(max-width: $sm) {
+        @media(max-width: $md) {
             top: var(--header-height-mob);
+        }
+
+        @media(max-width: $sm) {
             background-color: transparent;
         }
     }
@@ -49,15 +52,19 @@
     transition: $transition left;
 
     @media(max-width: $lg) {
+        width: auto;
         @include padding-x(var(--offset-l));
     }
 
-    @media(max-width: $sm) {
+    @media(max-width: $md) {
         top: -150%;
         left: 0;
-        width: 100%;
         padding: var(--offset-m) 15px var(--offset-xxxl);
         transition: $transition top;
+    }
+
+    @media(max-width: $sm) {
+        width: 100%;
     }
 
     &::-webkit-scrollbar {
@@ -69,7 +76,7 @@
     &.active {
         left: 0;
 
-        @media(max-width: $sm) {
+        @media(max-width: $md) {
             top: 0;
         }
     }

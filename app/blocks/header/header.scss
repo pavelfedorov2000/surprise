@@ -1,300 +1,142 @@
 .header {
-	$this: &;
+    $this: &;
 
-	// .header__top
+    // .header__top
 
-	&__top {
-		display: none;
+    &__top {
+        display: none;
 
 
-		@media(min-width: 1201px) {
-			display: block;
-			@include padding-y(var(--offset-xs));
-			background-color: var(--gray);
-		}
-	}
+        @media(min-width: 1201px) {
+            display: block;
+            @include padding-y(var(--offset-xs));
+            background-color: var(--gray);
+        }
+    }
 
-	// .header__inner
+    // .header__inner
 
-	&__inner {
-		display: flex;
-		align-items: center;
-		justify-content: space-between;
-	}
+    &__inner {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+    }
 
-	// .header__bottom
+    // .header__bottom
 
-	&__bottom {
-		@include padding-y(var(--offset-s));
-		background-color: #fff;
-		box-shadow: $bsh;
+    &__bottom {
+        @include padding-y(var(--offset-s));
+        background-color: #fff;
+        box-shadow: $bsh;
 
-		@media(max-width: $md) {
-			display: flex;
-			align-items: center;
-			height: var(--header-height-mob);
-		}
-	}
+        @media(max-width: $md) {
+            display: flex;
+            align-items: center;
+            height: var(--header-height-mob);
+        }
+    }
 
-	// .header__logo
+    // .header__logo
 
-	&__logo {
-		flex-shrink: 0;
-		width: 162px;
-		height: 22px;
-		margin-left: var(--offset-xxl);
-		margin-right: auto;
+    &__logo {
+        flex-shrink: 0;
+        width: 162px;
+        height: 22px;
+        margin-left: var(--offset-xxl);
+        margin-right: auto;
 
-		@media(max-width: $lg) {
-			width: 32px;
-			height: 27px;
-			margin-left: var(--offset-l);
-		}
-	}
+        @media(max-width: $lg) {
+            width: 32px;
+            height: 27px;
+            margin-left: var(--offset-l);
+        }
+    }
 
-	// .header__actions
+    // .header__actions
 
-	&__actions {
-		display: flex;
-		align-items: center;
-	}
+    &__actions {
+        display: flex;
+        align-items: center;
+    }
 }
 
 .header-menu {
 
-	// .header-menu__list
+    // .header-menu__list
 
-	&__list {
-		display: flex;
-		margin-right: calc(var(--offset-s) * (-1));
-	}
+    &__list {
+        display: flex;
+        margin-right: calc(var(--offset-s) * (-1));
+    }
 
-	// .header-menu__link
+    // .header-menu__link
 
-	&__link {
-		@include padding-x(var(--offset-s));
-		white-space: nowrap;
-	}
-}
-
-.menu-btn {
-	$this: &;
-
-	flex-shrink: 0;
-	display: inline-flex;
-	align-items: center;
-	font-size: 24px;
-
-	@media(max-width: $lg) {
-		padding: var(--offset-xxxs);
-		margin-left: calc(var(--offset-xxxs) * (-1));
-	}
-
-	// .menu-btn__icon
-
-	&__icon {
-		display: inline-flex;
-		align-items: center;
-		margin-right: var(--offset-xs);
-		fill: var(--pink);
-		stroke: none;
-
-		@media(max-width: $lg) {
-			margin-right: 0;
-		}
-	}
-
-	// .menu-btn__text
-
-	&__text {
-		font-size: 16px;
-		line-height: 1.5;
-		transition: $transition color;
-
-		@media(max-width: $lg) {
-			display: none;
-		}
-	}
-
-	@media (any-hover: hover) {
-		&:hover {
-			#{$this}__text {
-				color: var(--pink);
-			}
-		}
-	}
+    &__link {
+        @include padding-x(var(--offset-s));
+        white-space: nowrap;
+    }
 }
 
 .actions-header {
 
-	// .actions-header__items
+    // .actions-header__items
 
-	&__items {
-		display: flex;
-		align-items: center;
+    &__items {
+        display: flex;
+        align-items: center;
 
-		>* {
-			margin-left: var(--offset-l);
+        > * {
+            margin-left: var(--offset-l);
 
-			@media(max-width: $md) {
-				margin-left: var(--offset-xs);
-			}
-		}
-	}
+            @media(max-width: $md) {
+                margin-left: var(--offset-xs);
+            }
+        }
+    }
 
-	// .actions-header__item
+    // .actions-header__item
 
-	&__item {
-		position: relative;
-		display: inline-flex;
-		align-items: center;
-		justify-content: center;
-		border-radius: 50%;
-		padding: var(--offset-xxxs);
-		font-size: 24px;
-		transition: $transition background-color;
+    &__item {
+        position: relative;
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        border-radius: 50%;
+        padding: var(--offset-xxxs);
+        font-size: 24px;
+        transition: $transition background-color;
 
-		@media (any-hover: hover) {
-			&:hover {
-				background-color: var(--gray);
-			}
-		}
+        @media (any-hover: hover) {
+            &:hover {
+                background-color: var(--gray);
+            }
+        }
 
-		>span {
-			position: absolute;
-			right: -2px;
-			bottom: -3px;
-			border-radius: 50%;
-			padding: 2.05px 5.5px;
-			background-color: var(--yellow);
-			font-size: 11px;
-			line-height: 13px;
-		}
-	}
+        > span {
+            position: absolute;
+            right: -2px;
+            bottom: -3px;
+            border-radius: 50%;
+            padding: 2.05px 5.5px;
+            background-color: var(--yellow);
+            font-size: 11px;
+            line-height: 13px;
+        }
+    }
 
-	&__search {
-		margin-right: calc(var(--offset-m) * (-1));
+    &__search {
+        margin-right: calc(var(--offset-m) * (-1));
 
-		@media(max-width: $md) {
-			margin-right: -20px;
-		}
-	}
+        @media(max-width: $md) {
+            margin-right: -20px;
+        }
+    }
 
-	&__btn {
-		margin-left: calc(var(--offset-xxxl) - var(--offset-xxxs));
+    &__btn {
+        margin-left: calc(var(--offset-xxxl) - var(--offset-xxxs));
 
-		@media(max-width: $xl) {
-			display: none;
-		}
-	}
-}
-
-.search-form {
-	position: relative;
-	width: 296px;
-
-	@media(max-width: $md) {
-		width: auto;
-		transition: $transition all;
-	}
-
-	&.active {
-		@media(max-width: $md) {
-			position: fixed;
-			top: 0;
-			left: 0;
-			z-index: 11;
-			margin-left: 0;
-			width: 100%;
-			height: var(--header-height-mob);
-			background-color: #fff;
-		}
-	}
-
-	&__input {
-		width: 100%;
-		padding: 15.5px calc(var(--offset-m) * 3) 17.5px var(--offset-m);
-		opacity: 0;
-		visibility: hidden;
-		pointer-events: none;
-		transition: $transition all;
-
-		@media(max-width: $md) {
-			height: 100%;
-			border: none;
-		}
-
-		&.active {
-			opacity: 1;
-			visibility: visible;
-			pointer-events: all;
-		}
-	}
-
-	// .search-form__btn
-
-	&__btn {
-		position: absolute;
-		top: 50%;
-		transform: translateY(-50%);
-		right: calc(var(--offset-m) - var(--offset-xxxs));
-		display: inline-flex;
-		align-items: center;
-		border-radius: 50%;
-		padding: var(--offset-xxxs);
-		font-size: 24px;
-		transition: $transition background-color;
-
-		@media (any-hover: hover) {
-			&:hover {
-				background-color: var(--gray);
-			}
-		}
-	}
-}
-
-.drop-search {
-	position: absolute;
-	top: 100%;
-	left: 0;
-	right: 0;
-	z-index: 20;
-	background-color: #fff;
-	box-shadow: $bsh;
-	opacity: 0;
-	visibility: hidden;
-	pointer-events: none;
-	transition: $transition all;
-
-	@media(min-width: 768px) {
-		border-radius: $brs;
-	}
-
-	&.active {
-		opacity: 1;
-		visibility: visible;
-		pointer-events: all;
-	}
-
-	&__link {
-		display: flex;
-		align-items: center;
-		padding: var(--offset-xs) var(--offset-m);
-		transition: $transition color;
-
-		span {
-			@extend %museo-300;
-			font-size: 16px;
-		}
-
-		.icon {
-			margin-right: var(--offset-xxs);
-		}
-
-		@media (any-hover: hover) {
-			&:hover {
-				color: var(--pink);
-			}
-		}
-	}
+        @media(max-width: $xl) {
+            display: none;
+        }
+    }
 }

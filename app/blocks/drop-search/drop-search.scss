@@ -1,0 +1,59 @@
+.drop-search {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    right: 0;
+    z-index: 20;
+    background-color: #fff;
+    box-shadow: $bsh;
+    opacity: 0;
+    visibility: hidden;
+    pointer-events: none;
+    transition: $transition all;
+
+    @media(min-width: 768px) {
+        border-radius: $brs;
+    }
+
+    &.active {
+        opacity: 1;
+        visibility: visible;
+        pointer-events: all;
+    }
+
+    &__list {
+        padding-left: var(--offset-m);
+    }
+
+    &__link {
+        position: relative;
+        display: flex;
+        align-items: center;
+        @extend %museo-300;
+        font-size: 16px;
+        padding: var(--offset-xs) var(--offset-m) var(--offset-xs) var(--offset-l);
+        //filter: drop-shadow(0px 0px 20px rgba(199, 199, 199, 0.25));
+        transition: $transition color;
+
+        span {
+            color: var(--green);
+        }
+
+        &::before {
+            content: '';
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+            left: 0;
+            width: var(--offset-m);
+            height: var(--offset-m);
+            background-image: url(../images/icons/clock.svg);
+        }
+
+        @media (any-hover: hover) {
+            &:hover {
+                color: var(--pink);
+            }
+        }
+    }
+}
