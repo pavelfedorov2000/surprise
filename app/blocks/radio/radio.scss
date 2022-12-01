@@ -1,151 +1,151 @@
 .radio {
-	$this: &; // .radio
+    $this: &; // .radio
 
-	&-input {
-		width: 1px;
-		height: 1px;
-		overflow: hidden;
-		position: absolute;
-		clip: rect(0 0 0 0);
+    &-input {
+        width: 1px;
+        height: 1px;
+        overflow: hidden;
+        position: absolute;
+        clip: rect(0 0 0 0);
 
-		&:checked~#{$this} {
-			&-style {
-				border-color: var(--green);
+        &:checked ~ #{$this} {
+            &-style {
+                border-color: var(--green);
 
-				&:before {
-					border-color: #fff;
-				}
+                &:before {
+                    border-color: #fff;
+                }
 
-				&:after {
-					opacity: 1;
-				}
-			}
-		}
-	}
+                &:after {
+                    opacity: 1;
+                }
+            }
+        }
+    }
 
-	&-style {
-		position: relative;
-		flex-shrink: 0;
-		display: block;
-		width: var(--offset-m);
-		height: var(--offset-m);
-		margin-right: var(--offset-m);
+    &-style {
+        position: relative;
+        flex-shrink: 0;
+        display: block;
+        width: var(--offset-m);
+        height: var(--offset-m);
+        margin-right: var(--offset-m);
 
-		&::before,
-		&::after {
-			content: '';
-			position: absolute;
-			top: 50%;
-			left: 50%;
-			transform: translate(-50%, -50%);
-		}
+        &::before,
+        &::after {
+            content: '';
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+        }
 
-		&:before {
-			width: 20px;
-			height: 20px;
-			border-radius: 50%;
-			border: 2px solid var(--line-color);
-			transition: $transition border-color, $transition background-color;
-		}
+        &:before {
+            width: 20px;
+            height: 20px;
+            border-radius: 50%;
+            border: 2px solid var(--line-color);
+            transition: $transition border-color, $transition background-color;
+        }
 
-		&:after {
-			width: var(--offset-xs);
-			height: var(--offset-xs);
-			border-radius: 50%;
-			background-color: #fff;
-			box-sizing: border-box;
-			background-color: #fff;
-			opacity: 0;
-			transition: $transition opacity;
-		}
-	}
+        &:after {
+            width: var(--offset-xs);
+            height: var(--offset-xs);
+            border-radius: 50%;
+            background-color: #fff;
+            box-sizing: border-box;
+            background-color: #fff;
+            opacity: 0;
+            transition: $transition opacity;
+        }
+    }
 
-	&-text {
-		font-size: 20px;
-		transition: $transition color;
+    &-text {
+        font-size: 20px;
+        transition: $transition color;
 
-		@media (max-width: $md) {
-			font-size: 16px;
-		}
-	}
+        @media (max-width: $md) {
+            font-size: 16px;
+        }
+    }
 
-	&__content {
-		display: inline-flex;
-		align-items: center;
-	}
+    &__content {
+        display: inline-flex;
+        align-items: center;
+    }
 
-	&--style {
-		&_filter {
-			#{$this} {
-				&__content {
-					cursor: pointer;
-					width: 100%;
-					padding: 25px var(--offset-m);
-					background-color: var(--white-70);
-					backdrop-filter: blur(2px);
-					transition: $transition all;
+    &--style {
+        &_filter {
+            #{$this} {
+                &__content {
+                    cursor: pointer;
+                    width: 100%;
+                    padding: 25px var(--offset-m);
+                    background-color: var(--white-70);
+                    backdrop-filter: blur(2px);
+                    transition: $transition all;
 
-					@media(max-width: $md) {
-						@include padding-y(18px);
-					}
+                    @media(max-width: $md) {
+                        @include padding-y(18px);
+                    }
 
-					&::after {
-						content: '';
-						position: absolute;
-						bottom: 0;
-						left: 0;
-						width: 0%;
-						height: 2px;
-						background-color: var(--green);
-						transition: $transition width;
-					}
+                    &::after {
+                        content: '';
+                        position: absolute;
+                        bottom: 0;
+                        left: 0;
+                        width: 0%;
+                        height: 2px;
+                        background-color: var(--green);
+                        transition: $transition width;
+                    }
 
-					@media (any-hover: hover) {
-						&:hover {
-							box-shadow: $bsh;
-						}
-					}
-				}
+                    @media (any-hover: hover) {
+                        &:hover {
+                            box-shadow: $bsh;
+                        }
+                    }
+                }
 
-				&__icon {
-					flex-shrink: 0;
-					margin-right: var(--offset-xs);
-					width: var(--offset-m);
-					height: var(--offset-m);
-					stroke: var(--black);
-					transition: $transition stroke;
-				}
+                &__icon {
+                    flex-shrink: 0;
+                    margin-right: var(--offset-xs);
+                    width: var(--offset-m);
+                    height: var(--offset-m);
+                    stroke: var(--black);
+                    transition: $transition stroke;
+                }
 
-				&-text {
-					white-space: nowrap;
-				}
+                &-text {
+                    white-space: nowrap;
+                }
 
-				&-input {
-					&:checked~ {
-						#{$this} {
-							&__content {
-								background-color: #fff;
-								box-shadow: $bsh;
+                &-input {
+                    &:checked ~ {
+                        #{$this} {
+                            &__content {
+                                background-color: #fff;
+                                box-shadow: $bsh;
 
-								&:after {
-									width: 100%;
-								}
+                                &:after {
+                                    width: 100%;
+                                }
 
-								#{$this} {
-									&__icon {
-										stroke: var(--green);
-									}
+                                #{$this} {
+                                    &__icon {
+                                        stroke: var(--green);
+                                    }
 
-									&-text {
-										@extend %museo-700;
-										color: var(--green);
-									}
-								}
-							}
-						}
-					}
-				}
-			}
-		}
-	}
+                                    &-text {
+                                        @extend %museo-700;
+                                        color: var(--green);
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
 }

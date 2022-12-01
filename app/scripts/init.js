@@ -43,10 +43,10 @@ $(document).ready(function () {
   });
 
   const $blogSlider = $('.blog-slider');
-  const $blogSliderClass = $blogSlider.attr('class').split(' ').filter(el => el !== 'swiper')[0];
-  const $blogSliderWrap = $(`.${$blogSliderClass}`).closest('section').attr('id');
 
-  if ($blogSlider.length) {
+    if ($blogSlider.length) {
+      const $blogSliderClass = $blogSlider.attr('class').split(' ').filter(el => el !== 'swiper')[0];
+    const $blogSliderWrap = $(`.${$blogSliderClass}`).closest('section').attr('id');
     new Swiper(`.${$blogSliderClass}`, {
       loop: true,
       slidesPerView: 1.16875,
@@ -73,10 +73,10 @@ $(document).ready(function () {
   }
 
   const $reviewsSlider = $('.reviews-slider');
-  const $reviewsSliderClass = $reviewsSlider.attr('class').split(' ').filter(el => el !== 'swiper')[0];
-  const $reviewsSliderWrap = $(`.${$reviewsSliderClass}`).closest('section').attr('id');
 
-  if ($reviewsSlider.length) {
+    if ($reviewsSlider.length) {
+      const $reviewsSliderClass = $reviewsSlider.attr('class').split(' ').filter(el => el !== 'swiper')[0];
+  const $reviewsSliderWrap = $(`.${$reviewsSliderClass}`).closest('section').attr('id');
     new Swiper(`.${$reviewsSliderClass}`, {
       loop: true,
       slidesPerView: 1.16875,
