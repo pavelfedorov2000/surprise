@@ -1,149 +1,176 @@
 .btn {
-    $this: &;
+	$this: &;
 
-    cursor: pointer;
-    display: inline-flex;
-    align-items: center;
-    justify-content: center;
-    padding: 18px var(--offset-l);
-    background-color: var(--pink);
-    border-radius: $brs;
-    font-family: $ff;
-    font-size: 16px;
-    color: #fff;
-    text-align: center;
-    transition: 0.3s all;
+	cursor: pointer;
+	display: inline-flex;
+	align-items: center;
+	justify-content: center;
+	padding: 18px var(--offset-l);
+	background-color: var(--pink);
+	border-radius: $brs;
+	font-family: $ff;
+	font-size: 16px;
+	line-height: 1.5;
+	color: #fff;
+	text-align: center;
+	transition: $transition all;
 
-    &:focus,
-    &:active {
-        background-color: var(--pink-pressed);
-    }
+	&:focus,
+	&:active {
+		background-color: var(--pink-pressed);
+	}
 
-    @media (any-hover: hover) {
-        &:hover {
-            background-color: var(--pink-hover);
-        }
-    }
+	@media (any-hover: hover) {
+		&:hover {
+			background-color: var(--pink-hover);
+		}
+	}
 
-    &.disabled,
-    &[disabled] {
-        background-color: var(--pink-light);
-    }
+	&.disabled,
+	&[disabled] {
+		background-color: var(--pink-light);
+	}
 
-    &__icon {
-        flex-shrink: 0;
-    }
+	&__icon {
+		flex-shrink: 0;
+		margin-right: var(--offset-xs);
+		width: var(--offset-m);
+		height: var(--offset-m);
+	}
 
-    &--style {
-        &_bg {
-            &-green {
-                background-color: var(--green);
+	&--style {
+		&_bg {
+			&-green {
+				background-color: var(--green);
 
-                &:focus,
-                &:active {
-                    background-color: var(--green-pressed);
-                }
+				&:focus,
+				&:active {
+					background-color: var(--green-pressed);
+				}
 
-                &.disabled,
-                &[disabled] {
-                    background-color: var(--green-light);
-                }
+				&.disabled,
+				&[disabled] {
+					background-color: var(--green-light);
+				}
 
-                @media (any-hover: hover) {
-                    &:hover {
-                        background-color: var(--green-hover);
-                    }
-                }
-            }
+				@media (any-hover: hover) {
+					&:hover {
+						background-color: var(--green-hover);
+					}
+				}
+			}
 
-            &-yellow {
-                background-color: var(--yellow);
+			&-yellow {
+				background-color: var(--yellow);
+				color: var(--black);
 
-                &:focus,
-                &:active {
-                    background-color: var(--yellow-pressed);
-                }
+				&:focus,
+				&:active {
+					background-color: var(--yellow-pressed);
+				}
 
-                &.disabled,
-                &[disabled] {
-                    background-color: var(--yellow-light);
-                }
+				&.disabled,
+				&[disabled] {
+					background-color: var(--yellow-light);
+				}
 
-                @media (any-hover: hover) {
-                    &:hover {
-                        background-color: var(--yellow-hover);
-                    }
-                }
-            }
-        }
+				@media (any-hover: hover) {
+					&:hover {
+						background-color: var(--yellow-hover);
+					}
+				}
+			}
+		}
 
-        &_drop {}
+		&_link {
+			@extend %museo-700;
+			position: relative;
+			padding: 0;
+			background-color: transparent;
+			border-radius: 0;
+			color: var(--green);
+			font-size: 20px;
 
-        &_more {}
+			&::after {
+				content: '';
+				position: absolute;
+				left: 0;
+				bottom: -4px;
+				right: 0;
+				height: 1px;
+				background-color: var(--green);
+				transition: $transition background-color;
+			}
 
-        &_link {
-            @extend %museo-700;
-            position: relative;
-            padding: 0;
-            background-color: transparent;
-            border-radius: 0;
-            color: var(--green);
-            font-size: 20px;
+			&:focus,
+			&:active {
+				background-color: transparent;
+				color: var(--green-pressed);
 
-            &::after {
-                content: '';
-                position: absolute;
-                left: 0;
-                bottom: -4px;
-                right: 0;
-                height: 1px;
-                background-color: var(--green);
-                transition: $transition background-color;
-            }
+				&::after {
+					background-color: var(--green-pressed);
+				}
+			}
 
-            &:focus,
-            &:active {
-                background-color: transparent;
-                color: var(--green-pressed);
+			&[disabled] {
+				background-color: transparent;
+				color: var(--green-disabled);
 
-                &::after {
-                    background-color: var(--green-pressed);
-                }
-            }
+				&::after {
+					background-color: var(--green-disabled);
+				}
+			}
 
-            &[disabled] {
-                background-color: transparent;
-                color: var(--green-disabled);
+			@media (any-hover: hover) {
+				&:hover {
+					background-color: transparent;
+					color: var(--green-hover);
 
-                &::after {
-                    background-color: var(--green-disabled);
-                }
-            }
+					&::after {
+						background-color: var(--green-hover);
+					}
+				}
+			}
+		}
+	}
 
-            @media (any-hover: hover) {
-                &:hover {
-                    background-color: transparent;
-                    color: var(--green-hover);
+	&--padding {
+		&_xs {
+			@include padding-y(var(--offset-s));
+		}
+	}
 
-                    &::after {
-                        background-color: var(--green-hover);
-                    }
-                }
-            }
-        }
-    }
-
-    &--with {
-        &_icon {}
-    }
+	&--with {
+		&_icon {}
+	}
 }
 
 .load-more {
-    display: flex;
-    justify-content: center;
-    margin-top: var(--offset-xls);
+	display: flex;
+	justify-content: center;
+	margin-top: var(--offset-xls);
 
-    @media(max-width: $sm) {
-        margin-top: var(--offset-l);
-    }
+	@media(max-width: $sm) {
+		margin-top: var(--offset-l);
+	}
+}
+
+.more-text-btn {
+	@extend %museo-300;
+	font-size: 16px;
+	line-height: 1.5;
+	text-decoration: underline;
+	transition: $transition color;
+
+	@media (any-hover: hover) {
+		&:hover {
+			color: var(--green);
+		}
+	}
+}
+
+.btns {
+	display: grid;
+	gap: var(--offset-m);
+	align-items: center;
 }

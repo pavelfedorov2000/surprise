@@ -1,0 +1,5 @@
+.reviews-slider {
+	@media(min-width: 1201px) {
+		@include padding-x(var(--offset-xxls));
+	}
+}

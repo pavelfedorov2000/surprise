@@ -1,0 +1,8 @@
+.favorite-categories {
+	@include grid-auto-fit(184px, var(--offset-xxl));
+	gap: 20px 25px;
+
+	@media(max-width: $sm) {
+		grid-template-columns: repeat(2, 1fr);
+	}
+}

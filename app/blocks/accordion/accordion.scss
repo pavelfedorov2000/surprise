@@ -1,0 +1,53 @@
+.accordion-block {
+	@include row-grid(var(--offset-m));
+	align-content: start;
+}
+
+.accordion-item {
+	$this: &;
+	// .accordion-item__toggle
+
+	&__toggle {
+		position: relative;
+		padding-left: var(--offset-xl);
+		font-size: 20px;
+		text-align: left;
+
+		@media(max-width: $md) {
+			padding-left: var(--offset-l);
+		}
+
+		@media(max-width: $sm) {
+			font-size: 18px;
+		}
+
+		&::before {
+			content: '';
+			position: absolute;
+			top: 0;
+			left: 0;
+			width: var(--offset-m);
+			height: var(--offset-m);
+			background-image: url(../images/icons/drop-arrow.svg);
+			transition: $transition transform;
+		}
+
+		&[aria-expanded="true"] {
+			&:before {
+				transform: rotate(180deg);
+			}
+		}
+	}
+
+	// .accordion-item__content
+
+	&__content {
+		padding-top: var(--offset-s);
+		padding-left: var(--offset-xl);
+
+		@media(max-width: $md) {
+			padding-top: var(--offset-s);
+			padding-left: var(--offset-l);
+		}
+	}
+}

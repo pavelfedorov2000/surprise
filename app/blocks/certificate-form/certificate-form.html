@@ -1,0 +1,35 @@
+<form action="#" class="certificate-form">
+	<div class="certificate-form__items">
+		<div class="certificate-form__title">
+			Выбери сертификат, который хотите активировать
+		</div>
+		@@include('blocks/certificate-card/certificate-card.html', {
+		"id": "certificate1"
+		})
+		@@include('blocks/certificate-card/certificate-card.html', {
+		"id": "certificate2"
+		})
+		@@include('blocks/certificate-card/certificate-card.html', {
+		"id": "certificate3"
+		})
+	</div>
+	<div class="card form certificate-form__form">
+		<label class="form__field">
+			<span class="form-label">Код активации</span>
+			<input class="input" name="activation_code" placeholder="123****12">
+		</label>
+		<label class="form__field">
+			<span class="form-label">Ваше имя *</span>
+			<input class="input" name="name" placeholder="Ваше имя">
+		</label>
+		<label class="form__field">
+			<span class="form-label">Ваш номер телефона *</span>
+			<input class="input" name="phone" type="tel" placeholder="+ 375 ()">
+		</label>
+		<label class="form__field">
+			<span class="form-label">Ваш email *</span>
+			<input class="input" name="email" type="email" placeholder="example@mail.com">
+		</label>
+		<button class="btn" type="submit">Отправить</button>
+	</div>
+</form>

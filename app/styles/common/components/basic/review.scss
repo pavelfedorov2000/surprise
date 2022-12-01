@@ -1,0 +1,207 @@
+.reviews-block {
+	display: grid;
+	gap: var(--offset-xxxl);
+
+	@media(min-width: 768px) {
+		grid-template-columns: repeat(2, 1fr);
+	}
+
+	@media(min-width: 1201px) {
+		grid-template-columns: repeat(3, 1fr);
+	}
+
+	// .review-block__col
+
+	&__col {
+		@include row-grid(var(--offset-xxxl));
+		align-content: start;
+	}
+}
+
+.review {
+	display: flex;
+	flex-direction: column;
+	align-items: flex-start;
+
+	&__info {
+		display: flex;
+		flex-direction: column;
+		align-items: flex-start;
+
+		@media(max-width: $md) {
+			margin-top: 10px;
+		}
+	}
+
+	// .review__top
+
+	&__top {
+		width: 100%;
+		display: flex;
+		align-items: flex-start;
+		justify-content: space-between;
+		margin-bottom: var(--offset-xxxs);
+
+		@media(max-width: $md) {
+			flex-direction: column-reverse;
+			justify-content: flex-start;
+		}
+	}
+
+	// .review__wrap
+
+	&__wrap {
+		display: inline-flex;
+		align-items: flex-end;
+		margin-bottom: var(--offset-xxxs);
+	}
+
+	// .review__name
+
+	&__name {
+		@extend %museo-700;
+		font-weight: 700;
+		font-size: 20px;
+		margin-right: var(--offset-xxs);
+	}
+
+	// .review__title
+
+	&__title {
+		margin-bottom: var(--offset-s);
+		text-decoration: underline;
+		transition: $transition color;
+
+		@media (any-hover: hover) {
+			&:hover {
+				color: var(--green);
+			}
+		}
+	}
+
+	// .review__text
+
+	&__text {
+		span {
+			overflow: hidden;
+			display: -webkit-box;
+			-webkit-line-clamp: 4;
+			-webkit-box-orient: vertical;
+
+			&.no-overflow {
+				/* overflow: visible;
+        white-space: nowrap;
+        text-overflow: ellipsis; */
+				overflow: visible;
+				-webkit-line-clamp: unset;
+				-webkit-box-orient: unset;
+			}
+		}
+
+		/* overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis; */
+
+		&:not(:last-child) {
+			margin-bottom: var(--offset-xxs);
+		}
+	}
+
+	&__answer {
+		margin-top: 20px;
+		margin-left: var(--offset-xls);
+	}
+
+	&.swiper-slide {
+		@media(max-width: $lg) {
+			opacity: .5;
+			transition: $transition opacity;
+		}
+
+		&-active {
+			@media(max-width: $lg) {
+				opacity: 1;
+			}
+		}
+
+		&-next {
+			@media(min-width: 768px) {
+				opacity: 1;
+			}
+		}
+	}
+}
+
+.date {
+	@extend %museo-300;
+	font-weight: 300;
+	color: var(--text-color);
+}
+
+.reactions {
+	display: flex;
+	flex-wrap: wrap;
+	margin-left: -10px;
+
+	>* {
+		margin-left: 10px;
+		margin-bottom: var(--offset-xxs);
+	}
+}
+
+.reaction {
+	@include grid-row(var(--offset-xxs));
+	align-items: center;
+	padding: var(--offset-xxs) 18px;
+	background-color: #fff;
+	border-radius: 100px;
+	box-shadow: $bsh;
+
+	img {
+		flex-shrink: 0;
+	}
+
+	&__logo {
+		width: var(--offset-m);
+		height: 25px;
+		object-fit: contain;
+		border-radius: 50%;
+	}
+}
+
+.review-answer {
+	display: flex;
+	padding-left: var(--offset-m);
+	border-left: 1px solid var(--line-color);
+
+	&__content {
+		>* {
+			&:not(:last-child) {
+				margin-bottom: var(--offset-xxxs);
+			}
+		}
+	}
+
+	// .review-answer__logo
+
+	&__logo {
+		flex-shrink: 0;
+		margin-right: var(--offset-s);
+		width: var(--offset-xls);
+		height: var(--offset-xls);
+		border-radius: 50%;
+	}
+
+	// .review-answer__title
+
+	&__title {
+		font-size: 18px;
+	}
+
+	// .review-answer__text
+
+	&__text {
+		@extend %museo-300;
+		color: var(--text-color-light);
+	}
+}

@@ -1,0 +1,60 @@
+@@include("blocks/head/head.html", {"title": "О компании"})
+<!-- <link rel="stylesheet"
+      href="./assets/libs/css/lite-yt-embed.css"> -->
+@@include("blocks/head/no-js.html")
+<div class="wrapper">
+	@@include("blocks/header/header.html")
+	<div class="overlay overlay--menu">
+		@@include('blocks/menu/menu.html')
+	</div>
+	<main class="page page--with_decor page--padding">
+		<div class="container">
+			@@include('blocks/breadcrumbs/breadcrumbs.html', {
+			"current": "Блог"
+			})
+			@@include('blocks/about-section/about-section.html')
+			<div class="row row--cols_3">
+				<div class="color-card color-card--style_bg-pink">
+					<div class="color-card__img">
+						<picture>
+							<source type="image/webp" srcset="assets/images/icons/wallet.webp">
+							<img class="img-contain" src="assets/images/icons/wallet.png" alt="" width="122"
+								height="125" loading="lazy">
+						</picture>
+					</div>
+					<div class="color-card__content">
+						<div class="color-card__title">Наша цель </div>
+						<p class="color-card__text">Сделать так, чтобы выбор подарка был для вас лёгким, быстрым и
+							интересным занятием.</p>
+					</div>
+				</div>
+				<div class="color-card color-card--style_bg-green">
+					<div class="color-card__img">
+						<picture class="color-card__img">
+							<source type="image/webp" srcset="assets/images/icons/mission.webp">
+							<img class="img-contain" src="assets/images/icons/mission.png" alt="" width="122"
+								height="125" loading="lazy">
+						</picture>
+					</div>
+					<div class="color-card__content">
+						<div class="color-card__title">Наша миссия </div>
+						<p class="color-card__text">
+							Мы работаем для того, чтобы каждый день люди получали запоминающиеся подарки и яркие
+							впечатления. Хотим
+							больше счастливых людей!
+						</p>
+					</div>
+				</div>
+			</div>
+			@@include('blocks/started-section/started-section.html')
+			@@include('blocks/team-section/team-section.html')
+			@@include('blocks/mascot-section/mascot-section.html')
+		</div>
+	</main>
+</div>
+@@include('blocks/footer/footer.html')
+@@include("blocks/link/link.html")
+<!-- <script src="./assets/libs/js/lite-yt-embed.js"></script> -->
+</body>
+
+</html>

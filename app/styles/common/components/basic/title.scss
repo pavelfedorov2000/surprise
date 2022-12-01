@@ -21,3 +21,56 @@ h {
 		}
 	}
 }
+
+.page-title {
+	font-size: 44px;
+	line-height: calc(53 / 44);
+
+	@media(max-width: $md) {
+		font-size: 40px;
+		line-height: 48px;
+	}
+
+	&--size {
+		&_xs {
+			@media(max-width: $md) {
+				font-size: 28px;
+				line-height: 34px;
+			}
+		}
+	}
+}
+
+.section-title {
+	margin-bottom: var(--offset-xl);
+	font-size: 40px;
+	line-height: calc(48 / 40 * 100%);
+
+	@media(max-width: $md) {
+		font-size: 28px;
+		margin-bottom: var(--offset-m);
+	}
+
+	&--mb {
+		&_ls {
+			margin-bottom: var(--offset-ls);
+
+			@media(max-width: $md) {
+				font-family: 'Museo Sans Cyrl 700', sans-serif;
+				font-weight: 700;
+				font-size: 24px;
+				margin-bottom: var(--offset-m);
+			}
+		}
+	}
+
+	&--without {
+		&_mb {
+			margin-bottom: 0;
+
+			@media(max-width: $md) {
+				margin-bottom: 0;
+			}
+		}
+	}
+}

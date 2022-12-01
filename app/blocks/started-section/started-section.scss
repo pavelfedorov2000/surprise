@@ -1,0 +1,11 @@
+.started-section {
+	padding-top: var(--offset-xl);
+
+	// .started-section__img
+
+	&__img {
+		@media(max-width: $lg) {
+			margin-bottom: var(--offset-xl);
+		}
+	}
+}

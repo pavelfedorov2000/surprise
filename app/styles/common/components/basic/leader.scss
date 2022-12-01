@@ -1,0 +1,22 @@
+.leader {
+	display: flex;
+	flex-wrap: wrap;
+	margin-left: calc(var(--offset-m) * (-1));
+
+	&__item {
+		margin-left: var(--offset-m);
+		margin-bottom: var(--offset-xxxs);
+		display: flex;
+
+		dt {
+			@extend %museo-300;
+			margin-right: var(--offset-xxxs);
+		}
+
+		dd {
+			span {
+				color: var(--text-color);
+			}
+		}
+	}
+}

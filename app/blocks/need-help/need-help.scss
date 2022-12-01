@@ -1,0 +1,44 @@
+.need-help {
+	&__body {
+		background-image: url(../images/decor/help-bg.jpg);
+		background-size: cover;
+		background-repeat: no-repeat;
+		background-color: #FFF0F1;
+		@include padding-y(104px);
+
+		@media(max-width: $lg) {
+			@include padding-y(var(--offset-xxxl));
+		}
+
+		@media(max-width: $sm) {
+			background-image: url(../images/decor/help-bg-mob.jpg);
+		}
+	}
+
+	// .need-help__inner
+
+	&__inner {
+		display: flex;
+
+		@media(min-width: 768px) {
+			align-items: center;
+			justify-content: space-between;
+		}
+
+		@media(max-width: $md) {
+			flex-direction: column;
+
+			>* {
+				&:not(:last-child) {
+					margin-bottom: var(--offset-l);
+				}
+			}
+		}
+	}
+
+	// .need-help__btn
+
+	&__btn {
+		min-width: 285px;
+	}
+}

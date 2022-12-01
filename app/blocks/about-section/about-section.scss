@@ -1,0 +1,21 @@
+.about-section {
+
+	&__content {
+		@media(min-width: 1025px) {
+			max-width: 643px;
+			padding-right: var(--offset-l);
+		}
+	}
+
+	// .about-section__img
+
+	&__img {
+		@media(min-width: 1025px) {
+			flex: 0 0 547px;
+		}
+
+		@media(max-width: $md) {
+			margin-bottom: var(--offset-m);
+		}
+	}
+}

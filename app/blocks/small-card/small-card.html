@@ -1,0 +1,9 @@
+<a href="#" class="small-card">
+	<picture>
+		<source type="image/webp" srcset="@@src.webp">
+		<img class="small-card__img" src="@@src.jpg" alt="фото" width="80" height="80" loading="lazy">
+	</picture>
+	@@if(context.title){
+	<span class="small-card__title">@@title</span>
+	}
+</a>

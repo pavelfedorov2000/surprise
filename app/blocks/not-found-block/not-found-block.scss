@@ -1,3 +1,56 @@
 .not-found-block {
-  // your code
+	min-height: calc(100vh - var(--header-height));
+	@include padding-y(var(--section-padding));
+	background-color: #FEFAFB;
+	background-image: url(../images/decor/404-bg.svg);
+	background-size: cover;
+	background-position: 0 0;
+	background-repeat: no-repeat;
+
+	@media(max-width: $md) {
+		background-image: url(../images/decor/404-bg-mob.svg);
+		padding-top: var(--section-padding-xs);
+		padding-bottom: 106px;
+		border-radius: $brs-card;
+	}
+
+	// .not-found-block__content
+
+	&__content {
+		display: flex;
+		flex-direction: column;
+		align-items: flex-start;
+
+		@media(max-width: $lg) {
+			margin-bottom: 92px;
+		}
+	}
+
+	// .not-found-block__title
+
+	&__title {
+		margin-bottom: var(--offset-m);
+
+		@media(max-width: $sm) {
+			margin-bottom: 20px;
+		}
+	}
+
+	// .not-found-block__subtitle
+
+	&__subtitle {
+		font-size: 24px;
+		margin-bottom: var(--offset-xs);
+	}
+
+	// .not-found-block__text
+
+	&__text {
+		margin-bottom: var(--offset-xl);
+	}
+
+	&__btns {
+		grid-auto-columns: auto;
+		grid-auto-flow: column;
+	}
 }

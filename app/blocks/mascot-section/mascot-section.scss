@@ -1,0 +1,42 @@
+.mascot-section {
+
+	@media(min-width: 1201px) {
+		margin-top: calc(var(--offset-xl) * (-1));
+	}
+
+	// .mascot-section__img
+
+	&__img {
+		@media(min-width: 1025px) {
+			flex: 0 0 592px;
+		}
+
+		@media(max-width: $lg) {
+			margin-bottom: var(--offset-m);
+		}
+	}
+
+	// .mascot-section__content
+
+	&__content {
+		@media(min-width: 1025px) {
+			position: relative;
+			padding-top: 75px;
+			padding-left: 82px;
+
+			&::before {
+				content: '';
+				position: absolute;
+				top: 0;
+				left: 0;
+				width: 100px;
+				height: 79px;
+				background-image: url(../images/decor/yellow-decor.svg);
+			}
+		}
+
+		@media(min-width: 1201px) {
+			margin-left: 80px;
+		}
+	}
+}

@@ -1,4 +1,37 @@
 [{
+    "href": "home.html",
+    "title": "Главная"
+},{
+    "href": "about.html",
+    "title": "О нас"
+}, {
     "href": "blog.html",
     "title": "Блог"
+}, {
+    "href": "404.html",
+    "title": "Страница не найдена"
+}, {
+    "href": "partners.html",
+    "title": "Партнеры"
+}, {
+    "href": "search-results.html",
+    "title": "Результаты поиска"
+}, {
+    "href": "search-results-empty.html",
+    "title": "Результаты поиска (не найдено)"
+}, {
+    "href": "favorite.html",
+    "title": "Избранное"
+}, {
+    "href": "reviews.html",
+    "title": "Отзывы"
+}, {
+    "href": "order-ready.html",
+    "title": "Заказ сформирован"
+}, {
+    "href": "catalog.html",
+    "title": "Каталог"
+}, {
+    "href": "activate-certificate-2.html",
+    "title": "Активация сертификата"
 }]

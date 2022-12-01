@@ -19,74 +19,39 @@ input[type='number']:focus {
 }
 
 .input {
+	padding: calc(var(--offset-s) - 1px) var(--offset-m);
 	border: $border;
 	border-radius: $brs;
-	filter: drop-shadow(0px 0px 20px rgba(199, 199, 199, 0.25));
+	filter: drop-shadow(0 0 20px rgba(199, 199, 199, 0.25));
 	font-size: 16px;
 	line-height: 21px;
 	color: var(--black);
+	transition: $transition border-color;
 
 	&::placeholder {
 		color: var(--line-color);
 	}
-}
 
-// jquery ui range slider
-/* .ui-widget-content {
-	background-color: #c7d8ce;
-	border-radius: 1rem;
-	height: 1.4rem;
-}
-
-.ui-state-default,
-.ui-widget-content .ui-state-default {
-	width: 1.6rem;
-	height: 1.6rem;
-	border-radius: 50%;
-	background-color: $accent;
-	border: none;
-}
-
-.ui-slider-horizontal .ui-slider-handle {
-	top: -0.2rem;
-} */
-
-// SWITCHER
-/* .switcher-input {
-	display: none;
-}
-
-.switcher-input+.switcher-style {
-	position: relative;
-	padding: 0 0 0 6rem;
-	cursor: pointer;
-
-	&:before,
-	&:after {
-		content: '';
-		position: absolute;
-		transition: .2s;
-	}
-
-	&:before {
-		top: -0.8rem;
-		left: 0;
-		width: 4rem;
-		height: 2.4rem;
-		border: 0.1rem solid $dark-gray;
-		border-radius: 3.4rem;
-	}
-
-	&:after {
-		top: -0.4rem;
-		left: 0.4rem;
-		width: 1.6rem;
-		height: 1.6rem;
-		background: $dark-gray;
-		border-radius: 50%;
+	&:focus,
+	&:active {
+		border-color: var(--green);
 	}
 }
 
-.switcher-input:checked+.switcher-style::after {
-	left: 2rem;
-} */
+.form {
+	@include row-grid(var(--offset-m));
+
+	@media(max-width: $md) {
+		padding: var(--offset-l) var(--offset-m) calc(var(--offset-xls) - 2px);
+	}
+
+	// .form__field
+
+	&__field {
+		@include row-grid(var(--offset-xxxs));
+	}
+
+	&-small {
+		color: var(--text-color);
+	}
+}

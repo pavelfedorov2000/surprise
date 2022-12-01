@@ -1,0 +1,101 @@
+<section id="reviews" class="section">
+	<div class="container">
+		<div class="section__top">
+			<h2 class="section-title">Отзывы</h2>
+		</div>
+		<div class="slider-wrap">
+			@@include('blocks/swiper-btns/swiper-btns.html')
+			<div class="swiper reviews-slider">
+				<div class="swiper-wrapper">
+					<article class="review swiper-slide">
+						<header class="review__top">
+							<div class="review__info">
+								<div class="review__wrap">
+									<div class="review__name">Екатерина</div>
+									<time class="date review__date" datetime="2022-07-04">04.07.2022</time>
+								</div>
+								@@include('blocks/rating/rating.html', {
+								"class": "review",
+								"num": "5.0"
+								})
+							</div>
+						</header>
+						<a href="#" class="review__title">
+							Дрифтомания — дрифт на спортивном авто
+						</a>
+						<p class="review__text">
+							<span>
+								Для тех кто любит автоспорт и дрифт в частности. Рекомендую однозначно! Помимо самих
+								навыков
+								получите ещё и массу
+								положительных эмоций
+								в перемешку с адреналином! Было круто, спасибо!
+							</span>
+							<button class="more-text-btn" type="button" aria-expanded="false">Подробнее</button>
+						</p>
+					</article>
+					<article class="review swiper-slide">
+						<header class="review__top">
+							<div class="review__info">
+								<div class="review__wrap">
+									<div class="review__name">Екатерина</div>
+									<time class="date review__date" datetime="2022-07-04">04.07.2022</time>
+								</div>
+								@@include('blocks/rating/rating.html', {
+								"class": "review",
+								"num": "5.0"
+								})
+							</div>
+						</header>
+						<a href="#" class="review__title">
+							Худи, платья, свитшоты и костюмы от LIMI:
+							авторские вышивки и яркие цвета
+						</a>
+						<p class="review__text">
+							<span>
+								Вообще я не любитель такого стиля, преимущественно спортивного, но! купила платье
+								оранжевое
+								-
+								это просто песня!
+								После стирки
+								как новое, гладить не надо,
+							</span>
+							<button class="more-text-btn" type="button" aria-expanded="false">Подробнее</button>
+						</p>
+					</article>
+					<article class="review swiper-slide">
+						<header class="review__top">
+							<div class="review__info">
+								<div class="review__wrap">
+									<div class="review__name">Екатерина</div>
+									<time class="date review__date" datetime="2022-07-04">04.07.2022</time>
+								</div>
+								@@include('blocks/rating/rating.html', {
+								"class": "review",
+								"num": "5.0"
+								})
+							</div>
+						</header>
+						<a href="#" class="review__title">
+							Дрифтомания — дрифт на спортивном авто
+						</a>
+						<p class="review__text">
+							<span>
+								Не в восторге! вообще ничего не поняли, сертификат был на одни круг плюс фото, 1-ое:
+								вариантов
+								выбрать фото
+								предложено не было, по этому с ухмылкой а не с улыбкой, будет лежать пылиться в конверте
+							</span>
+							<button class="more-text-btn" type="button" aria-expanded="false">Подробнее</button>
+						</p>
+					</article>
+				</div>
+			</div>
+		</div>
+		<div class="load-more">
+			<a href="#" class="btn btn--style_link">
+				Посмотреть еще
+			</a>
+		</div>
+	</div>
+</section>

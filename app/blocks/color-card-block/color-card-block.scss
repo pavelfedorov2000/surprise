@@ -1,0 +1,10 @@
+.color-card-block {
+	display: grid;
+	grid-template-columns: repeat(auto-fit, minmax(430px, 1fr));
+	gap: var(--offset-xxl);
+
+	@media(max-width: $md) {
+		grid-template-columns: repeat(auto-fit, minmax(calc(320px - var(--container-padding) * 2)));
+		gap: var(--offset-l);
+	}
+}

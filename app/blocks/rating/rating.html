@@ -1,0 +1,41 @@
+<div class="rating@@if(context.class){ @@class__rating}">
+	@@if(context.title) {
+	<div class="rating__title">@@title</div>
+	}
+	@@if(context.text) {
+	<p class="rating__text">@@text</p>
+	}
+	<ul class="rating__stars">
+		<li class="rating__star">
+			<!-- <svg class="icon">
+				<use xlink:href="assets/images/sprite.svg#star"></use>
+			</svg> -->
+		</li>
+		<li class="rating__star">
+			<!-- <svg class="icon">
+				<use xlink:href="assets/images/sprite.svg#star"></use>
+			</svg> -->
+		</li>
+		<li class="rating__star">
+			<!-- <svg class="icon">
+				<use xlink:href="assets/images/sprite.svg#star"></use>
+			</svg> -->
+		</li>
+		<li class="rating__star">
+			<!-- <svg class="icon">
+				<use xlink:href="assets/images/sprite.svg#star"></use>
+			</svg> -->
+		</li>
+		<li class="rating__star">
+			<!-- <svg class="icon">
+				<use xlink:href="assets/images/sprite.svg#star"></use>
+			</svg> -->
+		</li>
+	</ul>
+	@@if(context.link) {
+	<a href="#" class="menu-link menu-link--underlined">@@link</a>
+	}
+	@@if(context.num) {
+	<b class="rating__num">@@num</b>
+	}
+</div>

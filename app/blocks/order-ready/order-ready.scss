@@ -1,0 +1,43 @@
+.order-ready {
+	max-width: 655px;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	text-align: center;
+	margin: 0 auto;
+	// .order-ready__img
+
+	&__img {
+		width: var(--section-padding-xs);
+		height: var(--section-padding-xs);
+		margin-bottom: var(--offset-l);
+	}
+
+	// .order-ready__title
+
+	&__title {
+		margin-bottom: var(--offset-xs);
+
+		@media(max-width: $sm) {
+			margin-bottom: var(--offset-m);
+		}
+	}
+
+	// .order-ready__text
+
+	&__text {
+		@media(max-width: $sm) {
+			text-align: left;
+		}
+
+		span {
+			@extend %museo-700;
+		}
+
+		>* {
+			&:not(:last-child) {
+				margin-bottom: var(--offset-l);
+			}
+		}
+	}
+}

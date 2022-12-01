@@ -1,0 +1,55 @@
+@@include("blocks/head/head.html", {"title": "Результаты поиска (не найдено)"})
+@@include("blocks/head/no-js.html")
+<div class="wrapper">
+	@@include("blocks/header/header.html")
+	<div class="overlay overlay--menu">
+		@@include('blocks/menu/menu.html')
+	</div>
+	<main class="page page--padding page--padding-top_ls">
+		<div class="container">
+			@@include('blocks/breadcrumbs/breadcrumbs.html', {
+			"current": "Поиск по сайту"
+			})
+			<div class="page__top page__top--mb_m">
+				<h1 class="page-title page-title--size_xs">По Вашему запросу ничего не найдено</h1>
+			</div>
+			<div class="tabs-block">
+				<div class="tabs-block__title">Вместе с этим запросом ищут</div>
+				<div class="tabs">
+					<a href="#" class="tab active">Подарок маме</a>
+					<a href="#" class="tab">Подарок маме</a>
+					<a href="#" class="tab">Подарок маме</a>
+					<a href="#" class="tab">Подарок маме</a>
+					<a href="#" class="tab">Подарок маме</a>
+					<a href="#" class="tab">Подарок маме</a>
+				</div>
+			</div>
+			<h2 class="section-title section-title--mb_ls">Возможно, Вам понравится:</h2>
+			<div class="catalog-grid">
+				@@include('blocks/catalog-card/catalog-card.html', {
+				"src": "01",
+				"favorite": true,
+				"text": true,
+				"bottom": true
+				})
+				@@include('blocks/catalog-card/catalog-card.html', {
+				"src": "02",
+				"favorite": true,
+				"text": true,
+				"bottom": true
+				})
+				@@include('blocks/catalog-card/catalog-card.html', {
+				"src": "03",
+				"favorite": true,
+				"text": true,
+				"bottom": true
+				})
+			</div>
+		</div>
+	</main>
+	@@include('blocks/footer/footer.html')
+</div>
+@@include("blocks/link/link.html")
+</body>
+
+</html>

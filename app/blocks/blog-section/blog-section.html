@@ -1,0 +1,39 @@
+<section id="blog" class="section">
+	<div class="container">
+		<div class="section__top">
+			<h2 class="section-title">Блог</h2>
+		</div>
+		<div class="slider-wrap">
+			@@include('blocks/swiper-btns/swiper-btns.html', {
+			"style": 2
+			})
+			<div class="swiper blog-slider">
+				<div class="swiper-wrapper">
+					@@include('blocks/blog-card/blog-card.html', {
+					"swiper": true
+					})
+					@@include('blocks/blog-card/blog-card.html', {
+					"swiper": true
+					})
+					@@include('blocks/blog-card/blog-card.html', {
+					"swiper": true
+					})
+					@@include('blocks/blog-card/blog-card.html', {
+					"swiper": true
+					})
+					@@include('blocks/blog-card/blog-card.html', {
+					"swiper": true
+					})
+					@@include('blocks/blog-card/blog-card.html', {
+					"swiper": true
+					})
+				</div>
+			</div>
+		</div>
+		<div class="load-more">
+			<a href="#" class="btn btn--style_link">
+				Посмотреть еще
+			</a>
+		</div>
+	</div>
+</section>

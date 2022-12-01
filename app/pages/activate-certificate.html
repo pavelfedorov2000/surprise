@@ -1,0 +1,25 @@
+@@include("blocks/head/head.html", {"title": "Активация сертификата"})
+@@include("blocks/head/no-js.html")
+<div class="wrapper">
+	@@include("blocks/header/header.html")
+	<div class="overlay overlay--menu">
+		@@include('blocks/menu/menu.html')
+	</div>
+	<main class="page page--padding page--with_decor">
+		<div class="container">
+			@@include('blocks/breadcrumbs/breadcrumbs.html', {
+			"current": "Активация сертификата"
+			})
+			<div class="page__top page__top--mb_m">
+				<h1 class="page-title">Активация сертификата</h1>
+			</div>
+			@@include('blocks/activate-certificate/activate-certificate.html')
+		</div>
+	</main>
+	@@include("blocks/footer/footer.html")
+	<!-- @@include("blocks/popups/popups.html") -->
+</div>
+@@include("blocks/link/link.html")
+</body>
+
+</html>

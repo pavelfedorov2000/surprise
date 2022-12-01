@@ -1,0 +1,23 @@
+.badge {
+	padding: 5px var(--offset-s);
+	background-color: var(--green-light);
+	border-radius: $brs-xxs;
+
+	&__text {
+		position: relative;
+		padding-left: 34px;
+		color: var(--green);
+
+		&::before {
+			content: '';
+			position: absolute;
+			top: 50%;
+			transform: translateY(-50%);
+			left: 0;
+			width: var(--offset-m);
+			height: var(--offset-m);
+			background-image: url(../images/icons/check-done.svg);
+			@extend %bg-contain;
+		}
+	}
+}

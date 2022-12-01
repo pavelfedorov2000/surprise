@@ -1,0 +1,33 @@
+.small-card {
+	@include row-grid(var(--offset-xs));
+	align-content: center;
+	justify-items: center;
+	text-align: center;
+	min-height: 184px;
+	padding: var(--offset-m) 20px 20px;
+	background-color: #fff;
+	box-shadow: $bsh;
+	border-radius: $brs-card-xl;
+	border-bottom: 3px solid #fff;
+	transition: $transition border-bottom-color;
+
+	@media(max-width: $sm) {
+		@include padding-x(var(--offset-s));
+	}
+
+	&:active {
+		border-bottom-color: var(--green);
+	}
+
+	@media (any-hover: hover) {
+		&:hover {
+			border-bottom-color: var(--green);
+		}
+	}
+
+	&__img {
+		width: 80px;
+		height: 80px;
+		object-fit: contain;
+	}
+}

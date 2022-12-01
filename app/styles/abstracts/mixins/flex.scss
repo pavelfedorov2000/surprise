@@ -3,8 +3,3 @@
 	align-items: center;
 	justify-content: center;
 }
-
-@mixin grid-center() {
-	display: grid;
-	place-items: center;
-}

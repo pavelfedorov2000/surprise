@@ -1,13 +1,21 @@
+.tabs-block {
+	&__title {
+		@extend %museo-300;
+		margin-bottom: var(--offset-s);
+		color: #000;
+	}
+}
+
 .tabs {
 	display: flex;
 	margin-bottom: var(--offset-xxxl);
-    overflow-x: auto;
+	overflow-x: auto;
 
-    @media(max-width: $md) {
-       margin-bottom: var(--offset-l);
-    }
+	@media(max-width: $md) {
+		margin-bottom: var(--offset-l);
+	}
 
-    &::-webkit-scrollbar {
+	&::-webkit-scrollbar {
 		width: 0;
 		-webkit-appearance: none;
 		scrollbar-width: 0;
@@ -17,11 +25,11 @@
 .tab {
 	padding: var(--offset-xxs) var(--offset-m);
 	background-color: #F5F8F8;
-    color: $color-default;
+	color: $color-default;
 	border-radius: $brs;
 	font-size: 16px;
 	line-height: 1.5;
-    white-space: nowrap;
+	white-space: nowrap;
 	margin-right: var(--offset-s);
 	transition: $transition all;
 

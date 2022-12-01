@@ -1,0 +1,13 @@
+.catalog-sort {
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	flex-wrap: wrap;
+	gap: var(--offset-l);
+	padding-top: var(--offset-m);
+	padding-bottom: var(--offset-s);
+
+	>* {
+		margin-bottom: 0;
+	}
+}

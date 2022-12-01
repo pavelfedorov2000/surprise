@@ -2,36 +2,59 @@
 <!-- <link rel="stylesheet" href="./assets/libs/css/jquery-ui.min.css"> -->
 @@include("blocks/head/no-js.html")
 <div class="wrapper">
-    @@include("blocks/header/header.html")
-    <main class="page search-results catalog">
-        <div class="container">
-            <nav class="breadcrumbs"
-                 aria-label="breadcrumbs">
-                <ol class="breadcrumbs__list">
-                    <li class="breadcrumbs__item">
-                        <a href="#">
-                            Главная
-                        </a>
-                    </li>
-                    <li class="breadcrumbs__item">
-                        <a href="#">
-                            Поиск
-                        </a>
-                    </li>
-                    <li class="breadcrumbs__item">
-                        <span>
-                            Поиск товаров по запросу «шкаф»
-                        </span>
-                    </li>
-                </ol>
-            </nav>
-            <div class="catalog__page">
-                <div class="page__top">
-                    <h1>Поиск товаров</h1>
-                </div>
-            </div>
-        </div>
-    </main>
+	@@include("blocks/header/header.html")
+	<div class="overlay overlay--menu">
+		@@include('blocks/menu/menu.html')
+	</div>
+	<main class="page page--padding page--padding-top_ls">
+		<div class="container">
+			@@include('blocks/breadcrumbs/breadcrumbs.html', {
+			"current": "Поиск по сайту"
+			})
+			<div class="page__top page__top--mb_ls">
+				<h1 class="page-title page-title--size_xs">Результаты поиска по запросу «вин»</h1>
+			</div>
+			<div class="catalog-grid">
+				@@include('blocks/catalog-card/catalog-card.html', {
+				"src": "01",
+				"favorite": true,
+				"text": true,
+				"bottom": true
+				})
+				@@include('blocks/catalog-card/catalog-card.html', {
+				"src": "02",
+				"favorite": true,
+				"text": true,
+				"bottom": true
+				})
+				@@include('blocks/catalog-card/catalog-card.html', {
+				"src": "03",
+				"favorite": true,
+				"text": true,
+				"bottom": true
+				})
+				@@include('blocks/catalog-card/catalog-card.html', {
+				"src": "04",
+				"favorite": true,
+				"text": true,
+				"bottom": true
+				})
+				@@include('blocks/catalog-card/catalog-card.html', {
+				"src": "05",
+				"favorite": true,
+				"text": true,
+				"bottom": true
+				})
+				@@include('blocks/catalog-card/catalog-card.html', {
+				"src": "06",
+				"favorite": true,
+				"text": true,
+				"bottom": true
+				})
+			</div>
+		</div>
+	</main>
+	@@include('blocks/footer/footer.html')
 </div>
 @@include("blocks/link/link.html")
 <!-- <script src="//code.jquery.com/ui/1.11.4/jquery-ui.js"></script> -->

@@ -16,37 +16,11 @@
 							<p>регистрация в ЕГР 31.08.2011, Мингорисполком</p>
 							<p>© Все права защищены, 2022</p>
 						</div>
-						<div class="footer__rating rating">
-							<div class="rating__title">Рейтинг: 5</div>
-							<p class="rating__text">На основе 98 отзывов</p>
-							<ul class="rating__stars">
-								<li class="rating__star">
-									<svg class="icon">
-										<use xlink:href="assets/images/sprite.svg#star"></use>
-									</svg>
-								</li>
-								<li class="rating__star">
-									<svg class="icon">
-										<use xlink:href="assets/images/sprite.svg#star"></use>
-									</svg>
-								</li>
-								<li class="rating__star">
-									<svg class="icon">
-										<use xlink:href="assets/images/sprite.svg#star"></use>
-									</svg>
-								</li>
-								<li class="rating__star">
-									<svg class="icon">
-										<use xlink:href="assets/images/sprite.svg#star"></use>
-									</svg>
-								</li>
-								<li class="rating__star">
-									<svg class="icon">
-										<use xlink:href="assets/images/sprite.svg#star"></use>
-									</svg>
-								</li>
-							</ul>
-						</div>
+						@@include('blocks/rating/rating.html', {
+						"class": "footer",
+						"title": "Рейтинг: 5",
+						"text": "На основе 98 отзывов"
+						})
 					</div>
 				</div>
 				<div class="footer__col footer__col--address">

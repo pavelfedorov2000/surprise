@@ -1,0 +1,25 @@
+.team-section {
+
+	// .team-section__img
+
+	&__img {
+		@media(min-width: 1025px) {
+			flex: 0 0 516px;
+		}
+
+		@media(min-width: 1201px) {
+			margin-right: 93px;
+		}
+	}
+
+	// .team-section__content
+
+	&__content {
+		max-width: 752px;
+		padding-right: 72px;
+
+		@media(max-width: $md) {
+			padding-right: 0;
+		}
+	}
+}

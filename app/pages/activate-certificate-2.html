@@ -1,0 +1,35 @@
+@@include("blocks/head/head.html", {"title": "Активация сертификата 2"})
+@@include("blocks/head/no-js.html")
+<div class="wrapper">
+	@@include("blocks/header/header.html")
+	<div class="overlay overlay--menu">
+		@@include('blocks/menu/menu.html')
+	</div>
+	<main class="page page--padding page--with_decor">
+		<div class="container">
+			@@include('blocks/breadcrumbs/breadcrumbs.html', {
+			"current": "Активация сертификата"
+			})
+			<div class="page__top">
+				<h1 class="page-title">Активация сертификата</h1>
+			</div>
+			<div class="card card-box card--style_bg-green">
+				<div class="card-box__title">Сертификат почти активен </div>
+				<p class="card-box__text">
+					Выбирайте любую услугу из нашего каталога на указанную сумму. Номинал сертификата можно разбить
+					на
+					несколько
+					услуг или доплатить до более дорогой. Для того, чтобы это сделать – обратитесь к нам по телефону
+					<a class="menu-link" href="tel:+375297333368">+375 29 7333368</a>
+				</p>
+			</div>
+			@@include('blocks/certificate-form/certificate-form.html')
+		</div>
+	</main>
+	@@include("blocks/footer/footer.html")
+	<!-- @@include("blocks/popups/popups.html") -->
+</div>
+@@include("blocks/link/link.html")
+</body>
+
+</html>

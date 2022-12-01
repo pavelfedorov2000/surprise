@@ -1,0 +1,31 @@
+.partners-block {
+
+	// .partners-block__list
+
+	&__list {
+		display: grid;
+		grid-template-columns: repeat(5, 1fr);
+		gap: 75px var(--offset-xls);
+
+		@media(max-width: $lg) {
+			grid-template-columns: repeat(4, 1fr);
+		}
+
+		@media(max-width: $md) {
+			grid-template-columns: repeat(3, 1fr);
+			gap: 26px var(--offset-m);
+		}
+
+		@media(max-width: $sm) {
+			grid-template-columns: repeat(2, 1fr);
+		}
+	}
+
+	// .partners-block__item
+
+	&__item {
+		display: flex;
+		align-items: center;
+		justify-content: center;
+	}
+}

@@ -42,14 +42,27 @@ p {
 	font-family: 'Museo Sans Cyrl 300', sans-serif;
 	font-weight: 300;
 	color: var(--text-color);
+
+	&.default-color {
+		color: $color-default;
+	}
 }
 
 .menu-link {
 	transition: $transition color;
 
+	&--underlined {
+		line-height: 1;
+		border-bottom: 1px solid var(--black);
+		transition: $transition color,
+			$transition border-bottom-color;
+		//text-decoration: underline;
+	}
+
 	@media (any-hover: hover) {
 		&:hover {
 			color: var(--green);
+			border-bottom-color: var(--green);
 		}
 	}
 }

@@ -1,0 +1,44 @@
+.certificates-section {
+
+	// .certificates-section__inner
+
+	&__inner {
+		display: grid;
+		gap: var(--offset-xxxl);
+
+		@media(max-width: $md) {
+			gap: var(--offset-l);
+		}
+
+		@media(min-width: 1201px) {
+			grid-template-columns: 438px 1fr;
+		}
+	}
+
+	// .certificates-section__content
+
+	&__content {
+		@include row-grid(var(--offset-m));
+		justify-items: start;
+		align-content: start;
+
+		@media(max-width: $sm) {
+			row-gap: var(--offset-s);
+		}
+	}
+
+	// .certificates-section__definition
+
+	&__definition {
+		@extend %museo-500;
+		font-size: 24px;
+
+		@media(max-width: $sm) {
+			font-size: 20px;
+		}
+
+		b {
+			@extend %museo-700;
+		}
+	}
+}

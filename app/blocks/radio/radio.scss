@@ -1,87 +1,151 @@
 .radio {
-    $this: &; // .radio
+	$this: &; // .radio
 
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
+	&-input {
+		width: 1px;
+		height: 1px;
+		overflow: hidden;
+		position: absolute;
+		clip: rect(0 0 0 0);
 
-    &__input {
-        width: 1px;
-        height: 1px;
-        overflow: hidden;
-        position: absolute;
-        clip: rect(0 0 0 0);
+		&:checked~#{$this} {
+			&-style {
+				border-color: var(--green);
 
-        &:checked ~ #{$this} {
-            &__style {
-                //background-color: $green-text;
-                //border-color: $green-text;
+				&:before {
+					border-color: #fff;
+				}
 
-                &:before {
-                    content: '';
-                    position: absolute;
-                    top: -1px;
-                    left: -1px;
-                    width: 20px;
-                    height: 20px;
-                    border-radius: 50%;
-                    box-sizing: border-box;
-                    //border: 7px solid $green-text;
-                    background: #fff;
+				&:after {
+					opacity: 1;
+				}
+			}
+		}
+	}
 
-                    @media (max-width: $md) {
-                        width: 16px;
-                        height: 16px;
-                        border-width: 5.5px;
-                    }
-                }
-            }
-        }
-    }
+	&-style {
+		position: relative;
+		flex-shrink: 0;
+		display: block;
+		width: var(--offset-m);
+		height: var(--offset-m);
+		margin-right: var(--offset-m);
 
-    &__style {
-        position: relative;
-        flex-shrink: 0;
-        margin-right: 16px;
-        width: 20px;
-        height: 20px;
-        box-sizing: border-box;
-        //border: 1px solid $gray-hover;
-        border-radius: 50%;
-        transition: .3s border-color, .3s background-color;
+		&::before,
+		&::after {
+			content: '';
+			position: absolute;
+			top: 50%;
+			left: 50%;
+			transform: translate(-50%, -50%);
+		}
 
-        @media (max-width: $md) {
-            width: 16px;
-            height: 16px;
-            margin-right: 18px;
-        }
-    }
+		&:before {
+			width: 20px;
+			height: 20px;
+			border-radius: 50%;
+			border: 2px solid var(--line-color);
+			transition: $transition border-color, $transition background-color;
+		}
 
-    &__wrap {
-        cursor: pointer;
-        display: flex;
-        align-items: center;
+		&:after {
+			width: var(--offset-xs);
+			height: var(--offset-xs);
+			border-radius: 50%;
+			background-color: #fff;
+			box-sizing: border-box;
+			background-color: #fff;
+			opacity: 0;
+			transition: $transition opacity;
+		}
+	}
 
-        @media (any-hover: hover) {
-            &:hover {
-                #{$this} {
-                    &__input {
-                        &:not(:checked) + #{$this}__style {
-                            //border-color: $gray-text;
-                        }
-                    }
-                }
-            }
-        }
-    }
+	&-text {
+		font-size: 20px;
+		transition: $transition color;
 
-    &__text {
-        font-size: 20px;
-        line-height: 30px;
-        transition: .3s color;
+		@media (max-width: $md) {
+			font-size: 16px;
+		}
+	}
 
-        @media (max-width: $md) {
-            font-size: 16px;
-        }
-    }
+	&__content {
+		display: inline-flex;
+		align-items: center;
+	}
+
+	&--style {
+		&_filter {
+			#{$this} {
+				&__content {
+					cursor: pointer;
+					width: 100%;
+					padding: 25px var(--offset-m);
+					background-color: var(--white-70);
+					backdrop-filter: blur(2px);
+					transition: $transition all;
+
+					@media(max-width: $md) {
+						@include padding-y(18px);
+					}
+
+					&::after {
+						content: '';
+						position: absolute;
+						bottom: 0;
+						left: 0;
+						width: 0%;
+						height: 2px;
+						background-color: var(--green);
+						transition: $transition width;
+					}
+
+					@media (any-hover: hover) {
+						&:hover {
+							box-shadow: $bsh;
+						}
+					}
+				}
+
+				&__icon {
+					flex-shrink: 0;
+					margin-right: var(--offset-xs);
+					width: var(--offset-m);
+					height: var(--offset-m);
+					stroke: var(--black);
+					transition: $transition stroke;
+				}
+
+				&-text {
+					white-space: nowrap;
+				}
+
+				&-input {
+					&:checked~ {
+						#{$this} {
+							&__content {
+								background-color: #fff;
+								box-shadow: $bsh;
+
+								&:after {
+									width: 100%;
+								}
+
+								#{$this} {
+									&__icon {
+										stroke: var(--green);
+									}
+
+									&-text {
+										@extend %museo-700;
+										color: var(--green);
+									}
+								}
+							}
+						}
+					}
+				}
+			}
+		}
+	}
 }
