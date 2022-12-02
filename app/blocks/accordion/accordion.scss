@@ -26,8 +26,8 @@
 			position: absolute;
 			top: 0;
 			left: 0;
-			width: var(--offset-m);
-			height: var(--offset-m);
+			width: var(--icon-size);
+			height: var(--icon-size);
 			background-image: url(../images/icons/drop-arrow.svg);
 			transition: $transition transform;
 		}

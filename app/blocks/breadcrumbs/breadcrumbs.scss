@@ -32,7 +32,7 @@
 
 		&:not(:last-child) {
 			>* {
-				padding-right: calc(var(--offset-s) + var(--offset-m));
+				padding-right: calc(var(--offset-s) + var(--icon-size));
 
 				&::after {
 					content: '';
@@ -40,10 +40,9 @@
 					right: 0;
 					top: 50%;
 					transform: translateY(-50%);
-					width: var(--offset-m);
-					height: var(--offset-m);
+					width: var(--icon-size);
+					height: var(--icon-size);
 					background-image: url(../images/icons/crumb-arrow.svg);
-					@extend %bg-contain;
 				}
 			}
 		}

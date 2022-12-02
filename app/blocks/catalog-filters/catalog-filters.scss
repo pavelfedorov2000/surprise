@@ -8,10 +8,6 @@
         margin-top: calc(var(--section-padding-xs) * (-1));
     }
 
-    /* &:not(#{$this}--banner) {
-        
-    } */
-
     &.fixed {
         @media(max-width: $xl) {
             position: fixed;
@@ -215,8 +211,8 @@
             top: 50%;
             transform: translateY(-50%);
             left: 20px;
-            width: var(--offset-m);
-            height: var(--offset-m);
+            width: var(--icon-size);
+            height: var(--icon-size);
             background-image: url(../images/icons/back.svg);
         }
     }
@@ -369,10 +365,10 @@
         &::after {
             content: "";
             position: absolute;
-            top: calc(50% - var(--offset-m) / 2);
+            top: calc(50% - var(--icon-size) / 2);
             right: var(--offset-m);
-            width: var(--offset-m);
-            height: var(--offset-m);
+            width: var(--icon-size);
+            height: var(--icon-size);
             background-image: url(../images/icons/drop-arrow.svg);
             transition: $transition transform;
         }
@@ -491,8 +487,8 @@
     &__icon {
         flex-shrink: 0;
         margin-right: 14px;
-        width: var(--offset-m);
-        height: var(--offset-m);
+        width: var(--icon-size);
+        height: var(--icon-size);
         stroke: var(--green);
         transition: $transition stroke;
     }
@@ -542,41 +538,5 @@
 
     &__item {
         @include row-grid(var(--offset-s));
-    }
-}
-
-.filter-btn {
-    position: fixed;
-    left: var(--container-padding);
-    right: var(--container-padding);
-    z-index: 99;
-    border-radius: 0;
-    bottom: 0;
-    display: none;
-
-    span {
-        position: relative;
-        padding-left: 34px;
-
-        &::before {
-            content: '';
-            position: absolute;
-            top: 50%;
-            transform: translateY(-50%);
-            left: 0;
-            width: var(--offset-m);
-            height: var(--offset-m);
-            background-image: url(../images/icons/filter.svg);
-        }
-    }
-
-    @media(max-width: $xl) {
-        display: flex;
-    }
-
-    &.hidden {
-        @media(max-width: $xl) {
-            display: none;
-        }
     }
 }

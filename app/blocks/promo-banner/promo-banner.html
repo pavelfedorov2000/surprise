@@ -1,11 +1,7 @@
 <div class="section promo-banner">
-    <div class="promo-banner__body"
-         style="background-image: url(assets/images/content/banner.jpg);"></div>
-    <div class="promo-banner__filters">
-        @@include('blocks/catalog-filters/catalog-filters.html')
-        <button class="btn filter-btn btn--style_bg-green hidden"
-                type="button">
-            <span>Фильтр</span>
-        </button>
-    </div>
+	<div class="promo-banner__body" style="background-image: url(assets/images/content/banner.jpg);"></div>
+	<div class="promo-banner__filters">
+		@@include('blocks/catalog-filters/catalog-filters.html')
+		@@include('blocks/filter-btn/filter-btn.html')
+	</div>
 </div>

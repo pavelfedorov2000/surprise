@@ -58,6 +58,8 @@ $container: 1440;
 	--offset-xxs: 8px;
 	--offset-xxxs: 4px;
 
+    --icon-size: 24px;
+
 	@media(max-width: $xl) {
 		--container-padding: 16px;
 	}

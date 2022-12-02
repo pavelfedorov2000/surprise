@@ -181,23 +181,35 @@
 	@media(max-width: $md) {
 		@include row-grid(var(--offset-m));
 	}
+
+    &--style {
+        &_grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: var(--offset-m) var(--offset-xl);
+        }
+    }
 }
 
 .icons-item {
 	$this: &;
+
+    display: flex;
+    align-items: center;
 	// .icons-item__wrap
 
-	&__wrap {
-		display: grid;
-		grid-template-rows: repeat(2, calc(var(--offset-xxl) / 2));
-		grid-template-columns: var(--offset-xxl) max-content;
-		column-gap: var(--offset-m);
-	}
+    &__content {
+        display: flex;
+        flex-direction: column;
+    }
 
 	// .icons-item__icon
 
 	&__icon {
-		grid-row: 1 / -1;
+        flex-shrink: 0;
+        margin-right: var(--offset-m);
+		/* width: var(--offset-xxl);
+        height: var(--offset-xxl); */
 	}
 
 	// .icons-item__title

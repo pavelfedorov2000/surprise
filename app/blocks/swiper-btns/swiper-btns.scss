@@ -55,8 +55,8 @@
 		left: 50%;
 		top: 50%;
 		transform: translate(-50%, -50%);
-		width: var(--offset-m);
-		height: var(--offset-m);
+		width: var(--icon-size);
+		height: var(--icon-size);
 
 		path {
 			fill: var(--green);

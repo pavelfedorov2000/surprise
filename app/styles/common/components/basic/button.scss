@@ -34,8 +34,8 @@
     &__icon {
         flex-shrink: 0;
         margin-right: var(--offset-xs);
-        width: var(--offset-m);
-        height: var(--offset-m);
+        width: var(--icon-size);
+        height: var(--icon-size);
     }
 
     &--style {

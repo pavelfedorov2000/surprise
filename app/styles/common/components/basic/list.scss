@@ -1,0 +1,18 @@
+.check-list {
+    li {
+        @extend %museo-300;
+        position: relative;
+        padding-left: calc(var(--icon-size) + var(--offset-xs));
+
+        &::before {
+         content: '';
+         position: absolute;
+         top: 0;
+         left: 0;
+         width: var(--icon-size);
+         height: var(--icon-size);
+         background-image: url(../images/icons/check-list.svg);
+         @extend %bg-contain;
+        }
+    }
+}

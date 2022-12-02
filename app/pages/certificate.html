@@ -1,41 +1,145 @@
 @@include("blocks/head/head.html", {"title": "Главная"})
 @@include("blocks/head/no-js.html")
 <div class="wrapper">
-    @@include("blocks/header/header.html")
-    <div class="overlay overlay--menu">
-        @@include('blocks/menu/menu.html')
-    </div>
-    <main class="page">
-        <div class="container">
-            <nav class="breadcrumbs"
-                 aria-label="breadcrumbs">
-                <ol class="breadcrumbs__list">
-                    <li class="breadcrumbs__item">
-                        <a href="#">Главная</a>
-                    </li>
-                    <li class="breadcrumbs__item">
-                        <a href="#">Все сертификаты</a>
-                    </li>
-                    <li class="breadcrumbs__item">
-                        <span>Катание на квадроциклах </span>
-                    </li>
-                </ol>
-            </nav>
+	@@include("blocks/header/header.html")
+	<div class="overlay overlay--menu">
+		@@include('blocks/menu/menu.html')
+	</div>
+	<main class="page">
+		<div class="container">
+			<nav class="breadcrumbs" aria-label="breadcrumbs">
+				<ol class="breadcrumbs__list">
+					<li class="breadcrumbs__item">
+						<a href="#">Главная</a>
+					</li>
+					<li class="breadcrumbs__item">
+						<a href="#">Все сертификаты</a>
+					</li>
+					<li class="breadcrumbs__item">
+						<span>Катание на квадроциклах </span>
+					</li>
+				</ol>
+			</nav>
 
-            <header>
-                <h1 class="page-title">Катание на квадроциклах в группе</h1>
-                @@include('blocks/rating/rating.html', {
-                "reverse": true,
-                "link": "20 отзывов",
-                "num": "5.0"
-                })
-            </header>
+			<header>
+				<h1 class="page-title">Катание на квадроциклах в группе</h1>
+				@@include('blocks/rating/rating.html', {
+				"reverse": true,
+				"link": "20 отзывов",
+				"num": "5.0"
+				})
+			</header>
 
-            @@include('blocks/photogallery/photogallery.html')
-        </div>
-    </main>
-    @@include("blocks/footer/footer.html")
-    <!-- @@include("blocks/popups/popups.html") -->
+			@@include('blocks/photogallery/photogallery.html')
+
+			<div class="grid-row">
+				<div class="grid-col-7 certificate-content">
+					<section class="certificate-content__section">
+						<ul class="icons-list icons-list--style_grid">
+							<li class="icons-item">
+								<span
+									class="icon-circle icons-item__icon icon-circle--style_bg-pink icon-circle--position_bottom-right">
+									<img src="assets/images/icons/cart.svg" alt="">
+								</span>
+								<div class="icons-item__content">
+									<span class="icons-item__descr">Сертификат в уникальной упаковке</span>
+								</div>
+							</li>
+							<li class="icons-item">
+								<span
+									class="icon-circle icons-item__icon icon-circle--style_bg-yellow icon-circle--position_bottom-right">
+									<img src="assets/images/icons/pin.svg" alt="">
+								</span>
+								<div class="icons-item__content">
+									<span class="icons-item__descr">
+										База — г. Минск, ул. Орловская, 78
+									</span>
+								</div>
+							</li>
+							<li class="icons-item">
+								<span
+									class="icon-circle icons-item__icon icon-circle--style_bg-yellow icon-circle--position_bottom-left">
+									<img src="assets/images/icons/user.svg" alt="">
+								</span>
+								<div class="icons-item__content">
+									<span class="icons-item__descr">1, 2 или 5 человек</span>
+								</div>
+							</li>
+							<li class="icons-item">
+								<span
+									class="icon-circle icons-item__icon icon-circle--style_bg-blue icon-circle--position_top-left">
+									<img src="assets/images/icons/clock.svg" alt="">
+								</span>
+								<div class="icons-item__content">
+									<span class="icons-item__descr">
+										2 часа
+									</span>
+								</div>
+							</li>
+							<li class="icons-item">
+								<span
+									class="icon-circle icons-item__icon icon-circle--style_bg-blue icon-circle--position_bottom-right">
+									<img src="assets/images/icons/sun.svg" alt="">
+								</span>
+								<div class="icons-item__content">
+									<span class="icons-item__descr">
+										Каждый день при благоприятных погодных условиях.
+									</span>
+								</div>
+							</li>
+							<li class="icons-item">
+								<span
+									class="icon-circle icons-item__icon icon-circle--style_bg-pink icon-circle--position_top-right">
+									<img src="assets/images/icons/calendar.svg" alt="">
+								</span>
+								<div class="icons-item__content">
+									<span class="icons-item__descr">
+										3 месяца со дня покупки
+									</span>
+								</div>
+							</li>
+							<li class="icons-item">
+								<span
+									class="icon-circle icons-item__icon icon-circle--style_bg-pink icon-circle--position_top-left">
+									<img src="assets/images/icons/cash.svg" alt="">
+								</span>
+								<div class="icons-item__content">
+									<span class="icons-item__descr">
+										Цена только за подарок без наценок
+										и комиссий.
+									</span>
+								</div>
+							</li>
+						</ul>
+						<div class="card card-box card--style_bg-pink">
+							<div class="card-box__title">Особенности</div>
+							<ul class="check-list">
+								<li>Необходимо иметь с собой паспорт.</li>
+								<li>Отмена записи не менее, чем за 12 часов.</li>
+								<li>Заезды не осуществляются в дождь и при температуре ниже минус 10 градусов.</li>
+								<li>Необходимо иметь с собой паспорт.</li>
+							</ul>
+						</div>
+					</section>
+					<section class="certificate-content__section">
+						<div class="section-title">
+							Stand up paddle — крутой и безопасный водный спорт
+						</div>
+						<p>
+							Мечтаете опробовать свои силы в чем-то новом и обожаете активный отдых? Хочется охладиться в
+							невыносимую жару? Тогда хватайте друзей и вторую половинку и становитесь вместе на SUP-борды
+							— специальные доски для гребли стоя и длинные весла.
+						</p>
+					</section>
+				</div>
+				<div class="grid-col-5">
+					@@include("blocks/aside-choose/aside-choose.html")
+				</div>
+			</div>
+		</div>
+	</main>
+	@@include("blocks/footer/footer.html")
+	<!-- @@include("blocks/popups/popups.html") -->
 </div>
 @@include("blocks/link/link.html")
 </body>

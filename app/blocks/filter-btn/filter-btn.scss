@@ -1,0 +1,35 @@
+.filter-btn {
+    position: fixed;
+    left: var(--container-padding);
+    right: var(--container-padding);
+    z-index: 99;
+    border-radius: 0;
+    bottom: 0;
+    display: none;
+
+    span {
+        position: relative;
+        padding-left: 34px;
+
+        &::before {
+            content: '';
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+            left: 0;
+            width: var(--icon-size);
+            height: var(--icon-size);
+            background-image: url(../images/icons/filter.svg);
+        }
+    }
+
+    @media(max-width: $xl) {
+        display: flex;
+    }
+
+    &.hidden {
+        @media(max-width: $xl) {
+            display: none;
+        }
+    }
+}

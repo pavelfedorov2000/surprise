@@ -182,9 +182,13 @@
 	column-gap: 7px;
 	white-space: nowrap;
 
-	span {
+	/* span {
 		line-height: 2;
-	}
+	} */
+
+    b {
+        line-height: 1.2;
+    }
 }
 
 .price {

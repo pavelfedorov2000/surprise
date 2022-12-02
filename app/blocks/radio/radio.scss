@@ -27,8 +27,8 @@
         position: relative;
         flex-shrink: 0;
         display: block;
-        width: var(--offset-m);
-        height: var(--offset-m);
+        width: var(--icon-size);
+        height: var(--icon-size);
         margin-right: var(--offset-m);
 
         &::before,
@@ -110,8 +110,8 @@
                 &__icon {
                     flex-shrink: 0;
                     margin-right: var(--offset-xs);
-                    width: var(--offset-m);
-                    height: var(--offset-m);
+                    width: var(--icon-size);
+                    height: var(--icon-size);
                     stroke: var(--black);
                     transition: $transition stroke;
                 }

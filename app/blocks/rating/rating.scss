@@ -1,9 +1,27 @@
 .rating {
+    $this: &;
+
     display: flex;
     flex-wrap: wrap;
 
     &--reverse {
-        flex-direction: row-reverse;
+        align-items: center;
+
+        #{$this} {
+            &__num {
+                order: 1;
+            }
+
+            &__stars {
+                order: 2;
+                margin-left: 10px;
+                margin-right: var(--offset-l);
+            }
+        }
+
+        .menu-link {
+            order: 3;
+        }
     }
 
     //align-items: center;

@@ -35,10 +35,10 @@
         &::after {
             content: "";
             position: absolute;
-            top: calc(50% - var(--offset-m) / 2);
+            top: calc(50% - var(--icon-size) / 2);
             right: var(--offset-m);
-            width: var(--offset-m);
-            height: var(--offset-m);
+            width: var(--icon-size);
+            height: var(--icon-size);
             background-image: url(../images/icons/drop-arrow.svg);
             transition: $transition all;
         }

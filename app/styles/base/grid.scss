@@ -341,3 +341,19 @@
         }
     }
 }
+
+.grid-row {
+    display: grid;
+    grid-template-columns: repeat(12, 1fr);
+    gap: var(--offset-xxxl);
+}
+
+.grid-col {
+    &-7 {
+        grid-column: span 7;
+    }
+
+    &-5 {
+        grid-column: span 5;
+    }
+}
