@@ -13,21 +13,31 @@
     } */
 
     &.fixed {
-        @media(max-width: $md) {
+        @media(max-width: $xl) {
             position: fixed;
             top: 0;
-            left: 0;
+            left: -100%;
+            z-index: 101;
             width: 100%;
             height: 100%;
             overflow-y: auto;
-            padding: 30px 20px 50px;
+            padding: 0 0 50px 0;
             background-color: #fff;
             display: flex;
             flex-direction: column;
+            transition: $transition left;
+
+            &.active {
+                left: 0;
+            }
 
             #{$this} {
                 &__back-btn {
                     display: flex;
+                }
+
+                &__radios {
+                    @include margin-x(20px);
                 }
 
                 &__radio {
@@ -53,6 +63,27 @@
                     flex-direction: column;
                     flex-grow: 1;
                     filter: none;
+                    @include padding-x(20px);
+
+                    > .select {
+                        .select {
+                            &__title {
+                                padding-left: 0;
+
+                                &:after {
+                                    right: 0;
+                                }
+                            }
+
+                            &__content {
+                                padding-bottom: 20px;
+                            }
+
+                            &__label {
+                                padding-left: 0;
+                            }
+                        }
+                    }
                 }
 
                 &__btn {
@@ -60,6 +91,10 @@
                     border-radius: 0;
                     @include margin-x(calc(var(--offset-xxxs) * (-1)));
                 }
+            }
+
+            .dropdown-filter {
+                padding: 0 0 var(--offset-m) 0;
             }
 
             .catalog-filter {
@@ -74,14 +109,6 @@
                 }
             }
 
-            .select__title {
-                padding-left: 0;
-
-                &:after {
-                    right: 0;
-                }
-            }
-
             .radio {
                 &--style {
                     &_filter {
@@ -91,7 +118,8 @@
                                 background-color: #fff;
                                 padding: var(--offset-s);
                                 border-bottom: 2px solid var(--green);
-                                box-shadow: 0 -15px 30px rgba(0, 0, 0, 0.08);
+                                box-shadow: none;
+                                //box-shadow: 0 -15px 30px rgba(0, 0, 0, 0.08);
                                 backdrop-filter: none;
 
                                 &:after {
@@ -127,9 +155,9 @@
                                 }
 
                                 &:after {
-                                    left: 2px;
-                                    width: var(--offset-s);
-                                    height: var(--offset-s);
+                                    left: var(--offset-xxxs);
+                                    width: var(--offset-xs);
+                                    height: var(--offset-xs);
                                     border-radius: 50%;
                                     background-color: #fff;
                                     opacity: 0;
@@ -139,16 +167,28 @@
                             }
 
                             &-input {
-                                &:checked ~ #{$this} {
-                                    &__content {
-                                        background-color: var(--green);
-                                        box-shadow: 0 -15px 30px rgba(0, 0, 0, 0.08);
+                                &:checked ~ {
+                                    .radio {
+                                        &__content {
+                                            background-color: var(--green);
+                                            box-shadow: 0 -15px 30px rgba(0, 0, 0, 0.08);
 
-                                        #{$this} {
-                                            &-text {
-                                                font-family: 'Museo Sans Cyrl 500',
-                                                    sans-serif;
-                                                font-weight: 500;
+                                            .radio {
+                                                &-text {
+                                                    font-family: 'Museo Sans Cyrl 500',
+                                                        sans-serif;
+                                                    font-weight: 500;
+                                                    color: #fff;
+
+                                                    &::before {
+                                                        border-color: #fff;
+                                                    }
+
+                                                    &::after {
+                                                        opacity: 1;
+                                                        background-color: #fff;
+                                                    }
+                                                }
                                             }
                                         }
                                     }
@@ -164,17 +204,17 @@
     &__back-btn {
         @extend %museo-700;
         position: relative;
-        padding-left: var(--offset-xl);
+        padding: 30px 20px var(--offset-l) var(--offset-xxls);
         font-size: 24px;
         line-height: 1.5;
-        margin-bottom: var(--offset-l);
+        display: none;
 
         &::before {
             content: '';
             position: absolute;
             top: 50%;
             transform: translateY(-50%);
-            left: 0;
+            left: 20px;
             width: var(--offset-m);
             height: var(--offset-m);
             background-image: url(../images/icons/back.svg);
@@ -263,26 +303,20 @@
             grid-auto-flow: row;
             grid-auto-rows: minmax(var(--offset-xxls), max-content);
         }
+
+        .select {
+            &__content {
+                @media(max-width: $xl) {
+                    padding-top: 0;
+                }
+            }
+        }
     }
 
     // .catalog-filters__item
 
     &__item {
         position: relative;
-
-        /* &:not(:first-child) {
-			border-left: 1px solid var(--line-color);
-
-			@media(max-width: 1440px) {
-				border-left: none;
-			}
-		}
-
-		&:not(:last-of-type) {
-			@media(max-width: $xl) {
-				border-bottom: 1px solid var(--gray);
-			}
-		} */
     }
 
     // .catalog-filters__btn
@@ -349,15 +383,11 @@
             }
         }
 
-        &[aria-expanded="true"] {
+        /* &[aria-expanded="true"] {
             @media(max-width: $xl) {
                 border-color: var(--green);
             }
-
-            /* &::after {
-				transform: rotate(180deg);
-			} */
-        }
+        } */
 
         span {
             padding: 0 2px;
@@ -368,10 +398,6 @@
 
     &__dropdown {
         display: none;
-
-        @media(max-width: $lg) {
-            padding: var(--offset-l);
-        }
 
         @media(min-width: 1201px) {
             width: max-content;
@@ -388,7 +414,7 @@
     padding: var(--offset-l);
 
     @media(max-width: $lg) {
-        padding: var(--offset-m);
+        padding: 0 var(--offset-m) var(--offset-m) var(--offset-m);
     }
 
     @media(min-width: 1201px) {
@@ -516,5 +542,41 @@
 
     &__item {
         @include row-grid(var(--offset-s));
+    }
+}
+
+.filter-btn {
+    position: fixed;
+    left: var(--container-padding);
+    right: var(--container-padding);
+    z-index: 99;
+    border-radius: 0;
+    bottom: 0;
+    display: none;
+
+    span {
+        position: relative;
+        padding-left: 34px;
+
+        &::before {
+            content: '';
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+            left: 0;
+            width: var(--offset-m);
+            height: var(--offset-m);
+            background-image: url(../images/icons/filter.svg);
+        }
+    }
+
+    @media(max-width: $xl) {
+        display: flex;
+    }
+
+    &.hidden {
+        @media(max-width: $xl) {
+            display: none;
+        }
     }
 }

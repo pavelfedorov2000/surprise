@@ -1,266 +1,313 @@
 @@include("blocks/head/head.html", {"title": "Отзывы"})
 @@include("blocks/head/no-js.html")
 <div class="wrapper">
-	@@include("blocks/header/header.html")
-	<div class="overlay overlay--menu">
-		@@include('blocks/menu/menu.html')
-	</div>
-	<main class="page page--padding page--with_decor">
-		<div class="container">
-			@@include('blocks/breadcrumbs/breadcrumbs.html', {
-			"current": "Отзывы"
-			})
-			<div class="page__top">
-				<h1 class="page-title page-title--size_xs">Отзывы</h1>
-			</div>
-			<div class="reviews-block">
-				<div class="reviews-block__col">
-					<article class="review">
-						<header class="review__top">
-							<div class="review__info">
-								<div class="review__wrap">
-									<div class="review__name">Екатерина</div>
-									<time class="date review__date" datetime="2022-07-04">04.07.2022</time>
-								</div>
-								@@include('blocks/rating/rating.html', {
-								"class": "review",
-								"num": "5.0"
-								})
-							</div>
-						</header>
-						<a href="#" class="review__title">
-							Дрифтомания — дрифт на спортивном авто
-						</a>
-						<p class="review__text">
-							Ходили с друзьями, очень понравилось. Оказалось легче, чем я думала. Каталась впервые и со
-							всем
-							справилась, рекомендую
-						</p>
-						<div class="review__reactions reactions">
-							<div class="reaction">
-								<img src="assets/images/icons/fire.png" alt="" loading="lazy">
-								<img class="reaction__logo" src="assets/images/icons/srprs.png" alt="" loading="lazy">
-							</div>
-							<div class="reaction">
-								<img src="assets/images/icons/fire.png" alt="" loading="lazy">
-								<img class="reaction__logo" src="assets/images/icons/school.png" alt="" loading="lazy">
-							</div>
-						</div>
-						<div class="review-answer review__answer">
-							<img class="review-answer__logo" src="assets/images/icons/school.png" alt="" loading="lazy">
-							<div class="review-answer__content">
-								<div class="review-answer__title">SURPRISE.BY</div>
-								<p class="review-answer__text">Алиса, благодарим Вас за отзыв!)</p>
-							</div>
-						</div>
-					</article>
-					<article class="review">
-						<header class="review__top">
-							<div class="review__info">
-								<div class="review__wrap">
-									<div class="review__name">Yana</div>
-									<time class="date review__date" datetime="2022-07-04">04.07.2022</time>
-								</div>
-								@@include('blocks/rating/rating.html', {
-								"class": "review",
-								"num": "5.0"
-								})
-							</div>
-							<span class="badge">
-								<span class="badge__text">Отзыв подтвержден</span>
-							</span>
-						</header>
-						<a href="#" class="review__title">
-							Худи, платья, свитшоты и костюмы от LIMI:
-							авторские вышивки и яркие цвета
-						</a>
-						<p class="review__text">
-							Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut
-							labore et
-							dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi
-							ut aliquip ex
-							ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum
-							dolore eu
-							fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui
-							officia deserunt
-							mollit anim id est laborum.
-						</p>
-					</article>
-				</div>
-				<div class="reviews-block__col">
-					<article class="review">
-						<header class="review__top">
-							<div class="review__info">
-								<div class="review__wrap">
-									<div class="review__name">Yana</div>
-									<time class="date review__date" datetime="2022-07-04">04.07.2022</time>
-								</div>
-								@@include('blocks/rating/rating.html', {
-								"class": "review",
-								"num": "5.0"
-								})
-							</div>
-							<span class="badge">
-								<span class="badge__text">Отзыв подтвержден</span>
-							</span>
-						</header>
-						<a href="#" class="review__title">
-							Худи, платья, свитшоты и костюмы от LIMI:
-							авторские вышивки и яркие цвета
-						</a>
-						<p class="review__text">
-							Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut
-							labore et
-							dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi
-							ut
-							aliquip ex
-							ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum
-							dolore eu
-							fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui
-							officia
-							deserunt
-							mollit anim id est laborum.
-						</p>
-					</article>
-					<article class="review">
-						<header class="review__top">
-							<div class="review__info">
-								<div class="review__wrap">
-									<div class="review__name">Екатерина</div>
-									<time class="date review__date" datetime="2022-07-04">04.07.2022</time>
-								</div>
-								@@include('blocks/rating/rating.html', {
-								"class": "review",
-								"num": "5.0"
-								})
-							</div>
-						</header>
-						<a href="#" class="review__title">
-							Дрифтомания — дрифт на спортивном авто
-						</a>
-						<p class="review__text">
-							Ходили с друзьями, очень понравилось. Оказалось легче, чем я думала. Каталась впервые и со
-							всем
-							справилась, рекомендую
-						</p>
-						<div class="review__reactions reactions">
-							<div class="reaction">
-								<img src="assets/images/icons/fire.png" alt="" loading="lazy">
-								<img class="reaction__logo" src="assets/images/icons/srprs.png" alt="" loading="lazy">
-							</div>
-						</div>
-					</article>
-					<article class="review">
-						<header class="review__top">
-							<div class="review__info">
-								<div class="review__wrap">
-									<div class="review__name">Yana</div>
-									<time class="date review__date" datetime="2022-07-04">04.07.2022</time>
-								</div>
-								@@include('blocks/rating/rating.html', {
-								"class": "review",
-								"num": "5.0"
-								})
-							</div>
-						</header>
-						<a href="#" class="review__title">
-							Дрифтомания — дрифт на спортивном авто
-						</a>
-						<p class="review__text">
-							Крутое летнее развлечение! и хорошая физическая нагрузка. Остались очень довольны. Заряд
-							энергии обеспечен
-						</p>
-					</article>
-				</div>
-				<div class="reviews-block__col">
-					<article class="review">
-						<header class="review__top">
-							<div class="review__info">
-								<div class="review__wrap">
-									<div class="review__name">Yana</div>
-									<time class="date review__date" datetime="2022-07-04">04.07.2022</time>
-								</div>
-								@@include('blocks/rating/rating.html', {
-								"class": "review",
-								"num": "5.0"
-								})
-							</div>
-						</header>
-						<a href="#" class="review__title">
-							Дрифтомания — дрифт на спортивном авто
-						</a>
-						<p class="review__text">
-							Крутое летнее развлечение! и хорошая физическая нагрузка. Остались очень довольны. Заряд
-							энергии обеспечен
-						</p>
-					</article>
-					<article class="review">
-						<header class="review__top">
-							<div class="review__info">
-								<div class="review__wrap">
-									<div class="review__name">Екатерина</div>
-									<time class="date review__date" datetime="2022-07-04">04.07.2022</time>
-								</div>
-								@@include('blocks/rating/rating.html', {
-								"class": "review",
-								"num": "5.0"
-								})
-							</div>
-						</header>
-						<a href="#" class="review__title">
-							Дрифтомания — дрифт на спортивном авто
-						</a>
-						<p class="review__text">
-							Ходили с друзьями, очень понравилось. Оказалось легче, чем я думала. Каталась впервые и со
-							всем
-							справилась, рекомендую
-						</p>
-						<div class="review__reactions reactions">
-							<div class="reaction">
-								<img src="assets/images/icons/fire.png" alt="" loading="lazy">
-								<img class="reaction__logo" src="assets/images/icons/srprs.png" alt="" loading="lazy">
-							</div>
-						</div>
-					</article>
-					<article class="review">
-						<header class="review__top">
-							<div class="review__info">
-								<div class="review__wrap">
-									<div class="review__name">Yana</div>
-									<time class="date review__date" datetime="2022-07-04">04.07.2022</time>
-								</div>
-								@@include('blocks/rating/rating.html', {
-								"class": "review",
-								"num": "5.0"
-								})
-							</div>
-							<span class="badge">
-								<span class="badge__text">Отзыв подтвержден</span>
-							</span>
-						</header>
-						<a href="#" class="review__title">
-							Худи, платья, свитшоты и костюмы от LIMI:
-							авторские вышивки и яркие цвета
-						</a>
-						<p class="review__text">
-							Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut
-							labore et
-							dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi
-							ut
-							aliquip ex
-							ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum
-							dolore eu
-							fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui
-							officia
-							deserunt
-							mollit anim id est laborum.
-						</p>
-					</article>
-				</div>
-			</div>
-		</div>
-	</main>
-	@@include('blocks/footer/footer.html')
+    @@include("blocks/header/header.html")
+    <div class="overlay overlay--menu">
+        @@include('blocks/menu/menu.html')
+    </div>
+    <main class="page page--padding page--with_decor">
+        <div class="container">
+            @@include('blocks/breadcrumbs/breadcrumbs.html', {
+            "current": "Отзывы"
+            })
+            <div class="page__top">
+                <h1 class="page-title page-title--size_xs">Отзывы</h1>
+            </div>
+            <div class="reviews-block">
+                <div class="reviews-block__col">
+                    <article class="review"
+                             data-da=".reviews-block, 1200, 0">
+                        <header class="review__top">
+                            <div class="review__info">
+                                <div class="review__wrap">
+                                    <div class="review__name">Екатерина</div>
+                                    <time class="date review__date"
+                                          datetime="2022-07-04">04.07.2022</time>
+                                </div>
+                                @@include('blocks/rating/rating.html', {
+                                "class": "review",
+                                "num": "5.0"
+                                })
+                            </div>
+                        </header>
+                        <a href="#"
+                           class="review__title">
+                            Дрифтомания — дрифт на спортивном авто
+                        </a>
+                        <p class="review__text">
+                            Ходили с друзьями, очень понравилось. Оказалось легче, чем я думала. Каталась впервые и со
+                            всем
+                            справилась, рекомендую
+                        </p>
+                        <div class="review__reactions reactions">
+                            <div class="reaction">
+                                <img src="assets/images/icons/fire.png"
+                                     alt=""
+                                     loading="lazy">
+                                <img class="reaction__logo"
+                                     src="assets/images/icons/srprs.png"
+                                     alt=""
+                                     loading="lazy">
+                            </div>
+                            <div class="reaction">
+                                <img src="assets/images/icons/fire.png"
+                                     alt=""
+                                     loading="lazy">
+                                <img class="reaction__logo"
+                                     src="assets/images/icons/school.png"
+                                     alt=""
+                                     loading="lazy">
+                            </div>
+                        </div>
+                        <div class="review-answer review__answer">
+                            <img class="review-answer__logo"
+                                 src="assets/images/icons/school.png"
+                                 alt=""
+                                 loading="lazy">
+                            <div class="review-answer__content">
+                                <div class="review-answer__title">SURPRISE.BY</div>
+                                <p class="review-answer__text">Алиса, благодарим Вас за отзыв!)</p>
+                            </div>
+                        </div>
+                    </article>
+                    <article class="review"
+                             data-da=".reviews-block, 1200, 1">
+                        <header class="review__top">
+                            <div class="review__info">
+                                <div class="review__wrap">
+                                    <div class="review__name">Yana</div>
+                                    <time class="date review__date"
+                                          datetime="2022-07-04">04.07.2022</time>
+                                </div>
+                                @@include('blocks/rating/rating.html', {
+                                "class": "review",
+                                "num": "5.0"
+                                })
+                            </div>
+                            <span class="badge">
+                                <span class="badge__text">Отзыв подтвержден</span>
+                            </span>
+                        </header>
+                        <a href="#"
+                           class="review__title">
+                            Худи, платья, свитшоты и костюмы от LIMI:
+                            авторские вышивки и яркие цвета
+                        </a>
+                        <p class="review__text">
+                            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut
+                            labore et
+                            dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi
+                            ut aliquip ex
+                            ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum
+                            dolore eu
+                            fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui
+                            officia deserunt
+                            mollit anim id est laborum.
+                        </p>
+                    </article>
+                </div>
+                <div class="reviews-block__col">
+                    <article class="review"
+                             data-da=".reviews-block, 1200, 2">
+                        <header class="review__top">
+                            <div class="review__info">
+                                <div class="review__wrap">
+                                    <div class="review__name">Yana</div>
+                                    <time class="date review__date"
+                                          datetime="2022-07-04">04.07.2022</time>
+                                </div>
+                                @@include('blocks/rating/rating.html', {
+                                "class": "review",
+                                "num": "5.0"
+                                })
+                            </div>
+                            <span class="badge">
+                                <span class="badge__text">Отзыв подтвержден</span>
+                            </span>
+                        </header>
+                        <a href="#"
+                           class="review__title">
+                            Худи, платья, свитшоты и костюмы от LIMI:
+                            авторские вышивки и яркие цвета
+                        </a>
+                        <p class="review__text">
+                            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut
+                            labore et
+                            dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi
+                            ut
+                            aliquip ex
+                            ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum
+                            dolore eu
+                            fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui
+                            officia
+                            deserunt
+                            mollit anim id est laborum.
+                        </p>
+                    </article>
+                    <article class="review"
+                             data-da=".reviews-block, 1200, 3">
+                        <header class="review__top">
+                            <div class="review__info">
+                                <div class="review__wrap">
+                                    <div class="review__name">Екатерина</div>
+                                    <time class="date review__date"
+                                          datetime="2022-07-04">04.07.2022</time>
+                                </div>
+                                @@include('blocks/rating/rating.html', {
+                                "class": "review",
+                                "num": "5.0"
+                                })
+                            </div>
+                        </header>
+                        <a href="#"
+                           class="review__title">
+                            Дрифтомания — дрифт на спортивном авто
+                        </a>
+                        <p class="review__text">
+                            Ходили с друзьями, очень понравилось. Оказалось легче, чем я думала. Каталась впервые и со
+                            всем
+                            справилась, рекомендую
+                        </p>
+                        <div class="review__reactions reactions">
+                            <div class="reaction">
+                                <img src="assets/images/icons/fire.png"
+                                     alt=""
+                                     loading="lazy">
+                                <img class="reaction__logo"
+                                     src="assets/images/icons/srprs.png"
+                                     alt=""
+                                     loading="lazy">
+                            </div>
+                        </div>
+                    </article>
+                    <article class="review"
+                             data-da=".reviews-block, 1200, 4">
+                        <header class="review__top">
+                            <div class="review__info">
+                                <div class="review__wrap">
+                                    <div class="review__name">Yana</div>
+                                    <time class="date review__date"
+                                          datetime="2022-07-04">04.07.2022</time>
+                                </div>
+                                @@include('blocks/rating/rating.html', {
+                                "class": "review",
+                                "num": "5.0"
+                                })
+                            </div>
+                        </header>
+                        <a href="#"
+                           class="review__title">
+                            Дрифтомания — дрифт на спортивном авто
+                        </a>
+                        <p class="review__text">
+                            Крутое летнее развлечение! и хорошая физическая нагрузка. Остались очень довольны. Заряд
+                            энергии обеспечен
+                        </p>
+                    </article>
+                </div>
+                <div class="reviews-block__col">
+                    <article class="review"
+                             data-da=".reviews-block, 1200, 5">
+                        <header class="review__top">
+                            <div class="review__info">
+                                <div class="review__wrap">
+                                    <div class="review__name">Yana</div>
+                                    <time class="date review__date"
+                                          datetime="2022-07-04">04.07.2022</time>
+                                </div>
+                                @@include('blocks/rating/rating.html', {
+                                "class": "review",
+                                "num": "5.0"
+                                })
+                            </div>
+                        </header>
+                        <a href="#"
+                           class="review__title">
+                            Дрифтомания — дрифт на спортивном авто
+                        </a>
+                        <p class="review__text">
+                            Крутое летнее развлечение! и хорошая физическая нагрузка. Остались очень довольны. Заряд
+                            энергии обеспечен
+                        </p>
+                    </article>
+                    <article class="review"
+                             data-da=".reviews-block, 1200, 6">
+                        <header class="review__top">
+                            <div class="review__info">
+                                <div class="review__wrap">
+                                    <div class="review__name">Екатерина</div>
+                                    <time class="date review__date"
+                                          datetime="2022-07-04">04.07.2022</time>
+                                </div>
+                                @@include('blocks/rating/rating.html', {
+                                "class": "review",
+                                "num": "5.0"
+                                })
+                            </div>
+                        </header>
+                        <a href="#"
+                           class="review__title">
+                            Дрифтомания — дрифт на спортивном авто
+                        </a>
+                        <p class="review__text">
+                            Ходили с друзьями, очень понравилось. Оказалось легче, чем я думала. Каталась впервые и со
+                            всем
+                            справилась, рекомендую
+                        </p>
+                        <div class="review__reactions reactions">
+                            <div class="reaction">
+                                <img src="assets/images/icons/fire.png"
+                                     alt=""
+                                     loading="lazy">
+                                <img class="reaction__logo"
+                                     src="assets/images/icons/srprs.png"
+                                     alt=""
+                                     loading="lazy">
+                            </div>
+                        </div>
+                    </article>
+                    <article class="review"
+                             data-da=".reviews-block, 1200, 7">
+                        <header class="review__top">
+                            <div class="review__info">
+                                <div class="review__wrap">
+                                    <div class="review__name">Yana</div>
+                                    <time class="date review__date"
+                                          datetime="2022-07-04">04.07.2022</time>
+                                </div>
+                                @@include('blocks/rating/rating.html', {
+                                "class": "review",
+                                "num": "5.0"
+                                })
+                            </div>
+                            <span class="badge">
+                                <span class="badge__text">Отзыв подтвержден</span>
+                            </span>
+                        </header>
+                        <a href="#"
+                           class="review__title">
+                            Худи, платья, свитшоты и костюмы от LIMI:
+                            авторские вышивки и яркие цвета
+                        </a>
+                        <p class="review__text">
+                            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut
+                            labore et
+                            dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi
+                            ut
+                            aliquip ex
+                            ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum
+                            dolore eu
+                            fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui
+                            officia
+                            deserunt
+                            mollit anim id est laborum.
+                        </p>
+                    </article>
+                </div>
+            </div>
+        </div>
+    </main>
+    @@include('blocks/footer/footer.html')
 </div>
 @@include("blocks/link/link.html")
 </body>

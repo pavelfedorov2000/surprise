@@ -1,0 +1,43 @@
+@@include("blocks/head/head.html", {"title": "Главная"})
+@@include("blocks/head/no-js.html")
+<div class="wrapper">
+    @@include("blocks/header/header.html")
+    <div class="overlay overlay--menu">
+        @@include('blocks/menu/menu.html')
+    </div>
+    <main class="page">
+        <div class="container">
+            <nav class="breadcrumbs"
+                 aria-label="breadcrumbs">
+                <ol class="breadcrumbs__list">
+                    <li class="breadcrumbs__item">
+                        <a href="#">Главная</a>
+                    </li>
+                    <li class="breadcrumbs__item">
+                        <a href="#">Все сертификаты</a>
+                    </li>
+                    <li class="breadcrumbs__item">
+                        <span>Катание на квадроциклах </span>
+                    </li>
+                </ol>
+            </nav>
+
+            <header>
+                <h1 class="page-title">Катание на квадроциклах в группе</h1>
+                @@include('blocks/rating/rating.html', {
+                "reverse": true,
+                "link": "20 отзывов",
+                "num": "5.0"
+                })
+            </header>
+
+            @@include('blocks/photogallery/photogallery.html')
+        </div>
+    </main>
+    @@include("blocks/footer/footer.html")
+    <!-- @@include("blocks/popups/popups.html") -->
+</div>
+@@include("blocks/link/link.html")
+</body>
+
+</html>

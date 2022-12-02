@@ -1,36 +1,36 @@
 .promo-banner {
-	$banner-height: 480px;
-	$banner-height-mob: 240px;
+    $banner-height: 480px;
+    $banner-height-mob: 240px;
 
-	display: grid;
-	grid-template-columns: minmax(var(--container-padding), calc((100% - var(--container-width)) / 2)) 1fr minmax(var(--container-padding), calc((100% - var(--container-width)) / 2));
-	grid-template-rows: calc(#{$banner-height} - var(--section-padding-xs)) repeat(2, var(--section-padding-xs));
+    display: grid;
+    grid-template-columns: minmax(var(--container-padding), calc((100% - var(--container-width)) / 2)) 1fr minmax(var(--container-padding), calc((100% - var(--container-width)) / 2));
+    grid-template-rows: calc(#{$banner-height} - var(--section-padding-xs)) repeat(2, var(--section-padding-xs));
 
-	@media(max-width: $xl) {
-		grid-template-rows: calc(#{$banner-height} - var(--offset-xxls) - 10px) var(--offset-xxls) 10px auto;
-	}
+    @media(max-width: $xl) {
+        grid-template-rows: calc(#{$banner-height} - var(--offset-xxls) - 10px) var(--offset-xxls) 10px auto;
+    }
 
-	@media(max-width: $xl) {
-		grid-template-rows: calc(#{$banner-height-mob} - var(--offset-xxls) - 10px) var(--offset-xxls) 10px auto;
-	}
+    @media(max-width: $xl) {
+        grid-template-rows: calc(#{$banner-height-mob} - var(--offset-xxls) - 10px) var(--offset-xxls) 10px auto;
+    }
 
-	&__body {
-		grid-column: 1 / -1;
-		grid-row: 1 / 3;
-		background-size: cover;
-		background-repeat: no-repeat;
+    &__body {
+        grid-column: 1 / -1;
+        grid-row: 1 / 3;
+        background-size: cover;
+        background-repeat: no-repeat;
 
-		@media(max-width: $sm) {
-			background-position: 100%;
-		}
-	}
+        @media(max-width: $sm) {
+            background-position: 100%;
+        }
+    }
 
-	&__filters {
-		grid-column: 2 / 3;
-		grid-row: -3 / -1;
+    &__filters {
+        grid-column: 2 / 3;
+        grid-row: -3 / -1;
 
-		@media(max-width: $xl) {
-			grid-row: -4 / -1;
-		}
-	}
+        @media(max-width: $xl) {
+            grid-row: -4 / -1;
+        }
+    }
 }

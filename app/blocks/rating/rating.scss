@@ -1,36 +1,41 @@
 .rating {
-	display: flex;
-	flex-wrap: wrap;
-	//align-items: center;
-	// .rating__stars
+    display: flex;
+    flex-wrap: wrap;
 
-	&__stars {
-		@include grid-row(4px);
-		align-content: center;
-	}
+    &--reverse {
+        flex-direction: row-reverse;
+    }
 
-	// .rating__star
+    //align-items: center;
+    // .rating__stars
 
-	&__star {
-		display: inline-flex;
-		align-items: center;
-		width: 19px;
-		height: 18px;
-		background-image: url(../images/icons/star.svg);
-		background-size: contain;
-		background-position: center;
-		background-repeat: no-repeat;
-		/* font-size: 18px;
+    &__stars {
+        @include grid-row(4px);
+        align-content: center;
+    }
+
+    // .rating__star
+
+    &__star {
+        display: inline-flex;
+        align-items: center;
+        width: 19px;
+        height: 18px;
+        background-image: url(../images/icons/star.svg);
+        background-size: contain;
+        background-position: center;
+        background-repeat: no-repeat;
+        /* font-size: 18px;
 
 		.icon {
 			fill: #FAD245;
 			stroke: none;
 		} */
-	}
+    }
 
-	&__num {
-		@extend %museo-700;
-		font-size: 20px;
-		margin-left: 10px;
-	}
+    &__num {
+        @extend %museo-700;
+        font-size: 20px;
+        margin-left: 10px;
+    }
 }

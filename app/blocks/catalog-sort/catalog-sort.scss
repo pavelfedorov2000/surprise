@@ -1,13 +1,30 @@
 .catalog-sort {
-	display: flex;
-	align-items: center;
-	justify-content: space-between;
-	flex-wrap: wrap;
-	gap: var(--offset-l);
-	padding-top: var(--offset-m);
-	padding-bottom: var(--offset-s);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: var(--offset-xs);
+    padding-bottom: var(--offset-s);
 
-	>* {
-		margin-bottom: 0;
-	}
+    @media(min-width: 1201px) {
+        padding-top: var(--offset-m);
+    }
+
+    > * {
+        margin-bottom: 0;
+    }
+
+    &__select {
+        .select {
+            &__title {
+                @media(max-width: $lg) {
+                    padding-left: 0;
+                }
+            }
+
+            &__content {
+                width: max-content;
+            }
+        }
+    }
 }

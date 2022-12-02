@@ -32,6 +32,12 @@
     "href": "catalog.html",
     "title": "Каталог"
 }, {
-    "href": "activate-certificate-2.html",
+    "href": "activate-certificate.html",
     "title": "Активация сертификата"
+}, {
+    "href": "activate-certificate-2.html",
+    "title": "Активация сертификата 2"
+}, {
+    "href": "certificate.html",
+    "title": "Катание на квадроциклах"
 }]
