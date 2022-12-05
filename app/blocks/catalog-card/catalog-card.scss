@@ -151,7 +151,6 @@
 	// .catalog-card__rating
 
 	&__rating {
-		display: flex;
 		align-items: flex-start;
 
 		@media(max-width: $md) {
@@ -186,9 +185,9 @@
 		line-height: 2;
 	} */
 
-    b {
-        line-height: 1.2;
-    }
+	b {
+		line-height: 1.2;
+	}
 }
 
 .price {

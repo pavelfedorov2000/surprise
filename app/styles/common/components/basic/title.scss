@@ -52,6 +52,18 @@ h {
 	}
 
 	&--mb {
+		&_m {
+			margin-bottom: var(--offset-m);
+		}
+
+		&_l {
+			margin-bottom: var(--offset-l);
+
+			@media(max-width: $sm) {
+				margin-bottom: var(--offset-m);
+			}
+		}
+
 		&_ls {
 			margin-bottom: var(--offset-ls);
 

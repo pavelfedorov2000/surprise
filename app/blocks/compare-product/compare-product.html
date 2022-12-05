@@ -1,0 +1,26 @@
+<div class="compare-product">
+	<span class="mob-rating">
+		<span class="mob-rating__num">5.0</span>
+	</span>
+	<div class="compare-product__img">
+		<picture>
+			<source type="image/webp" srcset="@@src.webp">
+			<img class="img-cover" src="@@src.jpg" alt="фото" width="300" height="168" loading="lazy">
+		</picture>
+	</div>
+	<div class="compare-product__content">
+		<a href="#" class="compare-product__title menu-link">HUMAN: мастер-класс по лепке тела из керамики</a>
+		@@include('blocks/rating/rating.html', {
+		"mobHidden": true,
+		"class": "compare-product",
+		"link": "20 отзывов"
+		})
+		<div class="prices">
+			<span>от</span>
+			<b class="price">59</b>
+			<span>до</span>
+			<b class="price">118</b>
+			<span>руб.</span>
+		</div>
+	</div>
+</div>

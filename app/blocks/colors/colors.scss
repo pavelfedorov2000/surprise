@@ -1,0 +1,44 @@
+.colors {
+	display: flex;
+	flex-wrap: wrap;
+	margin-left: calc(var(--offset-m) * (-1));
+	margin-bottom: calc(var(--offset-m) * (-1));
+
+	>* {
+		margin-left: var(--offset-m);
+		margin-bottom: var(--offset-m);
+	}
+}
+
+.color {
+	$this: &;
+
+	cursor: pointer;
+	// .color__style
+
+	&__style {
+		display: block;
+		width: var(--offset-xl);
+		height: var(--offset-xl);
+		border-radius: 50%;
+		border: 2px solid transparent;
+		transition: $transition border-color,
+			$transition box-shadow;
+
+		@media (any-hover: hover) {
+			&:hover {
+				box-shadow: $bsh-3;
+			}
+		}
+	}
+
+	.radio-input {
+		&:checked {
+			&~#{$this} {
+				&__style {
+					border-color: var(--black);
+				}
+			}
+		}
+	}
+}

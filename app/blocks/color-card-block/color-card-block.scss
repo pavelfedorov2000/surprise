@@ -1,10 +1,49 @@
 .color-card-block {
-	display: grid;
+	/* display: grid;
 	grid-template-columns: repeat(auto-fit, minmax(430px, 1fr));
 	gap: var(--offset-xxl);
 
 	@media(max-width: $md) {
 		grid-template-columns: repeat(auto-fit, minmax(calc(320px - var(--container-padding) * 2)));
 		gap: var(--offset-l);
+	} */
+	display: flex;
+	flex-wrap: wrap;
+	margin-bottom: calc(var(--offset-l) * (-1));
+
+	@media(min-width: 1025px) {
+		margin-left: calc(var(--offset-l) * (-1));
+	}
+
+	@media(min-width: 1201px) {
+		margin-left: calc(var(--offset-xxxl) * (-1));
+	}
+
+	>* {
+		margin-bottom: var(--offset-l);
+
+		@media(min-width: 1025px) {
+			margin-left: var(--offset-l);
+			width: calc(50% - var(--offset-l));
+		}
+	}
+
+	&--items {
+		&_3 {
+			>* {
+				@media(min-width: 1440px) {
+					margin-left: var(--offset-xxxl);
+					width: calc(33.3333% - var(--offset-xxxl));
+				}
+
+				.color-card {
+					&__img {
+						@media(min-width: 768px) {
+							margin-right: var(--offset-xl);
+						}
+					}
+				}
+			}
+		}
 	}
 }

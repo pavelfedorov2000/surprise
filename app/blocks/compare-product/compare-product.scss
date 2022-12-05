@@ -1,0 +1,76 @@
+.compare-product {
+	position: relative;
+	min-width: 300px;
+
+	@media(max-width: $sm) {
+		min-width: 150px;
+	}
+
+	.mob-rating {
+		top: 7px;
+		right: 7px;
+	}
+
+	// .compare-product__img
+
+	&__img {
+		position: relative;
+		padding-bottom: 56%;
+
+		@media(max-width: $sm) {
+			padding-bottom: 67.73%;
+		}
+
+		img {
+			position: absolute;
+			top: 0;
+			right: 0;
+			bottom: 0;
+			left: 0;
+			border-radius: $brs;
+		}
+	}
+
+	// .compare-product__content
+
+	&__content {
+		@include row-grid(var(--offset-xxs));
+		justify-items: start;
+		padding-top: 20px;
+
+		@media(max-width: $sm) {
+			padding-top: var(--offset-s);
+		}
+	}
+
+	&__title {
+		&::before {
+			content: '';
+			position: absolute;
+			top: 0;
+			right: 0;
+			bottom: 0;
+			left: 0;
+		}
+	}
+
+	&__rating {
+		align-items: center;
+
+		>* {
+			margin-right: var(--offset-s);
+		}
+	}
+
+	.prices {
+		@media(max-width: $sm) {
+			column-gap: var(--offset-xxxs);
+		}
+	}
+
+	.price {
+		@media(max-width: $sm) {
+			font-size: 18px;
+		}
+	}
+}

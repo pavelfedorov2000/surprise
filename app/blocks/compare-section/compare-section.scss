@@ -1,3 +1,127 @@
+.table-wrap {
+	box-shadow: $bsh;
+	overflow-x: auto;
+
+	@media(min-width: 768px) {
+		border-radius: $brs-card-xl;
+	}
+}
+
 .compare-section {
-  // your code
+	.container {
+		@media(max-width: $md) {
+			@include padding-x(0);
+		}
+	}
+
+	.section__top {
+		@media(max-width: $md) {
+			display: none;
+		}
+	}
+}
+
+.compare-table {
+	background-color: var(--green-light);
+
+	@media(min-width: 768px) {
+		border-radius: $brs-card-xl;
+	}
+
+	th,
+	td {
+		@include padding-x(var(--offset-l));
+		width: 25%;
+
+		@media(max-width: $sm) {
+			@include padding-x(var(--offset-xxs));
+		}
+
+		&:first-child {
+			min-width: 190px;
+
+			@media(max-width: $sm) {
+				min-width: 156px;
+			}
+		}
+
+		&:not(:first-child) {
+			@media(min-width: 768px) {
+				border-left: 1px solid #D7EDEC;
+			}
+		}
+	}
+
+	th {
+		@extend %museo-500;
+		@include padding-y(var(--offset-xl));
+		text-align: left;
+
+		@media(max-width: $sm) {
+			padding-top: var(--offset-l);
+			padding-bottom: var(--offset-s);
+		}
+	}
+
+	tbody {
+		tr {
+			&:nth-child(odd) {
+				background-color: #fff;
+			}
+
+			td {
+				@include padding-y(var(--offset-s));
+
+				@media(max-width: $sm) {
+					@include padding-y(var(--offset-xs));
+				}
+
+				&:first-child {
+					@media(max-width: $sm) {
+						@include padding-x(var(--offset-s));
+					}
+				}
+
+				.check {
+					position: relative;
+					display: block;
+					width: var(--offset-l);
+					height: var(--offset-l);
+					background-color: var(--green);
+					border-radius: 50%;
+					margin: 0 auto;
+
+					&::before {
+						content: '';
+						position: absolute;
+						top: 50%;
+						left: 50%;
+						transform: translate(-50%, -50%);
+						width: var(--icon-size);
+						height: var(--icon-size);
+						background-image: url(../images/icons/check-done-white.svg);
+					}
+				}
+
+				/* &.check {
+					position: relative;
+
+					&::before {
+						content: '';
+						position: absolute;
+						top: 50%;
+						left: 50%;
+						transform: translate(-50%, -50%);
+						width: var(--offset-l);
+						height: var(--offset-l);
+						border-radius: 50%;
+						background-image: url(../images/icons/check.svg);
+						background-position: center;
+						background-size: cover;
+						background-repeat: no-repeat;
+					}
+				} */
+			}
+		}
+	}
 }

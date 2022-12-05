@@ -5,36 +5,43 @@
 	<div class="overlay overlay--menu">
 		@@include('blocks/menu/menu.html')
 	</div>
-	<main class="page">
+	<main class="page page--padding-top_ls page--padding-bottom_none">
 		<div class="container">
-			<nav class="breadcrumbs" aria-label="breadcrumbs">
-				<ol class="breadcrumbs__list">
-					<li class="breadcrumbs__item">
-						<a href="#">Главная</a>
-					</li>
-					<li class="breadcrumbs__item">
-						<a href="#">Все сертификаты</a>
-					</li>
-					<li class="breadcrumbs__item">
-						<span>Катание на квадроциклах </span>
-					</li>
-				</ol>
-			</nav>
-
-			<header>
-				<h1 class="page-title">Катание на квадроциклах в группе</h1>
-				@@include('blocks/rating/rating.html', {
-				"reverse": true,
-				"link": "20 отзывов",
-				"num": "5.0"
-				})
-			</header>
-
-			@@include('blocks/photogallery/photogallery.html')
-
-			<div class="grid-row">
+			@@include('blocks/breadcrumbs/breadcrumbs.html', {
+			"prev": "Все сертификаты",
+			"current": "Катание на квадроциклах"
+			})
+			<div class="certificate-preview">
+				<header class="certificate-preview__top">
+					<h1 class="page-title page-title--size_xs">Катание на квадроциклах в группе</h1>
+					@@include('blocks/rating/rating.html', {
+					"mobHidden": true,
+					"reverse": true,
+					"link": "20 отзывов",
+					"num": "5.0"
+					})
+				</header>
+				@@include('blocks/photogallery/photogallery.html')
+			</div>
+			<div class="radio-tabs">
+				<label class="radio radio--style_tab">
+					<input class="radio-input" type="radio" name="CERTIFICATE_FOR" checked>
+					<span class="radio__content">
+						<span class="radio-style"></span>
+						<span class="radio-text">В подарок</span>
+					</span>
+				</label>
+				<label class="radio radio--style_tab">
+					<input class="radio-input" type="radio" name="CERTIFICATE_FOR">
+					<span class="radio__content">
+						<span class="radio-style"></span>
+						<span class="radio-text">Для себя</span>
+					</span>
+				</label>
+			</div>
+			<div class="grid-row grid-row--pb">
 				<div class="grid-col-7 certificate-content">
-					<section class="certificate-content__section">
+					<div class="certificate-content__section">
 						<ul class="icons-list icons-list--style_grid">
 							<li class="icons-item">
 								<span
@@ -42,7 +49,7 @@
 									<img src="assets/images/icons/cart.svg" alt="">
 								</span>
 								<div class="icons-item__content">
-									<span class="icons-item__descr">Сертификат в уникальной упаковке</span>
+									<span class="icons-item__text">Сертификат в уникальной упаковке</span>
 								</div>
 							</li>
 							<li class="icons-item">
@@ -51,7 +58,7 @@
 									<img src="assets/images/icons/pin.svg" alt="">
 								</span>
 								<div class="icons-item__content">
-									<span class="icons-item__descr">
+									<span class="icons-item__text">
 										База — г. Минск, ул. Орловская, 78
 									</span>
 								</div>
@@ -62,7 +69,7 @@
 									<img src="assets/images/icons/user.svg" alt="">
 								</span>
 								<div class="icons-item__content">
-									<span class="icons-item__descr">1, 2 или 5 человек</span>
+									<span class="icons-item__text">1, 2 или 5 человек</span>
 								</div>
 							</li>
 							<li class="icons-item">
@@ -71,7 +78,7 @@
 									<img src="assets/images/icons/clock.svg" alt="">
 								</span>
 								<div class="icons-item__content">
-									<span class="icons-item__descr">
+									<span class="icons-item__text">
 										2 часа
 									</span>
 								</div>
@@ -82,7 +89,7 @@
 									<img src="assets/images/icons/sun.svg" alt="">
 								</span>
 								<div class="icons-item__content">
-									<span class="icons-item__descr">
+									<span class="icons-item__text">
 										Каждый день при благоприятных погодных условиях.
 									</span>
 								</div>
@@ -93,7 +100,7 @@
 									<img src="assets/images/icons/calendar.svg" alt="">
 								</span>
 								<div class="icons-item__content">
-									<span class="icons-item__descr">
+									<span class="icons-item__text">
 										3 месяца со дня покупки
 									</span>
 								</div>
@@ -104,39 +111,106 @@
 									<img src="assets/images/icons/cash.svg" alt="">
 								</span>
 								<div class="icons-item__content">
-									<span class="icons-item__descr">
+									<span class="icons-item__text">
 										Цена только за подарок без наценок
 										и комиссий.
 									</span>
 								</div>
 							</li>
 						</ul>
-						<div class="card card-box card--style_bg-pink">
-							<div class="card-box__title">Особенности</div>
+						<section class="card card-box card--style_bg-pink card-box--padding_xl">
+							<h2 class="card-box__title">Особенности</h2>
 							<ul class="check-list">
 								<li>Необходимо иметь с собой паспорт.</li>
 								<li>Отмена записи не менее, чем за 12 часов.</li>
 								<li>Заезды не осуществляются в дождь и при температуре ниже минус 10 градусов.</li>
 								<li>Необходимо иметь с собой паспорт.</li>
 							</ul>
+						</section>
+					</div>
+					<div class="certificate-content__section">
+						<div>
+							<div class="section-title section-title--mb_m">
+								Stand up paddle — крутой и безопасный водный спорт
+							</div>
+							<p>
+								Мечтаете опробовать свои силы в чем-то новом и обожаете активный отдых? Хочется
+								охладиться в
+								невыносимую жару? Тогда хватайте друзей и вторую половинку и становитесь вместе на
+								SUP-борды
+								— специальные доски для гребли стоя и длинные весла.
+							</p>
 						</div>
-					</section>
-					<section class="certificate-content__section">
-						<div class="section-title">
-							Stand up paddle — крутой и безопасный водный спорт
+						<div class="card-block card-block--items_2">
+							<section class="card">
+								<img class="card__icon" src="assets/images/icons/attention.png" alt="" loading="lazy">
+								<h4 class="card__title">Важно знать</h4>
+								<ul class="check-list card__list">
+									<li>
+										Вы можете взять с собой сына или дочь старше 12 лет, если готовы сопровождать их
+										на SUP-борде.
+									</li>
+									<li>Обязательно запишитесь заранее.</li>
+									<li>Кататься можно каждый день при благоприятных погодных условиях.</li>
+								</ul>
+								<a href="#" class="btn btn--style_link-2">Подробнее</a>
+							</section>
+							<section class="card">
+								<img class="card__icon" src="assets/images/icons/lock.png" alt="" loading="lazy">
+								<h4 class="card__title">О безопасности</h4>
+								<ul class="check-list">
+									<li>Спасательный жилет. Если не умеете плавать, жилет — это ваша безопасность. </li>
+									<li>
+										Защита кожи. Длительное пребывание на солнце может быть опасно. Поэтому возьмите
+										с собой
+										солнцезащитный крем и очки.
+									</li>
+								</ul>
+								<a href="#" class="btn btn--style_link-2">Подробнее</a>
+							</section>
 						</div>
-						<p>
-							Мечтаете опробовать свои силы в чем-то новом и обожаете активный отдых? Хочется охладиться в
-							невыносимую жару? Тогда хватайте друзей и вторую половинку и становитесь вместе на SUP-борды
-							— специальные доски для гребли стоя и длинные весла.
-						</p>
-					</section>
+						<section class="certificate-content__subsection">
+							<h2 class="certificate-content__subsection-title">Как проходит SUP-серфинг?</h2>
+							<ul class="check-list">
+								<li>Подробный инструктаж. Вам объяснят, как и что делать, как держать равновесие и
+									помогать кому-то, кто не
+									может справиться или понять принцип работы борда.</li>
+								<li>Помощь инструктора. От Вас не отведут взгляд — в экстренных ситуациях помощь
+									прибудет незамедлительно.</li>
+								<li>Крутые фото. Не забудьте свой go-pro и насниматйте невероятных видов и сделайте
+									смешные позитивные селфи.
+								</li>
+							</ul>
+						</section>
+						<section class="certificate-content__subsection">
+							<h2 class="certificate-content__subsection-title">Кому подойдет сертификат на SUP-серфинг в
+								подарок?</h2>
+							<ul class="check-list">
+								<li>Второй половинке. Проведите пару часов наедине с любимым человеком.</li>
+								<li>Компании друзей. Собирайте всех и устраивайте соревнования на бордах!</li>
+								<li>Себе любимому. Не хабывайте баловать себя и наслаждаться чудесным деньками и
+									активным отдыхом!</li>
+							</ul>
+							<p>
+								Не бойтесь и покупайте подарочный сертификат Surprise.by — Вас всему научат, все
+								покажут, каждый сможет
+								встать на доску!
+							</p>
+						</section>
+					</div>
+					@@include('blocks/certificate-reviews/certificate-reviews.html')
 				</div>
-				<div class="grid-col-5">
+				<div class="grid-col-5 tablet-none">
 					@@include("blocks/aside-choose/aside-choose.html")
 				</div>
 			</div>
 		</div>
+		@@include('blocks/ordered-tape-section/ordered-tape-section.html', {
+		"title": "Как это работает"
+		})
+		@@include('blocks/delivery-section/delivery-section.html')
+		@@include('blocks/compare-section/compare-section.html')
+		@@include('blocks/faq-section/faq-section.html')
 	</main>
 	@@include("blocks/footer/footer.html")
 	<!-- @@include("blocks/popups/popups.html") -->

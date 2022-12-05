@@ -42,3 +42,50 @@
 		}
 	}
 }
+
+.certificate-content {
+	&__section {
+		@include row-grid(var(--offset-xl));
+		padding-bottom: var(--section-padding-xs);
+
+		@media(max-width: $lg) {
+			row-gap: var(--offset-xl);
+			padding-bottom: var(--offset-xxxl);
+		}
+	}
+
+	&__subsection {
+		@include row-grid(var(--offset-s));
+
+		@media(max-width: $lg) {}
+	}
+
+	&__subsection-title {
+		font-size: 24px;
+		margin-bottom: var(--offset-xxs);
+	}
+}
+
+.certificate-preview {
+	display: flex;
+	flex-direction: column;
+	padding-bottom: var(--offset-xxl);
+
+	@media(max-width: $sm) {
+		padding-top: var(--offset-s);
+		padding-bottom: var(--offset-m);
+	}
+
+	&__top {
+		margin-bottom: var(--offset-l);
+
+		@media(max-width: $sm) {
+			margin-bottom: 0;
+			margin-top: var(--offset-m);
+		}
+	}
+
+	@media(max-width: $md) {
+		flex-direction: column-reverse;
+	}
+}

@@ -182,34 +182,39 @@
 		@include row-grid(var(--offset-m));
 	}
 
-    &--style {
-        &_grid {
-            display: grid;
-            grid-template-columns: repeat(2, 1fr);
-            gap: var(--offset-m) var(--offset-xl);
-        }
-    }
+	&--style {
+		&_grid {
+			display: grid;
+			gap: var(--offset-m) var(--offset-xl);
+
+			@media(max-width: $sm) {
+				gap: var(--offset-s);
+			}
+
+			@media(min-width: 768px) {
+				grid-template-columns: repeat(2, 1fr);
+			}
+		}
+	}
 }
 
 .icons-item {
 	$this: &;
 
-    display: flex;
-    align-items: center;
+	display: flex;
+	align-items: center;
 	// .icons-item__wrap
 
-    &__content {
-        display: flex;
-        flex-direction: column;
-    }
+	&__content {
+		display: flex;
+		flex-direction: column;
+	}
 
 	// .icons-item__icon
 
 	&__icon {
-        flex-shrink: 0;
-        margin-right: var(--offset-m);
-		/* width: var(--offset-xxl);
-        height: var(--offset-xxl); */
+		flex-shrink: 0;
+		margin-right: var(--offset-m);
 	}
 
 	// .icons-item__title
@@ -226,8 +231,11 @@
 	// .icons-item__descr
 
 	&__descr {
-		grid-column: 2 / 3;
 		color: var(--text-color);
+	}
+
+	&__text {
+		@extend %museo-300;
 	}
 
 	@media (any-hover: hover) {
@@ -312,6 +320,12 @@
 			&-green {
 				&::before {
 					background-color: var(--green-light);
+				}
+			}
+
+			&-blue {
+				&:before {
+					background-color: var(--blue);
 				}
 			}
 		}

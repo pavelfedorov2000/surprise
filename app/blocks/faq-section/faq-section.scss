@@ -1,0 +1,52 @@
+.faq-section {
+
+	// .faq-section__inner
+
+	&__inner {
+		@media(min-width: 1201px) {
+			display: flex;
+			align-items: flex-start;
+			justify-content: space-between;
+		}
+
+		@media(max-width: $xl) {
+			@include row-grid(var(--offset-l));
+		}
+	}
+
+	// .faq-section__content
+
+	&__content {
+		@media(min-width: 1201px) {
+			padding-right: var(--section-padding-xs);
+		}
+	}
+
+	// .faq-section__img
+
+	&__img {
+		position: relative;
+		padding-bottom: 32.639%;
+
+		@media(max-width: $xl) {
+			padding-bottom: 50%;
+		}
+
+		@media(max-width: $sm) {
+			padding-bottom: 74.93%;
+		}
+
+		@media(min-width: 1201px) {
+			flex: 0 0 calc(627 / #{$container} * 100%);
+		}
+
+		img {
+			position: absolute;
+			top: 0;
+			right: 0;
+			bottom: 0;
+			left: 0;
+			border-radius: $brs-card-xl;
+		}
+	}
+}

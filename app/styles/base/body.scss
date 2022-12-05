@@ -6,11 +6,11 @@ body {
 	line-height: 1.5;
 	font-weight: 500;
 	color: $color-default;
-	overflow-x: hidden;
+	//overflow-x: hidden;
 
-	/* @media(max-width: $lg) {
+	@media(max-width: $lg) {
 		overflow-x: hidden;
-	} */
+	}
 
 	&._lock {
 		overflow-y: hidden;
@@ -46,6 +46,11 @@ p {
 	&.default-color {
 		color: $color-default;
 	}
+}
+
+fieldset {
+	margin: 0;
+	border: none;
 }
 
 .menu-link {

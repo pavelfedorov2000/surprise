@@ -1,124 +1,148 @@
 // Only arrow styling
 .default-select {
-    @extend %museo-500;
-    font-size: 16px;
-    line-height: 1.5;
-    -webkit-appearance: none;
-    -moz-appearance: none;
-    background-image: url(../images/icons/drop-arrow.svg);
-    background-size: var(--offset-m);
-    background-position: 100% 50%;
-    background-repeat: no-repeat;
-    padding-right: var(--offset-l);
-    color: var(--text-color);
+	@extend %museo-500;
+	font-size: 16px;
+	line-height: 1.5;
+	-webkit-appearance: none;
+	-moz-appearance: none;
+	background-image: url(../images/icons/drop-arrow.svg);
+	background-size: var(--offset-m);
+	background-position: 100% 50%;
+	background-repeat: no-repeat;
+	padding-right: var(--offset-l);
+	color: var(--text-color);
 }
 
 // Custom select
 .select {
-    $this: &;
-    position: relative;
+	$this: &;
+	position: relative;
 
-    &__title {
-        cursor: pointer;
-        padding: 27px var(--offset-xxl) 27px var(--offset-m);
-        display: flex;
-        align-items: center;
-        background-color: #FFF;
-        border: 1px solid #fff;
-        transition: $transition box-shadow,
-            $transition border-color;
+	&__title {
+		cursor: pointer;
+		padding: 27px var(--offset-xxl) 27px var(--offset-m);
+		display: flex;
+		align-items: center;
+		background-color: #FFF;
+		border: 1px solid #fff;
+		transition: $transition box-shadow,
+			$transition border-color;
 
-        @media(max-width: $xl) {
-            @include padding-y(17px);
-        }
+		@media(max-width: $xl) {
+			@include padding-y(17px);
+		}
 
-        &::after {
-            content: "";
-            position: absolute;
-            top: calc(50% - var(--icon-size) / 2);
-            right: var(--offset-m);
-            width: var(--icon-size);
-            height: var(--icon-size);
-            background-image: url(../images/icons/drop-arrow.svg);
-            transition: $transition all;
-        }
+		&::after {
+			content: "";
+			position: absolute;
+			top: calc(50% - var(--icon-size) / 2);
+			right: var(--offset-m);
+			width: var(--icon-size);
+			height: var(--icon-size);
+			background-image: url(../images/icons/drop-arrow.svg);
+			transition: $transition all;
+		}
 
-        @media (any-hover: hover) {
-            &:hover {
-                box-shadow: $bsh;
-            }
-        }
+		@media (any-hover: hover) {
+			&:hover {
+				box-shadow: $bsh;
+			}
+		}
 
-        &[aria-expanded="true"] {
-            @media(min-width: 576px) {
-                border-color: var(--green);
-            }
+		&[aria-expanded="true"] {
+			@media(min-width: 576px) {
+				border-color: var(--green);
+			}
 
-            /* &::after {
+			/* &::after {
 				transform: rotate(180deg);
 			} */
-        }
-    }
+		}
+	}
 
-    &__content {
-        position: absolute;
-        top: 100%;
-        left: 0;
-        right: 0;
-        width: 100%;
-        @include padding-y(var(--offset-m));
-        box-shadow: $bsh;
-        border-radius: $brs;
-        z-index: 30;
-        background-color: #fff;
-        display: none;
+	&__title-wrap {
+		flex-grow: 1;
+		padding-right: var(--offset-m);
+		display: flex;
+		flex-direction: column;
+	}
 
-        @media(max-width: $md) {
-            @include padding-y(20px);
-        }
-    }
+	&__key-descr {
+		@extend %museo-300;
+		color: var(--gray-text);
+	}
 
-    &__input {
-        display: none;
+	&__content {
+		position: absolute;
+		top: 100%;
+		left: 0;
+		right: 0;
+		width: 100%;
+		@include padding-y(var(--offset-m));
+		box-shadow: $bsh;
+		border-radius: $brs;
+		z-index: 30;
+		background-color: #fff;
+		display: none;
 
-        &:checked + label {
-            @extend %museo-500;
-            color: var(--green);
-        }
-    }
+		@media(max-width: $md) {
+			@include padding-y(20px);
+		}
+	}
 
-    &__label {
-        @extend %museo-300;
-        padding: var(--offset-xxs) var(--offset-l);
-        display: flex;
-        align-items: center;
-        width: 100%;
-        cursor: pointer;
-        overflow: hidden;
-        transition: $transition color;
+	&__input {
+		display: none;
 
-        @media(max-width: $md) {
-            padding: var(--offset-xxxs) var(--offset-m);
-        }
+		&:checked+label {
+			@extend %museo-500;
+			color: var(--green);
+		}
+	}
 
-        @media (any-hover: hover) {
-            &:hover {
-                color: var(--green);
-            }
-        }
-    }
+	&__label {
+		@extend %museo-300;
+		padding: var(--offset-xxs) var(--offset-l);
+		display: flex;
+		align-items: center;
+		width: 100%;
+		cursor: pointer;
+		overflow: hidden;
+		transition: $transition color;
 
-    &--style {
-        &_border {
-            #{$this} {
-                &__title {
-                    padding: 17px var(--offset-m);
-                    border: 1px solid var(--line-color);
-                    filter: drop-shadow(0 0 20px rgba(199, 199, 199, 0.25));
-                    border-radius: $brs;
-                    color: var(--text-color);
-                }
-            }
-        }
-    }
+		@media(max-width: $md) {
+			padding: var(--offset-xxxs) var(--offset-m);
+		}
+
+		@media (any-hover: hover) {
+			&:hover {
+				color: var(--green);
+			}
+		}
+	}
+
+	&--style {
+		&_border {
+			#{$this} {
+				&__title {
+					padding: 17px var(--offset-m);
+					border: 1px solid var(--line-color);
+					filter: drop-shadow(0 0 20px rgba(199, 199, 199, 0.25));
+					border-radius: $brs;
+					color: var(--text-color);
+				}
+			}
+		}
+	}
+
+	&--type {
+		&_price {
+			#{$this} {
+				&__title {
+					@include padding-y(13.5px);
+					padding-right: var(--offset-xxxl);
+					color: var(--black);
+				}
+			}
+		}
+	}
 }
