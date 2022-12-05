@@ -77,15 +77,22 @@
                     <button class="actions-header__item"
                             type="button"
                             aria-label="Авторизоваться">
-                        @@include('blocks/icons/user.html')
+                        <svg class="icon">
+                            <use xlink:href="assets/images/sprite.svg#user"></use>
+                        </svg>
+                        <!-- @@include('blocks/icons/user.html') -->
                     </button>
                     <a href="#"
                        class="actions-header__item">
-                        @@include('blocks/icons/favorite.html')
+                        <svg class="icon">
+                            <use xlink:href="assets/images/sprite.svg#favorite"></use>
+                        </svg>
                     </a>
                     <a href="#"
                        class="actions-header__item">
-                        @@include('blocks/icons/cart.html')
+                        <svg class="icon">
+                            <use xlink:href="assets/images/sprite.svg#cart"></use>
+                        </svg>
                         <span>2</span>
                     </a>
                 </div>

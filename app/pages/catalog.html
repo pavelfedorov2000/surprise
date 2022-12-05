@@ -1,65 +1,66 @@
 @@include("blocks/head/head.html", {"title": "Каталог"})
-@@include("blocks/head/no-js.html")
+<!-- @@include("blocks/head/no-js.html") -->
 <div class="wrapper">
-	@@include("blocks/header/header.html")
-	<div class="overlay overlay--menu">
-		@@include('blocks/menu/menu.html')
-	</div>
-	<main class="page page--padding-top_ls page--padding-bottom_none">
-		<div class="container">
-			@@include('blocks/breadcrumbs/breadcrumbs.html', {
-			"current": "Каталог"
-			})
-			<div class="page__top page__top--mb_ls">
-				<h1 class="page-title page-title--size_xs">Каталог</h1>
-			</div>
-			@@include('blocks/catalog-filters/catalog-filters.html')
-			@@include('blocks/catalog-sort/catalog-sort.html')
-			<button class="btn filter-btn btn--style_bg-green" type="button">
-				<span>Фильтр</span>
-			</button>
-			<div class="catalog-grid">
-				@@include('blocks/catalog-card/catalog-card.html', {
-				"src": "01",
-				"favorite": true,
-				"text": true,
-				"bottom": true
-				})
-				@@include('blocks/catalog-card/catalog-card.html', {
-				"src": "02",
-				"favorite": true,
-				"text": true,
-				"bottom": true
-				})
-				@@include('blocks/catalog-card/catalog-card.html', {
-				"src": "03",
-				"favorite": true,
-				"text": true,
-				"bottom": true
-				})
-				@@include('blocks/catalog-card/catalog-card.html', {
-				"src": "04",
-				"favorite": true,
-				"text": true,
-				"bottom": true
-				})
-				@@include('blocks/catalog-card/catalog-card.html', {
-				"src": "05",
-				"favorite": true,
-				"text": true,
-				"bottom": true
-				})
-				@@include('blocks/catalog-card/catalog-card.html', {
-				"src": "06",
-				"favorite": true,
-				"text": true,
-				"bottom": true
-				})
-			</div>
-		</div>
-		@@include('blocks/catalog-certificate-section/catalog-certificate-section.html')
-	</main>
-	@@include('blocks/footer/footer.html')
+    @@include("blocks/header/header.html")
+    <div class="overlay overlay--menu">
+        @@include('blocks/menu/menu.html')
+    </div>
+    <main class="page page--padding-top_ls page--padding-bottom_none">
+        <div class="container">
+            @@include('blocks/breadcrumbs/breadcrumbs.html', {
+            "current": "Каталог"
+            })
+            <div class="page__top page__top--mb_ls">
+                <h1 class="page-title page-title--size_xs">Каталог</h1>
+            </div>
+            @@include('blocks/catalog-filters/catalog-filters.html')
+            @@include('blocks/catalog-sort/catalog-sort.html')
+            <button class="btn filter-btn btn--style_bg-green"
+                    type="button">
+                <span>Фильтр</span>
+            </button>
+            <div class="catalog-grid">
+                @@include('blocks/catalog-card/catalog-card.html', {
+                "src": "01",
+                "favorite": true,
+                "text": true,
+                "bottom": true
+                })
+                @@include('blocks/catalog-card/catalog-card.html', {
+                "src": "02",
+                "favorite": true,
+                "text": true,
+                "bottom": true
+                })
+                @@include('blocks/catalog-card/catalog-card.html', {
+                "src": "03",
+                "favorite": true,
+                "text": true,
+                "bottom": true
+                })
+                @@include('blocks/catalog-card/catalog-card.html', {
+                "src": "04",
+                "favorite": true,
+                "text": true,
+                "bottom": true
+                })
+                @@include('blocks/catalog-card/catalog-card.html', {
+                "src": "05",
+                "favorite": true,
+                "text": true,
+                "bottom": true
+                })
+                @@include('blocks/catalog-card/catalog-card.html', {
+                "src": "06",
+                "favorite": true,
+                "text": true,
+                "bottom": true
+                })
+            </div>
+        </div>
+        @@include('blocks/catalog-certificate-section/catalog-certificate-section.html')
+    </main>
+    @@include('blocks/footer/footer.html')
 </div>
 @@include("blocks/link/link.html")
 </body>

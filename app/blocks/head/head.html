@@ -63,3 +63,19 @@
     <link id="app-css"
           rel="stylesheet"
           href="./assets/styles/app.min.css">
+    <script>
+        document.documentElement.className = document.documentElement.className.replace(/\bno-js\b/, 'js');
+        if (!('ontouchstart' in document.documentElement)) {
+            document.documentElement.className += ' no-touchevents';
+        } else {
+            document.documentElement.className += ' touchevents';
+        }
+
+    </script>
+</head>
+
+<body @@if(context.sticky){class="sticky"
+      }>
+    <noscript>
+        <div class="no-js-warning">Для корректной работы сайта <b>включите JavaScript</b> в браузере</div>
+    </noscript>

@@ -1,0 +1,18 @@
+.unique-package {
+    padding-bottom: var(--offset-l);
+    align-items: center;
+    display: none;
+
+    @media(max-width: $xl) {
+        display: flex;
+    }
+
+    // .unique-package__img
+
+    &__img {
+        flex-shrink: 0;
+        margin-right: var(--offset-m);
+        width: 120px;
+        height: 70px;
+    }
+}

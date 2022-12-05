@@ -5,40 +5,42 @@ import cheerio from 'gulp-cheerio';
 import replace from 'gulp-replace';
 
 export const sprites = (cb) => {
-  gulp.src('app/images/sprite-icons/*.svg')
-    .pipe(svgmin({
-      js2svg: {
-        pretty: true,
-      },
-    }))
-    .pipe(cheerio({
-      run($) {
-        $('[fill]')
-          .removeAttr('fill');
-        $('[stroke]')
-          .removeAttr('stroke');
-        $('[style]')
-          .removeAttr('style');
-      },
-      parserOptions: {
-        xmlMode: true,
-      },
-    }))
-    .pipe(replace('&gt;', '>'))
-    .pipe(svgSprite({
-      mode: {
-        symbol: {
-          sprite: '../../../app/images/sprite.svg',
-          render: {
-            scss: {
-              dest: '../../styles/helpers/sprite',
-              template: 'app/styles/helpers/sprite_template.scss',
+    gulp.src('app/images/sprite-icons/*.svg')
+        /* .pipe(svgmin({
+            js2svg: {
+                pretty: true,
             },
-          },
-        },
-      },
-    }))
-    .pipe(gulp.dest('app/images/'));
-
-  cb();
+        }))
+        .pipe(cheerio({
+            run($) {
+                $('[fill]')
+                    .removeAttr('fill');
+                $('[stroke]')
+                    .removeAttr('stroke');
+                $('[style]')
+                    .removeAttr('style');
+            },
+            parserOptions: {
+                xmlMode: true,
+            },
+        }))
+        .pipe(replace('&gt;', '>')) */
+        .pipe(svgSprite({
+            mode: {
+                stack: {
+                    sprite: '../sprite.svg'
+                }
+                /* symbol: {
+                  sprite: '../../../app/images/sprite.svg',
+                  render: {
+                    scss: {
+                      dest: '../../styles/helpers/sprite',
+                      template: 'app/styles/helpers/sprite_template.scss',
+                    },
+                  },
+                }, */
+            },
+        }))
+        .pipe(gulp.dest('dist/assets/images/'));
+    cb();
 };
