@@ -10,6 +10,10 @@
 		grid-template-columns: 1fr calc(500 / #{$container} * 100%);
 	}
 
+	@media(max-width: $xl) {
+		gap: var(--section-padding-xs);
+	}
+
 	@media(max-width: $lg) {
 		gap: var(--offset-xxxl);
 	}

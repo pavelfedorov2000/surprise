@@ -1,38 +1,34 @@
 .contacts {
-    @include row-grid(var(--offset-m));
+	@include row-grid(var(--offset-m));
 
-    &--style {
-        &_flex {
-            display: flex;
-            flex-wrap: wrap;
-            row-gap: var(--offset-xs);
+	&--style {
+		&_flex {
+			display: flex;
+			flex-wrap: wrap;
+			row-gap: var(--offset-xs);
 
-            > * {
-                margin-right: var(--offset-l);
-            }
-        }
-    }
+			>* {
+				margin-right: var(--offset-l);
+			}
+		}
+	}
 }
 
 .contact {
-    display: inline-flex;
-    align-items: center;
-    font-family: 'Museo Sans Cyrl 300', sans-serif;
-    font-weight: 300;
-    transition: $transition color;
+	@extend %museo-300;
+	display: inline-flex;
+	align-items: center;
+	transition: $transition color;
 
-    &__icon {
-        flex-shrink: 0;
-        width: 24px;
-        height: 24px;
-        margin-right: var(--offset-xs);
-    }
+	&__icon {
+		margin-right: var(--offset-xs);
+	}
 
-    &:not(.contact--time) {
-        @media (any-hover: hover) {
-            &:hover {
-                color: var(--pink);
-            }
-        }
-    }
+	&:not(.contact--time) {
+		@media (any-hover: hover) {
+			&:hover {
+				color: var(--pink);
+			}
+		}
+	}
 }

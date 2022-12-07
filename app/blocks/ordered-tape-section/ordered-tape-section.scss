@@ -55,10 +55,12 @@
 			margin-left: var(--offset-s);
 		}
 	}
+}
 
+.tape-item {
 	// .ordered-tape-section__item-num
 
-	&__item-num {
+	&__num {
 		@extend %museo-700;
 		font-size: 24px;
 		margin-bottom: var(--offset-m);
@@ -66,9 +68,16 @@
 
 	// .ordered-tape-section__item-title
 
-	&__item-title {
+	&__title {
 		&:not(:last-child) {
 			margin-bottom: var(--offset-s);
+		}
+
+		&--style {
+			&_bold {
+				@extend %museo-700;
+				font-size: 24px;
+			}
 		}
 	}
 }

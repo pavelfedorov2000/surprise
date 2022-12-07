@@ -1,0 +1,41 @@
+.admin {
+	display: flex;
+	align-items: center;
+
+	@media(max-width: $md) {
+		@include padding-y(20px);
+	}
+
+	// .admin__img
+
+	&__img {
+		flex-shrink: 0;
+		margin-right: var(--offset-xl);
+		width: 160px;
+		height: 160px;
+
+		@media(max-width: $md) {
+			width: 105px;
+			height: 105px;
+			margin-right: var(--offset-m);
+		}
+
+		img {
+			border-radius: 50%;
+		}
+	}
+
+	// .admin__contacts
+
+	&__contacts {
+		@include row-grid(var(--offset-xs));
+
+		@media(max-width: $sm) {
+			row-gap: 20px;
+		}
+
+		.contact {
+			color: var(--text-color);
+		}
+	}
+}

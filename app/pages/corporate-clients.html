@@ -1,0 +1,38 @@
+@@include("blocks/head/head.html", {"title": "Корпоративным клиентам"})
+<!-- @@include("blocks/head/no-js.html") -->
+<div class="wrapper">
+	@@include("blocks/header/header.html")
+	<div class="overlay overlay--menu">
+		@@include('blocks/menu/menu.html')
+	</div>
+	<main class="page page--with_decor page--padding">
+		<div class="container">
+			@@include('blocks/breadcrumbs/breadcrumbs.html', {
+			"current": "Корпоративным клиентам"
+			})
+			<div class="page__top page__top--orientation_column">
+				<h1 class="page-title page__title page__title--mb_xs">Корпоративным клиентам</h1>
+				<p class="page__top-text page__top-text--size_xl">
+					Универсальные подарочные сертификаты для сотрудников, коллег, клиентов и партнеров
+				</p>
+				<a href="tel:+375297333368" class="btn page__top-btn">
+					<svg class="icon btn__icon">
+						<use xlink:href="assets/images/sprite.svg#phone-white"></use>
+					</svg>
+					<span class="btn__text">Позвонить</span>
+				</a>
+			</div>
+		</div>
+		@@include('blocks/ordered-tape-section/how-it-works.html')
+		@@include('blocks/choose-section/choose-section.html')
+		@@include('blocks/benefits-section/benefits-section.html')
+		@@include('blocks/partners-section/partners-section.html')
+		@@include('blocks/corporate-certificates/corporate-certificates.html')
+	</main>
+	@@include('blocks/contact-us/contact-us.html')
+</div>
+@@include('blocks/footer/footer.html')
+@@include("blocks/link/link.html")
+</body>
+
+</html>
