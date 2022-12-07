@@ -1,83 +1,87 @@
 .ordered-tape-section {
 
-	// .ordered-tape-section__items
+    // .ordered-tape-section__items
 
-	&__items {
-		display: flex;
-		overflow-x: auto;
-		margin-left: calc(var(--offset-xxxl) * (-1));
+    &__items {
+        display: flex;
+        overflow-x: auto;
+        margin-left: calc(var(--offset-xxxl) * (-1));
 
-		@media(max-width: $lg) {
-			margin-left: calc(var(--offset-l) * (-1));
-		}
+        @media(max-width: $lg) {
+            margin-left: calc(var(--offset-l) * (-1));
+        }
 
-		@media(max-width: $sm) {
-			margin-left: calc(var(--offset-s) * (-1));
-		}
+        @media(max-width: $sm) {
+            margin-left: calc(var(--offset-s) * (-1));
+        }
 
-		&::-webkit-scrollbar {
-			width: 0;
-			-webkit-appearance: none;
-			scrollbar-width: 0;
-		}
-	}
+        &::-webkit-scrollbar {
+            width: 0;
+            -webkit-appearance: none;
+            scrollbar-width: 0;
+        }
+    }
 
-	// .ordered-tape-section__item
+    // .ordered-tape-section__item
 
-	&__item {
-		min-width: 312px;
-		margin-left: var(--offset-xxxl);
+    &__item {
+        min-width: 312px;
+        margin-left: var(--offset-xxxl);
 
-		&:not(:last-child) {
-			position: relative;
+        &:not(:last-child) {
+            position: relative;
 
-			&::before {
-				content: '';
-				position: absolute;
-				top: 28px;
-				left: 74px;
-				right: -42px;
-				height: 2px;
-				background-image: url(../images/decor/dashed-line.svg);
+            &::before {
+                content: '';
+                position: absolute;
+                top: 28px;
+                left: 74px;
+                right: -42px;
+                height: 2px;
+                background-image: url(../images/decor/dashed-line.svg);
 
-				@media(max-width: $sm) {
-					right: -2px;
-				}
-			}
-		}
+                @media(max-width: $sm) {
+                    right: -2px;
+                }
+            }
+        }
 
-		@media(max-width: $lg) {
-			margin-left: var(--offset-l);
-		}
+        @media(max-width: $lg) {
+            margin-left: var(--offset-l);
+        }
 
-		@media(max-width: $sm) {
-			min-width: 290px;
-			margin-left: var(--offset-s);
-		}
-	}
+        @media(max-width: $sm) {
+            min-width: 290px;
+            margin-left: var(--offset-s);
+        }
+    }
 }
 
 .tape-item {
-	// .ordered-tape-section__item-num
+    // .ordered-tape-section__item-num
 
-	&__num {
-		@extend %museo-700;
-		font-size: 24px;
-		margin-bottom: var(--offset-m);
-	}
+    &__num {
+        @extend %museo-700;
+        font-size: 24px;
+        margin-bottom: var(--offset-m);
+    }
 
-	// .ordered-tape-section__item-title
+    // .ordered-tape-section__item-title
 
-	&__title {
-		&:not(:last-child) {
-			margin-bottom: var(--offset-s);
-		}
+    &__title {
+        &:not(:last-child) {
+            margin-bottom: var(--offset-s);
+        }
 
-		&--style {
-			&_bold {
-				@extend %museo-700;
-				font-size: 24px;
-			}
-		}
-	}
+        &--style {
+            &_bold {
+                @extend %museo-700;
+                font-size: 24px;
+
+                @media(max-width: $sm) {
+                    font-size: 20px;
+                }
+            }
+        }
+    }
 }

@@ -1,3 +1,45 @@
-<div class="choose-section">
-  <!--your code-->
-</div>
+<section class="section">
+    <div class="container">
+        <div class="section__top">
+            <h2 class="section-title">Что можно будет выбрать?</h2>
+        </div>
+        <div class="row row--gap_xls">
+            @@include('blocks/choose-card/choose-card.html', {
+            "src": "assets/images/content/catalog/07",
+            "title": "Активный отдых",
+            "text": "Полеты на самолете, воздушном шаре, катание на квадроциклах ",
+            "price": "15"
+            })
+            @@include('blocks/choose-card/choose-card.html', {
+            "src": "assets/images/content/catalog/01",
+            "title": "SPA и салоны красоты ",
+            "text": "SPA-церемонии, массаж тела, ног и рук",
+            "price": "60"
+            })
+            @@include('blocks/choose-card/choose-card.html', {
+            "src": "assets/images/content/catalog/02",
+            "title": "Мастер-классы",
+            "text": "Создание картин, курсы кондитеров, дегустация вин",
+            "price": "45"
+            })
+            @@include('blocks/choose-card/choose-card.html', {
+            "src": "assets/images/content/catalog/03",
+            "title": "Фотосессии",
+            "text": "Семейные, love story, портретные ",
+            "price": "140"
+            })
+            @@include('blocks/choose-card/choose-card.html', {
+            "src": "assets/images/content/catalog/04",
+            "title": "Подарочные карты магазинов",
+            "text": "Косметика, одежда, белье, украшения",
+            "price": "20"
+            })
+            @@include('blocks/choose-card/choose-card.html', {
+            "src": "assets/images/content/catalog/05",
+            "title": "Рестораны ",
+            "text": "Бары, рестораны, кафе",
+            "price": "35"
+            })
+        </div>
+    </div>
+</section>

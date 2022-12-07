@@ -1,340 +1,199 @@
 .overlay {
-	display: none;
-	position: fixed;
-	top: 0;
-	right: 0;
-	bottom: 0;
-	left: 0;
-	z-index: 200;
-	background-color: rgba(0, 0, 0, 0.28);
+    display: none;
+    position: fixed;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    z-index: 200;
+    background-color: rgba(0, 0, 0, 0.28);
 
-	&--menu {
-		@media(max-width: $md) {
-			top: var(--header-height-mob);
-		}
+    &--menu {
+        @media(max-width: $md) {
+            top: var(--header-height-mob);
+        }
 
-		@media(max-width: $sm) {
-			background-color: transparent;
-		}
-	}
+        @media(max-width: $sm) {
+            background-color: transparent;
+        }
+    }
 }
 
 .close-btn {
-	display: inline-flex;
-	align-items: center;
-	padding: var(--offset-xxxs);
-	border-radius: 50%;
-	font-size: 24px;
-	padding: var(--offset-xxxs);
-	transition: $transition background-color;
+    display: inline-flex;
+    align-items: center;
+    padding: var(--offset-xxxs);
+    border-radius: 50%;
+    font-size: 24px;
+    padding: var(--offset-xxxs);
+    transition: $transition background-color;
 
-	@media (any-hover: hover) {
-		&:hover {
-			background-color: var(--gray);
-		}
-	}
+    @media (any-hover: hover) {
+        &:hover {
+            background-color: var(--gray);
+        }
+    }
 }
 
 .menu {
-	$this: &; // .menu
+    $this: &; // .menu
 
-	position: absolute;
-	top: 0;
-	bottom: 0;
-	left: -100%;
-	z-index: 101;
-	display: flex;
-	flex-direction: column;
-	width: 575px;
-	padding: var(--offset-xxxl) var(--section-padding);
-	background-color: #fff;
-	overflow-y: auto;
-	transition: $transition left;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: -100%;
+    z-index: 101;
+    display: flex;
+    flex-direction: column;
+    width: 575px;
+    padding: var(--offset-xxxl) var(--section-padding);
+    background-color: #fff;
+    overflow-y: auto;
+    transition: $transition left;
 
-	@media(max-width: $lg) {
-		width: auto;
-		@include padding-x(var(--offset-l));
-	}
+    @media(max-width: $lg) {
+        width: auto;
+        @include padding-x(var(--offset-l));
+    }
 
-	@media(max-width: $md) {
-		top: -150%;
-		left: 0;
-		padding: var(--offset-m) 15px var(--offset-xxxl);
-		transition: $transition top;
-	}
+    @media(max-width: $md) {
+        top: -150%;
+        left: 0;
+        padding: var(--offset-m) 15px var(--offset-xxxl);
+        transition: $transition top;
+    }
 
-	@media(max-width: $sm) {
-		width: 100%;
-	}
+    @media(max-width: $sm) {
+        width: 100%;
+    }
 
-	&::-webkit-scrollbar {
-		width: 0;
-		-webkit-appearance: none;
-		scrollbar-width: 0;
-	}
+    &::-webkit-scrollbar {
+        width: 0;
+        -webkit-appearance: none;
+        scrollbar-width: 0;
+    }
 
-	&.active {
-		left: 0;
+    &.active {
+        left: 0;
 
-		@media(max-width: $md) {
-			top: 0;
-		}
-	}
+        @media(max-width: $md) {
+            top: 0;
+        }
+    }
 
-	// .menu__close
+    // .menu__close
 
-	&__close {
-		display: none;
+    &__close {
+        display: none;
 
-		@media(min-width: 768px) {
-			display: inline-flex;
-			position: absolute;
-			top: 20px;
-			right: 20px;
-		}
-	}
+        @media(min-width: 768px) {
+            display: inline-flex;
+            position: absolute;
+            top: 20px;
+            right: 20px;
+        }
+    }
 
-	&__btn {
-		display: none;
+    &__btn {
+        display: none;
 
-		@media(max-width: $xl) {
-			display: block;
-			margin-bottom: var(--offset-l);
-		}
-	}
+        @media(max-width: $xl) {
+            display: block;
+            margin-bottom: var(--offset-l);
+        }
+    }
 
-	// .menu__list
+    // .menu__list
 
-	&__list {
-		flex-grow: 1;
-		margin-bottom: 38px;
-	}
+    &__list {
+        flex-grow: 1;
+        margin-bottom: 38px;
+    }
 
-	// .menu__link
+    // .menu__link
 
-	&__link {
-		display: block;
-		padding: 20px var(--offset-l);
-		border-radius: $brs;
-		font-size: 20px;
-		border-left: 3px solid #fff;
-		transition: $transition all;
+    &__link {
+        display: block;
+        padding: 20px var(--offset-l);
+        border-radius: $brs;
+        font-size: 20px;
+        border-left: 3px solid #fff;
+        transition: $transition all;
 
-		@media(max-width: $md) {
-			font-size: 16px;
-			padding: var(--offset-xs) var(--offset-m);
-		}
+        @media(max-width: $md) {
+            font-size: 16px;
+            padding: var(--offset-xs) var(--offset-m);
+        }
 
-		@media (any-hover: hover) {
-			&:hover {
-				color: var(--green);
-				background-color: var(--green-light);
-				border-left-color: var(--green);
-			}
-		}
-	}
+        @media (any-hover: hover) {
+            &:hover {
+                color: var(--green);
+                background-color: var(--green-light);
+                border-left-color: var(--green);
+            }
+        }
+    }
 
-	// .menu__items
+    // .menu__items
 
-	&__items {
-		margin-left: var(--offset-l);
-		padding-top: 38px;
-		border-top: $border;
+    &__items {
+        margin-left: var(--offset-l);
+        padding-top: 38px;
+        border-top: $border;
 
-		@media(max-width: $md) {
-			margin-left: 0;
-			padding-left: var(--offset-s);
-		}
+        @media(max-width: $md) {
+            margin-left: 0;
+            padding-left: var(--offset-s);
+        }
 
-		@media(max-width: 374px) {
-			padding-left: 0;
-		}
-	}
+        @media(max-width: 374px) {
+            padding-left: 0;
+        }
+    }
 
-	&__nav {
-		display: none;
-		@include margin-y(var(--offset-xl));
+    &__nav {
+        display: none;
+        @include margin-y(var(--offset-xl));
 
-		@media(max-width: $xl) {
-			display: block;
-		}
-	}
+        @media(max-width: $xl) {
+            display: block;
+        }
+    }
 
-	&__nav-link {
-		display: block;
-		padding: var(--offset-xxs) 0 var(--offset-xxs) var(--offset-m);
-	}
+    &__nav-link {
+        display: block;
+        padding: var(--offset-xxs) 0 var(--offset-xxs) var(--offset-m);
+    }
 
-	&__contacts {
-		display: none;
+    &__contacts {
+        display: none;
 
-		@media(max-width: $lg) {
-			@include row-grid(var(--offset-s));
-			justify-items: center;
-		}
-	}
+        @media(max-width: $lg) {
+            @include row-grid(var(--offset-s));
+            justify-items: center;
+        }
+    }
 }
 
 .icons-list {
-	@include row-grid(var(--offset-l));
+    @include row-grid(var(--offset-l));
 
-	@media(max-width: $md) {
-		@include row-grid(var(--offset-m));
-	}
+    @media(max-width: $md) {
+        @include row-grid(var(--offset-m));
+    }
 
-	&--style {
-		&_grid {
-			display: grid;
-			gap: var(--offset-m) var(--offset-xl);
+    &--style {
+        &_grid {
+            display: grid;
+            gap: var(--offset-m) var(--offset-xl);
 
-			@media(max-width: $sm) {
-				gap: var(--offset-s);
-			}
+            @media(max-width: $sm) {
+                gap: var(--offset-s);
+            }
 
-			@media(min-width: 768px) {
-				grid-template-columns: repeat(2, 1fr);
-			}
-		}
-	}
-}
-
-.icons-item {
-	$this: &;
-
-	display: flex;
-	align-items: center;
-	// .icons-item__wrap
-
-	&__content {
-		display: flex;
-		flex-direction: column;
-	}
-
-	// .icons-item__icon
-
-	&__icon {
-		margin-right: var(--offset-m);
-	}
-
-	// .icons-item__title
-
-	&__title {
-		font-size: 20px;
-		transition: $transition color;
-
-		@media(max-width: $md) {
-			font-size: 18px;
-		}
-	}
-
-	// .icons-item__descr
-
-	&__descr {
-		color: var(--text-color);
-	}
-
-	&__text {
-		@extend %museo-300;
-	}
-
-	@media (any-hover: hover) {
-		&:hover {
-			#{$this} {
-				&__title {
-					color: var(--green);
-				}
-			}
-		}
-	}
-}
-
-.icon-circle {
-	@include circle;
-	font-size: 24px;
-	font-style: italic;
-	letter-spacing: 0.03em;
-	flex-shrink: 0;
-
-	>* {
-		position: relative;
-		z-index: 2;
-	}
-
-	&::before {
-		content: '';
-		position: absolute;
-		width: 14px;
-		height: 14px;
-		border-radius: 50%;
-		z-index: 1;
-	}
-
-	&--txt {
-		&_xs {
-			font-size: 16px;
-			font-style: normal;
-		}
-	}
-
-	&--position {
-		&_top {
-			&-left {
-				&:before {
-					top: 15px;
-					left: 15px;
-				}
-			}
-
-			&-right {
-				&:before {
-					top: 15px;
-					right: 15px;
-				}
-			}
-		}
-
-		&_bottom {
-			&-left {
-				&:before {
-					bottom: 15px;
-					left: 15px;
-				}
-			}
-
-			&-right {
-				&:before {
-					right: 15px;
-					bottom: 15px;
-				}
-			}
-		}
-	}
-
-	&--style {
-		&_bg {
-			&-pink {
-				&::before {
-					background-color: var(--pink-light);
-				}
-			}
-
-			&-yellow {
-				&::before {
-					background-color: var(--yellow-light);
-				}
-			}
-
-			&-green {
-				&::before {
-					background-color: var(--green-light);
-				}
-			}
-
-			&-blue {
-				&:before {
-					background-color: var(--blue);
-				}
-			}
-		}
-	}
+            @media(min-width: 768px) {
+                grid-template-columns: repeat(2, 1fr);
+            }
+        }
+    }
 }

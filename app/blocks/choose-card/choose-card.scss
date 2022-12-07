@@ -1,0 +1,79 @@
+.choose-card {
+    position: relative;
+    min-height: 520px;
+    display: flex;
+    flex-direction: column;
+
+    @media(max-width: $sm) {
+        min-height: 430px;
+    }
+
+    // .choose-card__img
+
+    &__img {
+        position: relative;
+        padding-bottom: 67.775%;
+
+        @media(max-width: $sm) {
+            padding-bottom: 69.975%;
+        }
+
+        img {
+            position: absolute;
+            top: 0;
+            right: 0;
+            bottom: 0;
+            left: 0;
+            border-radius: $brs-card-xl $brs-card-xl 0 0;
+        }
+    }
+
+    // .choose-card__content
+
+    &__content {
+        flex-grow: 1;
+        padding: var(--offset-xl) var(--offset-xl) var(--offset-xls);
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        background-color: #fff;
+        box-shadow: $bsh;
+        border-radius: 0 0 $brs-card-xl $brs-card-xl;
+
+        @media(max-width: $md) {
+            padding: 30px var(--offset-l) 20px;
+        }
+
+        .prices {
+            font-size: 20px;
+        }
+    }
+
+    // .choose-card__title
+
+    &__title {
+        @extend %museo-700;
+        font-size: 24px;
+
+        &:not(:last-child) {
+            margin-bottom: var(--offset-xxs);
+
+            @media(max-width: $sm) {
+                font-size: 18px;
+                margin-bottom: var(--offset-s);
+            }
+        }
+    }
+
+    // .choose-card__text
+
+    &__text {
+        &:not(:last-child) {
+            margin-bottom: 20px;
+
+            @media(max-width: $sm) {
+                margin-bottom: var(--offset-s);
+            }
+        }
+    }
+}

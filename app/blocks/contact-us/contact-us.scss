@@ -1,70 +1,76 @@
 .contact-us {
-	padding-top: var(--section-padding);
-	padding-bottom: 125px;
+    padding-top: var(--section-padding);
+    padding-bottom: 125px;
 
-	@media(max-width: $lg) {
-		padding-top: var(--offset-xxs);
-		padding-bottom: var(--offset-xxxl);
-	}
+    @media(min-width: 1201px) {
+        background-image: url(../images/decor/contact-us-bg.svg);
+        background-size: cover;
+        background-position: center;
+        background-repeat: no-repeat;
+    }
 
-	// .contact-us__inner 
+    @media(max-width: $lg) {
+        @include padding-y(var(--offset-xxs));
+    }
 
-	&__inner {
-		@media(min-width: 1025px) {
-			display: flex;
-			align-items: center;
-			justify-content: space-between;
-		}
+    // .contact-us__inner 
 
-		@media(max-width: $lg) {
-			@include row-grid(var(--offset-xxxl));
-		}
-	}
+    &__inner {
+        @media(min-width: 1025px) {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
 
-	// .contact-us__content
+        @media(max-width: $lg) {
+            @include row-grid(var(--offset-xxxl));
+        }
+    }
 
-	&__content {
-		@include row-grid(var(--offset-xxls));
+    // .contact-us__content
 
-		@media(min-width: 1025px) {
-			padding-right: calc(145 / #{$container} * 100%);
-		}
+    &__content {
+        @include row-grid(var(--offset-xxls));
 
-		@media(max-width: $sm) {
-			row-gap: var(--offset-l);
-		}
-	}
+        @media(min-width: 1025px) {
+            padding-right: calc(145 / #{$container} * 100%);
+        }
 
-	// .contact-us__title
+        @media(max-width: $sm) {
+            row-gap: var(--offset-l);
+        }
+    }
 
-	&__title {
-		margin-bottom: var(--offset-s);
-	}
+    // .contact-us__title
 
-	// .contact-us__form
+    &__title {
+        margin-bottom: var(--offset-s);
+    }
 
-	&__form {
-		padding: var(--offset-xxl) var(--offset-xxxl);
+    // .contact-us__form
 
-		@media(min-width: 1025px) {
-			flex: 0 0 528px;
-		}
+    &__form {
+        padding: var(--offset-xxl) var(--offset-xxxl);
 
-		@media(max-width: $md) {
-			padding: var(--offset-l) var(--offset-m);
-		}
+        @media(min-width: 1025px) {
+            flex: 0 0 528px;
+        }
 
-		.form {
-			@media(max-width: $lg) {
-				padding: 0;
-			}
-		}
-	}
+        @media(max-width: $md) {
+            padding: var(--offset-l) var(--offset-m);
+        }
 
-	// .contact-us__form-title
+        .form {
+            @media(max-width: $lg) {
+                padding: 0;
+            }
+        }
+    }
 
-	&__form-title {
-		text-align: center;
-		margin-bottom: var(--offset-l);
-	}
+    // .contact-us__form-title
+
+    &__form-title {
+        text-align: center;
+        margin-bottom: var(--offset-l);
+    }
 }

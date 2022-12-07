@@ -39,6 +39,20 @@ $(document).ready(function () {
     },
   });
 
+  new Swiper('.partners-slider', {
+    loop: true,
+    slidesPerView: 'auto',
+    spaceBetween: 92,
+    speed: 1000,
+    /* autoplay: {
+    delay: 3000,
+    }, */
+    navigation: {
+      nextEl: '.slider-btn--next',
+      prevEl: '.slider-btn--prev',
+    },
+  });
+
   let photogallerySlider;
   function initPhotogallerySlider(windowWidth) {
     if ($(window).width() <= windowWidth) {
