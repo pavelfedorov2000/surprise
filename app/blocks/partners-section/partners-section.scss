@@ -1,8 +1,17 @@
 .partners-slider {
-    height: 150px;
+    height: max-content;
+
+    /* @media(max-width: $sm) {
+       height: 100px;
+    } */
 }
 
 .partner-logo {
     width: 150px;
     height: 150px;
+
+    @media(max-width: $sm) {
+       width: 100px;
+       height: 100px;
+    }
 }

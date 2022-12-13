@@ -1,7 +1,6 @@
 <article class="catalog-card">
 	@@if(context.favorite){
 	<button class="catalog-card__favorite favorite-btn" type="button" aria-label="Добавить в избранное">
-		<!-- <img src="assets/images/icons/like.svg" alt=""> -->
 		<svg class="favorite-btn__icon" width="25" height="25" viewBox="0 0 25 25" fill="none"
 			xmlns="http://www.w3.org/2000/svg">
 			<path fill-rule="evenodd" clip-rule="evenodd"
@@ -83,13 +82,11 @@
 		<div class="swiper-pagination"></div>
 	</div>
 	<div class="catalog-card__title">
-		<a class="menu-link" href="#">Винный безлимит в ресторане Fridays</a>
+		<a class="menu-link" href="#">@@title</a>
 	</div>
 	@@if(context.text){
 	<p class="catalog-card__text">
-		Сомелье поделится традициями бельгийского пивоварения и научит основным пивным стилям. Вечер дополнит сет
-		закусок
-		от ресторана, специально подобранных к каждому напитку
+		@@text
 	</p>
 	}
 	@@if(context.bottom){
@@ -100,23 +97,37 @@
 			"link": "20 отзывов"
 			})
 			<div class="prices">
+				@@if(context.price){
+				<b class="price">@@price</b>
+				<span>руб.</span>
+				}
+				@@if(context.priceFrom){
 				<span>от</span>
-				<b class="price">59</b>
+				<b class="price">@@priceFrom</b>
+				}
+				@@if(context.priceTo){
 				<span>до</span>
 				<b class="price">118</b>
 				<span>руб.</span>
+				}
 			</div>
 		</div>
+		@@if(!context.withoutButtons){
 		<div class="btns catalog-card__btns">
 			<a href="#" class="btn catalog-card__btn btn--padding_xs btn--style_bg-yellow">
-				<img class="btn__icon" src="assets/images/icons/user.svg" alt="">
+				<svg class="icon btn__icon">
+					<use xlink:href="assets/images/sprite.svg#user"></use>
+				</svg>
 				<span class="btn__text">Для себя</span>
 			</a>
 			<a href="#" class="btn catalog-card__btn btn--padding_xs btn--style_bg-pink">
-				<img class="btn__icon" src="assets/images/icons/gift.svg" alt="">
+				<svg class="icon btn__icon">
+					<use xlink:href="assets/images/sprite.svg#gift"></use>
+				</svg>
 				<span class="btn__text">В подарок</span>
 			</a>
 		</div>
+		}
 	</div>
 	}
 </article>

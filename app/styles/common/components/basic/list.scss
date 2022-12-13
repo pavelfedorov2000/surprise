@@ -1,6 +1,12 @@
 .check-list {
 	@include row-grid(var(--offset-xxs));
 
+	&--offset {
+		&_m {
+			row-gap: var(--offset-m);
+		}
+	}
+
 	li {
 		@extend %museo-300;
 		position: relative;

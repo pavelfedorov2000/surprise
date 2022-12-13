@@ -3,6 +3,19 @@
     min-height: 520px;
     display: flex;
     flex-direction: column;
+    border-bottom: 3px solid #fff;
+    border-radius: $brs-card-xl;
+	transition: $transition border-bottom-color;
+
+	&:active {
+		border-bottom-color: var(--green);
+	}
+
+	@media (any-hover: hover) {
+		&:hover {
+			border-bottom-color: var(--green);
+		}
+	}
 
     @media(max-width: $sm) {
         min-height: 430px;

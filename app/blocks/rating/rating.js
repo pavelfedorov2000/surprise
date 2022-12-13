@@ -3,6 +3,7 @@ app.starRating = {
     description: 'star rating script',
     init() {
         const ratings = document.querySelectorAll('.rating');
+        console.log(ratings);
 
         if (ratings.length > 0) {
             initRatings();

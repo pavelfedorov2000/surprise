@@ -1,16 +1,19 @@
 @@include("blocks/head/head.html", {"title": "Заказ сформирован"})
 <!-- @@include("blocks/head/no-js.html") -->
 <div class="wrapper">
-    @@include("blocks/header/header.html")
-    <div class="overlay overlay--menu">
-        @@include('blocks/menu/menu.html')
-    </div>
-    <main class="page page--padding page--padding-bottom_xl">
-        <div class="container">
-            @@include('blocks/order-ready/order-ready.html')
-        </div>
-    </main>
-    @@include('blocks/footer/footer.html')
+	@@include("blocks/header/header.html")
+	<div class="overlay overlay--menu">
+		@@include('blocks/menu/menu.html')
+	</div>
+	<main class="page page--padding page--padding-bottom_xl">
+		<div class="container">
+			@@include('blocks/success-block/success-block.html', {
+			"title": "Заказ сформирован",
+			"text": true
+			})
+		</div>
+	</main>
+	@@include('blocks/footer/footer.html')
 </div>
 @@include("blocks/link/link.html")
 </body>

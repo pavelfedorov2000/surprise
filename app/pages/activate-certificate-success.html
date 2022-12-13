@@ -1,0 +1,31 @@
+@@include("blocks/head/head.html", {"title": "Сертификат успешно активирован"})
+<!-- @@include("blocks/head/no-js.html") -->
+<div class="wrapper">
+	@@include("blocks/header/header.html")
+	<div class="overlay overlay--menu">
+		@@include('blocks/menu/menu.html')
+	</div>
+	<main class="page page--padding page--with_decor">
+		<div class="container">
+			@@include('blocks/success-block/success-block.html', {
+			"title": "Ваш сертификат успешно активирован!"
+			})
+		</div>
+		@@include('blocks/about-certificate/about-certificate.html')
+		<section class="section">
+			<div class="container">
+				<div class="section-top">
+					<h2 class="section-title">Фотогалерея</h2>
+				</div>
+				@@include('blocks/about-certificate/about-certificate.html')
+				@@include('blocks/photogallery/photogallery.html')
+			</div>
+		</section>
+	</main>
+	@@include("blocks/footer/footer.html")
+	<!-- @@include("blocks/popups/popups.html") -->
+</div>
+@@include("blocks/link/link.html")
+</body>
+
+</html>

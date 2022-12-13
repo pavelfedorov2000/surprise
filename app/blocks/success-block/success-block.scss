@@ -1,11 +1,11 @@
-.order-ready {
+.success-block {
 	max-width: 655px;
 	display: flex;
 	flex-direction: column;
 	align-items: center;
 	text-align: center;
 	margin: 0 auto;
-	// .order-ready__img
+	// .success-block__img
 
 	&__img {
 		width: var(--section-padding-xs);
@@ -13,7 +13,7 @@
 		margin-bottom: var(--offset-l);
 	}
 
-	// .order-ready__title
+	// .success-block__title
 
 	&__title {
 		margin-bottom: var(--offset-xs);
@@ -23,7 +23,7 @@
 		}
 	}
 
-	// .order-ready__text
+	// .success-block__text
 
 	&__text {
 		@media(max-width: $sm) {

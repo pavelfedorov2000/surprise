@@ -88,17 +88,3 @@
 		}
 	}
 }
-
-.swiper-pagination {
-	&-fraction {
-		bottom: var(--offset-s);
-		left: var(--offset-s);
-		background-color: var(--white-70);
-		backdrop-filter: blur(2px);
-		border-radius: $brs-xxs;
-		padding: 2px var(--offset-xxs);
-		width: auto;
-		font-size: 12px;
-		line-height: 18px;
-	}
-}

@@ -6,7 +6,11 @@
         padding-bottom: var(--offset-xl);
 
         @media(max-width: $md) {
-            padding-bottom: var(--offset-l);
+            padding-bottom: var(--offset-xls);
+        }
+
+        @media(max-width: $lg) {
+            @include row-grid(var(--offset-l));
         }
 
         @media(min-width: 1025px) {
@@ -49,11 +53,15 @@
 
         @media(max-width: $md) {
             flex-direction: column;
-            //align-items: center;
+            align-items: center;
 
             .icons-item {
                 &__icon {
                     margin-bottom: var(--offset-m);
+
+                    @media(max-width: $md) {
+                        margin-right: 0;
+                    }
                 }
 
                 &__content {

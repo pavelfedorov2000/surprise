@@ -4,107 +4,94 @@
 })
 <!-- @@include("blocks/head/no-js.html") -->
 <div class="wrapper">
-    @@include("blocks/header/header.html")
-    <div class="overlay overlay--menu">
-        @@include('blocks/menu/menu.html')
-    </div>
-    <main class="page">
-        @@include("blocks/promo-banner/promo-banner.html")
-        <section class="section">
-            <div class="container">
-                <div class="color-card-block color-card-block--items_3">
-                    <div class="color-card color-card--style_bg-pink">
-                        <div class="color-card__img">
-                            <picture>
-                                <source type="image/webp"
-                                        srcset="assets/images/icons/wallet.webp">
-                                <img class="img-contain"
-                                     src="assets/images/icons/wallet.png"
-                                     alt=""
-                                     width="122"
-                                     height="125"
-                                     loading="lazy">
-                            </picture>
-                        </div>
-                        <div class="color-card__content">
-                            <div class="color-card__title">Нет наценок</div>
-                            <p class="color-card__text">
-                                Платите только за подарок - наши цены не отличаются
-                                от цен партнеров
-                            </p>
-                        </div>
-                    </div>
-                    <div class="color-card color-card--style_bg-yellow">
-                        <div class="color-card__img">
-                            <picture class="color-card__img">
-                                <source type="image/webp"
-                                        srcset="assets/images/icons/sms.webp">
-                                <img class="img-contain"
-                                     src="assets/images/icons/sms.png"
-                                     alt=""
-                                     width="122"
-                                     height="125"
-                                     loading="lazy">
-                            </picture>
-                        </div>
-                        <div class="color-card__content">
-                            <div class="color-card__title">СМС напоминание</div>
-                            <p class="color-card__text">
-                                Если забудете использовать, напомним покупателю
-                                о сертификате за месяц
-                                до окончания срока действия
-                            </p>
-                        </div>
-                    </div>
-                    <div class="color-card color-card--style_bg-green">
-                        <div class="color-card__img">
-                            <picture class="color-card__img">
-                                <source type="image/webp"
-                                        srcset="assets/images/icons/mission.webp">
-                                <img class="img-contain"
-                                     src="assets/images/icons/mission.png"
-                                     alt=""
-                                     width="122"
-                                     height="125"
-                                     loading="lazy">
-                            </picture>
-                        </div>
-                        <div class="color-card__content">
-                            <div class="color-card__title">Бесплатная замена</div>
-                            <p class="color-card__text">
-                                Бесплатно и без вопросов заменим впечатление
-                                на другое в рамках номинала сертификата
-                            </p>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>
-        @@include('blocks/ordered-tape-section/ordered-tape-section.html', {
-        "title": "Лучший подарок на празднике - ваш!"
-        })
-        @@include('blocks/favorite-categories/favorite-categories.html')
-        <section class="section">
-            <div class="container">
-                <div class="section__top">
-                    <h2 class="section-title">Новинки</h2>
-                </div>
-                @@include('blocks/catalog-grid/catalog-grid.html')
-                <div class="load-more">
-                    <a href="#"
-                       class="btn btn--style_link">
-                        Посмотреть еще
-                    </a>
-                </div>
-            </div>
-        </section>
-        @@include('blocks/need-help/need-help.html')
-        @@include('blocks/reviews-section/reviews-section.html')
-        @@include('blocks/blog-section/blog-section.html')
-        @@include('blocks/certificates-section/certificates-section.html')
-    </main>
-    @@include("blocks/footer/footer.html")
-    <!-- @@include("blocks/popups/popups.html") -->
+	@@include("blocks/header/header.html")
+	<div class="overlay overlay--menu">
+		@@include('blocks/menu/menu.html')
+	</div>
+	<main class="page">
+		@@include("blocks/promo-banner/promo-banner.html")
+		<section class="section">
+			<div class="container">
+				<div class="color-card-block color-card-block--items_3">
+					<div class="color-card color-card--style_bg-pink">
+						<div class="color-card__img">
+							<picture>
+								<source type="image/webp" srcset="assets/images/icons/wallet.webp">
+								<img class="img-contain" src="assets/images/icons/wallet.png" alt="" width="122"
+									height="125" loading="lazy">
+							</picture>
+						</div>
+						<div class="color-card__content">
+							<div class="color-card__title">Нет наценок</div>
+							<p class="color-card__text">
+								Платите только за подарок - наши цены не отличаются
+								от цен партнеров
+							</p>
+						</div>
+					</div>
+					<div class="color-card color-card--style_bg-yellow">
+						<div class="color-card__img">
+							<picture class="color-card__img">
+								<source type="image/webp" srcset="assets/images/icons/sms.webp">
+								<img class="img-contain" src="assets/images/icons/sms.png" alt="" width="122"
+									height="125" loading="lazy">
+							</picture>
+						</div>
+						<div class="color-card__content">
+							<div class="color-card__title">СМС напоминание</div>
+							<p class="color-card__text">
+								Если забудете использовать, напомним покупателю
+								о сертификате за месяц
+								до окончания срока действия
+							</p>
+						</div>
+					</div>
+					<div class="color-card color-card--style_bg-green">
+						<div class="color-card__img">
+							<picture class="color-card__img">
+								<source type="image/webp" srcset="assets/images/icons/mission.webp">
+								<img class="img-contain" src="assets/images/icons/mission.png" alt="" width="122"
+									height="125" loading="lazy">
+							</picture>
+						</div>
+						<div class="color-card__content">
+							<div class="color-card__title">Бесплатная замена</div>
+							<p class="color-card__text">
+								Бесплатно и без вопросов заменим впечатление
+								на другое в рамках номинала сертификата
+							</p>
+						</div>
+					</div>
+				</div>
+			</div>
+		</section>
+		@@include('blocks/ordered-tape-section/ordered-tape-section.html', {
+		"title": "Лучший подарок на празднике - ваш!"
+		})
+		@@include('blocks/favorite-categories/favorite-categories.html')
+		<section class="section">
+			<div class="container">
+				<div class="section__top">
+					<h2 class="section-title">Новинки</h2>
+				</div>
+				@@include('blocks/catalog-grid/catalog-grid.html')
+				<div class="load-more">
+					<a href="#" class="btn btn--style_link">
+						Посмотреть еще
+					</a>
+				</div>
+			</div>
+		</section>
+		@@include('blocks/aside-section/aside-section.html', {
+		"title": "Нужна помощь в подборе подарка?",
+		"btn": "Написать"
+		})
+		@@include('blocks/reviews-section/reviews-section.html')
+		@@include('blocks/blog-section/blog-section.html')
+		@@include('blocks/certificates-section/certificates-section.html')
+	</main>
+	@@include("blocks/footer/footer.html")
+	<!-- @@include("blocks/popups/popups.html") -->
 </div>
 @@include("blocks/link/link.html")
 </body>

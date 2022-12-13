@@ -9,10 +9,30 @@
 	// .admin__img
 
 	&__img {
+		position: relative;
 		flex-shrink: 0;
 		margin-right: var(--offset-xl);
 		width: 160px;
 		height: 160px;
+
+		&::before {
+			content: '';
+			position: absolute;
+			bottom: 15px;
+			right: 10px;
+			width: 45px;
+			height: 33px;
+			background-image: url(../images/decor/admin-decor.svg);
+			background-size: contain;
+			background-repeat: no-repeat;
+
+			@media(max-width: $md) {
+				bottom: 5px;
+				right: 10px;
+				width: 30px;
+				height: 21px;
+			}
+		}
 
 		@media(max-width: $md) {
 			width: 105px;
