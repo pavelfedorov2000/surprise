@@ -1,0 +1,31 @@
+.generate-partners {
+    @media(min-width: 1201px) {
+        padding-top: var(--offset-s);
+    }
+
+    &__inner {
+        @media(min-width: 1201px) {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+
+        @media(max-width: $xl) {
+            @include row-grid(var(--offset-xxxl));
+            justify-items: center;
+        }
+    }
+
+    &__content {
+        @media(min-width: 1201px) {
+            padding-left: var(--offset-xs);
+            flex: 0 0 700px;
+        }
+    }
+
+    &__title {
+        @media(max-width: $md) {
+            margin-bottom: var(--offset-s);
+        }
+    }
+}

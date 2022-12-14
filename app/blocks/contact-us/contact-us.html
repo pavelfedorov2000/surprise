@@ -1,31 +1,42 @@
 <section class="contact-us">
-	<div class="container">
-		<div class="contact-us__inner">
-			<div class="contact-us__content">
-				<div>
-					<div class="section-title contact-us__title">Анастасия Бакшевич</div>
-					<p>Специалист по работе с ключевыми клиентами</p>
-				</div>
-				@@include('blocks/admin/admin.html')
-			</div>
-			<div class="contact-us__form card">
-				<h2 class="section-title contact-us__form-title">Оставить заявку </h2>
-				<form class="form">
-					<label class="form__field">
-						<span class="form-label">Ваше имя *</span>
-						<input class="input" name="name" placeholder="Ваше имя">
-					</label>
-					<label class="form__field">
-						<span class="form-label">Ваша почта *</span>
-						<input class="input" name="email" type="email" placeholder="example@mail.com">
-					</label>
-					<label class="form__field">
-						<span class="form-label">Сообщение</span>
-						<input class="input" name="email" type="email" placeholder="Placeholder">
-					</label>
-					<button class="btn" type="submit">Отправить</button>
-				</form>
-			</div>
-		</div>
-	</div>
+    <div class="container">
+        <div class="contact-us__inner">
+            <div class="contact-us__content">
+                <div>
+                    <div class="section-title contact-us__title">Анастасия Бакшевич</div>
+                    <p>Специалист по работе с ключевыми клиентами</p>
+                </div>
+                @@include('blocks/admin/admin.html', {
+                "telegram": "t.me/Surprise_corp"
+                })
+            </div>
+            <div class="contact-us__form card">
+                <h2 class="section-title contact-us__form-title">Оставить заявку </h2>
+                <form class="form">
+                    <label class="form__field">
+                        <span class="form-label">Ваше имя *</span>
+                        <input class="input"
+                               name="name"
+                               placeholder="Ваше имя">
+                    </label>
+                    <label class="form__field">
+                        <span class="form-label">Ваша почта *</span>
+                        <input class="input"
+                               name="email"
+                               type="email"
+                               placeholder="example@mail.com">
+                    </label>
+                    <label class="form__field">
+                        <span class="form-label">Сообщение</span>
+                        <input class="input"
+                               name="email"
+                               type="email"
+                               placeholder="Placeholder">
+                    </label>
+                    <button class="btn"
+                            type="submit">Отправить</button>
+                </form>
+            </div>
+        </div>
+    </div>
 </section>

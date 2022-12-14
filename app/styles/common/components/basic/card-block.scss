@@ -1,0 +1,34 @@
+.card-block {
+    display: flex;
+    flex-wrap: wrap;
+    margin-bottom: calc(var(--offset-l) * (-1));
+
+    > * {
+        margin-bottom: var(--offset-l);
+    }
+
+    &--margin-bottom {
+        &_m {
+            > * {
+                @media(max-width: $md) {
+                    margin-bottom: var(--offset-m);
+                }
+            }
+        }
+    }
+
+    &--items {
+        &_2 {
+            @media(min-width: 768px) {
+                margin-left: calc(var(--offset-l) * (-1));
+            }
+
+            > * {
+                @media(min-width: 768px) {
+                    width: calc(50% - var(--offset-l));
+                    margin-left: var(--offset-l);
+                }
+            }
+        }
+    }
+}

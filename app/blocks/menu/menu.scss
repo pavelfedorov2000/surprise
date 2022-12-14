@@ -174,26 +174,3 @@
         }
     }
 }
-
-.icons-list {
-    @include row-grid(var(--offset-l));
-
-    @media(max-width: $md) {
-        @include row-grid(var(--offset-m));
-    }
-
-    &--style {
-        &_grid {
-            display: grid;
-            gap: var(--offset-m) var(--offset-xl);
-
-            @media(max-width: $sm) {
-                gap: var(--offset-s);
-            }
-
-            @media(min-width: 768px) {
-                grid-template-columns: repeat(2, 1fr);
-            }
-        }
-    }
-}

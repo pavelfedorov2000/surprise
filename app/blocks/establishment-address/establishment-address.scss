@@ -1,71 +1,74 @@
 .establishemnt-address {
-	@media(min-width: 1025px) {
-		background-image: url(../images/decor/contacts-bg.svg);
-		background-size: cover;
-		background-position: center;
-		background-repeat: no-repeat;
-	}
+    @media(min-width: 1025px) {
+        background-image: url(../images/decor/contacts-bg.svg);
+        background-size: cover;
+        background-position: center;
+        background-repeat: no-repeat;
+    }
 
-	@media(max-width: $lg) {
-		padding-bottom: 0;
-	}
+    @media(max-width: $lg) {
+        padding-bottom: 0;
+    }
 
-	// .establishemnt-address__inner
+    // .establishemnt-address__inner
 
-	&__inner {
-		display: grid;
-		grid-template-columns: 500px 1fr;
-		gap: var(--offset-xxxl);
+    &__inner {
+        display: grid;
+        grid-template-columns: 500px 1fr;
+        gap: var(--offset-xxxl);
 
-		@media(max-width: $lg) {
-			grid-template-columns: var(--container-padding) 1fr var(--container-padding);
-			gap: var(--offset-l) 0;
-		}
-	}
+        @media(max-width: $lg) {
+            grid-template-columns: var(--container-padding) 1fr var(--container-padding);
+            gap: var(--offset-l) 0;
+        }
+    }
 
-	// .establishemnt-address__content
+    // .establishemnt-address__content
 
-	&__content {
-		@include row-grid(var(--offset-l));
-		justify-items: start;
-		align-content: start;
+    &__content {
+        @include row-grid(var(--offset-l));
+        justify-items: start;
+        align-content: start;
 
-		@media(max-width: $lg) {
-			grid-column: 2 / 3;
-		}
-	}
+        @media(max-width: $lg) {
+            grid-column: 2 / 3;
+        }
+    }
 
-	// .establishemnt-address__items
+    // .establishemnt-address__items
 
-	&__items {
-		@include row-grid(var(--offset-m));
-	}
+    &__items {
+        @include row-grid(var(--offset-m));
+    }
 
-	// .establishemnt-address__map
+    // .establishemnt-address__map
 
-	&__map {
-		position: relative;
-		padding-bottom: 54.795%;
+    &__map {
+        padding-bottom: 54.795%;
 
-		@media(max-width: $md) {
-			padding-bottom: 79.467%;
-		}
+        @media(max-width: $lg) {
+            grid-column: 1 / -1;
+        }
+    }
+}
 
-		@media(max-width: $lg) {
-			grid-column: 1 / -1;
-		}
+.map {
+    position: relative;
 
-		>* {
-			position: absolute;
-			top: 0;
-			left: 0;
-			width: 100%;
-			height: 100%;
-			object-fit: cover;
+    @media(max-width: $md) {
+        padding-bottom: 79.467%;
+    }
 
-			@media(min-width: 1025px) {
-				border-radius: 15px;
-			}
-		}
-	}
+    > * {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+
+        @media(min-width: 1025px) {
+            border-radius: 15px;
+        }
+    }
 }

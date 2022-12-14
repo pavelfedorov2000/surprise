@@ -1,29 +1,42 @@
 <div class="admin">
-	<div class="admin__img">
-		<picture>
-			<source type="image/webp" srcset="assets/images/content/admin.webp">
-			<img class="img-cover" src="assets/images/content/admin.png" alt="фото" width="160" height="160"
-				loading="lazy">
-		</picture>
-	</div>
-	<div class="admin__contacts">
-		<a class="contact" href="tel:+375296670062">
-			<svg class="icon contact__icon">
-				<use xlink:href="assets/images/sprite.svg#phone"></use>
-			</svg>
-			+375 29 667 00 62
-		</a>
-		<a class="contact" href="mailto:info@surprise.by">
-			<svg class="icon contact__icon">
-				<use xlink:href="assets/images/sprite.svg#email"></use>
-			</svg>
-			info@surprise.by
-		</a>
-		<a class="contact" href="#">
-			<svg class="icon contact__icon">
-				<use xlink:href="assets/images/sprite.svg#email"></use>
-			</svg>
-			t.me/Surprise_corp
-		</a>
-	</div>
+    <div class="admin__img">
+        <picture>
+            <source type="image/webp"
+                    srcset="assets/images/content/admin.webp">
+            <img class="img-cover"
+                 src="assets/images/content/admin.png"
+                 alt="фото"
+                 width="160"
+                 height="160"
+                 loading="lazy">
+        </picture>
+    </div>
+    <div class="admin__content">
+        @@if(context.name){
+        <div class="admin__name">@@name</div>
+        }
+        <a class="contact"
+           href="tel:+375296670062">
+            <svg class="icon contact__icon">
+                <use xlink:href="assets/images/sprite.svg#phone"></use>
+            </svg>
+            +375 29 667 00 62
+        </a>
+        <a class="contact"
+           href="mailto:info@surprise.by">
+            <svg class="icon contact__icon">
+                <use xlink:href="assets/images/sprite.svg#email"></use>
+            </svg>
+            info@surprise.by
+        </a>
+        @@if(context.telegram){
+        <a class="contact"
+           href="#">
+            <svg class="icon contact__icon">
+                <use xlink:href="assets/images/sprite.svg#email"></use>
+            </svg>
+            @@telegram
+        </a>
+        }
+    </div>
 </div>

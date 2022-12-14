@@ -1,0 +1,45 @@
+.card {
+    background-color: #fff;
+    border-radius: $brs-card-xl;
+    box-shadow: $bsh;
+    border-radius: $brs-card-xl;
+    padding: var(--offset-xl) var(--offset-l);
+
+    @media(max-width: $sm) {
+        padding: var(--offset-l) var(--offset-m);
+    }
+
+    &:not(.form) {
+        > * {
+            &:not(:last-child) {
+                margin-bottom: var(--offset-m);
+            }
+        }
+    }
+
+    &__icon {
+        width: var(--offset-xxxl);
+        height: var(--offset-xxl);
+        object-fit: contain;
+    }
+
+    &__title {
+        font-size: 24px;
+
+        &:not(:last-child) {
+            margin-bottom: var(--offset-s);
+        }
+    }
+
+    &--style {
+        &_bg {
+            &-green {
+                background-color: var(--green-light);
+            }
+
+            &-pink {
+                background: var(--pink-gradient);
+            }
+        }
+    }
+}

@@ -1,18 +1,3 @@
-// Only arrow styling
-.default-select {
-    @extend %museo-500;
-    font-size: 16px;
-    line-height: 1.5;
-    -webkit-appearance: none;
-    -moz-appearance: none;
-    background-image: url(../images/icons/drop-arrow.svg);
-    background-size: var(--offset-m);
-    background-position: 100% 50%;
-    background-repeat: no-repeat;
-    padding-right: var(--offset-l);
-    color: var(--text-color);
-}
-
 // Custom select
 .select {
     $this: &;

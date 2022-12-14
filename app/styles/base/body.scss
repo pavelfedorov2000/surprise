@@ -55,6 +55,10 @@ p {
     font-weight: 300;
     color: var(--text-color);
 
+    .menu-link {
+        @extend %museo-500;
+    }
+
     &.default-color {
         color: $color-default;
     }
