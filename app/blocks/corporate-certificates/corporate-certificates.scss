@@ -1,76 +1,81 @@
 .corporate-certificates {
 
-    // .corporate-certificates__inner
+	// .corporate-certificates__inner
 
-    &__inner {
-        padding-bottom: var(--offset-xl);
+	&__inner {
+		padding-bottom: var(--offset-xl);
 
-        @media(max-width: $md) {
-            padding-bottom: var(--offset-xls);
-        }
+		@media(max-width: $md) {
+			padding-bottom: var(--offset-xls);
+		}
 
-        @media(max-width: $lg) {
-            @include row-grid(var(--offset-l));
-        }
+		@media(max-width: $lg) {
+			@include row-grid(var(--offset-l));
+		}
 
-        @media(min-width: 1025px) {
-            display: flex;
-            align-items: center;
-            justify-content: space-between;
-        }
-    }
+		@media(min-width: 1025px) {
+			display: flex;
+			align-items: center;
+			justify-content: space-between;
+		}
+	}
 
-    // .corporate-certificates__text
+	&__img {
+		@media(min-width: 1025px) {
+			flex: 0 0 609px;
+		}
+	}
 
-    &__text {
-        @media(min-width: 1025px) {
-            max-width: 827px;
-            padding-right: 75px;
-        }
-    }
+	// .corporate-certificates__text
 
-    // .corporate-certificates__row
+	&__text {
+		@media(min-width: 1025px) {
+			padding-right: 75px;
+		}
+	}
 
-    &__row {
-        display: flex;
-        flex-wrap: wrap;
-        margin: -20px -35px;
-    }
+	// .corporate-certificates__row
 
-    // .corporate-certificates__col
+	&__row {
+		display: flex;
+		flex-wrap: wrap;
+		margin: -20px -35px;
+	}
 
-    &__col {
-        @include row-grid(var(--offset-xl));
-        padding: 20px 35px;
+	// .corporate-certificates__col
 
-        @media(min-width: 768px) {
-            width: 50%;
-        }
-    }
+	&__col {
+		@include row-grid(var(--offset-xl));
+		padding: 20px 35px;
 
-    &__item {
-        //align-items: flex-start;
+		@media(min-width: 768px) {
+			width: 50%;
+		}
+	}
 
-        @media(max-width: $md) {
-            flex-direction: column;
-            align-items: center;
+	&__item {
+		//align-items: flex-start;
 
-            .icons-item {
-                &__icon {
-                    margin-bottom: var(--offset-m);
+		@media(max-width: $md) {
+			flex-direction: column;
+			align-items: center;
 
-                    @media(max-width: $md) {
-                        margin-right: 0;
-                    }
-                }
+			.icons-item {
+				&__icon {
+					margin-bottom: var(--offset-m);
 
-                &__content {
-                    display: flex;
-                    flex-direction: column;
-                    align-items: center;
-                    text-align: center;
-                }
-            }
-        }
-    }
+					@media(max-width: $md) {
+						margin-right: 0;
+					}
+				}
+
+				&__content {
+					display: flex;
+					flex-direction: column;
+					align-items: center;
+					text-align: center;
+				}
+			}
+		}
+	}
 }

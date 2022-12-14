@@ -117,7 +117,7 @@
 
 		@media(max-width: $sm) {
 			font-size: 20px;
-			margin-bottom: var(--offset-xxxs);
+			margin-bottom: var(--offset-xxs);
 		}
 	}
 
@@ -146,16 +146,16 @@
 			align-items: flex-end;
 			justify-content: space-between;
 		}
+
+		@media(max-width: $sm) {
+			@include row-grid(var(--offset-m));
+		}
 	}
 
 	// .catalog-card__rating
 
 	&__rating {
 		align-items: flex-start;
-
-		@media(max-width: $md) {
-			margin-bottom: var(--offset-xxxs);
-		}
 
 		>* {
 			margin-right: var(--offset-s);

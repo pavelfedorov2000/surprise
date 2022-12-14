@@ -3,6 +3,12 @@
 	max-width: 100%;
 	@include padding-x(var(--container-padding));
 	margin: 0 auto;
+
+	&--without-padding {
+		@media(max-width: $lg) {
+			@include padding-x(0);
+		}
+	}
 }
 
 .wrapper {
@@ -279,7 +285,7 @@
 }
 
 .row {
-	@include grid-auto-fit(350px, var(--offset-xxl));
+	@include grid-auto-fit(350px, var(--offset-xxxl));
 
 	@media(max-width: $xl) {
 		gap: var(--offset-l);
@@ -307,10 +313,14 @@
 				gap: var(--offset-xls);
 			}
 		}
+	}
 
-		&_m {
-			@media(max-width: $sm) {
-				gap: var(--offset-m);
+	&--row-gap {
+		&_xl {
+			row-gap: var(--offset-xl);
+
+			@media(max-width: $md) {
+				row-gap: var(--offset-m);
 			}
 		}
 	}

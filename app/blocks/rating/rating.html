@@ -1,41 +1,26 @@
-<div class="rating@@if(context.class){ @@class__rating}@@if(context.reverse){ rating--reverse}@@if(context.mobHidden){ mob-hidden}">
-    @@if(context.title) {
-    <div class="rating__title">Рейтинг: <span class="rating__num">@@title</span>
-    </div>
-    }
-    @@if(context.text) {
-    <p class="rating__text">@@text</p>
-    }
-    <div class="rating__body">
-        <div class="rating__active"></div>
-        <div class="rating__stars">
-            <input class="rating__star"
-                   type="radio"
-                   name="rating"
-                   value="1">
-            <input class="rating__star"
-                   type="radio"
-                   name="rating"
-                   value="2">
-            <input class="rating__star"
-                   type="radio"
-                   name="rating"
-                   value="3">
-            <input class="rating__star"
-                   type="radio"
-                   name="rating"
-                   value="4">
-            <input class="rating__star"
-                   type="radio"
-                   name="rating"
-                   value="5">
-        </div>
-    </div>
-    @@if(context.link) {
-    <a href="#"
-       class="menu-link menu-link--underlined">@@link</a>
-    }
-    @@if(context.num) {
-    <b class="rating__num">@@num</b>
-    }
+<div
+	class="rating@@if(context.class){ @@class__rating}@@if(context.reverse){ rating--reverse}@@if(context.mobHidden){ mob-hidden}">
+	@@if(context.title) {
+	<div class="rating__title">Рейтинг: <span class="rating__num">@@title</span>
+	</div>
+	}
+	@@if(context.text) {
+	<p class="rating__text">@@text</p>
+	}
+	<div class="rating__body">
+		<div class="rating__active"></div>
+		<div class="rating__stars">
+			<input class="rating__star" type="radio" name="rating" value="1">
+			<input class="rating__star" type="radio" name="rating" value="2">
+			<input class="rating__star" type="radio" name="rating" value="3">
+			<input class="rating__star" type="radio" name="rating" value="4">
+			<input class="rating__star" type="radio" name="rating" value="5">
+		</div>
+	</div>
+	@@if(context.link) {
+	<a href="#" class="menu-link menu-link--underlined">@@link</a>
+	}
+	@@if(context.num) {
+	<b class="rating__num@@if(context.numHidden){ hidden}">@@num</b>
+	}
 </div>

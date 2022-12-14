@@ -17,18 +17,24 @@
 .contact {
 	@extend %museo-300;
 	display: inline-flex;
-	align-items: center;
+	align-items: flex-start;
 	transition: $transition color;
 
-	&__icon {
+	.icon {
 		margin-right: var(--offset-xs);
 	}
 
-	&:not(.contact--time) {
-		@media (any-hover: hover) {
-			&:hover {
-				color: var(--pink);
-			}
+	&--icon-mr_20 {
+		.icon {
+			margin-right: 20px;
+		}
+	}
+}
+
+a.contact {
+	@media (any-hover: hover) {
+		&:hover {
+			color: var(--pink);
 		}
 	}
 }
