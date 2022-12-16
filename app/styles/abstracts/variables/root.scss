@@ -1,64 +1,65 @@
 $container: 1440;
 
 :root {
-	--pink: #F395A9;
-	--pink-hover: #E6859A;
-	--pink-pressed: #EDA2B2;
-	--pink-light: #F6DFE3;
-	--pink-disabled: #F6DFE3;
-	--pink-gradient: linear-gradient(90deg, #FCF6F6 0%, #FFF3F4 100%);
-	--yellow: #EEF651;
-	--yellow-hover: #E4ED36;
-	--yellow-pressed: #F0F592;
-	--yellow-light: #FDFFC7;
-	--yellow-gradient: linear-gradient(90deg, #FDFBF6 0%, #F9F4E6 100%), #FFF;
-	--green: #258884;
-	--green-hover: #1F6F6C;
-	--green-pressed: #369A96;
-	--green-disabled: #D7EDEC;
-	--green-gradient: linear-gradient(90deg, #F2FBFB 0%, #E8F7F7 100%), linear-gradient(90deg, #FDFBF6 0%, #F9F4E6 100%), #FFF;
-	--blue: #D7EDEC;
-	//#D7EDEC
-	--green-light: #F5F8F8;
-	--black: #1E1E1E;
-	--text-color: #535353;
-	--text-color-light: #656565;
-	--gray: #F6F6F6;
-	--light-gray: #d7dded;
-	--red: #e73656;
-	--line-color: #BDBDBD;
-	--light-blue: #ecf1ff;
-	--white-70: rgba(255, 255, 255, 0.7);
+    --pink: #F395A9;
+    --pink-hover: #E6859A;
+    --pink-pressed: #EDA2B2;
+    --pink-light: #F6DFE3;
+    --pink-disabled: #F6DFE3;
+    --pink-gradient: linear-gradient(90deg, #FCF6F6 0%, #FFF3F4 100%);
+    --yellow: #EEF651;
+    --yellow-hover: #E4ED36;
+    --yellow-pressed: #F0F592;
+    --yellow-light: #FDFFC7;
+    --yellow-gradient: linear-gradient(90deg, #FDFBF6 0%, #F9F4E6 100%), #FFF;
+    --green: #258884;
+    --green-hover: #1F6F6C;
+    --green-pressed: #369A96;
+    --green-disabled: #D7EDEC;
+    --green-gradient: linear-gradient(90deg, #F2FBFB 0%, #E8F7F7 100%), linear-gradient(90deg, #FDFBF6 0%, #F9F4E6 100%), #FFF;
+    --blue: #D7EDEC;
+    //#D7EDEC
+    --green-light: #F5F8F8;
+    --black: #1E1E1E;
+    --text-color: #535353;
+    --text-color-light: #656565;
+    --gray: #F6F6F6;
+    --light-gray: #d7dded;
+    --red: #e73656;
+    --attention: rgba(255, 40, 40, 0.1);
+    --line-color: #BDBDBD;
+    --light-blue: #ecf1ff;
+    --white-70: rgba(255, 255, 255, 0.7);
 
-	--container-width: #{$container}px;
-	--container-padding: 40px;
-	--header-height: 140px;
-	--header-height-mob: 59px;
-	--section-padding-xs: 80px;
-	--section-padding: 100px;
-	--section-padding-xl: 120px;
-	--section-padding-xxl: 140px;
+    --container-width: #{$container}px;
+    --container-padding: 40px;
+    --header-height: 140px;
+    --header-height-mob: 59px;
+    --section-padding-xs: 80px;
+    --section-padding: 100px;
+    --section-padding-xl: 120px;
+    --section-padding-xxl: 140px;
 
-	--page-decor-w: 1026px;
-	--page-decor-h: 707px;
+    --page-decor-w: 1026px;
+    --page-decor-h: 707px;
 
-	// offsets (gaps)
-	--offset-xxxl: 64px;
-	--offset-xxls: 60px;
-	--offset-xxl: 56px;
-	--offset-xls: 48px;
-	--offset-xl: 40px;
-	--offset-ls: 36px;
-	--offset-l: 32px;
-	--offset-m: 24px;
-	--offset-s: 16px;
-	--offset-xs: 12px;
-	--offset-xxs: 8px;
-	--offset-xxxs: 4px;
+    // offsets (gaps)
+    --offset-xxxl: 64px;
+    --offset-xxls: 60px;
+    --offset-xxl: 56px;
+    --offset-xls: 48px;
+    --offset-xl: 40px;
+    --offset-ls: 36px;
+    --offset-l: 32px;
+    --offset-m: 24px;
+    --offset-s: 16px;
+    --offset-xs: 12px;
+    --offset-xxs: 8px;
+    --offset-xxxs: 4px;
 
-	--icon-size: 24px;
+    --icon-size: 24px;
 
-	@media(max-width: $xl) {
-		--container-padding: 16px;
-	}
+    @media(max-width: $xl) {
+        --container-padding: 16px;
+    }
 }

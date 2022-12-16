@@ -1,0 +1,44 @@
+.counter {
+    display: grid;
+    grid-template-columns: repeat(3, var(--offset-xxl));
+    grid-template-rows: var(--offset-xxl);
+
+    @media(max-width: $md) {
+        grid-template-rows: var(--offset-xls);
+    }
+
+    // .counter__btn
+
+    &__btn {
+        @include grid-center;
+        transition: $transition background-color;
+
+        @media (any-hover: hover) {
+            &:hover {
+                background-color: var(--gray);
+            }
+        }
+
+        &--minus {
+            border-radius: $brs 0 0 $brs;
+            border: 1px solid var(--line-color);
+            border-right: none;
+        }
+
+        &--plus {
+            border-radius: 0 $brs $brs 0;
+            border: 1px solid var(--line-color);
+            border-left: none;
+        }
+    }
+
+    // .counter__input
+
+    &__input {
+        border: 1px solid var(--line-color);
+        font-family: $ff;
+        font-size: #{$fz}px;
+        color: $color-default;
+        text-align: center;
+    }
+}

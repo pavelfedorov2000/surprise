@@ -1,0 +1,15 @@
+.notify-box {
+    display: flex;
+    padding: var(--offset-s) var(--offset-m);
+    border-radius: $brs;
+    background-color: var(--attention);
+    // .notify-box__icon
+
+    &__icon {
+        margin-right: 18px;
+    }
+
+    &__text {
+        @extend %museo-500;
+    }
+}

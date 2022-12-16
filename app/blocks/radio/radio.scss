@@ -3,7 +3,7 @@
 
     cursor: pointer;
     display: flex;
-    align-items: center;
+    //align-items: center;
 
     &-input {
         width: 1px;
@@ -34,6 +34,22 @@
                         &__value {
                             @extend %museo-700;
                             color: var(--green);
+                        }
+                    }
+                }
+
+                &__inner {
+                    #{$this} {
+                        &-text {
+                            color: var(--green);
+                        }
+
+                        &-title {
+                            color: var(--green);
+
+                            & + #{$this}-text {
+                                color: var(--text-color-light);
+                            }
                         }
                     }
                 }
@@ -71,6 +87,10 @@
         }
 
         &--mr {
+            &_xs {
+                margin-right: var(--offset-xs);
+            }
+
             &_xxs {
                 margin-right: var(--offset-xxs);
             }
@@ -104,6 +124,16 @@
         }
     }
 
+    &-title {
+        font-size: 18px;
+        color: var(--text-color);
+
+        & + #{$this}-text {
+            margin-top: calc(var(--offset-xxxs) * (-1));
+            margin-bottom: var(--offset-xs);
+        }
+    }
+
     &-text {
         display: inline-flex;
         align-items: center;
@@ -113,6 +143,11 @@
             $transition background-color;
 
         @media (max-width: $md) {
+            font-size: 16px;
+        }
+
+        &--light {
+            @extend %museo-300;
             font-size: 16px;
         }
     }
@@ -131,6 +166,27 @@
         display: flex;
         align-items: center;
         transition: $transition box-shadow;
+    }
+
+    &__inner {
+        @include row-grid(var(--offset-xxs));
+        flex-grow: 1;
+
+        #{$this} {
+            &-title {
+                & + #{$this}-text {
+                    color: var(--text-color-light);
+                }
+            }
+        }
+    }
+
+    &__field {
+        width: 100%;
+    }
+
+    &__dropdown {
+        @include row-grid(var(--offset-xxs));
     }
 
     &--style {

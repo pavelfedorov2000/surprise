@@ -52,4 +52,8 @@
 }, {
     "href": "become-partner.html",
     "title": "Стать партнером"
+}, {
+    "href": "cart.html",
+    "new": true,
+    "title": "Корзина"
 }]

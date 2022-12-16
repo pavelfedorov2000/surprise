@@ -5,6 +5,7 @@ $(document).ready(function () {
     app.catalogFilters.init();
     app.asideChoose.init();
     app.starRating.init();
+    app.cart.init();
 
     $(document).on('click', '.more-text-btn', function () {
         const $moreTextBtn = $(this);

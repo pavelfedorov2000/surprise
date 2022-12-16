@@ -1,0 +1,18 @@
+<form action="#"
+      class="cart">
+    <div class="cart__body">
+        <div class="cart__body-inner">
+            @@include('blocks/notify-box/notify-box.html', {
+            "text": "Одновременно не может быть оформлен электронный сертификат и сертификат в коробке."
+            })
+            @@include('blocks/cart-item/cart-item.html')
+            <!-- @@include('blocks/cart-item/cart-item.html') -->
+        </div>
+        <div class="cart__sections">
+            @@include('blocks/cart/sections/buyer-data.html')
+            @@include('blocks/cart/sections/delivery.html')
+            @@include('blocks/cart/sections/payment.html')
+        </div>
+    </div>
+    @@include('blocks/cart-aside/cart-aside.html')
+</form>

@@ -1,0 +1,72 @@
+<fieldset class="cart__section cart-section cart__section--span-2">
+    <legend class="section-title cart-section__title">Данные покупателя</legend>
+    <div class="cart-section__fields">
+        <label class="cart-section__field">
+            <span class="form-label">Ваше имя *</span>
+            <input class="input"
+                   type="text"
+                   placeholder="Ваше имя">
+        </label>
+        <label class="cart-section__field">
+            <span class="form-label">Ваш номер телефона *</span>
+            <input class="input"
+                   type="tel"
+                   placeholder="+ 375 ()">
+        </label>
+        <div class="cart-section__field cart-section__field--span-2">
+            <span class="form-label">Выберите вариант для отправки письма, подтверждающего статус вашего заказа:</span>
+            <div class="cart-section__radios">
+                <label class="radio">
+                    <input class="radio-input js-radio-toggle"
+                           type="radio"
+                           name="BUYER_CONTACT"
+                           checked>
+                    <span class="radio-style radio-style--mr_xs"></span>
+                    <span class="radio__inner">
+                        <span class="radio-text radio-text--light">Viber</span>
+                        <span class="radio__dropdown">
+                            <input class="input radio__field"
+                                   type="tel"
+                                   placeholder="+ 375 ()">
+                        </span>
+                    </span>
+                </label>
+                <label class="radio">
+                    <input class="radio-input js-radio-toggle"
+                           type="radio"
+                           name="BUYER_CONTACT">
+                    <span class="radio-style radio-style--mr_xs"></span>
+                    <span class="radio__inner">
+                        <span class="radio-text radio-text--light">Viber</span>
+                        <span class="radio__dropdown">
+                            <input class="input radio__field"
+                                   type="tel"
+                                   placeholder="+ 375 ()">
+                        </span>
+                    </span>
+                </label>
+                <label class="radio">
+                    <input class="radio-input js-radio-toggle"
+                           type="radio"
+                           name="BUYER_CONTACT">
+                    <span class="radio-style radio-style--mr_xs"></span>
+                    <span class="radio__inner">
+                        <span class="radio-text radio-text--light">E-mail</span>
+                        <span class="radio__dropdown">
+                            <input class="input radio__field"
+                                   type="email"
+                                   placeholder="surprise@mail.ru">
+                        </span>
+                    </span>
+                </label>
+            </div>
+        </div>
+        <label class="cart-section__field cart-section__field--span-2">
+            <span class="form-label">Комментарии к заказу:</span>
+            <div class="textarea">
+                <textarea class="input"
+                          placeholder="Ваш комментарий"></textarea>
+            </div>
+        </label>
+    </div>
+</fieldset>

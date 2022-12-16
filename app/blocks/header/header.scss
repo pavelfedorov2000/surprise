@@ -98,19 +98,6 @@
 
     &__item {
         position: relative;
-        display: inline-flex;
-        align-items: center;
-        justify-content: center;
-        border-radius: 50%;
-        padding: var(--offset-xxxs);
-        font-size: 24px;
-        transition: $transition background-color;
-
-        @media (any-hover: hover) {
-            &:hover {
-                background-color: var(--gray);
-            }
-        }
 
         > span {
             position: absolute;

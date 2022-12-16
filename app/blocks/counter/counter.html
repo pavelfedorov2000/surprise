@@ -1,0 +1,20 @@
+<div class="counter@@if(context.class){ @@class__counter}">
+    <button class="counter__btn js-minus-btn counter__btn--minus"
+            type="button"
+            aria-label="Минус">
+        <svg class="icon">
+            <use xlink:href="assets/images/sprite.svg#minus"></use>
+        </svg>
+    </button>
+    <input type="number"
+           class="counter__input"
+           readonly
+           value="@@value">
+    <button class="counter__btn js-plus-btn counter__btn--plus"
+            type="button"
+            aria-label="Плюс">
+        <svg class="icon">
+            <use xlink:href="assets/images/sprite.svg#plus"></use>
+        </svg>
+    </button>
+</div>

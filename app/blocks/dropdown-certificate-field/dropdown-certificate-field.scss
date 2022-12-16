@@ -1,0 +1,44 @@
+.dropdown-certificate-fields {
+    @include row-grid(var(--offset-l));
+}
+
+.dropdown-certificate-field {
+    > * {
+        &:not(:last-child) {
+            margin-bottom: var(--offset-s);
+        }
+    }
+
+    // .dropdown-certificate-field__title
+
+    &__title {
+        @extend %museo-700;
+        font-size: 20px;
+
+        @media(max-width: $sm) {
+            font-size: 16px;
+        }
+    }
+
+    // .dropdown-certificate-field__items
+
+    &__items {
+        @include row-grid(var(--offset-m));
+    }
+
+    // .dropdown-certificate-field__item
+
+    &__item {
+        @include row-grid(var(--offset-xs));
+    }
+
+    // .dropdown-certificate-field__input
+
+    &__input {
+        max-width: 400px;
+    }
+
+    &__btn {
+        justify-self: start;
+    }
+}

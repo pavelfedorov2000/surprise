@@ -1,56 +1,45 @@
 .aside-choose {
-	@include sticky(var(--offset-xl));
-	padding: var(--offset-xl);
-	background-color: #fff;
-	box-shadow: $bsh;
-	border-radius: $brs-card-xl;
-	@include row-grid(var(--offset-l));
-	// .aside-choose__item
+    @include sticky(var(--offset-xl));
+    padding: var(--offset-xl);
+    background-color: #fff;
+    box-shadow: $bsh;
+    border-radius: $brs-card-xl;
+    @include row-grid(var(--offset-l));
+    // .aside-choose__item
 
-	&__item {
-		&--with {
-			&_mb {
-				margin-bottom: var(--offset-xxs);
-			}
-		}
-	}
+    &__item {
+        &--with {
+            &_mb {
+                margin-bottom: var(--offset-xxs);
+            }
+        }
+    }
 
-	// .aside-choose__item-title
+    // .aside-choose__item-title
 
-	&__item-title {
-		font-size: 20px;
-		margin-bottom: var(--offset-xs);
-	}
+    &__item-title {
+        font-size: 20px;
+        margin-bottom: var(--offset-xs);
+    }
 
-	&__radios {
-		@include row-grid(var(--offset-xs));
-	}
+    &__radios {
+        @include row-grid(var(--offset-xs));
+    }
 
-	// .aside-choose__btn
+    // .aside-choose__btn
 
-	&__btn {
-		line-height: 125%;
-	}
+    &__btn {
+        line-height: 125%;
+    }
 }
 
 .choose-package {
-	&__items {
-		@include row-grid(var(--offset-xs));
-	}
+    &__items {
+        @include row-grid(var(--offset-xs));
+    }
 
-	&__dropdown {
-		padding-top: var(--offset-s);
-		padding-left: var(--offset-l);
-	}
-}
-
-.overall-sum {
-	@extend %museo-700;
-	justify-self: end;
-	font-size: 24px;
-
-	span {
-		color: var(--green);
-		padding-left: var(--offset-xxs);
-	}
+    &__dropdown {
+        padding-top: var(--offset-s);
+        padding-left: var(--offset-l);
+    }
 }
