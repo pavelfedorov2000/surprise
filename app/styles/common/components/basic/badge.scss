@@ -18,5 +18,9 @@
 			height: var(--icon-size);
 			background-image: url(../images/icons/check-done.svg);
 		}
+
+		time {
+			@extend %museo-700;
+		}
 	}
 }

@@ -5,7 +5,7 @@
 	<div class="overlay overlay--menu">
 		@@include('blocks/menu/menu.html')
 	</div>
-	<main class="page page--padding page--with_decor">
+	<main class="page page--padding-bottom_none page--padding-top_xxl page--with_decor">
 		<div class="container">
 			@@include('blocks/success-block/success-block.html', {
 			"title": "Ваш сертификат успешно активирован!"
@@ -14,10 +14,9 @@
 		@@include('blocks/about-certificate/about-certificate.html')
 		<section class="section">
 			<div class="container">
-				<div class="section-top">
+				<div class="section__top">
 					<h2 class="section-title">Фотогалерея</h2>
 				</div>
-				@@include('blocks/about-certificate/about-certificate.html')
 				@@include('blocks/photogallery/photogallery.html')
 			</div>
 		</section>

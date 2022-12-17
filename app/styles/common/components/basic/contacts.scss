@@ -31,6 +31,40 @@
 	}
 }
 
+.contact-block {
+	@include row-grid(var(--offset-m));
+
+	&__title {
+		font-size: 24px;
+
+		@media(max-width: $sm) {
+			font-size: 18px;
+		}
+	}
+
+	&__phones {
+		@include row-grid(var(--offset-xxs));
+		color: var(--text-color);
+		position: relative;
+		padding-left: 44px;
+
+		&::before {
+			content: '';
+			position: absolute;
+			top: 0;
+			left: 0;
+			width: var(--icon-size);
+			height: var(--icon-size);
+			background-image: url(../images/icons/phone.svg);
+		}
+
+		b {
+			@extend %museo-500;
+			padding-right: 2px;
+		}
+	}
+}
+
 a.contact {
 	@media (any-hover: hover) {
 		&:hover {

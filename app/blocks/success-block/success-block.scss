@@ -1,5 +1,4 @@
 .success-block {
-	max-width: 655px;
 	display: flex;
 	flex-direction: column;
 	align-items: center;
@@ -16,16 +15,20 @@
 	// .success-block__title
 
 	&__title {
-		margin-bottom: var(--offset-xs);
+		&:not(:last-child) {
+			margin-bottom: var(--offset-xs);
 
-		@media(max-width: $sm) {
-			margin-bottom: var(--offset-m);
+			@media(max-width: $sm) {
+				margin-bottom: var(--offset-m);
+			}
 		}
 	}
 
 	// .success-block__text
 
 	&__text {
+		max-width: 655px;
+
 		@media(max-width: $sm) {
 			text-align: left;
 		}
