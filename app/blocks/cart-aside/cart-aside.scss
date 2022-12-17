@@ -1,41 +1,44 @@
 .cart-aside {
-    @include sticky(var(--offset-l));
-    @include row-grid(var(--offset-l));
-    padding: var(--offset-xl);
-    background-color: #fff;
-    box-shadow: $bsh;
-    border-radius: $brs-card-xl;
+	@include row-grid(var(--offset-l));
+	padding: var(--offset-xl);
+	background-color: #fff;
+	box-shadow: $bsh;
+	border-radius: $brs-card-xl;
 
-    @media(max-width: $md) {
-        padding: var(--offset-l) var(--offset-m);
-    }
+	@media(min-width: 1201px) {
+		@include sticky(var(--offset-l));
+	}
 
-    // .cart-aside__list
+	@media(max-width: $md) {
+		padding: var(--offset-l) var(--offset-m);
+	}
 
-    &__list {
-        @include row-grid(var(--offset-m));
-    }
+	// .cart-aside__list
 
-    // .cart-aside__item
+	&__list {
+		@include row-grid(var(--offset-m));
+	}
 
-    &__item {
-        display: flex;
-        align-items: center;
-        justify-content: space-between;
-    }
+	// .cart-aside__item
+
+	&__item {
+		display: flex;
+		align-items: center;
+		justify-content: space-between;
+	}
 }
 
 .agreement {
-    a {
-        border-bottom: 1px solid var(--text-color);
-        transition: $transition border-bottom-color,
-            $transition color;
+	a {
+		border-bottom: 1px solid var(--text-color);
+		transition: $transition border-bottom-color,
+			$transition color;
 
-        @media (any-hover: hover) {
-            &:hover {
-                color: var(--green);
-                border-bottom-color: var(--green);
-            }
-        }
-    }
+		@media (any-hover: hover) {
+			&:hover {
+				color: var(--green);
+				border-bottom-color: var(--green);
+			}
+		}
+	}
 }

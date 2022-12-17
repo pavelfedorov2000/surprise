@@ -1,76 +1,60 @@
 <fieldset class="cart__section cart-section">
-    <legend class="section-title cart-section__title">Cпособ доставки</legend>
-    <div class="cart-section__inner">
-        <div class="select select--style_border select--type_price">
-            <div class="select__title">
-                <div class="select__wrap">
-                    <span class="select__key">Доставка курьером (по Минску)</span>
-                </div>
-                <span class="select__value">7 руб.</span>
-            </div>
-            <div class="select__content">
-                <input id="car0"
-                       class="select__input"
-                       type="radio"
-                       name="CHOOSE_CAR"
-                       checked />
-                <label for="car0"
-                       tabindex="0"
-                       class="select__label">
-                    <div class="select__wrap">
-                        <span class="select__key"
-                              data-value="Доставка курьером (по Минску)">Доставка курьером (по Минску)</span>
-                    </div>
-                    <div class="select__value"
-                         data-value="7 руб.">7 руб.</div>
-                </label>
-                <input id="car1"
-                       class="select__input"
-                       type="radio"
-                       name="CHOOSE_CAR" />
-                <label for="car1"
-                       tabindex="0"
-                       class="select__label">
-                    <div class="select__wrap">
-                        <span class="select__key"
-                              data-value="Доставка курьером (по Минску)">Доставка курьером (по Минску)</span>
-                    </div>
-                    <div class="select__value"
-                         data-value="10 руб.">10 руб.</div>
-                </label>
-            </div>
-        </div>
-        <div class="cart-section__radios">
-            <label class="radio">
-                <input class="radio-input js-radio-toggle"
-                       type="radio"
-                       name="DELIVERY_OPTION"
-                       checked>
-                <span class="radio-style radio-style--mr_xs"></span>
-                <span class="radio__inner">
-                    <span class="radio-title">Доставить по вашему адресу</span>
-                    <span class="radio-text radio-text--light">Курьер доставит сертификат вам</span>
-                    <span class="radio__dropdown">
-                        <span class="form-label">Ваш адрес</span>
-                        <input class="input radio__field"
-                               placeholder="Улица, дом, квартира">
-                    </span>
-                </span>
-            </label>
-            <label class="radio">
-                <input class="radio-input js-radio-toggle"
-                       type="radio"
-                       name="DELIVERY_OPTION">
-                <span class="radio-style radio-style--mr_xs"></span>
-                <span class="radio__inner">
-                    <span class="radio-title">Доставить как подарок</span>
-                    <span class="radio__dropdown">
-                        <span class="form-label">Адрес доставки</span>
-                        <input class="input radio__field"
-                               placeholder="Улица, дом, квартира">
-                    </span>
-                </span>
-            </label>
-        </div>
-    </div>
+	<legend class="section-title cart-section__title">Cпособ доставки</legend>
+	<div class="cart-section__inner">
+		<div class="select select--style_border select--type_price">
+			<div class="select__title">
+				<div class="select__wrap">
+					<span class="select__key">Доставка курьером (по Минску)</span>
+				</div>
+				<span class="select__value">7 руб.</span>
+			</div>
+			<div class="select__content">
+				<input id="car0" class="select__input" type="radio" name="CHOOSE_CAR" checked />
+				<label for="car0" tabindex="0" class="select__label">
+					<div class="select__wrap">
+						<span class="select__key" data-value="Доставка курьером (по Минску)">Доставка курьером (по
+							Минску)</span>
+					</div>
+					<div class="select__value" data-value="7 руб.">7 руб.</div>
+				</label>
+				<input id="car1" class="select__input" type="radio" name="CHOOSE_CAR" />
+				<label for="car1" tabindex="0" class="select__label">
+					<div class="select__wrap">
+						<span class="select__key" data-value="Доставка курьером (по Минску)">Доставка курьером (по
+							Минску)</span>
+					</div>
+					<div class="select__value" data-value="10 руб.">10 руб.</div>
+				</label>
+			</div>
+		</div>
+		<div class="cart-section__radios">
+			<label class="radio">
+				<input class="radio-input js-radio-toggle" type="radio" name="DELIVERY_OPTION" checked>
+				<span class="radio-style radio-style--mr_xs"></span>
+				<span class="radio__inner">
+					<span class="radio-title">Доставить по вашему адресу</span>
+					<span class="radio-text radio-text--light">Курьер доставит сертификат вам</span>
+					<span class="radio__dropdown">
+						<label class="radio__dropdown-inner">
+							<span class="form-label">Ваш адрес</span>
+							<input class="input radio__field" placeholder="Улица, дом, квартира">
+						</label>
+					</span>
+				</span>
+			</label>
+			<label class="radio">
+				<input class="radio-input js-radio-toggle" type="radio" name="DELIVERY_OPTION">
+				<span class="radio-style radio-style--mr_xs"></span>
+				<span class="radio__inner">
+					<span class="radio-title">Доставить как подарок</span>
+					<span class="radio__dropdown">
+						<label class="radio__dropdown-inner">
+							<span class="form-label">Адрес доставки</span>
+							<input class="input radio__field" placeholder="Улица, дом, квартира">
+						</label>
+					</span>
+				</span>
+			</label>
+		</div>
+	</div>
 </fieldset>

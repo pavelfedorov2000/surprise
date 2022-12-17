@@ -89,5 +89,35 @@
 		transition: $transition color;
 	}
 
+	&--style {
+		&_2 {
+			#{$this} {
+				&__input {
+					&:checked {
+						&~#{$this} {
+							&__content {
+								#{$this} {
+									&__title {
+										color: $color-default;
+									}
+								}
+							}
+						}
+
+						&~#{$this} {
+							&__text {
+								color: $color-default;
+
+								b {
+									@extend %museo-700;
+								}
+							}
+						}
+					}
+				}
+			}
+		}
+	}
+
 	//&.error ~ .check-style {}
 }
