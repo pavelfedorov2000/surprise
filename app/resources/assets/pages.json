@@ -1,5 +1,6 @@
 [{
     "href": "home.html",
+    "new": true,
     "title": "Главная"
 },{
     "href": "about.html",
@@ -39,18 +40,23 @@
     "title": "Активация сертификата 2"
 }, {
     "href": "certificate.html",
+    "new": true,
     "title": "Катание на квадроциклах"
 }, {
     "href": "corporate-clients.html",
+    "new": true,
     "title": "Корпоративным клиентам"
 }, {
     "href": "gastrobar.html",
+    "new": true,
     "title": "Гастробар 'Правда'"
 }, {
     "href": "activate-certificate-success.html",
+    "new": true,
     "title": "Сертификат успешно активирован"
 }, {
     "href": "become-partner.html",
+    "new": true,
     "title": "Стать партнером"
 }, {
     "href": "cart.html",
@@ -58,8 +64,13 @@
     "title": "Корзина"
 }, {
     "href": "profile.html",
+    "new": true,
     "title": "Личный кабинет - Неоплаченные заказы"
 }, {
     "href": "profile-empty.html",
     "title": "Личный кабинет - Неоплаченные заказы (пустая)"
+}, {
+    "href": "vacancies.html",
+    "new": true,
+    "title": "Вакансии"
 }]

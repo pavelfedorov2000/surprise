@@ -1,57 +1,117 @@
 .accordion-block {
-	@include row-grid(var(--offset-m));
-	align-content: start;
+    @include row-grid(var(--offset-m));
+    align-content: start;
 
-	@media(max-width: $sm) {
-		row-gap: var(--offset-s);
-	}
+    @media(max-width: $sm) {
+        row-gap: var(--offset-s);
+    }
+
+    &--gap {
+        &_xxxl {
+            row-gap: var(--offset-xxxl);
+        }
+    }
 }
 
 .accordion-item {
-	$this: &;
-	// .accordion-item__toggle
+    $this: &;
+    // .accordion-item__toggle
 
-	&__toggle {
-		position: relative;
-		padding-left: var(--offset-xl);
-		font-size: 20px;
-		text-align: left;
+    &__toggle {
+        @include row-grid(var(--offset-xs));
+        width: 100%;
+        position: relative;
+        padding-left: var(--offset-xl);
+        font-size: 20px;
+        text-align: left;
 
-		@media(max-width: $md) {
-			padding-left: var(--offset-l);
-		}
+        @media(max-width: $md) {
+            padding-left: var(--offset-l);
+        }
 
-		@media(max-width: $sm) {
-			font-size: 18px;
-		}
+        @media(max-width: $sm) {
+            font-size: 18px;
+        }
 
-		&::before {
-			content: '';
-			position: absolute;
-			top: 0;
-			left: 0;
-			width: var(--icon-size);
-			height: var(--icon-size);
-			background-image: url(../images/icons/drop-arrow.svg);
-			transition: $transition transform;
-		}
+        &::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: var(--icon-size);
+            height: var(--icon-size);
+            background-image: url(../images/icons/drop-arrow.svg);
+            transition: $transition transform;
+        }
 
-		&[aria-expanded="true"] {
-			&:before {
-				transform: rotate(180deg);
-			}
-		}
-	}
+        &[aria-expanded="true"] {
+            &:before {
+                transform: rotate(180deg);
+            }
 
-	// .accordion-item__content
+            #{$this} {
+                &__toggle-title {
+                    color: var(--green);
+                }
 
-	&__content {
-		padding-top: var(--offset-s);
-		padding-left: var(--offset-xl);
+                &__arrow {
+                    fill: var(--green);
+                    transform: rotate(180deg);
+                }
+            }
+        }
+    }
 
-		@media(max-width: $md) {
-			padding-top: var(--offset-s);
-			padding-left: var(--offset-l);
-		}
-	}
+    &__arrow {
+        position: absolute;
+        top: 0;
+        right: 0;
+        fill: $color-default;
+        transition: $transition transform,
+            $transition fill;
+    }
+
+    &__toggle-title {
+        @extend %museo-700;
+        font-size: 24px;
+        transition: $transition color;
+    }
+
+    &__toggle-subtitle {
+        font-size: 20px;
+        color: var(--text-color);
+    }
+
+    // .accordion-item__content
+
+    &__content {
+        @include row-grid(var(--offset-m));
+        padding-top: var(--offset-s);
+        padding-left: var(--offset-xl);
+
+        @media(max-width: $md) {
+            padding-top: var(--offset-s);
+            padding-left: var(--offset-l);
+        }
+    }
+
+    &--arrow {
+        &_right {
+            #{$this} {
+                &__toggle {
+                    padding-left: 0;
+                    padding-right: var(--offset-xl);
+
+                    &:before {
+                        display: none;
+                    }
+                }
+
+                &__content {
+                    padding-left: 0;
+                    padding-top: var(--offset-m);
+                }
+            }
+        }
+    }
 }

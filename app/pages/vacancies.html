@@ -1,0 +1,25 @@
+@@include("blocks/head/head.html", {"title": "Вакансии"})
+<!-- @@include("blocks/head/no-js.html") -->
+<div class="wrapper">
+    @@include("blocks/header/header.html")
+    <div class="overlay overlay--menu">
+        @@include('blocks/menu/menu.html')
+    </div>
+    <main class="page page--padding page--padding-bottom_xl page--with_decor">
+        <div class="container">
+            @@include('blocks/breadcrumbs/breadcrumbs.html', {
+            "current": "Вакансии"
+            })
+            <div class="page__top">
+                <h1 class="page-title">Вакансии</h1>
+            </div>
+            @@include('blocks/vacancies-block/vacancies-block.html')
+        </div>
+    </main>
+    @@include("blocks/footer/footer.html")
+    <!-- @@include("blocks/popups/popups.html") -->
+</div>
+@@include("blocks/link/link.html")
+</body>
+
+</html>
