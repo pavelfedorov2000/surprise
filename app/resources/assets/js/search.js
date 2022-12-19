@@ -5,17 +5,24 @@ $(document).ready(function () {
         const $searchFormInput = $searchForm.find('.search-form__input');
         const $dropSearch = $searchForm.find('.drop-search');
 
-        $searchForm.addClass('active');
-        $searchFormInput.addClass('active');
+        if ($searchForm.hasClass('active') && $searchFormBtn.attr('type') === 'button') {
+            $searchForm.removeClass('active');
+            $searchFormInput.removeClass('active');
+        } else {
+            $searchForm.addClass('active');
+            $searchFormInput.addClass('active');
+        }
 
         if ($searchFormInput.val() !== '') {
             $dropSearch.addClass('active');
+            //$searchFormBtn.attr('aria-label', 'Искать');
             setTimeout(() => {
                 $searchFormBtn.attr('type', 'submit');
             }, 300);
         } else {
             $dropSearch.removeClass('active');
             $searchFormBtn.attr('type', 'button');
+            $searchFormBtn.attr('aria-label', 'Открыть поиск по сайту');
         }
     });
 

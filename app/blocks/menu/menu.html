@@ -1,11 +1,8 @@
 <div class="menu">
-    <button class="close-btn menu__close"
-            aria-label="Закрыть меню"
-            type="button">
-        <svg class="icon">
-            <use xlink:href="assets/images/sprite.svg#close"></use>
-        </svg>
-    </button>
+    @@include('blocks/close-btn/close-btn.html', {
+        "class": "menu",
+        "ariaLabel": "Закрыть меню"
+    })
     <a href="#"
        class="btn menu__btn">Активировать сертификат</a>
     <ul class="menu__list">

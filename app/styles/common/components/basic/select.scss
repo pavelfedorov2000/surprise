@@ -53,13 +53,17 @@
         flex-direction: column;
 
         @media(max-width: $sm) {
-            max-width: 189px;
+            padding-right: var(--offset-s);
         }
     }
 
     &__key-descr {
         @extend %museo-300;
-        color: var(--gray-text);
+        color: var(--text-color);
+
+        @media(max-width: $sm) {
+            font-size: 14px;
+        }
     }
 
     &__content {
@@ -131,6 +135,11 @@
                     @include padding-y(13.5px);
                     padding-right: var(--offset-xxxl);
                     color: var(--black);
+
+                    @media(max-width: $sm) {
+                        padding-left: var(--offset-s);
+                        padding-right: 52px;
+                    }
                 }
             }
         }

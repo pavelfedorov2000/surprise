@@ -1,0 +1,14 @@
+.close-btn {
+    display: inline-flex;
+    align-items: center;
+    padding: var(--offset-xxxs);
+    border-radius: 50%;
+    padding: var(--offset-xxxs);
+    transition: $transition background-color;
+
+    @media (any-hover: hover) {
+        &:hover {
+            background-color: var(--gray);
+        }
+    }
+}

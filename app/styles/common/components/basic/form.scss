@@ -66,8 +66,12 @@ textarea {
 
 .form {
     @include row-grid(var(--offset-m));
+    background-color: #fff;
+    border-radius: $brs-card-xl;
+    box-shadow: $bsh;
+    border-radius: $brs-card-xl;
 
-    @media(max-width: $lg) {
+    @media(max-width: $xl) {
         padding: var(--offset-xxxl);
     }
 

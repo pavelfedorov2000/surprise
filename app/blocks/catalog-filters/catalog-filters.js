@@ -110,9 +110,11 @@ app.catalogFilters = {
         $(document).on('click', '.filter-btn', function () {
             $('body').addClass('_lock');
             $('.catalog-filters.fixed').addClass('active');
+            $(this).attr('aria-expanded', true);
         });
 
         $(document).on('click', '.catalog-filters__back-btn', function () {
+            $('.filter-btn').attr('aria-expanded', false);
             $('body').removeClass('_lock');
             $('.catalog-filters.fixed').removeClass('active');
         });

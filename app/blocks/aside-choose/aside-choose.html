@@ -1,5 +1,9 @@
 <form action="#"
       class="aside-choose">
+    @@include('blocks/close-btn/close-btn.html', {
+    "class": "aside-choose",
+    "ariaLabel": "Закрыть окно выбора"
+    })
     <fieldset class="aside-choose__item aside-choose__item--with_mb">
         <legend class="aside-choose__item-title">1. Выбери трассу</legend>
         <div class="radio-inputs">
@@ -115,7 +119,8 @@
                     <input class="radio-input js-choose-package"
                            type="radio"
                            name="PACKAGE"
-                           checked>
+                           checked
+                           aria-expanded="true">
                     <span class="radio-style radio-style--mr_xxs"></span>
                     <span class="radio-text">
                         <span class="radio__key">Коробка —</span>
@@ -138,7 +143,8 @@
                 <label class="radio">
                     <input class="radio-input js-choose-package"
                            type="radio"
-                           name="PACKAGE">
+                           name="PACKAGE"
+                           aria-expanded="false">
                     <span class="radio-style radio-style--mr_xxs"></span>
                     <span class="radio-text">
                         <span class="radio__key">Конверт —</span>
@@ -162,7 +168,8 @@
                 <label class="radio">
                     <input class="radio-input js-choose-package"
                            type="radio"
-                           name="PACKAGE">
+                           name="PACKAGE"
+                           aria-expanded="false">
                     <span class="radio-style radio-style--mr_xxs"></span>
                     <span class="radio-text">
                         <span class="radio__key">Электронный сертификат —</span>

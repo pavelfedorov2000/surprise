@@ -9,6 +9,10 @@
             @include padding-x(0);
         }
     }
+
+    &--small {
+        width: var(--container-width_xs);
+    }
 }
 
 .wrapper {

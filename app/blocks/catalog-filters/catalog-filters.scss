@@ -274,6 +274,7 @@
                     position: static;
                     border-radius: 0;
                     box-shadow: none;
+                    padding-top: 0;
                 }
             }
         }
@@ -300,13 +301,13 @@
             grid-auto-rows: minmax(var(--offset-xxls), max-content);
         }
 
-        .select {
+        /* .select {
             &__content {
                 @media(max-width: $xl) {
                     padding-top: 0;
                 }
             }
-        }
+        } */
     }
 
     // .catalog-filters__item

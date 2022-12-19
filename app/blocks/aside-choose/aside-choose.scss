@@ -5,6 +5,36 @@
     box-shadow: $bsh;
     border-radius: $brs-card-xl;
     @include row-grid(var(--offset-l));
+
+    @media(max-width: $xl) {
+        position: fixed;
+        top: -150%;
+        right: 0;
+        left: 0;
+        height: 100%;
+        overflow-y: auto;
+        z-index: 101;
+        padding: var(--offset-l) var(--container-padding);
+        transition: $transition top;
+    }
+
+    &.active {
+        @media(max-width: $xl) {
+            top: 0;
+        }
+    }
+
+    @media(max-width: $sm) {
+        row-gap: var(--offset-m);
+    }
+
+    &__close {
+        display: none;
+        position: absolute;
+        top: var(--offset-xs);
+        right: var(--offset-xs);
+    }
+
     // .aside-choose__item
 
     &__item {
@@ -20,10 +50,20 @@
     &__item-title {
         font-size: 20px;
         margin-bottom: var(--offset-xs);
+
+        @media(max-width: $sm) {
+            font-size: 18px;
+        }
     }
 
     &__radios {
         @include row-grid(var(--offset-xs));
+    }
+
+    .overall-sum {
+        @media(max-width: $sm) {
+            font-size: 20px;
+        }
     }
 
     // .aside-choose__btn
@@ -41,5 +81,32 @@
     &__dropdown {
         padding-top: var(--offset-s);
         padding-left: var(--offset-l);
+    }
+}
+
+.aside-choose-tape {
+    display: none;
+    position: fixed;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    z-index: 25;
+    padding: var(--offset-m) var(--container-padding) var(--offset-s);
+    align-items: center;
+    justify-content: space-between;
+    background-color: #fff;
+    box-shadow: $bsh;
+
+    @media(max-width: $xl) {
+        display: flex;
+    }
+
+    &__value {
+        color: var(--text-color);
+        border-bottom: 1px solid var(--text-color);
+    }
+
+    &__btn {
+        @include padding-y(var(--offset-s));
     }
 }

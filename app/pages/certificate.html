@@ -214,7 +214,7 @@
                     </div>
                     @@include('blocks/certificate-reviews/certificate-reviews.html')
                 </div>
-                <div class="grid-col-5 tablet-none">
+                <div class="grid-col-5">
                     @@include("blocks/aside-choose/aside-choose.html")
                 </div>
             </div>
@@ -225,6 +225,20 @@
         @@include('blocks/delivery-section/delivery-section.html')
         @@include('blocks/compare-section/compare-section.html')
         @@include('blocks/faq-section/faq-section.html')
+        <div class="aside-choose-tape">
+            <div class="aside-choose-tape__value prices">
+                <span>от</span>
+                <b class="price">59</b>
+                <span>до</span>
+                <b class="price">118</b>
+                <span>руб.</span>
+            </div>
+            <button class="btn aside-choose-tape__btn btn--style_bg-pink"
+                    type="button"
+                    aria-expanded="false">
+                Выбрать
+            </button>
+        </div>
     </main>
     @@include("blocks/footer/footer.html")
     <!-- @@include("blocks/popups/popups.html") -->
