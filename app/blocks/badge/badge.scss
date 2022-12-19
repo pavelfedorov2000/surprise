@@ -1,0 +1,41 @@
+.badge {
+    $this: &;
+
+    padding: 5px var(--offset-s);
+    background-color: var(--green-light);
+    border-radius: $brs-xxs;
+
+    &__text {
+        @extend %museo-300;
+        position: relative;
+        padding-left: 34px;
+        color: var(--text-color);
+
+        &::before {
+            content: '';
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+            left: 0;
+            width: var(--icon-size);
+            height: var(--icon-size);
+            background-image: url(../images/icons/check-done.svg);
+        }
+
+        time {
+            @extend %museo-700;
+            color: var(--green);
+        }
+    }
+
+    &--color {
+        &_green {
+            #{$this} {
+                &__text {
+                    @extend %museo-700;
+                    color: var(--green);
+                }
+            }
+        }
+    }
+}

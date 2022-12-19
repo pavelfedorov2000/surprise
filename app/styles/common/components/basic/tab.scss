@@ -1,97 +1,92 @@
 .tabs-block {
-	&__title {
-		@extend %museo-300;
-		margin-bottom: var(--offset-s);
-		color: #000;
-	}
+    &__title {
+        @extend %museo-300;
+        margin-bottom: var(--offset-s);
+        color: #000;
+    }
 }
 
 .tabs-content {
-	visibility: hidden;
-	opacity: 0;
-	pointer-events: none;
-	transition: $transition all;
+    display: none;
 
-	&.active {
-		visibility: visible;
-		opacity: 1;
-		pointer-events: auto;
-	}
+    /* &.active {
+        display: block;
+    } */
 }
 
 .tabs {
-	display: flex;
-	margin-bottom: var(--offset-xxxl);
-	overflow-x: auto;
+    display: flex;
+    margin-bottom: var(--offset-xxxl);
+    overflow-x: auto;
 
-	@media(max-width: $md) {
-		margin-bottom: var(--offset-l);
-	}
+    @media(max-width: $md) {
+        margin-bottom: var(--offset-l);
+    }
 
-	&::-webkit-scrollbar {
-		width: 0;
-		-webkit-appearance: none;
-		scrollbar-width: 0;
-	}
+    &::-webkit-scrollbar {
+        width: 0;
+        -webkit-appearance: none;
+        scrollbar-width: 0;
+    }
 
-	&--items {
-		&_3 {
-			>* {
-				@media(min-width: 1025px) {
-					width: 33.3333%;
-				}
-			}
-		}
-	}
+    &--items {
+        &_3 {
+            > * {
+                @media(min-width: 768px) {
+                    width: 33.3333%;
+                }
+            }
+        }
+    }
 }
 
 .tab {
-	padding: var(--offset-xxs) var(--offset-m);
-	background-color: #F5F8F8;
-	color: $color-default;
-	border-radius: $brs;
-	font-size: 16px;
-	line-height: 1.5;
-	white-space: nowrap;
-	margin-right: var(--offset-s);
-	transition: $transition all;
+    padding: var(--offset-xxs) var(--offset-m);
+    background-color: #F5F8F8;
+    color: $color-default;
+    border-radius: $brs;
+    font-size: 16px;
+    line-height: 1.5;
+    white-space: nowrap;
+    margin-right: var(--offset-s);
+    transition: $transition all;
 
-	&.active {
-		background-color: var(--green);
-		color: #fff;
-	}
+    &.active {
+        background-color: var(--green);
+        color: #fff;
+    }
 
-	@media (any-hover: hover) {
-		&:hover {
-			background-color: var(--green);
-			color: #fff;
-		}
-	}
+    @media (any-hover: hover) {
+        &:hover {
+            background-color: var(--green);
+            color: #fff;
+        }
+    }
 
-	&--style {
-		&_2 {
-			@extend %museo-300;
-			margin-right: 0;
-			padding: 18px;
-			width: 100%;
-			background-color: transparent;
-			border-bottom: 2px solid var(--line-color);
-			border-radius: 0;
+    &--style {
+        &_2 {
+            @extend %museo-300;
+            margin-right: 0;
+            padding: 18px;
+            width: 100%;
+            background-color: transparent;
+            border-bottom: 2px solid var(--line-color);
+            border-radius: 0;
 
-			&.active {
-				@extend %museo-500;
-				background-color: transparent;
-				border-bottom-color: var(--green);
-				color: var(--green);
-			}
+            &.active {
+                @extend %museo-500;
+                background-color: transparent;
+                border-bottom-color: var(--green);
+                color: var(--green);
+            }
 
-			@media (any-hover: hover) {
-				&:hover {
-					background-color: transparent;
-					border-bottom-color: var(--green);
-					color: var(--green);
-				}
-			}
-		}
-	}
+            @media (any-hover: hover) {
+                &:hover {
+                    background-color: transparent;
+                    border-bottom-color: var(--green);
+                    color: var(--green);
+                }
+            }
+        }
+    }
 }

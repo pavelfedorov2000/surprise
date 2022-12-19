@@ -1,69 +1,73 @@
 <section class="section about-certificate section--with_padding-top">
-	<div class="container">
-		<header class="section__top section__top--orientation_col">
-			<span class="badge">
-				<span class="badge__text">
-					действует до
-					<time datetime="2022-12-13">13.12.2022</time>
-				</span>
-			</span>
-			<h2 class="section-title section-title--size_mob-24">Катание на квадроциклах в группе на Уручье </h2>
-		</header>
-		<div class="about-certificate__row">
-			<div class="about-certificate__contacts">
-				<section class="contact-block">
-					<h4 class="contact-block__title">Место проведения</h4>
-					<div class="contact contact-block__item contact--icon-mr_20">
-						<svg class="icon">
-							<use xlink:href="assets/images/sprite.svg#pin"></use>
-						</svg>
-						<p class="color-default">г.&nbsp;Минск, ул.&nbsp;Раковская, 18, офис&nbsp;11</p>
-					</div>
-				</section>
-				<section class="contact-block">
-					<h4 class="contact-block__title">
-						Телефон для предварительной записи
-					</h4>
-					<ul class="contact-block__phones">
-						<li>
-							<a class="contact" href="tel:+375297333368"><b>+ 375 29 7 3333 68</b> МТС</a>
-						</li>
-						<li>
-							<a class="contact" href="tel:+375337333368"><b>+ 375 44 7 3333 68</b> А1</a>
-						</li>
-						<li>
-							<a class="contact" href="tel:+375257333368"><b>+ 375 25 7 3333 68</b> Life</a>
-						</li>
-					</ul>
-				</section>
-			</div>
-			<div id="map" class="map about-certificate__map">
-				<iframe
-					src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2350.443972407594!2d27.556236115992572!3d53.9060861403374!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x46dbcf95320aded1%3A0x71e5abd7909b1a8e!2z0YPQuy4g0JfRi9Cx0LjRhtC60LDRjyA0LCDQnNC40L3RgdC6!5e0!3m2!1sru!2sby!4v1670970778524!5m2!1sru!2sby"
-					width="640" height="480" style="border:0;" allowfullscreen="" loading="lazy"
-					referrerpolicy="no-referrer-when-downgrade"></iframe>
-			</div>
-			<section class="about-certificate__content">
-				<h3 class="section-title section-title--size_mob-24">Важно знать</h3>
-				<ul class="check-list check-list--offset_m">
-					<li>
-						Перед поездкой в “Мустанг” необходимо предварительно записаться на удобный день и выбрать время
-					</li>
-					<li>
-						Надевайте удобную и свободную одежду, чтобы чувствовать себя комфортно
-					</li>
-					<li>
-						Внимание: запись возможно отменить или перенести не позднее, чем за сутки до предполагаемой
-						прогулки
-					</li>
-					<li>
-						Берите с собой фотоаппарат — снимки с прекрасными лошадками получаются превосходными!
-					</li>
-					<li>
-						Если в Ваш сертификат входит фотосессия, обязательно сообщите это при бронировании даты!
-					</li>
-				</ul>
-			</section>
-		</div>
-	</div>
+    <div class="container">
+        <header class="section__top section__top--orientation_col">
+            @@include('blocks/badge/badge.html', {
+            "date": "действует до 13.12.2022",
+            })
+            <h2 class="section-title section-title--size_mob-24">Катание на квадроциклах в группе на Уручье </h2>
+        </header>
+        <div class="about-certificate__row">
+            <div class="about-certificate__contacts">
+                <section class="contact-block">
+                    <h4 class="contact-block__title">Место проведения</h4>
+                    <div class="contact contact-block__item contact--icon-mr_20">
+                        <svg class="icon">
+                            <use xlink:href="assets/images/sprite.svg#pin"></use>
+                        </svg>
+                        <p class="color-default">г.&nbsp;Минск, ул.&nbsp;Раковская, 18, офис&nbsp;11</p>
+                    </div>
+                </section>
+                <section class="contact-block">
+                    <h4 class="contact-block__title">
+                        Телефон для предварительной записи
+                    </h4>
+                    <ul class="contact-block__phones">
+                        <li>
+                            <a class="contact"
+                               href="tel:+375297333368"><b>+ 375 29 7 3333 68</b> МТС</a>
+                        </li>
+                        <li>
+                            <a class="contact"
+                               href="tel:+375337333368"><b>+ 375 44 7 3333 68</b> А1</a>
+                        </li>
+                        <li>
+                            <a class="contact"
+                               href="tel:+375257333368"><b>+ 375 25 7 3333 68</b> Life</a>
+                        </li>
+                    </ul>
+                </section>
+            </div>
+            <div id="map"
+                 class="map about-certificate__map">
+                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2350.443972407594!2d27.556236115992572!3d53.9060861403374!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x46dbcf95320aded1%3A0x71e5abd7909b1a8e!2z0YPQuy4g0JfRi9Cx0LjRhtC60LDRjyA0LCDQnNC40L3RgdC6!5e0!3m2!1sru!2sby!4v1670970778524!5m2!1sru!2sby"
+                        width="640"
+                        height="480"
+                        style="border:0;"
+                        allowfullscreen=""
+                        loading="lazy"
+                        referrerpolicy="no-referrer-when-downgrade"></iframe>
+            </div>
+            <section class="about-certificate__content">
+                <h3 class="section-title section-title--size_mob-24">Важно знать</h3>
+                <ul class="check-list check-list--offset_m">
+                    <li>
+                        Перед поездкой в “Мустанг” необходимо предварительно записаться на удобный день и выбрать время
+                    </li>
+                    <li>
+                        Надевайте удобную и свободную одежду, чтобы чувствовать себя комфортно
+                    </li>
+                    <li>
+                        Внимание: запись возможно отменить или перенести не позднее, чем за сутки до предполагаемой
+                        прогулки
+                    </li>
+                    <li>
+                        Берите с собой фотоаппарат — снимки с прекрасными лошадками получаются превосходными!
+                    </li>
+                    <li>
+                        Если в Ваш сертификат входит фотосессия, обязательно сообщите это при бронировании даты!
+                    </li>
+                </ul>
+            </section>
+        </div>
+    </div>
 </section>

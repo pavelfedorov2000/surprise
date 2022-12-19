@@ -7,6 +7,22 @@ $(document).ready(function () {
     app.starRating.init();
     app.cart.init();
 
+    $('.tab').on('click', function() {
+        const $tab = $(this);
+        const $tabNotActive = $tab.closest('.tabs').find('.tab.active');
+        const $tabsContent = $(`#${$tab.attr('aria-controls')}`);
+        const $tabsContentNotActive = $(`#${$tabNotActive.attr('aria-controls')}`);
+
+        $tabNotActive.removeClass('active');
+        $tabNotActive.attr('aria-selected', false);
+
+        $tab.addClass('active');
+        $tab.attr('aria-selected', true);
+
+        $tabsContentNotActive.hide();
+        $tabsContent.fadeIn();
+    });
+
     $(document).on('click', '.more-text-btn', function () {
         const $moreTextBtn = $(this);
         const $text = $moreTextBtn.prev();
