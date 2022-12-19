@@ -56,4 +56,10 @@
     "href": "cart.html",
     "new": true,
     "title": "Корзина"
+}, {
+    "href": "profile.html",
+    "title": "Личный кабинет - Неоплаченные заказы"
+}, {
+    "href": "profile-empty.html",
+    "title": "Личный кабинет - Неоплаченные заказы (пустая)"
 }]

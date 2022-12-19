@@ -6,6 +6,19 @@
 	}
 }
 
+.tabs-content {
+	visibility: hidden;
+	opacity: 0;
+	pointer-events: none;
+	transition: $transition all;
+
+	&.active {
+		visibility: visible;
+		opacity: 1;
+		pointer-events: auto;
+	}
+}
+
 .tabs {
 	display: flex;
 	margin-bottom: var(--offset-xxxl);
@@ -19,6 +32,16 @@
 		width: 0;
 		-webkit-appearance: none;
 		scrollbar-width: 0;
+	}
+
+	&--items {
+		&_3 {
+			>* {
+				@media(min-width: 1025px) {
+					width: 33.3333%;
+				}
+			}
+		}
 	}
 }
 
@@ -42,6 +65,33 @@
 		&:hover {
 			background-color: var(--green);
 			color: #fff;
+		}
+	}
+
+	&--style {
+		&_2 {
+			@extend %museo-300;
+			margin-right: 0;
+			padding: 18px;
+			width: 100%;
+			background-color: transparent;
+			border-bottom: 2px solid var(--line-color);
+			border-radius: 0;
+
+			&.active {
+				@extend %museo-500;
+				background-color: transparent;
+				border-bottom-color: var(--green);
+				color: var(--green);
+			}
+
+			@media (any-hover: hover) {
+				&:hover {
+					background-color: transparent;
+					border-bottom-color: var(--green);
+					color: var(--green);
+				}
+			}
 		}
 	}
 }

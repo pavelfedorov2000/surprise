@@ -336,6 +336,10 @@
 	color: $color-default;
 }
 
+.color-green {
+	color: var(--green);
+}
+
 .row {
 	@include grid-auto-fit(350px, var(--offset-xxxl));
 

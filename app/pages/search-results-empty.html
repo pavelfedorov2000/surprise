@@ -25,27 +25,29 @@
 				</div>
 			</div>
 			<h2 class="section-title section-title--mb_ls">Возможно, Вам понравится:</h2>
-			@@loop('blocks/catalog-card/catalog-card.html', [{
-			"src": "01",
-			"favorite": true,
-			"title": "Комплексная мойка авто с нанесением кварцевого покрытия",
-			"text": "Пригласите подругу в шикарное место и насладитесь авторскими блюдами!",
-			"bottom": true,
-			"priceFrom": "59",
-			"priceTo": "118"
-			}, {
-			"src": "02",
-			"favorite": true,
-			"title": "Винный безлимит в ресторане Fridays",
-			"text": "Пригласите подругу в шикарное место и насладитесь авторскими блюдами!",
-			"bottom": true
-			}, {
-			"src": "03",
-			"favorite": true,
-			"title": "Винный безлимит в ресторане Fridays",
-			"text": "Пригласите подругу в шикарное место и насладитесь авторскими блюдами!",
-			"bottom": true
-			}])
+			<div class="catalog-grid">
+				@@loop('blocks/catalog-card/catalog-card.html', [{
+				"src": "01",
+				"favorite": true,
+				"title": "Комплексная мойка авто с нанесением кварцевого покрытия",
+				"text": "Пригласите подругу в шикарное место и насладитесь авторскими блюдами!",
+				"bottom": true,
+				"priceFrom": "59",
+				"priceTo": "118"
+				}, {
+				"src": "02",
+				"favorite": true,
+				"title": "Винный безлимит в ресторане Fridays",
+				"text": "Пригласите подругу в шикарное место и насладитесь авторскими блюдами!",
+				"bottom": true
+				}, {
+				"src": "03",
+				"favorite": true,
+				"title": "Винный безлимит в ресторане Fridays",
+				"text": "Пригласите подругу в шикарное место и насладитесь авторскими блюдами!",
+				"bottom": true
+				}])
+			</div>
 		</div>
 	</main>
 	@@include('blocks/footer/footer.html')

@@ -1,0 +1,69 @@
+@@include("blocks/head/head.html", {"title": "Личный кабинет"})
+<!-- @@include("blocks/head/no-js.html") -->
+<div class="wrapper">
+	@@include("blocks/header/header.html")
+	<div class="overlay overlay--menu">
+		@@include('blocks/menu/menu.html')
+	</div>
+	<main class="page page--padding">
+		<div class="container">
+			@@include('blocks/breadcrumbs/breadcrumbs.html', {
+			"current": "Личный кабинет"
+			})
+			<div class="page__top page__top--mb_ls">
+				<h1 class="page-title">Личный кабинет</h1>
+			</div>
+			<div class="profile-block">
+				@@include('blocks/profile-sidebar/profile-sidebar.html')
+				<div class="profile-block__content">
+					<nav class="profile-block__tabs profile-tabs" aria-label="Tabs">
+						<ul class="tabs tabs--items_3">
+							<li>
+								<button id="profile_tab_1" class="tab active tab--style_2" type="button" role="tab"
+									aria-selected="true" aria-controls="profile-tabs-content-1">
+									Неоплаченные заказы
+								</button>
+							</li>
+							<li>
+								<button id="profile_tab_2" class="tab tab--style_2" type="button" role="tab"
+									aria-controls="profile-tabs-content-2">
+									История заказов
+								</button>
+							</li>
+							<li>
+								<button id="profile_tab_3" class="tab tab--style_2" type="button" role="tab"
+									aria-controls="profile-tabs-content-3">
+									Электронные сертификаты
+								</button>
+							</li>
+						</ul>
+					</nav>
+					<div class="profile-block__tabs-content">
+						<div id="profile-tabs-content-1" aria-labelledby="profile_tab_1" class="tabs-content active">
+							<div class="profile-block__cards" role="tabpanel">
+								@@include('blocks/order-card/order-card.html')
+								@@include('blocks/order-card/order-card.html')
+							</div>
+						</div>
+						<div id="profile-tabs-content-2" aria-labelledby="profile_tab_2" class="tabs-content">
+							<div class="profile-block__cards" role="tabpanel">
+								@@include('blocks/order-card/order-card.html')
+							</div>
+						</div>
+						<div id="profile-tabs-content-2" aria-labelledby="profile_tab_2" class="tabs-content">
+							<div class="profile-block__cards" role="tabpanel">
+								@@include('blocks/electronic-certificate-card/electronic-certificate-card.html')
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</main>
+	@@include("blocks/footer/footer.html")
+	<!-- @@include("blocks/popups/popups.html") -->
+</div>
+@@include("blocks/link/link.html")
+</body>
+
+</html>
