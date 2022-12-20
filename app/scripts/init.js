@@ -6,8 +6,9 @@ $(document).ready(function () {
     app.asideChoose.init();
     app.starRating.init();
     app.cart.init();
+    app.popup.init();
 
-    $('.tab').on('click', function() {
+    $('.tab').on('click', function () {
         const $tab = $(this);
         const $tabNotActive = $tab.closest('.tabs').find('.tab.active');
         const $tabsContent = $(`#${$tab.attr('aria-controls')}`);
@@ -87,6 +88,7 @@ $(document).ready(function () {
         freeMode: true,
         watchSlidesProgress: true,
     });
+
     new Swiper(".establishment-gallery", {
         loop: true,
         spaceBetween: 14,

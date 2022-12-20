@@ -30,6 +30,12 @@
     }
 
     &--items {
+        &_2 {
+            > * {
+                width: 50%;
+            }
+        }
+
         &_3 {
             > * {
                 @media(min-width: 768px) {

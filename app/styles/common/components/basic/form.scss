@@ -46,6 +46,39 @@ textarea {
     &:active {
         border-color: var(--green);
     }
+
+    &-wrap {
+        position: relative;
+
+        .input {
+            width: 100%;
+        }
+    }
+}
+
+.js-toggle-password {
+    position: absolute;
+    top: 50%;
+    right: var(--offset-m);
+    transform: translateY(-50%);
+
+    .icon {
+        &.hide {
+            display: none;
+        }
+    }
+
+    &.active {
+        .icon {
+            &.show {
+                display: none;
+            }
+
+            &.hide {
+                display: block;
+            }
+        }
+    }
 }
 
 .textarea {

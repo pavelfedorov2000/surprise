@@ -16,7 +16,7 @@ app.menu = {
                 $menuBtn.attr('aria-label', 'Открыть меню');
                 $menuBtn.attr('aria-expanded', false);
                 $('.menu').removeClass('active');
-                $('.overlay').fadeOut();
+                $('.overlay--menu').fadeOut();
                 $('body').removeClass('_lock');
                 $('html').removeClass('disable-fix');
             }
@@ -24,20 +24,22 @@ app.menu = {
 
         $('.menu__close').on('click', function () {
             $('.menu-btn').attr('aria-expanded', false);
-            $('.menu').removeClass('active');
-            $('.overlay').fadeOut();
+            $(this).closest('.menu').removeClass('active');
+            $('.overlay--menu').fadeOut();
             $('body').removeClass('_lock');
             $('html').removeClass('disable-fix');
         });
 
         $(document).on('mouseup', function (e) {
             const $menu = $('.menu');
+            const $popup = $('.popup');
             const $menuBtn = $('.menu-btn');
 
-            if (!$menu.is(e.target) && $menu.has(e.target).length === 0 && !$menuBtn.is(e.target) && $menuBtn.has(e.target).length === 0) {
+            if (!$menu.is(e.target) && $menu.has(e.target).length === 0 && !$menuBtn.is(e.target) && $menuBtn.has(e.target).length === 0 && !$popup.is(e.target) && $popup.has(e.target).length === 0) {
                 $menuBtn.attr('aria-expanded', false);
                 $menu.removeClass('active');
-                $('.overlay').fadeOut();
+                $popup.fadeOut();
+                $('.overlay--menu').fadeOut();
                 $('body').removeClass('_lock');
                 $('html').removeClass('disable-fix');
             }
