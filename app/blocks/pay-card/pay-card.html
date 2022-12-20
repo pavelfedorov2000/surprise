@@ -1,0 +1,27 @@
+<div class="pay-card">
+    @@if(context.icon){
+    <span class="icon-circle pay-card__img icon-circle--style_bg-pink icon-circle--position_bottom-right">
+        <!-- <img src="assets/images/icons/file-doc.svg" alt=""> -->
+        <svg class="icon">
+            <use xlink:href="assets/images/sprite.svg#cash"></use>
+        </svg>
+    </span>
+    }
+    @@if(context.src){
+    <picture>
+        <source type="image/webp"
+                srcset="@@src.webp">
+        <img class="pay-card__img"
+             src="@@src.png"
+             alt="фото"
+             width="83"
+             height="56"
+             loading="lazy">
+    </picture>
+    }
+    <div class="pay-card__title">@@title</div>
+    @@if(context.link){
+    <a href="#"
+       class="btn btn--style_link-4">Подробнее</a>
+    }
+</div>

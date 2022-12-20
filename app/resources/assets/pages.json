@@ -73,4 +73,8 @@
     "href": "vacancies.html",
     "new": true,
     "title": "Вакансии"
+}, {
+    "href": "delivery.html",
+    "new": true,
+    "title": "Доставка и оплата"
 }]

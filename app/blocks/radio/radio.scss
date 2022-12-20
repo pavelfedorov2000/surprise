@@ -272,83 +272,6 @@
             }
         }
 
-        &_tab {
-            min-width: 360px;
-
-            @media(max-width: $lg) {
-                min-width: 50%;
-            }
-
-            #{$this} {
-                &-style {
-                    &:before {
-                        border-color: var(--gray-text);
-                    }
-
-                    &:after {
-                        background-color: #fff;
-                    }
-                }
-
-                &__content {
-                    width: 100%;
-                    justify-content: center;
-                    border-radius: $brs-card-xl $brs-card-xl 0 0;
-                    padding: 25px;
-
-                    @media(max-width: $sm) {
-                        padding: var(--offset-s);
-                    }
-
-                    @media (any-hover: hover) {
-                        &:hover {
-                            box-shadow: 0 -15px 30px rgba(0, 0, 0, 0.08);
-
-                            #{$this} {
-                                &-style {
-                                    &:before {
-                                        border-color: var(--green);
-                                    }
-                                }
-
-                                &-text {
-                                    color: var(--green);
-                                }
-                            }
-                        }
-                    }
-                }
-
-                &_text {
-                    color: var(--gray-text);
-                }
-
-                &-input {
-                    &:checked {
-                        & ~ #{$this} {
-                            &__content {
-                                background-color: var(--green);
-                                box-shadow: 0 -15px 30px rgba(0, 0, 0, 0.08);
-
-                                #{$this} {
-                                    &-text {
-                                        @extend %museo-700;
-                                        color: #fff;
-                                    }
-                                }
-                            }
-
-                            &-style {
-                                &:before {
-                                    border-color: #fff;
-                                }
-                            }
-                        }
-                    }
-                }
-            }
-        }
-
         &_quantity {
             #{$this} {
                 &-text {
@@ -418,32 +341,10 @@
                                                 }
                                             }
 
-                                            /* &--credit {
-												path {
-													&:nth-child(2) {
-														fill: #424242;
-													}
-
-													&:last-child {
-														fill: var(--green);
-													}
-												}
-											} */
-
                                             &--mastercard {
                                                 rect {
                                                     fill: var(--green);
                                                 }
-
-                                                /* path {
-													&:nth-of-type(1) {
-														fill: #F79E1B;
-													}
-
-													&:nth-of-type(2) {
-														fill: #EB001B;
-													}
-												} */
                                             }
                                         }
                                     }

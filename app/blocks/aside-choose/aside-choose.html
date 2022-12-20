@@ -2,9 +2,11 @@
       class="aside-choose">
     @@include('blocks/close-btn/close-btn.html', {
     "class": "aside-choose",
+    "visibilityClass": "pc-hidden",
     "ariaLabel": "Закрыть окно выбора"
     })
-    <fieldset class="aside-choose__item aside-choose__item--with_mb">
+    <fieldset data-tab
+              class="aside-choose__item aside-choose__item--with_mb">
         <legend class="aside-choose__item-title">1. Выбери трассу</legend>
         <div class="radio-inputs">
             <label class="radio radio--style_quantity">
@@ -28,7 +30,8 @@
             </label>
         </div>
     </fieldset>
-    <fieldset class="aside-choose__item aside-choose__item--with_mb">
+    <fieldset data-tab
+              class="aside-choose__item aside-choose__item--with_mb">
         <legend class="aside-choose__item-title">2. Выбери количество человек</legend>
         <div class="radio-inputs">
             <label class="radio radio--style_quantity">
@@ -64,7 +67,8 @@
             </label>
         </div>
     </fieldset>
-    <fieldset class="aside-choose__item">
+    <fieldset data-tab
+              class="aside-choose__item">
         <legend class="aside-choose__item-title">3. Выбери машину</legend>
         <div class="select select--style_border select--type_price">
             <div class="select__title">
@@ -111,7 +115,8 @@
             </div>
         </div>
     </fieldset>
-    <fieldset class="aside-choose__item choose-package">
+    <fieldset data-tab="gift"
+              class="aside-choose__item choose-package">
         <legend class="aside-choose__item-title">4. Выбери упаковку</legend>
         <div class="choose-package__items">
             <div class="choose-package__item">
@@ -191,7 +196,8 @@
             </div>
         </div>
     </fieldset>
-    <fieldset class="aside-choose__item">
+    <fieldset data-tab="gift"
+              class="aside-choose__item">
         <legend class="aside-choose__item-title">Выбери цвет упаковки</legend>
         @@include('blocks/colors/colors.html')
     </fieldset>

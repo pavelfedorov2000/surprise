@@ -1,0 +1,31 @@
+.delivery-block {
+
+    // .delivery-block__tabs
+
+    &__tabs {
+        margin-bottom: var(--section-padding-xs);
+    }
+
+    // .delivery-block__content
+
+    &__content {
+        @include row-grid(var(--offset-xl));
+        justify-items: start;
+    }
+
+    &__text {
+        &:not(:last-child) {
+            margin-bottom: 20px;
+        }
+    }
+
+    &__map {
+        padding-bottom: 80.488%;
+    }
+
+    .section-inner {
+        @media(max-width: $lg) {
+            align-items: stretch;
+        }
+    }
+}

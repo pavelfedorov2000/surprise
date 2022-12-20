@@ -10,7 +10,9 @@ $(document).ready(function () {
 
     $('.tab').on('click', function () {
         const $tab = $(this);
+        const tabId = $tab.attr('id').split('_').at(-1);
         const $tabNotActive = $tab.closest('.tabs').find('.tab.active');
+        const tabNotActiveId = $tabNotActive.attr('id').split('_').at(-1);
         const $tabsContent = $(`#${$tab.attr('aria-controls')}`);
         const $tabsContentNotActive = $(`#${$tabNotActive.attr('aria-controls')}`);
 
@@ -20,8 +22,13 @@ $(document).ready(function () {
         $tab.addClass('active');
         $tab.attr('aria-selected', true);
 
-        $tabsContentNotActive.hide();
-        $tabsContent.fadeIn();
+        if ($tab.attr('aria-controls') !== undefined || !$tab.hasClass('js-certificate-tab')) {
+            $tabsContentNotActive.hide();
+            $tabsContent.fadeIn();
+        } else {
+            $('[data-tab').show();
+            $(`[data-tab=${tabNotActiveId}]`).hide();
+        }
     });
 
     $(document).on('click', '.more-text-btn', function () {

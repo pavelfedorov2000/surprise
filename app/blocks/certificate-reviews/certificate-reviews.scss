@@ -1,83 +1,86 @@
 .certificate-reviews {
 
-	&__metrics {
-		&:not(:last-child) {
-			margin-bottom: var(--offset-xl);
-		}
-	}
+    &__metrics {
+        &:not(:last-child) {
+            margin-bottom: var(--offset-xl);
+        }
+    }
 
-	// .certificate-reviews__items
+    // .certificate-reviews__items
 
-	&__items {
-		@include row-grid(var(--offset-xl));
-	}
+    &__items {
+        @include row-grid(var(--offset-xl));
+    }
 }
 
 .reviews-metrics {
-	display: flex;
-	justify-content: space-between;
-	flex-wrap: wrap;
-	margin-bottom: calc(var(--offset-m) * (-1));
+    display: flex;
+    flex-wrap: wrap;
+    margin-bottom: calc(var(--offset-m) * (-1));
 
-	@media(min-width: 576px) {
-		margin-left: calc(var(--offset-l) * (-1));
-	}
+    @media(min-width: 576px) {
+        margin-left: calc(var(--offset-l) * (-1));
+    }
 
-	@media(min-width: 1025px) {
-		margin-left: calc(var(--offset-xl) * (-1));
-	}
+    @media(min-width: 1025px) {
+        margin-left: calc(var(--offset-xl) * (-1));
+    }
 
-	>* {
-		margin-bottom: var(--offset-m);
+    > * {
+        margin-bottom: var(--offset-m);
+        min-width: 240px;
 
-		@media(min-width: 576px) {
-			width: calc(50% - var(--offset-l));
-			margin-left: var(--offset-l);
-		}
+        @media(min-width: 576px) {
+            width: calc(50% - var(--offset-l));
+            margin-left: var(--offset-l);
+        }
 
-		@media(min-width: 1025px) {
-			width: calc(33.3333% - var(--offset-xl));
-			margin-left: var(--offset-xl);
-		}
-	}
+        @media(min-width: 1025px) {
+            margin-left: var(--offset-xl);
+        }
+
+        @media(min-width: 1201px) {
+            width: calc(33.3333% - var(--offset-xl));
+        }
+    }
 }
 
 .metric-reviews {
-	display: flex;
-	align-items: center;
-	// .metric-reviews__num
+    display: flex;
+    align-items: center;
+    // .metric-reviews__num
 
-	&__num {
-		flex-shrink: 0;
-		margin-right: var(--offset-m);
-		width: 68px;
-		height: 68px;
-		border-radius: 50%;
-		border: 1px solid var(--green);
-		display: grid;
-		place-items: center;
-		@extend %museo-700;
-		font-size: 20px;
-	}
+    &__num {
+        flex-shrink: 0;
+        margin-right: var(--offset-m);
+        width: 68px;
+        height: 68px;
+        border-radius: 50%;
+        border: 1px solid var(--green);
+        display: grid;
+        place-items: center;
+        @extend %museo-700;
+        font-size: 20px;
+    }
 
-	// .metric-reviews__content
+    // .metric-reviews__content
 
-	&__content {
-		@include row-grid(var(--offset-xxxs));
-		justify-items: start;
-	}
+    &__content {
+        @include row-grid(var(--offset-xxxs));
+        justify-items: start;
+    }
 
-	// .metric-reviews__title
+    // .metric-reviews__title
 
-	&__title {
-		@extend %museo-700;
-		font-size: 20px;
-		white-space: nowrap;
-	}
+    &__title {
+        @extend %museo-700;
+        font-size: 20px;
+        white-space: nowrap;
+    }
 
-	// .metric-reviews__descr
+    // .metric-reviews__descr
 
-	&__descr {
-		@extend %museo-300;
-	}
+    &__descr {
+        @extend %museo-300;
+    }
 }

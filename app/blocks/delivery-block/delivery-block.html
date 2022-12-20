@@ -1,0 +1,97 @@
+<section class="section delivery-block">
+    <div class="container">
+        @@include('blocks/delivery-block/tabs.html')
+        <div class="tabs-content"
+             id="delivery-tabs-content-1"
+             aria-labelledby="delivery_tab_1"
+             role="tabpanel"
+             style="display: block;">
+            <div class="section-inner section-inner_50-50">
+                <div class="delivery-block__content">
+                    <h2 class="section-title">Доставка курьером в пределах зоны доставки</h2>
+                    <div class="text-block">
+                        <p class="color-default">Доставка осуществляется по Минску в пределах зоны доставки с 10 до 20 с понедельника по воскресенье.</p>
+                        <p class="color-default">Обратите внимание: чтобы получить сертификат в этот же день, его необходимо оформить до 18:00.</p>
+                        <p class="color-default">При заказе после 18:00 доставка осуществляется на следующий или в другой удобный для вас день.</p>
+                        <p class="color-default">Проверьте, входит ли указанный вами адрес в зону доставки курьером</p>
+                    </div>
+                    @@include('blocks/price-block/price-block.html', {"price": "6 руб"})
+                </div>
+                <div>
+                    <div id="map"
+                         class="map delivery-block__map">
+                        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2350.443972407594!2d27.556236115992572!3d53.9060861403374!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x46dbcf95320aded1%3A0x71e5abd7909b1a8e!2z0YPQuy4g0JfRi9Cx0LjRhtC60LDRjyA0LCDQnNC40L3RgdC6!5e0!3m2!1sru!2sby!4v1670970778524!5m2!1sru!2sby"
+                                width="640"
+                                height="480"
+                                style="border:0;"
+                                allowfullscreen=""
+                                loading="lazy"
+                                referrerpolicy="no-referrer-when-downgrade"></iframe>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="tabs-content"
+             id="delivery-tabs-content-2"
+             aria-labelledby="delivery_tab_2"
+             role="tabpanel">
+            <div class="row">
+                @@loop('blocks/shop-card/shop-card.html', [{
+                "src": "assets/images/logo/logo.svg",
+                "address": "г.&nbsp;Минск, ул.&nbsp;Раковская, 18, офис&nbsp;11",
+                "descr": "(пять минут от ст. метро “Немига” или “Фрунзенская”)",
+                "timetable": "с 9:00 до 22:00"
+                }, {
+                "src": "assets/images/logo/green-city.png",
+                "address": "г.&nbsp;Минск, ул.&nbsp;Притыцкого, 156, “Green City”",
+                "descr": "(1-й этаж, возле магазина “КРАВТ”)",
+                "timetable": "с 10:00 до 22:00"
+                }, {
+                "src": "assets/images/logo/dana-mall.png",
+                "address": "г.&nbsp;Минск, ул.&nbsp;Петра Мстислава, 11, “Dana Mall”",
+                "descr": "(2-й этаж, возле магазина “Stradivarius”) ",
+                "timetable": "с 10:00 до 22:00"
+                }])
+            </div>
+        </div>
+        <div class="tabs-content"
+             id="delivery-tabs-content-3"
+             aria-labelledby="delivery_tab_3"
+             role="tabpanel">
+            <div class="delivery-block__content">
+                <h2 class="section-title">Доставка почтой</h2>
+                <div class="text-block">
+                    <p class="color-default">Доставка осущетвляется по Беларуси в течении 3-5 рабочих дней с момента заказа</p>
+                </div>
+                @@include('blocks/price-block/price-block.html', {"price": "9 руб"})
+            </div>
+        </div>
+        <div class="tabs-content"
+             id="delivery-tabs-content-4"
+             aria-labelledby="delivery_tab_4"
+             role="tabpanel">
+            <div class="delivery-block__content">
+                <h2 class="section-title">Электронный сертификат</h2>
+                <div class="text-block">
+                    <p class="color-default">
+                        Ссылка на сертификат на электронном бланке мгновенно отправится получателю по SMS. На телефон получателя придет аккуратно оформленный бланк, который можно распечатать или переслать
+                    </p>
+                </div>
+            </div>
+        </div>
+        <div class="tabs-content"
+             id="delivery-tabs-content-5"
+             aria-labelledby="delivery_tab_5"
+             role="tabpanel">
+            <div class="delivery-block__content">
+                <h2 class="section-title">Для юр. лиц и ИП</h2>
+                <div class="text-block">
+                    <p class="color-default">
+                        Юридические лица и индивидуальные предприниматели могут приобрести подарочные сертификаты как за наличный, так и за безналичный рассчет. Для оформления заказа необходимо связаться с менеджером по электронной почте <a href="mailto:vi@surprise.by"
+                           class="menu-link">vi@surprise.by</a>
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>

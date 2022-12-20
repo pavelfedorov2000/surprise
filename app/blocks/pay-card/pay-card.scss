@@ -1,0 +1,27 @@
+.pay-card {
+    padding: var(--offset-xl) var(--offset-m);
+    background-color: #fff;
+    border-radius: $brs-card-xl;
+    box-shadow: $bsh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+
+    // .pay-card__img
+
+    &__img {
+        height: 56px;
+        margin-bottom: var(--offset-m);
+    }
+
+    // .pay-card__title
+
+    &__title {
+        font-size: 20px;
+
+        &:not(:last-child) {
+            margin-bottom: 20px;
+        }
+    }
+}

@@ -1,0 +1,19 @@
+.price-block {
+    @include row-grid(var(--offset-xs));
+    align-content: start;
+    justify-items: start;
+    // .price-block__title
+
+    &__title {
+        @extend %museo-500;
+        font-size: 24px;
+    }
+
+    // .price-block__value
+
+    &__value {
+        @extend %museo-700;
+        font-size: 20px;
+        color: var(--text-color);
+    }
+}

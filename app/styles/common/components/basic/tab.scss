@@ -17,7 +17,10 @@
 .tabs {
     display: flex;
     margin-bottom: var(--offset-xxxl);
-    overflow-x: auto;
+
+    @media(max-width: $lg) {
+        overflow-x: auto;
+    }
 
     @media(max-width: $md) {
         margin-bottom: var(--offset-l);
@@ -27,6 +30,38 @@
         width: 0;
         -webkit-appearance: none;
         scrollbar-width: 0;
+    }
+
+    &__list {
+        display: flex;
+
+        //width: 100%;
+        @media(max-width: $lg) {
+            overflow-x: auto;
+        }
+
+        /* &::-webkit-scrollbar {
+            width: 0;
+            -webkit-appearance: none;
+            scrollbar-width: 0;
+        } */
+
+        &--items {
+            &_2 {
+                > * {
+                    @media(max-width: $lg) {
+                        width: 50%;
+                    }
+                }
+            }
+        }
+    }
+
+    &--style {
+        &_line {
+            padding-bottom: 0;
+            border-bottom: 2px solid var(--green);
+        }
     }
 
     &--items {
@@ -47,7 +82,11 @@
 }
 
 .tab {
+    $this: &;
+
     padding: var(--offset-xxs) var(--offset-m);
+    display: inline-flex;
+    align-items: center;
     background-color: #F5F8F8;
     color: $color-default;
     border-radius: $brs;
@@ -57,9 +96,60 @@
     margin-right: var(--offset-s);
     transition: $transition all;
 
+    &__circle {
+        position: relative;
+        flex-shrink: 0;
+        width: var(--icon-size);
+        height: var(--icon-size);
+        margin-right: var(--offset-m);
+        transition: $transition box-shadow;
+
+        @media(max-width: $sm) {
+            margin-right: var(--offset-xs);
+        }
+
+        &::before,
+        &::after {
+            content: '';
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+        }
+
+        &:before {
+            width: 20px;
+            height: 20px;
+            border-radius: 50%;
+            border: 2px solid var(--text-color);
+            transition: $transition border-color;
+        }
+
+        &:after {
+            width: var(--offset-xs);
+            height: var(--offset-xs);
+            border-radius: 50%;
+            background-color: #fff;
+            opacity: 0;
+            transition: $transition opacity;
+        }
+    }
+
     &.active {
         background-color: var(--green);
         color: #fff;
+
+        #{$this} {
+            &__circle {
+                &:before {
+                    border-color: #fff;
+                }
+
+                &:after {
+                    opacity: 1;
+                }
+            }
+        }
     }
 
     @media (any-hover: hover) {
@@ -94,5 +184,61 @@
                 }
             }
         }
+
+        &_radio {
+            margin-right: 0;
+            border-radius: $brs-card-xl $brs-card-xl 0 0;
+            background-color: transparent;
+            //box-shadow: 0 -15px 30px rgba(0, 0, 0, 0.08);
+            padding: 25px;
+            color: var(--text-color);
+
+            @media(max-width: $sm) {
+                padding: var(--offset-s);
+            }
+
+            @media(max-width: $lg) {
+                width: 100%;
+            }
+
+            @media (any-hover: hover) {
+                &:hover {
+                    background-color: transparent;
+                    color: var(--green);
+
+                    #{$this} {
+                        &__circle {
+                            &:before {
+                                border-color: var(--green);
+                            }
+                        }
+                    }
+                }
+            }
+
+            &.active {
+                @extend %museo-700;
+                color: #fff;
+                background-color: var(--green);
+
+                #{$this} {
+                    &__circle {
+                        &:before {
+                            border-color: #fff;
+                        }
+
+                        &:after {
+                            opacity: 1;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+.js-certificate-tab {
+    @media(min-width: 1025px) {
+        min-width: 360px;
     }
 }

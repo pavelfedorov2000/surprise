@@ -373,6 +373,10 @@
                 gap: var(--offset-xls);
             }
         }
+
+        &_xl {
+            gap: var(--offset-xl);
+        }
     }
 
     &--row-gap {

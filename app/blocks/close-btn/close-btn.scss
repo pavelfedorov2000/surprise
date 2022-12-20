@@ -12,3 +12,9 @@
         }
     }
 }
+
+.pc-hidden {
+    @media(min-width: 1201px) {
+        display: none;
+    }
+}

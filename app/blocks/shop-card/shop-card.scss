@@ -1,0 +1,12 @@
+.shop-card {
+    @include row-grid(var(--offset-xl));
+    justify-items: start;
+    padding: var(--offset-xl);
+    background-color: #fff;
+    box-shadow: $bsh;
+    border-radius: 15px;
+
+    @media(max-width: $sm) {
+        padding: var(--offset-m);
+    }
+}

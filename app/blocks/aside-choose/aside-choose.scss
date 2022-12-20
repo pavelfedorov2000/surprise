@@ -1,10 +1,11 @@
 .aside-choose {
     @include sticky(var(--offset-xl));
+    @include row-grid(var(--offset-l));
+    align-content: start;
     padding: var(--offset-xl);
     background-color: #fff;
     box-shadow: $bsh;
     border-radius: $brs-card-xl;
-    @include row-grid(var(--offset-l));
 
     @media(max-width: $xl) {
         position: fixed;
@@ -18,14 +19,14 @@
         transition: $transition top;
     }
 
+    @media(max-width: $sm) {
+        row-gap: var(--offset-m);
+    }
+
     &.active {
         @media(max-width: $xl) {
             top: 0;
         }
-    }
-
-    @media(max-width: $sm) {
-        row-gap: var(--offset-m);
     }
 
     &__close {
