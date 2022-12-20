@@ -11,7 +11,7 @@
 		}
 
 		@media(max-width: $md) {
-			row-gap: var(--offset-m);
+			gap: var(--offset-m);
 		}
 	}
 
