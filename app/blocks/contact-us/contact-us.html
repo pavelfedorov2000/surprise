@@ -12,26 +12,26 @@
             </div>
             <div class="contact-us__form card">
                 <h2 class="section-title contact-us__form-title">Оставить заявку </h2>
-                <form class="form">
+                <form class="form js-form">
                     <label class="form__field">
                         <span class="form-label">Ваше имя *</span>
                         <input class="input"
-                               name="name"
-                               placeholder="Ваше имя">
+                               placeholder="Ваше имя"
+                               required
+                               data-pristine-required-message="Поле не может быть пустым">
                     </label>
                     <label class="form__field">
                         <span class="form-label">Ваша почта *</span>
                         <input class="input"
-                               name="email"
                                type="email"
-                               placeholder="example@mail.com">
+                               placeholder="example@mail.com"
+                               required
+                               data-pristine-required-message="Поле не может быть пустым">
                     </label>
                     <label class="form__field">
                         <span class="form-label">Сообщение</span>
-                        <input class="input"
-                               name="email"
-                               type="email"
-                               placeholder="Placeholder">
+                        <textarea class="input"
+                                  placeholder="Placeholder"></textarea>
                     </label>
                     <button class="btn"
                             type="submit">Отправить</button>

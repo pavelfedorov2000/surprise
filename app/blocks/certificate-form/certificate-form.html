@@ -1,5 +1,5 @@
 <form action="#"
-      class="certificate-form">
+      class="certificate-form js-form">
     <div class="certificate-form__items">
         <div class="certificate-form__title">
             Выбери сертификат, который хотите активировать
@@ -14,32 +14,36 @@
         "id": "certificate3"
         })
     </div>
-    <div class="card form form--style_flex-element">
+    <div class="form form--style_flex-element">
         <label class="form__field">
             <span class="form-label">Код активации</span>
             <input class="input"
-                   name="activation_code"
-                   placeholder="123****12">
+                   placeholder="123****12"
+                   required
+                   data-pristine-required-message="Поле не может быть пустым">
         </label>
         <label class="form__field">
             <span class="form-label">Ваше имя *</span>
             <input class="input"
-                   name="name"
-                   placeholder="Ваше имя">
+                   placeholder="Ваше имя"
+                   required
+                   data-pristine-required-message="Поле не может быть пустым">
         </label>
         <label class="form__field">
             <span class="form-label">Ваш номер телефона *</span>
             <input class="input"
-                   name="phone"
                    type="tel"
-                   placeholder="+ 375 ()">
+                   placeholder="+ 375 ()"
+                   required
+                   data-pristine-required-message="Поле не может быть пустым">
         </label>
         <label class="form__field">
             <span class="form-label">Ваш email *</span>
             <input class="input"
-                   name="email"
                    type="email"
-                   placeholder="example@mail.com">
+                   placeholder="example@mail.com"
+                   required
+                   data-pristine-required-message="Поле не может быть пустым">
         </label>
         <button class="btn"
                 type="submit">Отправить</button>

@@ -2,72 +2,40 @@ app.validation = {
     name: 'validation',
     description: 'your script description',
     init() {
-        // validation
-        $.validator.addMethod("minlenghtphone", function (value, element) {
-            return value.replace(/\D+/g, '').length > 10;
-        });
-        $.validator.addMethod("requiredphone", function (value, element) {
-            return value.replace(/\D+/g, '').length > 1;
-        });
+        const form = document.querySelector('.js-form');
 
-
-        function validateForms(form) {
-            $(form).validate({
-                rules: {
-                    name: "required",
-                    phone: {
-                        requiredphone: true,
-                        minlenghtphone: true,
-                    },
-                    email: "required",
-                    password: "required",
-                    repeat_password: {
-                        required: true,
-                        equalTo: "#reg_pass",
-                    }
-                },
-                submitHandler: function () {
-                    /* $.magnificPopup.open({
-                        items: {
-                            src: '#success',
-                        }
-                    }); */
-                },
-            });
-        }
-
-        validateForms('#popup form');
-
-
-        $('form').on('sumbit', function (e) {
-            e.preventDefault();
-
-            $.ajax({
-                type: "POST",
-                url: "send.php",
-                data: $(this).serialize(),
-            });
-            $('.form__input').removeClass('valid');
-            $(this).find("input").val("");
-            $('form').trigger('reset');
-            return false;
-        });
-
-        $.fn.setCursorPosition = function (pos) {
-            if ($(this).get(0).setSelectionRange) {
-                $(this).get(0).setSelectionRange(pos, pos);
-            } else if ($(this).get(0).createTextRange) {
-                var range = $(this).get(0).createTextRange();
-                range.collapse(true);
-                range.moveEnd('character', pos);
-                range.moveStart('character', pos);
-                range.select();
-            }
+        let defaultConfig = {
+            // class of the parent element where the error/success class is added
+            classTo: 'form__field',
+            errorClass: 'error',
+            successClass: 'success',
+            // class of the parent element where error text element is appended
+            errorTextParent: 'form__field',
+            // type of element to create for the error text
+            errorTextTag: 'span',
+            // class of the error text element
+            errorTextClass: 'error-text'
         };
 
+        // create the pristine instance
+        let pristine = new Pristine(form, defaultConfig);
+
+        form.addEventListener('submit', function (e) {
+            e.preventDefault();
+
+            pristine.validate(); // returns true or false
+        });
+
+        //const phoneInput = document.querySelector('input[type=tel]');
+
+        /* pristine.addValidator(phoneInput, function (value) {
+            if (value.replace(/\D+/g, '').length > 0) {
+                return true;
+            }
+            return false;
+        }, "Некорректный номер", 2, false); */
+
         // phone mask
-        $("input[name=phone]").on('click', function () {
-            $(this).setCursorPosition(4);
-        }).mask("+7 (999) 999-99-99");
+        //$("input[type=tel]").mask("+375 (99) 999-99-99");
     },
 };

@@ -79,13 +79,9 @@ h {
         }
     }
 
-    &--without {
-        &_mb {
-            margin-bottom: 0;
-
-            @media(max-width: $md) {
-                margin-bottom: 0;
-            }
+    &--with {
+        &_margin-bottom {
+            margin-bottom: var(--offset-xl);
         }
     }
 

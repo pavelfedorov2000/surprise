@@ -1,8 +1,33 @@
-label.error {
-    @extend %text-12;
-    color: red;
+.error-text {
+    position: relative;
+    padding-left: 28px;
+    font-size: 14px;
+    line-height: 19px;
+    color: var(--red);
+
+    &::before {
+        content: '';
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 20px;
+        height: 20px;
+        background-image: url(../images/icons/error.svg);
+    }
 }
 
-.input.error {
-    border-color: red;
+.form {
+    &__field {
+        &.error {
+            .input {
+                border-color: var(--red);
+            }
+        }
+
+        &.success {
+            .input {
+                border-color: var(--green);
+            }
+        }
+    }
 }

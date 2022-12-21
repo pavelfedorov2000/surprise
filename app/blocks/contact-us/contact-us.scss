@@ -61,7 +61,9 @@
         }
 
         .form {
-            @media(max-width: $lg) {
+            box-shadow: none;
+
+            @media(max-width: $xl) {
                 padding: 0;
             }
         }

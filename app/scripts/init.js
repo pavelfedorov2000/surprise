@@ -7,10 +7,10 @@ $(document).ready(function () {
     app.starRating.init();
     app.cart.init();
     app.popup.init();
+    app.validation.init();
 
     $('.tab').on('click', function () {
         const $tab = $(this);
-        const tabId = $tab.attr('id').split('_').at(-1);
         const $tabNotActive = $tab.closest('.tabs').find('.tab.active');
         const tabNotActiveId = $tabNotActive.attr('id').split('_').at(-1);
         const $tabsContent = $(`#${$tab.attr('aria-controls')}`);
@@ -385,57 +385,4 @@ $(document).ready(function () {
     if (document.querySelectorAll('[data-da').length) {
         da.init();
     }
-    //smoooth scroll to section
-    /* document.querySelectorAll('.menu__link').forEach(link => {
-        link.addEventListener('click', (e) => {
-            e.preventDefault();
-            window.scrollTo({
-                top: document.getElementById(link.getAttribute('data-section')).offsetTop,
-                behavior: "smooth"
-            });
-            body.classList.remove('_lock');
-            burgerBtn.classList.remove('.is-active');
-            burgerMenu.classList.remove('.is-active');
-        });
-    }); */
-
-    // popups
-    //jquery
-    /* $('.open-popup').on('click', function () {
-        $('body').addClass('_lock');
-        $('.overlay').fadeIn('slow');
-        $(`#${$(this).data('popup')}-popup`).fadeIn('slow');
-    });
-    $('.popup__close').on('click', function () {
-        $('body').removeClass('_lock');
-        $('.overlay').fadeOut('slow');
-        $(this).parent().fadeIn('slow');
-    }); */
-
-
-    // magnific
-    /* $('.open-video').magnificPopup({
-        type: 'iframe',
-        preloader: false,
-    });
-    
-    
-    $('.popup-link').magnificPopup({
-        type: 'inline' // к попапу добавить класс mfp-hide // Через кнопку data-mfp-src="#call_me" добавить кнопке
-    });
-    
-    $('.popup-gallery').magnificPopup({
-        delegate: 'a',
-        type: 'image',
-        tLoading: 'Loading image #%curr%...',
-        mainClass: 'mfp-img-mobile',
-        gallery: {
-            enabled: true,
-            navigateByImgClick: true,
-            preload: [0, 1]
-        },
-        image: {
-            tError: '<a href="%url%">The image #%curr%</a> could not be loaded',
-        }
-    }); */
 });
