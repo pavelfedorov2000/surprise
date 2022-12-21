@@ -1,0 +1,73 @@
+.policy {
+    > ol {
+        @include row-grid(var(--offset-xxxl));
+
+        > li {
+            position: relative;
+            padding-left: var(--offset-l);
+
+            &:before {
+                position: absolute;
+                top: 0;
+                left: 0;
+            }
+
+            > ol {
+                margin-left: calc(var(--offset-l) * (-1));
+            }
+        }
+
+        ol {
+            @include row-grid(var(--offset-m));
+        }
+    }
+
+    ol {
+        counter-reset: list-1;
+
+        li {
+            @extend %museo-300;
+            color: var(--text-color);
+
+            &::before {
+                @extend %museo-500;
+                @extend .section-title;
+                content: counter(list-1)'.';
+                counter-increment: list-1;
+                color: #000;
+            }
+        }
+
+        ol {
+            counter-reset: list-2;
+            margin-top: var(--offset-m);
+
+            li {
+                &::before {
+                    @extend %museo-300;
+                    content: counter(list-1) '.'counter(list-2) '. ';
+                    counter-increment: list-2;
+                    font-size: #{$fz}px;
+                    color: var(--text-color);
+                }
+            }
+
+            ol {
+                counter-reset: list-3;
+
+                li {
+                    &::before {
+                        content: counter(list-1) '.'counter(list-2) '.'counter(list-3) '. ';
+                        counter-increment: list-3;
+                    }
+                }
+            }
+        }
+    }
+
+    h2 {
+        @extend .section-title;
+        color: #000;
+        position: relative;
+    }
+}

@@ -1,0 +1,24 @@
+@@include("blocks/head/head.html", {"title": "Где купить"})
+<!-- @@include("blocks/head/no-js.html") -->
+<div class="wrapper">
+    @@include("blocks/header/header.html")
+    <div class="overlay overlay--menu">
+        @@include('blocks/menu/menu.html')
+    </div>
+    <main class="page page--padding page--with_decor">
+        <div class="container">
+            @@include('blocks/breadcrumbs/breadcrumbs.html', {
+            "current": "Публичный довогор"
+            })
+            <div class="page__top">
+                <h1 class="page-title">Публичный довогор</h1>
+            </div>
+        </div>
+        @@include('blocks/policy/policy.html')
+    </main>
+    @@include('blocks/footer/footer.html')
+</div>
+@@include("blocks/link/link.html")
+</body>
+
+</html>
