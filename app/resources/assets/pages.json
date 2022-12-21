@@ -34,9 +34,11 @@
     "title": "Каталог"
 }, {
     "href": "activate-certificate.html",
+    "new": true,
     "title": "Активация сертификата"
 }, {
     "href": "activate-certificate-2.html",
+    "new": true,
     "title": "Активация сертификата 2"
 }, {
     "href": "certificate.html",
@@ -77,4 +79,8 @@
     "href": "delivery.html",
     "new": true,
     "title": "Доставка и оплата"
+}, {
+    "href": "shops.html",
+    "new": true,
+    "title": "Где купить"
 }]

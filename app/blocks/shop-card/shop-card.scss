@@ -7,6 +7,13 @@
     border-radius: 15px;
 
     @media(max-width: $sm) {
-        padding: var(--offset-m);
+        row-gap: 20px;
+        padding: var(--offset-xl) 20px;
+    }
+
+    &__logo {
+        @media(max-width: $sm) {
+            margin-bottom: 20px;
+        }
     }
 }

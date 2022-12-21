@@ -53,6 +53,8 @@
 }
 
 .map {
+    $this: &;
+
     position: relative;
 
     @media(max-width: $md) {
@@ -66,9 +68,33 @@
         width: 100%;
         height: 100%;
         object-fit: cover;
+    }
 
-        @media(min-width: 1025px) {
-            border-radius: 15px;
+    &--full-width {
+        margin-top: -60px;
+        padding-bottom: 34.375%;
+
+        @media(max-width: $md) {
+            padding-bottom: 91.47%;
+        }
+
+        &::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            z-index: 10;
+            height: 60px;
+            background-color: #fff;
+        }
+    }
+
+    &:not(#{$this}--full-width) {
+        > * {
+            @media(min-width: 1025px) {
+                border-radius: 15px;
+            }
         }
     }
 }
