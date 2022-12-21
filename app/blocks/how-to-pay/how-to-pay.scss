@@ -17,16 +17,8 @@
         grid-template-columns: repeat(auto-fit, minmax(245px, 1fr));
         gap: 52px;
 
-        /* display: flex;
-        flex-wrap: wrap;
-        margin-left: -52px;
-        margin-bottom: calc(var(--offset-m) * (-1)); */
-
-        /* > * {
-            margin-left: 52px;
-            margin-bottom: var(--offset-m);
-            width: calc(20% - 52px);
-            min-width: 245px;
-        } */
+        @media(max-width: $md) {
+            gap: var(--offset-l);
+        }
     }
 }

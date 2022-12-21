@@ -17,10 +17,7 @@
 .tabs {
     display: flex;
     margin-bottom: var(--offset-xxxl);
-
-    @media(max-width: $lg) {
-        overflow-x: auto;
-    }
+    overflow-x: auto;
 
     @media(max-width: $md) {
         margin-bottom: var(--offset-l);
@@ -29,16 +26,15 @@
     &::-webkit-scrollbar {
         width: 0;
         -webkit-appearance: none;
-        scrollbar-width: 0;
+        scrollbar-width: none;
+        /* background-color: var(--green);
+        scrollbar-width: thin;
+        scrollbar-color: var(--green); */
     }
 
     &__list {
         display: flex;
-
-        //width: 100%;
-        @media(max-width: $lg) {
-            overflow-x: auto;
-        }
+        overflow-x: auto;
 
         /* &::-webkit-scrollbar {
             width: 0;

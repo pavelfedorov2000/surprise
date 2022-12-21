@@ -2,6 +2,11 @@
     @include row-grid(var(--offset-xs));
     align-content: start;
     justify-items: start;
+
+    @media(max-width: $sm) {
+        row-gap: var(--offset-xxxs);
+    }
+
     // .price-block__title
 
     &__title {
