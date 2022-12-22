@@ -1,9 +1,5 @@
 .partners-slider {
     height: max-content;
-
-    /* @media(max-width: $sm) {
-       height: 100px;
-    } */
 }
 
 .partner-logo {
@@ -11,7 +7,20 @@
     height: 150px;
 
     @media(max-width: $sm) {
-       width: 100px;
-       height: 100px;
+        width: 100px;
+        height: 100px;
+    }
+
+    img {
+        @media(min-width: 1025px) {
+            filter: grayscale(100%);
+            transition: $transition filter;
+        }
+
+        @media (any-hover: hover) {
+            &:hover {
+                filter: none;
+            }
+        }
     }
 }

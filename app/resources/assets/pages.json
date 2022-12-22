@@ -70,6 +70,7 @@
     "title": "Личный кабинет - Неоплаченные заказы"
 }, {
     "href": "profile-empty.html",
+    "new": true,
     "title": "Личный кабинет - Неоплаченные заказы (пустая)"
 }, {
     "href": "vacancies.html",

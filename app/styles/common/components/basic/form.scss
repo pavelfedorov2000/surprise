@@ -28,6 +28,16 @@ textarea {
     }
 }
 
+.form-item {
+    @include row-grid(var(--offset-xxs));
+
+    &--flex {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+    }
+}
+
 .input {
     padding: calc(var(--offset-s) - 1px) var(--offset-m);
     border: $border;
@@ -132,12 +142,6 @@ textarea {
                 margin-left: var(--offset-xs);
             }
         }
-    }
-
-    // .form__field
-
-    &__field {
-        @include row-grid(var(--offset-xxxs));
     }
 
     &-small {

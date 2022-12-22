@@ -39,7 +39,7 @@ app.menu = {
                 $menuBtn.attr('aria-expanded', false);
                 $menu.removeClass('active');
                 $popup.fadeOut();
-                $('.overlay--menu').fadeOut();
+                $('.overlay').fadeOut();
                 $('body').removeClass('_lock');
                 $('html').removeClass('disable-fix');
             }

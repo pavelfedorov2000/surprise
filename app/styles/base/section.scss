@@ -13,14 +13,6 @@
         &_xl {
             padding-bottom: var(--section-padding-xl);
         }
-
-        /* &_xxl {
-            padding-bottom: var(--section-padding-xxl);
-
-            @media(max-width: $lg) {
-                padding-bottom: var(--offset-xxxl);
-            }
-        } */
     }
 
     &--with {
@@ -29,6 +21,26 @@
 
             @media(max-width: $lg) {
                 padding-top: var(--offset-xxxl);
+            }
+        }
+
+        &_decor {
+            @media(min-width: 1201px) {
+                position: relative;
+
+                &::before {
+                    content: '';
+                    position: absolute;
+                    top: 50%;
+                    transform: translateY(-50%);
+                    left: 0;
+                    z-index: -1;
+                    width: calc(355 * 100vw / 1920);
+                    height: calc(683 * 100vw / 1920);
+                    background-image: url(../images/decor/page-aside-decor.svg);
+                    background-size: contain;
+                    background-repeat: no-repeat;
+                }
             }
         }
     }

@@ -6,15 +6,8 @@
     }
 
     &::before {
-        @media(min-width: 1025px) {
-            content: '';
-            position: absolute;
+        @media(min-width: 1201px) {
             bottom: -50px;
-            left: 0;
-            z-index: -1;
-            width: 355px;
-            height: 683px;
-            background-image: url(../images/decor/page-aside-decor.svg);
         }
     }
 

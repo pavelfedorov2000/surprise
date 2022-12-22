@@ -1,229 +1,230 @@
 .catalog-card {
-	position: relative;
-	z-index: 0;
-	display: flex;
-	flex-direction: column;
+    position: relative;
+    z-index: 0;
+    display: flex;
+    flex-direction: column;
 
-	.slider-btn {
-		@media(max-width: $md) {
-			display: none;
-		}
-	}
+    .slider-btn {
+        @media(max-width: $md) {
+            display: none;
+        }
+    }
 
-	&__favorite {
-		position: absolute;
-		top: 20px;
-		right: 20px;
+    &__favorite {
+        position: absolute;
+        top: 20px;
+        right: 20px;
+        z-index: 1;
 
-		@media(max-width: $sm) {
-			top: var(--offset-s);
-			right: var(--offset-s);
-		}
-	}
+        @media(max-width: $sm) {
+            top: var(--offset-s);
+            right: var(--offset-s);
+        }
+    }
 
-	// .catalog-card__slider
+    // .catalog-card__slider
 
-	&__slider {
-		position: relative;
-		z-index: -1;
-		width: 100%;
-		height: 280px;
-		margin-bottom: var(--offset-m);
+    &__slider {
+        position: relative;
+        z-index: -1;
+        width: 100%;
+        height: 280px;
+        margin-bottom: var(--offset-m);
 
-		@media(max-width: $sm) {
-			height: 240px;
-		}
+        @media(max-width: $sm) {
+            height: 240px;
+        }
 
-		@media(min-width: 1201px) {
-			max-width: 437px;
-		}
+        @media(min-width: 1201px) {
+            max-width: 437px;
+        }
 
-		.swiper-slide {
-			//padding-bottom: 63.255%;
-			border-radius: $brs;
+        .swiper-slide {
+            //padding-bottom: 63.255%;
+            border-radius: $brs;
 
-			img {
-				border-radius: $brs;
-			}
-		}
+            img {
+                border-radius: $brs;
+            }
+        }
 
-		.swiper-horizontal>.swiper-pagination-bullets,
-		.swiper-pagination-bullets.swiper-pagination-horizontal {
-			display: flex;
-			justify-content: center;
-			bottom: var(--offset-xs);
-		}
+        .swiper-horizontal > .swiper-pagination-bullets,
+        .swiper-pagination-bullets.swiper-pagination-horizontal {
+            display: flex;
+            justify-content: center;
+            bottom: var(--offset-xs);
+        }
 
-		.swiper-horizontal>.swiper-pagination-bullets .swiper-pagination-bullet,
-		.swiper-pagination-horizontal.swiper-pagination-bullets .swiper-pagination-bullet {
-			position: relative;
-			width: var(--offset-s);
-			height: var(--offset-s);
-			border-radius: 50%;
-			background-color: transparent;
-			opacity: 1;
-			margin: 0;
+        .swiper-horizontal > .swiper-pagination-bullets .swiper-pagination-bullet,
+        .swiper-pagination-horizontal.swiper-pagination-bullets .swiper-pagination-bullet {
+            position: relative;
+            width: var(--offset-s);
+            height: var(--offset-s);
+            border-radius: 50%;
+            background-color: transparent;
+            opacity: 1;
+            margin: 0;
 
-			&::before {
-				content: '';
-				position: absolute;
-				top: 50%;
-				left: 50%;
-				transform: translate(-50%, -50%);
-				width: 8px;
-				height: 8px;
-				border-radius: 50%;
-				background-color: #fff;
-				transition: $transition background-color;
-			}
+            &::before {
+                content: '';
+                position: absolute;
+                top: 50%;
+                left: 50%;
+                transform: translate(-50%, -50%);
+                width: 8px;
+                height: 8px;
+                border-radius: 50%;
+                background-color: #fff;
+                transition: $transition background-color;
+            }
 
-			@media (any-hover: hover) {
-				&:hover {
-					&:before {
-						background-color: var(--pink);
-					}
-				}
-			}
+            @media (any-hover: hover) {
+                &:hover {
+                    &:before {
+                        background-color: var(--pink);
+                    }
+                }
+            }
 
-			&-active {
-				&:before {
-					background-color: var(--pink);
-				}
-			}
-		}
+            &-active {
+                &:before {
+                    background-color: var(--pink);
+                }
+            }
+        }
 
-		.slider-btn {
-			opacity: 0;
-			visibility: hidden;
-			pointer-events: none;
-		}
+        .slider-btn {
+            opacity: 0;
+            visibility: hidden;
+            pointer-events: none;
+        }
 
-		@media (any-hover: hover) {
-			&:hover {
-				.slider-btn {
-					opacity: 1;
-					visibility: visible;
-					pointer-events: auto;
-				}
-			}
-		}
-	}
+        @media (any-hover: hover) {
+            &:hover {
+                .slider-btn {
+                    opacity: 1;
+                    visibility: visible;
+                    pointer-events: auto;
+                }
+            }
+        }
+    }
 
-	// .catalog-card__title
+    // .catalog-card__title
 
-	&__title {
-		margin-bottom: var(--offset-s);
-		font-size: 24px;
+    &__title {
+        margin-bottom: var(--offset-s);
+        font-size: 24px;
 
-		@media(max-width: $sm) {
-			font-size: 20px;
-			margin-bottom: var(--offset-xxs);
-		}
-	}
+        @media(max-width: $sm) {
+            font-size: 20px;
+            margin-bottom: var(--offset-xxs);
+        }
+    }
 
-	// .catalog-card__text
+    // .catalog-card__text
 
-	&__text {
-		flex-grow: 1;
-		margin-bottom: var(--offset-m);
-	}
+    &__text {
+        flex-grow: 1;
+        margin-bottom: var(--offset-m);
+    }
 
-	// .catalog-card__bottom
+    // .catalog-card__bottom
 
-	&__bottom {
-		@include row-grid(var(--offset-m));
+    &__bottom {
+        @include row-grid(var(--offset-m));
 
-		@media(min-width: 768px) {
-			margin-top: auto;
-		}
-	}
+        @media(min-width: 768px) {
+            margin-top: auto;
+        }
+    }
 
-	// .catalog-card__info
+    // .catalog-card__info
 
-	&__info {
-		@media(min-width: 576px) {
-			display: flex;
-			align-items: flex-end;
-			justify-content: space-between;
-		}
+    &__info {
+        @media(min-width: 576px) {
+            display: flex;
+            align-items: flex-end;
+            justify-content: space-between;
+        }
 
-		@media(max-width: $sm) {
-			@include row-grid(var(--offset-m));
-		}
-	}
+        @media(max-width: $sm) {
+            @include row-grid(var(--offset-m));
+        }
+    }
 
-	// .catalog-card__rating
+    // .catalog-card__rating
 
-	&__rating {
-		align-items: flex-start;
+    &__rating {
+        align-items: flex-start;
 
-		>* {
-			margin-right: var(--offset-s);
-		}
-	}
+        > * {
+            margin-right: var(--offset-s);
+        }
+    }
 
-	// .catalog-card__btns
+    // .catalog-card__btns
 
-	&__btns {
-		grid-template-columns: repeat(2, 1fr);
-	}
+    &__btns {
+        grid-template-columns: repeat(2, 1fr);
+    }
 
-	&__btn {
-		@include padding-x(var(--offset-xs));
-	}
+    &__btn {
+        @include padding-x(var(--offset-xs));
+    }
 }
 
 .prices {
-	display: grid;
-	grid-auto-columns: max-content;
-	grid-auto-flow: column;
-	align-items: flex-end;
-	column-gap: 7px;
-	white-space: nowrap;
+    display: grid;
+    grid-auto-columns: max-content;
+    grid-auto-flow: column;
+    align-items: flex-end;
+    column-gap: 7px;
+    white-space: nowrap;
 
-	/* span {
+    /* span {
 		line-height: 2;
 	} */
 
-	b {
-		line-height: 1.2;
-	}
+    b {
+        line-height: 1.2;
+    }
 }
 
 .price {
-	@extend %museo-700;
-	font-size: 24px;
+    @extend %museo-700;
+    font-size: 24px;
 }
 
 .favorite-btn {
-	$this: &;
+    $this: &;
 
-	display: grid;
-	place-items: center;
-	width: var(--offset-xl);
-	height: var(--offset-xl);
-	background-color: rgba(255, 255, 255, 0.8);
-	backdrop-filter: blur(2px);
-	border-radius: $brs-xs;
+    display: grid;
+    place-items: center;
+    width: var(--offset-xl);
+    height: var(--offset-xl);
+    background-color: rgba(255, 255, 255, 0.8);
+    backdrop-filter: blur(2px);
+    border-radius: $brs-xs;
 
-	&__icon {
-		stroke: var(--black);
-		transition: $transition stroke,
-			$transition fill;
-	}
+    &__icon {
+        stroke: var(--black);
+        transition: $transition stroke,
+            $transition fill;
+    }
 
-	@media (any-hover: hover) {
-		&:hover {
-			#{$this}__icon {
-				stroke: var(--pink);
-			}
-		}
-	}
+    @media (any-hover: hover) {
+        &:hover {
+            #{$this}__icon {
+                stroke: var(--pink);
+            }
+        }
+    }
 
-	&.active {
-		#{$this}__icon {
-			fill: var(--pink);
-			stroke: var(--pink);
-		}
-	}
+    &.active {
+        #{$this}__icon {
+            fill: var(--pink);
+            stroke: var(--pink);
+        }
+    }
 }

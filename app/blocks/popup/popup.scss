@@ -79,18 +79,6 @@
         @include row-grid(var(--offset-m));
     }
 
-    // .popup__form-item
-
-    &__form-item {
-        @include row-grid(var(--offset-xs));
-
-        &--flex {
-            display: flex;
-            align-items: center;
-            justify-content: space-between;
-        }
-    }
-
     &__btn {
         display: flex;
         justify-content: center;

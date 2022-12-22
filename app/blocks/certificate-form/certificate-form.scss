@@ -1,32 +1,30 @@
 .certificate-form {
-	display: grid;
-	gap: calc(80 / #{$container} * 100%);
-	//gap: var(--section-padding-xs);
-	align-items: flex-start;
-	padding-top: var(--offset-xxxl);
+    display: grid;
+    gap: calc(80 / #{$container} * 100%);
+    align-items: flex-start;
+    padding-top: var(--offset-xxxl);
 
-	@media(min-width: 1201px) {
-		//grid-template-columns: 1fr 500px;
-		grid-template-columns: 1fr calc(500 / #{$container} * 100%);
-	}
+    @media(min-width: 1201px) {
+        grid-template-columns: 1fr calc(500 / #{$container} * 100%);
+    }
 
-	@media(max-width: $xl) {
-		gap: var(--section-padding-xs);
-	}
+    @media(max-width: $xl) {
+        gap: var(--section-padding-xs);
+    }
 
-	@media(max-width: $lg) {
-		gap: var(--offset-xxxl);
-	}
+    @media(max-width: $lg) {
+        gap: var(--offset-xxxl);
+    }
 
-	// .certificate-form__items
+    // .certificate-form__items
 
-	&__items {
-		@include row-grid(var(--offset-xl));
-	}
+    &__items {
+        @include row-grid(var(--offset-xl));
+    }
 
-	// .certificate-form__title
+    // .certificate-form__title
 
-	&__title {
-		font-size: 24px;
-	}
+    &__title {
+        font-size: 24px;
+    }
 }

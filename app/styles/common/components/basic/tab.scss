@@ -57,6 +57,10 @@
         &_line {
             padding-bottom: 0;
             border-bottom: 2px solid var(--green);
+
+            .tabs__list {
+                width: 100%;
+            }
         }
     }
 

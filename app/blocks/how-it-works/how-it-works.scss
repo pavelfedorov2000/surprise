@@ -1,3 +1,10 @@
 .how-it-works {
-  // your code
+    @media(min-width: 1201px) {
+        &::before {
+            top: auto;
+            bottom: 150px;
+            left: -15px;
+            transform: none;
+        }
+    }
 }

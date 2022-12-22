@@ -6,6 +6,10 @@
         gap: var(--offset-l);
     }
 
+    @media(max-width: $xl) {
+        margin-bottom: calc(var(--offset-l) * 3);
+    }
+
     @media(min-width: 768px) {
         grid-template-columns: repeat(2, 1fr);
     }

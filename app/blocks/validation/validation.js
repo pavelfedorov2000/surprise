@@ -6,11 +6,11 @@ app.validation = {
 
         let defaultConfig = {
             // class of the parent element where the error/success class is added
-            classTo: 'form__field',
+            classTo: 'form-item',
             errorClass: 'error',
             successClass: 'success',
             // class of the parent element where error text element is appended
-            errorTextParent: 'form__field',
+            errorTextParent: 'form-item',
             // type of element to create for the error text
             errorTextTag: 'span',
             // class of the error text element

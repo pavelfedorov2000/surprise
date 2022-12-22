@@ -31,6 +31,10 @@ $(document).ready(function () {
         }
     });
 
+    $(document).on('click', '.profile-block__empty-btn', function () {
+        $(`.tab[aria-controls=${$(this).attr('aria-controls')}]`).trigger('click');
+    });
+
     $(document).on('click', '.more-text-btn', function () {
         const $moreTextBtn = $(this);
         const $text = $moreTextBtn.prev();

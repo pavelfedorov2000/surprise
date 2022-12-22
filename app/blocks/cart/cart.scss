@@ -1,103 +1,101 @@
 .cart {
-	--cart-aside: 375px;
+    --cart-aside: 375px;
 
-	display: grid;
-	gap: var(--offset-xxls);
+    display: grid;
+    gap: var(--offset-xxls);
 
-	@media(min-width: 1201px) {
-		grid-template-columns: 1fr var(--cart-aside);
-	}
+    @media(min-width: 1201px) {
+        grid-template-columns: 1fr var(--cart-aside);
+    }
 
-	@media(max-width: $xl) {
-		gap: var(--offset-xxxl);
-	}
+    @media(max-width: $xl) {
+        gap: var(--offset-xxxl);
+    }
 
-	&__body {
-		@include row-grid(var(--offset-xxxl));
-	}
+    &__body {
+        @include row-grid(var(--offset-xxxl));
+    }
 
-	&__body-inner {
-		@include row-grid(var(--offset-xxl));
+    &__body-inner {
+        @include row-grid(var(--offset-xxl));
 
-		@media(max-width: $md) {
-			row-gap: calc(var(--offset-xl) + var(--offset-xxxs));
-		}
-	}
+        @media(max-width: $md) {
+            row-gap: calc(var(--offset-xl) + var(--offset-xxxs));
+        }
+    }
 
-	&__sections {
-		display: grid;
-		gap: var(--offset-xxxl) 84px;
+    &__sections {
+        display: grid;
+        gap: var(--offset-xxxl) 84px;
 
-		@media(min-width: 1025px) {
-			grid-template-columns: repeat(2, 1fr);
-		}
-	}
+        @media(min-width: 1025px) {
+            grid-template-columns: repeat(2, 1fr);
+        }
+    }
 
-	&__section {
-		&--span-2 {
-			@media(min-width: 1025px) {
-				grid-column: span 2;
-			}
-		}
-	}
+    &__section {
+        &--span-2 {
+            @media(min-width: 1025px) {
+                grid-column: span 2;
+            }
+        }
+    }
 }
 
 .cart-section {
-	$this: &;
-	// .cart-section__title
+    $this: &;
+    // .cart-section__title
 
-	&__title {
-		margin-bottom: var(--offset-xl);
+    &__title {
+        margin-bottom: var(--offset-xl);
 
-		@media(max-width: $sm) {
-			margin-bottom: var(--offset-l);
-		}
-	}
+        @media(max-width: $sm) {
+            margin-bottom: var(--offset-l);
+        }
+    }
 
-	// .cart-section__fields
+    // .cart-section__fields
 
-	&__fields {
-		display: grid;
-		gap: var(--offset-m);
+    &__fields {
+        display: grid;
+        gap: var(--offset-m);
 
-		@media(min-width: 1025px) {
-			grid-template-columns: repeat(2, 1fr);
-		}
-	}
+        @media(min-width: 1025px) {
+            grid-template-columns: repeat(2, 1fr);
+        }
+    }
 
-	&__inner {
-		@include row-grid(var(--offset-l));
-	}
+    &__inner {
+        @include row-grid(var(--offset-l));
+    }
 
-	// .cart-section__field
+    // .cart-section__field
 
-	&__field {
-		@include row-grid(var(--offset-xxs));
+    &__field {
+        &--span-2 {
+            @media(min-width: 768px) {
+                grid-column: span 2;
+            }
 
-		&--span-2 {
-			@media(min-width: 768px) {
-				grid-column: span 2;
-			}
+            #{$this} {
+                &__radios {
+                    gap: var(--offset-xxs) var(--offset-m);
 
-			#{$this} {
-				&__radios {
-					gap: var(--offset-xxs) var(--offset-m);
+                    @media(min-width: 768px) {
+                        grid-template-columns: repeat(2, 1fr);
+                    }
 
-					@media(min-width: 768px) {
-						grid-template-columns: repeat(2, 1fr);
-					}
+                    > * {
+                        @media(min-width: 768px) {
+                            grid-column: 1 / 2;
+                        }
+                    }
+                }
+            }
+        }
+    }
 
-					>* {
-						@media(min-width: 768px) {
-							grid-column: 1 / 2;
-						}
-					}
-				}
-			}
-		}
-	}
-
-	&__radios {
-		@include row-grid(var(--offset-m));
-	}
+    &__radios {
+        @include row-grid(var(--offset-m));
+    }
 }

@@ -1,56 +1,56 @@
 @@include("blocks/head/head.html", {"title": "Разводящая"})
 <div class="wrapper">
-	@@include("blocks/layout/layout.html")
-	<main class="page">
-		<div class="_progress">
-			<div class="_progress__inner">
-				@@loop("blocks/progress/progress.html", "../resources/assets/pages.json")
-			</div>
-		</div>
-	</main>
-	@@include("blocks/footer/footer.html")
+    @@include("blocks/layout/layout.html")
+    <main class="page">
+        <div class="_progress">
+            <div class="_progress__inner">
+                @@loop("blocks/progress/progress.html", "../resources/assets/pages.json")
+            </div>
+        </div>
+    </main>
+    @@include("blocks/footer/footer.html")
 </div>
 @@include("blocks/link/link.html")
 <style>
-	._progress {
-		min-height: 100vh;
-		width: 100vw;
-		display: flex;
-		align-items: center;
-		justify-content: center;
-		padding: 10rem 0;
-	}
+    ._progress {
+        min-height: 100vh;
+        width: 100vw;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        padding: 10rem 0;
+    }
 
-	@media (max-width: 767px) {
-		._progress {
-			padding: 5rem 0;
-		}
-	}
+    @media (max-width: 767px) {
+        ._progress {
+            padding: 5rem 0;
+        }
+    }
 
-	@media (min-width: 768px) {
-		._progress__inner {
-			columns: 2;
-		}
-	}
+    @media (min-width: 768px) {
+        ._progress__inner {
+            columns: 2;
+        }
+    }
 
-	._progress__link {
-		display: block;
-		font-size: 1.5vmax;
-		margin-bottom: 10px;
-		font-weight: 700;
-		color: #222;
-		text-decoration: none;
-		transition: opacity 0.3s;
-	}
+    ._progress__link {
+        display: block;
+        font-size: 1.5vmax;
+        margin-bottom: 10px;
+        font-weight: 700;
+        color: #222;
+        text-decoration: none;
+        transition: opacity 0.3s;
+    }
 
-	._progress__link.new {
-		color: #258884;
-	}
+    ._progress__link.new {
+        color: #258884;
+    }
 
-	._progress__link:hover {
-		color: var(--accent);
-		opacity: 0.5;
-	}
+    ._progress__link:hover {
+        color: var(--accent);
+        opacity: 0.5;
+    }
 
 </style>
 </body>

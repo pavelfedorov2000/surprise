@@ -180,5 +180,22 @@
                 }
             }
         }
+
+        &_pre-footer-decor {
+            @media(min-width: 1201px) {
+                &::after {
+                    content: '';
+                    position: absolute;
+                    bottom: -120px;
+                    left: 0;
+                    z-index: -1;
+                    width: calc(355 * 100vw / 1920);
+                    height: calc(683 * 100vw / 1920);
+                    background-image: url(../images/decor/page-aside-decor.svg);
+                    background-size: contain;
+                    background-repeat: no-repeat;
+                }
+            }
+        }
     }
 }

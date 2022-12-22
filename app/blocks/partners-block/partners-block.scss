@@ -4,24 +4,38 @@
     @media(max-width: $md) {
         --logo-size: 100px
     }
-	// .partners-block__list
 
-	&__list {
-		display: grid;
-		grid-template-columns: repeat(auto-fill, minmax(var(--logo-size), 1fr));
-        grid-auto-rows: var(--logo-size);
-		gap: var(--offset-l) 108px;
+    // .partners-block__list
+
+    &__list {
+        display: grid;
+        grid-template-columns: repeat(auto-fill, minmax(var(--logo-size), 1fr));
+        grid-auto-rows: minmax(var(--logo-size), auto);
+        gap: var(--offset-l) 108px;
 
         @media(max-width: $md) {
             gap: 20px 21.5px;
         }
-	}
+    }
 
-	// .partners-block__item
+    // .partners-block__item
 
-	&__item {
-		display: flex;
-		align-items: center;
-		justify-content: center;
-	}
+    &__item {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
+        img {
+            @media(min-width: 1025px) {
+                filter: grayscale(100%);
+                transition: $transition filter;
+            }
+
+            @media (any-hover: hover) {
+                &:hover {
+                    filter: none;
+                }
+            }
+        }
+    }
 }

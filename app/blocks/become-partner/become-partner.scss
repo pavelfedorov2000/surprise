@@ -19,7 +19,7 @@
 
         @media(max-width: $lg) {
             grid-template-columns: var(--container-padding) 1fr var(--container-padding);
-            gap: var(--offset-l) 0;
+            gap: var(--offset-xxl) 0;
         }
     }
 
@@ -44,11 +44,11 @@
         }
     }
 
-    /* &__btn {
-        @media(max-width: $md) {
-            margin-bottom: var(--offset-m);
+    &__btn {
+        @media(max-width: $sm) {
+            width: 100%;
         }
-    } */
+    }
 
     // .become-partner__map
 
