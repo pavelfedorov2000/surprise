@@ -1,0 +1,123 @@
+.section {
+    padding-bottom: var(--section-padding);
+
+    @media(max-width: $lg) {
+        padding-bottom: var(--offset-xxxl);
+    }
+
+    &--padding {
+        &_xs {
+            padding-bottom: var(--section-padding-xs);
+        }
+
+        &_xl {
+            padding-bottom: var(--section-padding-xl);
+        }
+
+        /* &_xxl {
+            padding-bottom: var(--section-padding-xxl);
+
+            @media(max-width: $lg) {
+                padding-bottom: var(--offset-xxxl);
+            }
+        } */
+    }
+
+    &--with {
+        &_padding-top {
+            padding-top: var(--section-padding);
+
+            @media(max-width: $lg) {
+                padding-top: var(--offset-xxxl);
+            }
+        }
+    }
+
+    &__top {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        margin-bottom: var(--offset-xl);
+
+        @media(max-width: $md) {
+            margin-bottom: var(--offset-l);
+        }
+
+        .section-title {
+            margin-bottom: 0;
+
+            @media(max-width: $md) {
+                margin-bottom: 0;
+            }
+        }
+
+        &--orientation {
+            &_col {
+                @include row-grid(var(--offset-s));
+                justify-items: start;
+            }
+        }
+    }
+
+    &__title {
+        margin-bottom: var(--offset-xl);
+    }
+
+    &__content {
+        @include row-grid(var(--offset-xl));
+
+        @media(max-width: $md) {
+            row-gap: var(--offset-m);
+        }
+    }
+
+    &-inner {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+
+        @media(max-width: $lg) {
+            flex-direction: column;
+            justify-content: flex-start;
+        }
+
+        .section-title {
+            @media(max-width: $lg) {
+                align-self: flex-start;
+            }
+        }
+
+        &--reverse {
+            @media(min-width: 1025px) {
+                flex-direction: row-reverse;
+            }
+        }
+
+        &--align-items {
+            &_flex-end {
+                @media(min-width: 1025px) {
+                    align-items: flex-end;
+                }
+            }
+        }
+
+        &_50-50 {
+            @media(min-width: 1025px) {
+                @include margin-x(calc(var(--offset-l) * (-1)));
+            }
+
+            > * {
+                @media(min-width: 1025px) {
+                    width: calc(50% - var(--offset-l));
+                    @include padding-x(var(--offset-l));
+                }
+
+                &:not(:last-child) {
+                    @media(max-width: $lg) {
+                        margin-bottom: var(--offset-xl);
+                    }
+                }
+            }
+        }
+    }
+}

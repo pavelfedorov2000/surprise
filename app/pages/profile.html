@@ -1,56 +1,44 @@
 @@include("blocks/head/head.html", {"title": "Личный кабинет"})
-<!-- @@include("blocks/head/no-js.html") -->
 <div class="wrapper">
-    @@include("blocks/header/header.html")
-    <div class="overlay overlay--menu">
-        @@include('blocks/menu/menu.html')
-    </div>
-    <main class="page page--padding">
-        <div class="container">
-            @@include('blocks/breadcrumbs/breadcrumbs.html', {
-            "current": "Личный кабинет"
-            })
-            <div class="page__top page__top--mb_ls">
-                <h1 class="page-title">Личный кабинет</h1>
-            </div>
-            <div class="profile-block">
-                @@include('blocks/profile-sidebar/profile-sidebar.html')
-                <div class="profile-block__content">
-                    @@include('blocks/profile-tabs/profile-tabs.html')
-                    <div class="profile-block__tabs-content">
-                        <div id="profile-tabs-content-1"
-                             aria-labelledby="profile_tab_1"
-                             role="tabpanel"
-                             class="tabs-content"
-                             style="display: block;">
-                            <div class="profile-block__cards">
-                                @@include('blocks/order-card/order-card.html')
-                                @@include('blocks/order-card/order-card.html')
-                            </div>
-                        </div>
-                        <div id="profile-tabs-content-2"
-                             aria-labelledby="profile_tab_2"
-                             role="tabpanel"
-                             class="tabs-content">
-                            <div class="profile-block__cards">
-                                @@include('blocks/order-card/order-card.html')
-                            </div>
-                        </div>
-                        <div id="profile-tabs-content-3"
-                             aria-labelledby="profile_tab_3"
-                             class="tabs-content">
-                            <div class="profile-block__cards">
-                                @@include('blocks/electronic-certificate-card/electronic-certificate-card.html')
-                                @@include('blocks/electronic-certificate-card/electronic-certificate-card.html')
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </main>
-    @@include("blocks/footer/footer.html")
-    <!-- @@include("blocks/popups/popups.html") -->
+	@@include("blocks/layout/layout.html")
+	<main class="page page--padding">
+		<div class="container">
+			@@include('blocks/breadcrumbs/breadcrumbs.html', {
+			"current": "Личный кабинет"
+			})
+			<div class="page__top page__top--mb_ls">
+				<h1 class="page-title">Личный кабинет</h1>
+			</div>
+			<div class="profile-block">
+				@@include('blocks/profile-sidebar/profile-sidebar.html')
+				<div class="profile-block__content">
+					@@include('blocks/profile-tabs/profile-tabs.html')
+					<div class="profile-block__tabs-content">
+						<div id="profile-tabs-content-1" aria-labelledby="profile_tab_1" role="tabpanel"
+							class="tabs-content" style="display: block;">
+							<div class="profile-block__cards">
+								@@include('blocks/order-card/order-card.html')
+								@@include('blocks/order-card/order-card.html')
+							</div>
+						</div>
+						<div id="profile-tabs-content-2" aria-labelledby="profile_tab_2" role="tabpanel"
+							class="tabs-content">
+							<div class="profile-block__cards">
+								@@include('blocks/order-card/order-card.html')
+							</div>
+						</div>
+						<div id="profile-tabs-content-3" aria-labelledby="profile_tab_3" class="tabs-content">
+							<div class="profile-block__cards">
+								@@include('blocks/electronic-certificate-card/electronic-certificate-card.html')
+								@@include('blocks/electronic-certificate-card/electronic-certificate-card.html')
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</main>
+	@@include("blocks/footer/footer.html")
 </div>
 @@include("blocks/link/link.html")
 </body>

@@ -1,105 +1,89 @@
 @@include("blocks/head/head.html", {"title": "Избранное"})
 <!-- @@include("blocks/head/no-js.html") -->
 <div class="wrapper">
-    @@include("blocks/header/header.html")
-    <div class="overlay overlay--menu">
-        @@include('blocks/menu/menu.html')
-    </div>
-    <main class="page page--padding page--padding-top_ls">
-        <div class="container">
-            @@include('blocks/breadcrumbs/breadcrumbs.html', {
-            "current": "Избранное"
-            })
-            <div class="page__top page__top--mb_s">
-                <h1 class="page-title page-title--size_xs">Избранное</h1>
-                <div class="select catalog-sort__select">
-                    <div class="select__title">По дате добавления</div>
-                    <div class="select__content">
-                        <input id="sortFilter0"
-                               class="select__input"
-                               type="radio"
-                               name="sort"
-                               checked />
-                        <label for="sortFilter0"
-                               tabindex="0"
-                               class="select__label"
-                               data-value="По дате добавления">По
-                            дате
-                            добавления</label>
-                        <input id="sortFilter1"
-                               class="select__input"
-                               type="radio"
-                               name="sort" />
-                        <label for="sortFilter1"
-                               tabindex="0"
-                               class="select__label"
-                               data-value="По популярности">По
-                            популярности</label>
-                        <input id="sortFilter2"
-                               class="select__input"
-                               type="radio"
-                               name="sort" />
-                        <label for="sortFilter2"
-                               tabindex="0"
-                               class="select__label"
-                               data-value="По цене">По цене</label>
-                    </div>
-                </div>
-            </div>
-            <div class="catalog-grid">
-                @@loop('blocks/catalog-card/catalog-card.html', [{
-                "src": "01",
-                "favorite": true,
-                "title": "Комплексная мойка авто с нанесением кварцевого покрытия",
-                "text": "Сомелье поделится традициями бельгийского пивоварения и научит основным пивным стилям. Вечер дополнит сет закусок от ресторана, специально подобранных к каждому напитку",
-                "priceFrom": "59",
-                "priceTo": "118",
-                "bottom": true
-                }, {
-                "src": "02",
-                "favorite": true,
-                "title": "Винный безлимит в ресторане Fridays",
-                "text": "Сомелье поделится традициями бельгийского пивоварения и научит основным пивным стилям. Вечер дополнит сет закусок от ресторана, специально подобранных к каждому напитку",
-                "priceFrom": "59",
-                "priceTo": "118",
-                "bottom": true
-                }, {
-                "src": "03",
-                "favorite": true,
-                "title": "Винный безлимит в ресторане Fridays",
-                "text": "Сомелье поделится традициями бельгийского пивоварения и научит основным пивным стилям. Вечер дополнит сет закусок от ресторана, специально подобранных к каждому напитку",
-                "priceFrom": "59",
-                "priceTo": "118",
-                "bottom": true
-                }, {
-                "src": "04",
-                "favorite": true,
-                "title": "Винный безлимит в ресторане Fridays",
-                "text": "Сомелье поделится традициями бельгийского пивоварения и научит основным пивным стилям. Вечер дополнит сет закусок от ресторана, специально подобранных к каждому напитку",
-                "priceFrom": "59",
-                "priceTo": "118",
-                "bottom": true
-                }, {
-                "src": "05",
-                "favorite": true,
-                "title": "Винный безлимит в ресторане Fridays",
-                "text": "Сомелье поделится традициями бельгийского пивоварения и научит основным пивным стилям. Вечер дополнит сет закусок от ресторана, специально подобранных к каждому напитку",
-                "priceFrom": "59",
-                "priceTo": "118",
-                "bottom": true
-                }, {
-                "src": "06",
-                "favorite": true,
-                "title": "Винный безлимит в ресторане Fridays",
-                "text": "Сомелье поделится традициями бельгийского пивоварения и научит основным пивным стилям. Вечер дополнит сет закусок от ресторана, специально подобранных к каждому напитку",
-                "priceFrom": "59",
-                "priceTo": "118",
-                "bottom": true
-                }])
-            </div>
-        </div>
-    </main>
-    @@include('blocks/footer/footer.html')
+	@@include("blocks/layout/layout.html")
+	<main class="page page--padding page--padding-top_ls">
+		<div class="container">
+			@@include('blocks/breadcrumbs/breadcrumbs.html', {
+			"current": "Избранное"
+			})
+			<div class="page__top page__top--mb_s">
+				<h1 class="page-title page-title--size_xs">Избранное</h1>
+				<div class="select catalog-sort__select">
+					<div class="select__title">По дате добавления</div>
+					<div class="select__content">
+						<input id="sortFilter0" class="select__input" type="radio" name="sort" checked />
+						<label for="sortFilter0" tabindex="0" class="select__label" data-value="По дате добавления">По
+							дате
+							добавления</label>
+						<input id="sortFilter1" class="select__input" type="radio" name="sort" />
+						<label for="sortFilter1" tabindex="0" class="select__label" data-value="По популярности">По
+							популярности</label>
+						<input id="sortFilter2" class="select__input" type="radio" name="sort" />
+						<label for="sortFilter2" tabindex="0" class="select__label" data-value="По цене">По цене</label>
+					</div>
+				</div>
+			</div>
+			<div class="catalog-grid">
+				@@loop('blocks/catalog-card/catalog-card.html', [{
+				"src": "01",
+				"favorite": true,
+				"title": "Комплексная мойка авто с нанесением кварцевого покрытия",
+				"text": "Сомелье поделится традициями бельгийского пивоварения и научит основным пивным стилям. Вечер
+				дополнит сет закусок от ресторана, специально подобранных к каждому напитку",
+				"priceFrom": "59",
+				"priceTo": "118",
+				"bottom": true
+				}, {
+				"src": "02",
+				"favorite": true,
+				"title": "Винный безлимит в ресторане Fridays",
+				"text": "Сомелье поделится традициями бельгийского пивоварения и научит основным пивным стилям. Вечер
+				дополнит сет закусок от ресторана, специально подобранных к каждому напитку",
+				"priceFrom": "59",
+				"priceTo": "118",
+				"bottom": true
+				}, {
+				"src": "03",
+				"favorite": true,
+				"title": "Винный безлимит в ресторане Fridays",
+				"text": "Сомелье поделится традициями бельгийского пивоварения и научит основным пивным стилям. Вечер
+				дополнит сет закусок от ресторана, специально подобранных к каждому напитку",
+				"priceFrom": "59",
+				"priceTo": "118",
+				"bottom": true
+				}, {
+				"src": "04",
+				"favorite": true,
+				"title": "Винный безлимит в ресторане Fridays",
+				"text": "Сомелье поделится традициями бельгийского пивоварения и научит основным пивным стилям. Вечер
+				дополнит сет закусок от ресторана, специально подобранных к каждому напитку",
+				"priceFrom": "59",
+				"priceTo": "118",
+				"bottom": true
+				}, {
+				"src": "05",
+				"favorite": true,
+				"title": "Винный безлимит в ресторане Fridays",
+				"text": "Сомелье поделится традициями бельгийского пивоварения и научит основным пивным стилям. Вечер
+				дополнит сет закусок от ресторана, специально подобранных к каждому напитку",
+				"priceFrom": "59",
+				"priceTo": "118",
+				"bottom": true
+				}, {
+				"src": "06",
+				"favorite": true,
+				"title": "Винный безлимит в ресторане Fridays",
+				"text": "Сомелье поделится традициями бельгийского пивоварения и научит основным пивным стилям. Вечер
+				дополнит сет закусок от ресторана, специально подобранных к каждому напитку",
+				"priceFrom": "59",
+				"priceTo": "118",
+				"bottom": true
+				}])
+			</div>
+		</div>
+	</main>
+	@@include('blocks/footer/footer.html')
 </div>
 @@include("blocks/link/link.html")
 </body>

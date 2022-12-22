@@ -66,11 +66,11 @@ textarea {
 .js-toggle-password {
     position: absolute;
     top: 50%;
-    right: var(--offset-m);
+    right: 20px;
     transform: translateY(-50%);
 
     .icon {
-        &.hide {
+        &.show {
             display: none;
         }
     }
@@ -78,11 +78,11 @@ textarea {
     &.active {
         .icon {
             &.show {
-                display: none;
+                display: block;
             }
 
             &.hide {
-                display: block;
+                display: none;
             }
         }
     }

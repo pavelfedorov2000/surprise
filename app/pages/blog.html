@@ -1,52 +1,42 @@
 @@include("blocks/head/head.html", {"title": "Главная"})
 <!-- @@include("blocks/head/no-js.html") -->
 <div class="wrapper">
-    @@include("blocks/header/header.html")
-    <div class="overlay overlay--menu">
-        @@include('blocks/menu/menu.html')
-    </div>
-    <main class="page page--padding page--with_decor">
-        <div class="container">
-            @@include('blocks/breadcrumbs/breadcrumbs.html', {
-            "current": "Блог"
-            })
-            <div class="page__top">
-                <h1 class="page-title">Блог</h1>
-            </div>
-            <div class="blog-page">
-                <div class="tabs blog-page__tabs">
-                    <button class="tab active"
-                            type="button">Подарок маме</button>
-                    <button class="tab"
-                            type="button">Подарок маме</button>
-                    <button class="tab"
-                            type="button">Подарок маме</button>
-                    <button class="tab"
-                            type="button">Подарок маме</button>
-                    <button class="tab"
-                            type="button">Подарок маме</button>
-                    <button class="tab"
-                            type="button">Подарок маме</button>
-                </div>
-                <div class="blog-page__cards row">
-                    @@include('blocks/blog-card/blog-card.html')
-                    @@include('blocks/blog-card/blog-card.html')
-                    @@include('blocks/blog-card/blog-card.html')
-                    @@include('blocks/blog-card/blog-card.html')
-                    @@include('blocks/blog-card/blog-card.html')
-                    @@include('blocks/blog-card/blog-card.html')
-                </div>
-                <div class="load-more">
-                    <button class="btn btn--style_link"
-                            type="button">
-                        Посмотреть еще
-                    </button>
-                </div>
-            </div>
-        </div>
-    </main>
-    @@include("blocks/footer/footer.html")
-    <!-- @@include("blocks/popups/popups.html") -->
+	@@include("blocks/layout/layout.html")
+	<main class="page page--padding page--with_decor">
+		<div class="container">
+			@@include('blocks/breadcrumbs/breadcrumbs.html', {
+			"current": "Блог"
+			})
+			<div class="page__top">
+				<h1 class="page-title">Блог</h1>
+			</div>
+			<div class="blog-page">
+				<div class="tabs blog-page__tabs">
+					<button class="tab active" type="button">Подарок маме</button>
+					<button class="tab" type="button">Подарок маме</button>
+					<button class="tab" type="button">Подарок маме</button>
+					<button class="tab" type="button">Подарок маме</button>
+					<button class="tab" type="button">Подарок маме</button>
+					<button class="tab" type="button">Подарок маме</button>
+				</div>
+				<div class="blog-page__cards row">
+					@@include('blocks/blog-card/blog-card.html')
+					@@include('blocks/blog-card/blog-card.html')
+					@@include('blocks/blog-card/blog-card.html')
+					@@include('blocks/blog-card/blog-card.html')
+					@@include('blocks/blog-card/blog-card.html')
+					@@include('blocks/blog-card/blog-card.html')
+				</div>
+				<div class="load-more">
+					<button class="btn btn--style_link" type="button">
+						Посмотреть еще
+					</button>
+				</div>
+			</div>
+		</div>
+	</main>
+	@@include("blocks/footer/footer.html")
+	<!-- @@include("blocks/popups/popups.html") -->
 </div>
 @@include("blocks/link/link.html")
 </body>

@@ -1,6 +1,5 @@
 html {
     box-sizing: border-box;
-    //@include remAll();
 
     &.disable-fix {
         @media (min-width: 1025px) {

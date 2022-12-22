@@ -2,7 +2,7 @@ app.validation = {
     name: 'validation',
     description: 'your script description',
     init() {
-        const form = document.querySelector('.js-form');
+        const forms = document.querySelectorAll('.js-form');
 
         let defaultConfig = {
             // class of the parent element where the error/success class is added
@@ -18,12 +18,14 @@ app.validation = {
         };
 
         // create the pristine instance
-        let pristine = new Pristine(form, defaultConfig);
+        forms.forEach(form => {
+            let pristine = form && new Pristine(form, defaultConfig);
 
-        form.addEventListener('submit', function (e) {
-            e.preventDefault();
+            form.addEventListener('submit', function (e) {
+                e.preventDefault();
 
-            pristine.validate(); // returns true or false
+                pristine.validate(); // returns true or false
+            });
         });
 
         //const phoneInput = document.querySelector('input[type=tel]');

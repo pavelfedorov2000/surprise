@@ -1,5 +1,5 @@
 .aside-choose {
-    @include sticky(var(--offset-xl));
+    //@include sticky(var(--offset-xl));
     @include row-grid(var(--offset-l));
     align-content: start;
     padding: var(--offset-xl);

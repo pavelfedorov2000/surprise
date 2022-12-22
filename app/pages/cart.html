@@ -2,25 +2,20 @@
 "title": "Корзина",
 "sticky": true
 })
-<!-- @@include("blocks/head/no-js.html") -->
 <div class="wrapper">
-    @@include("blocks/header/header.html")
-    <div class="overlay overlay--menu">
-        @@include('blocks/menu/menu.html')
-    </div>
-    <main class="page page--padding page--padding-top_ls">
-        <div class="container">
-            @@include('blocks/breadcrumbs/breadcrumbs.html', {
-            "current": "Корзина"
-            })
-            <div class="page__top page__top--mb_l">
-                <h1 class="page-title">Ваш заказ</h1>
-            </div>
-            @@include('blocks/cart/cart.html')
-        </div>
-    </main>
-    @@include("blocks/footer/footer.html")
-    <!-- @@include("blocks/popups/popups.html") -->
+	@@include("blocks/layout/layout.html")
+	<main class="page page--padding page--padding-top_ls">
+		<div class="container">
+			@@include('blocks/breadcrumbs/breadcrumbs.html', {
+			"current": "Корзина"
+			})
+			<div class="page__top page__top--mb_l">
+				<h1 class="page-title">Ваш заказ</h1>
+			</div>
+			@@include('blocks/cart/cart.html')
+		</div>
+	</main>
+	@@include("blocks/footer/footer.html")
 </div>
 @@include("blocks/link/link.html")
 </body>
