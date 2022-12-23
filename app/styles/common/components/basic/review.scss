@@ -7,7 +7,7 @@
     }
 
     @media(max-width: $xl) {
-        margin-bottom: calc(var(--offset-l) * 3);
+        margin-bottom: calc(var(--offset-l) * (-3));
     }
 
     @media(min-width: 768px) {
