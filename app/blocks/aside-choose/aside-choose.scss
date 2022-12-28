@@ -2,6 +2,9 @@
     //@include sticky(var(--offset-xl));
     @include row-grid(var(--offset-l));
     align-content: start;
+    width: 503px;
+    max-width: 100%;
+    margin-left: auto;
     padding: var(--offset-xl);
     background-color: #fff;
     box-shadow: $bsh;
@@ -12,6 +15,7 @@
         top: -150%;
         right: 0;
         left: 0;
+        width: 100%;
         height: 100%;
         overflow-y: auto;
         z-index: 101;

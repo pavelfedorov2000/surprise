@@ -55,9 +55,6 @@ $(document).ready(function () {
         slidesPerView: 1,
         spaceBetween: 30,
         speed: 1000,
-        /* autoplay: {
-        delay: 3000,
-        }, */
         pagination: {
             el: '.swiper-pagination',
             clickable: true,
@@ -72,11 +69,8 @@ $(document).ready(function () {
         loop: true,
         centeredSlides: true,
         slidesPerView: 'auto',
-        spaceBetween: 0,
+        spaceBetween: 12.5,
         speed: 1000,
-        /* autoplay: {
-        delay: 3000,
-        }, */
         navigation: {
             nextEl: '.slider-btn--next',
             prevEl: '.slider-btn--prev',

@@ -7,18 +7,20 @@
     height: 150px;
 
     @media(max-width: $sm) {
-        width: 100px;
-        height: 100px;
+        width: 90px;
+        height: 90px;
     }
 
     img {
-        @media(min-width: 1025px) {
+        @media(max-width: $md) {
             filter: grayscale(100%);
             transition: $transition filter;
         }
+    }
 
-        @media (any-hover: hover) {
-            &:hover {
+    &.swiper-slide-active {
+        img {
+            @media(max-width: $md) {
                 filter: none;
             }
         }

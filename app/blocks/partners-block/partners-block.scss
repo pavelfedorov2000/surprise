@@ -24,18 +24,5 @@
         display: flex;
         align-items: center;
         justify-content: center;
-
-        img {
-            @media(min-width: 1025px) {
-                filter: grayscale(100%);
-                transition: $transition filter;
-            }
-
-            @media (any-hover: hover) {
-                &:hover {
-                    filter: none;
-                }
-            }
-        }
     }
 }

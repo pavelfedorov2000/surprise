@@ -199,13 +199,46 @@
         margin-right: var(--offset-xs);
     }
 
+    &-tabs {
+        display: flex;
+        border-bottom: 1px solid var(--green);
+        margin-bottom: var(--offset-xl);
+
+        @media(max-width: $sm) {
+            margin-bottom: var(--offset-l);
+        }
+    }
+
+    &-inputs {
+        display: flex;
+        flex-wrap: wrap;
+        margin-left: -20px;
+        margin-bottom: -20px;
+
+        @media(max-width: $sm) {
+            margin-left: calc(var(--offset-xs) * (-1));
+            margin-bottom: calc(var(--offset-xs) * (-1));
+        }
+
+        > * {
+            margin-left: 20px;
+            margin-bottom: 20px;
+
+            @media(max-width: $sm) {
+                margin-left: var(--offset-xs);
+                margin-bottom: var(--offset-xs);
+            }
+        }
+    }
+
     &--style {
         &_filter {
             #{$this} {
                 &__content {
                     width: 100%;
                     padding: 25px var(--offset-m);
-                    background-color: var(--white-70);
+                    background-color: var(--green-light);
+                    border-bottom: 2px solid var(--green-light);
                     backdrop-filter: blur(2px);
                     transition: $transition all;
 
@@ -213,7 +246,7 @@
                         @include padding-y(18px);
                     }
 
-                    &::after {
+                    /* &::after {
                         content: '';
                         position: absolute;
                         bottom: 0;
@@ -222,7 +255,7 @@
                         height: 2px;
                         background-color: var(--green);
                         transition: $transition width;
-                    }
+                    } */
 
                     @media (any-hover: hover) {
                         &:hover {
@@ -249,11 +282,12 @@
                         #{$this} {
                             &__content {
                                 background-color: #fff;
+                                border-bottom-color: var(--green);
                                 box-shadow: $bsh;
 
-                                &:after {
+                                /* &:after {
                                     width: 100%;
-                                }
+                                } */
 
                                 #{$this} {
                                     &__icon {
@@ -353,40 +387,6 @@
                         }
                     }
                 }
-            }
-        }
-    }
-}
-
-.radio {
-    &-tabs {
-        display: flex;
-        border-bottom: 1px solid var(--green);
-        margin-bottom: var(--offset-xl);
-
-        @media(max-width: $sm) {
-            margin-bottom: var(--offset-l);
-        }
-    }
-
-    &-inputs {
-        display: flex;
-        flex-wrap: wrap;
-        margin-left: -20px;
-        margin-bottom: -20px;
-
-        @media(max-width: $sm) {
-            margin-left: calc(var(--offset-xs) * (-1));
-            margin-bottom: calc(var(--offset-xs) * (-1));
-        }
-
-        > * {
-            margin-left: 20px;
-            margin-bottom: 20px;
-
-            @media(max-width: $sm) {
-                margin-left: var(--offset-xs);
-                margin-bottom: var(--offset-xs);
             }
         }
     }

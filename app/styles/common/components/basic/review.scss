@@ -2,12 +2,8 @@
     display: grid;
     gap: var(--offset-xxxl);
 
-    @media(max-width: 1440px) {
-        gap: var(--offset-l);
-    }
-
     @media(max-width: $xl) {
-        margin-bottom: calc(var(--offset-l) * (-3));
+        margin-bottom: calc(var(--offset-xxxl) * (-3));
     }
 
     @media(min-width: 768px) {
@@ -35,14 +31,16 @@
     flex-direction: column;
     align-items: flex-start;
 
+    &__badge {
+        @media(max-width: $lg) {
+            margin-bottom: 10px;
+        }
+    }
+
     &__info {
         display: flex;
         flex-direction: column;
         align-items: flex-start;
-
-        @media(max-width: $lg) {
-            margin-top: 10px;
-        }
     }
 
     // .review__top
@@ -51,6 +49,7 @@
         width: 100%;
         display: flex;
         align-items: flex-start;
+        flex-wrap: wrap;
         justify-content: space-between;
         margin-bottom: var(--offset-xxxs);
 
@@ -186,6 +185,10 @@
     display: flex;
     flex-wrap: wrap;
     margin-left: -10px;
+
+    @media(max-width: $lg) {
+        padding-bottom: var(--offset-xs);
+    }
 
     > * {
         margin-left: 10px;

@@ -1,6 +1,10 @@
 .check-block {
     position: relative;
 
+    @media(max-width: $lg) {
+        padding-bottom: 0;
+    }
+
     @media(min-width: 1025px) {
         padding-bottom: 65px;
     }

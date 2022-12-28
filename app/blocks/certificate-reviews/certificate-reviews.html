@@ -2,44 +2,11 @@
     <div class="section__top">
         <h2 class="section-title">Отзывы</h2>
     </div>
-    <div class="certificate-reviews__metrics reviews-metrics">
-        <section class="metric-reviews">
-            <div class="metric-reviews__num">
-                <span>5.0</span>
-            </div>
-            <div class="metric-reviews__content">
-                <div class="metric-reviews__title">Атмосфера</div>
-                <div class="metric-reviews__descr">комфорт, уют</div>
-            </div>
-        </section>
-        <section class="metric-reviews">
-            <div class="metric-reviews__num">
-                <span>5.0</span>
-            </div>
-            <div class="metric-reviews__content">
-                <div class="metric-reviews__title">Сервис</div>
-                <div class="metric-reviews__descr">
-                    гостепреимность,
-                    вежливость
-                </div>
-            </div>
-        </section>
-        <section class="metric-reviews">
-            <div class="metric-reviews__num">
-                <span>5.0</span>
-            </div>
-            <div class="metric-reviews__content">
-                <div class="metric-reviews__title">Услуга</div>
-                <div class="metric-reviews__descr">
-                    профессионализм,
-                    качество услуги
-                </div>
-            </div>
-        </section>
-    </div>
+    @@include('blocks/reviews-metrics/reviews-metrics.html', {
+    "class": "certificate-reviews__metrics"
+    })
     <div class="certificate-reviews__items">
-        <article class="review"
-                 data-da=".reviews-block, 1200, 0">
+        <article class="review">
             <header class="review__top">
                 <div class="review__info">
                     <div class="review__wrap">
@@ -53,6 +20,7 @@
                     })
                 </div>
                 @@include('blocks/badge/badge.html', {
+                "class": "review",
                 "text": "Отзыв подтвержден",
                 "color": "green"
                 })
@@ -108,8 +76,7 @@
                 </div>
             </div>
         </article>
-        <article class="review"
-                 data-da=".reviews-block, 1200, 1">
+        <article class="review">
             <header class="review__top">
                 <div class="review__info">
                     <div class="review__wrap">
@@ -123,6 +90,7 @@
                     })
                 </div>
                 @@include('blocks/badge/badge.html', {
+                "class": "review",
                 "text": "Отзыв подтвержден",
                 "color": "green"
                 })
