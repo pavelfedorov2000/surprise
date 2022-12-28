@@ -86,6 +86,31 @@ $(document).ready(function () {
         },
     });
 
+    const postGalleryThumbs = new Swiper(".post-gallery-thumbs", {
+        loop: true,
+        spaceBetween: 20,
+        slidesPerView: 4,
+        freeMode: true,
+        watchSlidesProgress: true,
+    });
+
+    new Swiper(".post-gallery", {
+        loop: true,
+        spaceBetween: 14,
+        navigation: {
+            nextEl: ".slider-btn--next",
+            prevEl: ".slider-btn--prev",
+        },
+        pagination: {
+            type: 'fraction',
+            el: '.swiper-pagination',
+            clickable: true,
+        },
+        thumbs: {
+            swiper: postGalleryThumbs,
+        },
+    });
+
     const establishmentGalleryThumbs = new Swiper(".establishment-gallery-thumbs", {
         loop: true,
         spaceBetween: 14,

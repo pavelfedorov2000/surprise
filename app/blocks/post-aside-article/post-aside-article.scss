@@ -1,0 +1,27 @@
+.post-aside-article {
+    display: flex;
+    align-items: flex-start;
+    // .post-aside-article__img
+
+    &__img {
+        flex: 0 0 125px;
+        margin-right: var(--offset-m);
+
+        img {
+            border-radius: $brs-card-xl;
+        }
+    }
+
+    // .post-aside-article__content
+
+    &__content {
+        @include row-grid(var(--offset-xxs));
+        justify-items: start;
+    }
+
+    // .post-aside-article__title
+
+    &__title {
+        font-size: 18px;
+    }
+}

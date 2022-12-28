@@ -1,0 +1,21 @@
+.post-aside {
+    @include row-grid(30px);
+    justify-items: start;
+    // .post-aside__items
+
+    &__items {
+        position: relative;
+        padding: 42px 25px 88px var(--offset-l);
+
+        &::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            right: 0;
+            bottom: 0;
+            left: var(--offset-l);
+            background-color: var(--pink-light);
+            border-radius: $brs-card-xl;
+        }
+    }
+}
