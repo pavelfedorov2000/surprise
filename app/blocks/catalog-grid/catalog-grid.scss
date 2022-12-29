@@ -1,3 +1,83 @@
 .catalog-grid {
-  // your code
+    display: flex;
+    flex-wrap: wrap;
+    margin-bottom: calc(var(--offset-xxxl) * (-1));
+    margin-left: calc(var(--offset-xxxl) * (-1));
+
+    @media(max-width: $xl) {
+        margin-bottom: calc(var(--offset-xls) * (-1));
+        margin-left: calc(var(--offset-l) * (-1));
+    }
+
+    @media(max-width: $md) {
+        margin-left: 0;
+    }
+
+    > * {
+        margin-bottom: var(--offset-xxxl);
+        margin-left: var(--offset-xxxl);
+        width: calc(33.3333% - var(--offset-xxxl));
+
+        @media(max-width: $xl) {
+            margin-bottom: var(--offset-xls);
+            margin-left: var(--offset-l);
+            width: calc(50% - var(--offset-l));
+        }
+
+        @media(max-width: $md) {
+            width: 100%;
+            margin-left: 0;
+        }
+    }
+
+    &--style {
+        &_xs {
+            @media(min-width: 1201px) {
+                margin-bottom: -30px;
+                margin-left: -30px;
+
+                > * {
+                    margin-bottom: 30px;
+                    margin-left: 30px;
+                    width: calc(33.3333% - 30px);
+                }
+
+                .catalog-card {
+                    &__slider {
+                        height: 218px;
+                    }
+
+                    &__title {
+                        font-size: 20px;
+                    }
+
+                    &__title,
+                    &__text {
+                        margin-bottom: var(--offset-xxs);
+                    }
+
+                    &__rating {
+                        margin-bottom: var(--offset-xxs);
+                    }
+
+                    &__info {
+                        flex-direction: column;
+                        align-items: flex-start;
+                    }
+
+                    &__btn {
+                        @include padding-y(var(--offset-s));
+
+                        .btn__icon {
+                            display: none;
+                        }
+                    }
+
+                    &__btns {
+                        gap: var(--offset-s);
+                    }
+                }
+            }
+        }
+    }
 }

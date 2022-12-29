@@ -1,5 +1,4 @@
-<article class="post-body">
-
+<article class="post-body grid-col-8">
     <section>
         <h2 class="section-title">Есть из чего выбрать</h2>
         <div class="text-block">
@@ -25,7 +24,7 @@
         </div>
     </section>
     <section>
-        <div class="row row--gap_30">
+        <div class="catalog-grid catalog-grid--style_xs">
             @@loop('blocks/catalog-card/catalog-card.html', [{
             "src": "01",
             "favorite": true,
@@ -66,8 +65,8 @@
         </div>
         <picture>
             <source type="image/webp"
-                    srcset="assets/images/content/post.webp">
-            <img src="assets/images/content/post.jpg"
+                    srcset="assets/images/content/post-1.webp">
+            <img src="assets/images/content/post-1.jpg"
                  alt="фото"
                  width="940"
                  height="450"
@@ -93,9 +92,9 @@
                     <div class="swiper-slide">
                         <picture>
                             <source type="image/webp"
-                                    srcset="assets/images/content/post.webp">
+                                    srcset="assets/images/content/post-2.webp">
                             <img class="img-cover"
-                                 src="assets/images/content/post.jpg"
+                                 src="assets/images/content/post-2.jpg"
                                  alt="фото"
                                  width="940"
                                  height="450"
@@ -105,9 +104,9 @@
                     <div class="swiper-slide">
                         <picture>
                             <source type="image/webp"
-                                    srcset="assets/images/content/post.webp">
+                                    srcset="assets/images/content/post-1.webp">
                             <img class="img-cover"
-                                 src="assets/images/content/post.jpg"
+                                 src="assets/images/content/post-1.jpg"
                                  alt="фото"
                                  width="940"
                                  height="450"
@@ -117,9 +116,9 @@
                     <div class="swiper-slide">
                         <picture>
                             <source type="image/webp"
-                                    srcset="assets/images/content/post.webp">
+                                    srcset="assets/images/content/post-2.webp">
                             <img class="img-cover"
-                                 src="assets/images/content/post.jpg"
+                                 src="assets/images/content/post-2.jpg"
                                  alt="фото"
                                  width="940"
                                  height="450"
@@ -129,9 +128,9 @@
                     <div class="swiper-slide">
                         <picture>
                             <source type="image/webp"
-                                    srcset="assets/images/content/post.webp">
+                                    srcset="assets/images/content/post-1.webp">
                             <img class="img-cover"
-                                 src="assets/images/content/post.jpg"
+                                 src="assets/images/content/post-1.jpg"
                                  alt="фото"
                                  width="940"
                                  height="450"
@@ -146,9 +145,9 @@
                 <div class="swiper-slide">
                     <picture>
                         <source type="image/webp"
-                                srcset="assets/images/content/post.webp">
+                                srcset="assets/images/content/post-2.webp">
                         <img class="img-cover"
-                             src="assets/images/content/post.jpg"
+                             src="assets/images/content/post-2.jpg"
                              alt="фото"
                              width="220"
                              height="180"
@@ -158,9 +157,9 @@
                 <div class="swiper-slide">
                     <picture>
                         <source type="image/webp"
-                                srcset="assets/images/content/post.webp">
+                                srcset="assets/images/content/post-1.webp">
                         <img class="img-cover"
-                             src="assets/images/content/post.jpg"
+                             src="assets/images/content/post-1.jpg"
                              alt="фото"
                              width="220"
                              height="180"
@@ -170,9 +169,9 @@
                 <div class="swiper-slide">
                     <picture>
                         <source type="image/webp"
-                                srcset="assets/images/content/post.webp">
+                                srcset="assets/images/content/post-2.webp">
                         <img class="img-cover"
-                             src="assets/images/content/post.jpg"
+                             src="assets/images/content/post-2.jpg"
                              alt="фото"
                              width="220"
                              height="180"
@@ -182,9 +181,9 @@
                 <div class="swiper-slide">
                     <picture>
                         <source type="image/webp"
-                                srcset="assets/images/content/post.webp">
+                                srcset="assets/images/content/post-1.webp">
                         <img class="img-cover"
-                             src="assets/images/content/post.jpg"
+                             src="assets/images/content/post-1.jpg"
                              alt="фото"
                              width="220"
                              height="180"
@@ -206,4 +205,15 @@
             </p>
         </div>
     </section>
+    <footer class="post-body__footer">
+        @@include('blocks/social/social.html', {
+        "class": "post-body"
+        })
+        <nav class="post-body__nav">
+            <a href="#"
+               class="btn btn--style_link-4">Назад</a>
+            <a href="#"
+               class="btn btn--style_link-4">Вперед</a>
+        </nav>
+    </footer>
 </article>

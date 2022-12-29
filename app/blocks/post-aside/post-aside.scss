@@ -1,21 +1,52 @@
 .post-aside {
-    @include row-grid(30px);
-    justify-items: start;
+    @include row-grid(var(--offset-l));
+
+    @media(min-width: 1201px) {
+        @include sticky(50px);
+    }
+
+    @media(max-width: $xl) {
+        padding-top: var(--offset-xxxl);
+    }
+
     // .post-aside__items
 
     &__items {
+        @include row-grid(30px);
         position: relative;
         padding: 42px 25px 88px var(--offset-l);
+
+        @media(max-width: $xl) {
+            padding: 42px 0;
+        }
+
+        &::before,
+        &::after {
+            content: '';
+            position: absolute;
+            right: 0;
+        }
 
         &::before {
             content: '';
             position: absolute;
             top: 0;
-            right: 0;
             bottom: 0;
-            left: var(--offset-l);
-            background-color: var(--pink-light);
+            left: 68px;
+            z-index: -1;
+            background-color: rgba(#F6DFE3, .2);
             border-radius: $brs-card-xl;
+
+            @media(max-width: $xl) {
+                left: 35px;
+            }
+        }
+
+        &:after {
+            bottom: -27px;
+            width: 91px;
+            height: 70px;
+            background-image: url(../images/decor/post-aside.svg);
         }
     }
 }

@@ -60,13 +60,13 @@
                 gap: var(--offset-m);
             }
         }
+
+        /* &_3 {
+            @include grid-auto-fit(290px, 30px);
+        } */
     }
 
     &--gap {
-        &_30 {
-            gap: 30px;
-        }
-
         &_xls {
             @media(max-width: $xl) {
                 gap: var(--offset-xls);
