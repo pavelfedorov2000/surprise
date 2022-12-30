@@ -18,27 +18,19 @@
         display: flex;
         align-items: center;
         justify-content: center;
-        padding: 10rem 0;
+        padding: 100px 0;
     }
 
-    @media (max-width: 767px) {
-        ._progress {
-            padding: 5rem 0;
-        }
-    }
-
-    @media (min-width: 768px) {
-        ._progress__inner {
-            columns: 2;
-        }
+    ._progress__inner {
+        padding: 0 15px;
     }
 
     ._progress__link {
         display: block;
-        font-size: 1.5vmax;
+        font-size: 24px;
         margin-bottom: 10px;
         font-weight: 700;
-        color: #222;
+        color: #000;
         text-decoration: none;
         transition: opacity 0.3s;
     }
@@ -50,6 +42,22 @@
     ._progress__link:hover {
         color: var(--accent);
         opacity: 0.5;
+    }
+
+    @media (max-width: 767px) {
+        ._progress {
+            padding: 50px 0;
+        }
+
+        ._progress__link {
+            font-size: 16px;
+        }
+    }
+
+    @media (min-width: 768px) {
+        ._progress__inner {
+            columns: 2;
+        }
     }
 
 </style>

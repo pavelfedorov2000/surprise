@@ -1,6 +1,10 @@
 .profile-sidebar {
     @include row-grid(var(--offset-ls));
 
+    @media(min-width: 1201px) {
+        @include sticky(var(--offset-xls));
+    }
+
     @media(max-width: $sm) {
         row-gap: var(--offset-m);
     }

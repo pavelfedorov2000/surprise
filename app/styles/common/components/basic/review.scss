@@ -208,6 +208,11 @@
         flex-shrink: 0;
     }
 
+    &__img {
+        width: var(--offset-l);
+        height: var(--offset-l);
+    }
+
     &__logo {
         width: var(--offset-m);
         height: 25px;
