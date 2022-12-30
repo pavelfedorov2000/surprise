@@ -1,0 +1,55 @@
+.promo-certificate {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: repeat(2, minmax(225px, auto));
+
+    &__item {
+        font-size: 32px;
+        color: #fff;
+        text-align: center;
+
+        &--1 {
+            border-radius: $brs-card-xl 0 0 $brs-card-xl;
+
+            img {
+                border-radius: $brs-card-xl 0 0 $brs-card-xl;
+            }
+        }
+
+        &--3 {
+            grid-column: 2 / 3;
+            grid-row: 2 / 3;
+            background-color: var(--blue-dark);
+        }
+
+        &--5 {
+            background-color: var(--green);
+            border-radius: 0 $brs-card-xl 0 0;
+        }
+
+        &--6 {
+            border-radius: 0 0 $brs-card-xl 0;
+
+            img {
+                border-radius: 0 0 $brs-card-xl 0;
+            }
+        }
+
+        &--1,
+        &--4 {
+            grid-row: span 2;
+        }
+
+        &--3,
+        &--5 {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+    }
+
+    &__logo {
+        width: 118px;
+        height: 97px;
+    }
+}
