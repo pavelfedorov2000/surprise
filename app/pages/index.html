@@ -1,64 +1,59 @@
 @@include("blocks/head/head.html", {"title": "Разводящая"})
 <div class="wrapper">
-    @@include("blocks/layout/layout.html")
-    <main class="page">
-        <div class="_progress">
-            <div class="_progress__inner">
-                @@loop("blocks/progress/progress.html", "../resources/assets/pages.json")
-            </div>
-        </div>
-    </main>
-    @@include("blocks/footer/footer.html")
+	@@include("blocks/layout/layout.html")
+	<main class="page">
+		<div class="_progress">
+			<div class="_progress__inner">
+				@@loop("blocks/progress/progress.html", "../resources/assets/pages.json")
+			</div>
+		</div>
+	</main>
+	@@include("blocks/footer/footer.html")
 </div>
 @@include("blocks/link/link.html")
 <style>
-    ._progress {
-        min-height: 100vh;
-        width: 100vw;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        padding: 100px 0;
-    }
+	._progress {
+		min-height: 100vh;
+		width: 100vw;
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		padding: 100px 0;
+	}
 
-    ._progress__inner {
-        padding: 0 15px;
-    }
+	._progress__inner {
+		padding: 0 15px;
+	}
 
-    ._progress__link {
-        display: block;
-        font-size: 24px;
-        margin-bottom: 10px;
-        font-weight: 700;
-        color: #000;
-        text-decoration: none;
-        transition: opacity 0.3s;
-    }
+	._progress__link {
+		display: block;
+		font-size: 24px;
+		margin-bottom: 10px;
+		font-weight: 700;
+		color: #1E1E1E;
+		text-decoration: none;
+		transition: color 0.3s;
+	}
 
-    ._progress__link.new {
-        color: #258884;
-    }
+	._progress__link:hover {
+		color: #656565;
+	}
 
-    ._progress__link:hover {
-        color: var(--accent);
-        opacity: 0.5;
-    }
+	@media (max-width: 767px) {
+		._progress {
+			padding: 50px 0;
+		}
 
-    @media (max-width: 767px) {
-        ._progress {
-            padding: 50px 0;
-        }
+		._progress__link {
+			font-size: 16px;
+		}
+	}
 
-        ._progress__link {
-            font-size: 16px;
-        }
-    }
-
-    @media (min-width: 768px) {
-        ._progress__inner {
-            columns: 2;
-        }
-    }
+	@media (min-width: 768px) {
+		._progress__inner {
+			columns: 2;
+		}
+	}
 
 </style>
 </body>

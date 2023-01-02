@@ -1,78 +1,78 @@
 .contact-us {
-    padding-top: var(--section-padding);
-    padding-bottom: 125px;
+	padding-top: var(--section-padding);
+	padding-bottom: 125px;
 
-    @media(min-width: 1201px) {
-        background-image: url(../images/decor/contact-us-bg.svg);
-        background-size: cover;
-        background-position: center;
-        background-repeat: no-repeat;
-    }
+	@media(min-width: 1201px) {
+		background-image: url(../images/decor/contact-us-bg.svg);
+		background-size: cover;
+		background-position: center;
+		background-repeat: no-repeat;
+	}
 
-    @media(max-width: $lg) {
-        @include padding-y(var(--offset-xxs));
-    }
+	@media(max-width: $lg) {
+		@include padding-y(var(--offset-xxs));
+	}
 
-    // .contact-us__inner 
+	// .contact-us__inner 
 
-    &__inner {
-        @media(min-width: 1025px) {
-            display: flex;
-            align-items: center;
-            justify-content: space-between;
-        }
+	&__inner {
+		@media(min-width: 1025px) {
+			display: flex;
+			align-items: center;
+			justify-content: space-between;
+		}
 
-        @media(max-width: $lg) {
-            @include row-grid(var(--offset-xxxl));
-        }
-    }
+		@media(max-width: $lg) {
+			@include row-grid(var(--offset-xxxl));
+		}
+	}
 
-    // .contact-us__content
+	// .contact-us__content
 
-    &__content {
-        @include row-grid(var(--offset-xxls));
+	&__content {
+		@include row-grid(var(--offset-xxls));
 
-        @media(min-width: 1025px) {
-            padding-right: calc(145 / #{$container} * 100%);
-        }
+		@media(min-width: 1025px) {
+			padding-right: calc(145 / #{$container} * 100%);
+		}
 
-        @media(max-width: $sm) {
-            row-gap: var(--offset-l);
-        }
-    }
+		@media(max-width: $sm) {
+			row-gap: var(--offset-l);
+		}
+	}
 
-    // .contact-us__title
+	// .contact-us__title
 
-    &__title {
-        margin-bottom: var(--offset-s);
-    }
+	&__title {
+		margin-bottom: var(--offset-s);
+	}
 
-    // .contact-us__form
+	// .contact-us__form
 
-    &__form {
-        padding: var(--offset-xxl) var(--offset-xxxl);
+	&__form {
+		padding: var(--offset-xxl) var(--offset-xxxl);
 
-        @media(min-width: 1025px) {
-            flex: 0 0 528px;
-        }
+		@media(min-width: 1025px) {
+			flex: 0 0 528px;
+		}
 
-        @media(max-width: $md) {
-            padding: var(--offset-l) var(--offset-m);
-        }
+		@media(max-width: $md) {
+			padding: var(--offset-l) var(--offset-m);
+		}
 
-        .form {
-            box-shadow: none;
+		.form {
+			box-shadow: none;
 
-            @media(max-width: $xl) {
-                padding: 0;
-            }
-        }
-    }
+			@media(max-width: $xl) {
+				padding: 0;
+			}
+		}
+	}
 
-    // .contact-us__form-title
+	// .contact-us__form-title
 
-    &__form-title {
-        text-align: center;
-        margin-bottom: var(--offset-l);
-    }
+	&__form-title {
+		text-align: center;
+		margin-bottom: var(--offset-l);
+	}
 }
