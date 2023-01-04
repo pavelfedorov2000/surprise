@@ -133,15 +133,11 @@
         align-items: center;
         justify-content: flex-end;
         flex-wrap: wrap;
+        gap: var(--offset-m) var(--offset-xl);
         grid-area: numbers;
-        margin-left: calc(var(--offset-xl) * (-1));
 
         @media(max-width: $lg) {
             justify-content: space-between;
-        }
-
-        > * {
-            margin-left: var(--offset-xl);
         }
     }
 

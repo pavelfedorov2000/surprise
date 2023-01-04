@@ -91,6 +91,22 @@ h {
                 font-size: 24px;
             }
         }
+
+        &_mob-18 {
+            @media(max-width: $lg) {
+                font-size: 24px;
+            }
+
+            @media(max-width: $md) {
+                font-size: 18px;
+            }
+        }
+    }
+
+    &.pc-hidden {
+        @media(min-width: 1025px) {
+            display: none;
+        }
     }
 }
 

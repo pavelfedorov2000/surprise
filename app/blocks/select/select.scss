@@ -42,6 +42,15 @@
         }
     }
 
+    &__title-input {
+        width: 100%;
+    }
+
+    &__arrow {
+        position: relative;
+        z-index: 2;
+    }
+
     &__wrap {
         flex-grow: 1;
         padding-right: var(--offset-m);

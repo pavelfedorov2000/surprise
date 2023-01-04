@@ -254,8 +254,16 @@
                     <div class="price-filter__items">
                         <div class="price-filter__item">
                             <span class="price-filter__item-title">От</span>
-                            <div class="select select--style_border">
-                                <div class="select__title">0</div>
+                            <div class="select select--style_border select--with_input">
+                                <div class="select__title">
+                                    <input type="number"
+                                           class="select__title-input"
+                                           value="0"
+                                           data-select-input="price-from">
+                                    <button class="icon select__arrow"
+                                            type="button"
+                                            aria-expanded="false"></button>
+                                </div>
                                 <div class="select__content">
                                     <input id="priceFrom0"
                                            class="select__input"
@@ -295,8 +303,16 @@
                         </div>
                         <div class="price-filter__item">
                             <span class="price-filter__item-title">До</span>
-                            <div class="select select--style_border">
-                                <div class="select__title">3000</div>
+                            <div class="select select--style_border select--with_input">
+                                <div class="select__title">
+                                    <input type="number"
+                                           class="select__title-input"
+                                           value="3000"
+                                           data-select-input="price-to">
+                                    <button class="icon select__arrow"
+                                            type="button"
+                                            aria-expanded="false"></button>
+                                </div>
                                 <div class="select__content">
                                     <input id="priceTo0"
                                            class="select__input"

@@ -6,7 +6,7 @@
         margin-bottom: var(--section-padding-xs);
 
         @media(max-width: $lg) {
-            margin-bottom: var(--offset-l);
+            display: none;
         }
 
         .tabs__list {
@@ -17,11 +17,31 @@
         }
     }
 
+    &__body {
+        @media(max-width: $lg) {
+            @include row-grid(var(--offset-xxxl));
+        }
+    }
+
     // .delivery-block__content
 
     &__content {
         @include row-grid(var(--offset-xl));
         justify-items: start;
+
+        @media(max-width: $lg) {
+            row-gap: var(--offset-l);
+        }
+
+        &:not(:last-child) {
+            @media(max-width: $lg) {
+                margin-bottom: var(--offset-l);
+            }
+        }
+    }
+
+    &__cards {
+        justify-self: stretch;
     }
 
     &__text {
@@ -32,6 +52,10 @@
 
     &__map {
         padding-bottom: 80.488%;
+
+        @media(max-width: $md) {
+            padding-bottom: 75.805%;
+        }
     }
 
     .section-inner {

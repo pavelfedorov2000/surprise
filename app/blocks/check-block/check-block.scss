@@ -23,7 +23,7 @@
         align-items: center;
 
         @media(max-width: $md) {
-            flex-direction: column;
+            @include row-grid(var(--offset-xl));
         }
     }
 
@@ -32,6 +32,19 @@
     &__img {
         @media(min-width: 768px) {
             flex: 0 0 380px;
+        }
+
+        @media(max-width: $md) {
+            position: relative;
+            padding-bottom: 61%;
+
+            img {
+                position: absolute;
+                top: 0;
+                right: 0;
+                bottom: 0;
+                left: 0;
+            }
         }
     }
 

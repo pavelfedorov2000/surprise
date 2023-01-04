@@ -1,5 +1,5 @@
-$(document).ready(function () {
-    $('.search-form__btn').on('click', function() {
+$(function () {
+    $('.search-form__btn').on('click', function () {
         const $searchFormBtn = $(this);
         const $searchForm = $searchFormBtn.closest('.search-form');
         const $searchFormInput = $searchForm.find('.search-form__input');
@@ -26,7 +26,7 @@ $(document).ready(function () {
         }
     });
 
-    $('.search-form__input').on('change keyup', function() {
+    $('.search-form__input').on('change keyup', function () {
         const $searchFormInput = $(this);
         const $searchForm = $searchFormInput.closest('.search-form');
         const $dropSearch = $searchForm.find('.drop-search');

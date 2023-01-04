@@ -71,6 +71,10 @@
 
         &_xl {
             gap: var(--offset-xl);
+
+            @media(max-width: $md) {
+                gap: var(--offset-m);
+            }
         }
     }
 

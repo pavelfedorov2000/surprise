@@ -12,7 +12,8 @@ $(document).ready(function () {
     $('.tab').on('click', function () {
         const $tab = $(this);
         const $tabNotActive = $tab.closest('.tabs').find('.tab.active');
-        const tabNotActiveId = $tabNotActive.attr('id').split('_').at(-1);
+        const tabNotActiveIdArr = $tabNotActive.attr('id').split('_');
+        const tabNotActiveId = tabNotActiveIdArr[tabNotActiveIdArr.length - 1];
         const $tabsContent = $(`#${$tab.attr('aria-controls')}`);
         const $tabsContentNotActive = $(`#${$tabNotActive.attr('aria-controls')}`);
 

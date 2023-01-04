@@ -347,14 +347,12 @@
         text-align: left;
         background-color: #fff;
         border: 1px solid #fff;
+        color: $color-default;
         transition: $transition box-shadow,
             $transition border-color;
 
         @media(max-width: $xl) {
             min-height: 60px;
-        }
-
-        @media(max-width: $xl) {
             border-top: 1px solid var(--gray);
         }
 

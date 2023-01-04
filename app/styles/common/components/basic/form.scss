@@ -112,6 +112,10 @@ textarea {
         height: var(--icon-size);
         background-image: url(../images/icons/resize.svg);
     }
+
+    textarea {
+        height: 100%;
+    }
 }
 
 .form {

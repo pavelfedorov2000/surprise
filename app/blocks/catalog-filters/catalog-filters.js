@@ -47,15 +47,15 @@ app.catalogFilters = {
             const $priceFilterItem = $dropdownFilter.find('.price-filter__item');
             const $priceFrom = $priceFilterItem.first();
             const $priceTo = $priceFilterItem.last();
-            const $priceFromTitle = $priceFrom.find('.select__title');
+            const $priceFromInput = $priceFrom.find('.select__title-input');
             const $priceFromDefault = $priceFrom.find('.select__input').first();
             const $priceFromDefaultValue = $priceFromDefault.next().attr('data-value');
-            const $priceToTitle = $priceTo.find('.select__title');
+            const $priceToInput = $priceTo.find('.select__title-input');
             const $priceToDefault = $priceTo.find('.select__input').first();
             const $priceToDefaultValue = $priceToDefault.next().attr('data-value');
 
-            $priceFromTitle.text($priceFromDefaultValue);
-            $priceToTitle.text($priceToDefaultValue);
+            $priceFromInput.val($priceFromDefaultValue);
+            $priceToInput.val($priceToDefaultValue);
 
             if ($dropdownFilter.hasClass('price-filter')) {
                 $catalogFilterBtn.find('span').first().text($priceFromDefaultValue);
@@ -87,6 +87,24 @@ app.catalogFilters = {
             } else {
                 $catalogFilterBtnNum.empty();
             }
+        });
+
+        $('.price-filter__item:first-child .select__input').on('change', function () {
+            const $selectInput = $(this);
+            const $catalogFilter = $selectInput.closest('.catalog-filter');
+            const $catalogFilterBtn = $catalogFilter.find('.catalog-filter__btn');
+            const $priceFrom = $catalogFilterBtn.find('#price-from');
+
+            $priceFrom.text($selectInput.next().attr('data-value'));
+        });
+
+        $('.price-filter__item:last-child .select__input').on('change', function () {
+            const $selectInput = $(this);
+            const $catalogFilter = $selectInput.closest('.catalog-filter');
+            const $catalogFilterBtn = $catalogFilter.find('.catalog-filter__btn');
+            const $priceTo = $catalogFilterBtn.find('#price-to');
+
+            $priceTo.text($selectInput.next().attr('data-value'));
         });
 
         $('.price-filter__item:first-child .select__input').on('change', function () {

@@ -9,9 +9,11 @@
 .tabs-content {
     display: none;
 
-    /* &.active {
-        display: block;
-    } */
+    &.touch-visible {
+        @media(max-width: $lg) {
+            display: block;
+        }
+    }
 }
 
 .tabs {
