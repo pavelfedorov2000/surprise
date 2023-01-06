@@ -44,6 +44,8 @@
 
     &__title-input {
         width: 100%;
+        font-size: #{$fz}px;
+        color: var(--text-color);
     }
 
     &__arrow {

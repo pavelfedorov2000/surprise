@@ -1,90 +1,94 @@
 .photogallery {
-	$this: &;
+    $this: &;
 
-	@media(max-width: $xl) {
-		@include margin-x(calc(var(--container-padding) * (-1)));
-	}
+    @media(max-width: $xl) {
+        @include margin-x(calc(var(--container-padding) * (-1)));
+    }
 
-	.mob-rating {
-		top: 20px;
-		right: 18px;
-	}
+    @media(max-width: $sm) {
+        height: 211px;
+    }
 
-	&__grid {
-		@media(min-width: 1201px) {
-			transform: none !important;
-			display: grid;
-			gap: 15px;
-			grid-template-columns: calc(860 / #{$container} * 100%) repeat(3, 1fr);
-			grid-template-rows: repeat(2, 217px);
-		}
-	}
+    .mob-rating {
+        top: 20px;
+        right: 18px;
+    }
 
-	// .photogallery__item
+    &__grid {
+        @media(min-width: 1201px) {
+            transform: none !important;
+            display: grid;
+            gap: 15px;
+            grid-template-columns: calc(860 / #{$container} * 100%) repeat(3, 1fr);
+            grid-template-rows: repeat(2, 217px);
+        }
+    }
 
-	&__item {
-		position: relative;
+    // .photogallery__item
 
-		@media(min-width: 1201px) {
-			width: 100% !important;
-			border-radius: $brs-card-xl;
-		}
+    &__item {
+        position: relative;
 
-		&:first-child {
-			@media(min-width: 1201px) {
-				grid-row: span 2;
-			}
-		}
+        @media(min-width: 1201px) {
+            width: 100% !important;
+            border-radius: $brs-card-xl;
+        }
 
-		img {
-			@media(min-width: 1201px) {
-				border-radius: $brs-card-xl;
-			}
-		}
+        &:first-child {
+            @media(min-width: 1201px) {
+                grid-row: span 2;
+            }
+        }
 
-		@media (any-hover: hover) {
-			&:hover {
-				&:before {
-					opacity: 1;
-				}
-			}
-		}
+        img {
+            @media(min-width: 1201px) {
+                border-radius: $brs-card-xl;
+            }
+        }
 
-		@media (any-hover: hover) {
-			&:hover {
-				#{$this} {
-					&__player-btn {
-						opacity: 1;
-						visibility: visible;
-						pointer-events: auto;
-					}
-				}
-			}
-		}
-	}
+        @media (any-hover: hover) {
+            &:hover {
+                &:before {
+                    opacity: 1;
+                }
+            }
+        }
 
-	&__player-btn {
-		position: absolute;
-		top: 0;
-		right: 0;
-		bottom: 0;
-		left: 0;
-		display: grid;
-		place-items: center;
-		background-image: url(../images/icons/player.svg);
-		background-size: var(--section-padding-xs);
-		background-position: center;
-		background-repeat: no-repeat;
+        @media (any-hover: hover) {
+            &:hover {
+                #{$this} {
+                    &__player-btn {
+                        opacity: 1;
+                        visibility: visible;
+                        pointer-events: auto;
+                    }
+                }
+            }
+        }
+    }
 
-		@media(max-width: $md) {
-			background-size: var(--offset-xxxl);
-		}
+    &__player-btn {
+        position: absolute;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        left: 0;
+        display: grid;
+        place-items: center;
+        background-image: url(../images/icons/player.svg);
+        background-size: var(--section-padding-xs);
+        background-position: center;
+        background-repeat: no-repeat;
 
-		@media(min-width: 1201px) {
-			opacity: 0;
-			visibility: hidden;
-			pointer-events: none;
-			transition: $transition all;
-		}
-	}
+        @media(max-width: $md) {
+            background-size: var(--offset-xxxl);
+        }
+
+        @media(min-width: 1201px) {
+            opacity: 0;
+            visibility: hidden;
+            pointer-events: none;
+            transition: $transition all;
+        }
+    }
 }
