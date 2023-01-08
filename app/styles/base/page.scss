@@ -8,12 +8,6 @@
 		flex-direction: column;
 		align-items: flex-start;
 
-		/* >* {
-            &:not(:last-child) {
-                margin-bottom: var(--offset-xxs);
-            }
-        } */
-
 		.select {
 			@media(max-width: $sm) {
 				margin-top: var(--offset-xxs);
@@ -44,7 +38,7 @@
 			}
 		}
 
-		&--mb {
+		&--margin-bottom {
 			&_s {
 				margin-bottom: var(--offset-s);
 
@@ -107,10 +101,6 @@
 
 			&_xl {
 				padding-bottom: var(--section-padding-xl);
-
-				/* @media(max-width: $lg) {
-					padding-bottom: var(--offset-xls);
-				} */
 			}
 
 			&_none {

@@ -1,12 +1,19 @@
 .colors {
-	display: flex;
-	flex-wrap: wrap;
-	margin-left: calc(var(--offset-m) * (-1));
-	margin-bottom: calc(var(--offset-m) * (-1));
+	&__title {
+		margin-bottom: var(--offset-xs);
+		font-size: 20px;
+	}
 
-	>* {
-		margin-left: var(--offset-m);
-		margin-bottom: var(--offset-m);
+	&__list {
+		display: flex;
+		flex-wrap: wrap;
+		margin-left: calc(var(--offset-m) * (-1));
+		margin-bottom: calc(var(--offset-m) * (-1));
+
+		>* {
+			margin-left: var(--offset-m);
+			margin-bottom: var(--offset-m);
+		}
 	}
 }
 

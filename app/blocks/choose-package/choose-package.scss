@@ -1,0 +1,10 @@
+.choose-package {
+	&__items {
+		@include row-grid(var(--offset-xs));
+	}
+
+	&__dropdown {
+		padding-top: var(--offset-s);
+		padding-left: var(--offset-l);
+	}
+}

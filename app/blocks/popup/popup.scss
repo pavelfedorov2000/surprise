@@ -1,87 +1,116 @@
 .overlay {
-    display: none;
-    position: fixed;
-    top: 0;
-    right: 0;
-    bottom: 0;
-    left: 0;
-    z-index: 200;
-    background-color: rgba(0, 0, 0, 0.28);
+	display: none;
+	position: fixed;
+	top: 0;
+	right: 0;
+	bottom: 0;
+	left: 0;
+	z-index: 200;
+	background-color: rgba(0, 0, 0, 0.28);
 
-    &--menu {
-        @media(max-width: $md) {
-            top: var(--header-height-mob);
-        }
+	&--menu {
+		@media(max-width: $md) {
+			top: var(--header-height-mob);
+		}
 
-        @media(max-width: $sm) {
-            background-color: transparent;
-        }
-    }
+		@media(max-width: $sm) {
+			background-color: transparent;
+		}
+	}
 }
 
 .popup {
-    display: none;
-    position: absolute;
-    z-index: 102;
-    width: 470px;
-    background-color: #fff;
-    box-shadow: $bsh;
-    padding: var(--offset-xl) var(--offset-xxl) var(--offset-xxl);
+	$this: &;
 
-    @media(min-width: 768px) {
-        top: var(--offset-xxl);
-        left: 50%;
-        transform: translate(-50%, 0);
-        border-radius: $brs-card-xl;
-    }
+	display: none;
+	position: absolute;
+	z-index: 102;
+	width: 470px;
+	background-color: #fff;
+	box-shadow: $bsh;
+	padding: var(--offset-xl) var(--offset-xxl) var(--offset-xxl);
 
-    @media(min-width: 1025px) {
-        top: 50%;
-        transform: translate(-50%, -50%);
-    }
+	@media(min-width: 768px) {
+		top: var(--offset-xxl);
+		left: 50%;
+		transform: translate(-50%, 0);
+		border-radius: $brs-card-xl;
+	}
 
-    @media(max-width: $md) {
-        top: 0;
-        left: 0;
-        height: 100%;
-        overflow-y: auto;
-    }
+	@media(min-width: 1025px) {
+		top: 50%;
+		transform: translate(-50%, -50%);
+	}
 
-    @media(max-width: $sm) {
-        width: 100%;
-        padding: var(--offset-xxl) 20px;
-    }
+	@media(max-width: $md) {
+		top: 0;
+		left: 0;
+		height: 100%;
+		overflow-y: auto;
+	}
 
-    &__close {
-        position: absolute;
-        top: var(--offset-s);
-        right: var(--offset-s);
-    }
+	@media(max-width: $sm) {
+		width: 100%;
+		padding: var(--offset-xxl) 20px;
+	}
 
-    // .popup__tabs
+	&__close {
+		position: absolute;
+		top: var(--offset-s);
+		right: var(--offset-s);
+	}
 
-    &__tabs {
-        margin-bottom: var(--offset-m);
+	// .popup__tabs
 
-        .tabs {
-            margin-bottom: 0;
-            //width: 100%;
-        }
-    }
+	&__tabs {
+		margin-bottom: var(--offset-m);
 
-    &__tab {
-        font-size: 20px;
-    }
+		.tabs {
+			margin-bottom: 0;
+			//width: 100%;
+		}
+	}
 
-    // .popup__form
+	&__tab {
+		font-size: 20px;
+	}
 
-    &__form {
-        @include row-grid(var(--offset-m));
-    }
+	// .popup__form
 
-    &__btn {
-        display: flex;
-        justify-content: center;
-        margin-top: var(--offset-l);
-    }
+	&__form {
+		@include row-grid(var(--offset-m));
+	}
+
+	&__btn {
+		display: flex;
+		justify-content: center;
+		margin-top: var(--offset-l);
+	}
+
+	&--width {
+		&_auto {
+			width: auto;
+		}
+
+		&_xl {
+			width: 548px;
+		}
+
+		&_auto,
+		&_xl {
+			padding: var(--offset-l);
+			border-radius: $brs;
+
+			@media(min-width: 768px) {
+				border-radius: $brs;
+			}
+
+			#{$this} {
+				&__close {
+					top: 6px;
+					right: 6px;
+				}
+			}
+		}
+	}
 }

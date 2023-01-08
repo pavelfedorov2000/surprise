@@ -1,18 +1,25 @@
 <div class="colors">
-	<label class="color color--style_bg-pink">
-		<input class="radio-input" type="radio" name="PACKAGE_COLOR">
-		<span class="color__style" style="background-color: #F395A9;"></span>
-	</label>
-	<label class="color color--style_bg-yellow">
-		<input class="radio-input" type="radio" name="PACKAGE_COLOR">
-		<span class="color__style" style="background-color: #EEF651;"></span>
-	</label>
-	<label class="color color--style_bg-blue">
-		<input class="radio-input" type="radio" name="PACKAGE_COLOR">
-		<span class="color__style" style="background-color: #1F5469;"></span>
-	</label>
-	<label class="color color--style_bg-green">
-		<input class="radio-input" type="radio" name="PACKAGE_COLOR">
-		<span class="color__style" style="background-color: #258884;"></span>
-	</label>
+	@@if(context.title){
+	<div class="colors__title">
+		Выбери цвет упаковки
+	</div>
+	}
+	<div class="colors__list">
+		<label class="color color--style_bg-pink">
+			<input class="radio-input" type="radio" name="PACKAGE_COLOR" data-color="pink">
+			<span class="color__style" style="background-color: #F395A9;"></span>
+		</label>
+		<label class="color color--style_bg-yellow">
+			<input class="radio-input" type="radio" name="PACKAGE_COLOR" data-color="yellow">
+			<span class="color__style" style="background-color: #EEF651;"></span>
+		</label>
+		<label class="color color--style_bg-blue">
+			<input class="radio-input" type="radio" name="PACKAGE_COLOR" data-color="blue">
+			<span class="color__style" style="background-color: #1F5469;"></span>
+		</label>
+		<label class="color color--style_bg-green">
+			<input class="radio-input" type="radio" name="PACKAGE_COLOR" data-color="green">
+			<span class="color__style" style="background-color: #258884;"></span>
+		</label>
+	</div>
 </div>

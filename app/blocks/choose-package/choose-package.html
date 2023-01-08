@@ -1,0 +1,55 @@
+<@@if(context.fieldset){fieldset}@@if(!context.fieldset){div} @@if(context.dataTab){data-tab="@@dataTab" }
+	class="choose-package@@if(context.class){ @@class}">
+	<@@if(context.legend){legend}@@if(!context.legend){div} class="aside-choose__item-title">@@title
+	</@@if(context.legend){legend}@@if(!context.legend){div}>
+	<div class="choose-package__items">
+		<div class="choose-package__item">
+			<label class="radio">
+				<input class="radio-input js-choose-package" type="radio" name="PACKAGE" checked aria-expanded="true">
+				<span class="radio-style radio-style--mr_xxs"></span>
+				<span class="radio-text">
+					<span class="radio__key">Коробка —</span>
+					<span class="radio__value">9 руб.</span>
+				</span>
+			</label>
+			<div class="choose-package__dropdown">
+				<picture>
+					<source type="image/webp" srcset="assets/images/content/certificate.webp">
+					<img src="assets/images/content/certificate.jpg" alt="фото" width="453" height="214" loading="lazy">
+				</picture>
+			</div>
+		</div>
+		<div class="choose-package__item">
+			<label class="radio">
+				<input class="radio-input js-choose-package" type="radio" name="PACKAGE" aria-expanded="false">
+				<span class="radio-style radio-style--mr_xxs"></span>
+				<span class="radio-text">
+					<span class="radio__key">Конверт —</span>
+					<span class="radio__value">3 руб.</span>
+				</span>
+			</label>
+			<div class="choose-package__dropdown" style="display: none;">
+				<picture>
+					<source type="image/webp" srcset="assets/images/content/certificate.webp">
+					<img src="assets/images/content/certificate.jpg" alt="фото" width="453" height="214" loading="lazy">
+				</picture>
+			</div>
+		</div>
+		<div class="choose-package__item">
+			<label class="radio">
+				<input class="radio-input js-choose-package" type="radio" name="PACKAGE" aria-expanded="false">
+				<span class="radio-style radio-style--mr_xxs"></span>
+				<span class="radio-text">
+					<span class="radio__key">Электронный сертификат —</span>
+					<span class="radio__value">Бесплатно</span>
+				</span>
+			</label>
+			<div class="choose-package__dropdown" style="display: none;">
+				<picture>
+					<source type="image/webp" srcset="assets/images/content/certificate.webp">
+					<img src="assets/images/content/certificate.jpg" alt="фото" width="453" height="214" loading="lazy">
+				</picture>
+			</div>
+		</div>
+	</div>
+</@@if(context.fieldset){fieldset}@@if(!context.fieldset){div}>
