@@ -1,10 +1,19 @@
 .choose-package {
-	&__items {
-		@include row-grid(var(--offset-xs));
-	}
+    &__title {
+        font-size: 20px;
+        margin-bottom: var(--offset-xs);
 
-	&__dropdown {
-		padding-top: var(--offset-s);
-		padding-left: var(--offset-l);
-	}
+        @media(max-width: $sm) {
+            font-size: 18px;
+        }
+    }
+
+    &__items {
+        @include row-grid(var(--offset-xs));
+    }
+
+    &__dropdown {
+        padding-top: var(--offset-s);
+        padding-left: var(--offset-l);
+    }
 }

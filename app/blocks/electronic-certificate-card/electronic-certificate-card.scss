@@ -25,8 +25,9 @@
     &__row {
         width: 100%;
         display: flex;
+        gap: var(--offset-m);
 
-        @media(min-width: 768px) and (max-width: $lg) {
+        @media(min-width: 768px) {
             flex-wrap: wrap;
         }
 
@@ -45,15 +46,7 @@
         position: relative;
         align-self: start;
         padding-bottom: 19.236%;
-        flex: 0 0 23.377%;
-
-        @media(min-width: 768px) {
-            flex: 0 0 216px;
-        }
-
-        @media(min-width: 1025px) {
-            flex-basis: 23.377%;
-        }
+        flex: 0 0 216px;
 
         @media(max-width: $md) {
             width: 100%;
@@ -74,18 +67,14 @@
 
     &__content {
         @include row-grid(var(--offset-s));
+        flex: 1 0 calc(349 / 1005 * 100%);
 
         @media(min-width: 768px) {
-            padding-left: calc(64 / 1005 * 100%);
-        }
-
-        @media(min-width: 768px) and (max-width: $lg) {
-            flex: 1 1 calc(100% - 216px - var(--offset-m));
+            padding-left: calc(40 / 1005 * 100%);
         }
 
         @media(min-width: 1025px) {
-            flex-grow: 1;
-            padding-right: calc(44 / 1005 * 100%);
+            padding-right: calc(20 / 1005 * 100%);
         }
     }
 

@@ -1,116 +1,132 @@
 .overlay {
-	display: none;
-	position: fixed;
-	top: 0;
-	right: 0;
-	bottom: 0;
-	left: 0;
-	z-index: 200;
-	background-color: rgba(0, 0, 0, 0.28);
+    display: none;
+    position: fixed;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    z-index: 200;
+    background-color: rgba(0, 0, 0, 0.28);
 
-	&--menu {
-		@media(max-width: $md) {
-			top: var(--header-height-mob);
-		}
+    &--menu {
+        @media(max-width: $md) {
+            top: var(--header-height-mob);
+        }
 
-		@media(max-width: $sm) {
-			background-color: transparent;
-		}
-	}
+        @media(max-width: $sm) {
+            background-color: transparent;
+        }
+    }
 }
 
 .popup {
-	$this: &;
+    $this: &;
 
-	display: none;
-	position: absolute;
-	z-index: 102;
-	width: 470px;
-	background-color: #fff;
-	box-shadow: $bsh;
-	padding: var(--offset-xl) var(--offset-xxl) var(--offset-xxl);
+    display: none;
+    position: absolute;
+    z-index: 102;
+    width: 470px;
+    background-color: #fff;
+    box-shadow: $bsh;
+    padding: var(--offset-xl) var(--offset-xxl) var(--offset-xxl);
 
-	@media(min-width: 768px) {
-		top: var(--offset-xxl);
-		left: 50%;
-		transform: translate(-50%, 0);
-		border-radius: $brs-card-xl;
-	}
+    @media(min-width: 768px) {
+        top: var(--offset-xxl);
+        left: 50%;
+        transform: translate(-50%, 0);
+        border-radius: $brs-card-xl;
+    }
 
-	@media(min-width: 1025px) {
-		top: 50%;
-		transform: translate(-50%, -50%);
-	}
+    @media(min-width: 1025px) {
+        top: 50%;
+        transform: translate(-50%, -50%);
+    }
 
-	@media(max-width: $md) {
-		top: 0;
-		left: 0;
-		height: 100%;
-		overflow-y: auto;
-	}
+    &:not(#{$this}--width_auto) {
+        @media(max-width: $md) {
+            top: 0;
+            left: 0;
+            height: 100%;
+            overflow-y: auto;
+        }
+    }
 
-	@media(max-width: $sm) {
-		width: 100%;
-		padding: var(--offset-xxl) 20px;
-	}
+    @media(max-width: $sm) {
+        width: 100%;
+        padding: var(--offset-xxl) 20px;
+    }
 
-	&__close {
-		position: absolute;
-		top: var(--offset-s);
-		right: var(--offset-s);
-	}
+    &__close {
+        position: absolute;
+        top: var(--offset-s);
+        right: var(--offset-s);
+    }
 
-	// .popup__tabs
+    // .popup__tabs
 
-	&__tabs {
-		margin-bottom: var(--offset-m);
+    &__tabs {
+        margin-bottom: var(--offset-m);
 
-		.tabs {
-			margin-bottom: 0;
-			//width: 100%;
-		}
-	}
+        .tabs {
+            margin-bottom: 0;
+        }
+    }
 
-	&__tab {
-		font-size: 20px;
-	}
+    &__tab {
+        font-size: 20px;
+    }
 
-	// .popup__form
+    // .popup__form
 
-	&__form {
-		@include row-grid(var(--offset-m));
-	}
+    &__form {
+        @include row-grid(var(--offset-m));
+    }
 
-	&__btn {
-		display: flex;
-		justify-content: center;
-		margin-top: var(--offset-l);
-	}
+    &__btn {
+        display: flex;
+        justify-content: center;
+        margin-top: var(--offset-l);
+    }
 
-	&--width {
-		&_auto {
-			width: auto;
-		}
+    &--width {
 
-		&_xl {
-			width: 548px;
-		}
+        &_auto,
+        &_xl {
+            padding: var(--offset-l);
+            border-radius: $brs;
 
-		&_auto,
-		&_xl {
-			padding: var(--offset-l);
-			border-radius: $brs;
+            @media(min-width: 768px) {
+                border-radius: $brs;
+            }
 
-			@media(min-width: 768px) {
-				border-radius: $brs;
-			}
+            #{$this} {
+                &__close {
+                    top: 6px;
+                    right: 6px;
+                }
+            }
+        }
 
-			#{$this} {
-				&__close {
-					top: 6px;
-					right: 6px;
-				}
-			}
-		}
-	}
+        &_auto {
+            width: auto;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+
+            @media(max-width: $sm) {
+                left: var(--container-padding);
+                right: var(--container-padding);
+                transform: translate(0, -50%);
+            }
+        }
+
+        &_xl {
+            width: 548px;
+
+            @media(max-width: $md) {
+                width: 100%;
+                border-radius: 0;
+            }
+        }
+    }
 }

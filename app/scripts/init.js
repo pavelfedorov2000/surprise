@@ -9,6 +9,13 @@ $(document).ready(function () {
     app.popup.init();
     app.validation.init();
 
+    $(".js-progress-bar").each(function (i, item) {
+        const circle = $(item);
+        const dataProgress = circle.closest('.metric-reviews__num').attr('data-progress');
+        const strokeDashOffsetValue = 100 - (+dataProgress * 100);
+        circle.css("stroke-dashoffset", strokeDashOffsetValue);
+    });
+
     $('.tab').on('click', function () {
         const $tab = $(this);
         const $tabNotActive = $tab.closest('.tabs').find('.tab.active');
