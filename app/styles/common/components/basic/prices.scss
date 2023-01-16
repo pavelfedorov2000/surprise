@@ -1,0 +1,17 @@
+.prices {
+    display: grid;
+    grid-auto-columns: max-content;
+    grid-auto-flow: column;
+    align-items: flex-end;
+    column-gap: 7px;
+    white-space: nowrap;
+
+    b {
+        line-height: 1.2;
+    }
+}
+
+.price {
+    @extend %museo-700;
+    font-size: 24px;
+}

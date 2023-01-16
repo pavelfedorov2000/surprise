@@ -1,10 +1,4 @@
 .mascot-section {
-    padding-bottom: var(--offset-xl);
-
-    @media(max-width: $md) {
-        padding-bottom: var(--offset-xxs);
-    }
-
     @media(min-width: 1201px) {
         margin-top: calc(var(--offset-xl) * (-1));
     }

@@ -236,7 +236,7 @@
             #{$this} {
                 &__content {
                     width: 100%;
-                    padding: 25px var(--offset-m);
+                    padding: var(--offset-m);
                     background-color: var(--green-light);
                     border-bottom: 2px solid var(--green-light);
                     backdrop-filter: blur(2px);

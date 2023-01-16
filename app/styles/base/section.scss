@@ -15,6 +15,12 @@
         }
     }
 
+    &--without {
+        &_padding-bottom {
+            padding-bottom: 0;
+        }
+    }
+
     &--with {
         &_padding-top {
             padding-top: var(--section-padding);
@@ -25,7 +31,7 @@
         }
 
         &_decor {
-            @media(min-width: 1440px) {
+            @media(min-width: 1441px) {
                 position: relative;
 
                 &::before {

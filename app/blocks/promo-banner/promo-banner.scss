@@ -17,6 +17,7 @@
     &__body {
         grid-column: 1 / -1;
         grid-row: 1 / 3;
+        background-image: url(../images/content/banner.jpg);
         background-size: cover;
         background-repeat: no-repeat;
 
@@ -25,7 +26,7 @@
         }
 
         @media(max-width: $sm) {
-            background-position: 100%;
+            background-image: url(../images/content/banner-mobile.jpg);
         }
     }
 

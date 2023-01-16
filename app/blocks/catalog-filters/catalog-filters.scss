@@ -284,13 +284,9 @@
 
     &__row {
         display: grid;
-        grid-template-columns: repeat(4, 1fr) auto;
         filter: drop-shadow(0 3px 10px rgba(63, 63, 63, 0.1));
 
         @media(max-width: 1440px) {
-            grid-template-columns: unset;
-            grid-auto-columns: minmax(143px, max-content) 1fr;
-            grid-auto-flow: column;
             gap: 2px;
         }
 
@@ -301,13 +297,9 @@
             grid-auto-rows: minmax(var(--offset-xxls), max-content);
         }
 
-        /* .select {
-            &__content {
-                @media(max-width: $xl) {
-                    padding-top: 0;
-                }
-            }
-        } */
+        @media(min-width: 1201px) {
+            grid-template-columns: repeat(4, 1fr) auto;
+        }
     }
 
     // .catalog-filters__item

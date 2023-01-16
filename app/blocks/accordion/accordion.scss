@@ -115,4 +115,25 @@
             }
         }
     }
+
+    &--style {
+        &_2 {
+            #{$this} {
+                &__toggle {
+                    color: var(--green);
+
+                    &:before {
+                        display: block;
+                        left: auto;
+                        right: 0;
+                        background-image: url(../images/icons/drop-arrow-green.svg);
+                    }
+                }
+
+                &__content {
+                    row-gap: 0;
+                }
+            }
+        }
+    }
 }

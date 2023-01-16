@@ -29,6 +29,7 @@
     // .dropdown-certificate-field__item
 
     &__item {
+        position: relative;
         @include row-grid(var(--offset-xs));
     }
 

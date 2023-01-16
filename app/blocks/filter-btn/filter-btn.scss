@@ -2,8 +2,8 @@
     position: fixed;
     left: var(--container-padding);
     right: var(--container-padding);
+    bottom: var(--offset-s);
     z-index: 99;
-    bottom: 0;
     display: none;
 
     span {

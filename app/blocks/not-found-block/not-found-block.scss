@@ -2,10 +2,13 @@
     min-height: calc(100vh - var(--header-height));
     @include padding-y(var(--section-padding));
     background-color: #FEFAFB;
-    background-image: url(../images/decor/404-bg.svg);
-    background-size: cover;
-    background-position: 0 0;
-    background-repeat: no-repeat;
+
+    @media(min-width: 1441px) {
+        background-image: url(../images/decor/404-bg.svg);
+        background-size: cover;
+        background-position: 0 0;
+        background-repeat: no-repeat;
+    }
 
     @media(max-width: $lg) {
         background-image: url(../images/decor/404-bg-mob.svg);

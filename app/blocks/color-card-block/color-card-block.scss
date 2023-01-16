@@ -28,7 +28,7 @@
     &--items {
         &_3 {
             > * {
-                @media(min-width: 1440px) {
+                @media(min-width: 1441px) {
                     margin-left: var(--offset-xxxl);
                     width: calc(33.3333% - var(--offset-xxxl));
                 }

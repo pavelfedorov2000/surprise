@@ -1,8 +1,8 @@
 .cart {
-    --cart-aside: 375px;
+    --cart-aside: 448px;
 
     display: grid;
-    gap: var(--offset-xxls);
+    gap: 115px;
 
     @media(min-width: 1201px) {
         grid-template-columns: 1fr var(--cart-aside);
@@ -26,7 +26,7 @@
 
     &__sections {
         display: grid;
-        gap: var(--offset-xxxl) 84px;
+        gap: var(--offset-xxxl) 72px;
 
         @media(min-width: 1025px) {
             grid-template-columns: repeat(2, 1fr);

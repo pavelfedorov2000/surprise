@@ -18,10 +18,44 @@ app.popup = {
         });
 
         $('[data-popup]').on('click', function () {
-            $('body').addClass('_lock');
-            $('html').addClass('disable-fix');
-            $('.overlay').fadeIn();
-            $(`#${$(this).attr('data-popup')}`).fadeIn();
+            const $btn = $(this);
+            const attr = $btn.attr('data-popup');
+            console.log(attr);
+            const $parent = $btn.closest('.dropdown-certificate-field__item');
+
+            $(`#${attr}`).fadeIn();
+
+            if (attr === 'congratulations-popup') {
+                $('body').removeClass('_lock');
+                $('html').removeClass('disable-fix');
+                $('.overlay').hide();
+
+                if ($(window).width() > 767) {
+                    $parent.append($popup);
+                }
+            } else {
+                $('body').addClass('_lock');
+                $('html').addClass('disable-fix');
+                $('.overlay').fadeIn();
+            }
+        });
+
+        /* $('[data-popup="congratulations-popup"]').on('click', function () {
+            const $btn = $(this);
+            const $popup = $(`#${$btn.attr('data-popup')}`);
+            const $parent = $btn.closest('.dropdown-certificate-field__item');
+
+            $parent.append($popup);
+            $popup.fadeIn();
+        }); */
+
+        $(document).on('click', '.congratulation-item', function () {
+            const $item = $(this);
+            const $siblings = $item.siblings();
+
+            $siblings.removeClass('active');
+            $item.parent().siblings().find('.congratulation-item.active').removeClass('active');
+            $item.addClass('active');
         });
 
         $(document).on('click', '.popup__close', function () {

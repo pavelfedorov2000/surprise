@@ -42,7 +42,6 @@ textarea {
     padding: calc(var(--offset-s) - 1px) var(--offset-m);
     border: $border;
     border-radius: $brs;
-    box-shadow: 0 0 20px rgba(199, 199, 199, 0.25);
     font-size: #{$fz}px;
     line-height: 21px;
     color: var(--black);

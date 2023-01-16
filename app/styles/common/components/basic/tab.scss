@@ -81,6 +81,17 @@
             }
         }
     }
+
+    &--orientation {
+        &_col {
+            flex-direction: column;
+
+            .tab {
+                width: 100%;
+                justify-content: flex-start;
+            }
+        }
+    }
 }
 
 .tab {
@@ -185,6 +196,29 @@
                     border-bottom-color: var(--green);
                     color: var(--green);
                 }
+            }
+        }
+
+        &_3 {
+            font-size: 16px;
+            padding: var(--offset-xs) var(--offset-m);
+            border-radius: $brs;
+            border-left: 3px solid #fff;
+            background-color: transparent;
+            transition: $transition all;
+
+            @media (any-hover: hover) {
+                &:hover {
+                    color: var(--green);
+                    background-color: var(--green-light);
+                    border-left-color: var(--green);
+                }
+            }
+
+            &.active {
+                color: var(--green);
+                background-color: var(--green-light);
+                border-left-color: var(--green);
             }
         }
 
