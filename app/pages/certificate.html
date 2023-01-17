@@ -19,24 +19,26 @@
 				</header>
 				@@include('blocks/photogallery/photogallery.html')
 			</div>
-			<nav class="tabs tabs--style_line">
-				<ul class="tabs__list tabs__list--items_2">
-					<li>
-						<button id="certificate_tab_gift" class="tab active js-certificate-tab tab--style_radio"
-							type="button" role="tab" aria-selected="true">
-							<span class="tab__circle"></span>
-							<span class="tab__text">В подарок</span>
-						</button>
-					</li>
-					<li>
-						<button id="certificate_tab_own" class="tab js-certificate-tab tab--style_radio" type="button"
-							role="tab">
-							<span class="tab__circle"></span>
-							<span class="tab__text">Для себя</span>
-						</button>
-					</li>
-				</ul>
-			</nav>
+			<div class="tabs-block tabs-block--padding-bottom_xl">
+				<nav class="tabs tabs--style_line">
+					<ul class="tabs__list tabs__list--items_2">
+						<li>
+							<button id="certificate_tab_gift" class="tab active js-certificate-tab tab--style_radio"
+								type="button" role="tab" aria-selected="true">
+								<span class="tab__circle"></span>
+								<span class="tab__text">В подарок</span>
+							</button>
+						</li>
+						<li>
+							<button id="certificate_tab_own" class="tab js-certificate-tab tab--style_radio"
+								type="button" role="tab">
+								<span class="tab__circle"></span>
+								<span class="tab__text">Для себя</span>
+							</button>
+						</li>
+					</ul>
+				</nav>
+			</div>
 			@@include('blocks/unique-package/unique-package.html')
 			<div class="section grid-row">
 				<div class="grid-col-7 certificate-content">

@@ -1,30 +1,29 @@
 .catalog-sort {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    flex-wrap: wrap;
-    gap: var(--offset-xs);
-    padding-bottom: var(--offset-s);
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	flex-wrap: wrap;
+	gap: var(--offset-l);
+	padding-bottom: var(--offset-ls);
 
-    @media(min-width: 1201px) {
-        padding-top: var(--offset-m);
-    }
+	@media(min-width: 1201px) {
+		padding-top: 54px;
+	}
 
-    > * {
-        margin-bottom: 0;
-    }
+	&__select {
+		.select {
+			&__title {
+				padding-left: 0;
+				gap: var(--offset-xxs);
 
-    &__select {
-        .select {
-            &__title {
-                @media(max-width: $lg) {
-                    padding-left: 0;
-                }
-            }
+				&:after {
+					display: none;
+				}
+			}
 
-            &__content {
-                width: max-content;
-            }
-        }
-    }
+			&__content {
+				width: max-content;
+			}
+		}
+	}
 }

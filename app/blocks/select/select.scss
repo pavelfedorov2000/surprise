@@ -1,153 +1,189 @@
 // Custom select
 .select {
-    $this: &;
-    position: relative;
+	$this: &;
+	position: relative;
 
-    &__title {
-        cursor: pointer;
-        padding: 27px var(--offset-xxl) 27px var(--offset-m);
-        display: flex;
-        align-items: center;
-        justify-content: space-between;
-        background-color: #fff;
-        border: 1px solid #fff;
-        transition: $transition box-shadow,
-            $transition border-color;
+	&__title {
+		cursor: pointer;
+		padding: 27px var(--offset-xxl) 27px var(--offset-m);
+		display: flex;
+		align-items: center;
+		justify-content: space-between;
+		background-color: #fff;
+		border: 1px solid #fff;
+		transition: $transition box-shadow,
+			$transition border-color;
 
-        @media(max-width: $xl) {
-            @include padding-y(17px);
-        }
+		@media(max-width: $xl) {
+			@include padding-y(17px);
+		}
 
-        &::after {
-            content: "";
-            position: absolute;
-            top: calc(50% - var(--icon-size) / 2);
-            right: var(--offset-m);
-            width: var(--icon-size);
-            height: var(--icon-size);
-            background-image: url(../images/icons/drop-arrow.svg);
-            transition: $transition all;
-        }
+		&::after {
+			content: "";
+			position: absolute;
+			top: calc(50% - var(--icon-size) / 2);
+			right: var(--offset-m);
+			width: var(--icon-size);
+			height: var(--icon-size);
+			background-image: url(../images/icons/drop-arrow.svg);
+			transition: $transition all;
+		}
 
-        @media (any-hover: hover) {
-            &:hover {
-                box-shadow: $bsh;
-            }
-        }
+		@media (any-hover: hover) {
+			&:hover {
+				box-shadow: $bsh;
 
-        &[aria-expanded="true"] {
-            @media(min-width: 576px) {
-                border-color: var(--green);
-            }
-        }
-    }
+				#{$this} {
+					&__arrow {
+						fill: var(--green-hover);
+					}
+				}
+			}
+		}
 
-    &__title-input {
-        width: 100%;
-        font-size: #{$fz}px;
-        color: var(--text-color);
-    }
+		&[aria-expanded="true"] {
+			@media(min-width: 576px) {
+				border-color: var(--green);
+			}
 
-    &__arrow {
-        position: relative;
-        z-index: 2;
-    }
+			#{$this} {
+				&__arrow {
+					fill: var(--green);
+					transform: rotate(180deg);
+				}
+			}
+		}
+	}
 
-    &__wrap {
-        flex-grow: 1;
-        padding-right: var(--offset-m);
-        display: flex;
-        flex-direction: column;
+	&__title-input {
+		width: 100%;
+		font-size: #{$fz}px;
+		color: var(--text-color);
+	}
 
-        @media(max-width: $sm) {
-            max-width: 182px;
-            padding-right: var(--offset-s);
-        }
-    }
+	&__arrow {
+		position: relative;
+		z-index: 2;
+		fill: var(--black);
+		transition: $transition transform,
+			$transition fill;
+	}
 
-    &__key-descr {
-        @extend %museo-300;
-        color: var(--text-color);
+	&__wrap {
+		flex-grow: 1;
+		padding-right: var(--offset-m);
+		display: flex;
+		flex-direction: column;
 
-        @media(max-width: $sm) {
-            font-size: 14px;
-        }
-    }
+		@media(max-width: $sm) {
+			max-width: 182px;
+			padding-right: var(--offset-s);
+		}
+	}
 
-    &__value {
-        white-space: nowrap;
-    }
+	&__key-descr {
+		@extend %museo-300;
+		color: var(--text-color);
 
-    &__content {
-        position: absolute;
-        top: 100%;
-        left: 0;
-        right: 0;
-        width: 100%;
-        @include padding-y(var(--offset-m));
-        box-shadow: $bsh;
-        border-radius: $brs;
-        z-index: 30;
-        background-color: #fff;
-        display: none;
+		@media(max-width: $sm) {
+			font-size: 14px;
+		}
+	}
 
-        @media(max-width: $md) {
-            @include padding-y(20px);
-        }
-    }
+	&__value {
+		white-space: nowrap;
+	}
 
-    &__input {
-        display: none;
+	&__content {
+		position: absolute;
+		top: 100%;
+		left: 0;
+		right: 0;
+		width: 100%;
+		@include padding-y(var(--offset-m));
+		box-shadow: $bsh;
+		border-radius: $brs;
+		z-index: 30;
+		background-color: #fff;
+		display: none;
 
-        &:checked + label {
-            @extend %museo-500;
-            color: var(--green);
-        }
-    }
+		@media(max-width: $md) {
+			@include padding-y(20px);
+		}
+	}
 
-    &__label {
-        @extend %museo-300;
-        padding: var(--offset-xxs) var(--offset-l);
-        display: flex;
-        align-items: center;
-        width: 100%;
-        cursor: pointer;
-        overflow: hidden;
-        transition: $transition color;
+	&__input {
+		display: none;
 
-        @media(max-width: $md) {
-            padding: var(--offset-xxxs) var(--offset-m);
-        }
+		&:checked+label {
+			@extend %museo-500;
+			color: var(--green);
+		}
+	}
 
-        @media (any-hover: hover) {
-            &:hover {
-                color: var(--green);
-            }
-        }
-    }
+	&__label {
+		@extend %museo-300;
+		padding: var(--offset-xxs) var(--offset-l);
+		display: flex;
+		align-items: center;
+		width: 100%;
+		cursor: pointer;
+		overflow: hidden;
+		transition: $transition color;
 
-    &--style {
-        &_border {
-            #{$this} {
-                &__title {
-                    padding: 17px var(--offset-m);
-                    border: 1px solid var(--line-color);
-                    border-radius: $brs;
-                    color: var(--text-color);
-                }
-            }
-        }
-    }
+		@media(max-width: $md) {
+			padding: var(--offset-xxxs) var(--offset-m);
+		}
 
-    &--type {
-        &_price {
-            #{$this} {
-                &__title {
-                    @include padding-y(13.5px);
-                    padding-right: var(--offset-xxxl);
-                    color: var(--black);
-                }
-            }
-        }
-    }
+		@media (any-hover: hover) {
+			&:hover {
+				color: var(--green);
+			}
+		}
+	}
+
+	&--style {
+		&_border {
+			#{$this} {
+				&__title {
+					padding: 17px var(--offset-m);
+					border: 1px solid var(--line-color);
+					border-radius: $brs;
+					color: var(--text-color);
+				}
+			}
+		}
+	}
+
+	&--type {
+		&_price {
+			#{$this} {
+				&__title {
+					@include padding-y(13.5px);
+					padding-right: var(--offset-xxxl);
+					color: var(--black);
+				}
+			}
+		}
+
+		&_sort {
+			#{$this} {
+				&__title {
+					padding: 0;
+					border: none;
+
+					@media (any-hover: hover) {
+						&:hover {
+							color: var(--green-hover);
+							box-shadow: none;
+						}
+					}
+
+					&[aria-expanded="true"] {
+						color: var(--green);
+					}
+				}
+			}
+		}
+	}
 }

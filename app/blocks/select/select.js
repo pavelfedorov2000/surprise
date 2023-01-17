@@ -90,6 +90,8 @@ app.select = {
                 $selectTitleValue.text($selectOption.find('.select__value').attr('data-value'));
             } else if ($select.hasClass('select--with_input')) {
                 $selectTitleInput.val($selectOption.attr('data-value'));
+            } else if ($select.hasClass('select--type_sort')) {
+                $selectTitle.find('span').text($selectOption.attr('data-value'));
             } else {
                 $selectTitle.text($selectOption.attr('data-value'));
             }

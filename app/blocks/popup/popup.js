@@ -20,10 +20,10 @@ app.popup = {
         $('[data-popup]').on('click', function () {
             const $btn = $(this);
             const attr = $btn.attr('data-popup');
-            console.log(attr);
             const $parent = $btn.closest('.dropdown-certificate-field__item');
 
-            $(`#${attr}`).fadeIn();
+            const $popup = $(`#${attr}`);
+            $popup.fadeIn();
 
             if (attr === 'congratulations-popup') {
                 $('body').removeClass('_lock');
@@ -38,6 +38,8 @@ app.popup = {
                 $('html').addClass('disable-fix');
                 $('.overlay').fadeIn();
             }
+
+
         });
 
         /* $('[data-popup="congratulations-popup"]').on('click', function () {
