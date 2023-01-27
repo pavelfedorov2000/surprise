@@ -1,5 +1,6 @@
 $(document).ready(function () {
     app.menu.init();
+    app.tabs.init();
     app.select.init();
     app.accordion.init();
     app.catalogFilters.init();
@@ -8,36 +9,7 @@ $(document).ready(function () {
     app.cart.init();
     app.popup.init();
     app.validation.init();
-
-    $(".js-progress-bar").each(function (i, item) {
-        const circle = $(item);
-        const dataProgress = circle.closest('.metric-reviews__num').attr('data-progress');
-        const strokeDashOffsetValue = 100 - (+dataProgress * 100);
-        circle.css("stroke-dashoffset", strokeDashOffsetValue);
-    });
-
-    $('.tab').on('click', function () {
-        const $tab = $(this);
-        const $tabNotActive = $tab.closest('.tabs').find('.tab.active');
-        const tabNotActiveIdArr = $tabNotActive.attr('id').split('_');
-        const tabNotActiveId = tabNotActiveIdArr[tabNotActiveIdArr.length - 1];
-        const $tabsContent = $(`#${$tab.attr('aria-controls')}`);
-        const $tabsContentNotActive = $(`#${$tabNotActive.attr('aria-controls')}`);
-
-        $tabNotActive.removeClass('active');
-        $tabNotActive.attr('aria-selected', false);
-
-        $tab.addClass('active');
-        $tab.attr('aria-selected', true);
-
-        if ($tab.attr('aria-controls') !== undefined || !$tab.hasClass('js-certificate-tab')) {
-            $tabsContentNotActive.hide();
-            $tabsContent.fadeIn();
-        } else {
-            $('[data-tab').show();
-            $(`[data-tab=${tabNotActiveId}]`).hide();
-        }
-    });
+    app.progressbar.init();
 
     $(document).on('click', '.profile-block__empty-btn', function () {
         $(`.tab[aria-controls=${$(this).attr('aria-controls')}]`).trigger('click');
@@ -58,92 +30,6 @@ $(document).ready(function () {
         }
     });
 
-    new Swiper('.catalog-card__slider', {
-        loop: true,
-        slidesPerView: 1,
-        spaceBetween: 30,
-        speed: 1000,
-        pagination: {
-            el: '.swiper-pagination',
-            clickable: true,
-        },
-        navigation: {
-            nextEl: '.slider-btn--next',
-            prevEl: '.slider-btn--prev',
-        },
-    });
-
-    new Swiper('.partners-slider', {
-        loop: true,
-        centeredSlides: true,
-        slidesPerView: 'auto',
-        spaceBetween: 12.5,
-        speed: 1000,
-        navigation: {
-            nextEl: '.slider-btn--next',
-            prevEl: '.slider-btn--prev',
-        },
-        breakpoints: {
-            768: {
-                spaceBetween: 32,
-            },
-            1025: {
-                centeredSlides: false,
-                spaceBetween: 92,
-            }
-        },
-    });
-
-    const establishmentGalleryThumbs = new Swiper(".establishment-gallery-thumbs", {
-        loop: true,
-        spaceBetween: 14,
-        slidesPerView: 3,
-        freeMode: true,
-        watchSlidesProgress: true,
-    });
-
-    new Swiper(".establishment-gallery", {
-        loop: true,
-        spaceBetween: 14,
-        navigation: {
-            nextEl: ".slider-btn--next",
-            prevEl: ".slider-btn--prev",
-        },
-        pagination: {
-            type: 'fraction',
-            el: '.swiper-pagination',
-            clickable: true,
-        },
-        thumbs: {
-            swiper: establishmentGalleryThumbs,
-        },
-    });
-
-    let photogallerySlider;
-    function initPhotogallerySlider(windowWidth) {
-        if ($(window).width() <= windowWidth) {
-            photogallerySlider = new Swiper('.photogallery', {
-                loop: true,
-                slidesPerView: 1,
-                spaceBetween: 32,
-                speed: 1000,
-                pagination: {
-                    type: 'fraction',
-                    el: '.swiper-pagination',
-                    clickable: true,
-                },
-            });
-        } else if ($('.photogallery').hasClass('swiper-initialized')) {
-            photogallerySlider.destroy(true, true);
-        }
-    }
-
-    initPhotogallerySlider(1200);
-
-    $(window).on('resize', function () {
-        initPhotogallerySlider(1200);
-    });
-
     $(document).on('click', '.js-view-review-answers', function () {
         const $btn = $(this);
         const $reviewAnswers = $btn.closest('.review').find('.review__answers');
@@ -156,66 +42,6 @@ $(document).ready(function () {
             $reviewAnswers.slideUp();
         }
     });
-
-    const $blogSlider = $('.blog-slider');
-
-    if ($blogSlider.length) {
-        const $blogSliderClass = $blogSlider.attr('class').split(' ').filter(el => el !== 'swiper')[0];
-        const $blogSliderWrap = $(`.${$blogSliderClass}`).closest('section').attr('id');
-        new Swiper(`.${$blogSliderClass}`, {
-            loop: true,
-            slidesPerView: 1.16875,
-            spaceBetween: 24,
-            speed: 1000,
-            navigation: {
-                nextEl: `#${$blogSliderWrap} .slider-wrap .slider-btn--next`,
-                prevEl: `#${$blogSliderWrap} .slider-wrap .slider-btn--prev`,
-            },
-            breakpoints: {
-                576: {
-                    slidesPerView: 2.2,
-                },
-                768: {
-                    slidesPerView: 2.2,
-                    spaceBetween: 32,
-                },
-                1025: {
-                    slidesPerView: 3,
-                    spaceBetween: 64,
-                }
-            },
-        });
-    }
-
-    const $reviewsSlider = $('.reviews-slider');
-
-    if ($reviewsSlider.length) {
-        const $reviewsSliderClass = $reviewsSlider.attr('class').split(' ').filter(el => el !== 'swiper')[0];
-        const $reviewsSliderWrap = $(`.${$reviewsSliderClass}`).closest('section').attr('id');
-        new Swiper(`.${$reviewsSliderClass}`, {
-            loop: true,
-            slidesPerView: 1.16875,
-            spaceBetween: 24,
-            speed: 1000,
-            navigation: {
-                nextEl: `#${$reviewsSliderWrap} .slider-wrap .slider-btn--next`,
-                prevEl: `#${$reviewsSliderWrap} .slider-wrap .slider-btn--prev`,
-            },
-            breakpoints: {
-                576: {
-                    slidesPerView: 2.2,
-                },
-                768: {
-                    slidesPerView: 2.2,
-                    spaceBetween: 32,
-                },
-                1025: {
-                    slidesPerView: 3,
-                    spaceBetween: 60,
-                }
-            },
-        });
-    }
 
     // Скрипт динамического адаптива (для перемещения ДОМ-элементов в другое место если нужно без дублирования кода)
     function DynamicAdapt(type) {

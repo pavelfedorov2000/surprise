@@ -1,0 +1,22 @@
+.certificate-content {
+    &__section {
+        @include row-grid(var(--offset-xl));
+        padding-bottom: var(--section-padding-xs);
+
+        @media(max-width: $lg) {
+            row-gap: var(--offset-xl);
+            padding-bottom: var(--offset-xxxl);
+        }
+    }
+
+    &__subsection {
+        @include row-grid(var(--offset-s));
+
+        @media(max-width: $lg) {}
+    }
+
+    &__subsection-title {
+        font-size: 24px;
+        margin-bottom: var(--offset-xxs);
+    }
+}

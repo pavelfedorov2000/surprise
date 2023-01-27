@@ -1,0 +1,21 @@
+[{
+    "headingId": "faq_accordion_heading_1",
+    "title": "Как активировать сертификат?",
+    "ariaControls": "faq_collapse_1",
+    "text": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Mollitia inventore laudantium atque delectus cum corrupti omnis deleniti sapiente! Vitae, a quisquam consequuntur nemo labore delectus? Molestiae nihil libero ratione suscipit?"
+}, {
+    "headingId": "faq_accordion_heading_2",
+    "title": "Сколько действует сертификат?",
+    "ariaControls": "faq_collapse_2",
+    "text": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Mollitia inventore laudantium atque delectus cum corrupti omnis deleniti sapiente! Vitae, a quisquam consequuntur nemo labore delectus? Molestiae nihil libero ratione suscipit?"
+}, {
+    "headingId": "faq_accordion_heading_3",
+    "title": "Что делать, если подарок не подошел?",
+    "ariaControls": "faq_collapse_3",
+    "text": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Mollitia inventore laudantium atque delectus cum corrupti omnis deleniti sapiente! Vitae, a quisquam consequuntur nemo labore delectus? Molestiae nihil libero ratione suscipit?"
+}, {
+    "headingId": "faq_accordion_heading_4",
+    "title": "Как купить сертификат в рассрочку?",
+    "ariaControls": "faq_collapse_4",
+    "text": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Mollitia inventore laudantium atque delectus cum corrupti omnis deleniti sapiente! Vitae, a quisquam consequuntur nemo labore delectus? Molestiae nihil libero ratione suscipit?"
+}]

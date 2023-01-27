@@ -39,7 +39,9 @@ app.popup = {
                 $('.overlay').fadeIn();
             }
 
-
+            if ($btn.hasClass('action-btn')) {
+                $btn.attr('aria-expanded', true);
+            }
         });
 
         /* $('[data-popup="congratulations-popup"]').on('click', function () {
@@ -61,7 +63,15 @@ app.popup = {
         });
 
         $(document).on('click', '.popup__close', function () {
-            $(this).closest('.popup').fadeOut();
+            const $popup = $(this).closest('.popup');
+            $popup.fadeOut();
+
+            const $btn = $(`[data-popup="${$popup.attr('id')}"]`);
+
+            if ($btn.hasClass('action-btn')) {
+                $btn.attr('aria-expanded', false);
+            }
+
             $('.overlay').fadeOut();
             $('body').removeClass('_lock');
             $('html').removeClass('disable-fix');

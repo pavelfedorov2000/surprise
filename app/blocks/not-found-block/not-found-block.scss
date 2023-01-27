@@ -2,19 +2,22 @@
     min-height: calc(100vh - var(--header-height));
     @include padding-y(var(--section-padding));
     background-color: #FEFAFB;
+    background-size: cover;
+    background-position: 0 0;
+    background-repeat: no-repeat;
 
     @media(min-width: 1441px) {
         background-image: url(../images/decor/404-bg.svg);
-        background-size: cover;
-        background-position: 0 0;
-        background-repeat: no-repeat;
     }
 
     @media(max-width: $lg) {
-        background-image: url(../images/decor/404-bg-mob.svg);
         padding-top: var(--section-padding-xs);
         padding-bottom: 106px;
         border-radius: $brs-card;
+    }
+
+    @media(max-width: $sm) {
+        background-image: url(../images/decor/404-bg-mob.svg);
     }
 
     // .not-found-block__content

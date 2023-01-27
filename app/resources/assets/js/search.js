@@ -46,7 +46,6 @@ $(function () {
         const $searchFormInput = $searchForm.find('.search-form__input');
         const $searchFormBtn = $searchForm.find('.search-form__btn');
         const $dropSearch = $searchForm.find('.drop-search');
-        //const asidePopup = $('.aside-popup');
 
         if (!$searchForm.is(e.target) && $searchForm.has(e.target).length === 0) {
             $searchForm.removeClass('active');

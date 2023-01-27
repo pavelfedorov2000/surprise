@@ -1,4 +1,4 @@
-$(document).ready(function () {
+$(function () {
     // Кнопка избранное
     $('.favorite-btn').on('click', function () {
         const $favoriteBtn = $(this);
