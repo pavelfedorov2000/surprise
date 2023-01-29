@@ -1,7 +1,9 @@
 .social {
 	$this: &;
 
-	@include grid-row(28px);
+	display: flex;
+    flex-wrap: wrap;
+    gap: 28px;
 	// .social__item
 
 	&__item {

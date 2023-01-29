@@ -197,8 +197,9 @@
 }
 
 .reaction {
-    @include grid-row(var(--offset-xxs));
+    display: flex;
     align-items: center;
+    gap: var(--offset-xxs);
     padding: var(--offset-xxs) 18px;
     background-color: #fff;
     border-radius: 100px;
