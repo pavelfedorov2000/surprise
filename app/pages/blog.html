@@ -1,5 +1,4 @@
 @@include("blocks/head/head.html", {"title": "Главная"})
-<!-- @@include("blocks/head/no-js.html") -->
 <div class="wrapper">
 	@@include("blocks/layout/layout.html")
 	<main class="page page--padding page--with_decor">
@@ -10,44 +9,42 @@
 			<div class="page__top">
 				<h1 class="page-title">Блог</h1>
 			</div>
-			<div class="blog-page">
-				<div class="tabs-block">
-					<div class="tabs">
-						<ul class="tabs__list">
-							<li>
-								<button class="tab active" type="button">Подарок маме</button>
-							</li>
-							<li>
-								<button class="tab" type="button">Подарок маме</button>
-							</li>
-							<li>
-								<button class="tab" type="button">Подарок маме</button>
-							</li>
-							<li>
-								<button class="tab" type="button">Подарок маме</button>
-							</li>
-							<li>
-								<button class="tab" type="button">Подарок маме</button>
-							</li>
-							<li>
-								<button class="tab" type="button">Подарок маме</button>
-							</li>
-						</ul>
-					</div>
+			<div class="tabs-block">
+				<div class="tabs">
+					<ul class="tabs__list">
+						<li>
+							<button class="tab active" type="button">Подарок маме</button>
+						</li>
+						<li>
+							<button class="tab" type="button">Подарок маме</button>
+						</li>
+						<li>
+							<button class="tab" type="button">Подарок маме</button>
+						</li>
+						<li>
+							<button class="tab" type="button">Подарок маме</button>
+						</li>
+						<li>
+							<button class="tab" type="button">Подарок маме</button>
+						</li>
+						<li>
+							<button class="tab" type="button">Подарок маме</button>
+						</li>
+					</ul>
 				</div>
-				<div class="blog-page__cards row">
-					@@include('blocks/blog-card/blog-card.html')
-					@@include('blocks/blog-card/blog-card.html')
-					@@include('blocks/blog-card/blog-card.html')
-					@@include('blocks/blog-card/blog-card.html')
-					@@include('blocks/blog-card/blog-card.html')
-					@@include('blocks/blog-card/blog-card.html')
-				</div>
-				<div class="load-more">
-					<button class="btn btn--style_link" type="button">
-						Посмотреть еще
-					</button>
-				</div>
+			</div>
+			<ul class="row">
+				@@include('blocks/blog-card/blog-card.html')
+				@@include('blocks/blog-card/blog-card.html')
+				@@include('blocks/blog-card/blog-card.html')
+				@@include('blocks/blog-card/blog-card.html')
+				@@include('blocks/blog-card/blog-card.html')
+				@@include('blocks/blog-card/blog-card.html')
+			</ul>
+			<div class="load-more">
+				<button class="btn btn--style_link" type="button">
+					Посмотреть еще
+				</button>
 			</div>
 		</div>
 	</main>

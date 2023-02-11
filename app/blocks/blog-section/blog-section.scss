@@ -1,4 +1,23 @@
 .blog-slider {
 	padding-bottom: var(--offset-m);
 	margin-bottom: calc(var(--offset-m) * (-1));
+
+	.swiper-slide {
+		@media(max-width: $lg) {
+			opacity: .5;
+			transition: $transition opacity;
+		}
+
+		&-active {
+			@media(max-width: $lg) {
+				opacity: 1;
+			}
+		}
+
+		&-next {
+			@media(min-width: 768px) {
+				opacity: 1;
+			}
+		}
+	}
 }

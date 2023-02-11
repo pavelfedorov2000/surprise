@@ -1,61 +1,69 @@
 .check-list {
-    @include row-grid(var(--offset-xxs));
+	@include row-grid(var(--offset-xxs));
 
-    &--offset {
-        &_m {
-            row-gap: var(--offset-m);
-        }
-    }
+	&--offset {
+		&_m {
+			row-gap: var(--offset-m);
+		}
+	}
 
-    li {
-        @extend %museo-300;
-        position: relative;
-        padding-left: calc(var(--icon-size) + var(--offset-xs));
+	li {
+		@extend %museo-300;
+		position: relative;
+		padding-left: calc(var(--icon-size) + var(--offset-xs));
 
-        &::before {
-            content: '';
-            position: absolute;
-            top: 0;
-            left: 0;
-            width: var(--icon-size);
-            height: var(--icon-size);
-            background-image: url(../images/icons/check-list.svg);
-        }
-    }
+		&::before {
+			content: '';
+			position: absolute;
+			top: 0;
+			left: 0;
+			width: var(--icon-size);
+			height: var(--icon-size);
+			background-image: url(../images/icons/check-list.svg);
+		}
+	}
 }
 
 .icons-list {
-    @include row-grid(var(--offset-l));
+	@include row-grid(var(--offset-l));
 
-    @media(max-width: $md) {
-        @include row-grid(var(--offset-m));
-    }
+	@media(max-width: $md) {
+		@include row-grid(var(--offset-m));
+	}
 
-    &--grid {
-        &_cols {
-            &-2 {
-                gap: var(--offset-m) var(--offset-xl);
+	&--grid {
+		&_cols {
+			&-2 {
+				gap: var(--offset-m) var(--offset-xl);
 
-                @media(max-width: $sm) {
-                    gap: var(--offset-s);
-                }
+				@media(max-width: $sm) {
+					gap: var(--offset-s);
+				}
 
-                @media(min-width: 768px) {
-                    grid-template-columns: repeat(2, 1fr);
-                }
-            }
+				@media(min-width: 768px) {
+					grid-template-columns: repeat(2, 1fr);
+				}
+			}
 
-            &-3 {
-                @media(min-width: 1025px) {
-                    grid-template-columns: repeat(3, 1fr);
-                }
-            }
-        }
-    }
+			&-3 {
+				@media(min-width: 1025px) {
+					grid-template-columns: repeat(3, 1fr);
+				}
+			}
+		}
+	}
 
-    &--offset-items {
-        &_m {
-            row-gap: var(--offset-m);
-        }
-    }
+	&--offset-items {
+		&_m {
+			row-gap: var(--offset-m);
+		}
+	}
+
+	&--item-align {
+		&_center {
+			.icons-item {
+				align-items: center;
+			}
+		}
+	}
 }

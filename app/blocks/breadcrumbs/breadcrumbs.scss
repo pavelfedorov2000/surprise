@@ -10,20 +10,15 @@
 	&__list {
 		display: flex;
 		flex-wrap: wrap;
-		margin-left: calc(var(--offset-s) * (-1));
+		gap: var(--offset-s);
 
 		@media(max-width: $sm) {
-			margin-left: calc(var(--offset-xxxs) * (-1));
+			gap: var(--offset-xxxs);
 		}
 	}
 
 	&__item {
 		position: relative;
-		margin-left: var(--offset-s);
-
-		@media(max-width: $sm) {
-			margin-left: var(--offset-xxxs);
-		}
 
 		@media(max-width: $sm) {
 			font-size: 14px;

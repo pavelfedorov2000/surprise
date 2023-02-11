@@ -67,23 +67,4 @@
 			font-size: 20px;
 		}
 	}
-
-	&.swiper-slide {
-		@media(max-width: $lg) {
-			opacity: .5;
-			transition: $transition opacity;
-		}
-
-		&-active {
-			@media(max-width: $lg) {
-				opacity: 1;
-			}
-		}
-
-		&-next {
-			@media(min-width: 768px) {
-				opacity: 1;
-			}
-		}
-	}
 }

@@ -3,35 +3,29 @@
 		<div class="section__top">
 			<h2 class="section-title">Избранные категории</h2>
 		</div>
-		<div class="favorite-categories">
-			@@include('blocks/small-card/small-card.html', {
+		<ul class="favorite-categories">
+			@@loop('blocks/small-card/small-card.html', [{
 			"src": "assets/images/content/favorite-categories/01",
 			"title": "Все сертификаты"
-			})
-			@@include('blocks/small-card/small-card.html', {
+			}, {
 			"src": "assets/images/content/favorite-categories/02",
 			"title": "Активный отдых"
-			})
-			@@include('blocks/small-card/small-card.html', {
+			}, {
 			"src": "assets/images/content/favorite-categories/03",
 			"title": "Подарки на День Рождения"
-			})
-			@@include('blocks/small-card/small-card.html', {
+			}, {
 			"src": "assets/images/content/favorite-categories/04",
 			"title": "СПА"
-			})
-			@@include('blocks/small-card/small-card.html', {
+			}, {
 			"src": "assets/images/content/favorite-categories/05",
 			"title": "Мастер классы и обучение"
-			})
-			@@include('blocks/small-card/small-card.html', {
+			}, {
 			"src": "assets/images/content/favorite-categories/06",
 			"title": "Полеты"
-			})
-			@@include('blocks/small-card/small-card.html', {
+			}, {
 			"src": "assets/images/content/favorite-categories/07",
 			"title": "Романтика для двоих"
-			})
-		</div>
+			}])
+		</ul>
 	</div>
 </section>
