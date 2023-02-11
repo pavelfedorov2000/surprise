@@ -1,81 +1,119 @@
-<div id="auth" class="popup">
-	@@include('blocks/close-btn/close-btn.html', {
-	"class": "popup",
-	"ariaLabel": "Закрыть авторизацию"
-	})
-	<nav class="popup__tabs" aria-label="Tabs">
-		<ul class="tabs tabs--items_2">
-			<li>
-				<button class="tab popup__tab active tab--style_2" id="auth_tab_1" role="tab" aria-selected="true"
-					aria-controls="auth-tabs-content-1" type="button">
-					Авторизация
-				</button>
-			</li>
-			<li>
-				<button class="tab popup__tab tab--style_2" id="auth_tab_2" role="tab"
-					aria-controls="auth-tabs-content-2" type="button">
-					Регистрация
-				</button>
-			</li>
-		</ul>
-	</nav>
-	<form action="#" id="auth-tabs-content-1" aria-labelledby="auth_tab_1" class="tabs-content js-form"
-		style="display: block;">
-		<div class="popup__form">
-			<label class="form-item">
-				<span class="form-label">Телефон *</span>
-				<input type="tel" class="input" placeholder="123****12" required
-					data-pristine-required-message="Поле не может быть пустым">
-			</label>
-			<label class="form-item">
-				<span class="form-label">Пароль *</span>
-				<span class="input-wrap">
-					<input type="password" class="input" placeholder="******" required
-						data-pristine-required-message="Поле не может быть пустым">
-					<button class="js-toggle-password action-btn" type="button" aria-label="Показать пароль">
-						@@include('blocks/eyes/show.html')
-						@@include('blocks/eyes/hide.html')
-					</button>
-				</span>
-			</label>
-			<div class="form-item form-item--flex">
-				@@include('blocks/checkbox/checkbox.html', {
-				"text": "Запомнить пароль"
-				})
-				<button class="btn btn--style_link-3 js-forgot-password" type="button">
-					<span class="btn__text">Забыли пароль?</span>
-				</button>
-			</div>
-			<button class="btn btn--style_bg-pink" type="submit">
-				<span class="btn__text">Войти</span>
-			</button>
-		</div>
-		<div class="popup__btn">
-			<button class="btn btn--style_link js-get-auth-code" type="button">
-				<div class="btn__text">Получить код авторизации</div>
-			</button>
-		</div>
-	</form>
-	<form action="#" id="auth-tabs-content-2" aria-labelledby="auth_tab_2" class="tabs-content js-form">
-		<div class="popup__form">
-			<label class="popup__form-item form-item">
-				<span class="form-label">E-mail*</span>
-				<input type="email" class="input" placeholder="example@mail.com" required
-					data-pristine-required-message="Поле не может быть пустым">
-			</label>
-			<label class="popup__form-item form-item">
-				<span class="form-label">Телефон*</span>
-				<input type="tel" class="input" placeholder="123****12" required
-					data-pristine-required-message="Поле не может быть пустым">
-			</label>
-			<label class="popup__form-item form-item">
-				<span class="form-label">Ваше имя*</span>
-				<input class="input" placeholder="Имя" required
-					data-pristine-required-message="Поле не может быть пустым">
-			</label>
-			<button class="btn btn--style_bg-pink" type="submit">
-				<span class="btn__text">Зарегистрироваться</span>
-			</button>
-		</div>
-	</form>
+<div id="auth"
+     class="popup">
+    @@include('blocks/close-btn/close-btn.html', {
+    "class": "popup",
+    "ariaLabel": "Закрыть авторизацию"
+    })
+    <nav class="popup__tabs"
+         aria-label="Tabs">
+        <ul class="tabs tabs--items_2"
+            role="tablist">
+            <li>
+                <button class="tab popup__tab active tab--style_2"
+                        id="auth_tab_1"
+                        role="tab"
+                        aria-selected="true"
+                        aria-controls="auth-tabs-content-1"
+                        type="button">
+                    Авторизация
+                </button>
+            </li>
+            <li>
+                <button class="tab popup__tab tab--style_2"
+                        id="auth_tab_2"
+                        role="tab"
+                        aria-controls="auth-tabs-content-2"
+                        type="button">
+                    Регистрация
+                </button>
+            </li>
+        </ul>
+    </nav>
+    <form action="#"
+          id="auth-tabs-content-1"
+          aria-labelledby="auth_tab_1"
+          class="tabs-content js-form"
+          style="display: block;"
+          role="tabpanel">
+        <div class="popup__form">
+            <label class="form-item">
+                <span class="form-label">Телефон *</span>
+                <input type="tel"
+                       class="input"
+                       placeholder="123****12"
+                       required
+                       data-pristine-required-message="Поле не может быть пустым">
+            </label>
+            <label class="form-item">
+                <span class="form-label">Пароль *</span>
+                <span class="input-wrap">
+                    <input type="password"
+                           class="input"
+                           placeholder="******"
+                           required
+                           data-pristine-required-message="Поле не может быть пустым">
+                    <button class="js-toggle-password action-btn"
+                            type="button"
+                            aria-label="Показать пароль">
+                        @@include('blocks/eyes/show.html')
+                        @@include('blocks/eyes/hide.html')
+                    </button>
+                </span>
+            </label>
+            <div class="form-item form-item--flex">
+                @@include('blocks/checkbox/checkbox.html', {
+                "text": "Запомнить пароль"
+                })
+                <button class="btn btn--style_link-3 js-forgot-password"
+                        type="button">
+                    <span class="btn__text">Забыли пароль?</span>
+                </button>
+            </div>
+            <button class="btn btn--style_bg-pink"
+                    type="submit">
+                <span class="btn__text">Войти</span>
+            </button>
+        </div>
+        <div class="popup__btn">
+            <button class="btn btn--style_link js-get-auth-code"
+                    type="button">
+                <div class="btn__text">Получить код авторизации</div>
+            </button>
+        </div>
+    </form>
+    <form action="#"
+          id="auth-tabs-content-2"
+          aria-labelledby="auth_tab_2"
+          class="tabs-content js-form"
+          role="tabpanel">
+        <div class="popup__form">
+            <label class="popup__form-item form-item">
+                <span class="form-label">E-mail*</span>
+                <input type="email"
+                       class="input"
+                       placeholder="example@mail.com"
+                       required
+                       data-pristine-required-message="Поле не может быть пустым">
+            </label>
+            <label class="popup__form-item form-item">
+                <span class="form-label">Телефон*</span>
+                <input type="tel"
+                       class="input"
+                       placeholder="123****12"
+                       required
+                       data-pristine-required-message="Поле не может быть пустым">
+            </label>
+            <label class="popup__form-item form-item">
+                <span class="form-label">Ваше имя*</span>
+                <input class="input"
+                       placeholder="Имя"
+                       required
+                       data-pristine-required-message="Поле не может быть пустым">
+            </label>
+            <button class="btn btn--style_bg-pink"
+                    type="submit">
+                <span class="btn__text">Зарегистрироваться</span>
+            </button>
+        </div>
+    </form>
 </div>

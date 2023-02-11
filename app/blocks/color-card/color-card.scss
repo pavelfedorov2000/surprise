@@ -1,0 +1,62 @@
+.color-card {
+    display: flex;
+    align-items: center;
+    padding: var(--offset-l) var(--offset-l) var(--offset-l) 0;
+    border-radius: $brs-card-xl;
+
+    @media(max-width: $md) {
+        padding: var(--offset-m) var(--offset-m) var(--offset-m) 0;
+    }
+
+    &__img {
+        flex-shrink: 0;
+        margin-right: var(--offset-xxxl);
+        display: flex;
+        align-items: center;
+        width: 122px;
+        height: 125px;
+
+        @media(max-width: $md) {
+            margin-right: var(--offset-m);
+            width: 75px;
+            height: 102px;
+        }
+    }
+
+    &__content {
+        > * {
+            &:not(:last-child) {
+                margin-bottom: var(--offset-s);
+
+                @media(max-width: $sm) {
+                    margin-bottom: var(--offset-xxxs);
+                }
+            }
+        }
+    }
+
+    &__title {
+        @extend %museo-700;
+        font-size: 24px;
+
+        @media(max-width: $md) {
+            font-size: 18px;
+        }
+    }
+
+    &--style {
+        &_bg {
+            &-pink {
+                background: var(--pink-gradient);
+            }
+
+            &-green {
+                background: var(--green-gradient);
+            }
+
+            &-yellow {
+                background: var(--yellow-gradient);
+            }
+        }
+    }
+}

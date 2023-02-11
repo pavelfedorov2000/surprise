@@ -5,15 +5,6 @@
 	&__items {
 		display: flex;
 		overflow-x: auto;
-		margin-left: calc(var(--offset-xxxl) * (-1));
-
-		@media(max-width: $lg) {
-			margin-left: calc(var(--offset-l) * (-1));
-		}
-
-		@media(max-width: $sm) {
-			margin-left: calc(var(--offset-s) * (-1));
-		}
 
 		&::-webkit-scrollbar {
 			width: 0;
@@ -26,7 +17,7 @@
 
 	&__item {
 		min-width: 312px;
-		margin-left: var(--offset-xxxl);
+		margin-right: var(--offset-xxxl);
 
 		&:not(:last-child) {
 			position: relative;
@@ -47,12 +38,12 @@
 		}
 
 		@media(max-width: $lg) {
-			margin-left: var(--offset-l);
+			margin-right: var(--offset-l);
 		}
 
 		@media(max-width: $sm) {
 			min-width: 290px;
-			margin-left: var(--offset-s);
+			margin-right: var(--offset-s);
 		}
 	}
 }

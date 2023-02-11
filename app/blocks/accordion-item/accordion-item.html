@@ -1,0 +1,18 @@
+<section class="accordion-item">
+    <h3 class="accordion-item__heading"
+        id="@@headingId">
+        <button class="accordion-item__toggle"
+                type="button"
+                aria-controls="@@ariaControls"
+                aria-expanded="@@if(context.isExpanded){true}@@if(!context.isExpanded){false}">
+            @@title
+        </button>
+    </h3>
+    <div class="accordion-item__content"
+         id="@@ariaControls"
+         aria-labelledby="@@headingId"
+         @@if(!context.isVisible){style="display: none;"
+         }>
+        <p>@@text</p>
+    </div>
+</section>

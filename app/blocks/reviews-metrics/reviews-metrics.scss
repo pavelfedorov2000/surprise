@@ -89,28 +89,3 @@
         @extend %museo-300;
     }
 }
-
-$progress-bar-stroke-width: 1;
-$progress-bar-size: 68px;
-
-.progress-bar {
-    width: $progress-bar-size;
-    height: $progress-bar-size;
-    transform: rotate(-90deg);
-
-    &__background {
-        fill: none;
-        stroke: #fff;
-        stroke-width: $progress-bar-stroke-width;
-    }
-
-    &__progress {
-        fill: none;
-        stroke: var(--green);
-        stroke-dasharray: 100 100;
-        stroke-dashoffset: 100;
-        stroke-linecap: round;
-        stroke-width: $progress-bar-stroke-width;
-        transition: stroke-dashoffset 1s ease-in-out;
-    }
-}
