@@ -11,8 +11,11 @@
                 Ваше пожелание
                 <button class="btn btn--style_link-3"
                         data-popup="congratulations-popup"
+                        aria-controls="congratulations-popup"
                         aria-expanded="false"
-                        type="button">Выбрать из наших вариантов</button>
+                        type="button">
+                    <span class="btn__text">Выбрать из наших вариантов</span>
+                </button>
             </span>
             <div class="textarea">
                 <textarea class="input"
@@ -23,7 +26,8 @@
     <button class="btn dropdown-certificate-field__btn btn--style_look"
             type="button"
             aria-expanded="false">
-        <svg class="icon btn__icon">
+        <svg class="icon btn__icon"
+             aria-hidden="true">
             <use xlink:href="assets/images/sprite.svg#search-gray"></use>
         </svg>
         <span class="btn__text">Предварительный просмотр</span>

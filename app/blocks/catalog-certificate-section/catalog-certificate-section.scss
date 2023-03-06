@@ -21,6 +21,7 @@
 
         @media(min-width: 1201px) {
             grid-template-columns: repeat(3, 1fr);
+            align-items: flex-start;
         }
     }
 

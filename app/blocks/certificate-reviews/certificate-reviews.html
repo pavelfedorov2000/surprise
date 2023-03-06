@@ -1,92 +1,210 @@
 <section class="certificate-reviews">
-	<div class="section__top">
-		<h2 class="section-title">Отзывы</h2>
-	</div>
-	@@include('blocks/reviews-metrics/reviews-metrics.html', {
-	"class": "certificate-reviews__metrics"
-	})
-	<div class="certificate-reviews__items">
-		<article class="review">
-			<header class="review__top">
-				<div class="review__info">
-					<div class="review__wrap">
-						<div class="review__name">Екатерина</div>
-						<time class="date review__date" datetime="2022-07-04">04.07.2022</time>
-					</div>
-					@@include('blocks/rating/rating.html', {
-					"class": "review",
-					"num": "5.0"
-					})
-				</div>
-				@@include('blocks/badge/badge.html', {
-				"class": "review",
-				"text": "Отзыв подтвержден",
-				"color": "green"
-				})
-			</header>
-			<p class="review__text">
-				Ходили с друзьями, очень понравилось. Оказалось легче, чем я думала. Каталась впервые и со
-				всем
-				справилась, рекомендую
-			</p>
-			<div class="review__reactions reactions">
-				<div class="reaction">
-					<img class="reaction__img" src="assets/images/icons/fire.png" alt="" loading="lazy" width="32"
-						height="32">
-					<img class="reaction__logo" src="assets/images/icons/srprs.png" alt="" loading="lazy" width="24"
-						height="24">
-				</div>
-			</div>
-			<button class="btn js-view-review-answers btn--style_link-toggle" aria-expanded="false">
-				<span>Показать ответы</span>
-			</button>
-			<div class="review__answers">
-				<div class="review-answers">
-					<div class="review-answer">
-						<img class="review-answer__logo" src="assets/images/icons/school.png" alt="" loading="lazy">
-						<div class="review-answer__content">
-							<div class="review-answer__title">Гастробар “Правда”</div>
-							<p class="review-answer__text">Мечтаете опробовать свои силы в чем-то новом и обожаете
-								активный
-								отдых? Хочется
-								охладиться в невыносимую жару? Тогда хватайте друзей и вторую половинку и становитесь
-								вместе
-								на SUP-борды —
-								специальные доски для гребли стоя и длинные весла.</p>
-						</div>
-					</div>
-					<div class="review-answer">
-						<img class="review-answer__logo" src="assets/images/icons/srprs.png" alt="" loading="lazy">
-						<div class="review-answer__content">
-							<div class="review-answer__title">SURPRISE.BY</div>
-							<p class="review-answer__text">Алиса, благодарим Вас за отзыв!)</p>
-						</div>
-					</div>
-				</div>
-			</div>
-		</article>
-		<article class="review">
-			<header class="review__top">
-				<div class="review__info">
-					<div class="review__wrap">
-						<div class="review__name">Yana</div>
-						<time class="date review__date" datetime="2022-07-04">04.07.2022</time>
-					</div>
-					@@include('blocks/rating/rating.html', {
-					"class": "review",
-					"num": "5.0"
-					})
-				</div>
-				@@include('blocks/badge/badge.html', {
-				"class": "review",
-				"text": "Отзыв подтвержден",
-				"color": "green"
-				})
-			</header>
-			<p class="review__text">
-				Крутое летнее развлечение! и хорошая физическая нагрузка. Остались очень довольны. Заряд энергии
-				обеспечен
-			</p>
-		</article>
-	</div>
+    <h2 class="section-title">Отзывы</h2>
+    @@if(!context.combo){
+    @@include('blocks/reviews-metrics/reviews-metrics.html')
+    }
+    <div class="certificate-reviews__items">
+        <article class="review">
+            <header class="review__top">
+                <div class="review__info">
+                    <div class="review__wrap">
+                        <div class="review__name">Екатерина</div>
+                        <time class="date review__date"
+                              datetime="2022-07-04">04.07.2022</time>
+                    </div>
+                    @@include('blocks/rating/rating.html', {
+                    "class": "review",
+                    "num": "5.0"
+                    })
+                </div>
+                @@include('blocks/badge/badge.html', {
+                "class": "review",
+                "text": "Отзыв подтвержден",
+                "color": "green"
+                })
+            </header>
+            <p class="review__text">
+                Ходили с друзьями, очень понравилось. Оказалось легче, чем я думала. Каталась впервые и со
+                всем
+                справилась, рекомендую
+            </p>
+            <div class="review__reactions reactions">
+                <div class="reaction">
+                    <img class="reaction__emodji"
+                         src="assets/images/icons/holding-back-tears.png"
+                         alt=""
+                         loading="lazy"
+                         width="32"
+                         height="32">
+                    <div class="reaction__authors">
+                        <img class="reaction__author"
+                             src="assets/images/icons/avatar.png"
+                             alt=""
+                             loading="lazy"
+                             width="24"
+                             height="24">
+                        <img class="reaction__author"
+                             src="assets/images/icons/avatar-2.png"
+                             alt=""
+                             loading="lazy"
+                             width="24"
+                             height="24">
+                    </div>
+                </div>
+                <div class="reaction">
+                    <img class="reaction__emodji"
+                         src="assets/images/icons/fire.png"
+                         alt=""
+                         loading="lazy"
+                         width="32"
+                         height="32">
+                    <div class="reaction__authors">
+                        <img class="reaction__author"
+                             src="assets/images/icons/srprs.png"
+                             alt=""
+                             loading="lazy"
+                             width="24"
+                             height="24">
+                    </div>
+                </div>
+            </div>
+            <button class="btn js-view-review-answers btn--style_link-toggle"
+                    aria-expanded="false">
+                <span class="btn__text">Показать ответы</span>
+            </button>
+            <div class="review__answers">
+                <div class="review-answers">
+                    <div class="review-answer">
+                        <img class="review-answer__logo"
+                             src="assets/images/icons/school.png"
+                             alt=""
+                             loading="lazy">
+                        <div class="review-answer__content">
+                            <div class="review-answer__title">Гастробар “Правда”</div>
+                            <p class="review-answer__text">Мечтаете опробовать свои силы в чем-то новом и обожаете
+                                активный
+                                отдых? Хочется
+                                охладиться в невыносимую жару? Тогда хватайте друзей и вторую половинку и становитесь
+                                вместе
+                                на SUP-борды —
+                                специальные доски для гребли стоя и длинные весла.</p>
+                        </div>
+                    </div>
+                    <div class="review-answer">
+                        <img class="review-answer__logo"
+                             src="assets/images/icons/srprs.png"
+                             alt=""
+                             loading="lazy">
+                        <div class="review-answer__content">
+                            <div class="review-answer__title">SURPRISE.BY</div>
+                            <p class="review-answer__text">Алиса, благодарим Вас за отзыв!)</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </article>
+        <article class="review">
+            <header class="review__top">
+                <div class="review__info">
+                    <div class="review__wrap">
+                        <div class="review__name">Екатерина</div>
+                        <time class="date review__date"
+                              datetime="2022-07-04">04.07.2022</time>
+                    </div>
+                    @@include('blocks/rating/rating.html', {
+                    "class": "review",
+                    "num": "5.0"
+                    })
+                </div>
+                @@include('blocks/badge/badge.html', {
+                "class": "review",
+                "text": "Отзыв подтвержден",
+                "color": "green"
+                })
+            </header>
+            <p class="review__text">
+                Ходили с друзьями, очень понравилось. Оказалось легче, чем я думала. Каталась впервые и со
+                всем
+                справилась, рекомендую
+            </p>
+            <div class="review__reactions reactions">
+                <div class="reaction">
+                    <img class="reaction__img"
+                         src="assets/images/icons/fire.png"
+                         alt=""
+                         loading="lazy"
+                         width="32"
+                         height="32">
+                    <img class="reaction__logo"
+                         src="assets/images/icons/srprs.png"
+                         alt=""
+                         loading="lazy"
+                         width="24"
+                         height="24">
+                </div>
+            </div>
+            <button class="btn js-view-review-answers btn--style_link-toggle"
+                    aria-expanded="false">
+                <span class="btn__text">Показать ответы</span>
+            </button>
+            <div class="review__answers">
+                <div class="review-answers">
+                    <div class="review-answer">
+                        <img class="review-answer__logo"
+                             src="assets/images/icons/school.png"
+                             alt=""
+                             loading="lazy">
+                        <div class="review-answer__content">
+                            <div class="review-answer__title">Гастробар “Правда”</div>
+                            <p class="review-answer__text">Мечтаете опробовать свои силы в чем-то новом и обожаете
+                                активный
+                                отдых? Хочется
+                                охладиться в невыносимую жару? Тогда хватайте друзей и вторую половинку и становитесь
+                                вместе
+                                на SUP-борды —
+                                специальные доски для гребли стоя и длинные весла.</p>
+                        </div>
+                    </div>
+                    <div class="review-answer">
+                        <img class="review-answer__logo"
+                             src="assets/images/icons/srprs.png"
+                             alt=""
+                             loading="lazy">
+                        <div class="review-answer__content">
+                            <div class="review-answer__title">SURPRISE.BY</div>
+                            <p class="review-answer__text">Алиса, благодарим Вас за отзыв!)</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </article>
+        <article class="review">
+            <header class="review__top">
+                <div class="review__info">
+                    <div class="review__wrap">
+                        <div class="review__name">Yana</div>
+                        <time class="date review__date"
+                              datetime="2022-07-04">04.07.2022</time>
+                    </div>
+                    @@include('blocks/rating/rating.html', {
+                    "class": "review",
+                    "num": "5.0"
+                    })
+                </div>
+                @@include('blocks/badge/badge.html', {
+                "class": "review",
+                "text": "Отзыв подтвержден",
+                "color": "green"
+                })
+            </header>
+            <p class="review__text">
+                Крутое летнее развлечение! и хорошая физическая нагрузка. Остались очень довольны. Заряд энергии
+                обеспечен
+            </p>
+        </article>
+    </div>
+    <a href="#"
+       class="btn btn--style_link">
+        <span class="btn__text">Посмотреть еще</span>
+    </a>
 </section>

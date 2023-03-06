@@ -4,13 +4,15 @@
             <address class="contacts header__contacts contacts--style_flex">
                 <a href="tel:+375297333368"
                    class="contact">
-                    <svg class="icon">
+                    <svg class="icon"
+                         aria-hidden="true">
                         <use xlink:href="assets/images/sprite.svg#phone"></use>
                     </svg>
                     <span>+375 29 7 3333 68 (MTC)</span>
                 </a>
                 <div class="contact">
-                    <svg class="icon">
+                    <svg class="icon"
+                         aria-hidden="true">
                         <use xlink:href="assets/images/sprite.svg#clock"></use>
                     </svg>
                     <span>с 09:00 до 22:00, Без выходных</span>
@@ -58,33 +60,24 @@
             <div class="header__actions actions-header">
                 <div class="actions-header__items">
                     @@include('blocks/search-form/search-form.html')
-                    <button class="action-btn actions-header__item"
-                            type="button"
-                            aria-label="Авторизоваться"
-                            aria-expanded="false"
-                            data-popup="auth">
-                        <svg class="icon">
-                            <use xlink:href="assets/images/sprite.svg#user"></use>
-                        </svg>
-                    </button>
-                    <a href="#"
-                       class="action-btn actions-header__item"
-                       aria-label="Перейти в избранное">
-                        <svg class="icon">
-                            <use xlink:href="assets/images/sprite.svg#favorite"></use>
-                        </svg>
-                    </a>
-                    <a href="#"
-                       class="action-btn actions-header__item"
-                       aria-label="Перейти в корзину">
-                        <svg class="icon">
-                            <use xlink:href="assets/images/sprite.svg#cart"></use>
-                        </svg>
-                        <span>2</span>
-                    </a>
+                    @@include('blocks/action-btn/action-btn.html', {
+                    "ariaLabel": "Авторизоваться",
+                    "popup": "auth",
+                    "icon": "user"
+                    })
+                    @@include('blocks/action-btn/action-btn.html', {
+                    "ariaLabel": "Перейти в избранное",
+                    "icon": "favorite"
+                    })
+                    @@include('blocks/action-btn/action-btn.html', {
+                    "ariaLabel": "Перейти в корзину",
+                    "icon": "cart"
+                    })
                 </div>
                 <a href="#"
-                   class="btn actions-header__btn">Активировать сертификат</a>
+                   class="btn actions-header__btn">
+                    <span class="btn__text">Активировать сертификат</span>
+                </a>
             </div>
         </div>
     </div>

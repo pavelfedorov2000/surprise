@@ -1,4 +1,5 @@
 <form action="#"
+      id="catalog-filters"
       class="catalog-filters@@if(context.banner){ catalog-filters--@@banner}">
     <button class="catalog-filters__back-btn"
             type="button">Фильтр</button>
@@ -9,7 +10,8 @@
                    name="catalog-radio-filter"
                    checked>
             <span class="radio__content">
-                <svg class="radio__icon"
+                <svg aria-hidden="true"
+                     class="radio__icon"
                      width="25"
                      height="24"
                      viewBox="0 0 25 24"
@@ -48,7 +50,8 @@
                    type="radio"
                    name="catalog-radio-filter">
             <span class="radio__content">
-                <svg class="radio__icon"
+                <svg aria-hidden="true"
+                     class="radio__icon"
                      width="24"
                      height="24"
                      viewBox="0 0 24 24"
@@ -97,10 +100,14 @@
         <div class="catalog-filters__item catalog-filter">
             <button class="catalog-filter__btn"
                     type="button"
-                    aria-expanded="false">
+                    aria-expanded="false"
+                    aria-controls="category_filter"
+                    id="category_filter_button">
                 Категория <span></span>
             </button>
-            <div class="catalog-filter__dropdown dropdown-filter">
+            <div id="category_filter"
+                 class="catalog-filter__dropdown dropdown-filter"
+                 aria-labelledby="category_filter_button">
                 <div class="dropdown-filter__inner">
                     <div class="dropdown-filter__row">
                         <div class="dropdown-filter__col dropdown-filter__col--cols_2">
@@ -189,10 +196,14 @@
         <div class="catalog-filters__item catalog-filter">
             <button class="catalog-filter__btn"
                     type="button"
-                    aria-expanded="false">
+                    aria-expanded="false"
+                    aria-controls="whom_filter"
+                    id="whom_filter_button">
                 Кому <span></span>
             </button>
-            <div class="catalog-filter__dropdown dropdown-filter">
+            <div id="whom_filter"
+                 class="catalog-filter__dropdown dropdown-filter"
+                 aria-labelledby="whom_filter_button">
                 <div class="dropdown-filter__inner">
                     <div class="dropdown-filter__col dropdown-filter__col--cols_2">
                         <div class="dropdown-filter__col-item">
@@ -246,10 +257,15 @@
         </div>
         <div class="catalog-filters__item catalog-filter">
             <button class="catalog-filter__btn"
-                    type="button">
+                    type="button"
+                    aria-expanded="false"
+                    aria-controls="price_filter"
+                    id="price_filter_button">
                 Цена: От <span id="price-from">0</span> до <span id="price-to">3000</span>
             </button>
-            <div class="catalog-filter__dropdown dropdown-filter price-filter">
+            <div id="price_filter"
+                 class="catalog-filter__dropdown dropdown-filter price-filter"
+                 aria-labelledby="price_filter_button">
                 <div class="dropdown-filter__inner">
                     <div class="price-filter__items">
                         <div class="price-filter__item">
@@ -358,7 +374,7 @@
                              height="24"
                              viewBox="0 0 24 24"
                              fill="none"
-                             xmlns="http://www.w3.org/2000/svg">
+                             xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
                             <path fill-rule="evenodd"
                                   clip-rule="evenodd"
                                   d="M18 6L6 18"
@@ -378,6 +394,8 @@
             </div>
         </div>
         <button class="btn catalog-filters__btn btn--style_bg-green"
-                type="submit">Подобрать сертификат</button>
+                type="submit">
+            <span class="btn__text">Подобрать сертификат</span>
+        </button>
     </div>
 </form>

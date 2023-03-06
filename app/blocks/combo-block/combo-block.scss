@@ -1,0 +1,69 @@
+.combo-block {
+    &__inner {
+        display: grid;
+        grid-template-columns: minmax(calc(268 / 877 * 100%), 1fr) var(--icon-size) minmax(calc(268 / 877 * 100%), 1fr) var(--icon-size) 190px;
+        grid-template-areas:
+            'before-plus plus after-plus equals combo'
+        ;
+        gap: var(--offset-m);
+        align-items: center;
+
+        @media(max-width: 1440px) {
+            grid-template-columns: minmax(230px, 1fr) var(--icon-size) minmax(230px, 1fr) var(--icon-size) 190px;
+        }
+
+        @media(max-width: $xl) {
+            grid-template-columns: minmax(268px, 1fr) var(--icon-size) minmax(268px, 1fr) var(--icon-size) 190px;
+        }
+
+        @media(min-width: 768px) and (max-width: $xl) {
+            overflow-x: auto;
+        }
+
+        @media(min-width: 1201px) {
+            max-width: 877px;
+        }
+
+        @media(max-width: $md) {
+            grid-template-columns: 1fr var(--icon-size) 1fr;
+            grid-template-rows: auto var(--icon-size) auto var(--icon-size) auto;
+            grid-template-areas:
+                'before-plus before-plus before-plus'
+                '. plus .'
+                'after-plus after-plus after-plus'
+                '. equals .'
+                'combo combo combo'
+            ;
+            justify-items: center;
+            align-items: flex-start;
+        }
+
+        .catalog-card {
+            width: 100%;
+
+            &:nth-of-type(1) {
+                grid-area: before-plus;
+            }
+
+            &:nth-of-type(2) {
+                grid-area: after-plus;
+            }
+        }
+    }
+
+    // .combo-block__plus
+
+    &__plus,
+    &__equals {
+        width: var(--icon-size);
+        height: var(--icon-size);
+    }
+
+    &__plus {
+        grid-area: plus;
+    }
+
+    &__equals {
+        grid-area: equals;
+    }
+}

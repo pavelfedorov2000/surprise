@@ -42,12 +42,6 @@
         display: flex;
         overflow-x: auto;
 
-        /* &::-webkit-scrollbar {
-			width: 0;
-			-webkit-appearance: none;
-			scrollbar-width: none;
-		} */
-
         &--items {
             &_2 {
                 > * {
@@ -153,7 +147,8 @@
         }
     }
 
-    &.active {
+    &.active,
+    &[aria-selected="true"] {
         background-color: var(--green);
         color: #fff;
 
@@ -187,7 +182,8 @@
             border-bottom: 2px solid var(--line-color);
             border-radius: 0;
 
-            &.active {
+            &.active,
+            &[aria-selected="true"] {
                 @extend %museo-500;
                 background-color: transparent;
                 border-bottom-color: var(--green);
@@ -219,7 +215,8 @@
                 }
             }
 
-            &.active {
+            &.active,
+            &[aria-selected="true"] {
                 color: var(--green);
                 background-color: var(--green-light);
                 border-left-color: var(--green);
@@ -257,7 +254,8 @@
                 }
             }
 
-            &.active {
+            &.active,
+            &[aria-selected="true"] {
                 @extend %museo-700;
                 color: #fff;
                 background-color: var(--green);

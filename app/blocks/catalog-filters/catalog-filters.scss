@@ -530,4 +530,8 @@
     &__item {
         @include row-grid(var(--offset-s));
     }
+
+    .select__title {
+        @include padding-y(15px);
+    }
 }

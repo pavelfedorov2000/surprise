@@ -1,4 +1,7 @@
 .certificate-content {
+    display: flex;
+    flex-direction: column;
+
     &__section {
         @include row-grid(var(--offset-xl));
         padding-bottom: var(--section-padding-xs);
@@ -18,5 +21,11 @@
     &__subsection-title {
         font-size: 24px;
         margin-bottom: var(--offset-xxs);
+    }
+
+    .combo-block {
+        @media(max-width: $md) {
+            order: -1;
+        }
     }
 }

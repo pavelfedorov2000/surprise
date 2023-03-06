@@ -11,7 +11,7 @@ app.tabs = {
             const $tabsContentNotActive = $(`#${$tabNotActive.attr('aria-controls')}`);
 
             $tabNotActive.removeClass('active');
-            $tabNotActive.removeAttr('aria-selected');
+            $tabNotActive.attr('aria-selected', false);
 
             $tab.addClass('active');
             $tab.attr('aria-selected', true);

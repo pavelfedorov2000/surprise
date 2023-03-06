@@ -1,33 +1,31 @@
 <div id="auth"
-     class="popup">
+     class="popup"
+     role="dialog">
     @@include('blocks/close-btn/close-btn.html', {
     "class": "popup",
     "ariaLabel": "Закрыть авторизацию"
     })
     <nav class="popup__tabs"
          aria-label="Tabs">
-        <ul class="tabs tabs--items_2"
-            role="tablist">
-            <li>
-                <button class="tab popup__tab active tab--style_2"
-                        id="auth_tab_1"
-                        role="tab"
-                        aria-selected="true"
-                        aria-controls="auth-tabs-content-1"
-                        type="button">
-                    Авторизация
-                </button>
-            </li>
-            <li>
-                <button class="tab popup__tab tab--style_2"
-                        id="auth_tab_2"
-                        role="tab"
-                        aria-controls="auth-tabs-content-2"
-                        type="button">
-                    Регистрация
-                </button>
-            </li>
-        </ul>
+        <div class="tabs tabs--items_2"
+             role="tablist">
+            <button class="tab popup__tab active tab--style_2"
+                    id="auth_tab_1"
+                    role="tab"
+                    aria-selected="true"
+                    aria-controls="auth-tabs-content-1"
+                    type="button">
+                Авторизация
+            </button>
+            <button class="tab popup__tab tab--style_2"
+                    id="auth_tab_2"
+                    role="tab"
+                    aria-selected="false"
+                    aria-controls="auth-tabs-content-2"
+                    type="button">
+                Регистрация
+            </button>
+        </div>
     </nav>
     <form action="#"
           id="auth-tabs-content-1"

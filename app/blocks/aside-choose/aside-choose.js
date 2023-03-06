@@ -2,8 +2,6 @@ app.asideChoose = {
     name: 'asideChoose',
     description: 'your script description',
     init() {
-        // choose package
-
         $('.js-choose-package').on('click', function () {
             const $radioInput = $(this);
             const $choosePackageItem = $radioInput.closest('.choose-package__item');
@@ -22,14 +20,16 @@ app.asideChoose = {
         });
 
         $('.aside-choose-tape__btn').on('click', function () {
-            $(this).attr('aria-expanded', true);
+            const $btn = $(this);
+            $btn.attr('aria-expanded', true);
             $('body').addClass('_lock');
-            $('.aside-choose').addClass('active');
+            $(`#${$btn.attr('aria-controls')}`).addClass('active');
         });
 
         $(document).on('click', '.aside-choose__close', function () {
-            $('.aside-choose').removeClass('active');
-            $('.aside-choose-tape__btn').attr('aria-expanded', false);
+            const $popup = $(this).closest('.aside-choose');
+            $popup.removeClass('active');
+            $(`[aria-controls="${$popup.attr('id')}"]`).attr('aria-expanded', false);
             $('body').removeClass('_lock');
         });
     },

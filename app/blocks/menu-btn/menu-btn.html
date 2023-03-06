@@ -1,7 +1,15 @@
-<button class="menu-btn" type="button" aria-label="Открыть меню" aria-expanded="false">
-	<picture class="menu-btn__icon">
-		<source media="(max-width: 1024px)" srcset="assets/images/icons/burger.svg">
-		<img class="logo__img" src="assets/images/icons/catalog.svg" alt="">
-	</picture>
-	<span class="menu-btn__text">Каталог</span>
+<button class="menu-btn"
+        type="button"
+        aria-label="Открыть меню"
+        aria-expanded="false"
+        aria-controls="menu">
+    <picture class="menu-btn__icon"
+             aria-hidden="true">
+        <source media="(max-width: 1024px)"
+                srcset="assets/images/icons/burger.svg">
+        <img class="logo__img"
+             src="assets/images/icons/catalog.svg"
+             alt="">
+    </picture>
+    <span class="menu-btn__text">Каталог</span>
 </button>

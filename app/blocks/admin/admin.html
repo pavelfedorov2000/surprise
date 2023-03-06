@@ -17,25 +17,28 @@
         }
         <a class="contact"
            href="tel:+375296670062">
-            <svg class="icon contact__icon">
+            <svg class="icon contact__icon"
+                 aria-hidden="true">
                 <use xlink:href="assets/images/sprite.svg#phone"></use>
             </svg>
-            +375 29 667 00 62
+            <span>+375 29 667 00 62</span>
         </a>
         <a class="contact"
            href="mailto:info@surprise.by">
-            <svg class="icon contact__icon">
+            <svg class="icon contact__icon"
+                 aria-hidden="true">
                 <use xlink:href="assets/images/sprite.svg#email"></use>
             </svg>
-            info@surprise.by
+            <span>info@surprise.by</span>
         </a>
         @@if(context.telegram){
         <a class="contact"
            href="#">
-            <svg class="icon contact__icon">
+            <svg class="icon contact__icon"
+                 aria-hidden="true">
                 <use xlink:href="assets/images/sprite.svg#email"></use>
             </svg>
-            @@telegram
+            <span>@@telegram</span>
         </a>
         }
     </div>

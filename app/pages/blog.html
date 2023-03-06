@@ -1,55 +1,62 @@
 @@include("blocks/head/head.html", {"title": "Главная"})
 <div class="wrapper">
-	@@include("blocks/layout/layout.html")
-	<main class="page page--padding page--with_decor">
-		<div class="container">
-			@@include('blocks/breadcrumbs/breadcrumbs.html', {
-			"current": "Блог"
-			})
-			<div class="page__top">
-				<h1 class="page-title">Блог</h1>
-			</div>
-			<div class="tabs-block">
-				<div class="tabs">
-					<ul class="tabs__list">
-						<li>
-							<button class="tab active" type="button">Подарок маме</button>
-						</li>
-						<li>
-							<button class="tab" type="button">Подарок маме</button>
-						</li>
-						<li>
-							<button class="tab" type="button">Подарок маме</button>
-						</li>
-						<li>
-							<button class="tab" type="button">Подарок маме</button>
-						</li>
-						<li>
-							<button class="tab" type="button">Подарок маме</button>
-						</li>
-						<li>
-							<button class="tab" type="button">Подарок маме</button>
-						</li>
-					</ul>
-				</div>
-			</div>
-			<ul class="row">
-				@@include('blocks/blog-card/blog-card.html')
-				@@include('blocks/blog-card/blog-card.html')
-				@@include('blocks/blog-card/blog-card.html')
-				@@include('blocks/blog-card/blog-card.html')
-				@@include('blocks/blog-card/blog-card.html')
-				@@include('blocks/blog-card/blog-card.html')
-			</ul>
-			<div class="load-more">
-				<button class="btn btn--style_link" type="button">
-					Посмотреть еще
-				</button>
-			</div>
-		</div>
-	</main>
-	@@include("blocks/footer/footer.html")
-	<!-- @@include("blocks/popups/popups.html") -->
+    @@include("blocks/layout/layout.html")
+    <main class="page page--padding page--with_decor">
+        <div class="container">
+            @@include('blocks/breadcrumbs/breadcrumbs.html', {
+            "current": "Блог"
+            })
+            <div class="page__top">
+                <h1 class="page-title">Блог</h1>
+            </div>
+            <div class="tabs-block">
+                <div class="tabs">
+                    <ul class="tabs__list">
+                        <li>
+                            <a href="#"
+                               class="tab active">Подарок маме</a>
+                        </li>
+                        <li>
+                            <a href="#"
+                               class="tab">Подарок маме</button>
+                        </li>
+                        <li>
+                            <a href="#"
+                               class="tab">Подарок маме</button>
+                        </li>
+                        <li>
+                            <a href="#"
+                               class="tab">Подарок маме</button>
+                        </li>
+                        <li>
+                            <a href="#"
+                               class="tab">Подарок маме</a>
+                        </li>
+                        <li>
+                            <a href="#"
+                               class="tab">Подарок маме</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <ul class="row">
+                @@include('blocks/blog-card/blog-card.html')
+                @@include('blocks/blog-card/blog-card.html')
+                @@include('blocks/blog-card/blog-card.html')
+                @@include('blocks/blog-card/blog-card.html')
+                @@include('blocks/blog-card/blog-card.html')
+                @@include('blocks/blog-card/blog-card.html')
+            </ul>
+            <div class="load-more">
+                <button class="btn btn--style_link"
+                        type="button">
+                    Посмотреть еще
+                </button>
+            </div>
+        </div>
+    </main>
+    @@include("blocks/footer/footer.html")
+    <!-- @@include("blocks/popups/popups.html") -->
 </div>
 @@include("blocks/link/link.html")
 </body>

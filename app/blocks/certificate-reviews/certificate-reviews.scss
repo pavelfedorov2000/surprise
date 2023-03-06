@@ -1,14 +1,14 @@
 .certificate-reviews {
+    @include row-grid(var(--offset-xl));
+    justify-items: start;
 
-	&__metrics {
-		&:not(:last-child) {
-			margin-bottom: var(--offset-xl);
-		}
-	}
+    // .certificate-reviews__items
 
-	// .certificate-reviews__items
+    &__items {
+        @include row-grid(var(--offset-xl));
 
-	&__items {
-		@include row-grid(var(--offset-xl));
-	}
+        @media(min-width: 1201px) {
+            padding-left: var(--offset-xxxl);
+        }
+    }
 }

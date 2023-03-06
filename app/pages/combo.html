@@ -1,0 +1,54 @@
+@@include("blocks/head/head.html", {"title": "Комбо"})
+<div class="wrapper">
+    @@include("blocks/layout/layout.html")
+    <main class="page page--padding-top_ls page--padding-bottom_none">
+        <div class="container">
+            @@include('blocks/breadcrumbs/breadcrumbs.html', {
+            "prev": "Все сертификаты",
+            "current": "Набор «Живи ярко»"
+            })
+            <div class="certificate-preview">
+                <header class="certificate-preview__top">
+                    <h1 class="page-title page-title--size_xs">Комбо</h1>
+                    @@include('blocks/rating/rating.html', {
+                    "mobHidden": true,
+                    "reverse": true,
+                    "link": "20 отзывов",
+                    "num": "5.0"
+                    })
+                </header>
+                @@include('blocks/promo-combo/promo-combo.html')
+            </div>
+            <div class="section grid-row">
+                <div class="grid-col-xl-8 grid-col-7 certificate-content">
+                    <div class="certificate-content__section">
+                        @@include('blocks/icons-list/icons-list.html', {
+                        "combo": true
+                        })
+                    </div>
+                    @@include('blocks/combo-block/combo-block.html')
+                    @@include('blocks/combo-description/combo-description.html')
+                    @@include('blocks/certificate-reviews/certificate-reviews.html', {
+                    "combo": true
+                    })
+                </div>
+                <div class="grid-col-xl-4 grid-col-5">
+                    @@include("blocks/aside-choose/aside-choose.html", {
+                    "combo": true
+                    })
+                </div>
+            </div>
+        </div>
+        @@include('blocks/ordered-tape-section/ordered-tape-section.html', {
+        "title": "Как это работает"
+        })
+        @@include('blocks/delivery-section/delivery-section.html')
+        @@include('blocks/faq-section/faq-section.html')
+        @@include('blocks/aside-choose-tape/aside-choose-tape.html')
+    </main>
+    @@include("blocks/footer/footer.html")
+</div>
+@@include("blocks/link/link.html")
+</body>
+
+</html>

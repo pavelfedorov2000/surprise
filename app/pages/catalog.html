@@ -1,24 +1,22 @@
 @@include("blocks/head/head.html", {"title": "Каталог"})
 <div class="wrapper">
-	@@include("blocks/layout/layout.html")
-	<main class="page page--padding-top_ls page--padding-bottom_none">
-		<div class="container">
-			@@include('blocks/breadcrumbs/breadcrumbs.html', {
-			"current": "Каталог"
-			})
-			<div class="page__top page__top--margin-bottom_ls">
-				<h1 class="page-title page-title--size_xs">Каталог</h1>
-			</div>
-			@@include('blocks/catalog-filters/catalog-filters.html')
-			@@include('blocks/catalog-sort/catalog-sort.html')
-			<button class="btn filter-btn btn--style_bg-green" type="button">
-				<span>Фильтр</span>
-			</button>
-			@@include('blocks/catalog-grid/catalog-grid.html')
-		</div>
-		@@include('blocks/catalog-certificate-section/catalog-certificate-section.html')
-	</main>
-	@@include('blocks/footer/footer.html')
+    @@include("blocks/layout/layout.html")
+    <main class="page page--padding-top_ls page--padding-bottom_none">
+        <div class="container">
+            @@include('blocks/breadcrumbs/breadcrumbs.html', {
+            "current": "Каталог"
+            })
+            <div class="page__top page__top--margin-bottom_ls">
+                <h1 class="page-title page-title--size_xs">Каталог</h1>
+            </div>
+            @@include('blocks/catalog-filters/catalog-filters.html')
+            @@include('blocks/catalog-sort/catalog-sort.html')
+            @@include('blocks/filter-btn/filter-btn.html')
+            @@include('blocks/catalog-grid/catalog-grid.html')
+        </div>
+        @@include('blocks/catalog-certificate-section/catalog-certificate-section.html')
+    </main>
+    @@include('blocks/footer/footer.html')
 </div>
 @@include("blocks/link/link.html")
 </body>

@@ -1,8 +1,9 @@
 <div class="counter@@if(context.class){ @@class__counter}">
     <button class="counter__btn js-minus-btn counter__btn--minus"
             type="button"
-            aria-label="Минус">
-        <svg class="icon">
+            aria-label="Минус один">
+        <svg class="icon"
+             aria-hidden="true">
             <use xlink:href="assets/images/sprite.svg#minus"></use>
         </svg>
     </button>
@@ -12,8 +13,9 @@
            value="@@value">
     <button class="counter__btn js-plus-btn counter__btn--plus"
             type="button"
-            aria-label="Плюс">
-        <svg class="icon">
+            aria-label="Плюс один">
+        <svg class="icon"
+             aria-hidden="true">
             <use xlink:href="assets/images/sprite.svg#plus"></use>
         </svg>
     </button>

@@ -145,4 +145,16 @@
             grid-column: 1 / -1;
         }
     }
+
+    &-xl-4 {
+        @media(min-width: 1201px) and (max-width: 1440px) {
+            grid-column: span 4;
+        }
+    }
+
+    &-xl-8 {
+        @media(min-width: 1201px) and (max-width: 1440px) {
+            grid-column: span 8;
+        }
+    }
 }

@@ -1,25 +1,24 @@
 [{
     "href": "home.html",
-    "new": true,
     "title": "Главная"
 }, {
     "href": "certificate.html",
+    "title": "Продукт"
+}, {
+    "href": "combo.html",
     "new": true,
-    "title": "Катание на квадроциклах"
+    "title": "Комбо"
 }, {
     "href": "catalog.html",
     "title": "Каталог"
 }, {
     "href": "cart.html",
-    "new": true,
     "title": "Корзина"
 }, {
     "href": "profile.html",
-    "new": true,
     "title": "Личный кабинет - Неоплаченные заказы"
 }, {
     "href": "profile-empty.html",
-    "new": true,
     "title": "Личный кабинет - Неоплаченные заказы (пустая)"
 }, {
     "href": "about.html",
@@ -32,35 +31,27 @@
     "title": "Отзывы"
 }, {
     "href": "activate-certificate.html",
-    "new": true,
     "title": "Активация сертификата"
 }, {
     "href": "activate-certificate-2.html",
-    "new": true,
     "title": "Активация сертификата 2"
 }, {
     "href": "corporate-clients.html",
-    "new": true,
     "title": "Корпоративным клиентам"
 }, {
     "href": "gastrobar.html",
-    "new": true,
     "title": "Гастробар 'Правда'"
 }, {
     "href": "activate-certificate-success.html",
-    "new": true,
     "title": "Сертификат успешно активирован"
 }, {
     "href": "become-partner.html",
-    "new": true,
     "title": "Стать партнером"
 }, {
     "href": "delivery.html",
-    "new": true,
     "title": "Доставка и оплата"
 }, {
     "href": "shops.html",
-    "new": true,
     "title": "Где купить"
 }, {
     "href": "partners.html",
@@ -76,11 +67,9 @@
     "title": "Избранное"
 }, {
     "href": "vacancies.html",
-    "new": true,
     "title": "Вакансии"
 }, {
     "href": "policy.html",
-    "new": true,
     "title": "Публичный довогор"
 }, {
     "href": "order-ready.html",

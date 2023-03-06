@@ -1,5 +1,6 @@
 <div id="congratulations-popup"
-     class="popup congratulations-popup">
+     class="popup congratulations-popup"
+     role="dialog">
     @@include('blocks/close-btn/close-btn.html', {
     "class": "popup",
     "ariaLabel": "Закрыть варианты поздравлений"
@@ -12,64 +13,57 @@
     <div class="congratulations-popup__body">
         <nav class="congratulations-popup__tabs"
              aria-label="Tabs">
-            <ul class="tabs tabs--orientation_col"
-                role="tablist">
-                <li>
-                    <button class="tab active tab--style_3"
-                            id="congratulations_tab_1"
-                            role="tab"
-                            aria-selected="true"
-                            aria-controls="congratulations-tabs-content-1"
-                            type="button">
-                        День Рождения
-                    </button>
-                </li>
-                <li>
-                    <button class="tab tab--style_3"
-                            id="congratulations_tab_2"
-                            role="tab"
-                            aria-controls="congratulations-tabs-content-2"
-                            type="button">
-                        Свадьба
-                    </button>
-                </li>
-                <li>
-                    <button class="tab tab--style_3"
-                            id="congratulations_tab_3"
-                            role="tab"
-                            aria-controls="congratulations-tabs-content-3"
-                            type="button">
-                        Новый год
-                    </button>
-                </li>
-                <li>
-                    <button class="tab tab--style_3"
-                            id="congratulations_tab_4"
-                            role="tab"
-                            aria-controls="congratulations-tabs-content-4"
-                            type="button">
-                        Рождество
-                    </button>
-                </li>
-                <li>
-                    <button class="tab tab--style_3"
-                            id="congratulations_tab_5"
-                            role="tab"
-                            aria-controls="congratulations-tabs-content-5"
-                            type="button">
-                        23 февраля
-                    </button>
-                </li>
-                <li>
-                    <button class="tab tab--style_3"
-                            id="congratulations_tab_6"
-                            role="tab"
-                            aria-controls="congratulations-tabs-content-6"
-                            type="button">
-                        8 марта
-                    </button>
-                </li>
-            </ul>
+            <div class="tabs tabs--orientation_col"
+                 role="tablist">
+                <button class="tab active tab--style_3"
+                        id="congratulations_tab_1"
+                        role="tab"
+                        aria-selected="true"
+                        aria-controls="congratulations-tabs-content-1"
+                        type="button">
+                    День Рождения
+                </button>
+                <button class="tab tab--style_3"
+                        id="congratulations_tab_2"
+                        role="tab"
+                        aria-selected="false"
+                        aria-controls="congratulations-tabs-content-2"
+                        type="button">
+                    Свадьба
+                </button>
+                <button class="tab tab--style_3"
+                        id="congratulations_tab_3"
+                        role="tab"
+                        aria-selected="false"
+                        aria-controls="congratulations-tabs-content-3"
+                        type="button">
+                    Новый год
+                </button>
+                <button class="tab tab--style_3"
+                        id="congratulations_tab_4"
+                        role="tab"
+                        aria-selected="false"
+                        aria-controls="congratulations-tabs-content-4"
+                        type="button">
+                    Рождество
+                </button>
+                <button class="tab tab--style_3"
+                        id="congratulations_tab_5"
+                        role="tab"
+                        aria-selected="false"
+                        aria-controls="congratulations-tabs-content-5"
+                        type="button">
+                    23 февраля
+                </button>
+                <button class="tab tab--style_3"
+                        id="congratulations_tab_6"
+                        role="tab"
+                        aria-selected="false"
+                        aria-controls="congratulations-tabs-content-6"
+                        type="button">
+                    8 марта
+                </button>
+            </div>
         </nav>
         <div class="congratulations-popup__tabs-content">
             <ul id="congratulations-tabs-content-1"
