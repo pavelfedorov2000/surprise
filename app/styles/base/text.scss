@@ -1,0 +1,15 @@
+.text-block {
+	p {
+		&:not(:last-child) {
+			margin-bottom: var(--offset-m);
+		}
+	}
+}
+
+.color-default {
+	color: $color-default;
+}
+
+.color-green {
+	color: var(--green);
+}

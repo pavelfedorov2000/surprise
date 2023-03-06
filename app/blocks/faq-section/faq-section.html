@@ -1,27 +1,22 @@
-<section class="section faq-section">
-    <div class="container">
-        <div class="faq-section__inner">
-            <div class="faq-section__content">
-                <h2 class="section-title section-title--mb_l">
-                    Остались вопросы?<br>
-                    У нас есть ответы на них!
-                </h2>
-                <div class="accordion-block">
-                    @@loop('blocks/accordion-item/accordion-item.html', "../resources/assets/faq.json")
-                </div>
-            </div>
-            <div class="faq-section__img">
-                <picture>
-                    <source type="image/webp"
-                            srcset="assets/images/content/kvadro-faq.webp">
-                    <img class="img-cover"
-                         src="assets/images/content/kvadro-faq.jpg"
-                         alt="фото"
-                         width="627"
-                         height="470"
-                         loading="lazy">
-                </picture>
-            </div>
-        </div>
-    </div>
-</section>
+<@@if(context.isAside){aside}@@if(!context.isAside){section}
+	class="section faq-section@@if(context.with){ section--with_@@with}">
+	<div class="container">
+		<div class="faq-section__inner">
+			<div class="faq-section__content">
+				<h2 class="section-title section-title--mb_l">
+					Остались вопросы?<br>
+					У нас есть ответы на них!
+				</h2>
+				<div class="accordion-block">
+					@@loop('blocks/accordion-item/accordion-item.html', "../resources/assets/faq.json")
+				</div>
+			</div>
+			<div class="faq-section__img">
+				<picture>
+					<source type="image/webp" srcset="@@src.webp">
+					<img class="img-cover" src="@@src.jpg" alt="фото" width="627" height="470" loading="lazy">
+				</picture>
+			</div>
+		</div>
+	</div>
+</@@if(context.isAside){aside}@@if(!context.isAside){section}>

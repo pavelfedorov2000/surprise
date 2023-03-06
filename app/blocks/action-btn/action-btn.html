@@ -1,17 +1,12 @@
-<@@if(!context.popup){a}@@if(context.popup){button} class="action-btn actions-header__item"
-                                                    aria-label="@@ariaLabel"
-                                                    @@if(context.popup){aria-expanded="false"
-                                                    data-popup="@@popup"
-                                                    aria-controls="@@popup"
-                                                    type="button"
-                                                    }>
-    @@if(context.icon){
-    <svg class="icon"
-         aria-hidden="true">
-        <use xlink:href="assets/images/sprite.svg#@@icon"></use>
-    </svg>
-    @@if(context.count){
-    <span>@@count</span>
-    }
-    }
-</@@if(!context.popup){a}@@if(context.popup){button}>
+<@@if(!context.button){a}@@if(context.button){button} class="action-btn@@if(context.class){ @@class}"
+	aria-label="@@ariaLabel" @@if(context.button){type="button" } @@if(context.popup){aria-expanded="false"
+	data-popup="@@popup" aria-controls="@@popup" }>
+	@@if(context.icon){
+	<svg class="icon" aria-hidden="true">
+		<use xlink:href="assets/images/sprite.svg#@@icon"></use>
+	</svg>
+	@@if(context.count){
+	<span>@@count</span>
+	}
+	}
+</@@if(!context.button){a}@@if(context.button){button}>

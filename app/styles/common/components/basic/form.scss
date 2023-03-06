@@ -1,161 +1,163 @@
 // input number
 input[type="number"] {
-    &::-webkit-inner-spin-button {
-        -webkit-appearance: none;
-    }
+	&::-webkit-inner-spin-button {
+		-webkit-appearance: none;
+	}
 
-    &::-webkit-outer-spin-button {
-        -webkit-appearance: none;
-    }
+	&::-webkit-outer-spin-button {
+		-webkit-appearance: none;
+	}
 }
 
 input[type="number"] {
-    -moz-appearance: textfield;
+	-moz-appearance: textfield;
 }
 
 input[type="number"]:hover,
 input[type="number"]:focus {
-    -moz-appearance: number-input;
+	-moz-appearance: number-input;
 }
 
 textarea {
-    width: 100%;
-    height: 100%;
-    resize: vertical;
+	width: 100%;
+	height: 100%;
+	resize: vertical;
 
-    &::-webkit-resizer {
-        opacity: 0;
-    }
+	&::-webkit-resizer {
+		opacity: 0;
+	}
 }
 
 .form-item {
-    @include row-grid(var(--offset-xxs));
+	@include row-grid(var(--offset-xxs));
 
-    &--flex {
-        display: flex;
-        align-items: center;
-        justify-content: space-between;
-    }
+	&--flex {
+		display: flex;
+		align-items: center;
+		justify-content: space-between;
+	}
 }
 
 .input {
-    padding: calc(var(--offset-s) - 1px) var(--offset-m);
-    border: $border;
-    border-radius: $brs;
-    font-size: #{$fz}px;
-    line-height: 21px;
-    color: var(--black);
-    transition: $transition border-color,
-        $transition box-shadow;
+	padding: calc(var(--offset-s) - 1px) var(--offset-m);
+	border: $border;
+	border-radius: $brs;
+	font-size: #{$fz}px;
+	line-height: 21px;
+	color: var(--black);
+	transition: $transition border-color,
+		$transition box-shadow;
 
-    &::placeholder {
-        color: var(--line-color);
-    }
+	&::placeholder {
+		color: var(--line-color);
+	}
 
-    &:focus,
-    &:active {
-        border-color: var(--green);
-    }
+	&:focus,
+	&:active {
+		border-color: var(--green);
+	}
 
-    @media (any-hover: hover) {
-        &:hover {
-            box-shadow: $bsh;
-        }
-    }
+	@media (any-hover: hover) {
+		&:hover {
+			box-shadow: $bsh;
+		}
+	}
 
-    &-wrap {
-        position: relative;
+	&-wrap {
+		position: relative;
 
-        .input {
-            width: 100%;
-        }
-    }
+		.input {
+			width: 100%;
+		}
+	}
 }
 
 .js-toggle-password {
-    position: absolute;
-    top: 50%;
-    right: 20px;
-    transform: translateY(-50%);
+	position: absolute;
+	top: 50%;
+	right: 20px;
+	transform: translateY(-50%);
 
-    .icon {
-        &.show {
-            display: none;
-        }
-    }
+	.icon {
+		fill: #000;
 
-    &.active {
-        .icon {
-            &.show {
-                display: block;
-            }
+		&.show {
+			display: none;
+		}
+	}
 
-            &.hide {
-                display: none;
-            }
-        }
-    }
+	&.active {
+		.icon {
+			&.show {
+				display: block;
+			}
+
+			&.hide {
+				display: none;
+			}
+		}
+	}
 }
 
 .textarea {
-    position: relative;
-    min-height: 120px;
+	position: relative;
+	min-height: 120px;
 
-    &::before {
-        content: '';
-        position: absolute;
-        right: var(--offset-xxs);
-        bottom: var(--offset-xxs);
-        z-index: 1;
-        width: var(--icon-size);
-        height: var(--icon-size);
-        background-image: url(../images/icons/resize.svg);
-    }
+	&::before {
+		content: '';
+		position: absolute;
+		right: var(--offset-xxs);
+		bottom: var(--offset-xxs);
+		z-index: 1;
+		width: var(--icon-size);
+		height: var(--icon-size);
+		background-image: url(../images/icons/resize.svg);
+	}
 
-    textarea {
-        height: 100%;
-    }
+	textarea {
+		height: 100%;
+	}
 }
 
 .form {
-    @include row-grid(var(--offset-m));
-    background-color: #fff;
-    border-radius: $brs-card-xl;
-    box-shadow: $bsh;
-    border-radius: $brs-card-xl;
+	@include row-grid(var(--offset-m));
+	background-color: #fff;
+	border-radius: $brs-card-xl;
+	box-shadow: $bsh;
+	border-radius: $brs-card-xl;
 
-    @media(max-width: $xl) {
-        padding: var(--offset-xxxl);
-    }
+	@media(max-width: $xl) {
+		padding: var(--offset-xxxl);
+	}
 
-    @media(max-width: $md) {
-        padding: var(--offset-l) var(--offset-m) calc(var(--offset-xls) - 2px);
-    }
+	@media(max-width: $md) {
+		padding: var(--offset-l) var(--offset-m) calc(var(--offset-xls) - 2px);
+	}
 
-    &-label {
-        @extend %museo-500;
+	&-label {
+		@extend %museo-500;
 
-        @media(min-width: 768px) {
-            display: flex;
-            align-items: center;
-        }
+		@media(min-width: 768px) {
+			display: flex;
+			align-items: center;
+		}
 
-        > * {
-            @media(min-width: 768px) {
-                margin-left: var(--offset-xs);
-            }
-        }
-    }
+		>* {
+			@media(min-width: 768px) {
+				margin-left: var(--offset-xs);
+			}
+		}
+	}
 
-    &-small {
-        color: var(--text-color);
-    }
+	&-small {
+		color: var(--text-color);
+	}
 
-    &--style {
-        &_flex-element {
-            @media(min-width: 1201px) {
-                padding: calc(64 / 500 * 100%);
-            }
-        }
-    }
+	&--style {
+		&_flex-element {
+			@media(min-width: 1201px) {
+				padding: calc(64 / 500 * 100%);
+			}
+		}
+	}
 }

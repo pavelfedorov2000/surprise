@@ -1,84 +1,76 @@
 <header class="header">
-    <div class="header__top">
-        <div class="container header__inner">
-            <address class="contacts header__contacts contacts--style_flex">
-                <a href="tel:+375297333368"
-                   class="contact">
-                    <svg class="icon"
-                         aria-hidden="true">
-                        <use xlink:href="assets/images/sprite.svg#phone"></use>
-                    </svg>
-                    <span>+375 29 7 3333 68 (MTC)</span>
-                </a>
-                <div class="contact">
-                    <svg class="icon"
-                         aria-hidden="true">
-                        <use xlink:href="assets/images/sprite.svg#clock"></use>
-                    </svg>
-                    <span>с 09:00 до 22:00, Без выходных</span>
-                </div>
-            </address>
-            <nav class="header__menu header-menu">
-                <ul class="header-menu__list">
-                    <li class="header-menu__item">
-                        <a href="#"
-                           class="header-menu__link menu-link">Новинки</a>
-                    </li>
-                    <li class="header-menu__item">
-                        <a href="#"
-                           class="header-menu__link menu-link">Где купить</a>
-                    </li>
-                    <li class="header-menu__item">
-                        <a href="#"
-                           class="header-menu__link menu-link">Доставка и оплата</a>
-                    </li>
-                    <li class="header-menu__item">
-                        <a href="#"
-                           class="header-menu__link menu-link">Корпоративные подарки</a>
-                    </li>
-                    <li class="header-menu__item">
-                        <a href="#"
-                           class="header-menu__link menu-link">Стать нашим партнером</a>
-                    </li>
-                </ul>
-            </nav>
-        </div>
-    </div>
-    <div class="header__bottom">
-        <div class="container header__inner">
-            @@include('blocks/menu-btn/menu-btn.html')
-            <a class="logo header__logo"
-               href="#">
-                <picture>
-                    <source media="(max-width: 1024px)"
-                            srcset="assets/images/logo/logo-mob.svg">
-                    <img class="logo__img"
-                         src="assets/images/logo/logo.svg"
-                         alt="Логотип Surprise">
-                </picture>
-            </a>
-            <div class="header__actions actions-header">
-                <div class="actions-header__items">
-                    @@include('blocks/search-form/search-form.html')
-                    @@include('blocks/action-btn/action-btn.html', {
-                    "ariaLabel": "Авторизоваться",
-                    "popup": "auth",
-                    "icon": "user"
-                    })
-                    @@include('blocks/action-btn/action-btn.html', {
-                    "ariaLabel": "Перейти в избранное",
-                    "icon": "favorite"
-                    })
-                    @@include('blocks/action-btn/action-btn.html', {
-                    "ariaLabel": "Перейти в корзину",
-                    "icon": "cart"
-                    })
-                </div>
-                <a href="#"
-                   class="btn actions-header__btn">
-                    <span class="btn__text">Активировать сертификат</span>
-                </a>
-            </div>
-        </div>
-    </div>
+	<div class="header__top">
+		<div class="container header__inner">
+			<address class="contacts header__contacts contacts--style_flex">
+				<a href="tel:+375297333368" class="contact">
+					<svg class="icon" aria-hidden="true">
+						<use xlink:href="assets/images/sprite.svg#phone"></use>
+					</svg>
+					<span>+375 29 7 3333 68 (MTC)</span>
+				</a>
+				<div class="contact">
+					<svg class="icon" aria-hidden="true">
+						<use xlink:href="assets/images/sprite.svg#clock"></use>
+					</svg>
+					<span>с 09:00 до 22:00, Без выходных</span>
+				</div>
+			</address>
+			<nav class="header__menu header-menu">
+				<ul class="header-menu__list">
+					<li class="header-menu__item">
+						<a href="#" class="header-menu__link menu-link">Новинки</a>
+					</li>
+					<li class="header-menu__item">
+						<a href="#" class="header-menu__link menu-link">Где купить</a>
+					</li>
+					<li class="header-menu__item">
+						<a href="#" class="header-menu__link menu-link">Доставка и оплата</a>
+					</li>
+					<li class="header-menu__item">
+						<a href="#" class="header-menu__link menu-link">Корпоративные подарки</a>
+					</li>
+					<li class="header-menu__item">
+						<a href="#" class="header-menu__link menu-link">Стать нашим партнером</a>
+					</li>
+				</ul>
+			</nav>
+		</div>
+	</div>
+	<div class="header__bottom">
+		<div class="container header__inner">
+			@@include('blocks/menu-btn/menu-btn.html')
+			<a class="logo header__logo" href="#">
+				<picture>
+					<source media="(max-width: 1024px)" srcset="assets/images/logo/logo-mob.svg">
+					<img class="logo__img" src="assets/images/logo/logo.svg" alt="Логотип Surprise">
+				</picture>
+			</a>
+			<div class="header__actions actions-header">
+				<div class="actions-header__items">
+					@@include('blocks/search-form/search-form.html')
+					@@include('blocks/action-btn/action-btn.html', {
+					"button": true,
+					"class": "actions-header__item",
+					"ariaLabel": "Авторизоваться",
+					"popup": "auth",
+					"icon": "user"
+					})
+					@@include('blocks/action-btn/action-btn.html', {
+					"class": "actions-header__item",
+					"ariaLabel": "Перейти в избранное",
+					"icon": "favorite"
+					})
+					@@include('blocks/action-btn/action-btn.html', {
+					"class": "actions-header__item",
+					"ariaLabel": "Перейти в корзину",
+					"icon": "cart",
+					"count": "2"
+					})
+				</div>
+				<a href="#" class="btn actions-header__btn">
+					<span class="btn__text">Активировать сертификат</span>
+				</a>
+			</div>
+		</div>
+	</div>
 </header>

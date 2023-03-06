@@ -1,34 +1,22 @@
 .filter-btn {
-    position: fixed;
-    left: var(--container-padding);
-    right: var(--container-padding);
-    bottom: var(--offset-s);
-    z-index: 99;
-    display: none;
+	display: none;
+	position: fixed;
+	left: var(--container-padding);
+	right: var(--container-padding);
+	bottom: var(--offset-s);
+	z-index: 99;
 
-    span {
-        position: relative;
-        padding-left: 34px;
+	@media(max-width: $xl) {
+		display: flex;
+	}
 
-        &::before {
-            content: '';
-            position: absolute;
-            top: 50%;
-            transform: translateY(-50%);
-            left: 0;
-            width: var(--icon-size);
-            height: var(--icon-size);
-            background-image: url(../images/icons/filter.svg);
-        }
-    }
+	&.hidden {
+		@media(max-width: $xl) {
+			display: none;
+		}
+	}
 
-    @media(max-width: $xl) {
-        display: flex;
-    }
-
-    &.hidden {
-        @media(max-width: $xl) {
-            display: none;
-        }
-    }
+	.btn__icon {
+		margin-right: 10px;
+	}
 }

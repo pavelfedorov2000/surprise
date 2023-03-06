@@ -38,6 +38,11 @@
 		height: var(--icon-size);
 	}
 
+	&__text {
+		white-space: nowrap;
+		transition: $transition color;
+	}
+
 	&--style {
 		&_bg {
 			&-green {
@@ -260,12 +265,20 @@
 
 			&:focus,
 			&:active {
-				color: $color-default;
+				#{$this} {
+					&__text {
+						color: $color-default;
+					}
+				}
 			}
 
 			@media (any-hover: hover) {
 				&:hover {
-					color: var(--pink);
+					#{$this} {
+						&__text {
+							color: var(--pink);
+						}
+					}
 
 					&:after {
 						background-color: var(--pink);
@@ -283,12 +296,20 @@
 
 			&:focus,
 			&:active {
-				color: var(--green);
+				#{$this} {
+					&__text {
+						color: var(--green);
+					}
+				}
 			}
 
 			@media (any-hover: hover) {
 				&:hover {
-					color: var(--green);
+					#{$this} {
+						&__text {
+							color: var(--green);
+						}
+					}
 
 					&:after {
 						background-color: var(--green);

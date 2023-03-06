@@ -1,92 +1,90 @@
 .contacts {
-    @include row-grid(var(--offset-m));
+	@include row-grid(var(--offset-m));
 
-    &--style {
-        &_flex {
-            display: flex;
-            flex-wrap: wrap;
-            row-gap: var(--offset-xs);
+	&--style {
+		&_flex {
+			display: flex;
+			flex-wrap: wrap;
+			row-gap: var(--offset-xs);
 
-            > * {
-                margin-right: var(--offset-l);
-            }
-        }
-    }
+			>* {
+				margin-right: var(--offset-l);
+			}
+		}
+	}
 }
 
 .contact {
-    @extend %museo-300;
-    display: inline-flex;
-    align-items: flex-start;
-    transition: $transition color;
+	@extend %museo-300;
+	display: inline-flex;
+	align-items: flex-start;
+	transition: $transition color;
 
-    .icon {
-        margin-right: var(--offset-xs);
-    }
+	.icon {
+		margin-right: var(--offset-xs);
+	}
 
-    &--icon-mr_20 {
-        .icon {
-            margin-right: 20px;
-        }
-    }
+	&__content {
+		@include row-grid(var(--offset-xxs));
+		justify-items: start;
 
-    &__content {
-        @include row-grid(var(--offset-xxs));
-        justify-items: start;
+		@media(max-width: $sm) {
+			row-gap: var(--offset-xxxs);
+		}
+	}
 
-        @media(max-width: $sm) {
-            row-gap: var(--offset-xxxs);
-        }
-    }
+	&__title {
+		@extend %museo-500;
+		font-size: 20px;
 
-    &__title {
-        @extend %museo-500;
-        font-size: 20px;
+		@media(max-width: $sm) {
+			font-size: 18px;
+		}
+	}
+}
 
-        @media(max-width: $sm) {
-            font-size: 18px;
-        }
-    }
+.mr-20 {
+	margin-right: 20px;
 }
 
 .contact-block {
-    @include row-grid(var(--offset-m));
+	@include row-grid(var(--offset-m));
 
-    &__title {
-        font-size: 24px;
+	&__title {
+		font-size: 24px;
 
-        @media(max-width: $sm) {
-            font-size: 18px;
-        }
-    }
+		@media(max-width: $sm) {
+			font-size: 18px;
+		}
+	}
 
-    &__phones {
-        @include row-grid(var(--offset-xxs));
-        color: var(--text-color);
-        position: relative;
-        padding-left: 44px;
+	&__phones {
+		@include row-grid(var(--offset-xxs));
+		color: var(--text-color);
+		position: relative;
+		padding-left: 44px;
 
-        &::before {
-            content: '';
-            position: absolute;
-            top: 0;
-            left: 0;
-            width: var(--icon-size);
-            height: var(--icon-size);
-            background-image: url(../images/icons/phone.svg);
-        }
+		&::before {
+			content: '';
+			position: absolute;
+			top: 0;
+			left: 0;
+			width: var(--icon-size);
+			height: var(--icon-size);
+			background-image: url(../images/icons/phone.svg);
+		}
 
-        b {
-            @extend %museo-500;
-            padding-right: 2px;
-        }
-    }
+		b {
+			@extend %museo-500;
+			padding-right: 2px;
+		}
+	}
 }
 
 a.contact {
-    @media (any-hover: hover) {
-        &:hover {
-            color: var(--pink);
-        }
-    }
+	@media (any-hover: hover) {
+		&:hover {
+			color: var(--pink);
+		}
+	}
 }

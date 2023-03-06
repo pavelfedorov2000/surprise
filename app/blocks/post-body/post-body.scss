@@ -1,0 +1,44 @@
+.post-body {
+    section {
+        > * {
+            &:not(:last-child) {
+                margin-bottom: var(--offset-l);
+            }
+        }
+
+        &:not(:last-child) {
+            margin-bottom: var(--offset-xxxl);
+        }
+    }
+
+    &__footer {
+        @include row-grid(var(--offset-xl));
+    }
+
+    &__nav {
+        display: flex;
+        justify-content: space-between;
+    }
+}
+
+.post-gallery-thumbs {
+    display: none;
+
+    @media(min-width: 768px) {
+        display: block;
+
+        .swiper-slide {
+            position: relative;
+            padding-bottom: 19.177%;
+
+            img {
+                position: absolute;
+                top: 0;
+                right: 0;
+                bottom: 0;
+                left: 0;
+                border-radius: $brs-card;
+            }
+        }
+    }
+}

@@ -1,3 +1,61 @@
 .catalog-grid {
-  // your code
+	--baseWidth: 350px;
+
+	display: grid;
+	grid-template-columns: repeat(auto-fit, minmax(var(--baseWidth), 1fr));
+	gap: var(--offset-xxxl);
+
+	@media(max-width: $xl) {
+		gap: var(--offset-xls) var(--offset-l);
+	}
+
+	@media(max-width: $md) {
+		grid-template-columns: minmax(calc(320px - var(--container-padding) * 2), 1fr);
+	}
+
+	&--style {
+		&_xs {
+			--baseWidth: 290px;
+
+			@media(min-width: 1201px) {
+				gap: 30px;
+
+				.catalog-card {
+					&__slider {
+						height: 218px;
+					}
+
+					&__title {
+						font-size: 20px;
+					}
+
+					&__title,
+					&__text {
+						margin-bottom: var(--offset-xxs);
+					}
+
+					&__rating {
+						margin-bottom: var(--offset-xxs);
+					}
+
+					&__info {
+						flex-direction: column;
+						align-items: flex-start;
+					}
+
+					&__btn {
+						@include padding-y(var(--offset-s));
+
+						.btn__icon {
+							display: none;
+						}
+					}
+
+					&__btns {
+						gap: var(--offset-s);
+					}
+				}
+			}
+		}
+	}
 }

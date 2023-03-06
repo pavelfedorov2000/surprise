@@ -1,7 +1,7 @@
 @@include("blocks/head/head.html", {"title": "Личный кабинет"})
 <div class="wrapper">
 	@@include("blocks/layout/layout.html")
-	<main class="page page--padding">
+	<main class="page page--padding page--padding-top_ls">
 		<div class="container">
 			@@include('blocks/breadcrumbs/breadcrumbs.html', {
 			"current": "Личный кабинет"
@@ -19,7 +19,9 @@
 							<p class="profile-block__empty color-default">
 								У вас нету незавершенных покупок, но можно <button
 									class="btn profile-block__empty-btn btn--style_link-4" type="button"
-									aria-controls="profile-tabs-content-2">посмотреть историю заказов.</button>
+									aria-controls="profile-tabs-content-2">
+									<span class="btn__text">посмотреть историю заказов.</span>
+								</button>
 							</p>
 						</div>
 						<div id="profile-tabs-content-2" aria-labelledby="profile_tab_2" role="tabpanel"

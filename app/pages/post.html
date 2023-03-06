@@ -1,0 +1,26 @@
+@@include("blocks/head/head.html", {
+"title": "Винный безлимит в ресторане Fridays",
+"sticky": true
+})
+<div class="wrapper">
+    @@include("blocks/layout/layout.html")
+    <main class="page">
+        @@include('blocks/promo-post/promo-post.html')
+        <div class="container">
+            <div class="grid-row">
+                @@include('blocks/post-body/post-body.html')
+                @@include('blocks/post-aside/post-aside.html')
+            </div>
+        </div>
+    </main>
+    @@include('blocks/faq-section/faq-section.html', {
+    "isAside": true,
+    "with": "padding-top",
+    "src": "assets/images/content/post-2"
+    })
+    @@include("blocks/footer/footer.html")
+</div>
+@@include("blocks/link/link.html")
+</body>
+
+</html>

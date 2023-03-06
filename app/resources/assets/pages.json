@@ -77,4 +77,8 @@
 }, {
     "href": "404.html",
     "title": "Страница не найдена"
+}, {
+    "href": "post.html",
+    "new": true,
+    "title": "Пост"
 }]
