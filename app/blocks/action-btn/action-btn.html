@@ -1,4 +1,4 @@
-<@@if(!context.button){a}@@if(context.button){button} class="action-btn@@if(context.class){ @@class}"
+<@@if(!context.button){a href="#" }@@if(context.button){button} class="action-btn@@if(context.class){ @@class}"
 	aria-label="@@ariaLabel" @@if(context.button){type="button" } @@if(context.popup){aria-expanded="false"
 	data-popup="@@popup" aria-controls="@@popup" }>
 	@@if(context.icon){
@@ -9,4 +9,4 @@
 	<span>@@count</span>
 	}
 	}
-</@@if(!context.button){a}@@if(context.button){button}>
+	</@@if(!context.button){a}@@if(context.button){button}>
