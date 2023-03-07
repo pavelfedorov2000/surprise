@@ -1,75 +1,67 @@
 <fieldset class="cart__section cart-section cart__section--span-2">
-    <legend class="section-title cart-section__title">Данные покупателя</legend>
-    <div class="cart-section__fields">
-        <label class="cart-section__field form-item">
-            <span class="form-label">Ваше имя *</span>
-            <input class="input"
-                   placeholder="Ваше имя"
-                   required
-                   data-pristine-required-message="Поле не может быть пустым">
-        </label>
-        <label class="cart-section__field form-item">
-            <span class="form-label">Ваш номер телефона *</span>
-            <input class="input"
-                   type="tel"
-                   placeholder="+ 375 ()"
-                   required
-                   data-pristine-required-message="Поле не может быть пустым">
-        </label>
-        <div class="cart-section__field form-item cart-section__field--span-2">
-            <span class="form-label">Выберите вариант для отправки письма, подтверждающего статус вашего заказа:</span>
-            <div class="cart-section__radios">
-                <label class="radio">
-                    <input class="radio-input js-radio-toggle"
-                           type="radio"
-                           name="BUYER_CONTACT"
-                           checked>
-                    <span class="radio-style radio-style--mr_xs"></span>
-                    <span class="radio__inner">
-                        <span class="radio-text radio-text--light">Viber</span>
-                        <span class="radio__dropdown">
-                            <input class="input radio__field"
-                                   type="tel"
-                                   placeholder="+ 375 ()">
-                        </span>
-                    </span>
-                </label>
-                <label class="radio">
-                    <input class="radio-input js-radio-toggle"
-                           type="radio"
-                           name="BUYER_CONTACT">
-                    <span class="radio-style radio-style--mr_xs"></span>
-                    <span class="radio__inner">
-                        <span class="radio-text radio-text--light">Viber</span>
-                        <span class="radio__dropdown">
-                            <input class="input radio__field"
-                                   type="tel"
-                                   placeholder="+ 375 ()">
-                        </span>
-                    </span>
-                </label>
-                <label class="radio">
-                    <input class="radio-input js-radio-toggle"
-                           type="radio"
-                           name="BUYER_CONTACT">
-                    <span class="radio-style radio-style--mr_xs"></span>
-                    <span class="radio__inner">
-                        <span class="radio-text radio-text--light">E-mail</span>
-                        <span class="radio__dropdown">
-                            <input class="input radio__field"
-                                   type="email"
-                                   placeholder="surprise@mail.ru">
-                        </span>
-                    </span>
-                </label>
-            </div>
-        </div>
-        <label class="cart-section__field form-item cart-section__field--span-2">
-            <span class="form-label">Комментарии к заказу:</span>
-            <div class="textarea">
-                <textarea class="input"
-                          placeholder="Ваш комментарий"></textarea>
-            </div>
-        </label>
-    </div>
+	<legend class="section-title cart-section__title">Данные покупателя</legend>
+	<div class="cart-section__fields">
+		<label class="cart-section__field form-item">
+			<span class="form-label">Ваше имя *</span>
+			<input class="input" placeholder="Ваше имя" required
+				data-pristine-required-message="Поле не может быть пустым">
+		</label>
+		<label class="cart-section__field form-item">
+			<span class="form-label">Ваш номер телефона *</span>
+			<input class="input" type="tel" placeholder="+ 375 ()" required
+				data-pristine-required-message="Поле не может быть пустым">
+		</label>
+		<div class="cart-section__field form-item cart-section__field--span-2">
+			<span class="form-label">Выберите вариант для отправки письма, подтверждающего статус вашего заказа:</span>
+			<div class="cart-section__radios">
+				@@loop('blocks/radio/radio.html', [{
+				"inputClass": "js-radio-toggle",
+				"radioStyle": {
+				"mr": "xs"
+				},
+				"name": "BUYER_CONTACT",
+				"inner": {
+				"text": "Viber",
+				"dropdown": {
+				"inputType": "tel",
+				"placeholder": "+ 375 ()"
+				}
+				},
+				"isChecked": true
+				}, {
+				"inputClass": "js-radio-toggle",
+				"radioStyle": {
+				"mr": "xs"
+				},
+				"name": "BUYER_CONTACT",
+				"inner": {
+				"text": "Viber",
+				"dropdown": {
+				"inputType": "tel",
+				"placeholder": "+ 375 ()"
+				}
+				}
+				}, {
+				"inputClass": "js-radio-toggle",
+				"radioStyle": {
+				"mr": "xs"
+				},
+				"name": "BUYER_CONTACT",
+				"inner": {
+				"text": "E-mail",
+				"dropdown": {
+				"inputType": "email",
+				"placeholder": "surprise@mail.ru"
+				}
+				}
+				}])
+			</div>
+		</div>
+		<label class="cart-section__field form-item cart-section__field--span-2">
+			<span class="form-label">Комментарии к заказу:</span>
+			<div class="textarea">
+				<textarea class="input" placeholder="Ваш комментарий"></textarea>
+			</div>
+		</label>
+	</div>
 </fieldset>

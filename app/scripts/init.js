@@ -1,4 +1,4 @@
-$(document).ready(function () {
+$(function () {
     app.menu.init();
     app.tabs.init();
     app.select.init();
@@ -15,16 +15,23 @@ $(document).ready(function () {
         $(`.tab[aria-controls=${$(this).attr('aria-controls')}]`).trigger('click');
     });
 
+    const moreButtonTextArray = ['Подробнее', 'Скрыть'];
+    const moreButtonTextMap = new Map();
+
+    moreButtonTextArray.forEach((item, index) => {
+        moreButtonTextMap.set(Boolean(index), item);
+    });
+
     $(document).on('click', '.more-text-btn', function () {
         const $moreTextBtn = $(this);
         const $text = $moreTextBtn.prev();
 
         if ($moreTextBtn.attr('aria-expanded') === 'false') {
-            $moreTextBtn.text('Скрыть');
+            $moreTextBtn.text(moreButtonTextMap.get(true));
             $moreTextBtn.attr('aria-expanded', true);
             $text.addClass('no-overflow');
         } else {
-            $moreTextBtn.text('Подробнее');
+            $moreTextBtn.text(moreButtonTextMap.get(false));
             $moreTextBtn.attr('aria-expanded', false);
             $text.removeClass('no-overflow');
         }

@@ -1,17 +1,58 @@
-<div class="radiobutton@@if(context.class){ @@class}">
-    @@if(context.check){
-    <label class="radiobutton__wrap"
-           for="@@id">
-        @@if(context.check) {
-        <input class="radiobutton__input"
-               name="@@name"
-               id="@@id"
-               type="radio">
-        <span class="radiobutton__style"></span>
-        }
-        @@if(context.text){
-        <span class="radiobutton__text">@@text</span>
-        }
-    </label>
-    }
-</div>
+<label class="radio@@if(context.class){ @@class}@@if(context.style){ radio--style_@@style}">
+	<input class="radio-input@@if(context.inputClass){ @@inputClass}" type="radio" name="@@name"
+		@@if(context.isChecked){checked}>
+	@@if(context.radioStyle){
+	<span class="radio-style@@if(context.radioStyle.mr){ radio-style--mr_@@radioStyle.mr}"></span>
+	}
+	@@if(context.body){
+	<span class="radio__content">
+		@@if(context.icon){
+		@@include('@@icon')
+		}
+		@@if(context.sprite){
+		<svg aria-hidden="true" class="radio__icon">
+			<use xlink:href="assets/images/sprite.svg#@@sprite"></use>
+		</svg>
+		}
+		@@if(context.img){
+		<img class="radio__icon" src="@@img.src" alt="@@img.alt" width="@@img.width" height="@@img.height">
+		}
+		<span class="radio-text">@@body.text</span>
+	</span>
+	}
+	@@if(context.text){
+	<span class="radio-text">@@text</span>
+	}
+	@@if(context.inner){
+	<span class="radio__inner">
+		@@if(context.inner.title){
+		<span class="radio-title">@@inner.title</span>
+		}
+		@@if(context.inner.text){
+		<span class="radio-text radio-text--light">@@inner.text</span>
+		}
+		@@if(inner.dropdown){
+		<span class="radio__dropdown">
+			<label class="radio__dropdown-inner">
+				@@if(context.inner.dropdown.label){
+				<span class="form-label">@@inner.dropdown.label</span>
+				}
+				<input class="input radio__field" placeholder="@@inner.dropdown.placeholder"
+					@@if(context.inner.dropdown.inputType){type="@@inner.dropdown.inputType" }>
+			</label>
+		</span>
+		}
+		}
+	</span>
+	@@if(context.dropdown){
+	<span class="radio__dropdown">
+		<label class="radio__dropdown-inner">
+			@@if(context.dropdown.label){
+			<span class="form-label">@@dropdown.label</span>
+			}
+			<input class="input radio__field" @@if(context.dropdown.inputType){type="@@dropdown.inputType" }
+				placeholder="@@dropdown.placeholder">
+		</label>
+	</span>
+	}
+</label>

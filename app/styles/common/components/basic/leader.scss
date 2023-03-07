@@ -1,43 +1,44 @@
 .leader {
-    $this: &;
+	$this: &;
 
-    display: flex;
-    flex-wrap: wrap;
-    gap: var(--offset-xxxs) var(--offset-m);
-    //margin-left: calc(var(--offset-m) * (-1));
+	display: flex;
+	flex-wrap: wrap;
+	gap: var(--offset-xxs) var(--offset-m);
 
-    &__item {
-        display: flex;
+	&__item {
+		display: flex;
 
-        @media(max-width: $sm) {
-            font-size: 14px;
-        }
+		@media(max-width: $sm) {
+			font-size: 14px;
+		}
 
-        dt {
-            @extend %museo-300;
-            margin-right: var(--offset-xxxs);
-            color: var(--text-color-light);
-        }
+		dt {
+			@extend %museo-300;
+			margin-right: var(--offset-xxxs);
+			color: var(--text-color-light);
+			transition: $transition color;
+		}
 
-        dd {
-            span {
-                color: var(--text-color);
-            }
-        }
-    }
+		dd {
+			span {
+				color: var(--text-color);
+				transition: $transition color;
+			}
+		}
+	}
 
-    &--item {
-        &_space-between {
-            #{$this}__item {
-                justify-content: space-between;
-            }
-        }
-    }
+	&--item {
+		&_space-between {
+			#{$this}__item {
+				justify-content: space-between;
+			}
+		}
+	}
 
-    &--orientation {
-        &_col {
-            flex-direction: column;
-            gap: var(--offset-xs);
-        }
-    }
+	&--orientation {
+		&_col {
+			flex-direction: column;
+			gap: var(--offset-xs);
+		}
+	}
 }

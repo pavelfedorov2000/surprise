@@ -28,33 +28,35 @@
 			</div>
 		</div>
 		<div class="cart-section__radios">
-			<label class="radio">
-				<input class="radio-input js-radio-toggle" type="radio" name="DELIVERY_OPTION" checked>
-				<span class="radio-style radio-style--mr_xs"></span>
-				<span class="radio__inner">
-					<span class="radio-title">Доставить по вашему адресу</span>
-					<span class="radio-text radio-text--light">Курьер доставит сертификат вам</span>
-					<span class="radio__dropdown">
-						<label class="radio__dropdown-inner">
-							<span class="form-label">Ваш адрес</span>
-							<input class="input radio__field" placeholder="Улица, дом, квартира">
-						</label>
-					</span>
-				</span>
-			</label>
-			<label class="radio">
-				<input class="radio-input js-radio-toggle" type="radio" name="DELIVERY_OPTION">
-				<span class="radio-style radio-style--mr_xs"></span>
-				<span class="radio__inner">
-					<span class="radio-title">Доставить как подарок</span>
-					<span class="radio__dropdown">
-						<label class="radio__dropdown-inner">
-							<span class="form-label">Адрес доставки</span>
-							<input class="input radio__field" placeholder="Улица, дом, квартира">
-						</label>
-					</span>
-				</span>
-			</label>
+			@@loop('blocks/radio/radio.html', [{
+			"inputClass": "js-radio-toggle",
+			"radioStyle": {
+			"mr": "xs"
+			},
+			"name": "DELIVERY_OPTION",
+			"inner": {
+			"title": "Доставить по вашему адресу",
+			"text": "Курьер доставит сертификат вам",
+			"dropdown": {
+			"label": "Ваш адрес",
+			"placeholder": "Улица, дом, квартира"
+			}
+			},
+			"isChecked": true
+			}, {
+			"inputClass": "js-radio-toggle",
+			"radioStyle": {
+			"mr": "xs"
+			},
+			"name": "DELIVERY_OPTION",
+			"inner": {
+			"title": "Доставить как подарок",
+			"dropdown": {
+			"label": "Адрес доставки",
+			"placeholder": "Улица, дом, квартира"
+			}
+			}
+			}])
 		</div>
 	</div>
 </fieldset>

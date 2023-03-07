@@ -226,6 +226,10 @@
 
 				&__content {
 					@include row-grid(var(--offset-xxs));
+
+					@media(max-width: $md) {
+						padding-top: 0;
+					}
 				}
 
 				&__leader {
@@ -251,39 +255,6 @@
 					}
 				}
 			}
-		}
-	}
-}
-
-.favorite-btn {
-	$this: &;
-
-	display: grid;
-	place-items: center;
-	width: var(--offset-xl);
-	height: var(--offset-xl);
-	background-color: rgba(255, 255, 255, 0.8);
-	backdrop-filter: blur(2px);
-	border-radius: $brs-xs;
-
-	&__icon {
-		stroke: var(--black);
-		transition: $transition stroke,
-			$transition fill;
-	}
-
-	@media (any-hover: hover) {
-		&:hover {
-			#{$this}__icon {
-				stroke: var(--pink);
-			}
-		}
-	}
-
-	&.active {
-		#{$this}__icon {
-			fill: var(--pink);
-			stroke: var(--pink);
 		}
 	}
 }

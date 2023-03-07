@@ -1,56 +1,18 @@
 <div class="activate-certificate">
-    <div class="activate-certificate__row">
-        <div class="activate-certificate__img">
-            <picture>
-                <source type="image/webp"
-                        srcset="assets/images/content/certificates.webp">
-                <img src="assets/images/content/certificates.png"
-                     alt="сертификаты"
-                     width="654"
-                     height="556"
-                     loading="lazy">
-            </picture>
-        </div>
-        <div class="activate-certificate__content">
-            <form action="#"
-                  class="form form--style_flex-element js-form">
-                <label class="form-item">
-                    <span class="form-label">Код активации *</span>
-                    <input class="input"
-                           placeholder="123****12"
-                           required
-                           data-pristine-required-message="Поле не может быть пустым">
-                </label>
-                <label class="form-item">
-                    <span class="form-label">Ваше имя *</span>
-                    <input class="input"
-                           placeholder="Ваше имя"
-                           required
-                           data-pristine-required-message="Поле не может быть пустым">
-                </label>
-                <label class="form-item">
-                    <span class="form-label">Ваш номер телефона *</span>
-                    <input class="input"
-                           type="tel"
-                           placeholder="+ 375 ()"
-                           required
-                           data-pristine-required-message="Поле не может быть пустым">
-                </label>
-                <label class="form-item">
-                    <span class="form-label">Ваш email *</span>
-                    <input class="input"
-                           type="email"
-                           placeholder="example@mail.com"
-                           required
-                           data-pristine-required-message="Поле не может быть пустым"
-                           data-pristine-email-message="Некорректный email">
-                </label>
-                <button class="btn"
-                        type="submit">
-                    <span class="btn__text">Активировать</span>
-                </button>
-                <small class="form-small">* — Обязательные поля для заполнения</small>
-            </form>
-        </div>
-    </div>
+	<div class="activate-certificate__row">
+		<div class="activate-certificate__img">
+			<picture>
+				<source type="image/webp" srcset="assets/images/content/certificates.webp">
+				<img src="assets/images/content/certificates.png" alt="сертификаты" width="654" height="556"
+					loading="lazy">
+			</picture>
+		</div>
+		<div class="activate-certificate__content">
+			@@include('blocks/form/form.html', {
+			"form": true,
+			"submit": "Активировать",
+			"small": "* — Обязательные поля для заполнения"
+			})
+		</div>
+	</div>
 </div>
