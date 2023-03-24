@@ -1,252 +1,256 @@
 .radio {
-    $this: &; // .radio
+	$this: &; // .radio
 
-    cursor: pointer;
-    display: flex;
-    //align-items: center;
+	cursor: pointer;
+	display: flex;
+	//align-items: center;
 
-    &-input {
-        width: 1px;
-        height: 1px;
-        overflow: hidden;
-        position: absolute;
-        clip: rect(0 0 0 0);
+	&-input {
+		width: 1px;
+		height: 1px;
+		overflow: hidden;
+		position: absolute;
+		clip: rect(0 0 0 0);
 
-        &:checked {
-            & ~ #{$this} {
-                &-style {
-                    &:before {
-                        border-color: var(--green);
-                    }
+		&:checked {
+			&~#{$this} {
+				&-style {
+					&:before {
+						border-color: var(--green);
+					}
 
-                    &:after {
-                        opacity: 1;
-                    }
-                }
+					&:after {
+						opacity: 1;
+					}
+				}
 
-                &-text {
-                    #{$this} {
-                        &__key {
-                            @extend %museo-500;
-                            color: var(--green);
-                        }
+				&-text {
+					#{$this} {
+						&__key {
+							@extend %museo-500;
+							color: var(--green);
+						}
 
-                        &__value {
-                            @extend %museo-700;
-                            color: var(--green);
-                        }
-                    }
-                }
+						&__value {
+							@extend %museo-700;
+							color: var(--green);
+						}
+					}
+				}
 
-                &__inner {
-                    #{$this} {
-                        &-text {
-                            color: var(--green);
-                        }
+				&__inner {
+					#{$this} {
+						&-text {
+							color: var(--green);
+						}
 
-                        &-title {
-                            color: var(--green);
+						&-title {
+							color: var(--green);
 
-                            & + #{$this}-text {
-                                color: var(--text-color-light);
-                            }
-                        }
-                    }
-                }
-            }
+							&+#{$this}-text {
+								color: var(--text-color-light);
+							}
+						}
+					}
+				}
+			}
 
-            & ~ #{$this} {
-                &__content {
-                    #{$this} {
-                        &-style {
-                            &:before {
-                                border-color: #fff;
-                            }
+			&~#{$this} {
+				&__content {
+					#{$this} {
+						&-style {
+							&:before {
+								border-color: #fff;
+							}
 
-                            &:after {
-                                opacity: 1;
-                            }
-                        }
-                    }
-                }
-            }
-        }
-    }
+							&:after {
+								opacity: 1;
+							}
+						}
+					}
+				}
+			}
+		}
+	}
 
-    &-style {
-        position: relative;
-        flex-shrink: 0;
-        display: block;
-        width: var(--icon-size);
-        height: var(--icon-size);
-        margin-right: var(--offset-m);
-        transition: $transition box-shadow;
+	&-style {
+		position: relative;
+		flex-shrink: 0;
+		display: block;
+		width: var(--icon-size);
+		height: var(--icon-size);
+		margin-right: var(--offset-m);
+		transition: $transition box-shadow;
 
-        @media(max-width: $sm) {
-            margin-right: var(--offset-xs);
-        }
+		@media(max-width: $sm) {
+			margin-right: var(--offset-xs);
+		}
 
-        &--mr {
-            &_xs {
-                margin-right: var(--offset-xs);
-            }
+		&--mr {
+			&_xs {
+				margin-right: var(--offset-xs);
+			}
 
-            &_xxs {
-                margin-right: var(--offset-xxs);
-            }
-        }
+			&_xxs {
+				margin-right: var(--offset-xxs);
+			}
+		}
 
-        &::before,
-        &::after {
-            content: '';
-            position: absolute;
-            top: 50%;
-            left: 50%;
-            transform: translate(-50%, -50%);
-        }
+		&::before,
+		&::after {
+			content: '';
+			position: absolute;
+			top: 50%;
+			left: 50%;
+			transform: translate(-50%, -50%);
+		}
 
-        &:before {
-            width: 20px;
-            height: 20px;
-            border-radius: 50%;
-            border: 2px solid var(--line-color);
-            transition: $transition border-color, $transition background-color;
-        }
+		&:before {
+			width: 20px;
+			height: 20px;
+			border-radius: 50%;
+			border: 2px solid var(--line-color);
+			transition: $transition border-color, $transition background-color;
+		}
 
-        &:after {
-            width: var(--offset-xs);
-            height: var(--offset-xs);
-            border-radius: 50%;
-            background-color: var(--green);
-            box-sizing: border-box;
-            opacity: 0;
-            transition: $transition opacity;
-        }
-    }
+		&:after {
+			width: var(--offset-xs);
+			height: var(--offset-xs);
+			border-radius: 50%;
+			background-color: var(--green);
+			box-sizing: border-box;
+			opacity: 0;
+			transition: $transition opacity;
+		}
+	}
 
-    &-title {
-        font-size: 18px;
-        color: var(--text-color);
+	&-title {
+		font-size: 18px;
+		color: var(--text-color);
 
-        & + #{$this}-text {
-            margin-top: calc(var(--offset-xxxs) * (-1));
-            margin-bottom: var(--offset-xs);
-        }
-    }
+		&+#{$this}-text {
+			margin-top: calc(var(--offset-xxxs) * (-1));
+			margin-bottom: var(--offset-xs);
+		}
+	}
 
-    &-text {
-        display: inline-flex;
-        align-items: center;
-        flex-wrap: wrap;
-        font-size: 20px;
-        transition: $transition color,
-            $transition box-shadow,
-            $transition background-color;
+	&-text {
+		display: inline-flex;
+		align-items: center;
+		flex-wrap: wrap;
+		font-size: 20px;
+		transition: $transition color,
+			$transition box-shadow,
+			$transition background-color;
 
-        @media (max-width: $md) {
-            font-size: 16px;
-        }
+		@media (max-width: $md) {
+			font-size: 16px;
+		}
 
-        &--light {
-            @extend %museo-300;
-            font-size: 16px;
-        }
-    }
+		&--light {
+			@extend %museo-300;
+			font-size: 16px;
+		}
+	}
 
-    &__key {
-        @extend %museo-300;
-        font-size: 18px;
-        color: var(--text-color-light);
-    }
+	&__key {
+		@extend %museo-300;
+		font-size: 18px;
+		color: var(--text-color-light);
+	}
 
-    &__value {
-        font-size: 18px;
-    }
+	&__value {
+		font-size: 18px;
+	}
 
-    &__content {
-        display: flex;
-        align-items: center;
-        transition: $transition box-shadow;
-    }
+	&__content {
+		display: flex;
+		align-items: center;
+		transition: $transition box-shadow;
+	}
 
-    &__inner {
-        @include row-grid(var(--offset-xxs));
-        flex-grow: 1;
+	&__inner {
+		@include row-grid(var(--offset-xxs));
+		flex-grow: 1;
 
-        #{$this} {
-            &-title {
-                & + #{$this}-text {
-                    color: var(--text-color-light);
-                }
-            }
-        }
-    }
+		#{$this} {
+			&-title {
+				&+#{$this}-text {
+					color: var(--text-color-light);
+				}
+			}
+		}
+	}
 
-    &__field {
-        width: 100%;
-    }
+	&__field {
+		width: 100%;
+	}
 
-    &__dropdown {
-        display: none;
-    }
+	&__dropdown {
+		display: none;
+	}
 
-    &__dropdown-inner {
-        @include row-grid(var(--offset-xxs));
-    }
+	&__dropdown-fields {
+		@include row-grid(var(--offset-xs));
+	}
 
-    &__icon {
-        flex-shrink: 0;
-        margin-right: var(--offset-xs);
-    }
+	&__dropdown-field {
+		@include row-grid(var(--offset-xxs));
+	}
 
-    &-tabs {
-        display: flex;
-        border-bottom: 1px solid var(--green);
-        margin-bottom: var(--offset-xl);
+	&__icon {
+		flex-shrink: 0;
+		margin-right: var(--offset-xs);
+	}
 
-        @media(max-width: $sm) {
-            margin-bottom: var(--offset-l);
-        }
-    }
+	&-tabs {
+		display: flex;
+		border-bottom: 1px solid var(--green);
+		margin-bottom: var(--offset-xl);
 
-    &-inputs {
-        display: flex;
-        flex-wrap: wrap;
-        margin-left: -20px;
-        margin-bottom: -20px;
+		@media(max-width: $sm) {
+			margin-bottom: var(--offset-l);
+		}
+	}
 
-        @media(max-width: $sm) {
-            margin-left: calc(var(--offset-xs) * (-1));
-            margin-bottom: calc(var(--offset-xs) * (-1));
-        }
+	&-inputs {
+		display: flex;
+		flex-wrap: wrap;
+		margin-left: -20px;
+		margin-bottom: -20px;
 
-        > * {
-            margin-left: 20px;
-            margin-bottom: 20px;
+		@media(max-width: $sm) {
+			margin-left: calc(var(--offset-xs) * (-1));
+			margin-bottom: calc(var(--offset-xs) * (-1));
+		}
 
-            @media(max-width: $sm) {
-                margin-left: var(--offset-xs);
-                margin-bottom: var(--offset-xs);
-            }
-        }
-    }
+		>* {
+			margin-left: 20px;
+			margin-bottom: 20px;
 
-    &--style {
-        &_filter {
-            #{$this} {
-                &__content {
-                    width: 100%;
-                    padding: var(--offset-m);
-                    background-color: var(--green-light);
-                    border-bottom: 2px solid var(--green-light);
-                    backdrop-filter: blur(2px);
-                    transition: $transition all;
+			@media(max-width: $sm) {
+				margin-left: var(--offset-xs);
+				margin-bottom: var(--offset-xs);
+			}
+		}
+	}
 
-                    @media(max-width: $md) {
-                        @include padding-y(18px);
-                    }
+	&--style {
+		&_filter {
+			#{$this} {
+				&__content {
+					width: 100%;
+					padding: var(--offset-m);
+					background-color: var(--green-light);
+					border-bottom: 2px solid var(--green-light);
+					backdrop-filter: blur(2px);
+					transition: $transition all;
 
-                    /* &::after {
+					@media(max-width: $md) {
+						@include padding-y(18px);
+					}
+
+					/* &::after {
                         content: '';
                         position: absolute;
                         bottom: 0;
@@ -257,137 +261,137 @@
                         transition: $transition width;
                     } */
 
-                    @media (any-hover: hover) {
-                        &:hover {
-                            box-shadow: $bsh;
-                        }
-                    }
-                }
+					@media (any-hover: hover) {
+						&:hover {
+							box-shadow: $bsh;
+						}
+					}
+				}
 
-                &__icon {
-                    flex-shrink: 0;
-                    margin-right: var(--offset-xs);
-                    width: var(--icon-size);
-                    height: var(--icon-size);
-                    stroke: var(--black);
-                    transition: $transition stroke;
-                }
+				&__icon {
+					flex-shrink: 0;
+					margin-right: var(--offset-xs);
+					width: var(--icon-size);
+					height: var(--icon-size);
+					stroke: var(--black);
+					transition: $transition stroke;
+				}
 
-                &-text {
-                    white-space: nowrap;
-                }
+				&-text {
+					white-space: nowrap;
+				}
 
-                &-input {
-                    &:checked ~ {
-                        #{$this} {
-                            &__content {
-                                background-color: #fff;
-                                border-bottom-color: var(--green);
-                                box-shadow: $bsh;
+				&-input {
+					&:checked~ {
+						#{$this} {
+							&__content {
+								background-color: #fff;
+								border-bottom-color: var(--green);
+								box-shadow: $bsh;
 
-                                /* &:after {
+								/* &:after {
                                     width: 100%;
                                 } */
 
-                                #{$this} {
-                                    &__icon {
-                                        stroke: var(--green);
-                                    }
+								#{$this} {
+									&__icon {
+										stroke: var(--green);
+									}
 
-                                    &-text {
-                                        @extend %museo-700;
-                                        color: var(--green);
-                                    }
-                                }
-                            }
-                        }
-                    }
-                }
-            }
-        }
+									&-text {
+										@extend %museo-700;
+										color: var(--green);
+									}
+								}
+							}
+						}
+					}
+				}
+			}
+		}
 
-        &_quantity {
-            #{$this} {
-                &-text {
-                    padding: var(--offset-s) var(--offset-m);
-                    border: 1px solid var(--line-color);
-                    border-radius: $brs;
-                    font-size: 16px;
+		&_quantity {
+			#{$this} {
+				&-text {
+					padding: var(--offset-s) var(--offset-m);
+					border: 1px solid var(--line-color);
+					border-radius: $brs;
+					font-size: 16px;
 
-                    @media (any-hover: hover) {
-                        &:hover {
-                            box-shadow: $bsh-5;
-                        }
-                    }
-                }
+					@media (any-hover: hover) {
+						&:hover {
+							box-shadow: $bsh-5;
+						}
+					}
+				}
 
-                &-input {
-                    &:checked {
-                        & ~ #{$this} {
-                            &-text {
-                                background-color: var(--green);
-                                border-color: var(--green);
-                                color: #fff;
-                            }
-                        }
-                    }
-                }
-            }
-        }
+				&-input {
+					&:checked {
+						&~#{$this} {
+							&-text {
+								background-color: var(--green);
+								border-color: var(--green);
+								color: #fff;
+							}
+						}
+					}
+				}
+			}
+		}
 
-        &_payment {
-            @include row-grid(var(--offset-xs));
+		&_payment {
+			@include row-grid(var(--offset-xs));
 
-            #{$this} {
-                &__content {
-                    padding: 14px var(--offset-m);
-                    border: 1px solid var(--line-color);
-                    border-radius: $brs;
-                }
+			#{$this} {
+				&__content {
+					padding: 14px var(--offset-m);
+					border: 1px solid var(--line-color);
+					border-radius: $brs;
+				}
 
-                &-text {
-                    font-size: #{$fz}px;
-                }
+				&-text {
+					font-size: #{$fz}px;
+				}
 
-                &__icon {
-                    width: 49px;
-                    min-width: 49px;
-                    height: 26px;
-                }
+				&__icon {
+					width: 49px;
+					min-width: 49px;
+					height: 26px;
+				}
 
-                &__dropdown {
-                    padding-left: 30px;
-                }
+				&__dropdown {
+					padding-left: 30px;
+				}
 
-                &-input {
-                    &:checked {
-                        & ~ {
-                            #{$this} {
-                                &__content {
-                                    background-color: var(--green);
-                                    color: #fff;
+				&-input {
+					&:checked {
+						&~ {
+							#{$this} {
+								&__content {
+									background-color: var(--green);
+									color: #fff;
 
-                                    #{$this} {
-                                        &__icon {
-                                            &--yandex {
-                                                path {
-                                                    fill: #fff;
-                                                }
-                                            }
+									#{$this} {
+										&__icon {
+											&--yandex {
+												path {
+													fill: #fff;
+												}
+											}
 
-                                            &--mastercard {
-                                                rect {
-                                                    fill: var(--green);
-                                                }
-                                            }
-                                        }
-                                    }
-                                }
-                            }
-                        }
-                    }
-                }
-            }
-        }
-    }
+											&--mastercard {
+												rect {
+													fill: var(--green);
+												}
+											}
+										}
+									}
+								}
+							}
+						}
+					}
+				}
+			}
+		}
+	}
 }

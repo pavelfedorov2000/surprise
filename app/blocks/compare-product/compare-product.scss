@@ -4,6 +4,12 @@
 
 	@media(max-width: $sm) {
 		min-width: 150px;
+		opacity: 0.5;
+		transition: $transition opacity;
+	}
+
+	&.in-view {
+		opacity: 1;
 	}
 
 	.mob-rating {

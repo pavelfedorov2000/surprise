@@ -104,6 +104,12 @@
 		}
 	}
 
+	&__social {
+		@media(min-width: 768px) {
+			margin-left: -14px;
+		}
+	}
+
 	// .footer__info
 
 	&__info {

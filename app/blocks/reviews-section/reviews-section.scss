@@ -2,4 +2,17 @@
 	@media(min-width: 1201px) {
 		@include padding-x(var(--offset-xxls));
 	}
+
+	.swiper-slide {
+		@media(max-width: $lg) {
+			opacity: 0.5;
+			transition: $transition opacity;
+		}
+	}
+
+	.swiper-slide-active {
+		@media(max-width: $lg) {
+			opacity: 1;
+		}
+	}
 }

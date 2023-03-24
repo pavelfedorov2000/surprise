@@ -1,0 +1,56 @@
+<div id="price_filter" class="catalog-filter__dropdown dropdown-filter price-filter"
+	aria-labelledby="price_filter_button">
+	<div class="dropdown-filter__inner">
+		<div class="price-filter__items">
+			<div class="price-filter__item">
+				<span class="price-filter__item-title">От</span>
+				<div class="select select--style_border select--with_input">
+					<div class="select__title">
+						<input type="number" class="select__title-input" placeholder="0" data-select-input="price-from">
+						<button class="icon select__arrow" type="button" aria-expanded="false"></button>
+					</div>
+					<div class="select__content">
+						<input id="priceFrom0" class="select__input" type="radio" name="priceFrom" checked />
+						<label for="priceFrom0" tabindex="0" class="select__label" data-value="0">0</label>
+						<input id="priceFrom1" class="select__input" type="radio" name="priceFrom" />
+						<label for="priceFrom1" tabindex="0" class="select__label" data-value="1000">1000</label>
+						<input id="priceFrom2" class="select__input" type="radio" name="priceFrom" />
+						<label for="priceFrom2" tabindex="0" class="select__label" data-value="2000">2000</label>
+						<input id="priceFrom3" class="select__input" type="radio" name="priceFrom" />
+						<label for="priceFrom3" tabindex="0" class="select__label" data-value="3000">3000</label>
+					</div>
+				</div>
+			</div>
+			<div class="price-filter__item">
+				<span class="price-filter__item-title">До</span>
+				<div class="select select--style_border select--with_input">
+					<div class="select__title">
+						<input type="number" class="select__title-input" placeholder="3000"
+							data-select-input="price-to">
+						<button class="icon select__arrow" type="button" aria-expanded="false"></button>
+					</div>
+					<div class="select__content">
+						<input id="priceTo0" class="select__input" type="radio" name="priceTo" checked />
+						<label for="priceTo0" tabindex="0" class="select__label" data-value="3000">3000</label>
+						<input id="priceTo1" class="select__input" type="radio" name="priceTo" />
+						<label for="priceTo1" tabindex="0" class="select__label" data-value="6000">6000</label>
+						<input id="priceTo2" class="select__input" type="radio" name="priceTo" />
+						<label for="priceTo2" tabindex="0" class="select__label" data-value="9000">9000</label>
+						<input id="priceTo3" class="select__input" type="radio" name="priceTo" />
+						<label for="priceTo3" tabindex="0" class="select__label" data-value="10000">10000</label>
+					</div>
+				</div>
+			</div>
+		</div>
+		<button class="reset-btn js-reset-filter" type="button">
+			<svg class="reset-btn__icon" width="24" height="24" viewBox="0 0 24 24" fill="none"
+				xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+				<path fill-rule="evenodd" clip-rule="evenodd" d="M18 6L6 18" stroke-width="2" stroke-linecap="round"
+					stroke-linejoin="round" />
+				<path fill-rule="evenodd" clip-rule="evenodd" d="M6 6L18 18" stroke-width="2" stroke-linecap="round"
+					stroke-linejoin="round" />
+			</svg>
+			<span class="reset-btn__text">Сбросить</span>
+		</button>
+	</div>
+</div>

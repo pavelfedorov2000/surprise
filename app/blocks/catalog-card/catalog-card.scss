@@ -41,10 +41,6 @@
 			height: 240px;
 		}
 
-		/* @media(min-width: 1201px) {
-			max-width: 437px;
-		} */
-
 		.swiper-slide {
 			border-radius: $brs;
 
@@ -170,9 +166,10 @@
 
 	&__rating {
 		align-items: flex-start;
+		margin: calc(var(--offset-xxs) * (-1));
 
 		>* {
-			margin-right: var(--offset-s);
+			margin: var(--offset-xxs);
 		}
 	}
 

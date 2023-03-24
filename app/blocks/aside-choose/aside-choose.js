@@ -21,7 +21,6 @@ app.asideChoose = {
 
         $('.aside-choose-tape__btn').on('click', function () {
             const $btn = $(this);
-            $btn.attr('aria-expanded', true);
             $('body').addClass('_lock');
             $(`#${$btn.attr('aria-controls')}`).addClass('active');
         });
@@ -29,7 +28,6 @@ app.asideChoose = {
         $(document).on('click', '.aside-choose__close', function () {
             const $popup = $(this).closest('.aside-choose');
             $popup.removeClass('active');
-            $(`[aria-controls="${$popup.attr('id')}"]`).attr('aria-expanded', false);
             $('body').removeClass('_lock');
         });
     },

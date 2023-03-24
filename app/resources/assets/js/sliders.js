@@ -14,6 +14,14 @@ $(function () {
         },
     });
 
+    if ($(window).width() <= 1024) {
+        new Swiper('.ordered-tape-section__slider', {
+            slidesPerView: 'auto',
+            spaceBetween: 32,
+            speed: 1000,
+        });
+    }
+
     new Swiper('.partners-slider', {
         loop: true,
         centeredSlides: true,

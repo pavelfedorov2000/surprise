@@ -1,95 +1,96 @@
 <section class="section compare-section">
-    <div class="container">
-        <div class="section__top">
-            <h2 class="section-title">Сравни с похожими предложениями!</h2>
-        </div>
-        <div class="table-wrap">
-            <table class="compare-table">
-                <thead>
-                    <tr>
-                        <th></th>
-                        <th>
-                            @@include('blocks/compare-product/compare-product.html', {
-                            "src": "assets/images/content/catalog/01"
-                            })
-                        </th>
-                        <th>
-                            @@include('blocks/compare-product/compare-product.html', {
-                            "src": "assets/images/content/catalog/02"
-                            })
-                        </th>
-                        <th>
-                            @@include('blocks/compare-product/compare-product.html', {
-                            "src": "assets/images/content/catalog/03"
-                            })
-                        </th>
-                    </tr>
-                </thead>
-                <tbody>
-                    <tr>
-                        <td>Медитативные / Расслабляющие</td>
-                        <td>
-                            <span class="check"></span>
-                        </td>
-                        <td>
-                            <span class="check"></span>
-                        </td>
-                        <td></td>
-                    </tr>
-                    <tr>
-                        <td>Требующую вовлеченности</td>
-                        <td>
-                            <span class="check"></span>
-                        </td>
-                        <td></td>
-                        <td>
-                            <span class="check"></span>
-                        </td>
-                    </tr>
-                    <tr>
-                        <td>Атмосферные</td>
-                        <td>
-                            <span class="check"></span>
-                        </td>
-                        <td>
-                            <span class="check"></span>
-                        </td>
-                        <td>
-                            <span class="check"></span>
-                        </td>
-                    </tr>
-                    <tr>
-                        <td>Кулинарные</td>
-                        <td></td>
-                        <td></td>
-                        <td></td>
-                    </tr>
-                    <tr>
-                        <td>Творческий</td>
-                        <td>
-                            <span class="check"></span>
-                        </td>
-                        <td>
-                            <span class="check"></span>
-                        </td>
-                        <td>
-                            <span class="check"></span>
-                        </td>
-                    </tr>
-                    <tr>
-                        <td>Кропотливые</td>
-                        <td></td>
-                        <td></td>
-                        <td></td>
-                    </tr>
-                    <tr>
-                        <td>Активные</td>
-                        <td></td>
-                        <td></td>
-                        <td></td>
-                    </tr>
-                </tbody>
-            </table>
-        </div>
-    </div>
+	<div class="container">
+		<div class="section__top">
+			<h2 class="section-title">Сравни с похожими предложениями!</h2>
+		</div>
+		<div class="table-wrap">
+			<table class="compare-table">
+				<thead>
+					<tr>
+						<th></th>
+						<th>
+							@@include('blocks/compare-product/compare-product.html', {
+							"inView": true,
+							"src": "assets/images/content/catalog/01"
+							})
+						</th>
+						<th>
+							@@include('blocks/compare-product/compare-product.html', {
+							"src": "assets/images/content/catalog/02"
+							})
+						</th>
+						<th>
+							@@include('blocks/compare-product/compare-product.html', {
+							"src": "assets/images/content/catalog/03"
+							})
+						</th>
+					</tr>
+				</thead>
+				<tbody>
+					<tr>
+						<td>Медитативные / Расслабляющие</td>
+						<td>
+							<span class="check"></span>
+						</td>
+						<td>
+							<span class="check"></span>
+						</td>
+						<td></td>
+					</tr>
+					<tr>
+						<td>Требующую вовлеченности</td>
+						<td>
+							<span class="check"></span>
+						</td>
+						<td></td>
+						<td>
+							<span class="check"></span>
+						</td>
+					</tr>
+					<tr>
+						<td>Атмосферные</td>
+						<td>
+							<span class="check"></span>
+						</td>
+						<td>
+							<span class="check"></span>
+						</td>
+						<td>
+							<span class="check"></span>
+						</td>
+					</tr>
+					<tr>
+						<td>Кулинарные</td>
+						<td></td>
+						<td></td>
+						<td></td>
+					</tr>
+					<tr>
+						<td>Творческий</td>
+						<td>
+							<span class="check"></span>
+						</td>
+						<td>
+							<span class="check"></span>
+						</td>
+						<td>
+							<span class="check"></span>
+						</td>
+					</tr>
+					<tr>
+						<td>Кропотливые</td>
+						<td></td>
+						<td></td>
+						<td></td>
+					</tr>
+					<tr>
+						<td>Активные</td>
+						<td></td>
+						<td></td>
+						<td></td>
+					</tr>
+				</tbody>
+			</table>
+		</div>
+	</div>
 </section>

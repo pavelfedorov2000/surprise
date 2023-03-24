@@ -93,7 +93,9 @@
 		<legend class="aside-choose__item-title">Выбери цвет упаковки</legend>
 		@@include('blocks/colors/colors.html')
 	</fieldset>
-	@@include('blocks/overall-sum/overall-sum.html')
+	@@include('blocks/overall-sum/overall-sum.html', {
+	"text": "Итого"
+	})
 	<button class="btn aside-choose__btn" type="submit">
 		<span class="btn__text">Купить</span>
 	</button>

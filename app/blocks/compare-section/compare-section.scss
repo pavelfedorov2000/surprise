@@ -16,7 +16,7 @@
 
 	.section__top {
 		@media(max-width: $md) {
-			display: none;
+			@include padding-x(var(--container-padding));
 		}
 	}
 }

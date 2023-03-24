@@ -1,23 +1,36 @@
 .ordered-tape-section {
-
-	// .ordered-tape-section__items
+	// .ordered-tape-section__item
 
 	&__items {
-		display: flex;
-		overflow-x: auto;
-
-		&::-webkit-scrollbar {
-			width: 0;
-			-webkit-appearance: none;
-			scrollbar-width: 0;
+		@media(min-width: 1025px) {
+			display: grid;
+			grid-template-columns: repeat(4, 1fr);
+			gap: var(--offset-xxxl);
 		}
 	}
 
-	// .ordered-tape-section__item
-
 	&__item {
-		min-width: 312px;
-		margin-right: var(--offset-xxxl);
+		@media(max-width: $lg) {
+			width: 312px;
+			opacity: 0.5;
+			transition: $transition opacity;
+		}
+
+		@media(max-width: $sm) {
+			width: 290px;
+		}
+
+		&.swiper-slide-active {
+			@media(max-width: $lg) {
+				opacity: 1;
+			}
+		}
+
+		&.swiper-slide-next {
+			@media(min-width: 768px) and (max-width: $lg) {
+				opacity: 1;
+			}
+		}
 
 		&:not(:last-child) {
 			position: relative;

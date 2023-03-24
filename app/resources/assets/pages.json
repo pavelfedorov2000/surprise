@@ -6,7 +6,6 @@
     "title": "Продукт"
 }, {
     "href": "combo.html",
-    "new": true,
     "title": "Комбо"
 }, {
     "href": "catalog.html",
@@ -79,6 +78,5 @@
     "title": "Страница не найдена"
 }, {
     "href": "post.html",
-    "new": true,
     "title": "Пост"
 }]

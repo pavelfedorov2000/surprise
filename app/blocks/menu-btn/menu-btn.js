@@ -10,20 +10,23 @@ app.menu = {
                 $('body').addClass('_lock');
                 $('.overlay--menu').fadeIn();
                 $('.menu').addClass('active');
-                $menuBtn.attr('aria-expanded', true);
-                $menuBtn.attr('aria-label', 'Закрыть меню');
+                if ($(window).width() < 768) {
+                    $menuBtn.attr('aria-expanded', true);
+                    $menuBtn.attr('aria-label', 'Закрыть меню');
+                }
             } else {
-                $menuBtn.attr('aria-label', 'Открыть меню');
-                $menuBtn.attr('aria-expanded', false);
                 $('.menu').removeClass('active');
                 $('.overlay--menu').fadeOut();
                 $('body').removeClass('_lock');
                 $('html').removeClass('disable-fix');
+                if ($(window).width() < 768) {
+                    $menuBtn.attr('aria-expanded', false);
+                    $menuBtn.attr('aria-label', 'Открыть меню');
+                }
             }
         });
 
         $('.menu__close').on('click', function () {
-            $('.menu-btn').attr('aria-expanded', false);
             $(this).closest('.menu').removeClass('active');
             $('.overlay--menu').fadeOut();
             $('body').removeClass('_lock');
@@ -36,7 +39,6 @@ app.menu = {
             const $menuBtn = $('.menu-btn');
 
             if (!$menu.is(e.target) && $menu.has(e.target).length === 0 && !$menuBtn.is(e.target) && $menuBtn.has(e.target).length === 0 && !$popup.is(e.target) && $popup.has(e.target).length === 0) {
-                $menuBtn.attr('aria-expanded', false);
                 $menu.removeClass('active');
                 $popup.fadeOut();
                 $('.overlay').fadeOut();

@@ -1,3 +1,26 @@
 .aside-choose-tape {
-  // your code
+	display: none;
+	position: fixed;
+	right: 0;
+	bottom: var(--offset-s);
+	left: 0;
+	z-index: 25;
+	padding: var(--offset-s) var(--container-padding);
+	align-items: center;
+	justify-content: space-between;
+	background-color: #fff;
+	box-shadow: $bsh;
+
+	@media(max-width: $xl) {
+		display: flex;
+	}
+
+	&__value {
+		color: var(--text-color);
+		border-bottom: 1px solid var(--text-color);
+	}
+
+	&__btn {
+		@include padding-y(var(--offset-s));
+	}
 }

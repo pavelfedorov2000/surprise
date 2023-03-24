@@ -412,6 +412,7 @@
 
 	&__inner {
 		@include row-grid(var(--offset-l));
+		justify-items: start;
 	}
 
 	// .dropdown-filter__row

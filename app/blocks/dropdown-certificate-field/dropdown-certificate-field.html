@@ -1,35 +1,27 @@
 <fieldset class="dropdown-certificate-field">
-    <legend class="dropdown-certificate-field__title">@@title</legend>
-    <div class="dropdown-certificate-field__items">
-        <label class="dropdown-certificate-field__item">
-            <span class="form-label">От кого</span>
-            <input class="input dropdown-certificate-field__input"
-                   placeholder="Ваше имя">
-        </label>
-        <label class="dropdown-certificate-field__item dropdown-certificate-field__item--textarea">
-            <span class="form-label">
-                Ваше пожелание
-                <button class="btn btn--style_link-3"
-                        data-popup="congratulations-popup"
-                        aria-controls="congratulations-popup"
-                        aria-expanded="false"
-                        type="button">
-                    <span class="btn__text">Выбрать из наших вариантов</span>
-                </button>
-            </span>
-            <div class="textarea">
-                <textarea class="input"
-                          placeholder="Поздравляю с Днем Рождения!"></textarea>
-            </div>
-        </label>
-    </div>
-    <button class="btn dropdown-certificate-field__btn btn--style_look"
-            type="button"
-            aria-expanded="false">
-        <svg class="icon btn__icon"
-             aria-hidden="true">
-            <use xlink:href="assets/images/sprite.svg#search-gray"></use>
-        </svg>
-        <span class="btn__text">Предварительный просмотр</span>
-    </button>
+	<legend class="dropdown-certificate-field__title">@@title</legend>
+	<div class="dropdown-certificate-field__items">
+		<label class="dropdown-certificate-field__item">
+			<span class="form-label">От кого</span>
+			<input class="input dropdown-certificate-field__input" placeholder="Ваше имя">
+		</label>
+		<label class="dropdown-certificate-field__item dropdown-certificate-field__item--textarea">
+			<span class="form-label">
+				Ваше пожелание
+				<button class="btn btn--style_link-3" data-popup="congratulations-popup"
+					aria-controls="congratulations-popup" type="button">
+					<span class="btn__text">Выбрать из наших вариантов</span>
+				</button>
+			</span>
+			<div class="textarea">
+				<textarea class="input" placeholder="Поздравляю с Днем Рождения!"></textarea>
+			</div>
+		</label>
+	</div>
+	<button class="btn dropdown-certificate-field__btn btn--style_look" type="button">
+		<svg class="icon btn__icon" aria-hidden="true">
+			<use xlink:href="assets/images/sprite.svg#search-gray"></use>
+		</svg>
+		<span class="btn__text">Предварительный просмотр</span>
+	</button>
 </fieldset>

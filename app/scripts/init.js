@@ -50,6 +50,34 @@ $(function () {
         }
     });
 
+    const table = document.querySelector('.table-wrap');
+    const tableVisibleWidth = table.getBoundingClientRect().width;
+    const tableWidth = table.scrollWidth;
+    const ths = table.querySelectorAll('th');
+    const compareProductItems = document.querySelectorAll('.compare-product');
+    const compareProducts = [...ths].slice(1);
+    const thWidth = compareProducts[0].getBoundingClientRect().width;
+    const compareProductsWidth = thWidth * compareProducts.length;
+    const compareProductsOffsets = compareProducts.map((item) => item.offsetLeft);
+    const firstThWidth = tableWidth - compareProductsWidth;
+    const visibleProductsWidth = tableVisibleWidth - firstThWidth;
+    const deltaVisible = visibleProductsWidth - thWidth;
+
+    table.onscroll = function () {
+        const scrollX = table.scrollLeft;
+        const delta = deltaVisible + scrollX;
+
+        compareProductsOffsets.forEach((_, index) => {
+            if (index > 0) {
+                if (delta >= compareProductsOffsets[index - 1]) {
+                    compareProductItems[index].classList.add('in-view');
+                } else {
+                    compareProductItems[index].classList.remove('in-view');
+                }
+            }
+        });
+    };
+
     // Скрипт динамического адаптива (для перемещения ДОМ-элементов в другое место если нужно без дублирования кода)
     function DynamicAdapt(type) {
         this.type = type

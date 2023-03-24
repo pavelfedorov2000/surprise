@@ -1,210 +1,166 @@
 <footer class="footer">
-    <div class="footer__body">
-        <div class="container">
-            <div class="footer__row">
-                <section class="footer__col footer__col--info">
-                    <a class="logo footer__logo"
-                       href="#">
-                        <img class="logo__img"
-                             src="assets/images/logo/logo.svg"
-                             alt="Логотип Surprise">
-                    </a>
-                    @@include('blocks/social/social.html', {
-                    "class": "footer"
-                    })
-                    <div class="footer__info"
-                         data-da=".footer__row, 767, 2">
-                        <div class="footer__info-text">
-                            <p>ООО «Приятный сюрприз»</p>
-                            <p>УНП: 191685808</p>
-                            <p>регистрация в ЕГР 31.08.2011, Мингорисполком</p>
-                            <p>© Все права защищены, 2022</p>
-                        </div>
-                        @@include('blocks/rating/rating.html', {
-                        "class": "footer",
-                        "title": "5",
-                        "text": "На основе 98 отзывов"
-                        })
-                    </div>
-                </section>
-                <section class="footer__col footer__col--address">
-                    <div class="footer__title">Адреса</div>
-                    <div class="footer__address-items">
-                        <div class="footer__address-item">
-                            <p>Республика Беларусь, 220004</p>
-                            <p>г. Минск, ул. Раковская, 18</p>
-                            <p>Время работы: 09:00-20:00,</p>
-                            <p>без выходных</p>
-                        </div>
-                        <div class="footer__address-item">
-                            <div class="footer__address-title">Островок:</div>
-                            <p>ТЦ Green City, Притыцкого, 156<br> (1-й этаж, возле магазина «КРАВТ»)</p>
-                            <p>Время работы: 10:00-22:00,</p>
-                            <p>без выходных</p>
-                        </div>
-                        <div class="footer__address-item">
-                            <div class="footer__address-title">Островок:</div>
-                            <p>ТЦ Dana Mall, Петра Мстиславца, 11 (2-й этаж, возле Stradivarius)</p>
-                            <p>Время работы: 10:00-22:00,</p>
-                            <p>без выходных</p>
-                        </div>
-                    </div>
-                </section>
-                <section class="footer__col footer__col--menu">
-                    <div class="footer__title">Меню</div>
-                    <ul class="footer__menu">
-                        <li>
-                            <a href="#"
-                               class="menu-link footer__menu-link">О нас</a>
-                        </li>
-                        <li>
-                            <a href="#"
-                               class="menu-link footer__menu-link">Отзывы</a>
-                        </li>
-                        <li>
-                            <a href="#"
-                               class="menu-link footer__menu-link">Блог</a>
-                        </li>
-                        <li>
-                            <a href="#"
-                               class="menu-link footer__menu-link">Вакансии</a>
-                        </li>
-                        <li>
-                            <a href="#"
-                               class="menu-link footer__menu-link">Наши партнеры</a>
-                        </li>
-                        <li>
-                            <a href="#"
-                               class="menu-link footer__menu-link">Доставка и оплата</a>
-                        </li>
-                        <li>
-                            <a href="#"
-                               class="menu-link footer__menu-link">Корпоративным клиентам</a>
-                        </li>
-                        <li>
-                            <a href="#"
-                               class="menu-link footer__menu-link">Публичный договор</a>
-                        </li>
-                    </ul>
-                </section>
-                <section class="footer__col footer__col--catalog">
-                    <div class="footer__title">Каталог</div>
-                    <ul class="footer__menu">
-                        <li>
-                            <a href="#"
-                               class="menu-link footer__menu-link">Новый Год</a>
-                        </li>
-                        <li>
-                            <a href="#"
-                               class="menu-link footer__menu-link">14 февраля</a>
-                        </li>
-                        <li>
-                            <a href="#"
-                               class="menu-link footer__menu-link">23 февраля</a>
-                        </li>
-                        <li>
-                            <a href="#"
-                               class="menu-link footer__menu-link">8 марта</a>
-                        </li>
-                        <li>
-                            <a href="#"
-                               class="menu-link footer__menu-link">День рождения</a>
-                        </li>
-                        <li>
-                            <a href="#"
-                               class="menu-link footer__menu-link">Годовщина свадьбы</a>
-                        </li>
-                    </ul>
-                </section>
-                <section class="footer__col footer__col--contacts">
-                    <div class="footer__title">Контакты</div>
-                    <address class="contacts">
-                        <a href="tel:+375297333368"
-                           class="contact">
-                            <svg class="icon contact__icon"
-                                 aria-hidden="true">
-                                <use xlink:href="assets/images/sprite.svg#phone"></use>
-                            </svg>
-                            <span>+375 29 7 3333 68 (MTC)</span>
-                        </a>
-                        <a href="tel:+375297333368"
-                           class="contact">
-                            <svg class="icon contact__icon"
-                                 aria-hidden="true">
-                                <use xlink:href="assets/images/sprite.svg#phone"></use>
-                            </svg>
-                            <span>+375 29 7 3333 68 (A1)</span>
-                        </a>
-                        <a href="tel:+375297333368"
-                           class="contact">
-                            <svg class="icon contact__icon"
-                                 aria-hidden="true">
-                                <use xlink:href="assets/images/sprite.svg#phone"></use>
-                            </svg>
-                            <span>+375 29 7 3333 68 (Life)</span>
-                        </a>
-                        <a href="mailto:info@surprise.by"
-                           class="contact">
-                            <svg class="icon contact__icon"
-                                 aria-hidden="true">
-                                <use xlink:href="assets/images/sprite.svg#email"></use>
-                            </svg>
-                            <span>info@surprise.by</span>
-                        </a>
-                    </address>
-                    <a href="#"
-                       class="btn footer__btn">
-                        <span class="btn__text">Активировать сертификат</span>
-                    </a>
-                </section>
-            </div>
-        </div>
-    </div>
+	<div class="footer__body">
+		<div class="container">
+			<div class="footer__row">
+				<section class="footer__col footer__col--info">
+					<a class="logo footer__logo" href="#">
+						<img class="logo__img" src="assets/images/logo/logo.svg" alt="Логотип Surprise">
+					</a>
+					@@include('blocks/social/social.html', {"class": "footer"})
+					<div class="footer__info" data-da=".footer__row, 767, 2">
+						<div class="footer__info-text">
+							<p>ООО «Приятный сюрприз»</p>
+							<p>УНП: 191685808</p>
+							<p>регистрация в ЕГР 31.08.2011, Мингорисполком</p>
+							<p>© Все права защищены, 2022</p>
+						</div>
+						@@include('blocks/rating/rating.html', {
+						"class": "footer",
+						"title": "5",
+						"text": "На основе 98 отзывов"
+						})
+					</div>
+				</section>
+				<section class="footer__col footer__col--address">
+					<div class="footer__title">Адреса</div>
+					<div class="footer__address-items">
+						<div class="footer__address-item">
+							<p>Республика Беларусь, 220004</p>
+							<p>г. Минск, ул. Раковская, 18</p>
+							<p>Время работы: 09:00-20:00,</p>
+							<p>без выходных</p>
+						</div>
+						<div class="footer__address-item">
+							<div class="footer__address-title">Островок:</div>
+							<p>ТЦ Green City, Притыцкого, 156<br> (1-й этаж, возле магазина «КРАВТ»)</p>
+							<p>Время работы: 10:00-22:00,</p>
+							<p>без выходных</p>
+						</div>
+						<div class="footer__address-item">
+							<div class="footer__address-title">Островок:</div>
+							<p>ТЦ Dana Mall, Петра Мстиславца, 11 (2-й этаж, возле Stradivarius)</p>
+							<p>Время работы: 10:00-22:00,</p>
+							<p>без выходных</p>
+						</div>
+					</div>
+				</section>
+				<section class="footer__col footer__col--menu">
+					<div class="footer__title">Меню</div>
+					<ul class="footer__menu">
+						<li>
+							<a href="#" class="menu-link footer__menu-link">О нас</a>
+						</li>
+						<li>
+							<a href="#" class="menu-link footer__menu-link">Отзывы</a>
+						</li>
+						<li>
+							<a href="#" class="menu-link footer__menu-link">Блог</a>
+						</li>
+						<li>
+							<a href="#" class="menu-link footer__menu-link">Вакансии</a>
+						</li>
+						<li>
+							<a href="#" class="menu-link footer__menu-link">Наши партнеры</a>
+						</li>
+						<li>
+							<a href="#" class="menu-link footer__menu-link">Доставка и оплата</a>
+						</li>
+						<li>
+							<a href="#" class="menu-link footer__menu-link">Корпоративным клиентам</a>
+						</li>
+						<li>
+							<a href="#" class="menu-link footer__menu-link">Публичный договор</a>
+						</li>
+					</ul>
+				</section>
+				<section class="footer__col footer__col--catalog">
+					<div class="footer__title">Каталог</div>
+					<ul class="footer__menu">
+						<li>
+							<a href="#" class="menu-link footer__menu-link">Новый Год</a>
+						</li>
+						<li>
+							<a href="#" class="menu-link footer__menu-link">14 февраля</a>
+						</li>
+						<li>
+							<a href="#" class="menu-link footer__menu-link">23 февраля</a>
+						</li>
+						<li>
+							<a href="#" class="menu-link footer__menu-link">8 марта</a>
+						</li>
+						<li>
+							<a href="#" class="menu-link footer__menu-link">День рождения</a>
+						</li>
+						<li>
+							<a href="#" class="menu-link footer__menu-link">Годовщина свадьбы</a>
+						</li>
+					</ul>
+				</section>
+				<section class="footer__col footer__col--contacts">
+					<div class="footer__title">Контакты</div>
+					<address class="contacts">
+						<a href="tel:+375297333368" class="contact">
+							<svg class="icon contact__icon" aria-hidden="true">
+								<use xlink:href="assets/images/sprite.svg#phone"></use>
+							</svg>
+							<span>+375 29 7 3333 68 (MTC)</span>
+						</a>
+						<a href="tel:+375297333368" class="contact">
+							<svg class="icon contact__icon" aria-hidden="true">
+								<use xlink:href="assets/images/sprite.svg#phone"></use>
+							</svg>
+							<span>+375 29 7 3333 68 (A1)</span>
+						</a>
+						<a href="tel:+375297333368" class="contact">
+							<svg class="icon contact__icon" aria-hidden="true">
+								<use xlink:href="assets/images/sprite.svg#phone"></use>
+							</svg>
+							<span>+375 29 7 3333 68 (Life)</span>
+						</a>
+						<a href="mailto:info@surprise.by" class="contact">
+							<svg class="icon contact__icon" aria-hidden="true">
+								<use xlink:href="assets/images/sprite.svg#email"></use>
+							</svg>
+							<span>info@surprise.by</span>
+						</a>
+					</address>
+					<a href="#" class="btn footer__btn">
+						<span class="btn__text">Активировать сертификат</span>
+					</a>
+				</section>
+			</div>
+		</div>
+	</div>
 
-    <div class="footer__payment">
-        <div class="container">
-            <ul class="footer__payment-list">
-                <li>
-                    <img src="assets/images/logo/payment/visa.png"
-                         alt="visa"
-                         loading="lazy">
-                </li>
-                <li>
-                    <img src="assets/images/logo/payment/visa-secure.png"
-                         alt="visa secure"
-                         loading="lazy">
-                </li>
-                <li>
-                    <img src="assets/images/logo/payment/mastercard.png"
-                         alt="mastercard"
-                         loading="lazy">
-                </li>
-                <li>
-                    <img src="assets/images/logo/payment/id-check.png"
-                         alt="ID Check"
-                         loading="lazy">
-                </li>
-                <li>
-                    <img src="assets/images/logo/payment/belcard.png"
-                         alt="Белкарт"
-                         loading="lazy">
-                </li>
-                <li>
-                    <img src="assets/images/logo/payment/belcard-password.png"
-                         alt="Белкарт Интернет Пароль"
-                         loading="lazy">
-                </li>
-                <li>
-                    <img src="assets/images/logo/payment/be-paid.png"
-                         alt="bePaid"
-                         loading="lazy">
-                </li>
-                <li>
-                    <img src="assets/images/logo/payment/mtbank.png"
-                         alt="МТБанк"
-                         loading="lazy">
-                </li>
-            </ul>
-        </div>
-    </div>
+	<div class="footer__payment">
+		<div class="container">
+			<ul class="footer__payment-list">
+				<li>
+					<img src="assets/images/logo/payment/visa.png" alt="visa" loading="lazy">
+				</li>
+				<li>
+					<img src="assets/images/logo/payment/visa-secure.png" alt="visa secure" loading="lazy">
+				</li>
+				<li>
+					<img src="assets/images/logo/payment/mastercard.png" alt="mastercard" loading="lazy">
+				</li>
+				<li>
+					<img src="assets/images/logo/payment/id-check.png" alt="ID Check" loading="lazy">
+				</li>
+				<li>
+					<img src="assets/images/logo/payment/belcard.png" alt="Белкарт" loading="lazy">
+				</li>
+				<li>
+					<img src="assets/images/logo/payment/belcard-password.png" alt="Белкарт Интернет Пароль"
+						loading="lazy">
+				</li>
+				<li>
+					<img src="assets/images/logo/payment/be-paid.png" alt="bePaid" loading="lazy">
+				</li>
+				<li>
+					<img src="assets/images/logo/payment/mtbank.png" alt="МТБанк" loading="lazy">
+				</li>
+			</ul>
+		</div>
+	</div>
 </footer>

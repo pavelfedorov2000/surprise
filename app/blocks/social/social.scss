@@ -2,11 +2,10 @@
 	$this: &;
 
 	display: flex;
-    flex-wrap: wrap;
-    gap: 28px;
 	// .social__item
 
 	&__item {
+		margin: 0 14px;
 		border-radius: 50%;
 		transition: $transition background-color;
 
