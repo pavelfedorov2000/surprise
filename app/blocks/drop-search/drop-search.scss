@@ -5,14 +5,14 @@
 	right: 0;
 	z-index: 20;
 	background-color: #fff;
-	box-shadow: $bsh;
+	box-shadow: var(--bsh);
 	opacity: 0;
 	visibility: hidden;
 	pointer-events: none;
-	transition: $transition all;
+	transition: var(--transition) all;
 
 	@media(min-width: 768px) {
-		border-radius: $brs;
+		border-radius: var(--brs);
 	}
 
 	&.active {
@@ -33,7 +33,7 @@
 		font-size: 16px;
 		padding: var(--offset-xs) var(--offset-m) var(--offset-xs) var(--offset-l);
 		//filter: drop-shadow(0px 0px 20px rgba(199, 199, 199, 0.25));
-		transition: $transition color;
+		transition: var(--transition) color;
 
 		span {
 			color: var(--green);

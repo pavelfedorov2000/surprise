@@ -2,7 +2,7 @@
     display: flex;
     align-items: center;
     padding: var(--offset-l) var(--offset-l) var(--offset-l) 0;
-    border-radius: $brs-card-xl;
+    border-radius: var(--brs-card-xl);
 
     @media(max-width: $md) {
         padding: var(--offset-m) var(--offset-m) var(--offset-m) 0;

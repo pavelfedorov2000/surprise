@@ -5,8 +5,8 @@
 	display: flex;
 	flex-direction: column;
 	border-bottom: 3px solid #fff;
-	border-radius: $brs-card-xl;
-	transition: $transition border-bottom-color;
+	border-radius: var(--brs-card-xl);
+	transition: var(--transition) border-bottom-color;
 
 	&:active {
 		border-bottom-color: var(--green);
@@ -38,7 +38,7 @@
 			right: 0;
 			bottom: 0;
 			left: 0;
-			border-radius: $brs-card-xl $brs-card-xl 0 0;
+			border-radius: var(--brs-card-xl) var(--brs-card-xl) 0 0;
 		}
 	}
 
@@ -51,8 +51,8 @@
 		flex-direction: column;
 		align-items: flex-start;
 		background-color: #fff;
-		box-shadow: $bsh;
-		border-radius: 0 0 $brs-card-xl $brs-card-xl;
+		box-shadow: var(--bsh);
+		border-radius: 0 0 var(--brs-card-xl) var(--brs-card-xl);
 
 		@media(max-width: $md) {
 			padding: 30px var(--offset-l) 20px;

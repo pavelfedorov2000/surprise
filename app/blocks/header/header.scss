@@ -27,7 +27,7 @@
 	&__bottom {
 		@include padding-y(var(--offset-s));
 		background-color: #fff;
-		box-shadow: $bsh;
+		box-shadow: var(--bsh);
 
 		@media(max-width: $md) {
 			display: flex;

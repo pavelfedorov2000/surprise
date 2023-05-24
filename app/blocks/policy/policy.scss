@@ -47,7 +47,7 @@
                     @extend %museo-300;
                     content: counter(list-1) '.'counter(list-2) '. ';
                     counter-increment: list-2;
-                    font-size: #{$fz}px;
+                    font-size: var(--font-size);
                     color: var(--text-color);
                 }
             }

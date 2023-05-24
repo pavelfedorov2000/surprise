@@ -11,7 +11,7 @@
 
     &__btn {
         @include grid-center;
-        transition: $transition background-color;
+        transition: var(--transition) background-color;
 
         @media (any-hover: hover) {
             &:hover {
@@ -20,13 +20,13 @@
         }
 
         &--minus {
-            border-radius: $brs 0 0 $brs;
+            border-radius: var(--brs) 0 0 var(--brs);
             border: 1px solid var(--line-color);
             border-right: none;
         }
 
         &--plus {
-            border-radius: 0 $brs $brs 0;
+            border-radius: 0 var(--brs) var(--brs) 0;
             border: 1px solid var(--line-color);
             border-left: none;
         }
@@ -36,9 +36,9 @@
 
     &__input {
         border: 1px solid var(--line-color);
-        font-family: $ff;
-        font-size: #{$fz}px;
-        color: $color-default;
+        font-family: var(--main-font);
+        font-size: var(--font-size);
+        color: var(--color-default);
         text-align: center;
     }
 }

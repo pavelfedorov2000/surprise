@@ -1,10 +1,10 @@
 .blog-card {
 	position: relative;
 	background-color: #fff;
-	box-shadow: $bsh-2;
-	border-radius: $brs-card;
+	box-shadow: var(--bsh-2);
+	border-radius: var(--brs-card);
 	border-bottom: 3px solid #fff;
-	transition: $transition border-bottom-color;
+	transition: var(--transition) border-bottom-color;
 
 	@media (any-hover: hover) {
 		&:hover {
@@ -23,14 +23,14 @@
 		background-color: var(--pink);
 		color: #fff;
 		padding: var(--offset-s);
-		border-radius: 0px $brs-card;
+		border-radius: 0 var(--brs-card);
 		text-align: center;
 	}
 
 	&__img {
 		position: relative;
 		padding-bottom: 63.255%;
-		border-radius: $brs-card;
+		border-radius: var(--brs-card);
 
 		img {
 			position: absolute;
@@ -38,7 +38,7 @@
 			right: 0;
 			bottom: 0;
 			left: 0;
-			border-radius: $brs-card;
+			border-radius: var(--brs-card);
 		}
 	}
 

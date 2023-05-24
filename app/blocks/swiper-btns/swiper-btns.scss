@@ -47,8 +47,8 @@
 	border-radius: 50%;
 	background-color: #fff;
 	z-index: 20;
-	box-shadow: $bsh-3;
-	transition: $transition all;
+	box-shadow: var(--bsh-3);
+	transition: var(--transition) all;
 
 	&__icon {
 		position: absolute;
@@ -60,7 +60,7 @@
 
 		path {
 			fill: var(--green);
-			transition: $transition fill;
+			transition: var(--transition) fill;
 		}
 	}
 

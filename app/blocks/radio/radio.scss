@@ -80,7 +80,7 @@
 		width: var(--icon-size);
 		height: var(--icon-size);
 		margin-right: var(--offset-m);
-		transition: $transition box-shadow;
+		transition: var(--transition) box-shadow;
 
 		@media(max-width: $sm) {
 			margin-right: var(--offset-xs);
@@ -110,7 +110,7 @@
 			height: 20px;
 			border-radius: 50%;
 			border: 2px solid var(--line-color);
-			transition: $transition border-color, $transition background-color;
+			transition: var(--transition) border-color, var(--transition) background-color;
 		}
 
 		&:after {
@@ -120,7 +120,7 @@
 			background-color: var(--green);
 			box-sizing: border-box;
 			opacity: 0;
-			transition: $transition opacity;
+			transition: var(--transition) opacity;
 		}
 	}
 
@@ -139,9 +139,9 @@
 		align-items: center;
 		flex-wrap: wrap;
 		font-size: 20px;
-		transition: $transition color,
-			$transition box-shadow,
-			$transition background-color;
+		transition: var(--transition) color,
+			var(--transition) box-shadow,
+			var(--transition) background-color;
 
 		@media (max-width: $md) {
 			font-size: 16px;
@@ -166,7 +166,7 @@
 	&__content {
 		display: flex;
 		align-items: center;
-		transition: $transition box-shadow;
+		transition: var(--transition) box-shadow;
 	}
 
 	&__inner {
@@ -244,7 +244,7 @@
 					background-color: var(--green-light);
 					border-bottom: 2px solid var(--green-light);
 					backdrop-filter: blur(2px);
-					transition: $transition all;
+					transition: var(--transition) all;
 
 					@media(max-width: $md) {
 						@include padding-y(18px);
@@ -258,12 +258,12 @@
                         width: 0%;
                         height: 2px;
                         background-color: var(--green);
-                        transition: $transition width;
+                        transition: var(--transition) width;
                     } */
 
 					@media (any-hover: hover) {
 						&:hover {
-							box-shadow: $bsh;
+							box-shadow: var(--bsh);
 						}
 					}
 				}
@@ -274,7 +274,7 @@
 					width: var(--icon-size);
 					height: var(--icon-size);
 					stroke: var(--black);
-					transition: $transition stroke;
+					transition: var(--transition) stroke;
 				}
 
 				&-text {
@@ -287,7 +287,7 @@
 							&__content {
 								background-color: #fff;
 								border-bottom-color: var(--green);
-								box-shadow: $bsh;
+								box-shadow: var(--bsh);
 
 								/* &:after {
                                     width: 100%;
@@ -315,12 +315,12 @@
 				&-text {
 					padding: var(--offset-s) var(--offset-m);
 					border: 1px solid var(--line-color);
-					border-radius: $brs;
+					border-radius: var(--brs);
 					font-size: 16px;
 
 					@media (any-hover: hover) {
 						&:hover {
-							box-shadow: $bsh-5;
+							box-shadow: var(--bsh-5);
 						}
 					}
 				}
@@ -346,11 +346,11 @@
 				&__content {
 					padding: 14px var(--offset-m);
 					border: 1px solid var(--line-color);
-					border-radius: $brs;
+					border-radius: var(--brs);
 				}
 
 				&-text {
-					font-size: #{$fz}px;
+					font-size: var(--font-size);
 				}
 
 				&__icon {

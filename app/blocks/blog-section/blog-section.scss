@@ -5,7 +5,7 @@
 	.swiper-slide {
 		@media(max-width: $lg) {
 			opacity: .5;
-			transition: $transition opacity;
+			transition: var(--transition) opacity;
 		}
 
 		&-active {

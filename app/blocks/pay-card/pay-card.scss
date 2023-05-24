@@ -3,8 +3,8 @@
     justify-items: center;
     padding: var(--offset-xl) var(--offset-m);
     background-color: #fff;
-    border-radius: $brs-card-xl;
-    box-shadow: $bsh;
+    border-radius: var(--brs-card-xl);
+    box-shadow: var(--bsh);
     text-align: center;
 
     @media(max-width: $md) {

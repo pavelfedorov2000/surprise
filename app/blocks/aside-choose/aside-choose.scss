@@ -7,10 +7,10 @@
 	margin-left: auto;
 	padding: var(--offset-xl);
 	background-color: #fff;
-	box-shadow: $bsh;
+	box-shadow: var(--bsh);
 
 	@media(min-width: 1201px) {
-		border-radius: $brs-card-xl;
+		border-radius: var(--brs-card-xl);
 	}
 
 	@media(max-width: $xl) {

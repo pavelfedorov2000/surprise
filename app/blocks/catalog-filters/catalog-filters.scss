@@ -21,7 +21,7 @@
 			background-color: #fff;
 			display: flex;
 			flex-direction: column;
-			transition: $transition left;
+			transition: var(--transition) left;
 
 			&.active {
 				left: 0;
@@ -40,7 +40,7 @@
 					&:first-child {
 						.radio {
 							&__content {
-								border-radius: $brs-xl $brs-xl 0 0;
+								border-radius: var(--brs-xl) var(--brs-xl) 0 0;
 							}
 						}
 					}
@@ -48,7 +48,7 @@
 					&:last-child {
 						.radio {
 							&__content {
-								border-radius: $brs-xl $brs-xl 0 0;
+								border-radius: var(--brs-xl) var(--brs-xl) 0 0;
 							}
 						}
 					}
@@ -156,8 +156,8 @@
 									border-radius: 50%;
 									background-color: #fff;
 									opacity: 0;
-									transition: $transition background-color,
-										$transition opacity;
+									transition: var(--transition) background-color,
+										var(--transition) opacity;
 								}
 							}
 
@@ -202,7 +202,7 @@
 		padding: 30px 20px var(--offset-l) var(--offset-xxls);
 		font-size: 24px;
 		line-height: 1.5;
-		color: $color-default;
+		color: var(--color-default);
 		display: none;
 
 		&::before {
@@ -235,7 +235,7 @@
 		&:first-child {
 			.radio {
 				&__content {
-					border-radius: $brs-xl 0 0 0;
+					border-radius: var(--brs-xl) 0 0 0;
 				}
 			}
 		}
@@ -243,7 +243,7 @@
 		&:last-child {
 			.radio {
 				&__content {
-					border-radius: 0 $brs-xl 0 0;
+					border-radius: 0 var(--brs-xl) 0 0;
 				}
 			}
 		}
@@ -340,10 +340,10 @@
 		text-align: left;
 		background-color: #fff;
 		border: 1px solid #fff;
-		color: $color-default;
+		color: var(--color-default);
 		white-space: nowrap;
-		transition: $transition box-shadow,
-			$transition border-color;
+		transition: var(--transition) box-shadow,
+			var(--transition) border-color;
 
 		@media(max-width: $xl) {
 			min-height: 60px;
@@ -363,12 +363,12 @@
 			width: var(--icon-size);
 			height: var(--icon-size);
 			background-image: url(../images/icons/drop-arrow.svg);
-			transition: $transition transform;
+			transition: var(--transition) transform;
 		}
 
 		@media (any-hover: hover) {
 			&:hover {
-				box-shadow: $bsh;
+				box-shadow: var(--bsh);
 			}
 		}
 
@@ -407,8 +407,8 @@
 	}
 
 	@media(min-width: 1201px) {
-		border-radius: $brs;
-		box-shadow: $bsh;
+		border-radius: var(--brs);
+		box-shadow: var(--bsh);
 	}
 
 	&__inner {

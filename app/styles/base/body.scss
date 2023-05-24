@@ -1,11 +1,11 @@
 body {
 	min-width: 320px;
 	font-style: normal;
-	font-family: $ff;
-	font-size: #{$fz}px;
+	font-family: var(--main-font);
+	font-size: var(--font-size);
 	line-height: 1.5;
 	font-weight: 500;
-	color: $color-default;
+	color: var(--color-default);
 	overflow-x: hidden;
 
 	&.sticky {
@@ -36,7 +36,7 @@ address {
 button,
 input,
 textarea {
-	font-family: $ff;
+	font-family: var(--main-font);
 }
 
 dl,
@@ -66,7 +66,7 @@ p {
 	}
 
 	&.default-color {
-		color: $color-default;
+		color: var(--color-default);
 	}
 }
 

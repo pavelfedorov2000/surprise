@@ -43,9 +43,6 @@
         width: 68px;
         height: 68px;
         border-radius: 50%;
-        //border: 1px solid var(--green);
-        /* display: grid;
-		place-items: center; */
 
         &::before {
             content: '';
@@ -55,7 +52,7 @@
             bottom: 0;
             left: 0;
             border-radius: 50%;
-            box-shadow: $bsh;
+            box-shadow: var(--bsh);
         }
 
         span {

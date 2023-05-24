@@ -85,7 +85,7 @@
     &__title {
         margin-bottom: var(--offset-s);
         text-decoration: underline;
-        transition: $transition color;
+        transition: var(--transition) color;
 
         @media (any-hover: hover) {
             &:hover {
@@ -135,7 +135,7 @@
     &.swiper-slide {
         @media(max-width: $lg) {
             opacity: .5;
-            transition: $transition opacity;
+            transition: var(--transition) opacity;
         }
 
         &-active {
@@ -191,7 +191,7 @@
     padding: var(--offset-xxs) 18px;
     background-color: #fff;
     border-radius: 100px;
-    box-shadow: $bsh;
+    box-shadow: var(--bsh);
 
     img {
         flex-shrink: 0;

@@ -3,7 +3,7 @@
 
     padding: 5px var(--offset-s);
     background-color: var(--green-light);
-    border-radius: $brs-xxs;
+    border-radius: var(--brs-xxs);
 
     &__text {
         @extend %museo-300;

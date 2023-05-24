@@ -11,8 +11,8 @@
         justify-content: space-between;
         background-color: #fff;
         border: 1px solid #fff;
-        transition: $transition box-shadow,
-            $transition border-color;
+        transition: var(--transition) box-shadow,
+            var(--transition) border-color;
 
         @media(max-width: $xl) {
             @include padding-y(17px);
@@ -26,12 +26,12 @@
             width: var(--icon-size);
             height: var(--icon-size);
             background-image: url(../images/icons/drop-arrow.svg);
-            transition: $transition all;
+            transition: var(--transition) all;
         }
 
         @media (any-hover: hover) {
             &:hover {
-                box-shadow: $bsh;
+                box-shadow: var(--bsh);
 
                 #{$this} {
                     &__arrow {
@@ -57,7 +57,7 @@
 
     &__title-input {
         width: 100%;
-        font-size: #{$fz}px;
+        font-size: var(--font-size);
         color: var(--text-color);
     }
 
@@ -65,8 +65,8 @@
         position: relative;
         z-index: 2;
         fill: var(--black);
-        transition: $transition transform,
-            $transition fill;
+        transition: var(--transition) transform,
+            var(--transition) fill;
     }
 
     &__wrap {
@@ -101,8 +101,8 @@
         right: 0;
         width: 100%;
         @include padding-y(var(--offset-m));
-        box-shadow: $bsh;
-        border-radius: $brs;
+        box-shadow: var(--bsh);
+        border-radius: var(--brs);
         z-index: 30;
         background-color: #fff;
         display: none;
@@ -129,7 +129,7 @@
         width: 100%;
         cursor: pointer;
         overflow: hidden;
-        transition: $transition color;
+        transition: var(--transition) color;
 
         @media(max-width: $md) {
             padding: var(--offset-xxxs) var(--offset-m);
@@ -148,7 +148,7 @@
                 &__title {
                     padding: 17px var(--offset-m);
                     border: 1px solid var(--line-color);
-                    border-radius: $brs;
+                    border-radius: var(--brs);
                     color: var(--text-color);
                 }
             }

@@ -1,6 +1,7 @@
 $container: 1440;
 
 :root {
+    // colors (pallette)
 	--pink: #F395A9;
 	--pink-hover: #E6859A;
 	--pink-pressed: #EDA2B2;
@@ -31,11 +32,15 @@ $container: 1440;
 	--light-blue: #ecf1ff;
 	--white-70: rgba(255, 255, 255, 0.7);
 
+    // container
 	--container-width: #{$container}px;
 	--container-width_xs: 800px;
 	--container-padding: 40px;
+
+    // header
 	--header-height: 140px;
 	--header-height-mob: 59px;
+
 	--section-padding-xs: 80px;
 	--section-padding: 100px;
 	--section-padding-xl: 120px;
@@ -58,8 +63,37 @@ $container: 1440;
 	--offset-xxs: 8px;
 	--offset-xxxs: 4px;
 
+    // icon sizes
 	--icon-size: 24px;
 	--icon-size_l: 32px;
+
+    // border-radius
+    --brs-xxs: 4px;
+    --brs-xs: 6px;
+    --brs: 8px;
+    --brs-card: 10px;
+    --brs-xl: 12px;
+    --brs-card-xl: 20px;
+
+    // box-shadow
+    --bsh: 0 3px 10px rgba(63, 63, 63, 0.1);
+    --bsh-2: 0 0 30px rgba(0, 0, 0, 0.08);
+    --bsh-3: 0 2px 10px rgba(145, 145, 145, 0.18);
+    --bsh-4: 0 4px 4px rgba(0, 0, 0, 0.25);
+    --bsh-5: 0 0 20px rgba(199, 199, 199, 0.25);
+
+    //transition
+    --transition-timing: cubic-bezier(0.4, 0, 0.2, 1);
+    --duration: 0.3s;
+    --duration--long: 1s;
+    --delay: var(--duration);
+    --transition: var(--duration) var(--transition-timing);
+
+    // typography
+    --font-size: 16px;
+    --main-font: 'Museo Sans Cyrl 500', sans-serif;
+    --color-default: var(--black);
+    --border: 1px solid var(--line-color);
 
 	@media(max-width: $xl) {
 		--container-padding: 16px;

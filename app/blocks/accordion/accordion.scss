@@ -24,7 +24,7 @@
         padding-left: var(--offset-xl);
         font-size: 20px;
         text-align: left;
-        color: $color-default;
+        color: var(--color-default);
 
         @media(max-width: $md) {
             padding-left: var(--offset-l);
@@ -42,7 +42,7 @@
             width: var(--icon-size);
             height: var(--icon-size);
             background-image: url(../images/icons/drop-arrow.svg);
-            transition: $transition transform;
+            transition: var(--transition) transform;
         }
 
         &[aria-expanded="true"] {
@@ -67,15 +67,15 @@
         position: absolute;
         top: 0;
         right: 0;
-        fill: $color-default;
-        transition: $transition transform,
-            $transition fill;
+        fill: var(--color-default);
+        transition: var(--transition) transform,
+            var(--transition) fill;
     }
 
     &__toggle-title {
         @extend %museo-700;
         font-size: 24px;
-        transition: $transition color;
+        transition: var(--transition) color;
     }
 
     &__toggle-subtitle {

@@ -8,12 +8,12 @@
 	height: var(--offset-xl);
 	background-color: rgba(255, 255, 255, 0.8);
 	backdrop-filter: blur(2px);
-	border-radius: $brs-xs;
+	border-radius: var(--brs-xs);
 
 	&__icon {
 		stroke: var(--black);
-		transition: $transition stroke,
-			$transition fill;
+		transition: var(--transition) stroke,
+			var(--transition) fill;
 	}
 
 	@media (any-hover: hover) {

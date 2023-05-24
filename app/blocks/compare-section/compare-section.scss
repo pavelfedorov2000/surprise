@@ -1,9 +1,9 @@
 .table-wrap {
-	box-shadow: $bsh;
+	box-shadow: var(--bsh);
 	overflow-x: auto;
 
 	@media(min-width: 768px) {
-		border-radius: $brs-card-xl;
+		border-radius: var(--brs-card-xl);
 	}
 }
 
@@ -25,7 +25,7 @@
 	background-color: var(--green-light);
 
 	@media(min-width: 768px) {
-		border-radius: $brs-card-xl;
+		border-radius: var(--brs-card-xl);
 	}
 
 	th,

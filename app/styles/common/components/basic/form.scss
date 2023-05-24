@@ -30,13 +30,13 @@ textarea {
 
 .input {
 	padding: calc(var(--offset-s) - 1px) var(--offset-m);
-	border: $border;
-	border-radius: $brs;
-	font-size: #{$fz}px;
+	border: var(--border);
+	border-radius: var(--brs);
+	font-size: var(--font-size);
 	line-height: 21px;
 	color: var(--black);
-	transition: $transition border-color,
-		$transition box-shadow;
+	transition: var(--transition) border-color,
+		var(--transition) box-shadow;
 
 	&::placeholder {
 		color: var(--line-color);
@@ -49,7 +49,7 @@ textarea {
 
 	@media (any-hover: hover) {
 		&:hover {
-			box-shadow: $bsh;
+			box-shadow: var(--bsh);
 		}
 	}
 
@@ -112,9 +112,8 @@ textarea {
 .form {
 	@include row-grid(var(--offset-m));
 	background-color: #fff;
-	border-radius: $brs-card-xl;
-	box-shadow: $bsh;
-	border-radius: $brs-card-xl;
+	box-shadow: var(--bsh);
+	border-radius: var(--brs-card-xl);
 
 	@media(max-width: $xl) {
 		padding: var(--offset-xxxl);

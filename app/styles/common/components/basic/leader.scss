@@ -16,13 +16,13 @@
 			@extend %museo-300;
 			margin-right: var(--offset-xxxs);
 			color: var(--text-color-light);
-			transition: $transition color;
+			transition: var(--transition) color;
 		}
 
 		dd {
 			span {
 				color: var(--text-color);
-				transition: $transition color;
+				transition: var(--transition) color;
 			}
 		}
 	}

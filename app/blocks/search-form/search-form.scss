@@ -4,7 +4,7 @@
 
 	@media(max-width: $md) {
 		width: auto;
-		transition: $transition all;
+		transition: var(--transition) all;
 	}
 
 	&.active {
@@ -26,7 +26,7 @@
 		opacity: 0;
 		visibility: hidden;
 		pointer-events: none;
-		transition: $transition all;
+		transition: var(--transition) all;
 
 		@media(max-width: $md) {
 			height: 100%;
@@ -53,7 +53,7 @@
 		border-radius: 50%;
 		padding: var(--offset-xxxs);
 		font-size: 24px;
-		transition: $transition background-color;
+		transition: var(--transition) background-color;
 
 		@media (any-hover: hover) {
 			&:hover {

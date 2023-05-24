@@ -7,10 +7,10 @@
 	height: 100%;
 	padding: var(--offset-m) 20px 20px;
 	background-color: #fff;
-	box-shadow: $bsh;
-	border-radius: $brs-card-xl;
+	box-shadow: var(--bsh);
+	border-radius: var(--brs-card-xl);
 	border-bottom: 3px solid #fff;
-	transition: $transition border-bottom-color;
+	transition: var(--transition) border-bottom-color;
 
 	@media(max-width: $sm) {
 		@include padding-x(var(--offset-s));

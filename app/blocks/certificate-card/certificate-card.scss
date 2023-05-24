@@ -3,7 +3,7 @@
 
 	position: relative;
 	padding: 0;
-	transition: $transition background-color;
+	transition: var(--transition) background-color;
 
 	@media (any-hover: hover) {
 		&:hover {
@@ -13,8 +13,8 @@
 
 	&__inner {
 		padding: var(--offset-xl) 55px var(--offset-xl) var(--section-padding-xs);
-		border-radius: $brs-card-xl;
-		transition: $transition background-color, $transition color;
+		border-radius: var(--brs-card-xl);
+		transition: var(--transition) background-color, var(--transition) color;
 
 		@media(min-width: 768px) {
 			display: flex;
@@ -51,7 +51,7 @@
 	// .certificate-card__img
 
 	&__img {
-		border-radius: $brs;
+		border-radius: var(--brs);
 
 		@media(min-width: 768px) {
 			flex-shrink: 0;
@@ -65,7 +65,7 @@
 		}
 
 		img {
-			border-radius: $brs;
+			border-radius: var(--brs);
 		}
 	}
 

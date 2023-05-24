@@ -5,12 +5,12 @@
 	display: inline-flex;
 	align-items: center;
 	padding: 18px var(--offset-l);
-	border-radius: $brs;
-	font-family: $ff;
-	font-size: #{$fz}px;
+	border-radius: var(--brs);
+	font-family: var(--main-font);
+	font-size: var(--font-size);
 	line-height: 1.5;
 	text-align: left;
-	transition: $transition all;
+	transition: var(--transition) all;
 
 	@media (any-hover: hover) {
 		&:hover {
@@ -30,7 +30,7 @@
 
 	&__text {
 		white-space: nowrap;
-		//transition: $transition color;
+		transition: var(--transition) color;
 	}
 
 	&--style {
@@ -148,7 +148,7 @@
 				&__icon {
 					margin-right: 14px;
 					stroke: var(--green);
-					transition: $transition stroke;
+					transition: var(--transition) stroke;
 				}
 
 				// .reset-btn__text
@@ -219,7 +219,7 @@
 				left: 0;
 				right: 0;
 				height: 1px;
-				transition: $transition background-color;
+				transition: var(--transition) background-color;
 			}
 		}
 
@@ -331,17 +331,17 @@
 		}
 
 		&_link-3 {
-			color: $color-default;
+			color: var(--color-default);
 
 			&:after {
-				background-color: $color-default;
+				background-color: var(--color-default);
 			}
 
 			&:focus,
 			&:active {
 				#{$this} {
 					&__text {
-						color: $color-default;
+						color: var(--color-default);
 					}
 				}
 			}
@@ -405,7 +405,7 @@
 					width: var(--icon-size);
 					height: var(--icon-size);
 					background-image: url(../images/icons/green-drop.svg);
-					transition: $transition transform;
+					transition: var(--transition) transform;
 				}
 			}
 
@@ -450,7 +450,7 @@
 	justify-content: center;
 	border-radius: 50%;
 	padding: var(--offset-xxxs);
-	transition: $transition background-color;
+	transition: var(--transition) background-color;
 
 	@media (any-hover: hover) {
 		&:hover {

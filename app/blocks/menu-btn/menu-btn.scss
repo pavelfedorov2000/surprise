@@ -5,7 +5,7 @@
     display: inline-flex;
     align-items: center;
     font-size: 24px;
-    transition: $transition all;
+    transition: var(--transition) all;
 
     @media(max-width: $lg) {
         padding: var(--offset-xxxs);
@@ -34,7 +34,7 @@
         margin-right: var(--offset-xs);
         fill: var(--pink);
         stroke: none;
-        transition: $transition opacity;
+        transition: var(--transition) opacity;
 
         @media(max-width: $lg) {
             margin-right: 0;
@@ -46,7 +46,7 @@
     &__text {
         font-size: 16px;
         line-height: 1.5;
-        transition: $transition color;
+        transition: var(--transition) color;
 
         @media(max-width: $lg) {
             display: none;

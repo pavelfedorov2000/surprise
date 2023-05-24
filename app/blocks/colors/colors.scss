@@ -29,12 +29,12 @@
 		height: var(--offset-xl);
 		border-radius: 50%;
 		border: 2px solid transparent;
-		transition: $transition border-color,
-			$transition box-shadow;
+		transition: var(--transition) border-color,
+			var(--transition) box-shadow;
 
 		@media (any-hover: hover) {
 			&:hover {
-				box-shadow: $bsh-3;
+				box-shadow: var(--bsh-3);
 			}
 		}
 	}

@@ -14,7 +14,7 @@
     img {
         @media(max-width: $md) {
             filter: grayscale(100%);
-            transition: $transition filter;
+            transition: var(--transition) filter;
         }
     }
 

@@ -4,7 +4,7 @@
     padding: var(--offset-xxxs);
     border-radius: 50%;
     padding: var(--offset-xxxs);
-    transition: $transition background-color;
+    transition: var(--transition) background-color;
 
     @media (any-hover: hover) {
         &:hover {

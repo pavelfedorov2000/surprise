@@ -12,7 +12,7 @@
 	padding: var(--offset-xxxl) var(--section-padding-xs);
 	background-color: #fff;
 	overflow-y: auto;
-	transition: $transition left;
+	transition: var(--transition) left;
 
 	@media(max-width: $lg) {
 		width: auto;
@@ -23,7 +23,7 @@
 		top: -150%;
 		left: 0;
 		padding: var(--offset-m) 15px var(--offset-xxxl);
-		transition: $transition top;
+		transition: var(--transition) top;
 	}
 
 	@media(max-width: $sm) {
@@ -79,10 +79,10 @@
 	&__link {
 		display: block;
 		padding: 20px var(--offset-l);
-		border-radius: $brs;
+		border-radius: var(--brs);
 		font-size: 20px;
 		border-left: 3px solid #fff;
-		transition: $transition all;
+		transition: var(--transition) all;
 
 		@media(max-width: $md) {
 			font-size: 16px;
@@ -103,7 +103,7 @@
 	&__items {
 		margin-left: var(--offset-l);
 		padding-top: 38px;
-		border-top: $border;
+		border-top: var(--border);
 
 		@media(max-width: $md) {
 			margin-left: 0;

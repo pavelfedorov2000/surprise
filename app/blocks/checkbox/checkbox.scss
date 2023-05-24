@@ -61,7 +61,7 @@
 			border-radius: 2px;
 			background-size: cover;
 			background-repeat: no-repeat;
-			transition: $transition background-color;
+			transition: var(--transition) background-color;
 		}
 
 		@media (any-hover: hover) {
@@ -86,7 +86,7 @@
 
 	&__text {
 		@extend %museo-300;
-		transition: $transition color;
+		transition: var(--transition) color;
 	}
 
 	&--style {
@@ -98,7 +98,7 @@
 							&__content {
 								#{$this} {
 									&__title {
-										color: $color-default;
+										color: var(--color-default);
 									}
 								}
 							}
@@ -106,7 +106,7 @@
 
 						&~#{$this} {
 							&__text {
-								color: $color-default;
+								color: var(--color-default);
 
 								b {
 									@extend %museo-700;

@@ -1,7 +1,7 @@
 .notify-box {
     display: flex;
     padding: var(--offset-s) var(--offset-m);
-    border-radius: $brs;
+    border-radius: var(--brs);
     background-color: var(--attention);
     // .notify-box__icon
 

@@ -27,14 +27,14 @@
     z-index: 102;
     width: 470px;
     background-color: #fff;
-    box-shadow: $bsh;
+    box-shadow: var(--bsh);
     padding: var(--offset-xl) var(--offset-xxl) var(--offset-xxl);
 
     @media(min-width: 768px) {
         top: var(--offset-xxl);
         left: 50%;
         transform: translate(-50%, 0);
-        border-radius: $brs-card-xl;
+        border-radius: var(--brs-card-xl);
     }
 
     @media(min-width: 1025px) {
@@ -101,10 +101,10 @@
         &_auto,
         &_xl {
             padding: var(--offset-l);
-            border-radius: $brs;
+            border-radius: var(--brs);
 
             @media(min-width: 768px) {
-                border-radius: $brs;
+                border-radius: var(--brs);
             }
 
             #{$this} {
@@ -146,7 +146,7 @@
     width: 682px;
     height: 560px;
     padding: var(--offset-l);
-    border-radius: $brs;
+    border-radius: var(--brs);
     overflow-y: auto;
 
     @media(max-width: $md) {

@@ -1,7 +1,7 @@
 .order-card {
 	@include row-grid(var(--offset-m));
 	background-color: #fff;
-	box-shadow: $bsh;
+	box-shadow: var(--bsh);
 	padding: var(--offset-xl) var(--offset-l);
 
 	@media(max-width: $md) {
@@ -91,7 +91,7 @@
 		}
 
 		img {
-			border-radius: $brs;
+			border-radius: var(--brs);
 		}
 	}
 

@@ -121,7 +121,7 @@
     padding: var(--offset-xxxs) var(--offset-xxs) 1px var(--offset-xxs);
     background: var(--white-70);
     backdrop-filter: blur(2px);
-    border-radius: $brs-xxs;
+    border-radius: var(--brs-xxs);
 
     @media(max-width: $md) {
         display: inline-block;

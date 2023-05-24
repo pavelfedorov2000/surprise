@@ -35,7 +35,7 @@
 		@extend %museo-700;
 		margin-bottom: var(--offset-s);
 		font-size: 20px;
-		transition: $transition color;
+		transition: var(--transition) color;
 
 		@media(max-width: $sm) {
 			margin-bottom: var(--offset-xxs);

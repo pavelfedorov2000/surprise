@@ -15,7 +15,6 @@ $(function () {
 
         if ($searchFormInput.val() !== '') {
             $dropSearch.addClass('active');
-            //$searchFormBtn.attr('aria-label', 'Искать');
             setTimeout(() => {
                 $searchFormBtn.attr('type', 'submit');
             }, 300);

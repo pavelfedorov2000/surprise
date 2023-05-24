@@ -2,8 +2,8 @@
 	@include row-grid(var(--offset-l));
 	padding: var(--offset-xl);
 	background-color: #fff;
-	box-shadow: $bsh;
-	border-radius: $brs-card-xl;
+	box-shadow: var(--bsh);
+	border-radius: var(--brs-card-xl);
 
 	@media(min-width: 1201px) {
 		@include sticky(var(--offset-l));
@@ -31,8 +31,8 @@
 .agreement {
 	a {
 		border-bottom: 1px solid var(--text-color);
-		transition: $transition border-bottom-color,
-			$transition color;
+		transition: var(--transition) border-bottom-color,
+			var(--transition) color;
 
 		@media (any-hover: hover) {
 			&:hover {

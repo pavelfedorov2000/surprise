@@ -20,7 +20,7 @@
 				@@include('blocks/photogallery/photogallery.html')
 			</div>
 			<div class="tabs-block tabs-block--padding-bottom_xl">
-				<nav class="tabs tabs--style_line">
+				<div class="tabs tabs--style_line">
 					<ul class="tabs__list tabs__list--items_2">
 						<li>
 							<button id="certificate_tab_gift" class="tab active js-certificate-tab tab--style_radio"
@@ -37,7 +37,7 @@
 							</button>
 						</li>
 					</ul>
-				</nav>
+				</div>
 			</div>
 			@@include('blocks/unique-package/unique-package.html')
 			<div class="section grid-row">
@@ -69,7 +69,12 @@
 						</div>
 						<div class="card-block card-block--items_2">
 							<section class="card">
-								<img class="card__icon" src="assets/images/icons/attention.png" alt="" loading="lazy">
+                                @@include('blocks/img/img.html', {
+                                    "withoutPicture": true,
+                                    "class": "card__icon",
+                                    "src": "assets/images/icons/attention",
+                                    "format": "png"
+                                })
 								<h4 class="card__title">Важно знать</h4>
 								<ul class="check-list card__list">
 									<li>
@@ -86,10 +91,15 @@
 								})
 							</section>
 							<section class="card">
-								<img class="card__icon" src="assets/images/icons/lock.png" alt="" loading="lazy">
+								@@include('blocks/img/img.html', {
+                                    "withoutPicture": true,
+                                    "class": "card__icon",
+                                    "src": "assets/images/icons/lock",
+                                    "format": "png"
+                                })
 								<h4 class="card__title">О безопасности</h4>
 								<ul class="check-list">
-									<li>Спасательный жилет. Если не умеете плавать, жилет — это ваша безопасность. </li>
+									<li>Спасательный жилет. Если не умеете плавать, жилет — это ваша безопасность.</li>
 									<li>
 										Защита кожи. Длительное пребывание на солнце может быть опасно. Поэтому возьмите
 										с собой

@@ -35,7 +35,7 @@
             left: 68px;
             z-index: -1;
             background-color: rgba(#F6DFE3, .2);
-            border-radius: $brs-card-xl;
+            border-radius: var(--brs-card-xl);
 
             @media(max-width: $xl) {
                 left: 35px;

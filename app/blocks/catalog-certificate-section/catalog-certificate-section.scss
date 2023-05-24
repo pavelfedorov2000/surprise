@@ -45,7 +45,7 @@
         }
 
         img {
-            border-radius: $brs-card-xl;
+            border-radius: var(--brs-card-xl);
         }
     }
 }

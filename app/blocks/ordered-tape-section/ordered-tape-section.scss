@@ -13,7 +13,7 @@
 		@media(max-width: $lg) {
 			width: 312px;
 			opacity: 0.5;
-			transition: $transition opacity;
+			transition: var(--transition) opacity;
 		}
 
 		@media(max-width: $sm) {

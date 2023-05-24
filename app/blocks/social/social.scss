@@ -7,7 +7,7 @@
 	&__item {
 		margin: 0 14px;
 		border-radius: 50%;
-		transition: $transition background-color;
+		transition: var(--transition) background-color;
 
 		.icon {
 			fill: var(--text-color);
@@ -68,6 +68,6 @@
 		height: var(--offset-xxl);
 		border-radius: 50%;
 		border: 1px solid var(--text-color);
-		transition: $transition border-color;
+		transition: var(--transition) border-color;
 	}
 }

@@ -13,7 +13,7 @@
     @media(max-width: $lg) {
         padding-top: var(--section-padding-xs);
         padding-bottom: 106px;
-        border-radius: $brs-card;
+        border-radius: var(--brs-card);
     }
 
     @media(max-width: $sm) {

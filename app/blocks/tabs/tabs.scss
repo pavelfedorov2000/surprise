@@ -100,13 +100,13 @@
     align-items: center;
     justify-content: center;
     background-color: #F5F8F8;
-    color: $color-default;
-    border-radius: $brs;
+    color: var(--color-default);
+    border-radius: var(--brs);
     font-size: 16px;
     line-height: 1.5;
     white-space: nowrap;
     margin-right: var(--offset-s);
-    transition: $transition all;
+    transition: var(--transition) all;
 
     &__circle {
         position: relative;
@@ -114,7 +114,7 @@
         width: var(--icon-size);
         height: var(--icon-size);
         margin-right: var(--offset-m);
-        transition: $transition box-shadow;
+        transition: var(--transition) box-shadow;
 
         @media(max-width: $sm) {
             margin-right: var(--offset-xs);
@@ -134,7 +134,7 @@
             height: 20px;
             border-radius: 50%;
             border: 2px solid var(--text-color);
-            transition: $transition border-color;
+            transition: var(--transition) border-color;
         }
 
         &:after {
@@ -143,7 +143,7 @@
             border-radius: 50%;
             background-color: #fff;
             opacity: 0;
-            transition: $transition opacity;
+            transition: var(--transition) opacity;
         }
     }
 
@@ -202,10 +202,10 @@
         &_3 {
             font-size: 16px;
             padding: var(--offset-xs) var(--offset-m);
-            border-radius: $brs;
+            border-radius: var(--brs);
             border-left: 3px solid #fff;
             background-color: transparent;
-            transition: $transition all;
+            transition: var(--transition) all;
 
             @media (any-hover: hover) {
                 &:hover {
@@ -225,7 +225,7 @@
 
         &_radio {
             margin-right: 0;
-            border-radius: $brs-card-xl $brs-card-xl 0 0;
+            border-radius: var(--brs-card-xl) var(--brs-card-xl) 0 0;
             background-color: transparent;
             //box-shadow: 0 -15px 30px rgba(0, 0, 0, 0.08);
             padding: 25px;

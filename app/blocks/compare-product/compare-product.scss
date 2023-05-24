@@ -5,7 +5,7 @@
 	@media(max-width: $sm) {
 		min-width: 150px;
 		opacity: 0.5;
-		transition: $transition opacity;
+		transition: var(--transition) opacity;
 	}
 
 	&.in-view {
@@ -33,7 +33,7 @@
 			right: 0;
 			bottom: 0;
 			left: 0;
-			border-radius: $brs;
+			border-radius: var(--brs);
 		}
 	}
 
