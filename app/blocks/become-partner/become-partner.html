@@ -10,9 +10,12 @@
 					или свяжитесь с Натальей, специалистом по работе с партнерами,<br>
 					по номеру <a href="tel:+375296670062" class="menu-link">+375 29 667 00 62</a>
 				</p>
-				<a href="#" class="btn become-partner__btn btn--style_bg-pink">
-					<span class="btn__text">Стать нашим партнером</span>
-				</a>
+				@@include('blocks/button/button.html', {
+				"href": "#",
+				"style": "bg-pink",
+				"class": "become-partner__btn",
+				"text": "Стать нашим партнером"
+				})
 				@@include('blocks/admin/admin.html', {
 				"name": "Наталья"
 				})

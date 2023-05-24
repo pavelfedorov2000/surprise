@@ -3,9 +3,12 @@
 	"class": "menu",
 	"ariaLabel": "Закрыть меню"
 	})
-	<a href="#" class="btn menu__btn">
-		<span class="btn__text">Активировать сертификат</span>
-	</a>
+	@@include('blocks/button/button.html', {
+	"href": "#",
+	"style": "bg-pink",
+	"class": "menu__btn",
+	"text": "Активировать сертификат"
+	})
 	<ul class="menu__list">
 		<li>
 			<a href="#" class="menu__link">Спа, красота, здоровье</a>
@@ -76,21 +79,32 @@
 
 	<nav class="menu__nav">
 		<ul class="menu__nav-list">
-			<li class="menu__nav-item">
-				<a href="#" class="menu__nav-link menu-link">Новинки</a>
-			</li>
-			<li class="menu__nav-item">
-				<a href="#" class="menu__nav-link menu-link">Где купить</a>
-			</li>
-			<li class="menu__nav-item">
-				<a href="#" class="menu__nav-link menu-link">Доставка и оплата</a>
-			</li>
-			<li class="menu__nav-item">
-				<a href="#" class="menu__nav-link menu-link">Корпоративные подарки</a>
-			</li>
-			<li class="menu__nav-item">
-				<a href="#" class="menu__nav-link menu-link">Стать нашим партнером</a>
-			</li>
+			@@loop('blocks/button/button.html', [{
+			"listItem": true,
+			"href": "#",
+			"class": "menu__nav-link menu-link",
+			"text": "Новинки"
+			}, {
+			"listItem": true,
+			"href": "#",
+			"class": "menu__nav-link menu-link",
+			"text": "Где купить"
+			}, {
+			"listItem": true,
+			"href": "#",
+			"class": "menu__nav-link menu-link",
+			"text": "Доставка и оплата"
+			}, {
+			"listItem": true,
+			"href": "#",
+			"class": "menu__nav-link menu-link",
+			"text": "Корпоративные подарки"
+			}, {
+			"listItem": true,
+			"href": "#",
+			"class": "menu__nav-link menu-link",
+			"text": "Стать нашим партнером"
+			}])
 		</ul>
 	</nav>
 

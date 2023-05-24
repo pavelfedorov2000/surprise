@@ -1,157 +1,130 @@
 <section class="establishment-about section">
-    <div class="container">
-        <div class="grid-row establishment-about__row">
-            <div class="establishment-about__gallery grid-col-6">
-                <div class="slider-wrap">
-                    @@include('blocks/swiper-btns/swiper-btns.html')
-                    <div class="swiper establishment-gallery">
-                        <div class="swiper-pagination"></div>
-                        <div class="swiper-wrapper">
-                            <div class="swiper-slide">
-                                <picture>
-                                    <source type="image/webp"
-                                            srcset="assets/images/content/gastrobar.webp">
-                                    <img class="img-cover"
-                                         src="assets/images/content/gastrobar.jpg"
-                                         alt="фото"
-                                         width="687"
-                                         height="470"
-                                         loading="lazy">
-                                </picture>
-                            </div>
-                            <div class="swiper-slide">
-                                <picture>
-                                    <source type="image/webp"
-                                            srcset="assets/images/content/kvadro.webp">
-                                    <img class="img-cover"
-                                         src="assets/images/content/kvadro.jpg"
-                                         alt="фото"
-                                         width="687"
-                                         height="470"
-                                         loading="lazy">
-                                </picture>
-                            </div>
-                            <div class="swiper-slide">
-                                <picture>
-                                    <source type="image/webp"
-                                            srcset="assets/images/content/gastrobar.webp">
-                                    <img class="img-cover"
-                                         src="assets/images/content/gastrobar.jpg"
-                                         alt="фото"
-                                         width="687"
-                                         height="470"
-                                         loading="lazy">
-                                </picture>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="swiper establishment-gallery-thumbs">
-                    <div class="swiper-wrapper">
-                        <div class="swiper-slide">
-                            <picture>
-                                <source type="image/webp"
-                                        srcset="assets/images/content/gastrobar.webp">
-                                <img class="img-cover"
-                                     src="assets/images/content/gastrobar.jpg"
-                                     alt="фото"
-                                     width="220"
-                                     height="180"
-                                     loading="lazy">
-                            </picture>
-                        </div>
-                        <div class="swiper-slide">
-                            <picture>
-                                <source type="image/webp"
-                                        srcset="assets/images/content/kvadro.webp">
-                                <img class="img-cover"
-                                     src="assets/images/content/kvadro.jpg"
-                                     alt="фото"
-                                     width="220"
-                                     height="180"
-                                     loading="lazy">
-                            </picture>
-                        </div>
-                        <div class="swiper-slide">
-                            <picture>
-                                <source type="image/webp"
-                                        srcset="assets/images/content/gastrobar.webp">
-                                <img class="img-cover"
-                                     src="assets/images/content/gastrobar.jpg"
-                                     alt="фото"
-                                     width="220"
-                                     height="180"
-                                     loading="lazy">
-                            </picture>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="establishment-about__content grid-col-6">
-                <h2 class="establishment-about__title section-title">
-                    Гастробар “Правда” –
-                    стильно и атмосферно
-                </h2>
-                <p>
-                    Куда сходить с подругами вечером? Где сделать красивые фото в INstagram? Где попробовать изысканные
-                    авторские блюда? В гастробаре “Правда” на Зыбицкой – это одно из самых известных заведений в Минске.
-                    Здесь гостей ожидает:
-                </p>
-                <ul class="establishment-about__list">
-                    <li class="icons-item">
-                        <span class="icon-circle icons-item__icon icons-item__icon--mr_xl icon-circle--style_bg-pink
+	<div class="container">
+		<div class="grid-row establishment-about__row">
+			<div class="establishment-about__gallery grid-col-6">
+				<div class="slider-wrap">
+					@@include('blocks/swiper-btns/swiper-btns.html')
+					<div class="swiper establishment-gallery">
+						<div class="swiper-pagination"></div>
+						<div class="swiper-wrapper">
+							<div class="swiper-slide">
+								@@include('blocks/img/img.html', {
+								"class": "img-cover",
+								"src": "assets/images/content/gastrobar",
+								"width": "687",
+								"height": "470",
+								})
+							</div>
+							<div class="swiper-slide">
+								@@include('blocks/img/img.html', {
+								"class": "img-cover",
+								"src": "assets/images/content/kvadro",
+								"width": "687",
+								"height": "470",
+								})
+							</div>
+							<div class="swiper-slide">
+								@@include('blocks/img/img.html', {
+								"class": "img-cover",
+								"src": "assets/images/content/gastrobar",
+								"width": "687",
+								"height": "470",
+								})
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="swiper establishment-gallery-thumbs">
+					<div class="swiper-wrapper">
+						<div class="swiper-slide">
+							@@include('blocks/img/img.html', {
+							"class": "img-cover",
+							"src": "assets/images/content/gastrobar",
+							"width": "220",
+							"height": "180",
+							})
+						</div>
+						<div class="swiper-slide">
+							@@include('blocks/img/img.html', {
+							"class": "img-cover",
+							"src": "assets/images/content/kvadro",
+							"width": "220",
+							"height": "180",
+							})
+						</div>
+						<div class="swiper-slide">
+							@@include('blocks/img/img.html', {
+							"class": "img-cover",
+							"src": "assets/images/content/gastrobar",
+							"width": "220",
+							"height": "180",
+							})
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="establishment-about__content grid-col-6">
+				<h2 class="establishment-about__title section-title">
+					Гастробар “Правда” –
+					стильно и атмосферно
+				</h2>
+				<p>
+					Куда сходить с подругами вечером? Где сделать красивые фото в INstagram? Где попробовать изысканные
+					авторские блюда? В гастробаре “Правда” на Зыбицкой – это одно из самых известных заведений в Минске.
+					Здесь гостей ожидает:
+				</p>
+				<ul class="establishment-about__list">
+					<li class="icons-item">
+						<span class="icon-circle icons-item__icon icons-item__icon--mr_xl icon-circle--style_bg-pink
 							icon-circle--position_bottom-right">
-                            <svg class="icon"
-                                 aria-hidden="true">
-                                <use xlink:href="assets/images/sprite.svg#truck"></use>
-                            </svg>
-                        </span>
-                        <div class="icons-item__content">
-                            <div class="icons-item__title">Особый эстетичный интерьер</div>
-                            <p class="icons-item__text">
-                                Здесь в тандеме классика и лофт: массив дерева, кирпичные кладки, мраморные текстуры,
-                                уютные
-                                кресла и баланс насыщенных темных и нежных бирюзовых оттенков впечатляют. Из огромных
-                                окон
-                                открывается вид на Свислочь;
-                            </p>
-                        </div>
-                    </li>
-                    <li class="icons-item">
-                        <span class="icon-circle icons-item__icon icons-item__icon--mr_xl icon-circle--style_bg-pink
+							<svg class="icon" aria-hidden="true">
+								<use xlink:href="assets/images/sprite.svg#truck"></use>
+							</svg>
+						</span>
+						<div class="icons-item__content">
+							<div class="icons-item__title">Особый эстетичный интерьер</div>
+							<p class="icons-item__text">
+								Здесь в тандеме классика и лофт: массив дерева, кирпичные кладки, мраморные текстуры,
+								уютные
+								кресла и баланс насыщенных темных и нежных бирюзовых оттенков впечатляют. Из огромных
+								окон
+								открывается вид на Свислочь;
+							</p>
+						</div>
+					</li>
+					<li class="icons-item">
+						<span class="icon-circle icons-item__icon icons-item__icon--mr_xl icon-circle--style_bg-pink
 							icon-circle--position_bottom-right">
-                            <svg class="icon"
-                                 aria-hidden="true">
-                                <use xlink:href="assets/images/sprite.svg#truck"></use>
-                            </svg>
-                        </span>
-                        <div class="icons-item__content">
-                            <div class="icons-item__title">Авторская кухня</div>
-                            <p class="icons-item__text">
-                                Шеф-повар трудится над подачей каждого блюда, делает её ориганальной. Здесь сочетается
-                                европейская классика и авторский штрих профессионала. Не стоит забывать и об уникальных
-                                лимонадах;
-                            </p>
-                        </div>
-                    </li>
-                    <li class="icons-item">
-                        <span class="icon-circle icons-item__icon icons-item__icon--mr_xl icon-circle--style_bg-pink
+							<svg class="icon" aria-hidden="true">
+								<use xlink:href="assets/images/sprite.svg#truck"></use>
+							</svg>
+						</span>
+						<div class="icons-item__content">
+							<div class="icons-item__title">Авторская кухня</div>
+							<p class="icons-item__text">
+								Шеф-повар трудится над подачей каждого блюда, делает её ориганальной. Здесь сочетается
+								европейская классика и авторский штрих профессионала. Не стоит забывать и об уникальных
+								лимонадах;
+							</p>
+						</div>
+					</li>
+					<li class="icons-item">
+						<span class="icon-circle icons-item__icon icons-item__icon--mr_xl icon-circle--style_bg-pink
 							icon-circle--position_bottom-right">
-                            <svg class="icon"
-                                 aria-hidden="true">
-                                <use xlink:href="assets/images/sprite.svg#truck"></use>
-                            </svg>
-                        </span>
-                        <div class="icons-item__content">
-                            <div class="icons-item__title">Веселье</div>
-                            <p class="icons-item__text">
-                                В гастробаре “Правда” часто выступают приглашенные исполнители. Это танцующий ресторан!
-                            </p>
-                        </div>
-                    </li>
-                </ul>
-                <p>Заходите, приводите подругу и устройте себе особый вечер!</p>
-            </div>
-        </div>
-    </div>
+							<svg class="icon" aria-hidden="true">
+								<use xlink:href="assets/images/sprite.svg#truck"></use>
+							</svg>
+						</span>
+						<div class="icons-item__content">
+							<div class="icons-item__title">Веселье</div>
+							<p class="icons-item__text">
+								В гастробаре “Правда” часто выступают приглашенные исполнители. Это танцующий ресторан!
+							</p>
+						</div>
+					</li>
+				</ul>
+				<p>Заходите, приводите подругу и устройте себе особый вечер!</p>
+			</div>
+		</div>
+	</div>
 </section>

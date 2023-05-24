@@ -1,22 +1,20 @@
 <article class="post-aside-article">
-    <div class="post-aside-article__img">
-        <picture>
-            <source type="image/webp"
-                    srcset="assets/images/content/catalog/05.webp">
-            <img src="assets/images/content/catalog/05.jpg"
-                 alt="фото"
-                 width="125"
-                 height="86"
-                 loading="lazy">
-        </picture>
-    </div>
-    <div class="post-aside-article__content">
-        <div class="post-aside-article__title">
-            Шеф-ужин в шикарном гастробаре
-        </div>
-        <a href="#"
-           class="btn btn--style_link-4">
-            <span class="btn__text">Читать далее</span>
-        </a>
-    </div>
+	<div class="post-aside-article__img">
+		@@include('blocks/img/img.html', {
+		"src": "assets/images/content/catalog/05",
+		"format": "png",
+		"width": "125",
+		"height": "86"
+		})
+	</div>
+	<div class="post-aside-article__content">
+		<div class="post-aside-article__title">
+			Шеф-ужин в шикарном гастробаре
+		</div>
+		@@include('blocks/button/button.html', {
+		"href": "#",
+		"style": "link-4",
+		"text": "Читать далее"
+		})
+	</div>
 </article>

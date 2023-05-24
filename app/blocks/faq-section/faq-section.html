@@ -12,10 +12,12 @@
 				</div>
 			</div>
 			<div class="faq-section__img">
-				<picture>
-					<source type="image/webp" srcset="@@src.webp">
-					<img class="img-cover" src="@@src.jpg" alt="фото" width="627" height="470" loading="lazy">
-				</picture>
+				@@include('blocks/img/img.html', {
+				"class": "img-cover",
+				"src": "@@src",
+				"width": "627",
+				"height": "470",
+				})
 			</div>
 		</div>
 	</div>

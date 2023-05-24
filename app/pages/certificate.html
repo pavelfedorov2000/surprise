@@ -79,9 +79,11 @@
 									<li>Обязательно запишитесь заранее.</li>
 									<li>Кататься можно каждый день при благоприятных погодных условиях.</li>
 								</ul>
-								<a href="#" class="btn btn--style_link-2">
-									<span class="btn__text">Подробнее</span>
-								</a>
+								@@include('blocks/button/button.html', {
+								"href": "#",
+								"style": "link-2",
+								"text": "Подробнее"
+								})
 							</section>
 							<section class="card">
 								<img class="card__icon" src="assets/images/icons/lock.png" alt="" loading="lazy">
@@ -94,9 +96,11 @@
 										солнцезащитный крем и очки.
 									</li>
 								</ul>
-								<a href="#" class="btn btn--style_link-2">
-									<span class="btn__text">Подробнее</span>
-								</a>
+								@@include('blocks/button/button.html', {
+								"href": "#",
+								"style": "link-2",
+								"text": "Подробнее"
+								})
 							</section>
 						</div>
 						<section class="certificate-content__subsection">

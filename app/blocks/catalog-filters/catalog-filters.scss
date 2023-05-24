@@ -311,6 +311,7 @@
 	// .catalog-filters__btn
 
 	&__btn {
+		justify-content: center;
 		border-top-left-radius: 0;
 
 		@media(min-width: 1201px) {
@@ -318,7 +319,7 @@
 		}
 
 		@media(max-width: $xl) {
-			border-top-left-radius: $brs;
+			border-top-right-radius: 0;
 		}
 	}
 }
@@ -466,46 +467,6 @@
 			margin-top: 22px;
 			padding-top: 22px;
 			border-top: 1px solid #D5D5D5;
-		}
-	}
-}
-
-.reset-btn {
-	$this: &;
-
-	display: inline-flex;
-	align-items: center;
-	// .reset-btn__icon
-
-	&__icon {
-		flex-shrink: 0;
-		margin-right: 14px;
-		width: var(--icon-size);
-		height: var(--icon-size);
-		stroke: var(--green);
-		transition: $transition stroke;
-	}
-
-	// .reset-btn__text
-
-	&__text {
-		font-family: $ff;
-		font-size: 16px;
-		color: var(--green);
-		transition: $transition color;
-	}
-
-	@media (any-hover: hover) {
-		&:hover {
-			#{$this} {
-				&__icon {
-					stroke: var(--pink);
-				}
-
-				&__text {
-					color: var(--pink);
-				}
-			}
 		}
 	}
 }

@@ -53,16 +53,12 @@
                 </p>
             </div>
             <div class="catalog-certificate-section__col">
-                <picture>
-                    <source type="image/webp"
-                            srcset="assets/images/content/plane.webp">
-                    <img class="img-cover"
-                         src="assets/images/content/plane.jpg"
-                         alt="фото"
-                         width="453"
-                         height="504"
-                         loading="lazy">
-                </picture>
+                @@include('blocks/img/img.html', {
+                "class": "cover",
+                "src": "assets/images/content/catalog/plane",
+                "width": "453",
+                "height": "504",
+                })
             </div>
         </div>
     </div>

@@ -1,27 +1,35 @@
 <@@if(context.form){form}@@if(!context.form){div} @@if(context.form){action="#" }
-	class="form form--style_flex-element@@if(context.form){js-form}">
-	<label class="form-item">
-		<span class="form-label">Код активации *</span>
-		<input class="input" placeholder="123****12" required
-			data-pristine-required-message="Поле не может быть пустым">
-	</label>
-	<label class="form-item">
-		<span class="form-label">Ваше имя *</span>
-		<input class="input" placeholder="Ваше имя" required data-pristine-required-message="Поле не может быть пустым">
-	</label>
-	<label class="form-item">
-		<span class="form-label">Ваш номер телефона *</span>
-		<input class="input" type="tel" placeholder="+ 375 ()" required
-			data-pristine-required-message="Поле не может быть пустым">
-	</label>
-	<label class="form-item">
-		<span class="form-label">Ваш email *</span>
-		<input class="input" type="email" placeholder="example@mail.com" required
-			data-pristine-required-message="Поле не может быть пустым" data-pristine-email-message="Некорректный email">
-	</label>
-	<button class="btn" type="submit">
-		<span class="btn__text">@@submit</span>
-	</button>
+	class="form form--style_flex-element@@if(context.form){ js-form}">
+	@@loop('blocks/form-item/form-item.html', [{
+	"label": "Код активации",
+	"placeholder": "123****12",
+	"required": true,
+	"requiredMessage": "Поле не может быть пустым"
+	}, {
+	"label": "Ваше имя",
+	"placeholder": "Ваше имя",
+	"required": true,
+	"requiredMessage": "Поле не может быть пустым"
+	}, {
+	"label": "Ваш номер телефона",
+	"inputType": "tel",
+	"placeholder": "+ 375 ()",
+	"required": true,
+	"requiredMessage": "Поле не может быть пустым"
+	}, {
+	"label": "Ваш email",
+	"inputType": "email",
+	"placeholder": "example@mail.com",
+	"required": true,
+	"requiredMessage": "Поле не может быть пустым",
+	"emailMessage": "Некорректный email"
+	}])
+	@@include('blocks/button/button.html', {
+	"style": "bg-pink",
+	"class": "form__btn",
+	"type": "submit",
+	"text": "@@submit"
+	})
 	@@if(context.small){
 	<small class="form-small">@@small</small>
 	}

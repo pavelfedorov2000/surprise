@@ -1,10 +1,11 @@
 <article class="cart-item">
 	<a href="#" class="cart-item__img">
-		<picture>
-			<source type="image/webp" srcset="assets/images/content/catalog/01.webp">
-			<img class="img-cover" src="assets/images/content/catalog/01.jpg" alt="фото" width="212" height="164"
-				loading="lazy">
-		</picture>
+		@@include('blocks/img/img.html', {
+		"class": "img-cover",
+		"src": "assets/images/content/catalog/01",
+		"width": "212",
+		"height": "164"
+		})
 	</a>
 	<div class="cart-item__info">
 		<a href="#" class="cart-item__title">
@@ -60,10 +61,12 @@
 			<b class="price">118</b>
 			<span>руб.</span>
 		</div>
-		<button class="btn cart-item__toggle js-toggle-certificate btn--style_link-toggle" type="button"
-			aria-expanded="false">
-			<span class="btn__text">Подписать сертификат</span>
-		</button>
+		@@include('blocks/button/button.html', {
+		"style": "link-toggle",
+		"class": "cart-item__toggle js-toggle-certificate",
+		"text": "Подписать сертификат",
+		"ariaExpanded": true
+		})
 	</div>
 	<div class="cart-item__dropdown">
 		<div class="dropdown-certificate-fields">

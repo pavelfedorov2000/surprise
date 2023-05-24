@@ -13,16 +13,12 @@
                 </p>
             </div>
             <div class="corporate-certificates__img">
-                <picture>
-                    <source type="image/webp"
-                            srcset="assets/images/content/double-phones.webp">
-                    <img class="img-contain"
-                         src="assets/images/content/double-phones.jpg"
-                         alt="фото"
-                         width="609"
-                         height="287"
-                         loading="lazy">
-                </picture>
+                @@include('blocks/img/img.html', {
+                "class": "img-contain",
+                "src": "assets/images/content/double-phones",
+                "width": "609",
+                "height": "287",
+                })
             </div>
         </div>
         <div class="corporate-certificates__row">

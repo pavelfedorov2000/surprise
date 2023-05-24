@@ -74,10 +74,11 @@
 				другу, коллеге. Тому, кого хотели бы сделать счастливым. Мы лишь помогаем вам.)
 			</p>
 		</div>
-		<picture>
-			<source type="image/webp" srcset="assets/images/content/post-1.webp">
-			<img src="assets/images/content/post-1.jpg" alt="фото" width="940" height="450" loading="lazy">
-		</picture>
+		@@include('blocks/img/img.html', {
+		"src": "assets/images/content/post-1",
+		"width": "940",
+		"height": "450",
+		})
 	</section>
 	<section>
 		<h2 class="section-title">Почему стоит выбрать Surprise.by?</h2>
@@ -101,32 +102,36 @@
 				<div class="swiper-pagination"></div>
 				<div class="swiper-wrapper">
 					<div class="swiper-slide">
-						<picture>
-							<source type="image/webp" srcset="assets/images/content/post-2.webp">
-							<img class="img-cover" src="assets/images/content/post-2.jpg" alt="фото" width="940"
-								height="450" loading="lazy">
-						</picture>
+						@@include('blocks/img/img.html', {
+						"class": "img-cover",
+						"src": "assets/images/content/post-2",
+						"width": "940",
+						"height": "450",
+						})
 					</div>
 					<div class="swiper-slide">
-						<picture>
-							<source type="image/webp" srcset="assets/images/content/post-1.webp">
-							<img class="img-cover" src="assets/images/content/post-1.jpg" alt="фото" width="940"
-								height="450" loading="lazy">
-						</picture>
+						@@include('blocks/img/img.html', {
+						"class": "img-cover",
+						"src": "assets/images/content/post-1",
+						"width": "940",
+						"height": "450",
+						})
 					</div>
 					<div class="swiper-slide">
-						<picture>
-							<source type="image/webp" srcset="assets/images/content/post-2.webp">
-							<img class="img-cover" src="assets/images/content/post-2.jpg" alt="фото" width="940"
-								height="450" loading="lazy">
-						</picture>
+						@@include('blocks/img/img.html', {
+						"class": "img-cover",
+						"src": "assets/images/content/post-2",
+						"width": "940",
+						"height": "450",
+						})
 					</div>
 					<div class="swiper-slide">
-						<picture>
-							<source type="image/webp" srcset="assets/images/content/post-1.webp">
-							<img class="img-cover" src="assets/images/content/post-1.jpg" alt="фото" width="940"
-								height="450" loading="lazy">
-						</picture>
+						@@include('blocks/img/img.html', {
+						"class": "img-cover",
+						"src": "assets/images/content/post-1",
+						"width": "940",
+						"height": "450",
+						})
 					</div>
 				</div>
 			</div>
@@ -134,32 +139,36 @@
 		<div class="swiper post-gallery-thumbs">
 			<div class="swiper-wrapper">
 				<div class="swiper-slide">
-					<picture>
-						<source type="image/webp" srcset="assets/images/content/post-2.webp">
-						<img class="img-cover" src="assets/images/content/post-2.jpg" alt="фото" width="220"
-							height="180" loading="lazy">
-					</picture>
+					@@include('blocks/img/img.html', {
+					"class": "img-cover",
+					"src": "assets/images/content/post-2",
+					"width": "220",
+					"height": "180",
+					})
 				</div>
 				<div class="swiper-slide">
-					<picture>
-						<source type="image/webp" srcset="assets/images/content/post-1.webp">
-						<img class="img-cover" src="assets/images/content/post-1.jpg" alt="фото" width="220"
-							height="180" loading="lazy">
-					</picture>
+					@@include('blocks/img/img.html', {
+					"class": "img-cover",
+					"src": "assets/images/content/post-1",
+					"width": "220",
+					"height": "180",
+					})
 				</div>
 				<div class="swiper-slide">
-					<picture>
-						<source type="image/webp" srcset="assets/images/content/post-2.webp">
-						<img class="img-cover" src="assets/images/content/post-2.jpg" alt="фото" width="220"
-							height="180" loading="lazy">
-					</picture>
+					@@include('blocks/img/img.html', {
+					"class": "img-cover",
+					"src": "assets/images/content/post-2",
+					"width": "220",
+					"height": "180",
+					})
 				</div>
 				<div class="swiper-slide">
-					<picture>
-						<source type="image/webp" srcset="assets/images/content/post-1.webp">
-						<img class="img-cover" src="assets/images/content/post-1.jpg" alt="фото" width="220"
-							height="180" loading="lazy">
-					</picture>
+					@@include('blocks/img/img.html', {
+					"class": "img-cover",
+					"src": "assets/images/content/post-1",
+					"width": "220",
+					"height": "180",
+					})
 				</div>
 			</div>
 		</div>

@@ -1,0 +1,82 @@
+@@if(context.listItem){
+<li>
+	<@@if(!context.href){button}@@if(context.href){a href="@@href" } class="btn@@if(context.class){ @@class}@@if(context.style){ btn--style_@@style}@@if(context.transparent){
+	btn--transparent}@@if(context.disabled){ btn--disabled}@@if(context.reversed){ btn--reversed}"
+		@@if(!context.href){type="@@if(context.type ==
+	'submit'){submit}@@if(context.type ==
+	'reset'){reset}@@if(!context.type){button}" }
+		@@if(context.isDisabled){disabled}@@if(context.ariaExpanded){aria-expanded="false"
+		}@@if(context.ariaLabel){aria-label="@@ariaLabel" }@@if(context.ariaControls){aria-controls="@@ariaControls" }
+		@@if(context.data){ data-@@data.attr="@@data.value" }>
+		@@if(!context.icon_position_right){
+		@@if(context.sprite){
+		<svg class="icon">
+			<use xlink:href="assets/images/sprite.svg#@@sprite"></use>
+		</svg>
+		}
+		@@if(context.icon){
+		@@include('blocks/icons/@@icon.html')
+		}
+		}
+		@@if(context.text){
+		<span class="btn__text">@@text</span>
+		}
+		@@if(context.icon_position_right){
+		@@if(context.sprite){
+		<svg class="icon">
+			<use xlink:href="assets/images/sprite.svg#@@sprite"></use>
+		</svg>
+		}
+		@@if(context.icon){
+		@@include('blocks/icons/@@icon.html')
+		}
+		}
+		@@if(context.dot){
+		<span class="btn__dot"></span>
+		}
+		@@if(context.count){
+		@@include('blocks/count/count.html', {
+		"class": "btn__count",
+		"valueFirst": "@@count.first",
+		@@if(context.count.second){
+		"valueSecond": "@@count.second"
+		}
+		})
+		}
+		</@@if(!context.href){button}@@if(context.href){a}>
+</li>
+}
+
+@@if(!context.listItem) {
+<@@if(!context.href){button}@@if(context.href){a href="@@href" } class="btn@@if(context.class){ @@class}@@if(context.style){ btn--style_@@style}@@if(context.transparent){
+	btn--transparent}@@if(context.disabled){ btn--disabled}@@if(context.reversed){ btn--reversed}"
+	@@if(!context.href){type="@@if(context.type ==
+	'submit'){submit}@@if(context.type ==
+	'reset'){reset}@@if(!context.type){button}" }
+	@@if(context.isDisabled){disabled}@@if(context.ariaExpanded){aria-expanded="false"
+	}@@if(context.ariaLabel){aria-label="@@ariaLabel" } @@if(context.data){ data-@@data.attr="@@data.value" }>
+	@@if(!context.icon_position_right){
+	@@if(context.sprite){
+	<svg class="icon">
+		<use xlink:href="assets/images/sprite.svg#@@sprite"></use>
+	</svg>
+	}
+	@@if(context.icon){
+	@@include('blocks/icons/@@icon.html')
+	}
+	}
+	@@if(context.text){
+	<span class="btn__text">@@text</span>
+	}
+	@@if(context.icon_position_right){
+	@@if(context.sprite){
+	<svg class="icon">
+		<use xlink:href="assets/images/sprite.svg#@@sprite"></use>
+	</svg>
+	}
+	@@if(context.icon){
+	@@include('blocks/icons/@@icon.html')
+	}
+	}
+	</@@if(!context.href){button}@@if(context.href){a}>
+	}

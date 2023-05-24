@@ -171,8 +171,12 @@
 	}
 
 	&__menu-link {
-		display: block;
-		@include padding-y(var(--offset-xxs));
+		display: flex;
+		padding: var(--offset-xxs) 0;
+
+		@media(max-width: $md) {
+			justify-content: center;
+		}
 	}
 
 	// .footer__address-items
@@ -202,6 +206,7 @@
 
 		@media(min-width: 768px) {
 			display: flex;
+			justify-content: center;
 			width: 100%;
 			margin-top: auto;
 		}

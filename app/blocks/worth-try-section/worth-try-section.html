@@ -5,11 +5,13 @@
 		</div>
 		<div class="worth-try-section__row">
 			<div class="worth-try-section__img">
-				<picture>
-					<source type="image/webp" srcset="assets/images/content/dish.webp">
-					<img class="img-contain" src="assets/images/content/dish.png" alt="фото" width="357" height="305"
-						loading="lazy">
-				</picture>
+				@@include('blocks/img/img.html', {
+				"class": "img-contain",
+				"src": "assets/images/content/dish",
+				"format": "png",
+				"width": "357",
+				"height": "305",
+				})
 			</div>
 			<div class="worth-try-section__content worth-try-section__content--left">
 				<ul class="check-list check-list--offset_m">

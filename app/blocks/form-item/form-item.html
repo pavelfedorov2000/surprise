@@ -1,0 +1,12 @@
+<label class="form-item@@if(context.class){ @@class}">
+	<span class="form-label">@@label@@if(context.required){*}</span>
+	@@if(context.textarea){
+	<textarea class="input" @@if(context.placeholder){placeholder="@@placeholder" }></textarea>
+	}
+	@@if(!context.textarea){
+	<input class="input" @@if(context.inputType){type="@@inputType" }
+		@@if(context.placeholder){placeholder="@@placeholder" } @@if(context.required){required
+		data-pristine-required-message="@@requiredMessage" }
+		@@if(context.emailMessage){data-pristine-email-message="@@emailMessage" }>
+	}
+</label>

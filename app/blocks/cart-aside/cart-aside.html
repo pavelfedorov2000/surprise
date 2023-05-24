@@ -28,9 +28,11 @@
 	@@include('blocks/overall-sum/overall-sum.html', {
 	"text": "К оплате"
 	})
-	<button class="btn btn--style_bg-pink" type="submit">
-		<span class="btn__text">Оформить заказ</span>
-	</button>
+	@@include('blocks/button/button.html', {
+	"style": "bg-pink",
+	"type": "submit",
+	"text": "Оформить заказ"
+	})
 	<p class="agreement">
 		Нажимая эту кнопку вы соглашаетесь
 		<a href="#">

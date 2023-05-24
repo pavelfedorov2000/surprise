@@ -1,20 +1,21 @@
 <aside class="aside-section section">
-    <div class="aside-section__body">
-        <div class="container">
-            <div class="aside-section__inner">
-                <div class="aside-section__content">
-                    <h2 class="section-title aside-section__title">
-                        @@title
-                    </h2>
-                    @@if(context.text){
-                    <p class="color-default">@@text</p>
-                    }
-                </div>
-                <button class="btn aside-section__btn btn--style-bg-pink"
-                        type="button">
-                    <span class="btn__text">@@btn</span>
-                </button>
-            </div>
-        </div>
-    </div>
+	<div class="aside-section__body">
+		<div class="container">
+			<div class="aside-section__inner">
+				<div class="aside-section__content">
+					<h2 class="section-title aside-section__title">
+						@@title
+					</h2>
+					@@if(context.text){
+					<p class="color-default">@@text</p>
+					}
+				</div>
+				@@include('blocks/button/button.html', {
+				"style": "bg-pink",
+				"class": "aside-section__btn",
+				"text": "@@btn"
+				})
+			</div>
+		</div>
+	</div>
 </aside>

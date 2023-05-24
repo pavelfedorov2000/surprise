@@ -47,53 +47,69 @@
 				<section class="footer__col footer__col--menu">
 					<div class="footer__title">Меню</div>
 					<ul class="footer__menu">
-						<li>
-							<a href="#" class="menu-link footer__menu-link">О нас</a>
-						</li>
-						<li>
-							<a href="#" class="menu-link footer__menu-link">Отзывы</a>
-						</li>
-						<li>
-							<a href="#" class="menu-link footer__menu-link">Блог</a>
-						</li>
-						<li>
-							<a href="#" class="menu-link footer__menu-link">Вакансии</a>
-						</li>
-						<li>
-							<a href="#" class="menu-link footer__menu-link">Наши партнеры</a>
-						</li>
-						<li>
-							<a href="#" class="menu-link footer__menu-link">Доставка и оплата</a>
-						</li>
-						<li>
-							<a href="#" class="menu-link footer__menu-link">Корпоративным клиентам</a>
-						</li>
-						<li>
-							<a href="#" class="menu-link footer__menu-link">Публичный договор</a>
-						</li>
+						@@loop('blocks/button/button.html', [{
+						"href": "#",
+						"class": "menu-link footer__menu-link",
+						"text": "О нас"
+						}, {
+						"href": "#",
+						"class": "menu-link footer__menu-link",
+						"text": "Отзывы"
+						}, {
+						"href": "#",
+						"class": "menu-link footer__menu-link",
+						"text": "Блог"
+						}, {
+						"href": "#",
+						"class": "menu-link footer__menu-link",
+						"text": "Вакансии"
+						}, {
+						"href": "#",
+						"class": "menu-link footer__menu-link",
+						"text": "Наши партнеры"
+						}, {
+						"href": "#",
+						"class": "menu-link footer__menu-link",
+						"text": "Доставка и оплата"
+						}, {
+						"href": "#",
+						"class": "menu-link footer__menu-link",
+						"text": "Корпоративным клиентам"
+						}, {
+						"href": "#",
+						"class": "menu-link footer__menu-link",
+						"text": "Публичный договор"
+						}])
 					</ul>
 				</section>
 				<section class="footer__col footer__col--catalog">
 					<div class="footer__title">Каталог</div>
 					<ul class="footer__menu">
-						<li>
-							<a href="#" class="menu-link footer__menu-link">Новый Год</a>
-						</li>
-						<li>
-							<a href="#" class="menu-link footer__menu-link">14 февраля</a>
-						</li>
-						<li>
-							<a href="#" class="menu-link footer__menu-link">23 февраля</a>
-						</li>
-						<li>
-							<a href="#" class="menu-link footer__menu-link">8 марта</a>
-						</li>
-						<li>
-							<a href="#" class="menu-link footer__menu-link">День рождения</a>
-						</li>
-						<li>
-							<a href="#" class="menu-link footer__menu-link">Годовщина свадьбы</a>
-						</li>
+						@@loop('blocks/button/button.html', [{
+						"href": "#",
+						"class": "menu-link footer__menu-link",
+						"text": "Новый Год"
+						}, {
+						"href": "#",
+						"class": "menu-link footer__menu-link",
+						"text": "14 февраля"
+						}, {
+						"href": "#",
+						"class": "menu-link footer__menu-link",
+						"text": "23 февраля"
+						}, {
+						"href": "#",
+						"class": "menu-link footer__menu-link",
+						"text": "8 марта"
+						}, {
+						"href": "#",
+						"class": "menu-link footer__menu-link",
+						"text": "День рождения"
+						}, {
+						"href": "#",
+						"class": "menu-link footer__menu-link",
+						"text": "Годовщина свадьбы"
+						}])
 					</ul>
 				</section>
 				<section class="footer__col footer__col--contacts">
@@ -124,9 +140,12 @@
 							<span>info@surprise.by</span>
 						</a>
 					</address>
-					<a href="#" class="btn footer__btn">
-						<span class="btn__text">Активировать сертификат</span>
-					</a>
+					@@include('blocks/button/button.html', {
+					"href": "#",
+					"style": "bg-pink",
+					"class": "footer__btn",
+					"text": "Активировать сертификат"
+					})
 				</section>
 			</div>
 		</div>

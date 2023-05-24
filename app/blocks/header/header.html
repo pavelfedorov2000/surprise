@@ -17,21 +17,32 @@
 			</address>
 			<nav class="header__menu header-menu">
 				<ul class="header-menu__list">
-					<li class="header-menu__item">
-						<a href="#" class="header-menu__link menu-link">Новинки</a>
-					</li>
-					<li class="header-menu__item">
-						<a href="#" class="header-menu__link menu-link">Где купить</a>
-					</li>
-					<li class="header-menu__item">
-						<a href="#" class="header-menu__link menu-link">Доставка и оплата</a>
-					</li>
-					<li class="header-menu__item">
-						<a href="#" class="header-menu__link menu-link">Корпоративные подарки</a>
-					</li>
-					<li class="header-menu__item">
-						<a href="#" class="header-menu__link menu-link">Стать нашим партнером</a>
-					</li>
+					@@loop('blocks/button/button.html', [{
+					"listItem": true,
+					"href": "#",
+					"class": "header-menu__link menu-link",
+					"text": "Новинки"
+					}, {
+					"listItem": true,
+					"href": "#",
+					"class": "header-menu__link menu-link",
+					"text": "Где купить"
+					}, {
+					"listItem": true,
+					"href": "#",
+					"class": "header-menu__link menu-link",
+					"text": "Доставка и оплата"
+					}, {
+					"listItem": true,
+					"href": "#",
+					"class": "header-menu__link menu-link",
+					"text": "Корпоративные подарки"
+					}, {
+					"listItem": true,
+					"href": "#",
+					"class": "header-menu__link menu-link",
+					"text": "Стать нашим партнером"
+					}])
 				</ul>
 			</nav>
 		</div>
@@ -48,28 +59,29 @@
 			<div class="header__actions actions-header">
 				<div class="actions-header__items">
 					@@include('blocks/search-form/search-form.html')
-					@@include('blocks/action-btn/action-btn.html', {
+					@@loop('blocks/action-btn/action-btn.html', [{
 					"button": true,
 					"class": "actions-header__item",
 					"ariaLabel": "Авторизоваться",
 					"popup": "auth",
 					"icon": "user"
-					})
-					@@include('blocks/action-btn/action-btn.html', {
+					}, {
 					"class": "actions-header__item",
 					"ariaLabel": "Перейти в избранное",
 					"icon": "favorite"
-					})
-					@@include('blocks/action-btn/action-btn.html', {
+					}, {
 					"class": "actions-header__item",
 					"ariaLabel": "Перейти в корзину",
 					"icon": "cart",
 					"count": "2"
-					})
+					}])
 				</div>
-				<a href="#" class="btn actions-header__btn">
-					<span class="btn__text">Активировать сертификат</span>
-				</a>
+				@@include('blocks/button/button.html', {
+				"href": "#",
+				"style": "bg-pink",
+				"class": "actions-header__btn",
+				"text": "Активировать сертификат"
+				})
 			</div>
 		</div>
 	</div>

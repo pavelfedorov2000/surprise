@@ -1,75 +1,71 @@
 <article class="order-card">
-    <header class="order-card__top">
-        <h3 class="order-card__title">Заказ №102120</h3>
-        <time class="date order-card__date"
-              datetime="2022-08-12">от 12.08.2022</time>
-        @@include('blocks/badge/badge.html', {
-        "text": "Выполнен",
-        "color": "green"
-        })
-    </header>
-    <div class="order-card__row">
-        <div class="order-card__info">
-            <dl class="leader order-card__list leader--orientation_col">
-                <div class="leader__item">
-                    <dt>Сумма к оплате:</dt>
-                    <dd>151 руб.</dd>
-                </div>
-                <div class="leader__item">
-                    <dt>Оплачен:</dt>
-                    <dd>Да</dd>
-                </div>
-                <div class="leader__item">
-                    <dt>Способ оплаты:</dt>
-                    <dd>Через ЕРИП</dd>
-                </div>
-                <div class="leader__item">
-                    <dt>Доставка:</dt>
-                    <dd>Курьером по Минску</dd>
-                </div>
-            </dl>
-            <a href="#"
-               class="btn btn--style_link-4">
-                <span class="btn__text">Подробнее о заказе</span>
-            </a>
-        </div>
-        <div class="order-card__img">
-            <picture>
-                <source type="image/webp"
-                        srcset="assets/images/content/kvadro.webp">
-                <img class="img-cover"
-                     src="assets/images/content/kvadro.jpg"
-                     alt="фото"
-                     width="215"
-                     height="228"
-                     loading="lazy">
-            </picture>
-        </div>
-        <div class="order-card__content">
-            <div class="order-card__subtitle">
-                Комплексная мойка авто с нанесением кварцевого покрытия
-            </div>
-            <dl class="leader leader--orientation_col">
-                <div class="leader__item">
-                    <dt>Трасса:</dt>
-                    <dd>10 км</dd>
-                </div>
-                <div class="leader__item">
-                    <dt>Количество человек:</dt>
-                    <dd>3 чел</dd>
-                </div>
-                <div class="leader__item">
-                    <dd>2 машины, 2-местные <span>(400-500 см3)</span>
-                    </dd>
-                </div>
-                <div class="leader__item">
-                    <dd>Электронный сертификат</dd>
-                </div>
-                <div class="leader__item">
-                    <dt>Цвет упаковки:</dt>
-                    <dd>Розовый</dd>
-                </div>
-            </dl>
-        </div>
-    </div>
+	<header class="order-card__top">
+		<h3 class="order-card__title">Заказ №102120</h3>
+		<time class="date order-card__date" datetime="2022-08-12">от 12.08.2022</time>
+		@@include('blocks/badge/badge.html', {
+		"text": "Выполнен",
+		"color": "green"
+		})
+	</header>
+	<div class="order-card__row">
+		<div class="order-card__info">
+			<dl class="leader order-card__list leader--orientation_col">
+				<div class="leader__item">
+					<dt>Сумма к оплате:</dt>
+					<dd>151 руб.</dd>
+				</div>
+				<div class="leader__item">
+					<dt>Оплачен:</dt>
+					<dd>Да</dd>
+				</div>
+				<div class="leader__item">
+					<dt>Способ оплаты:</dt>
+					<dd>Через ЕРИП</dd>
+				</div>
+				<div class="leader__item">
+					<dt>Доставка:</dt>
+					<dd>Курьером по Минску</dd>
+				</div>
+			</dl>
+			@@include('blocks/button/button.html', {
+			"href": "#",
+			"style": "link-4",
+			"text": "Подробнее о заказе"
+			})
+		</div>
+		<div class="order-card__img">
+			@@include('blocks/img/img.html', {
+			"class": "img-cover",
+			"src": "assets/images/content/kvadro",
+			"width": "215",
+			"height": "228"
+			})
+		</div>
+		<div class="order-card__content">
+			<div class="order-card__subtitle">
+				Комплексная мойка авто с нанесением кварцевого покрытия
+			</div>
+			<dl class="leader leader--orientation_col">
+				<div class="leader__item">
+					<dt>Трасса:</dt>
+					<dd>10 км</dd>
+				</div>
+				<div class="leader__item">
+					<dt>Количество человек:</dt>
+					<dd>3 чел</dd>
+				</div>
+				<div class="leader__item">
+					<dd>2 машины, 2-местные <span>(400-500 см3)</span>
+					</dd>
+				</div>
+				<div class="leader__item">
+					<dd>Электронный сертификат</dd>
+				</div>
+				<div class="leader__item">
+					<dt>Цвет упаковки:</dt>
+					<dd>Розовый</dd>
+				</div>
+			</dl>
+		</div>
+	</div>
 </article>

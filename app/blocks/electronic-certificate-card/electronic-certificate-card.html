@@ -1,50 +1,49 @@
 <article class="electronic-certificate-card">
-    <div class="electronic-certificate-card__number">7663-0641-1539</div>
-    <div class="electronic-certificate-card__row">
-        <a href="#"
-           class="electronic-certificate-card__img">
-            <picture>
-                <source type="image/webp"
-                        srcset="assets/images/content/kvadro.webp">
-                <img class="img-cover"
-                     src="assets/images/content/kvadro.jpg"
-                     alt="фото"
-                     width="216"
-                     height="164"
-                     loading="lazy">
-            </picture>
-        </a>
-        <div class="electronic-certificate-card__content">
-            <div class="electronic-certificate-card__title">
-                <a href="#">
-                    Комплексная мойка авто с нанесением кварцевого покрытия
-                </a>
-            </div>
-            <ul class="electronic-certificate-card__list">
-                <li class="electronic-certificate-card__list-item">
-                    <span>Использую сам:</span>
-                    <button class="btn btn--style_link-3"
-                            type="button">
-                        <span class="btn__text">Активировать</span>
-                    </button>
-                </li>
-                <li class="electronic-certificate-card__list-item">
-                    <span>Это подарок:</span>
-                    <button class="btn btn--style_link-3"
-                            type="button">
-                        <span class="btn__text">Скопировать ссылку</span>
-                    </button>
-                    <p>для отправки в любом мессенджере</p>
-                </li>
-            </ul>
-        </div>
-        <div class="electronic-certificate-card__actions">
-            @@include('blocks/badge/badge.html', {
-            "text": "действует до",
-            "date": true
-            })
-            <a href="#"
-               class="btn electronic-certificate-card__btn btn--style_bg-pink">Открыть сертификат</a>
-        </div>
-    </div>
+	<div class="electronic-certificate-card__number">7663-0641-1539</div>
+	<div class="electronic-certificate-card__row">
+		<a href="#" class="electronic-certificate-card__img">
+			@@include('blocks/img/img.html', {
+			"class": "img-cover",
+			"src": "assets/images/content/kvadro",
+			"width": "216",
+			"height": "164"
+			})
+		</a>
+		<div class="electronic-certificate-card__content">
+			<div class="electronic-certificate-card__title">
+				<a href="#">
+					Комплексная мойка авто с нанесением кварцевого покрытия
+				</a>
+			</div>
+			<ul class="electronic-certificate-card__list">
+				<li class="electronic-certificate-card__list-item">
+					<span>Использую сам:</span>
+					@@include('blocks/button/button.html', {
+					"style": "link-3",
+					"text": "Активировать"
+					})
+				</li>
+				<li class="electronic-certificate-card__list-item">
+					<span>Это подарок:</span>
+					@@include('blocks/button/button.html', {
+					"style": "link-3",
+					"text": "Скопировать ссылку"
+					})
+					<p>для отправки в любом мессенджере</p>
+				</li>
+			</ul>
+		</div>
+		<div class="electronic-certificate-card__actions">
+			@@include('blocks/badge/badge.html', {
+			"text": "действует до",
+			"date": true
+			})
+			@@include('blocks/button/button.html', {
+			"href": "#",
+			"style": "bg-pink",
+			"class": "electronic-certificate-card__btn",
+			"text": "Открыть сертификат"
+			})
+		</div>
+	</div>
 </article>

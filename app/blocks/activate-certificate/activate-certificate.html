@@ -1,11 +1,13 @@
 <div class="activate-certificate">
 	<div class="activate-certificate__row">
 		<div class="activate-certificate__img">
-			<picture>
-				<source type="image/webp" srcset="assets/images/content/certificates.webp">
-				<img src="assets/images/content/certificates.png" alt="сертификаты" width="654" height="556"
-					loading="lazy">
-			</picture>
+			@@include('blocks/img/img.html', {
+			"src": "assets/images/content/certificates",
+			"format": "png",
+			"width": "654",
+			"height": "556",
+			"alt": "сертификаты"
+			})
 		</div>
 		<div class="activate-certificate__content">
 			@@include('blocks/form/form.html', {

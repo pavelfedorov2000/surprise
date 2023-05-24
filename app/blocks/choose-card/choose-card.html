@@ -1,10 +1,12 @@
 <li>
 	<article class="choose-card">
 		<div class="choose-card__img">
-			<picture>
-				<source type="image/webp" srcset="@@src.webp">
-				<img class="img-cover" src="@@src.jpg" alt="фото" width="437" height="300" loading="lazy">
-			</picture>
+			@@include('blocks/img/img.html', {
+			"class": "img-cover",
+			"src": "@@src",
+			"width": "437",
+			"height": "300",
+			})
 		</div>
 		<div class="choose-card__content">
 			<h3 class="choose-card__title">

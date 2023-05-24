@@ -181,6 +181,7 @@
 
 	&__btn {
 		@include padding-x(var(--offset-xs));
+		justify-content: center;
 	}
 
 	&--type {

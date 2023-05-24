@@ -4,11 +4,12 @@
 	<span class="radio-style"></span>
 	<div class="certificate-card__inner">
 		<div class="certificate-card__img">
-			<picture>
-				<source type="image/webp" srcset="assets/images/content/kvadro.webp">
-				<img class="img-cover" src="assets/images/content/kvadro.jpg" alt="фото" width="287" height="202"
-					loading="lazy">
-			</picture>
+			@@include('blocks/img/img.html', {
+			"class": "img-cover",
+			"src": "assets/images/content/kvadro",
+			"width": "287",
+			"height": "202",
+			})
 		</div>
 		<div class="certificate-card__content">
 			<div class="certificate-card__title">Посещение экспозиции</div>

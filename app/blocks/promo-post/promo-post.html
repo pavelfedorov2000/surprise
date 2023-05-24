@@ -29,10 +29,12 @@
 				</div>
 			</div>
 			<div class="grid-col-7 promo-post__img">
-				<picture>
-					<source type="image/webp" srcset="assets/images/content/post.webp">
-					<img src="assets/images/content/post.png" alt="фото" width="830" height="545" loading="lazy">
-				</picture>
+				@@include('blocks/img/img.html', {
+				"src": "assets/images/content/post",
+				"format": "png",
+				"width": "830",
+				"height": "545",
+				})
 			</div>
 		</div>
 	</div>

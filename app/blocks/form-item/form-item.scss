@@ -1,0 +1,9 @@
+.form-item {
+	@include row-grid(var(--offset-xxs));
+
+	&--flex {
+		display: flex;
+		align-items: center;
+		justify-content: space-between;
+	}
+}

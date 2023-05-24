@@ -1,29 +1,26 @@
 <li class="pay-card">
-    @@if(context.icon){
-    <span class="icon-circle pay-card__img icon-circle--style_bg-pink icon-circle--position_bottom-right">
-        <svg class="icon"
-             aria-hidden="true">
-            <use xlink:href="assets/images/sprite.svg#cash"></use>
-        </svg>
-    </span>
-    }
-    @@if(context.src){
-    <picture>
-        <source type="image/webp"
-                srcset="@@src.webp">
-        <img class="pay-card__img"
-             src="@@src.png"
-             alt="фото"
-             width="83"
-             height="56"
-             loading="lazy">
-    </picture>
-    }
-    <div class="pay-card__title">@@title</div>
-    @@if(context.link){
-    <a href="#"
-       class="btn btn--style_link-4">
-        <span class="btn__text">Подробнее</span>
-    </a>
-    }
+	@@if(context.icon){
+	<span class="icon-circle pay-card__img icon-circle--style_bg-pink icon-circle--position_bottom-right">
+		<svg class="icon" aria-hidden="true">
+			<use xlink:href="assets/images/sprite.svg#cash"></use>
+		</svg>
+	</span>
+	}
+	@@if(context.src){
+	@@include('blocks/img/img.html', {
+	"class": "pay-card__img",
+	"src": "@@src",
+	"format": "png",
+	"width": "83",
+	"height": "56",
+	})
+	}
+	<div class="pay-card__title">@@title</div>
+	@@if(context.link){
+	@@include('blocks/button/button.html', {
+	"href": "#",
+	"style": "link-4",
+	"text": "Подробнее"
+	})
+	}
 </li>

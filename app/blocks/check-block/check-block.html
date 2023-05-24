@@ -1,26 +1,26 @@
 <section class="section check-block section--with_decor">
-    <div class="container check-block__inner">
-        <div class="check-block__img">
-            <picture>
-                <source type="image/webp"
-                        srcset="assets/images/content/check.webp">
-                <img class="img-contain"
-                     src="assets/images/content/check.png"
-                     alt="фото"
-                     width="381"
-                     height="298"
-                     loading="lazy">
-            </picture>
-        </div>
-        <div class="check-block__content">
-            <div class="text-block">
-                <p class="color-default">
-                    Одним из документов, подтверждающим факт приобретения товара в нашем интнернет-магазине, является кассовый чек
-                </p>
-                <p class="color-default">
-                    Возврат денежных средств производится на ту карту, с которой была совершена покупка. Возврат осуществляется в течение 30 дней, в зависимости от банка, выпустившего карту. Сертификаты используются только на территории Республики Беларусь
-                </p>
-            </div>
-        </div>
-    </div>
+	<div class="container check-block__inner">
+		<div class="check-block__img">
+			@@include('blocks/img/img.html', {
+			"class": "img-contain",
+			"src": "assets/images/content/check",
+			"format": "png",
+			"width": "381",
+			"height": "298",
+			})
+		</div>
+		<div class="check-block__content">
+			<div class="text-block">
+				<p class="color-default">
+					Одним из документов, подтверждающим факт приобретения товара в нашем интнернет-магазине, является
+					кассовый чек
+				</p>
+				<p class="color-default">
+					Возврат денежных средств производится на ту карту, с которой была совершена покупка. Возврат
+					осуществляется в течение 30 дней, в зависимости от банка, выпустившего карту. Сертификаты
+					используются только на территории Республики Беларусь
+				</p>
+			</div>
+		</div>
+	</div>
 </section>

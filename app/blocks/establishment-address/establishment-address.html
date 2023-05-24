@@ -1,47 +1,42 @@
 <section class="section establishemnt-address">
-    <div class="container container--without-padding">
-        <div class="establishemnt-address__inner">
-            <div class="establishemnt-address__content">
-                <picture>
-                    <source type="image/webp"
-                            srcset="assets/images/logo/pravda.webp">
-                    <img src="assets/images/logo/pravda.png"
-                         alt="фото"
-                         width="376"
-                         height="181"
-                         loading="lazy">
-                </picture>
-                <div class="establishemnt-address__items">
-                    <div class="contact contact--icon-mr_20">
-                        <svg class="icon"
-                             aria-hidden="true">
-                            <use xlink:href="assets/images/sprite.svg#pin"></use>
-                        </svg>
-                        <p class="color-default">г.&nbsp;Минск, ул.&nbsp;Зыбицкая, 4</p>
-                    </div>
-                    <div class="contact contact--icon-mr_20">
-                        <svg class="icon"
-                             aria-hidden="true">
-                            <use xlink:href="assets/images/sprite.svg#pin"></use>
-                        </svg>
-                        <p class="color-default">Немига – 310&nbsp;м</p>
-                    </div>
-                    <div class="contact contact--icon-mr_20">
-                        <svg class="icon"
-                             aria-hidden="true">
-                            <use xlink:href="assets/images/sprite.svg#clock"></use>
-                        </svg>
-                        <p class="color-default">
-                            Вт-Чт 16:00 - 23:00<br>
-                            || Пт-Сб 19:00 04:00<br>
-                            || Вс 16:00 - 23:00
-                        </p>
-                    </div>
-                </div>
-            </div>
-            <div class="map establishemnt-address__map">
-                <iframe src="https://www.google.com/maps/d/embed?mid=1jc1XsPAP6ilVM2He6qBnpwBlP7prXDE&ehbc=2E312F"></iframe>
-            </div>
-        </div>
-    </div>
+	<div class="container container--without-padding">
+		<div class="establishemnt-address__inner">
+			<div class="establishemnt-address__content">
+				@@include('blocks/img/img.html', {
+				"src": "assets/images/logo/pravda",
+				"format": "png",
+				"width": "376",
+				"height": "181",
+				})
+				<div class="establishemnt-address__items">
+					<div class="contact contact--icon-mr_20">
+						<svg class="icon" aria-hidden="true">
+							<use xlink:href="assets/images/sprite.svg#pin"></use>
+						</svg>
+						<p class="color-default">г.&nbsp;Минск, ул.&nbsp;Зыбицкая, 4</p>
+					</div>
+					<div class="contact contact--icon-mr_20">
+						<svg class="icon" aria-hidden="true">
+							<use xlink:href="assets/images/sprite.svg#pin"></use>
+						</svg>
+						<p class="color-default">Немига – 310&nbsp;м</p>
+					</div>
+					<div class="contact contact--icon-mr_20">
+						<svg class="icon" aria-hidden="true">
+							<use xlink:href="assets/images/sprite.svg#clock"></use>
+						</svg>
+						<p class="color-default">
+							Вт-Чт 16:00 - 23:00<br>
+							|| Пт-Сб 19:00 04:00<br>
+							|| Вс 16:00 - 23:00
+						</p>
+					</div>
+				</div>
+			</div>
+			<div class="map establishemnt-address__map">
+				<iframe
+					src="https://www.google.com/maps/d/embed?mid=1jc1XsPAP6ilVM2He6qBnpwBlP7prXDE&ehbc=2E312F"></iframe>
+			</div>
+		</div>
+	</div>
 </section>

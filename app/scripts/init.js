@@ -24,14 +24,15 @@ $(function () {
 
     $(document).on('click', '.more-text-btn', function () {
         const $moreTextBtn = $(this);
+        const $moreTextBtnText = $moreTextBtn.find('.btn__text');
         const $text = $moreTextBtn.prev();
 
         if ($moreTextBtn.attr('aria-expanded') === 'false') {
-            $moreTextBtn.text(moreButtonTextMap.get(true));
+            $moreTextBtnText.text(moreButtonTextMap.get(true));
             $moreTextBtn.attr('aria-expanded', true);
             $text.addClass('no-overflow');
         } else {
-            $moreTextBtn.text(moreButtonTextMap.get(false));
+            $moreTextBtnText.text(moreButtonTextMap.get(false));
             $moreTextBtn.attr('aria-expanded', false);
             $text.removeClass('no-overflow');
         }
@@ -49,34 +50,6 @@ $(function () {
             $reviewAnswers.slideUp();
         }
     });
-
-    const table = document.querySelector('.table-wrap');
-    const tableVisibleWidth = table.getBoundingClientRect().width;
-    const tableWidth = table.scrollWidth;
-    const ths = table.querySelectorAll('th');
-    const compareProductItems = document.querySelectorAll('.compare-product');
-    const compareProducts = [...ths].slice(1);
-    const thWidth = compareProducts[0].getBoundingClientRect().width;
-    const compareProductsWidth = thWidth * compareProducts.length;
-    const compareProductsOffsets = compareProducts.map((item) => item.offsetLeft);
-    const firstThWidth = tableWidth - compareProductsWidth;
-    const visibleProductsWidth = tableVisibleWidth - firstThWidth;
-    const deltaVisible = visibleProductsWidth - thWidth;
-
-    table.onscroll = function () {
-        const scrollX = table.scrollLeft;
-        const delta = deltaVisible + scrollX;
-
-        compareProductsOffsets.forEach((_, index) => {
-            if (index > 0) {
-                if (delta >= compareProductsOffsets[index - 1]) {
-                    compareProductItems[index].classList.add('in-view');
-                } else {
-                    compareProductItems[index].classList.remove('in-view');
-                }
-            }
-        });
-    };
 
     // Скрипт динамического адаптива (для перемещения ДОМ-элементов в другое место если нужно без дублирования кода)
     function DynamicAdapt(type) {
@@ -252,4 +225,35 @@ $(function () {
     if (document.querySelectorAll('[data-da').length) {
         da.init();
     }
+
+    const table = document.querySelector('.table-wrap');
+    if (!table) {
+        return;
+    }
+    const tableVisibleWidth = table.getBoundingClientRect().width;
+    const tableWidth = table.scrollWidth;
+    const ths = table.querySelectorAll('th');
+    const compareProductItems = document.querySelectorAll('.compare-product');
+    const compareProducts = [...ths].slice(1);
+    const thWidth = compareProducts[0].getBoundingClientRect().width;
+    const compareProductsWidth = thWidth * compareProducts.length;
+    const compareProductsOffsets = compareProducts.map((item) => item.offsetLeft);
+    const firstThWidth = tableWidth - compareProductsWidth;
+    const visibleProductsWidth = tableVisibleWidth - firstThWidth;
+    const deltaVisible = visibleProductsWidth - thWidth;
+
+    table.onscroll = function () {
+        const scrollX = table.scrollLeft;
+        const delta = deltaVisible + scrollX;
+
+        compareProductsOffsets.forEach((_, index) => {
+            if (index > 0) {
+                if (delta >= compareProductsOffsets[index - 1]) {
+                    compareProductItems[index].classList.add('in-view');
+                } else {
+                    compareProductItems[index].classList.remove('in-view');
+                }
+            }
+        });
+    };
 });

@@ -1,0 +1,5 @@
+<picture @@if(context.pictureClass){class="@@pictureClass" }>
+	<source type="image/webp" srcset="@@src.webp">
+	<img @@if(context.class){class="@@class" } src="@@src.@@if(context.format){@@format}@@if(!context.format){jpg}"
+		alt="@@if(context.alt){@@alt}@@if(!context.alt){фото}" width="@@width" height="@@height" loading="lazy">
+</picture>

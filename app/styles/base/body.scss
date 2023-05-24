@@ -1,95 +1,76 @@
 body {
-    min-width: 320px;
-    font-style: normal;
-    font-family: $ff;
-    font-size: #{$fz}px;
-    line-height: 1.5;
-    font-weight: 500;
-    color: $color-default;
-    overflow-x: hidden;
+	min-width: 320px;
+	font-style: normal;
+	font-family: $ff;
+	font-size: #{$fz}px;
+	line-height: 1.5;
+	font-weight: 500;
+	color: $color-default;
+	overflow-x: hidden;
 
-    &.sticky {
-        overflow-x: visible;
+	&.sticky {
+		overflow-x: visible;
 
-        @media(max-width: $lg) {
-            overflow-x: hidden;
-        }
+		@media(max-width: $lg) {
+			overflow-x: hidden;
+		}
 
-        .wrapper {
-            overflow-x: visible;
+		.wrapper {
+			overflow-x: visible;
 
-            @media(max-width: $lg) {
-                overflow-x: hidden;
-            }
-        }
-    }
+			@media(max-width: $lg) {
+				overflow-x: hidden;
+			}
+		}
+	}
 
-    &._lock {
-        overflow-y: hidden;
-    }
+	&._lock {
+		overflow-y: hidden;
+	}
 }
 
 address {
-    font-style: normal;
+	font-style: normal;
 }
 
 button,
 input,
 textarea {
-    font-family: $ff;
+	font-family: $ff;
 }
 
 dl,
 dt,
 dd {
-    margin: 0;
+	margin: 0;
 }
 
 img {
-    max-width: 100%;
-    height: auto;
-    vertical-align: top;
-    border: none;
+	max-width: 100%;
+	height: auto;
+	vertical-align: top;
+	border: none;
 
-    table & {
-        max-width: none;
-    }
+	table & {
+		max-width: none;
+	}
 }
 
 p {
-    font-family: 'Museo Sans Cyrl 300', sans-serif;
-    font-weight: 300;
-    color: var(--text-color);
+	font-family: 'Museo Sans Cyrl 300', sans-serif;
+	font-weight: 300;
+	color: var(--text-color);
 
-    .menu-link {
-        @extend %museo-500;
-    }
+	.menu-link {
+		@extend %museo-500;
+	}
 
-    &.default-color {
-        color: $color-default;
-    }
+	&.default-color {
+		color: $color-default;
+	}
 }
 
 fieldset {
-    margin: 0;
-    border: none;
-}
-
-.menu-link {
-    transition: $transition color;
-
-    &--underlined {
-        line-height: 1;
-        border-bottom: 1px solid var(--black);
-        transition: $transition color,
-            $transition border-bottom-color;
-        //text-decoration: underline;
-    }
-
-    @media (any-hover: hover) {
-        &:hover {
-            color: var(--green);
-            border-bottom-color: var(--green);
-        }
-    }
+	margin: 0;
+	border: none;
 }

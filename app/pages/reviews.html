@@ -50,9 +50,12 @@
 								</div>
 							</div>
 						</div>
-						<button class="btn js-view-review-answers btn--style_link-toggle" aria-expanded="false">
-							<span class="btn__text">Показать ответы</span>
-						</button>
+						@@include('blocks/button/button.html', {
+						"style": "link-toggle",
+						"class": "js-view-review-answers",
+						"text": "Показать ответы",
+						"ariaExpanded": true
+						})
 						<div class="review__answers">
 							<div class="review-answers">
 								<div class="review-answer review__answer">

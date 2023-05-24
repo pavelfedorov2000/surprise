@@ -97,33 +97,27 @@
 							</div>
 						</div>
 						<div class="dropdown-filter__col">
-							@@include('blocks/checkbox/checkbox.html', {
+							@@loop('blocks/checkbox/checkbox.html', [{
 							"content": true,
 							"title": "Универсальный сертификат",
 							"subtitle": "Сертификат на сумму"
-							})
-							@@include('blocks/checkbox/checkbox.html', {
+							}, {
 							"content": true,
 							"title": "Комбо",
 							"subtitle": "2 впечатления в 1"
-							})
-							@@include('blocks/checkbox/checkbox.html', {
+							}, {
 							"content": true,
 							"title": "Наборы",
 							"subtitle": "Сертификат на выбор"
-							})
+							}])
 						</div>
 					</div>
-					<button class="reset-btn js-reset-filter" type="button">
-						<svg class="reset-btn__icon" width="24" height="24" viewBox="0 0 24 24" fill="none"
-							xmlns="http://www.w3.org/2000/svg">
-							<path fill-rule="evenodd" clip-rule="evenodd" d="M18 6L6 18" stroke-width="2"
-								stroke-linecap="round" stroke-linejoin="round" />
-							<path fill-rule="evenodd" clip-rule="evenodd" d="M6 6L18 18" stroke-width="2"
-								stroke-linecap="round" stroke-linejoin="round" />
-						</svg>
-						<span class="reset-btn__text">Сбросить</span>
-					</button>
+					@@include('blocks/button/button.html', {
+					"class": "reset-btn",
+					"style": "reset",
+					"icon": "reset",
+					"text": "Сбросить"
+					})
 				</div>
 			</div>
 		</div>
@@ -158,16 +152,12 @@
 							})
 						</div>
 					</div>
-					<button class="reset-btn js-reset-filter" type="button">
-						<svg class="reset-btn__icon" width="24" height="24" viewBox="0 0 24 24" fill="none"
-							xmlns="http://www.w3.org/2000/svg">
-							<path fill-rule="evenodd" clip-rule="evenodd" d="M18 6L6 18" stroke-width="2"
-								stroke-linecap="round" stroke-linejoin="round" />
-							<path fill-rule="evenodd" clip-rule="evenodd" d="M6 6L18 18" stroke-width="2"
-								stroke-linecap="round" stroke-linejoin="round" />
-						</svg>
-						<span class="reset-btn__text">Сбросить</span>
-					</button>
+					@@include('blocks/button/button.html', {
+					"class": "reset-btn",
+					"style": "reset",
+					"icon": "reset",
+					"text": "Сбросить"
+					})
 				</div>
 			</div>
 		</div>
@@ -178,8 +168,11 @@
 			</button>
 			@@include('blocks/price-filter/price-filter.html')
 		</div>
-		<button class="btn catalog-filters__btn btn--style_bg-green" type="submit">
-			<span class="btn__text">Подобрать сертификат</span>
-		</button>
+		@@include('blocks/button/button.html', {
+		"style": "bg-green",
+		"class": "catalog-filters__btn",
+		"type": "submit",
+		"text": "Подобрать сертификат"
+		})
 	</div>
 </form>

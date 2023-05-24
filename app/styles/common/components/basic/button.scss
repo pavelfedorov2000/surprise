@@ -4,21 +4,13 @@
 	cursor: pointer;
 	display: inline-flex;
 	align-items: center;
-	justify-content: center;
 	padding: 18px var(--offset-l);
-	background-color: var(--pink);
 	border-radius: $brs;
 	font-family: $ff;
 	font-size: #{$fz}px;
 	line-height: 1.5;
-	color: #fff;
 	text-align: left;
 	transition: $transition all;
-
-	&:focus,
-	&:active {
-		background-color: var(--pink-pressed);
-	}
 
 	@media (any-hover: hover) {
 		&:hover {
@@ -31,20 +23,27 @@
 		background-color: var(--pink-light);
 	}
 
+	.icon,
 	&__icon {
-		flex-shrink: 0;
 		margin-right: var(--offset-xs);
-		width: var(--icon-size);
-		height: var(--icon-size);
 	}
 
 	&__text {
 		white-space: nowrap;
-		transition: $transition color;
+		//transition: $transition color;
 	}
 
 	&--style {
 		&_bg {
+			&-pink {
+				background-color: var(--pink);
+
+				&:focus,
+				&:active {
+					background-color: var(--pink-pressed);
+				}
+			}
+
 			&-green {
 				background-color: var(--green);
 
@@ -85,12 +84,19 @@
 					}
 				}
 			}
+
+			&-pink,
+			&-green {
+				color: #fff;
+			}
 		}
 
+		&_reset,
 		&_link,
 		&_link-2,
 		&_link-3,
 		&_link-4,
+		&_link-5,
 		&_link-toggle,
 		&_attention,
 		&_look {
@@ -104,11 +110,18 @@
 			}
 		}
 
+		&_reset,
 		&_link,
 		&_link-2,
 		&_link-toggle {
 			position: relative;
 			color: var(--green);
+
+			#{$this} {
+				&__text {
+					color: var(--green);
+				}
+			}
 
 			&:focus,
 			&:active {
@@ -120,6 +133,43 @@
 				&:hover {
 					background-color: transparent;
 					color: var(--green-hover);
+
+					#{$this} {
+						&__text {
+							color: var(--green-hover);
+						}
+					}
+				}
+			}
+		}
+
+		&_reset {
+			#{$this} {
+				&__icon {
+					margin-right: 14px;
+					stroke: var(--green);
+					transition: $transition stroke;
+				}
+
+				// .reset-btn__text
+
+				&__text {
+					font-size: 16px;
+					color: var(--green);
+				}
+			}
+
+			@media (any-hover: hover) {
+				&:hover {
+					#{$this} {
+						&__icon {
+							stroke: var(--pink);
+						}
+
+						&__text {
+							color: var(--pink);
+						}
+					}
 				}
 			}
 		}
@@ -220,10 +270,34 @@
 
 		&_link-3,
 		&_link-4,
+		&_link-5,
 		&_look {
 			font-family: "Museo Sans Cyrl 300",
 				sans-serif;
 			font-weight: 300;
+		}
+
+		&_link-5 {
+			text-decoration: underline;
+
+			&:focus,
+			&:active {
+				background-color: transparent;
+				color: var(--green);
+			}
+
+			@media (any-hover: hover) {
+				&:hover {
+					background-color: transparent;
+					color: var(--green);
+
+					#{$this} {
+						&__text {
+							color: var(--green);
+						}
+					}
+				}
+			}
 		}
 
 		&_look {
@@ -364,20 +438,6 @@
 	}
 }
 
-.more-text-btn {
-	@extend %museo-300;
-	font-size: #{$fz}px;
-	line-height: 1.5;
-	text-decoration: underline;
-	transition: $transition color;
-
-	@media (any-hover: hover) {
-		&:hover {
-			color: var(--green);
-		}
-	}
-}
-
 .btns {
 	display: grid;
 	gap: var(--offset-m);
@@ -395,6 +455,23 @@
 	@media (any-hover: hover) {
 		&:hover {
 			background-color: var(--gray);
+		}
+	}
+}
+
+.menu-link {
+	&--underlined {
+		padding: 0;
+		border-radius: 0;
+		line-height: 1;
+		text-decoration: underline;
+		text-underline-offset: 2px;
+	}
+
+	@media (any-hover: hover) {
+		&:hover {
+			background-color: transparent;
+			color: var(--green);
 		}
 	}
 }

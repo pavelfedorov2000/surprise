@@ -1,33 +1,33 @@
 .error-text {
-    position: relative;
-    padding-left: 28px;
-    font-size: 14px;
-    line-height: 19px;
-    color: var(--red);
+	position: relative;
+	padding-left: 28px;
+	font-size: 14px;
+	line-height: 19px;
+	color: var(--red);
 
-    &::before {
-        content: '';
-        position: absolute;
-        top: 0;
-        left: 0;
-        width: 20px;
-        height: 20px;
-        background-image: url(../images/icons/error.svg);
-    }
+	&::before {
+		content: '';
+		position: absolute;
+		top: 0;
+		left: 0;
+		width: 20px;
+		height: 20px;
+		background-image: url(../images/icons/error.svg);
+	}
 }
 
 .form {
-    &__field {
-        &.error {
-            .input {
-                border-color: var(--red);
-            }
-        }
+	&__field {
+		&.error {
+			.input {
+				border-color: var(--red);
+			}
+		}
 
-        &.success {
-            .input {
-                border-color: var(--green);
-            }
-        }
-    }
+		&.success {
+			.input {
+				border-color: var(--green);
+			}
+		}
+	}
 }

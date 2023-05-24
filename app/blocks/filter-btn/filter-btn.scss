@@ -1,5 +1,6 @@
 .filter-btn {
 	display: none;
+	justify-content: center;
 	position: fixed;
 	left: var(--container-padding);
 	right: var(--container-padding);
@@ -12,7 +13,9 @@
 
 	&.hidden {
 		@media(max-width: $xl) {
-			display: none;
+			visibility: hidden;
+			opacity: 0;
+			pointer-events: none;
 		}
 	}
 

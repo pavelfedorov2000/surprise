@@ -18,7 +18,11 @@
 		</div>
 	</div>
 	@@if(context.link) {
-	<a href="#" class="menu-link menu-link--underlined">@@link</a>
+	@@include('blocks/button/button.html', {
+	"href": "#",
+	"class": "menu-link menu-link--underlined",
+	"text": "@@link"
+	})
 	}
 	@@if(context.num) {
 	<b class="rating__num@@if(context.numHidden){ hidden}">@@num</b>

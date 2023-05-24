@@ -6,12 +6,15 @@
 				<div class="not-found-block__subtitle">Страница не найдена</div>
 				<p class="not-found-block__text">Возможно она была удалена или вы неправильно ввели адрес</p>
 				<div class="btns not-found-block__btns">
-					<a href="#" class="btn">
-						<span class="btn__text">На главную</span>
-					</a>
-					<a href="#" class="btn btn--style_bg-yellow">
-						<span class="btn__text">В каталог</span>
-					</a>
+					@@loop('blocks/button/button.html', [{
+					"href": "#",
+					"style": "bg-pink",
+					"text": "На главную"
+					}, {
+					"href": "#",
+					"style": "bg-yellow",
+					"text": "В каталог"
+					}])
 				</div>
 			</div>
 			<div class="not-found-block__img">

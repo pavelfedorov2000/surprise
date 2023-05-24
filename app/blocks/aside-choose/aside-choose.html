@@ -96,7 +96,11 @@
 	@@include('blocks/overall-sum/overall-sum.html', {
 	"text": "Итого"
 	})
-	<button class="btn aside-choose__btn" type="submit">
-		<span class="btn__text">Купить</span>
-	</button>
+	@@include('blocks/button/button.html', {
+	"style": "bg-pink",
+	"class": "aside-choose__btn",
+	"text": "aside-choose__btn",
+	"type": "submit",
+	"text": "Купить"
+	})
 </form>

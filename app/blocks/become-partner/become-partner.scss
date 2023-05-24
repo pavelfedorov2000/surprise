@@ -1,60 +1,60 @@
 .become-partner {
-    @media(min-width: 1025px) {
-        background-image: url(../images/decor/contacts-bg.svg);
-        background-size: cover;
-        background-position: center;
-        background-repeat: no-repeat;
-    }
+	@media(min-width: 1025px) {
+		background-image: url(../images/decor/contacts-bg.svg);
+		background-size: cover;
+		background-position: center;
+		background-repeat: no-repeat;
+	}
 
-    @media(max-width: $lg) {
-        padding-bottom: 0;
-    }
+	@media(max-width: $lg) {
+		padding-bottom: 0;
+	}
 
-    // .become-partner__inner
+	// .become-partner__inner
 
-    &__inner {
-        display: grid;
-        grid-template-columns: repeat(2, 1fr);
-        gap: var(--offset-xxxl);
+	&__inner {
+		display: grid;
+		grid-template-columns: repeat(2, 1fr);
+		gap: var(--offset-xxxl);
 
-        @media(max-width: $lg) {
-            grid-template-columns: var(--container-padding) 1fr var(--container-padding);
-            gap: var(--offset-xxl) 0;
-        }
-    }
+		@media(max-width: $lg) {
+			grid-template-columns: var(--container-padding) 1fr var(--container-padding);
+			gap: var(--offset-xxl) 0;
+		}
+	}
 
-    // .become-partner__content
+	// .become-partner__content
 
-    &__content {
-        @include row-grid(var(--offset-xxls));
-        justify-items: flex-start;
+	&__content {
+		@include row-grid(var(--offset-xxls));
+		justify-items: start;
 
-        @media(max-width: $lg) {
-            grid-column: 2 / 3;
-        }
+		@media(max-width: $lg) {
+			grid-column: 2 / 3;
+		}
 
-        @media(max-width: $md) {
-            row-gap: var(--offset-l);
-        }
-    }
+		@media(max-width: $md) {
+			row-gap: var(--offset-l);
+		}
+	}
 
-    &__title {
-        @media(min-width: 768px) {
-            margin-bottom: -20px;
-        }
-    }
+	&__title {
+		@media(min-width: 768px) {
+			margin-bottom: -20px;
+		}
+	}
 
-    &__btn {
-        @media(max-width: $sm) {
-            width: 100%;
-        }
-    }
+	&__btn {
+		@media(max-width: $sm) {
+			width: 100%;
+		}
+	}
 
-    // .become-partner__map
+	// .become-partner__map
 
-    &__map {
-        @media(max-width: $lg) {
-            grid-column: 1 / -1;
-        }
-    }
+	&__map {
+		@media(max-width: $lg) {
+			grid-column: 1 / -1;
+		}
+	}
 }

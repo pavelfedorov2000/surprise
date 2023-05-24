@@ -11,13 +11,13 @@
 				<p class="page__top-text page__top-text--size_xl">
 					Универсальные подарочные сертификаты для сотрудников, коллег, клиентов и партнеров
 				</p>
-				<a href="tel:+375297333368" class="btn page__top-btn">
-					<svg class="icon btn__icon"
-					     aria-hidden="true">
-						<use xlink:href="assets/images/sprite.svg#phone-white"></use>
-					</svg>
-					<span class="btn__text">Позвонить</span>
-				</a>
+				@@include('blocks/button/button.html', {
+				"href": "tel:+375297333368",
+				"style": "bg-pink",
+				"class": "page__top-btn",
+				"sprite": "phone-white",
+				"text": "Позвонить"
+				})
 			</div>
 		</div>
 		@@include('blocks/ordered-tape-section/how-it-works.html')

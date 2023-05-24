@@ -6,11 +6,12 @@
 			<span>2022</span>
 		</time>
 		<div class="blog-card__img">
-			<picture>
-				<source type="image/webp" srcset="assets/images/content/blog-item.webp">
-				<img class="img-cover" src="assets/images/content/blog-item.jpg" alt="фото" width="438" height="280"
-					loading="lazy">
-			</picture>
+			@@include('blocks/img/img.html', {
+			"class": "img-cover",
+			"src": "assets/images/content/blog-item",
+			"width": "438",
+			"height": "280",
+			})
 		</div>
 		<div class="blog-card__content">
 			<div class="blog-card__title">
