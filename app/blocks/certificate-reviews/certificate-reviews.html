@@ -68,10 +68,12 @@
                     </div>
                 </div>
             </div>
-            <button class="btn js-view-review-answers btn--style_link-toggle"
-                    aria-expanded="false">
-                <span class="btn__text">Показать ответы</span>
-            </button>
+            @@include('blocks/button/button.html', {
+            "class": "js-view-review-answers",
+            "ariaExpanded": true,
+            "style": "link-toggle",
+            "text": "Показать ответы"
+            })
             <div class="review__answers">
                 <div class="review-answers">
                     <div class="review-answer">
@@ -143,10 +145,12 @@
                          height="24">
                 </div>
             </div>
-            <button class="btn js-view-review-answers btn--style_link-toggle"
-                    aria-expanded="false">
-                <span class="btn__text">Показать ответы</span>
-            </button>
+            @@include('blocks/button/button.html', {
+            "class": "js-view-review-answers",
+            "ariaExpanded": true,
+            "style": "link-toggle",
+            "text": "Показать ответы"
+            })
             <div class="review__answers">
                 <div class="review-answers">
                     <div class="review-answer">
@@ -203,8 +207,9 @@
             </p>
         </article>
     </div>
-    <a href="#"
-       class="btn btn--style_link">
-        <span class="btn__text">Посмотреть еще</span>
-    </a>
+    @@include('blocks/button/button.html', {
+    "href": "#",
+    "style": "link",
+    "text": "Посмотреть еще"
+    })
 </section>

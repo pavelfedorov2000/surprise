@@ -1,9 +1,12 @@
-<label class="radio@@if(context.class){ @@class}@@if(context.style){ radio--style_@@style}">
+<label class="@@if(!context.color){radio}@@if(context.color){color color--style_bg-@@color.name}@@if(context.class){ @@class}@@if(context.style){ radio--style_@@style}" @@if(context.color){data-color="@@color.name"}>
 	<input class="radio-input@@if(context.inputClass){ @@inputClass}" type="radio" name="@@name"
-		@@if(context.isChecked){checked}>
+		@@if(context.isChecked){checked} @@if(context.expanded){@@if(context.expanded == 'true'){true}@@if(context.expanded == 'false'){false}}>
 	@@if(context.radioStyle){
 	<span class="radio-style@@if(context.radioStyle.mr){ radio-style--mr_@@radioStyle.mr}"></span>
 	}
+    @@if(context.color){
+        <span class="color__style" style="background-color: @@color.hex;"></span>
+    }
 	@@if(context.body){
 	<span class="radio__content">
 		@@if(context.icon){
@@ -17,19 +20,27 @@
 		@@if(context.img){
 		<img class="radio__icon" src="@@img.src" alt="@@img.alt" width="@@img.width" height="@@img.height">
 		}
-		<span class="radio-text">@@body.text</span>
+		<span class="radio__text">@@body.text</span>
 	</span>
 	}
 	@@if(context.text){
-	<span class="radio-text">@@text</span>
+	<span class="radio__text">
+        @@if(!context.text.key){
+            @@text
+        }
+        @@if(context.text.key){
+            <span class="radio__key">@@text.key</span>
+            <span class="radio__value">@@text.value</span>
+        }
+    </span>
 	}
 	@@if(context.inner){
 	<span class="radio__inner">
 		@@if(context.inner.title){
-		<span class="radio-title">@@inner.title</span>
+		<span class="radio__title">@@inner.title</span>
 		}
 		@@if(context.inner.text){
-		<span class="radio-text radio-text--light">@@inner.text</span>
+		<span class="radio__text radio__text--light">@@inner.text</span>
 		}
 		@@if(inner.dropdown){
 		<span class="radio__dropdown">

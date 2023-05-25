@@ -48,7 +48,7 @@
 
         @media (any-hover: hover) {
             &:hover {
-                &:before {
+                &::before {
                     opacity: 1;
                 }
             }
@@ -58,9 +58,7 @@
             &:hover {
                 #{$this} {
                     &__player-btn {
-                        opacity: 1;
-                        visibility: visible;
-                        pointer-events: auto;
+                        @include show();
                     }
                 }
             }
@@ -85,9 +83,7 @@
         }
 
         @media(min-width: 1201px) {
-            opacity: 0;
-            visibility: hidden;
-            pointer-events: none;
+            @include hide();
             transition: var(--transition) all;
         }
     }

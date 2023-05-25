@@ -26,6 +26,10 @@
             display: block;
         }
     }
+
+    &.active {
+        display: block;
+    }
 }
 
 .tabs {
@@ -129,7 +133,7 @@
             transform: translate(-50%, -50%);
         }
 
-        &:before {
+        &::before {
             width: 20px;
             height: 20px;
             border-radius: 50%;
@@ -137,7 +141,7 @@
             transition: var(--transition) border-color;
         }
 
-        &:after {
+        &::after {
             width: var(--offset-xs);
             height: var(--offset-xs);
             border-radius: 50%;
@@ -154,11 +158,11 @@
 
         #{$this} {
             &__circle {
-                &:before {
+                &::before {
                     border-color: #fff;
                 }
 
-                &:after {
+                &::after {
                     opacity: 1;
                 }
             }
@@ -246,7 +250,7 @@
 
                     #{$this} {
                         &__circle {
-                            &:before {
+                            &::before {
                                 border-color: var(--green);
                             }
                         }
@@ -262,11 +266,11 @@
 
                 #{$this} {
                     &__circle {
-                        &:before {
+                        &::before {
                             border-color: #fff;
                         }
 
-                        &:after {
+                        &::after {
                             opacity: 1;
                         }
                     }

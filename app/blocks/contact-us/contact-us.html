@@ -1,42 +1,43 @@
 <section class="contact-us">
-	<div class="container">
-		<div class="contact-us__inner">
-			<div class="contact-us__content">
-				<div>
-					<div class="section-title contact-us__title">Анастасия Бакшевич</div>
-					<p>Специалист по работе с ключевыми клиентами</p>
-				</div>
-				@@include('blocks/admin/admin.html', {
-				"telegram": "t.me/Surprise_corp"
-				})
-			</div>
-			<div class="contact-us__form card">
-				<h2 class="section-title contact-us__form-title">Оставить заявку </h2>
-				<form class="form js-form">
-					@@loop('blocks/form-item/form-item.html', [{
-					"label": "Ваше имя",
-					"placeholder": "Ваше имя",
-					"required": true,
-					"requiredMessage": "Поле не может быть пустым"
-					}, {
-					"label": "Ваша почта",
-					"inputType": "email",
-					"placeholder": "example@mail.com",
-					"required": true,
-					"requiredMessage": "Поле не может быть пустым",
-					"emailMessage": "Некорректный email"
-					}, {
-					"label": "Сообщение",
-					"textarea": true,
-					"placeholder": "Placeholder",
-					}])
-					@@include('blocks/button/button.html', {
-					"type": "submit",
-					"style": "bg-pink",
-					"text": "Отправить"
-					})
-				</form>
-			</div>
-		</div>
-	</div>
+    <div class="container">
+        <div class="contact-us__inner">
+            <div class="contact-us__content">
+                <div>
+                    <div class="section-title contact-us__title">Анастасия Бакшевич</div>
+                    <p>Специалист по работе с ключевыми клиентами</p>
+                </div>
+                @@include('blocks/admin/admin.html', {
+                "telegram": "t.me/Surprise_corp"
+                })
+            </div>
+            <div class="contact-us__form card">
+                <h2 class="section-title contact-us__form-title">Оставить заявку</h2>
+                <form class="form js-form">
+                    @@loop('blocks/form-item/form-item.html', [{
+                    "label": "Ваше имя",
+                    "placeholder": "Ваше имя",
+                    "required": true,
+                    "requiredMessage": "Поле не может быть пустым"
+                    }, {
+                    "label": "Ваша почта",
+                    "inputType": "email",
+                    "placeholder": "example@mail.com",
+                    "required": true,
+                    "requiredMessage": "Поле не может быть пустым",
+                    "emailMessage": "Некорректный email"
+                    }, {
+                    "label": "Сообщение",
+                    "textarea": true,
+                    "placeholder": "Placeholder",
+                    }])
+                    @@include('blocks/button/button.html', {
+                    "class": "form__btn",
+                    "type": "submit",
+                    "style": "bg-pink",
+                    "text": "Отправить"
+                    })
+                </form>
+            </div>
+        </div>
+    </div>
 </section>

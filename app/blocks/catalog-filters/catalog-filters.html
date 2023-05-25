@@ -1,178 +1,188 @@
-<form action="#" id="catalog-filters" class="catalog-filters@@if(context.banner){ catalog-filters--@@banner}">
-	<button class="catalog-filters__back-btn" type="button">Фильтр</button>
-	<div class="catalog-filters__radios">
-		<label class="radio catalog-filters__radio radio--style_filter">
-			<input class="radio-input" type="radio" name="catalog-radio-filter" checked>
-			<span class="radio__content">
-				<svg aria-hidden="true" class="radio__icon" width="25" height="24" viewBox="0 0 25 24" fill="none"
-					xmlns="http://www.w3.org/2000/svg">
-					<path fill-rule="evenodd" clip-rule="evenodd"
-						d="M3.75 10C3.75 9.05719 3.75 8.58579 4.04289 8.29289C4.33579 8 4.80719 8 5.75 8H19.75C20.6928 8 21.1642 8 21.4571 8.29289C21.75 8.58579 21.75 9.05719 21.75 10V11.5C21.75 11.9659 21.75 12.1989 21.6739 12.3827C21.5724 12.6277 21.3777 12.8224 21.1327 12.9239C20.9489 13 20.7159 13 20.25 13V13C19.7841 13 19.5511 13 19.3673 13.0761C19.1223 13.1776 18.9276 13.3723 18.8261 13.6173C18.75 13.8011 18.75 14.0341 18.75 14.5V18C18.75 18.9428 18.75 19.4142 18.4571 19.7071C18.1642 20 17.6928 20 16.75 20H8.75C7.80719 20 7.33579 20 7.04289 19.7071C6.75 19.4142 6.75 18.9428 6.75 18V14.5C6.75 14.0341 6.75 13.8011 6.67388 13.6173C6.57239 13.3723 6.37771 13.1776 6.13268 13.0761C5.94891 13 5.71594 13 5.25 13V13C4.78406 13 4.55109 13 4.36732 12.9239C4.12229 12.8224 3.92761 12.6277 3.82612 12.3827C3.75 12.1989 3.75 11.9659 3.75 11.5V10Z"
-						stroke-width="1.6" />
-					<path fill-rule="evenodd" clip-rule="evenodd" d="M5.75 13H19.75" stroke-width="1.6"
-						stroke-linecap="round" />
-					<path fill-rule="evenodd" clip-rule="evenodd" d="M12.75 7L12.75 20" stroke-width="1.6"
-						stroke-linecap="round" />
-					<path fill-rule="evenodd" clip-rule="evenodd"
-						d="M12.75 7L11.8714 6.12144C10.8051 5.05514 9.50521 4.25174 8.0746 3.77487V3.77487C6.93099 3.39366 5.75 4.24487 5.75 5.45035V5.63246C5.75 6.44914 6.27259 7.1742 7.04737 7.43246L8.75 8"
-						stroke-width="1.6" stroke-linecap="round" />
-					<path fill-rule="evenodd" clip-rule="evenodd"
-						d="M12.75 7L13.6286 6.12144C14.6949 5.05514 15.9948 4.25174 17.4254 3.77487V3.77487C18.569 3.39366 19.75 4.24487 19.75 5.45035V5.63246C19.75 6.44914 19.2274 7.1742 18.4526 7.43246L16.75 8"
-						stroke-width="1.6" stroke-linecap="round" />
-				</svg>
-				<span class="radio-text">В подарок</span>
-			</span>
-		</label>
-		<label class="radio catalog-filters__radio radio--style_filter">
-			<input class="radio-input" type="radio" name="catalog-radio-filter">
-			<span class="radio__content">
-				<svg aria-hidden="true" class="radio__icon" width="24" height="24" viewBox="0 0 24 24" fill="none"
-					xmlns="http://www.w3.org/2000/svg">
-					<path fill-rule="evenodd" clip-rule="evenodd"
-						d="M19.7274 20.4471C19.2716 19.1713 18.2672 18.0439 16.8701 17.2399C15.4729 16.4358 13.7611 16 12 16C10.2389 16 8.52706 16.4358 7.12991 17.2399C5.73276 18.0439 4.72839 19.1713 4.27259 20.4471"
-						stroke-width="2" stroke-linecap="round" />
-					<circle cx="12" cy="8" r="4" fill-rule="evenodd" clip-rule="evenodd" stroke-width="2"
-						stroke-linecap="round" />
-				</svg>
-				<span class="radio-text">Для себя</span>
-			</span>
-		</label>
-	</div>
-	<div class="catalog-filters__row">
-		<div class="select catalog-filters__select">
-			<div class="select__title">Минск</div>
-			<div class="select__content">
-				<input id="city0" class="select__input" type="radio" name="city" checked />
-				<label for="city0" tabindex="0" class="select__label" data-value="Минск">Минск</label>
-				<input id="city1" class="select__input" type="radio" name="city" />
-				<label for="city1" tabindex="0" class="select__label" data-value="Гродно">Гродно</label>
-			</div>
-		</div>
-		<div class="catalog-filters__item catalog-filter">
-			<button class="catalog-filter__btn" type="button" aria-expanded="false" aria-controls="category_filter"
-				id="category_filter_button">
-				Категория <span></span>
-			</button>
-			<div id="category_filter" class="catalog-filter__dropdown dropdown-filter"
-				aria-labelledby="category_filter_button">
-				<div class="dropdown-filter__inner">
-					<div class="dropdown-filter__row">
-						<div class="dropdown-filter__col dropdown-filter__col--cols_2">
-							<div class="dropdown-filter__col-item">
-								@@include('blocks/checkbox/checkbox.html', {
-								"text": "Спа, красота, здоровье"
-								})
-								@@include('blocks/checkbox/checkbox.html', {
-								"text": "Полеты"
-								})
-								@@include('blocks/checkbox/checkbox.html', {
-								"text": "Бары и рестораны"
-								})
-								@@include('blocks/checkbox/checkbox.html', {
-								"text": "Романтические подарки"
-								})
-								@@include('blocks/checkbox/checkbox.html', {
-								"text": "Мастер-классы и обучение"
-								})
-								@@include('blocks/checkbox/checkbox.html', {
-								"text": "Подарочные карты магазинов"
-								})
-							</div>
-							<div class="dropdown-filter__col-item">
-								@@include('blocks/checkbox/checkbox.html', {
-								"text": "Свидания и вечеринки"
-								})
-								@@include('blocks/checkbox/checkbox.html', {
-								"text": "Квесты"
-								})
-								@@include('blocks/checkbox/checkbox.html', {
-								"text": "Квесты"
-								})
-								@@include('blocks/checkbox/checkbox.html', {
-								"text": "Активный отдых"
-								})
-								@@include('blocks/checkbox/checkbox.html', {
-								"text": "На День Рождения"
-								})
-							</div>
-						</div>
-						<div class="dropdown-filter__col">
-							@@loop('blocks/checkbox/checkbox.html', [{
-							"content": true,
-							"title": "Универсальный сертификат",
-							"subtitle": "Сертификат на сумму"
-							}, {
-							"content": true,
-							"title": "Комбо",
-							"subtitle": "2 впечатления в 1"
-							}, {
-							"content": true,
-							"title": "Наборы",
-							"subtitle": "Сертификат на выбор"
-							}])
-						</div>
-					</div>
-					@@include('blocks/button/button.html', {
-					"class": "reset-btn",
-					"style": "reset",
-					"icon": "reset",
-					"text": "Сбросить"
-					})
-				</div>
-			</div>
-		</div>
-		<div class="catalog-filters__item catalog-filter">
-			<button class="catalog-filter__btn" type="button" aria-expanded="false" aria-controls="whom_filter"
-				id="whom_filter_button">
-				Кому <span></span>
-			</button>
-			<div id="whom_filter" class="catalog-filter__dropdown dropdown-filter" aria-labelledby="whom_filter_button">
-				<div class="dropdown-filter__inner">
-					<div class="dropdown-filter__col dropdown-filter__col--cols_2">
-						<div class="dropdown-filter__col-item">
-							@@include('blocks/checkbox/checkbox.html', {
-							"text": "Для нее"
-							})
-							@@include('blocks/checkbox/checkbox.html', {
-							"text": "Для него"
-							})
-							@@include('blocks/checkbox/checkbox.html', {
-							"text": "Детям"
-							})
-						</div>
-						<div class="dropdown-filter__col-item">
-							@@include('blocks/checkbox/checkbox.html', {
-							"text": "На двоих"
-							})
-							@@include('blocks/checkbox/checkbox.html', {
-							"text": "Для компании"
-							})
-							@@include('blocks/checkbox/checkbox.html', {
-							"text": "Семье"
-							})
-						</div>
-					</div>
-					@@include('blocks/button/button.html', {
-					"class": "reset-btn",
-					"style": "reset",
-					"icon": "reset",
-					"text": "Сбросить"
-					})
-				</div>
-			</div>
-		</div>
-		<div class="catalog-filters__item catalog-filter">
-			<button class="catalog-filter__btn" type="button" aria-expanded="false" aria-controls="price_filter"
-				id="price_filter_button">
-				Цена: От <span id="price-from">0</span> до <span id="price-to">3000</span>
-			</button>
-			@@include('blocks/price-filter/price-filter.html')
-		</div>
-		@@include('blocks/button/button.html', {
-		"style": "bg-green",
-		"class": "catalog-filters__btn",
-		"type": "submit",
-		"text": "Подобрать сертификат"
-		})
-	</div>
+<form action="#"
+      id="catalog-filters"
+      class="catalog-filters@@if(context.banner){ catalog-filters--@@banner}">
+    <button class="catalog-filters__back-btn"
+            type="button">Фильтр</button>
+    <div class="catalog-filters__radios">
+        @@loop('blocks/radio/radio.html', [{
+        "class": "catalog-filters__radio",
+        "style": "filter",
+        "name": "catalog-radio-filter",
+        "body": {
+        "text": "В подарок",
+        },
+        "icon": "blocks/icons/gift.html",
+        "isChecked": true
+        }, {
+        "class": "catalog-filters__radio",
+        "style": "filter",
+        "name": "catalog-radio-filter",
+        "body": {
+        "text": "Для себя",
+        },
+        "icon": "blocks/icons/user.html",
+        }])
+    </div>
+    <div class="catalog-filters__row">
+        <div class="select catalog-filters__select">
+            <div class="select__title">Минск</div>
+            <div class="select__content">
+                <input id="city0"
+                       class="select__input"
+                       type="radio"
+                       name="city"
+                       checked />
+                <label for="city0"
+                       tabindex="0"
+                       class="select__label"
+                       data-value="Минск">Минск</label>
+                <input id="city1"
+                       class="select__input"
+                       type="radio"
+                       name="city" />
+                <label for="city1"
+                       tabindex="0"
+                       class="select__label"
+                       data-value="Гродно">Гродно</label>
+            </div>
+        </div>
+        <div class="catalog-filters__item catalog-filter">
+            <button class="catalog-filter__btn"
+                    type="button"
+                    aria-expanded="false"
+                    aria-controls="category_filter"
+                    id="category_filter_button">
+                Категория <span></span>
+            </button>
+            <div id="category_filter"
+                 class="catalog-filter__dropdown dropdown-filter"
+                 aria-labelledby="category_filter_button">
+                <div class="dropdown-filter__inner">
+                    <div class="dropdown-filter__row">
+                        <div class="dropdown-filter__col dropdown-filter__col--cols_2">
+                            <div class="dropdown-filter__col-item">
+                                @@include('blocks/checkbox/checkbox.html', {
+                                "text": "Спа, красота, здоровье"
+                                })
+                                @@include('blocks/checkbox/checkbox.html', {
+                                "text": "Полеты"
+                                })
+                                @@include('blocks/checkbox/checkbox.html', {
+                                "text": "Бары и рестораны"
+                                })
+                                @@include('blocks/checkbox/checkbox.html', {
+                                "text": "Романтические подарки"
+                                })
+                                @@include('blocks/checkbox/checkbox.html', {
+                                "text": "Мастер-классы и обучение"
+                                })
+                                @@include('blocks/checkbox/checkbox.html', {
+                                "text": "Подарочные карты магазинов"
+                                })
+                            </div>
+                            <div class="dropdown-filter__col-item">
+                                @@include('blocks/checkbox/checkbox.html', {
+                                "text": "Свидания и вечеринки"
+                                })
+                                @@include('blocks/checkbox/checkbox.html', {
+                                "text": "Квесты"
+                                })
+                                @@include('blocks/checkbox/checkbox.html', {
+                                "text": "Квесты"
+                                })
+                                @@include('blocks/checkbox/checkbox.html', {
+                                "text": "Активный отдых"
+                                })
+                                @@include('blocks/checkbox/checkbox.html', {
+                                "text": "На День Рождения"
+                                })
+                            </div>
+                        </div>
+                        <div class="dropdown-filter__col">
+                            @@loop('blocks/checkbox/checkbox.html', [{
+                            "content": true,
+                            "title": "Универсальный сертификат",
+                            "subtitle": "Сертификат на сумму"
+                            }, {
+                            "content": true,
+                            "title": "Комбо",
+                            "subtitle": "2 впечатления в 1"
+                            }, {
+                            "content": true,
+                            "title": "Наборы",
+                            "subtitle": "Сертификат на выбор"
+                            }])
+                        </div>
+                    </div>
+                    @@include('blocks/button/button.html', {
+                    "class": "reset-btn",
+                    "style": "reset",
+                    "icon": "reset",
+                    "text": "Сбросить"
+                    })
+                </div>
+            </div>
+        </div>
+        <div class="catalog-filters__item catalog-filter">
+            <button class="catalog-filter__btn"
+                    type="button"
+                    aria-expanded="false"
+                    aria-controls="whom_filter"
+                    id="whom_filter_button">
+                Кому <span></span>
+            </button>
+            <div id="whom_filter"
+                 class="catalog-filter__dropdown dropdown-filter"
+                 aria-labelledby="whom_filter_button">
+                <div class="dropdown-filter__inner">
+                    <div class="dropdown-filter__col dropdown-filter__col--cols_2">
+                        <div class="dropdown-filter__col-item">
+                            @@include('blocks/checkbox/checkbox.html', {
+                            "text": "Для нее"
+                            })
+                            @@include('blocks/checkbox/checkbox.html', {
+                            "text": "Для него"
+                            })
+                            @@include('blocks/checkbox/checkbox.html', {
+                            "text": "Детям"
+                            })
+                        </div>
+                        <div class="dropdown-filter__col-item">
+                            @@include('blocks/checkbox/checkbox.html', {
+                            "text": "На двоих"
+                            })
+                            @@include('blocks/checkbox/checkbox.html', {
+                            "text": "Для компании"
+                            })
+                            @@include('blocks/checkbox/checkbox.html', {
+                            "text": "Семье"
+                            })
+                        </div>
+                    </div>
+                    @@include('blocks/button/button.html', {
+                    "class": "reset-btn",
+                    "style": "reset",
+                    "icon": "reset",
+                    "text": "Сбросить"
+                    })
+                </div>
+            </div>
+        </div>
+        <div class="catalog-filters__item catalog-filter">
+            <button class="catalog-filter__btn"
+                    type="button"
+                    aria-expanded="false"
+                    aria-controls="price_filter"
+                    id="price_filter_button">
+                Цена: От <span id="price-from">0</span> до <span id="price-to">3000</span>
+            </button>
+            @@include('blocks/price-filter/price-filter.html')
+        </div>
+        @@include('blocks/button/button.html', {
+        "style": "bg-green",
+        "class": "catalog-filters__btn",
+        "type": "submit",
+        "text": "Подобрать сертификат"
+        })
+    </div>
 </form>

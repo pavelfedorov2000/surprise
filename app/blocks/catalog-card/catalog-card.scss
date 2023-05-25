@@ -81,31 +81,27 @@
 
 			@media (any-hover: hover) {
 				&:hover {
-					&:before {
+					&::before {
 						background-color: var(--pink);
 					}
 				}
 			}
 
 			&-active {
-				&:before {
+				&::before {
 					background-color: var(--pink);
 				}
 			}
 		}
 
 		.slider-btn {
-			opacity: 0;
-			visibility: hidden;
-			pointer-events: none;
+			@include hide();
 		}
 
 		@media (any-hover: hover) {
 			&:hover {
 				.slider-btn {
-					opacity: 1;
-					visibility: visible;
-					pointer-events: auto;
+					@include show();
 				}
 			}
 		}

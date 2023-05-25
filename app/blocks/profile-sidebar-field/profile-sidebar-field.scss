@@ -1,0 +1,19 @@
+.profile-sidebar-field {
+    display: flex;
+    align-items: flex-end;
+    justify-content: space-between;
+    // .profile-sidebar-field__inner
+
+    &__inner {
+        @include row-grid(var(--offset-xxxs));
+        justify-items: start;
+        color: #000;
+    }
+
+    // .profile-sidebar-field__value
+
+    &__value {
+        font-size: 18px;
+        line-height: 22px;
+    }
+}

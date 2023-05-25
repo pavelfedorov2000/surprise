@@ -92,13 +92,13 @@
 
 		&_bg {
 			&-pink {
-				&:before {
+				&::before {
 					background-color: var(--pink-light);
 				}
 			}
 
 			&-green {
-				&:before {
+				&::before {
 					background-color: var(--green-light);
 				}
 			}

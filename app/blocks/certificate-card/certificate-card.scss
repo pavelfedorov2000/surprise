@@ -146,11 +146,11 @@
 			}
 
 			&~.radio-style {
-				&:before {
+				&::before {
 					border-color: #fff;
 				}
 
-				&:after {
+				&::after {
 					background-color: #fff;
 				}
 			}

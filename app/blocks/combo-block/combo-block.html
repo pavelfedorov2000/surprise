@@ -1,15 +1,17 @@
 <section class="combo-block certificate-content__section">
     <div class="combo-block__inner">
         @@include('blocks/combo-card/combo-card.html')
-        <img class="combo-block__plus"
-             src="assets/images/icons/combo-plus.svg"
-             alt="plus"
-             loading="lazy">
+        @@include('blocks/img/img.html', {
+        "class": "combo-block__plus",
+        "src": "assets/images/icons/combo-plus",
+        "format": "svg",
+        })
         @@include('blocks/combo-card/combo-card.html')
-        <img class="combo-block__equals"
-             src="assets/images/icons/combo-equals.svg"
-             alt="equals"
-             loading="lazy">
+        @@include('blocks/img/img.html', {
+        "class": "combo-block__equals",
+        "src": "assets/images/icons/combo-equals",
+        "format": "svg",
+        })
         @@include('blocks/combo-result-item/combo-result-item.html')
     </div>
 </section>

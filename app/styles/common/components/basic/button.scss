@@ -263,7 +263,7 @@
 		&_link-2 {
 			@extend %museo-300;
 
-			&:after {
+			&::after {
 				bottom: 3px;
 			}
 		}
@@ -310,7 +310,7 @@
 		&_link-4 {
 			position: relative;
 
-			&:after {
+			&::after {
 				bottom: 3px;
 			}
 
@@ -333,7 +333,7 @@
 		&_link-3 {
 			color: var(--color-default);
 
-			&:after {
+			&::after {
 				background-color: var(--color-default);
 			}
 
@@ -354,7 +354,7 @@
 						}
 					}
 
-					&:after {
+					&::after {
 						background-color: var(--pink);
 					}
 				}
@@ -364,7 +364,7 @@
 		&_link-4 {
 			color: var(--green);
 
-			&:after {
+			&::after {
 				background-color: var(--green);
 			}
 
@@ -385,7 +385,7 @@
 						}
 					}
 
-					&:after {
+					&::after {
 						background-color: var(--green);
 					}
 				}
@@ -411,7 +411,7 @@
 
 			&[aria-expanded="true"] {
 				span {
-					&:after {
+					&::after {
 						transform: rotate(180deg);
 					}
 				}

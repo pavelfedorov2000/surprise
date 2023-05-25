@@ -1,112 +1,64 @@
 .profile-sidebar {
-	@include row-grid(var(--offset-ls));
+    @include row-grid(var(--offset-ls));
 
-	@media(min-width: 1201px) {
-		@include sticky(var(--offset-xls));
-	}
+    @media(min-width: 1201px) {
+        @include sticky(var(--offset-xls));
+    }
 
-	@media(max-width: $sm) {
-		row-gap: var(--offset-m);
-	}
+    @media(max-width: $sm) {
+        row-gap: var(--offset-m);
+    }
 
-	// .profile-sidebar__title
+    // .profile-sidebar__title
 
-	&__title {
-		@extend %museo-700;
-		font-size: 24px;
-	}
+    &__title {
+        @extend %museo-700;
+        font-size: 24px;
+    }
 }
-
-.profile-sidebar-field {
-	display: flex;
-	align-items: flex-end;
-	justify-content: space-between;
-	// .profile-sidebar-field__inner
-
-	&__inner {
-		@include row-grid(var(--offset-xxxs));
-		justify-items: start;
-		color: #000;
-	}
-
-	// .profile-sidebar-field__value
-
-	&__value {
-		font-size: 18px;
-		line-height: 22px;
-	}
-}
-
-.profile-sidebar-info {
-	@include row-grid(var(--offset-m));
-	// .profile-sidebar-info__top
-
-	&__top {
-		display: flex;
-		align-items: center;
-	}
-
-	// .profile-sidebar-info__logo
-
-	&__logo {
-		flex-shrink: 0;
-		margin-right: var(--offset-s);
-		width: 32px;
-		height: 27px;
-	}
-
-	// .profile-sidebar-info__title
-
-	&__title {
-		@extend %museo-300;
-		font-size: 18px;
-		text-transform: uppercase;
-	}
-}
-
 
 .profile-block {
-	display: grid;
-	gap: 124px;
+    display: grid;
+    gap: 124px;
 
-	@media(min-width: 1201px) {
-		grid-template-columns: 312px 1fr;
-		align-content: start;
-		align-items: start;
-	}
+    @media(min-width: 1201px) {
+        grid-template-columns: 312px 1fr;
+        align-content: start;
+        align-items: start;
+    }
 
-	@media(max-width: $xl) {
-		grid-auto-rows: max-content;
-		row-gap: var(--offset-xxxl);
-	}
+    @media(max-width: $xl) {
+        grid-auto-rows: max-content;
+        row-gap: var(--offset-xxxl);
+    }
 
-	@media(max-width: $md) {
-		row-gap: var(--offset-l);
-	}
+    @media(max-width: $md) {
+        row-gap: var(--offset-l);
+    }
 
-	&__content {
-		@include row-grid(var(--offset-l));
+    &__content {
+        @include row-grid(var(--offset-l));
 
-		@media(max-width: $sm) {
-			row-gap: var(--offset-m);
-		}
-	}
+        @media(max-width: $sm) {
+            row-gap: var(--offset-m);
+        }
+    }
 
-	&__list {
-		@include row-grid(var(--offset-l));
+    &__list {
+        @include row-grid(var(--offset-l));
 
-		@media(max-width: $sm) {
-			row-gap: var(--offset-m);
-		}
-	}
+        @media(max-width: $sm) {
+            row-gap: var(--offset-m);
+        }
+    }
 
-	&__tabs {
-		@media(max-width: $lg) {
-			overflow-x: auto;
-		}
+    &__tabs {
+        @media(max-width: $lg) {
+            overflow-x: auto;
+        }
 
-		.tabs {
-			margin-bottom: 0;
-		}
-	}
+        .tabs {
+            margin-bottom: 0;
+        }
+    }
 }

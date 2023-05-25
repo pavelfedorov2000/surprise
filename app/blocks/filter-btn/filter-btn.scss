@@ -13,9 +13,7 @@
 
 	&.hidden {
 		@media(max-width: $xl) {
-			visibility: hidden;
-			opacity: 0;
-			pointer-events: none;
+			@include hide();
 		}
 	}
 

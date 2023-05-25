@@ -57,11 +57,8 @@
 		transform: translate(-50%, -50%);
 		width: var(--icon-size);
 		height: var(--icon-size);
-
-		path {
-			fill: var(--green);
-			transition: var(--transition) fill;
-		}
+        fill: var(--green);
+		transition: var(--transition) fill;
 	}
 
 	@media (any-hover: hover) {
@@ -70,9 +67,7 @@
 
 			#{$this} {
 				&__icon {
-					path {
-						fill: #fff;
-					}
+					fill: #fff;
 				}
 			}
 		}

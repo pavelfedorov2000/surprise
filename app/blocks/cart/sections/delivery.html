@@ -1,66 +1,115 @@
 <fieldset class="cart__section cart-section">
-	<legend class="section-title cart-section__title">Cпособ доставки</legend>
-	<div class="cart-section__inner">
-		<div class="select select--style_border select--type_price">
-			<div class="select__title">
-				<div class="select__wrap">
-					<span class="select__key">Доставка курьером (по Минску)</span>
-				</div>
-				<span class="select__value">7 руб.</span>
-			</div>
-			<div class="select__content">
-				<input id="car0" class="select__input" type="radio" name="CHOOSE_CAR" checked />
-				<label for="car0" tabindex="0" class="select__label">
-					<div class="select__wrap">
-						<span class="select__key" data-value="Доставка курьером (по Минску)">Доставка курьером (по
-							Минску)</span>
-					</div>
-					<div class="select__value" data-value="7 руб.">7 руб.</div>
-				</label>
-				<input id="car1" class="select__input" type="radio" name="CHOOSE_CAR" />
-				<label for="car1" tabindex="0" class="select__label">
-					<div class="select__wrap">
-						<span class="select__key" data-value="Доставка курьером (по Минску)">Доставка курьером (по
-							Минску)</span>
-					</div>
-					<div class="select__value" data-value="10 руб.">10 руб.</div>
-				</label>
-			</div>
-		</div>
-		<div class="cart-section__radios">
-			@@loop('blocks/radio/radio.html', [{
-			"inputClass": "js-radio-toggle",
-			"radioStyle": {
-			"mr": "xs"
-			},
-			"name": "DELIVERY_OPTION",
-			"inner": {
-			"title": "Доставить по вашему адресу",
-			"text": "Курьер доставит сертификат вам",
-			"dropdown": {
-			"label": "Ваш адрес",
-			"placeholder": "Улица, дом, квартира",
-			"placeholder2": "Имя получателя",
-			"placeholder3": "Номер телефона получателя",
-			}
-			},
-			"isChecked": true
-			}, {
-			"inputClass": "js-radio-toggle",
-			"radioStyle": {
-			"mr": "xs"
-			},
-			"name": "DELIVERY_OPTION",
-			"inner": {
-			"title": "Доставить как подарок",
-			"dropdown": {
-			"label": "Адрес доставки",
-			"placeholder": "Улица, дом, квартира",
-			"placeholder2": "Имя получателя",
-			"placeholder3": "Номер телефона получателя",
-			}
-			}
-			}])
-		</div>
-	</div>
+    <legend class="section-title cart-section__title">Cпособ доставки</legend>
+    <div class="cart-section__inner">
+        <div class="select select--style_border select--type_price">
+            <div class="select__title">
+                <div class="select__wrap">
+                    <span class="select__key">Доставка курьером (по Минску)</span>
+                </div>
+                <span class="select__value">7 руб.</span>
+            </div>
+            <div class="select__content">
+                <input id="car0"
+                       class="select__input"
+                       type="radio"
+                       name="DELIVERY_OPTION"
+                       checked />
+                <label for="car0"
+                       tabindex="0"
+                       class="select__label">
+                    <div class="select__wrap">
+                        <span class="select__key"
+                              data-value="Доставка курьером (по Минску)">Доставка курьером (по
+                            Минску)</span>
+                    </div>
+                    <div class="select__value"
+                         data-value="7 руб.">7 руб.</div>
+                </label>
+                <input id="car1"
+                       class="select__input"
+                       type="radio"
+                       name="DELIVERY_OPTION" />
+                <label for="car1"
+                       tabindex="0"
+                       class="select__label">
+                    <div class="select__wrap">
+                        <span class="select__key"
+                              data-value="Самовывоз Минск">Самовывоз Минск</span>
+                    </div>
+                    <div class="select__value"
+                         data-value="0 руб.">0 руб.</div>
+                </label>
+            </div>
+        </div>
+        <div class="tabs-content active">
+            <div class="cart-section__radios">
+                @@loop('blocks/radio/radio.html', [{
+                "inputClass": "js-radio-toggle",
+                "radioStyle": {
+                "mr": "xs"
+                },
+                "name": "DELIVERY_OPTION",
+                "inner": {
+                "title": "Доставить по вашему адресу",
+                "text": "Курьер доставит сертификат вам",
+                "dropdown": {
+                "label": "Ваш адрес",
+                "placeholder": "Улица, дом, квартира",
+                "placeholder2": "Имя получателя",
+                "placeholder3": "Номер телефона получателя",
+                }
+                },
+                "isChecked": true
+                }, {
+                "inputClass": "js-radio-toggle",
+                "radioStyle": {
+                "mr": "xs"
+                },
+                "name": "DELIVERY_OPTION",
+                "inner": {
+                "title": "Доставить как подарок",
+                "dropdown": {
+                "label": "Адрес доставки",
+                "placeholder": "Улица, дом, квартира",
+                "placeholder2": "Имя получателя",
+                "placeholder3": "Номер телефона получателя",
+                }
+                }
+                }])
+            </div>
+        </div>
+        <div class="tabs-content">
+            <div class="cart-section__radios">
+                @@loop('blocks/radio/radio.html', [{
+                "radioStyle": {
+                "mr": "xs"
+                },
+                "name": "PICKUP_OPTION",
+                "inner": {
+                "title": "Офис Surprise.by",
+                "text": "г. Минск, ул. Раковская, 18, офис 11<br>с 9:00 до 20:00, без выходных",
+                },
+                "isChecked": true
+                }, {
+                "radioStyle": {
+                "mr": "xs"
+                },
+                "name": "PICKUP_OPTION",
+                "inner": {
+                "title": "ТЦ GreenCity",
+                "text": 'г. Минск, ул. Притыцкого 156/1, первый этаж ( напротив магазина "Кравт").<br>с 10:00 до 20:00, без выходных',
+                }
+                }, {
+                "radioStyle": {
+                "mr": "xs"
+                },
+                "name": "PICKUP_OPTION",
+                "inner": {
+                "title": "Офис Surprise.by",
+                "text": "г. Минск, ул. Петра Мстиславца 11. 2 этаж (возле Stradivarius).<br>С 10:00 до 22:00, без выходных",
+                }
+                }])
+            </div>
+        </div>
+    </div>
 </fieldset>

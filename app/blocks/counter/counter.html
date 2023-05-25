@@ -1,22 +1,18 @@
 <div class="counter@@if(context.class){ @@class__counter}">
-    <button class="counter__btn js-minus-btn counter__btn--minus"
-            type="button"
-            aria-label="Минус один">
-        <svg class="icon"
-             aria-hidden="true">
-            <use xlink:href="assets/images/sprite.svg#minus"></use>
-        </svg>
-    </button>
+    @@include('blocks/button/button.html', {
+    "counter": true,
+    "class": "js-minus-btn counter__btn--minus",
+    "ariaLabel": "Минус один",
+    "sprite": "minus"
+    })
     <input type="number"
            class="counter__input"
            readonly
            value="@@value">
-    <button class="counter__btn js-plus-btn counter__btn--plus"
-            type="button"
-            aria-label="Плюс один">
-        <svg class="icon"
-             aria-hidden="true">
-            <use xlink:href="assets/images/sprite.svg#plus"></use>
-        </svg>
-    </button>
+    @@include('blocks/button/button.html', {
+    "counter": true,
+    "class": "js-plus-btn counter__btn--plus",
+    "ariaLabel": "Плюс один",
+    "sprite": "plus"
+    })
 </div>

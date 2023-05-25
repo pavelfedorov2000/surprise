@@ -4,14 +4,19 @@
 	</@@if(context.legend){legend}@@if(!context.legend){div}>
 	<div class="choose-package__items">
 		<div class="choose-package__item">
-			<label class="radio">
-				<input class="radio-input js-choose-package" type="radio" name="PACKAGE" checked aria-expanded="true">
-				<span class="radio-style radio-style--mr_xxs"></span>
-				<span class="radio-text">
-					<span class="radio__key">Коробка —</span>
-					<span class="radio__value">9 руб.</span>
-				</span>
-			</label>
+            @@include('blocks/radio/radio.html', {
+                "isChecked": true,
+                "radioStyle": {
+                    "mr": "xxs"
+                },
+                "inputClass": "js-choose-package",
+                "name": "PACKAGE",
+                "expanded": "true",
+                "text": {
+                    "key": "Коробка —",
+                    "value": "9 руб."
+                }
+            })
 			<div class="choose-package__dropdown">
 				@@include('blocks/img/img.html', {
 				"src": "assets/images/content/certificate",
@@ -21,14 +26,18 @@
 			</div>
 		</div>
 		<div class="choose-package__item">
-			<label class="radio">
-				<input class="radio-input js-choose-package" type="radio" name="PACKAGE" aria-expanded="false">
-				<span class="radio-style radio-style--mr_xxs"></span>
-				<span class="radio-text">
-					<span class="radio__key">Конверт —</span>
-					<span class="radio__value">3 руб.</span>
-				</span>
-			</label>
+            @@include('blocks/radio/radio.html', {
+                "radioStyle": {
+                    "mr": "xxs"
+                },
+                "inputClass": "js-choose-package",
+                "name": "PACKAGE",
+                "expanded": "false",
+                "text": {
+                    "key": "Конверт —",
+                    "value": "3 руб."
+                }
+            })
 			<div class="choose-package__dropdown" style="display: none;">
 				@@include('blocks/img/img.html', {
 				"src": "assets/images/content/certificate",
@@ -38,14 +47,18 @@
 			</div>
 		</div>
 		<div class="choose-package__item">
-			<label class="radio">
-				<input class="radio-input js-choose-package" type="radio" name="PACKAGE" aria-expanded="false">
-				<span class="radio-style radio-style--mr_xxs"></span>
-				<span class="radio-text">
-					<span class="radio__key">Электронный сертификат —</span>
-					<span class="radio__value">Бесплатно</span>
-				</span>
-			</label>
+            @@include('blocks/radio/radio.html', {
+                "radioStyle": {
+                    "mr": "xxs"
+                },
+                "inputClass": "js-choose-package",
+                "name": "PACKAGE",
+                "expanded": "false",
+                "text": {
+                    "key": "Электронный сертификат —",
+                    "value": "Бесплатно"
+                }
+            })
 			<div class="choose-package__dropdown" style="display: none;">
 				@@include('blocks/img/img.html', {
 				"src": "assets/images/content/certificate",

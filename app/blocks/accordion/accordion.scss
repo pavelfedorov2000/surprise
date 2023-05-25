@@ -46,7 +46,7 @@
         }
 
         &[aria-expanded="true"] {
-            &:before {
+            &::before {
                 transform: rotate(180deg);
             }
 
@@ -103,7 +103,7 @@
                     padding-left: 0;
                     padding-right: var(--offset-xl);
 
-                    &:before {
+                    &::before {
                         display: none;
                     }
                 }
@@ -122,7 +122,7 @@
                 &__toggle {
                     color: var(--green);
 
-                    &:before {
+                    &::before {
                         display: block;
                         left: auto;
                         right: 0;

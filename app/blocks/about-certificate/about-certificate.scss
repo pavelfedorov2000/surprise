@@ -1,6 +1,6 @@
 .about-certificate {
     @media(min-width: 1201px) {
-        &:before {
+        &::before {
             top: 400px;
             transform: none;
         }

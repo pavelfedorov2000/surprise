@@ -125,14 +125,14 @@
 	&--position {
 		&_top {
 			&-left {
-				&:before {
+				&::before {
 					top: 15px;
 					left: 15px;
 				}
 			}
 
 			&-right {
-				&:before {
+				&::before {
 					top: 15px;
 					right: 15px;
 				}
@@ -141,14 +141,14 @@
 
 		&_bottom {
 			&-left {
-				&:before {
+				&::before {
 					bottom: 15px;
 					left: 15px;
 				}
 			}
 
 			&-right {
-				&:before {
+				&::before {
 					right: 15px;
 					bottom: 15px;
 				}
@@ -177,7 +177,7 @@
 			}
 
 			&-blue {
-				&:before {
+				&::before {
 					background-color: var(--blue);
 				}
 			}

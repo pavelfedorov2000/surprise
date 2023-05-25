@@ -5,21 +5,30 @@
 	</div>
 	}
 	<div class="colors__list">
-		<label class="color color--style_bg-pink">
-			<input class="radio-input" type="radio" name="PACKAGE_COLOR" data-color="pink">
-			<span class="color__style" style="background-color: #F395A9;"></span>
-		</label>
-		<label class="color color--style_bg-yellow">
-			<input class="radio-input" type="radio" name="PACKAGE_COLOR" data-color="yellow">
-			<span class="color__style" style="background-color: #EEF651;"></span>
-		</label>
-		<label class="color color--style_bg-blue">
-			<input class="radio-input" type="radio" name="PACKAGE_COLOR" data-color="blue">
-			<span class="color__style" style="background-color: #1F5469;"></span>
-		</label>
-		<label class="color color--style_bg-green">
-			<input class="radio-input" type="radio" name="PACKAGE_COLOR" data-color="green">
-			<span class="color__style" style="background-color: #258884;"></span>
-		</label>
+        @@loop('blocks/radio/radio.html', [{
+            "name": "PACKAGE_COLOR",
+            "color": {
+                "hex": "#F395A9",
+                "name": "pink"
+            }
+        }, {
+            "name": "PACKAGE_COLOR",
+            "color": {
+                "hex": "#EEF651",
+                "name": "yellow"
+            }
+        }, {
+            "name": "PACKAGE_COLOR",
+            "color": {
+                "hex": "#1F5469",
+                "name": "blue"
+            }
+        }, {
+            "name": "PACKAGE_COLOR",
+            "color": {
+                "hex": "#258884",
+                "name": "green"
+            }
+        }])
 	</div>
 </div>

@@ -33,5 +33,16 @@ app.cart = {
                 $radio.find('.radio__dropdown').slideDown();
             }
         });
+
+        $('.cart-section .select__input').on('change', function () {
+            const $selectInput = $(this);
+            const index = $selectInput.attr('id').split('').at(-1);
+            const $tabsContent = $selectInput.closest('.cart-section').find('.tabs-content');
+
+            $tabsContent.each(function (_, $content) {
+                $($content).hide(); 
+            });
+            $tabsContent.eq(index).fadeIn();
+        });
     },
 };

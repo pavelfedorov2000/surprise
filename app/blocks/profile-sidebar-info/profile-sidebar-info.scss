@@ -1,0 +1,26 @@
+.profile-sidebar-info {
+    @include row-grid(var(--offset-m));
+    // .profile-sidebar-info__top
+
+    &__top {
+        display: flex;
+        align-items: center;
+    }
+
+    // .profile-sidebar-info__logo
+
+    &__logo {
+        flex-shrink: 0;
+        margin-right: var(--offset-s);
+        width: 32px;
+        height: 27px;
+    }
+
+    // .profile-sidebar-info__title
+
+    &__title {
+        @extend %museo-300;
+        font-size: 18px;
+        text-transform: uppercase;
+    }
+}

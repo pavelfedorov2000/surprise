@@ -6,19 +6,15 @@
 	z-index: 20;
 	background-color: #fff;
 	box-shadow: var(--bsh);
-	opacity: 0;
-	visibility: hidden;
-	pointer-events: none;
 	transition: var(--transition) all;
+    @include hide();
 
 	@media(min-width: 768px) {
 		border-radius: var(--brs);
 	}
 
 	&.active {
-		opacity: 1;
-		visibility: visible;
-		pointer-events: auto;
+		@include show();
 	}
 
 	&__list {
