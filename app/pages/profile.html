@@ -10,7 +10,11 @@
 			"current": "Личный кабинет"
 			})
 			<div class="page__top page__top--margin-bottom_ls">
-				<h1 class="page-title">Личный кабинет</h1>
+                @@include('blocks/title/title.html', {
+                "level": "1",
+                "class": "page-title",
+                "text": "Личный кабинет"
+                })
 			</div>
 			<div class="profile-block">
 				@@include('blocks/profile-sidebar/profile-sidebar.html')

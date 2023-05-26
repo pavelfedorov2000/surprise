@@ -7,10 +7,18 @@
             "current": "Активация сертификата"
             })
             <div class="page__top">
-                <h1 class="page-title">Активация сертификата</h1>
+                @@include('blocks/title/title.html', {
+                "level": "1",
+                "class": "page-title",
+                "text": "Активация сертификата"
+                })
             </div>
             <div class="card card-box card--style_bg-green">
-                <div class="card-box__title">Сертификат почти активен </div>
+                @@include('blocks/title/title.html', {
+                "tag": "div",
+                "class": "card-box__title",
+                "text": "Сертификат почти активен"
+                })
                 <p class="card-box__text">
                     Выбирайте любую услугу из нашего каталога на указанную сумму. Номинал сертификата можно разбить
                     на

@@ -1,119 +1,141 @@
-<section id="reviews" class="section">
-	<div class="container">
-		<div class="section__top">
-			<h2 class="section-title">Отзывы</h2>
-		</div>
-		<div class="slider-wrap">
-			@@include('blocks/swiper-btns/swiper-btns.html')
-			<div class="swiper reviews-slider">
-				<ul class="swiper-wrapper">
-					<li class="swiper-slide">
-						<article class="review">
-							<header class="review__top">
-								<div class="review__info">
-									<div class="review__wrap">
-										<div class="review__name">Екатерина</div>
-										<time class="date review__date" datetime="2022-07-04">04.07.2022</time>
-									</div>
-									@@include('blocks/rating/rating.html', {
-									"class": "review",
-									"num": "5.0"
-									})
-								</div>
-							</header>
-							<a href="#" class="review__title">
-								Дрифтомания — дрифт на спортивном авто
-							</a>
-							<p class="review__text">
-								<span>
-									Для тех кто любит автоспорт и дрифт в частности. Рекомендую однозначно! Помимо самих
-									навыков
-									получите ещё и массу
-									положительных эмоций
-									в перемешку с адреналином! Было круто, спасибо!
-								</span>
-								@@include('blocks/button/button.html', {
-								"style": "link-5",
-								"class": "more-text-btn",
-								"text": "Подробнее",
-								"ariaExpanded": true
-								})
-							</p>
-						</article>
-					</li>
-					<li class="swiper-slide">
-						<article class="review">
-							<header class="review__top">
-								<div class="review__info">
-									<div class="review__wrap">
-										<div class="review__name">Екатерина</div>
-										<time class="date review__date" datetime="2022-07-04">04.07.2022</time>
-									</div>
-									@@include('blocks/rating/rating.html', {
-									"class": "review",
-									"num": "5.0"
-									})
-								</div>
-							</header>
-							<a href="#" class="review__title">
-								Худи, платья, свитшоты и костюмы от LIMI:
-								авторские вышивки и яркие цвета
-							</a>
-							<p class="review__text">
-								<span>
-									Вообще я не любитель такого стиля, преимущественно спортивного, но! купила платье
-									оранжевое
-									-
-									это просто песня!
-									После стирки
-									как новое, гладить не надо,
-								</span>
-								@@include('blocks/button/button.html', {
-								"style": "link-5",
-								"class": "more-text-btn",
-								"text": "Подробнее",
-								"ariaExpanded": true
-								})
-							</p>
-						</article>
-					</li>
-					<li class="swiper-slide">
-						<article class="review">
-							<header class="review__top">
-								<div class="review__info">
-									<div class="review__wrap">
-										<div class="review__name">Екатерина</div>
-										<time class="date review__date" datetime="2022-07-04">04.07.2022</time>
-									</div>
-									@@include('blocks/rating/rating.html', {
-									"class": "review",
-									"num": "5.0"
-									})
-								</div>
-							</header>
-							<a href="#" class="review__title">
-								Дрифтомания — дрифт на спортивном авто
-							</a>
-							<p class="review__text">
-								<span>
-									Не в восторге! вообще ничего не поняли, сертификат был на одни круг плюс фото, 1-ое:
-									вариантов
-									выбрать фото
-									предложено не было, по этому с ухмылкой а не с улыбкой, будет лежать пылиться в
-									конверте
-								</span>
-								@@include('blocks/button/button.html', {
-								"style": "link-5",
-								"class": "more-text-btn",
-								"text": "Подробнее",
-								"ariaExpanded": true
-								})
-							</p>
-						</article>
-					</li>
-				</ul>
-			</div>
-		</div>
-		@@include("blocks/load-more/load-more.html")
-	</div>
+<section id="reviews"
+         class="section">
+    <div class="container">
+        <div class="section__top">
+            @@include('blocks/title/title.html', {
+            "level": "2",
+            "class": "section-title",
+            "text": "Отзывы"
+            })
+        </div>
+        <div class="slider-wrap">
+            @@include('blocks/swiper-btns/swiper-btns.html')
+            <div class="swiper reviews-slider">
+                <ul class="swiper-wrapper">
+                    <li class="swiper-slide">
+                        <article class="review">
+                            <header class="review__top">
+                                <div class="review__info">
+                                    <div class="review__wrap">
+                                        <div class="review__name">Екатерина</div>
+                                        @@include('blocks/datetime/datetime.html', {
+                                        "class": "date review__date",
+                                        "date": "04.07.2022",
+                                        "formattedDate": "2022-07-04"
+                                        })
+                                    </div>
+                                    @@include('blocks/rating/rating.html', {
+                                    "class": "review",
+                                    "num": "5.0"
+                                    })
+                                </div>
+                            </header>
+                            @@include('blocks/title/title.html', {
+                            "tag": "a",
+                            "class": "review__title",
+                            "text": "Дрифтомания — дрифт на спортивном авто"
+                            })
+                            <p class="review__text">
+                                <span>
+                                    Для тех кто любит автоспорт и дрифт в частности. Рекомендую однозначно! Помимо самих
+                                    навыков
+                                    получите ещё и массу
+                                    положительных эмоций
+                                    в перемешку с адреналином! Было круто, спасибо!
+                                </span>
+                                @@include('blocks/button/button.html', {
+                                "style": "link-5",
+                                "class": "more-text-btn",
+                                "text": "Подробнее",
+                                "ariaExpanded": true
+                                })
+                            </p>
+                        </article>
+                    </li>
+                    <li class="swiper-slide">
+                        <article class="review">
+                            <header class="review__top">
+                                <div class="review__info">
+                                    <div class="review__wrap">
+                                        <div class="review__name">Екатерина</div>
+                                        @@include('blocks/datetime/datetime.html', {
+                                        "class": "date review__date",
+                                        "date": "04.07.2022",
+                                        "formattedDate": "2022-07-04"
+                                        })
+                                    </div>
+                                    @@include('blocks/rating/rating.html', {
+                                    "class": "review",
+                                    "num": "5.0"
+                                    })
+                                </div>
+                            </header>
+                            @@include('blocks/title/title.html', {
+                            "tag": "a",
+                            "class": "review__title",
+                            "text": "Худи, платья, свитшоты и костюмы от LIMI: авторские вышивки и яркие цвета"
+                            })
+                            <p class="review__text">
+                                <span>
+                                    Вообще я не любитель такого стиля, преимущественно спортивного, но! купила платье
+                                    оранжевое
+                                    -
+                                    это просто песня!
+                                    После стирки
+                                    как новое, гладить не надо,
+                                </span>
+                                @@include('blocks/button/button.html', {
+                                "style": "link-5",
+                                "class": "more-text-btn",
+                                "text": "Подробнее",
+                                "ariaExpanded": true
+                                })
+                            </p>
+                        </article>
+                    </li>
+                    <li class="swiper-slide">
+                        <article class="review">
+                            <header class="review__top">
+                                <div class="review__info">
+                                    <div class="review__wrap">
+                                        <div class="review__name">Екатерина</div>
+                                        @@include('blocks/datetime/datetime.html', {
+                                        "class": "date review__date",
+                                        "date": "04.07.2022",
+                                        "formattedDate": "2022-07-04"
+                                        })
+                                    </div>
+                                    @@include('blocks/rating/rating.html', {
+                                    "class": "review",
+                                    "num": "5.0"
+                                    })
+                                </div>
+                            </header>
+                            @@include('blocks/title/title.html', {
+                            "tag": "a",
+                            "class": "review__title",
+                            "text": "Дрифтомания — дрифт на спортивном авто"
+                            })
+                            <p class="review__text">
+                                <span>
+                                    Не в восторге! вообще ничего не поняли, сертификат был на одни круг плюс фото, 1-ое:
+                                    вариантов
+                                    выбрать фото
+                                    предложено не было, по этому с ухмылкой а не с улыбкой, будет лежать пылиться в
+                                    конверте
+                                </span>
+                                @@include('blocks/button/button.html', {
+                                "style": "link-5",
+                                "class": "more-text-btn",
+                                "text": "Подробнее",
+                                "ariaExpanded": true
+                                })
+                            </p>
+                        </article>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        @@include("blocks/load-more/load-more.html")
+    </div>
 </section>

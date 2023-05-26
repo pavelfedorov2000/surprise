@@ -10,7 +10,11 @@
             "current": "Корзина"
             })
             <div class="page__top page__top--margin-bottom_l">
-                <h1 class="page-title">Ваш заказ</h1>
+                @@include('blocks/title/title.html', {
+                "level": "1",
+                "class": "page-title",
+                "text": "Ваш заказ"
+                })
             </div>
             @@include('blocks/cart/cart.html')
         </div>

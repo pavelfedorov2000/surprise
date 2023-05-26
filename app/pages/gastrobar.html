@@ -1,26 +1,30 @@
 @@include("blocks/head/head.html", {"title": "Гастробар Правда"})
 <div class="wrapper">
-	@@include("blocks/layout/layout.html")
-	<main class="page page--padding page--with_decor">
-		<div class="container">
-			@@include('blocks/breadcrumbs/breadcrumbs.html', {
-			"current": "Гастробар 'Правда'"
-			})
-			<div class="page__top">
-				<h1 class="page-title">Гастробар "Правда"</h1>
-			</div>
-		</div>
-		@@include('blocks/establishment-about/establishment-about.html')
-		@@include('blocks/partners-offers/partners-offers.html')
-		@@include('blocks/aside-section/aside-section.html', {
-		"title": "Вы также можете перейти в раздел",
-		"text": "и посмотреть другие подходящие сертификаты",
-		"btn": "Перейти в “бары и рестораны”"
-		})
-		@@include('blocks/worth-try-section/worth-try-section.html')
-		@@include('blocks/establishment-address/establishment-address.html')
-	</main>
-	@@include("blocks/footer/footer.html")
+    @@include("blocks/layout/layout.html")
+    <main class="page page--padding page--with_decor">
+        <div class="container">
+            @@include('blocks/breadcrumbs/breadcrumbs.html', {
+            "current": "Гастробар 'Правда'"
+            })
+            <div class="page__top">
+                @@include('blocks/title/title.html', {
+                "level": "1",
+                "class": "page-title",
+                "text": 'Гастробар "Правда"'
+                })
+            </div>
+        </div>
+        @@include('blocks/establishment-about/establishment-about.html')
+        @@include('blocks/partners-offers/partners-offers.html')
+        @@include('blocks/aside-section/aside-section.html', {
+        "title": "Вы также можете перейти в раздел",
+        "text": "и посмотреть другие подходящие сертификаты",
+        "btn": "Перейти в “бары и рестораны”"
+        })
+        @@include('blocks/worth-try-section/worth-try-section.html')
+        @@include('blocks/establishment-address/establishment-address.html')
+    </main>
+    @@include("blocks/footer/footer.html")
 </div>
 @@include("blocks/link/link.html")
 </body>

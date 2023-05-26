@@ -3,7 +3,11 @@
         <div class="contact-us__inner">
             <div class="contact-us__content">
                 <div>
-                    <div class="section-title contact-us__title">Анастасия Бакшевич</div>
+                    @@include('blocks/title/title.html', {
+                    "tag": "div",
+                    "class": "section-title contact-us__title",
+                    "text": "Анастасия Бакшевич"
+                    })
                     <p>Специалист по работе с ключевыми клиентами</p>
                 </div>
                 @@include('blocks/admin/admin.html', {
@@ -11,7 +15,11 @@
                 })
             </div>
             <div class="contact-us__form card">
-                <h2 class="section-title contact-us__form-title">Оставить заявку</h2>
+                @@include('blocks/title/title.html', {
+                "level": "2",
+                "class": "section-title contact-us__form-title",
+                "text": "Оставить заявку"
+                })
                 <form class="form js-form">
                     @@loop('blocks/form-item/form-item.html', [{
                     "label": "Ваше имя",

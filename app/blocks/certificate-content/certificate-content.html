@@ -91,7 +91,11 @@
             </li>
         </ul>
         <section class="card card-box card--style_bg-pink card-box--padding_xl">
-            <h2 class="card-box__title">Особенности</h2>
+            @@include('blocks/title/title.html', {
+            "level": "2",
+            "class": "card-box__title",
+            "text": "Особенности"
+            })
             <ul class="check-list">
                 <li>Необходимо иметь с собой паспорт.</li>
                 <li>Отмена записи не менее, чем за 12 часов.</li>
@@ -119,7 +123,11 @@
                      src="assets/images/icons/attention.png"
                      alt=""
                      loading="lazy">
-                <h4 class="card__title">Важно знать</h4>
+                @@include('blocks/title/title.html', {
+                "level": "4",
+                "class": "card__title",
+                "text": "Важно знать"
+                })
                 <ul class="check-list card__list">
                     <li>
                         Вы можете взять с собой сына или дочь старше 12 лет, если готовы сопровождать их
@@ -129,9 +137,9 @@
                     <li>Кататься можно каждый день при благоприятных погодных условиях.</li>
                 </ul>
                 @@include('blocks/button/button.html', {
-                    "href": "#",
-                    "style": "link-2",
-                    "text": "Подробнее"
+                "href": "#",
+                "style": "link-2",
+                "text": "Подробнее"
                 })
             </section>
             <section class="card">
@@ -139,7 +147,11 @@
                      src="assets/images/icons/lock.png"
                      alt=""
                      loading="lazy">
-                <h4 class="card__title">О безопасности</h4>
+                @@include('blocks/title/title.html', {
+                "level": "4",
+                "class": "card__title",
+                "text": "О безопасности"
+                })
                 <ul class="check-list">
                     <li>Спасательный жилет. Если не умеете плавать, жилет — это ваша безопасность. </li>
                     <li>
@@ -156,7 +168,11 @@
             </section>
         </div>
         <section class="certificate-content__subsection">
-            <h2 class="certificate-content__subsection-title">Как проходит SUP-серфинг?</h2>
+            @@include('blocks/title/title.html', {
+            "level": "2",
+            "class": "certificate-content__subsection-title",
+            "text": "Как проходит SUP-серфинг?"
+            })
             <ul class="check-list">
                 <li>Подробный инструктаж. Вам объяснят, как и что делать, как держать равновесие и
                     помогать кому-то, кто не
@@ -169,8 +185,11 @@
             </ul>
         </section>
         <section class="certificate-content__subsection">
-            <h2 class="certificate-content__subsection-title">Кому подойдет сертификат на SUP-серфинг в
-                подарок?</h2>
+            @@include('blocks/title/title.html', {
+            "level": "2",
+            "class": "certificate-content__subsection-title",
+            "text": "Кому подойдет сертификат на SUP-серфинг в подарок?"
+            })
             <ul class="check-list">
                 <li>Второй половинке. Проведите пару часов наедине с любимым человеком.</li>
                 <li>Компании друзей. Собирайте всех и устраивайте соревнования на бордах!</li>

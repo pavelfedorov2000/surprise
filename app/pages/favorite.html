@@ -7,7 +7,11 @@
             "current": "Избранное"
             })
             <div class="page__top page__top--margin-bottom_ls page__top--orientation_row">
-                <h1 class="page-title page-title--size_xs">Избранное</h1>
+                @@include('blocks/title/title.html', {
+                "level": "1",
+                "class": "page-title page-title--size_xs",
+                "text": "Избранное"
+                })
                 <div class="select catalog-sort__select select--type_sort">
                     <div class="select__title">
                         <span>По дате добавления</span>

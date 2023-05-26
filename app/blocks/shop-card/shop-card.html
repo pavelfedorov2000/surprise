@@ -1,32 +1,52 @@
 <li>
-	<article class="shop-card">
-		<img class="shop-card__logo" src="@@src" alt="фото" width="180" height="29" loading="lazy">
-		<div class="contact">
-			<svg class="icon mr-20" aria-hidden="true">
-				<use xlink:href="assets/images/sprite.svg#pin"></use>
-			</svg>
-			<div class="contact__content">
-				<div class="contact__title">@@address</div>
-				<p>@@descr</p>
-			</div>
-		</div>
-		<div class="contact">
-			<svg class="icon mr-20" aria-hidden="true">
-				<use xlink:href="assets/images/sprite.svg#clock"></use>
-			</svg>
-			<div class="contact__content">
-				<div class="contact__title">Работаем @@timetable</div>
-				<p>без выходных</p>
-			</div>
-		</div>
-		<div class="contact">
-			<svg class="icon mr-20" aria-hidden="true">
-				<use xlink:href="assets/images/sprite.svg#cash"></use>
-			</svg>
-			<div class="contact__content">
-				<div class="contact__title">Стоимость</div>
-				<p>Бесплатно</p>
-			</div>
-		</div>
-	</article>
+    <article class="shop-card">
+        <img class="shop-card__logo"
+             src="@@src"
+             alt="фото"
+             width="180"
+             height="29"
+             loading="lazy">
+        <div class="contact">
+            <svg class="icon mr-20"
+                 aria-hidden="true">
+                <use xlink:href="assets/images/sprite.svg#pin"></use>
+            </svg>
+            <div class="contact__content">
+                @@include('blocks/title/title.html', {
+                "tag": "div",
+                "class": "contact__title",
+                "text": "@@address"
+                })
+                <p>@@descr</p>
+            </div>
+        </div>
+        <div class="contact">
+            <svg class="icon mr-20"
+                 aria-hidden="true">
+                <use xlink:href="assets/images/sprite.svg#clock"></use>
+            </svg>
+            <div class="contact__content">
+                @@include('blocks/title/title.html', {
+                "tag": "div",
+                "class": "contact__title",
+                "text": "Работаем @@timetable"
+                })
+                <p>без выходных</p>
+            </div>
+        </div>
+        <div class="contact">
+            <svg class="icon mr-20"
+                 aria-hidden="true">
+                <use xlink:href="assets/images/sprite.svg#cash"></use>
+            </svg>
+            <div class="contact__content">
+                @@include('blocks/title/title.html', {
+                "tag": "div",
+                "class": "contact__title",
+                "text": "Стоимость"
+                })
+                <p>Бесплатно</p>
+            </div>
+        </div>
+    </article>
 </li>

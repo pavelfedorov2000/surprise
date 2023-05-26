@@ -1,53 +1,71 @@
 @@include("blocks/head/head.html", {"title": "Результаты поиска (не найдено)"})
 <div class="wrapper">
-	@@include("blocks/layout/layout.html")
-	<main class="page page--padding page--padding-top_ls">
-		<div class="container">
-			@@include('blocks/breadcrumbs/breadcrumbs.html', {
-			"current": "Поиск по сайту"
-			})
-			<div class="page__top page__top--margin-bottom_m">
-				<h1 class="page-title page-title--size_xs">По Вашему запросу ничего не найдено</h1>
-			</div>
-			<div class="tabs-block">
-				<div class="tabs-block__title">Вместе с этим запросом ищут</div>
-				<div class="tabs">
-					<a href="#" class="tab active">Подарок маме</a>
-					<a href="#" class="tab">Подарок маме</a>
-					<a href="#" class="tab">Подарок маме</a>
-					<a href="#" class="tab">Подарок маме</a>
-					<a href="#" class="tab">Подарок маме</a>
-					<a href="#" class="tab">Подарок маме</a>
-				</div>
-			</div>
-			<h2 class="section-title section-title--mb_ls">Возможно, Вам понравится:</h2>
-			<div class="catalog-grid">
-				@@loop('blocks/catalog-card/catalog-card.html', [{
-				"src": "01",
-				"favorite": true,
-				"title": "Комплексная мойка авто с нанесением кварцевого покрытия",
-				"text": "Пригласите подругу в шикарное место и насладитесь авторскими блюдами!",
-				"bottom": true,
-				"priceFrom": "59",
-				"priceTo": "118"
-				}, {
-				"src": "02",
-				"favorite": true,
-				"title": "Винный безлимит в ресторане Fridays",
-				"text": "Пригласите подругу в шикарное место и насладитесь авторскими блюдами!",
-				"bottom": true
-				}, {
-				"src": "03",
-				"favorite": true,
-				"title": "Винный безлимит в ресторане Fridays",
-				"text": "Пригласите подругу в шикарное место и насладитесь авторскими блюдами!",
-				"bottom": true
-				}])
-			</div>
-			@@include("blocks/load-more/load-more.html")
-		</div>
-	</main>
-	@@include('blocks/footer/footer.html')
+    @@include("blocks/layout/layout.html")
+    <main class="page page--padding page--padding-top_ls">
+        <div class="container">
+            @@include('blocks/breadcrumbs/breadcrumbs.html', {
+            "current": "Поиск по сайту"
+            })
+            <div class="page__top page__top--margin-bottom_m">
+                @@include('blocks/title/title.html', {
+                "level": "1",
+                "class": "page-title page-title--size_xs",
+                "text": "По Вашему запросу ничего не найдено"
+                })
+            </div>
+            <div class="tabs-block">
+                @@include('blocks/title/title.html', {
+                "tag": "div",
+                "class": "tabs-block__title",
+                "text": "Вместе с этим запросом ищут"
+                })
+                <div class="tabs">
+                    <a href="#"
+                       class="tab active">Подарок маме</a>
+                    <a href="#"
+                       class="tab">Подарок маме</a>
+                    <a href="#"
+                       class="tab">Подарок маме</a>
+                    <a href="#"
+                       class="tab">Подарок маме</a>
+                    <a href="#"
+                       class="tab">Подарок маме</a>
+                    <a href="#"
+                       class="tab">Подарок маме</a>
+                </div>
+            </div>
+            @@include('blocks/title/title.html', {
+            "level": "2",
+            "class": "section-title section-title--mb_ls",
+            "text": "Возможно, Вам понравится:"
+            })
+            <div class="catalog-grid">
+                @@loop('blocks/catalog-card/catalog-card.html', [{
+                "src": "01",
+                "favorite": true,
+                "title": "Комплексная мойка авто с нанесением кварцевого покрытия",
+                "text": "Пригласите подругу в шикарное место и насладитесь авторскими блюдами!",
+                "bottom": true,
+                "priceFrom": "59",
+                "priceTo": "118"
+                }, {
+                "src": "02",
+                "favorite": true,
+                "title": "Винный безлимит в ресторане Fridays",
+                "text": "Пригласите подругу в шикарное место и насладитесь авторскими блюдами!",
+                "bottom": true
+                }, {
+                "src": "03",
+                "favorite": true,
+                "title": "Винный безлимит в ресторане Fridays",
+                "text": "Пригласите подругу в шикарное место и насладитесь авторскими блюдами!",
+                "bottom": true
+                }])
+            </div>
+            @@include("blocks/load-more/load-more.html")
+        </div>
+    </main>
+    @@include('blocks/footer/footer.html')
 </div>
 @@include("blocks/link/link.html")
 </body>

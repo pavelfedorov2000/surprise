@@ -1,23 +1,30 @@
 <div class="promo-combo">
-	<span class="mob-rating">
-		<span class="mob-rating__num">5.0</span>
-	</span>
-	<div class="promo-combo__img promo-combo__img--left">
-		@@include('blocks/img/img.html', {
-		"class": "img-cover",
-		"src": "assets/images/content/catalog/01",
-		"width": "720",
-		"height": "450",
-		})
-	</div>
-	<div class="promo-combo__img promo-combo__img--right">
-		@@include('blocks/img/img.html', {
-		"class": "img-cover",
-		"src": "assets/images/content/catalog/02",
-		"width": "720",
-		"height": "450",
-		})
-	</div>
-	<div class="promo-combo__title promo-combo__title--1 promo-combo__title--style_bg-green">Массаж</div>
-	<div class="promo-combo__title promo-combo__title--2 promo-combo__title--style_bg-blue">Массаж</div>
+    <span class="mob-rating">
+        <span class="mob-rating__num">5.0</span>
+    </span>
+    <div class="promo-combo__img promo-combo__img--left">
+        @@include('blocks/img/img.html', {
+        "class": "img-cover",
+        "src": "assets/images/content/catalog/01",
+        "width": "720",
+        "height": "450",
+        })
+    </div>
+    <div class="promo-combo__img promo-combo__img--right">
+        @@include('blocks/img/img.html', {
+        "class": "img-cover",
+        "src": "assets/images/content/catalog/02",
+        "width": "720",
+        "height": "450",
+        })
+    </div>
+    @@loop('blocks/title/title.html', [{
+    "tag": "div",
+    "class": "promo-combo__title promo-combo__title--1 promo-combo__title--style_bg-green",
+    "text": "Массаж"
+    }, {
+    "tag": "div",
+    "class": "promo-combo__title promo-combo__title--1 promo-combo__title--style_bg-blue",
+    "text": "Массаж"
+    }])
 </div>

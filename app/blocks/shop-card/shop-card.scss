@@ -1,20 +1,20 @@
 .shop-card {
-	@include row-grid(var(--offset-xl));
-	justify-items: start;
-	padding: var(--offset-xl);
-	height: 100%;
-	background-color: #fff;
-	box-shadow: var(--bsh);
-	border-radius: 15px;
+    @include row-grid(var(--offset-xl));
+    justify-items: start;
+    padding: var(--offset-xl);
+    height: 100%;
+    background-color: var(--white);
+    box-shadow: var(--bsh);
+    border-radius: 15px;
 
-	@media(max-width: $sm) {
-		row-gap: 20px;
-		padding: var(--offset-xl) 20px;
-	}
+    @media(max-width: $sm) {
+        row-gap: 20px;
+        padding: var(--offset-xl) 20px;
+    }
 
-	&__logo {
-		@media(max-width: $sm) {
-			margin-bottom: 20px;
-		}
-	}
+    &__logo {
+        @media(max-width: $sm) {
+            margin-bottom: 20px;
+        }
+    }
 }

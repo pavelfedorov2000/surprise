@@ -6,7 +6,11 @@
         "format": "svg",
         "alt": "surprise logo"
         })
-        <div class="profile-sidebar-info__title">Участник клуба клиентов</div>
+        @@include('blocks/title/title.html', {
+        "tag": "div",
+        "class": "profile-sidebar-info__title",
+        "text": "Участник клуба клиентов"
+        })
     </div>
     <dl class="leader leader--orientation_col leader--item_space-between">
         <div class="leader__item">

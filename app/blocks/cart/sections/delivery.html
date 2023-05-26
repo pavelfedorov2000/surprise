@@ -1,5 +1,9 @@
 <fieldset class="cart__section cart-section">
-    <legend class="section-title cart-section__title">Cпособ доставки</legend>
+    @@include('blocks/title/title.html', {
+    "tag": "legend",
+    "class": "section-title cart-section__title",
+    "text": "Cпособ доставки"
+    })
     <div class="cart-section__inner">
         <div class="select select--style_border select--type_price">
             <div class="select__title">

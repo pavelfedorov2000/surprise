@@ -9,8 +9,8 @@
         display: flex;
         align-items: center;
         justify-content: space-between;
-        background-color: #fff;
-        border: 1px solid #fff;
+        background-color: var(--white);
+        border: 1px solid var(--white);
         transition: var(--transition) box-shadow,
             var(--transition) border-color;
 
@@ -104,7 +104,7 @@
         box-shadow: var(--bsh);
         border-radius: var(--brs);
         z-index: 30;
-        background-color: #fff;
+        background-color: var(--white);
         display: none;
 
         @media(max-width: $md) {

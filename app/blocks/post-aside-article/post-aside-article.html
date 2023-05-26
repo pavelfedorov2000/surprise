@@ -1,20 +1,22 @@
 <article class="post-aside-article">
-	<div class="post-aside-article__img">
-		@@include('blocks/img/img.html', {
-		"src": "assets/images/content/catalog/05",
-		"format": "png",
-		"width": "125",
-		"height": "86"
-		})
-	</div>
-	<div class="post-aside-article__content">
-		<div class="post-aside-article__title">
-			Шеф-ужин в шикарном гастробаре
-		</div>
-		@@include('blocks/button/button.html', {
-		"href": "#",
-		"style": "link-4",
-		"text": "Читать далее"
-		})
-	</div>
+    <div class="post-aside-article__img">
+        @@include('blocks/img/img.html', {
+        "src": "assets/images/content/catalog/05",
+        "format": "png",
+        "width": "125",
+        "height": "86"
+        })
+    </div>
+    <div class="post-aside-article__content">
+        @@include('blocks/title/title.html', {
+        "tag": "div",
+        "class": "post-aside-article__title",
+        "text": "Шеф-ужин в шикарном гастробаре"
+        })
+        @@include('blocks/button/button.html', {
+        "href": "#",
+        "style": "link-4",
+        "text": "Читать далее"
+        })
+    </div>
 </article>

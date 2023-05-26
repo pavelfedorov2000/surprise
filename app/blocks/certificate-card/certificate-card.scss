@@ -1,159 +1,159 @@
 .certificate-card {
-	$this: &;
+    $this: &;
 
-	position: relative;
-	padding: 0;
-	transition: var(--transition) background-color;
+    position: relative;
+    padding: 0;
+    transition: var(--transition) background-color;
 
-	@media (any-hover: hover) {
-		&:hover {
-			background-color: var(--green-light);
-		}
-	}
+    @media (any-hover: hover) {
+        &:hover {
+            background-color: var(--green-light);
+        }
+    }
 
-	&__inner {
-		padding: var(--offset-xl) 55px var(--offset-xl) var(--section-padding-xs);
-		border-radius: var(--brs-card-xl);
-		transition: var(--transition) background-color, var(--transition) color;
+    &__inner {
+        padding: var(--offset-xl) 55px var(--offset-xl) var(--section-padding-xs);
+        border-radius: var(--brs-card-xl);
+        transition: var(--transition) background-color, var(--transition) color;
 
-		@media(min-width: 768px) {
-			display: flex;
-		}
+        @media(min-width: 768px) {
+            display: flex;
+        }
 
-		@media(max-width: $md) {
-			padding: var(--offset-l) var(--offset-m);
-		}
-	}
+        @media(max-width: $md) {
+            padding: var(--offset-l) var(--offset-m);
+        }
+    }
 
-	// .certificate-card__radiobutton
+    // .certificate-card__radiobutton
 
-	&__radiobutton {
-		cursor: pointer;
-		position: absolute;
-		top: 0;
-		right: 0;
-		bottom: 0;
-		left: 0;
-	}
+    &__radiobutton {
+        cursor: pointer;
+        position: absolute;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        left: 0;
+    }
 
-	.radio-style {
-		display: none;
+    .radio-style {
+        display: none;
 
-		@media(min-width: 768px) {
-			display: inline-block;
-			position: absolute;
-			left: var(--offset-l);
-			top: 50%;
-			transform: translateY(-50%);
-		}
-	}
+        @media(min-width: 768px) {
+            display: inline-block;
+            position: absolute;
+            left: var(--offset-l);
+            top: 50%;
+            transform: translateY(-50%);
+        }
+    }
 
-	// .certificate-card__img
+    // .certificate-card__img
 
-	&__img {
-		border-radius: var(--brs);
+    &__img {
+        border-radius: var(--brs);
 
-		@media(min-width: 768px) {
-			flex-shrink: 0;
-			margin-right: var(--offset-xl);
-			width: calc(287 / 860 * 100%);
-			min-width: 200px;
-		}
+        @media(min-width: 768px) {
+            flex-shrink: 0;
+            margin-right: var(--offset-xl);
+            width: calc(287 / 860 * 100%);
+            min-width: 200px;
+        }
 
-		@media(max-width: $md) {
-			margin-bottom: var(--offset-m);
-		}
+        @media(max-width: $md) {
+            margin-bottom: var(--offset-m);
+        }
 
-		img {
-			border-radius: var(--brs);
-		}
-	}
+        img {
+            border-radius: var(--brs);
+        }
+    }
 
-	// .certificate-card__content
+    // .certificate-card__content
 
-	&__content {
-		display: flex;
-		flex-direction: column;
-		align-items: flex-start;
-	}
+    &__content {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+    }
 
-	// .certificate-card__title
+    // .certificate-card__title
 
-	&__title {
-		@extend %museo-700;
-		font-size: 20px;
-		margin-bottom: var(--offset-xxs);
+    &__title {
+        @extend %museo-700;
+        font-size: 20px;
+        margin-bottom: var(--offset-xxs);
 
-		@media(max-width: $md) {
-			font-family: 'Museo Sans Cyrl 500',
-				sans-serif;
-			font-weight: 500;
-			font-size: 18px;
-		}
-	}
+        @media(max-width: $md) {
+            font-family: 'Museo Sans Cyrl 500',
+                sans-serif;
+            font-weight: 500;
+            font-size: 18px;
+        }
+    }
 
-	&__leader {
-		margin-bottom: var(--offset-m);
+    &__leader {
+        margin-bottom: var(--offset-m);
 
-		@media(max-width: $sm) {
-			flex-direction: column;
-		}
-	}
+        @media(max-width: $sm) {
+            flex-direction: column;
+        }
+    }
 
-	// .certificate-card__info-text
+    // .certificate-card__info-text
 
-	&__info-text {
-		@extend %museo-300;
+    &__info-text {
+        @extend %museo-300;
 
-		&:not(:last-child) {
-			margin-bottom: var(--offset-xs);
-		}
+        &:not(:last-child) {
+            margin-bottom: var(--offset-xs);
+        }
 
-		&--bold {
-			@extend %museo-500;
-		}
+        &--bold {
+            @extend %museo-500;
+        }
 
-		a {
-			position: relative;
-			z-index: 2;
-			@extend %museo-500;
-		}
-	}
+        a {
+            position: relative;
+            z-index: 2;
+            @extend %museo-500;
+        }
+    }
 
-	.radio-input {
-		&:checked {
-			&~ {
-				#{$this}__inner {
-					background-color: var(--green);
-					color: #fff;
+    .radio-input {
+        &:checked {
+            & ~ {
+                #{$this}__inner {
+                    background-color: var(--green);
+                    color: var(--white);
 
-					.menu-link {
-						@media (any-hover: hover) {
-							&:hover {
-								color: var(--pink);
-							}
-						}
-					}
+                    .menu-link {
+                        @media (any-hover: hover) {
+                            &:hover {
+                                color: var(--pink);
+                            }
+                        }
+                    }
 
-					#{$this}__leader {
+                    #{$this}__leader {
 
-						dt,
-						dd span {
-							color: #fff;
-						}
-					}
-				}
-			}
+                        dt,
+                        dd span {
+                            color: var(--white);
+                        }
+                    }
+                }
+            }
 
-			&~.radio-style {
-				&::before {
-					border-color: #fff;
-				}
+            & ~ .radio-style {
+                &::before {
+                    border-color: var(--white);
+                }
 
-				&::after {
-					background-color: #fff;
-				}
-			}
-		}
-	}
+                &::after {
+                    background-color: var(--white);
+                }
+            }
+        }
+    }
 }

@@ -1,32 +1,36 @@
 @@include("blocks/head/head.html", {"title": "Корпоративным клиентам"})
 <div class="wrapper">
-	@@include("blocks/layout/layout.html")
-	<main class="page page--with_decor page--padding">
-		<div class="container">
-			@@include('blocks/breadcrumbs/breadcrumbs.html', {
-			"current": "Корпоративным клиентам"
-			})
-			<div class="page__top">
-				<h1 class="page-title page__title page__title--margin-bottom_s">Корпоративным клиентам</h1>
-				<p class="page__top-text page__top-text--size_xl">
-					Универсальные подарочные сертификаты для сотрудников, коллег, клиентов и партнеров
-				</p>
-				@@include('blocks/button/button.html', {
-				"href": "tel:+375297333368",
-				"style": "bg-pink",
-				"class": "page__top-btn",
-				"sprite": "phone-white",
-				"text": "Позвонить"
-				})
-			</div>
-		</div>
-		@@include('blocks/ordered-tape-section/how-it-works.html')
-		@@include('blocks/choose-section/choose-section.html')
-		@@include('blocks/benefits-section/benefits-section.html')
-		@@include('blocks/partners-section/partners-section.html')
-		@@include('blocks/corporate-certificates/corporate-certificates.html')
-		@@include('blocks/contact-us/contact-us.html')
-	</main>
+    @@include("blocks/layout/layout.html")
+    <main class="page page--with_decor page--padding">
+        <div class="container">
+            @@include('blocks/breadcrumbs/breadcrumbs.html', {
+            "current": "Корпоративным клиентам"
+            })
+            <div class="page__top">
+                @@include('blocks/title/title.html', {
+                "level": "1",
+                "class": "page-title page__title page__title--margin-bottom_s",
+                "text": "Корпоративным клиентам"
+                })
+                <p class="page__top-text page__top-text--size_xl">
+                    Универсальные подарочные сертификаты для сотрудников, коллег, клиентов и партнеров
+                </p>
+                @@include('blocks/button/button.html', {
+                "href": "tel:+375297333368",
+                "style": "bg-pink",
+                "class": "page__top-btn",
+                "sprite": "phone-white",
+                "text": "Позвонить"
+                })
+            </div>
+        </div>
+        @@include('blocks/ordered-tape-section/how-it-works.html')
+        @@include('blocks/choose-section/choose-section.html')
+        @@include('blocks/benefits-section/benefits-section.html')
+        @@include('blocks/partners-section/partners-section.html')
+        @@include('blocks/corporate-certificates/corporate-certificates.html')
+        @@include('blocks/contact-us/contact-us.html')
+    </main>
 </div>
 @@include('blocks/footer/footer.html')
 @@include("blocks/link/link.html")

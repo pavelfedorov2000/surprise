@@ -145,7 +145,7 @@
             width: var(--offset-xs);
             height: var(--offset-xs);
             border-radius: 50%;
-            background-color: #fff;
+            background-color: var(--white);
             opacity: 0;
             transition: var(--transition) opacity;
         }
@@ -154,12 +154,12 @@
     &.active,
     &[aria-selected="true"] {
         background-color: var(--green);
-        color: #fff;
+        color: var(--white);
 
         #{$this} {
             &__circle {
                 &::before {
-                    border-color: #fff;
+                    border-color: var(--white);
                 }
 
                 &::after {
@@ -172,7 +172,7 @@
     @media (any-hover: hover) {
         &:hover {
             background-color: var(--green);
-            color: #fff;
+            color: var(--white);
         }
     }
 
@@ -207,7 +207,7 @@
             font-size: 16px;
             padding: var(--offset-xs) var(--offset-m);
             border-radius: var(--brs);
-            border-left: 3px solid #fff;
+            border-left: 3px solid var(--white);
             background-color: transparent;
             transition: var(--transition) all;
 
@@ -261,13 +261,13 @@
             &.active,
             &[aria-selected="true"] {
                 @extend %museo-700;
-                color: #fff;
+                color: var(--white);
                 background-color: var(--green);
 
                 #{$this} {
                     &__circle {
                         &::before {
-                            border-color: #fff;
+                            border-color: var(--white);
                         }
 
                         &::after {

@@ -1,5 +1,9 @@
 <section class="certificate-reviews">
-    <h2 class="section-title">Отзывы</h2>
+    @@include('blocks/title/title.html', {
+    "level": "2",
+    "class": "section-title",
+    "text": "Отзывы"
+    })
     @@if(!context.combo){
     @@include('blocks/reviews-metrics/reviews-metrics.html')
     }
@@ -9,8 +13,11 @@
                 <div class="review__info">
                     <div class="review__wrap">
                         <div class="review__name">Екатерина</div>
-                        <time class="date review__date"
-                              datetime="2022-07-04">04.07.2022</time>
+                        @@include('blocks/datetime/datetime.html', {
+                        "class": "date review__date",
+                        "date": "04.07.2022",
+                        "formattedDate": "2022-07-04"
+                        })
                     </div>
                     @@include('blocks/rating/rating.html', {
                     "class": "review",
@@ -110,8 +117,11 @@
                 <div class="review__info">
                     <div class="review__wrap">
                         <div class="review__name">Екатерина</div>
-                        <time class="date review__date"
-                              datetime="2022-07-04">04.07.2022</time>
+                        @@include('blocks/datetime/datetime.html', {
+                        "class": "date review__date",
+                        "date": "04.07.2022",
+                        "formattedDate": "2022-07-04"
+                        })
                     </div>
                     @@include('blocks/rating/rating.html', {
                     "class": "review",
@@ -187,8 +197,11 @@
                 <div class="review__info">
                     <div class="review__wrap">
                         <div class="review__name">Yana</div>
-                        <time class="date review__date"
-                              datetime="2022-07-04">04.07.2022</time>
+                        @@include('blocks/datetime/datetime.html', {
+                        "class": "date review__date",
+                        "date": "04.07.2022",
+                        "formattedDate": "2022-07-04"
+                        })
                     </div>
                     @@include('blocks/rating/rating.html', {
                     "class": "review",

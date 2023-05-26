@@ -1,13 +1,18 @@
 <li>
-	<a href="#" class="small-card">
-		@@include('blocks/img/img.html', {
-		"class": "small-card__img",
-		"src": "@@src",
-		"width": "80",
-		"height": "80",
-		})
-		@@if(context.title){
-		<span class="small-card__title">@@title</span>
-		}
-	</a>
+    <a href="#"
+       class="small-card">
+        @@include('blocks/img/img.html', {
+        "class": "small-card__img",
+        "src": "@@src",
+        "width": "80",
+        "height": "80",
+        })
+        @@if(context.title){
+        @@include('blocks/title/title.html', {
+        "tag": "span",
+        "class": "small-card__title",
+        "text": "@@title"
+        })
+        }
+    </a>
 </li>

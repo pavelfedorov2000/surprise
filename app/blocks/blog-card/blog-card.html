@@ -1,27 +1,31 @@
-<li @@if(context.swiper){class="swiper-slide" }>
-	<article class="blog-card">
-		<time class="blog-card__date" datetime="2022-07-04">
-			<span>04</span>
-			<span>Июля</span>
-			<span>2022</span>
-		</time>
-		<div class="blog-card__img">
-			@@include('blocks/img/img.html', {
-			"class": "img-cover",
-			"src": "assets/images/content/blog-item",
-			"width": "438",
-			"height": "280",
-			})
-		</div>
-		<div class="blog-card__content">
-			<div class="blog-card__title">
-				<a class="full-link" href="#">
-					Винный безлимит в ресторане Fridays
-				</a>
-			</div>
-			<p class="blog-card__text">
-				Сомелье поделится традициями бельгийского пивоварения и научит основным пивным стилям.
-			</p>
-		</div>
-	</article>
+<li @@if(context.swiper){class="swiper-slide"
+    }>
+    <article class="blog-card">
+        @@include('blocks/datetime/datetime.html', {
+        "class": "blog-card__date",
+        "formattedDate": "2022-07-04",
+        "day": "04",
+        "month": "Июля",
+        "year": "2022"
+        })
+        <div class="blog-card__img">
+            @@include('blocks/img/img.html', {
+            "class": "img-cover",
+            "src": "assets/images/content/blog-item",
+            "width": "438",
+            "height": "280",
+            })
+        </div>
+        <div class="blog-card__content">
+            <div class="blog-card__title">
+                <a class="full-link"
+                   href="#">
+                    Винный безлимит в ресторане Fridays
+                </a>
+            </div>
+            <p class="blog-card__text">
+                Сомелье поделится традициями бельгийского пивоварения и научит основным пивным стилям.
+            </p>
+        </div>
+    </article>
 </li>

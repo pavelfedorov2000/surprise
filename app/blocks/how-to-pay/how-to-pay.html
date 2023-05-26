@@ -1,7 +1,11 @@
 <section class="section how-to-pay">
     <div class="container">
         <div class="section__top">
-            <h2 class="section-title">Как оплатить покупку?</h2>
+            @@include('blocks/title/title.html', {
+            "level": "2",
+            "class": "section-title",
+            "text": "Как оплатить покупку?"
+            })
         </div>
         <p class="color-default how-to-pay__subtitle">Для оплаты заказа Вы можете использовать один из доступных методов:</p>
         <ul class="how-to-pay__items">

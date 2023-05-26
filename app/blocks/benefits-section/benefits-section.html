@@ -1,84 +1,88 @@
 <section class="section">
-	<div class="container">
-		<div class="section__top">
-			<h2 class="section-title">Наши преимущества</h2>
-		</div>
-		<ul class="adaptive-grid-row benefits-list adaptive-grid-row--row-gap_xl">
-			<li class="icons-item benefits-list__item">
-				<span
-					class="icon-circle icons-item__icon icon-circle--style_bg-pink icon-circle--position_bottom-right">
-					<svg class="icon" aria-hidden="true">
-						<use xlink:href="assets/images/sprite.svg#cash"></use>
-					</svg>
-				</span>
-				<div class="icons-item__content">
-					<div class="icons-item__title">Оперативность</div>
-					<p class="icons-item__text">Красивый конверт с подарком день в день или электронный сертификат на
-						почту – моментальнло</p>
-				</div>
-			</li>
-			<li class="icons-item benefits-list__item">
-				<span
-					class="icon-circle icons-item__icon icon-circle--style_bg-pink icon-circle--position_bottom-right">
-					<svg class="icon" aria-hidden="true">
-						<use xlink:href="assets/images/sprite.svg#gift"></use>
-					</svg>
-				</span>
-				<div class="icons-item__content">
-					<div class="icons-item__title">Отсрочка платежа на 15 дней</div>
-					<p class="icons-item__text">Можно порадовать свой персонал сегодня, а оплатить заказ в течении 15
-						дней </p>
-				</div>
-			</li>
-			<li class="icons-item benefits-list__item">
-				<span
-					class="icon-circle icons-item__icon icon-circle--style_bg-pink icon-circle--position_bottom-right">
-					<svg class="icon" aria-hidden="true">
-						<use xlink:href="assets/images/sprite.svg#calendar"></use>
-					</svg>
-				</span>
-				<div class="icons-item__content">
-					<div class="icons-item__title">Оплата по б/н без НДС</div>
-					<p class="icons-item__text">Мы работаем без НДС</p>
-				</div>
-			</li>
-			<li class="icons-item benefits-list__item">
-				<span
-					class="icon-circle icons-item__icon icon-circle--style_bg-pink icon-circle--position_bottom-right">
-					<svg class="icon" aria-hidden="true">
-						<use xlink:href="assets/images/sprite.svg#gift"></use>
-					</svg>
-				</span>
-				<div class="icons-item__content">
-					<div class="icons-item__title">Подберем подарок </div>
-					<p class="icons-item__text">Подберем подарок для сотрудников</p>
-				</div>
-			</li>
-			<li class="icons-item benefits-list__item">
-				<span
-					class="icon-circle icons-item__icon icon-circle--style_bg-pink icon-circle--position_bottom-right">
-					<svg class="icon" aria-hidden="true">
-						<use xlink:href="assets/images/sprite.svg#gift"></use>
-					</svg>
-				</span>
-				<div class="icons-item__content">
-					<div class="icons-item__title">Бесплатная доставка</div>
-					<p class="icons-item__text">Доставка в любую точку Минска</p>
-				</div>
-			</li>
-			<li class="icons-item benefits-list__item">
-				<span
-					class="icon-circle icons-item__icon icon-circle--style_bg-pink icon-circle--position_bottom-right">
-					<svg class="icon" aria-hidden="true">
-						<use xlink:href="assets/images/sprite.svg#gift"></use>
-					</svg>
-				</span>
-				<div class="icons-item__content">
-					<div class="icons-item__title">Одинаковая стоимость услуг</div>
-					<p class="icons-item__text">Цены такие же, как и у наших партнеров</p>
-				</div>
-			</li>
-		</ul>
-		@@include("blocks/load-more/load-more.html")
-	</div>
+    <div class="container">
+        <div class="section__top">
+            @@include('blocks/title/title.html', {
+            "level": "2",
+            "class": "section-title",
+            "text": "Наши преимущества"
+            })
+        </div>
+        <ul class="adaptive-grid-row benefits-list adaptive-grid-row--row-gap_xl">
+            <li class="icons-item benefits-list__item">
+                <span class="icon-circle icons-item__icon icon-circle--style_bg-pink icon-circle--position_bottom-right">
+                    <svg class="icon"
+                         aria-hidden="true">
+                        <use xlink:href="assets/images/sprite.svg#cash"></use>
+                    </svg>
+                </span>
+                <div class="icons-item__content">
+                    <div class="icons-item__title">Оперативность</div>
+                    <p class="icons-item__text">Красивый конверт с подарком день в день или электронный сертификат на
+                        почту – моментальнло</p>
+                </div>
+            </li>
+            <li class="icons-item benefits-list__item">
+                <span class="icon-circle icons-item__icon icon-circle--style_bg-pink icon-circle--position_bottom-right">
+                    <svg class="icon"
+                         aria-hidden="true">
+                        <use xlink:href="assets/images/sprite.svg#gift"></use>
+                    </svg>
+                </span>
+                <div class="icons-item__content">
+                    <div class="icons-item__title">Отсрочка платежа на 15 дней</div>
+                    <p class="icons-item__text">Можно порадовать свой персонал сегодня, а оплатить заказ в течении 15
+                        дней </p>
+                </div>
+            </li>
+            <li class="icons-item benefits-list__item">
+                <span class="icon-circle icons-item__icon icon-circle--style_bg-pink icon-circle--position_bottom-right">
+                    <svg class="icon"
+                         aria-hidden="true">
+                        <use xlink:href="assets/images/sprite.svg#calendar"></use>
+                    </svg>
+                </span>
+                <div class="icons-item__content">
+                    <div class="icons-item__title">Оплата по б/н без НДС</div>
+                    <p class="icons-item__text">Мы работаем без НДС</p>
+                </div>
+            </li>
+            <li class="icons-item benefits-list__item">
+                <span class="icon-circle icons-item__icon icon-circle--style_bg-pink icon-circle--position_bottom-right">
+                    <svg class="icon"
+                         aria-hidden="true">
+                        <use xlink:href="assets/images/sprite.svg#gift"></use>
+                    </svg>
+                </span>
+                <div class="icons-item__content">
+                    <div class="icons-item__title">Подберем подарок </div>
+                    <p class="icons-item__text">Подберем подарок для сотрудников</p>
+                </div>
+            </li>
+            <li class="icons-item benefits-list__item">
+                <span class="icon-circle icons-item__icon icon-circle--style_bg-pink icon-circle--position_bottom-right">
+                    <svg class="icon"
+                         aria-hidden="true">
+                        <use xlink:href="assets/images/sprite.svg#gift"></use>
+                    </svg>
+                </span>
+                <div class="icons-item__content">
+                    <div class="icons-item__title">Бесплатная доставка</div>
+                    <p class="icons-item__text">Доставка в любую точку Минска</p>
+                </div>
+            </li>
+            <li class="icons-item benefits-list__item">
+                <span class="icon-circle icons-item__icon icon-circle--style_bg-pink icon-circle--position_bottom-right">
+                    <svg class="icon"
+                         aria-hidden="true">
+                        <use xlink:href="assets/images/sprite.svg#gift"></use>
+                    </svg>
+                </span>
+                <div class="icons-item__content">
+                    <div class="icons-item__title">Одинаковая стоимость услуг</div>
+                    <p class="icons-item__text">Цены такие же, как и у наших партнеров</p>
+                </div>
+            </li>
+        </ul>
+        @@include("blocks/load-more/load-more.html")
+    </div>
 </section>

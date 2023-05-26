@@ -1,70 +1,74 @@
 <fieldset class="cart__section cart-section cart__section--span-2">
-	<legend class="section-title cart-section__title">Данные покупателя</legend>
-	<div class="cart-section__fields">
+    @@include('blocks/title/title.html', {
+    "tag": "legend",
+    "class": "section-title cart-section__title",
+    "text": "Данные покупателя"
+    })
+    <div class="cart-section__fields">
         @@loop('blocks/form-item/form-item.html', [{
-            "class": "cart-section__field",
-            "label": "Ваше имя",
-            "placeholder": "Ваше имя",
-            "required": true,
-            "requiredMessage": "Поле не может быть пустым"
+        "class": "cart-section__field",
+        "label": "Ваше имя",
+        "placeholder": "Ваше имя",
+        "required": true,
+        "requiredMessage": "Поле не может быть пустым"
         }, {
-            "class": "cart-section__field",
-            "inputType": "tel",
-            "label": "Ваш номер телефона",
-            "placeholder": "+ 375 ()",
-            "required": true,
-            "requiredMessage": "Поле не может быть пустым"
+        "class": "cart-section__field",
+        "inputType": "tel",
+        "label": "Ваш номер телефона",
+        "placeholder": "+ 375 ()",
+        "required": true,
+        "requiredMessage": "Поле не может быть пустым"
         }])
-		<div class="cart-section__field form-item cart-section__field--span-2">
-			<span class="form-label">Выберите вариант для отправки письма, подтверждающего статус вашего заказа:</span>
-			<div class="cart-section__radios">
-				@@loop('blocks/radio/radio.html', [{
-				"inputClass": "js-radio-toggle",
-				"radioStyle": {
-				"mr": "xs"
-				},
-				"name": "BUYER_CONTACT",
-				"inner": {
-				"text": "Viber",
-				"dropdown": {
-				"inputType": "tel",
-				"placeholder": "+ 375 ()"
-				}
-				},
-				"isChecked": true
-				}, {
-				"inputClass": "js-radio-toggle",
-				"radioStyle": {
-				"mr": "xs"
-				},
-				"name": "BUYER_CONTACT",
-				"inner": {
-				"text": "Viber",
-				"dropdown": {
-				"inputType": "tel",
-				"placeholder": "+ 375 ()"
-				}
-				}
-				}, {
-				"inputClass": "js-radio-toggle",
-				"radioStyle": {
-				"mr": "xs"
-				},
-				"name": "BUYER_CONTACT",
-				"inner": {
-				"text": "E-mail",
-				"dropdown": {
-				"inputType": "email",
-				"placeholder": "surprise@mail.ru"
-				}
-				}
-				}])
-			</div>
-		</div>
+        <div class="cart-section__field form-item cart-section__field--span-2">
+            <span class="form-label">Выберите вариант для отправки письма, подтверждающего статус вашего заказа:</span>
+            <div class="cart-section__radios">
+                @@loop('blocks/radio/radio.html', [{
+                "inputClass": "js-radio-toggle",
+                "radioStyle": {
+                "mr": "xs"
+                },
+                "name": "BUYER_CONTACT",
+                "inner": {
+                "text": "Viber",
+                "dropdown": {
+                "inputType": "tel",
+                "placeholder": "+ 375 ()"
+                }
+                },
+                "isChecked": true
+                }, {
+                "inputClass": "js-radio-toggle",
+                "radioStyle": {
+                "mr": "xs"
+                },
+                "name": "BUYER_CONTACT",
+                "inner": {
+                "text": "Viber",
+                "dropdown": {
+                "inputType": "tel",
+                "placeholder": "+ 375 ()"
+                }
+                }
+                }, {
+                "inputClass": "js-radio-toggle",
+                "radioStyle": {
+                "mr": "xs"
+                },
+                "name": "BUYER_CONTACT",
+                "inner": {
+                "text": "E-mail",
+                "dropdown": {
+                "inputType": "email",
+                "placeholder": "surprise@mail.ru"
+                }
+                }
+                }])
+            </div>
+        </div>
         @@include('blocks/form-item/form-item.html', {
-            "class": "cart-section__field cart-section__field--span-2",
-            "label": "Комментарии к заказу:",
-            "placeholder": "Ваш комментарий"
+        "class": "cart-section__field cart-section__field--span-2",
+        "label": "Комментарии к заказу:",
+        "placeholder": "Ваш комментарий"
         })
-	</div>
+    </div>
 </fieldset>

@@ -1,34 +1,38 @@
 <section class="section">
-	<div class="container">
-		<div class="section__top">
-			<h2 class="section-title">Все предложения партнера</h2>
-		</div>
-		<ul class="catalog-grid">
-			@@loop('blocks/catalog-card/catalog-card.html', [{
-			"favorite": true,
-			"src": "08",
-			"title": "Шеф-ужин в шикарном гастробаре",
-			"text": "Пригласите подругу в шикарное место и насладитесь авторскими блюдами!",
-			"bottom": true,
-			"price": "300",
-			"withoutButtons": true
-			}, {
-			"favorite": true,
-			"src": "08",
-			"title": "Шеф-ужин в шикарном гастробаре",
-			"text": "Пригласите подругу в шикарное место и насладитесь авторскими блюдами!",
-			"bottom": true,
-			"price": "300",
-			"withoutButtons": true
-			}, {
-			"favorite": true,
-			"src": "08",
-			"title": "Шеф-ужин в шикарном гастробаре",
-			"text": "Пригласите подругу в шикарное место и насладитесь авторскими блюдами!",
-			"bottom": true,
-			"price": "300",
-			"withoutButtons": true
-			}])
-		</ul>
-	</div>
+    <div class="container">
+        <div class="section__top">
+            @@include('blocks/title/title.html', {
+            "level": "2",
+            "class": "section-title",
+            "text": "Все предложения партнера"
+            })
+        </div>
+        <ul class="catalog-grid">
+            @@loop('blocks/catalog-card/catalog-card.html', [{
+            "favorite": true,
+            "src": "08",
+            "title": "Шеф-ужин в шикарном гастробаре",
+            "text": "Пригласите подругу в шикарное место и насладитесь авторскими блюдами!",
+            "bottom": true,
+            "price": "300",
+            "withoutButtons": true
+            }, {
+            "favorite": true,
+            "src": "08",
+            "title": "Шеф-ужин в шикарном гастробаре",
+            "text": "Пригласите подругу в шикарное место и насладитесь авторскими блюдами!",
+            "bottom": true,
+            "price": "300",
+            "withoutButtons": true
+            }, {
+            "favorite": true,
+            "src": "08",
+            "title": "Шеф-ужин в шикарном гастробаре",
+            "text": "Пригласите подругу в шикарное место и насладитесь авторскими блюдами!",
+            "bottom": true,
+            "price": "300",
+            "withoutButtons": true
+            }])
+        </ul>
+    </div>
 </section>

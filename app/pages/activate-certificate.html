@@ -1,20 +1,22 @@
 @@include("blocks/head/head.html", {"title": "Активация сертификата"})
-<!-- @@include("blocks/head/no-js.html") -->
 <div class="wrapper">
-	@@include("blocks/layout/layout.html")
-	<main class="page page--padding page--with_decor">
-		<div class="container">
-			@@include('blocks/breadcrumbs/breadcrumbs.html', {
-			"current": "Активация сертификата"
-			})
-			<div class="page__top page__top--margin-bottom_m">
-				<h1 class="page-title">Активация сертификата</h1>
-			</div>
-			@@include('blocks/activate-certificate/activate-certificate.html')
-		</div>
-	</main>
-	@@include("blocks/footer/footer.html")
-	<!-- @@include("blocks/popups/popups.html") -->
+    @@include("blocks/layout/layout.html")
+    <main class="page page--padding page--with_decor">
+        <div class="container">
+            @@include('blocks/breadcrumbs/breadcrumbs.html', {
+            "current": "Активация сертификата"
+            })
+            <div class="page__top page__top--margin-bottom_m">
+                @@include('blocks/title/title.html', {
+                "level": "1",
+                "class": "page-title",
+                "text": "Активация сертификата"
+                })
+            </div>
+            @@include('blocks/activate-certificate/activate-certificate.html')
+        </div>
+    </main>
+    @@include("blocks/footer/footer.html")
 </div>
 @@include("blocks/link/link.html")
 </body>

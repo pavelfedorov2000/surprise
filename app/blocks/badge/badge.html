@@ -4,7 +4,10 @@
         @@text
         }
         @@if(context.date){
-        <time datetime="2022-12-13">13.12.2022</time>
+        @@include('blocks/datetime/datetime.html', {
+        "formattedDate": "2022-12-13",
+        "date": "13.12.2022"
+        })
         }
     </span>
 </span>

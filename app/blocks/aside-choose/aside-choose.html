@@ -1,106 +1,145 @@
-<form action="#" id="aside-choose" class="aside-choose">
-	@@include('blocks/close-btn/close-btn.html', {
-	"class": "aside-choose",
-	"visibilityClass": "pc-hidden",
-	"ariaLabel": "Закрыть окно выбора"
-	})
-	@@if(!context.combo){
-	<fieldset data-tab class="aside-choose__item aside-choose__item--with_mb">
-		<legend class="aside-choose__item-title">1. Выбери трассу</legend>
-		<div class="radio-inputs">
-			@@loop('blocks/radio/radio.html', [{
-			"style": "quantity",
-			"name": "TRACK_KM",
-			"text": "10 км",
-			"isChecked": true
-			}, {
-			"style": "quantity",
-			"name": "TRACK_KM",
-			"text": "14 км"
-			}, {
-			"style": "quantity",
-			"name": "TRACK_KM",
-			"text": "25 км"
-			}])
-		</div>
-	</fieldset>
-	<fieldset data-tab class="aside-choose__item aside-choose__item--with_mb">
-		<legend class="aside-choose__item-title">2. Выбери количество человек</legend>
-		<div class="radio-inputs">
-			@@loop('blocks/radio/radio.html', [{
-			"style": "quantity",
-			"name": "PERSONS",
-			"text": "1",
-			"isChecked": true
-			}, {
-			"style": "quantity",
-			"name": "PERSONS",
-			"text": "2"
-			}, {
-			"style": "quantity",
-			"name": "PERSONS",
-			"text": "3"
-			}, {
-			"style": "quantity",
-			"name": "PERSONS",
-			"text": "4"
-			}, {
-			"style": "quantity",
-			"name": "PERSONS",
-			"text": "5"
-			}])
-		</div>
-	</fieldset>
-	<fieldset data-tab class="aside-choose__item">
-		<legend class="aside-choose__item-title">3. Выбери машину</legend>
-		<div class="select select--style_border select--type_price">
-			<div class="select__title">
-				<div class="select__wrap">
-					<span class="select__key">2 машины, 2-местные</span>
-					<span class="select__key-descr">(400-500 см3)</span>
-				</div>
-				<span class="select__value">180 руб.</span>
-			</div>
-			<div class="select__content">
-				<input id="car0" class="select__input" type="radio" name="CHOOSE_CAR" checked />
-				<label for="car0" tabindex="0" class="select__label">
-					<div class="select__wrap">
-						<span class="select__key" data-value="2 машины, 2-местные">2 машины, 2-местные</span>
-						<span class="select__key-descr" data-value="(400-500 см3)">(400-500 см3)</span>
-					</div>
-					<div class="select__value" data-value="180 руб.">180 руб.</div>
-				</label>
-				<input id="car1" class="select__input" type="radio" name="CHOOSE_CAR" />
-				<label for="car1" tabindex="0" class="select__label">
-					<div class="select__wrap">
-						<span class="select__key" data-value="3 машины, 2-местные">3 машины, 2-местные</span>
-						<span class="select__key-descr" data-value="(300-500 см3)">(300-500 см3)</span>
-					</div>
-					<div class="select__value" data-value="150 руб.">150 руб.</div>
-				</label>
-			</div>
-		</div>
-	</fieldset>
-	}
-	@@include('blocks/choose-package/choose-package.html', {
-	"fieldset": true,
-	"dataTab": "gift",
-	"legend": true,
-	"class": "aside-choose__item",
-	"title": "@@if(!context.combo){4.} Выбери упаковку"
-	})
-	<fieldset data-tab="gift" class="aside-choose__item">
-		<legend class="aside-choose__item-title">Выбери цвет упаковки</legend>
-		@@include('blocks/colors/colors.html')
-	</fieldset>
-	@@include('blocks/overall-sum/overall-sum.html', {
-	"text": "Итого"
-	})
-	@@include('blocks/button/button.html', {
-	"style": "bg-pink",
-	"class": "aside-choose__btn",
-	"text": "aside-choose__btn",
-	"type": "submit",
-	"text": "Купить"
-	})
+<form action="#"
+      id="aside-choose"
+      class="aside-choose">
+    @@include('blocks/close-btn/close-btn.html', {
+    "class": "aside-choose",
+    "visibilityClass": "pc-hidden",
+    "ariaLabel": "Закрыть окно выбора"
+    })
+    @@if(!context.combo){
+    <fieldset data-tab
+              class="aside-choose__item aside-choose__item--with_mb">
+        @@include('blocks/title/title.html', {
+        "tag": "legend",
+        "class": "aside-choose__item-title",
+        "text": "1. Выбери трассу"
+        })
+        <div class="radio-inputs">
+            @@loop('blocks/radio/radio.html', [{
+            "style": "quantity",
+            "name": "TRACK_KM",
+            "text": "10 км",
+            "isChecked": true
+            }, {
+            "style": "quantity",
+            "name": "TRACK_KM",
+            "text": "14 км"
+            }, {
+            "style": "quantity",
+            "name": "TRACK_KM",
+            "text": "25 км"
+            }])
+        </div>
+    </fieldset>
+    <fieldset data-tab
+              class="aside-choose__item aside-choose__item--with_mb">
+        @@include('blocks/title/title.html', {
+        "tag": "legend",
+        "class": "aside-choose__item-title",
+        "text": "2. Выбери количество человек"
+        })
+        <div class="radio-inputs">
+            @@loop('blocks/radio/radio.html', [{
+            "style": "quantity",
+            "name": "PERSONS",
+            "text": "1",
+            "isChecked": true
+            }, {
+            "style": "quantity",
+            "name": "PERSONS",
+            "text": "2"
+            }, {
+            "style": "quantity",
+            "name": "PERSONS",
+            "text": "3"
+            }, {
+            "style": "quantity",
+            "name": "PERSONS",
+            "text": "4"
+            }, {
+            "style": "quantity",
+            "name": "PERSONS",
+            "text": "5"
+            }])
+        </div>
+    </fieldset>
+    <fieldset data-tab
+              class="aside-choose__item">
+        @@include('blocks/title/title.html', {
+        "tag": "legend",
+        "class": "aside-choose__item-title",
+        "text": "3. Выбери машину"
+        })
+        <div class="select select--style_border select--type_price">
+            <div class="select__title">
+                <div class="select__wrap">
+                    <span class="select__key">2 машины, 2-местные</span>
+                    <span class="select__key-descr">(400-500 см3)</span>
+                </div>
+                <span class="select__value">180 руб.</span>
+            </div>
+            <div class="select__content">
+                <input id="car0"
+                       class="select__input"
+                       type="radio"
+                       name="CHOOSE_CAR"
+                       checked />
+                <label for="car0"
+                       tabindex="0"
+                       class="select__label">
+                    <div class="select__wrap">
+                        <span class="select__key"
+                              data-value="2 машины, 2-местные">2 машины, 2-местные</span>
+                        <span class="select__key-descr"
+                              data-value="(400-500 см3)">(400-500 см3)</span>
+                    </div>
+                    <div class="select__value"
+                         data-value="180 руб.">180 руб.</div>
+                </label>
+                <input id="car1"
+                       class="select__input"
+                       type="radio"
+                       name="CHOOSE_CAR" />
+                <label for="car1"
+                       tabindex="0"
+                       class="select__label">
+                    <div class="select__wrap">
+                        <span class="select__key"
+                              data-value="3 машины, 2-местные">3 машины, 2-местные</span>
+                        <span class="select__key-descr"
+                              data-value="(300-500 см3)">(300-500 см3)</span>
+                    </div>
+                    <div class="select__value"
+                         data-value="150 руб.">150 руб.</div>
+                </label>
+            </div>
+        </div>
+    </fieldset>
+    }
+    @@include('blocks/choose-package/choose-package.html', {
+    "fieldset": true,
+    "dataTab": "gift",
+    "legend": true,
+    "class": "aside-choose__item",
+    "title": "@@if(!context.combo){4.} Выбери упаковку"
+    })
+    <fieldset data-tab="gift"
+              class="aside-choose__item">
+        @@include('blocks/title/title.html', {
+        "tag": "legend",
+        "class": "aside-choose__item-title",
+        "text": "Выбери цвет упаковки"
+        })
+        @@include('blocks/colors/colors.html')
+    </fieldset>
+    @@include('blocks/overall-sum/overall-sum.html', {
+    "text": "Итого"
+    })
+    @@include('blocks/button/button.html', {
+    "style": "bg-pink",
+    "class": "aside-choose__btn",
+    "text": "aside-choose__btn",
+    "type": "submit",
+    "text": "Купить"
+    })
 </form>

@@ -1,55 +1,55 @@
 .drop-search {
-	position: absolute;
-	top: 100%;
-	left: 0;
-	right: 0;
-	z-index: 20;
-	background-color: #fff;
-	box-shadow: var(--bsh);
-	transition: var(--transition) all;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    right: 0;
+    z-index: 20;
+    background-color: var(--white);
+    box-shadow: var(--bsh);
+    transition: var(--transition) all;
     @include hide();
 
-	@media(min-width: 768px) {
-		border-radius: var(--brs);
-	}
+    @media(min-width: 768px) {
+        border-radius: var(--brs);
+    }
 
-	&.active {
-		@include show();
-	}
+    &.active {
+        @include show();
+    }
 
-	&__list {
-		padding-left: var(--offset-m);
-	}
+    &__list {
+        padding-left: var(--offset-m);
+    }
 
-	&__link {
-		position: relative;
-		display: flex;
-		align-items: center;
-		@extend %museo-300;
-		font-size: 16px;
-		padding: var(--offset-xs) var(--offset-m) var(--offset-xs) var(--offset-l);
-		//filter: drop-shadow(0px 0px 20px rgba(199, 199, 199, 0.25));
-		transition: var(--transition) color;
+    &__link {
+        position: relative;
+        display: flex;
+        align-items: center;
+        @extend %museo-300;
+        font-size: 16px;
+        padding: var(--offset-xs) var(--offset-m) var(--offset-xs) var(--offset-l);
+        //filter: drop-shadow(0px 0px 20px rgba(199, 199, 199, 0.25));
+        transition: var(--transition) color;
 
-		span {
-			color: var(--green);
-		}
+        span {
+            color: var(--green);
+        }
 
-		&::before {
-			content: '';
-			position: absolute;
-			top: 50%;
-			transform: translateY(-50%);
-			left: 0;
-			width: var(--icon-size);
-			height: var(--icon-size);
-			background-image: url(../images/icons/clock.svg);
-		}
+        &::before {
+            content: '';
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+            left: 0;
+            width: var(--icon-size);
+            height: var(--icon-size);
+            background-image: url(../images/icons/clock.svg);
+        }
 
-		@media (any-hover: hover) {
-			&:hover {
-				color: var(--pink);
-			}
-		}
-	}
+        @media (any-hover: hover) {
+            &:hover {
+                color: var(--pink);
+            }
+        }
+    }
 }

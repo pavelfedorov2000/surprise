@@ -1,17 +1,31 @@
 <div class="success-block">
-	<img class="success-block__img" src="assets/images/icons/circle-check.svg" alt="" loading="lazy">
-	<h1 class="page-title success-block__title page-title--size_xs">@@title</h1>
-	@@if(context.text){
-	<div class="success-block__text">
-		<p>
-			Ваш заказ <span>№104270</span> от <span><time datetime="2022-09-13T18:02:17">13.09.2022
-					18:02:17</time></span>
-			успешно создан.
-		</p>
-		<p>
-			Вы можете следить за выполнением своего заказа в Личном кабинете. Данные для входа мы отправили вам на
-			почту.
-		</p>
-	</div>
-	}
+    @@include('blocks/img/img.html', {
+    "withoutPicture": true,
+    "class": "success-block__img",
+    "src": "assets/images/icons/circle-check",
+    "format": "svg"
+    })
+    @@include('blocks/title/title.html', {
+    "level": "1",
+    "class": "page-title success-block__title page-title--size_xs",
+    "text": "@@title"
+    })
+    @@if(context.text){
+    <div class="success-block__text">
+        <p>
+            Ваш заказ <span>№104270</span> от <span>
+                @@include('blocks/datetime/datetime.html', {
+                "date": "13.09.2022",
+                "formattedDate": "2022-09-13",
+                "time": "18:02:17"
+                })
+            </span>
+            успешно создан.
+        </p>
+        <p>
+            Вы можете следить за выполнением своего заказа в Личном кабинете. Данные для входа мы отправили вам на
+            почту.
+        </p>
+    </div>
+    }
 </div>

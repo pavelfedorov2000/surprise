@@ -1,20 +1,24 @@
 @@include("blocks/head/head.html", {"title": "Доставка и оплата"})
 <div class="wrapper">
-	@@include("blocks/layout/layout.html")
-	<main class="page page--padding page--with_decor">
-		<div class="container">
-			@@include('blocks/breadcrumbs/breadcrumbs.html', {
-			"current": "Доставка и оплата"
-			})
-			<div class="page__top">
-				<h1 class="page-title">Доставка и оплата</h1>
-			</div>
-		</div>
-		@@include('blocks/delivery-block/delivery-block.html')
-		@@include('blocks/how-to-pay/how-to-pay.html')
-		@@include('blocks/check-block/check-block.html')
-	</main>
-	@@include("blocks/footer/footer.html")
+    @@include("blocks/layout/layout.html")
+    <main class="page page--padding page--with_decor">
+        <div class="container">
+            @@include('blocks/breadcrumbs/breadcrumbs.html', {
+            "current": "Доставка и оплата"
+            })
+            <div class="page__top">
+                @@include('blocks/title/title.html', {
+                "level": "1",
+                "class": "page-title",
+                "text": "Доставка и оплата"
+                })
+            </div>
+        </div>
+        @@include('blocks/delivery-block/delivery-block.html')
+        @@include('blocks/how-to-pay/how-to-pay.html')
+        @@include('blocks/check-block/check-block.html')
+    </main>
+    @@include("blocks/footer/footer.html")
 </div>
 @@include("blocks/link/link.html")
 </body>

@@ -1,5 +1,9 @@
 <aside class="post-aside grid-col-4">
-    <h2 class="section-title">Читайте также</h2>
+    @@include('blocks/title/title.html', {
+    "level": "2",
+    "class": "section-title",
+    "text": "Читайте также"
+    })
     <div class="post-aside__items">
         @@include('blocks/post-aside-article/post-aside-article.html')
         @@include('blocks/post-aside-article/post-aside-article.html')

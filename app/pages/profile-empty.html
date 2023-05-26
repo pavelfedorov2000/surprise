@@ -1,56 +1,67 @@
 @@include("blocks/head/head.html", {"title": "Личный кабинет"})
 <div class="wrapper">
-	@@include("blocks/layout/layout.html")
-	<main class="page page--padding page--padding-top_ls">
-		<div class="container">
-			@@include('blocks/breadcrumbs/breadcrumbs.html', {
-			"current": "Личный кабинет"
-			})
-			<div class="page__top page__top--margin-bottom_ls">
-				<h1 class="page-title">Личный кабинет</h1>
-			</div>
-			<div class="profile-block">
-				@@include('blocks/profile-sidebar/profile-sidebar.html')
-				<div class="profile-block__content">
-					@@include('blocks/profile-tabs/profile-tabs.html')
-					<div class="profile-block__tabs-content">
-						<div id="profile-tabs-content-1" aria-labelledby="profile_tab_1" role="tabpanel"
-							class="tabs-content" style="display: block;">
-							<p class="profile-block__empty color-default">
-								У вас нету незавершенных покупок, но можно <button
-									class="btn profile-block__empty-btn btn--style_link-4" type="button"
-									aria-controls="profile-tabs-content-2">
-									<span class="btn__text">посмотреть историю заказов.</span>
-								</button>
-							</p>
-						</div>
-						<div id="profile-tabs-content-2" aria-labelledby="profile_tab_2" role="tabpanel"
-							class="tabs-content">
-							<ul class="profile-block__list">
-								<li>
-									@@include('blocks/order-card/order-card.html')
-								</li>
-								<li>
-									@@include('blocks/order-card/order-card.html')
-								</li>
-							</ul>
-						</div>
-						<div id="profile-tabs-content-3" aria-labelledby="profile_tab_3" class="tabs-content">
-							<ul class="profile-block__list">
-								<li>
-									@@include('blocks/electronic-certificate-card/electronic-certificate-card.html')
-								</li>
-								<li>
-									@@include('blocks/electronic-certificate-card/electronic-certificate-card.html')
-								</li>
-							</ul>
-						</div>
-					</div>
-				</div>
-			</div>
-		</div>
-	</main>
-	@@include("blocks/footer/footer.html")
+    @@include("blocks/layout/layout.html")
+    <main class="page page--padding page--padding-top_ls">
+        <div class="container">
+            @@include('blocks/breadcrumbs/breadcrumbs.html', {
+            "current": "Личный кабинет"
+            })
+            <div class="page__top page__top--margin-bottom_ls">
+                @@include('blocks/title/title.html', {
+                "level": "1",
+                "class": "page-title",
+                "text": "Личный кабинет"
+                })
+            </div>
+            <div class="profile-block">
+                @@include('blocks/profile-sidebar/profile-sidebar.html')
+                <div class="profile-block__content">
+                    @@include('blocks/profile-tabs/profile-tabs.html')
+                    <div class="profile-block__tabs-content">
+                        <div id="profile-tabs-content-1"
+                             aria-labelledby="profile_tab_1"
+                             role="tabpanel"
+                             class="tabs-content"
+                             style="display: block;">
+                            <p class="profile-block__empty color-default">
+                                У вас нету незавершенных покупок, но можно <button class="btn profile-block__empty-btn btn--style_link-4"
+                                        type="button"
+                                        aria-controls="profile-tabs-content-2">
+                                    <span class="btn__text">посмотреть историю заказов.</span>
+                                </button>
+                            </p>
+                        </div>
+                        <div id="profile-tabs-content-2"
+                             aria-labelledby="profile_tab_2"
+                             role="tabpanel"
+                             class="tabs-content">
+                            <ul class="profile-block__list">
+                                <li>
+                                    @@include('blocks/order-card/order-card.html')
+                                </li>
+                                <li>
+                                    @@include('blocks/order-card/order-card.html')
+                                </li>
+                            </ul>
+                        </div>
+                        <div id="profile-tabs-content-3"
+                             aria-labelledby="profile_tab_3"
+                             class="tabs-content">
+                            <ul class="profile-block__list">
+                                <li>
+                                    @@include('blocks/electronic-certificate-card/electronic-certificate-card.html')
+                                </li>
+                                <li>
+                                    @@include('blocks/electronic-certificate-card/electronic-certificate-card.html')
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+    @@include("blocks/footer/footer.html")
 </div>
 @@include("blocks/link/link.html")
 </body>

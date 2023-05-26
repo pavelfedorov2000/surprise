@@ -1,31 +1,35 @@
 <section class="section">
-	<div class="container">
-		<div class="section__top">
-			<h2 class="section-title">Избранные категории</h2>
-		</div>
-		<ul class="favorite-categories">
-			@@loop('blocks/small-card/small-card.html', [{
-			"src": "assets/images/content/favorite-categories/01",
-			"title": "Все сертификаты"
-			}, {
-			"src": "assets/images/content/favorite-categories/02",
-			"title": "Активный отдых"
-			}, {
-			"src": "assets/images/content/favorite-categories/03",
-			"title": "Подарки на День Рождения"
-			}, {
-			"src": "assets/images/content/favorite-categories/04",
-			"title": "СПА"
-			}, {
-			"src": "assets/images/content/favorite-categories/05",
-			"title": "Мастер классы и обучение"
-			}, {
-			"src": "assets/images/content/favorite-categories/06",
-			"title": "Полеты"
-			}, {
-			"src": "assets/images/content/favorite-categories/07",
-			"title": "Романтика для двоих"
-			}])
-		</ul>
-	</div>
+    <div class="container">
+        <div class="section__top">
+            @@include('blocks/title/title.html', {
+            "level": "2",
+            "class": "section-title",
+            "text": "Избранные категории"
+            })
+        </div>
+        <ul class="favorite-categories">
+            @@loop('blocks/small-card/small-card.html', [{
+            "src": "assets/images/content/favorite-categories/01",
+            "title": "Все сертификаты"
+            }, {
+            "src": "assets/images/content/favorite-categories/02",
+            "title": "Активный отдых"
+            }, {
+            "src": "assets/images/content/favorite-categories/03",
+            "title": "Подарки на День Рождения"
+            }, {
+            "src": "assets/images/content/favorite-categories/04",
+            "title": "СПА"
+            }, {
+            "src": "assets/images/content/favorite-categories/05",
+            "title": "Мастер классы и обучение"
+            }, {
+            "src": "assets/images/content/favorite-categories/06",
+            "title": "Полеты"
+            }, {
+            "src": "assets/images/content/favorite-categories/07",
+            "title": "Романтика для двоих"
+            }])
+        </ul>
+    </div>
 </section>

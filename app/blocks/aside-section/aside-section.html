@@ -1,21 +1,23 @@
 <aside class="aside-section section">
-	<div class="aside-section__body">
-		<div class="container">
-			<div class="aside-section__inner">
-				<div class="aside-section__content">
-					<h2 class="section-title aside-section__title">
-						@@title
-					</h2>
-					@@if(context.text){
-					<p class="color-default">@@text</p>
-					}
-				</div>
-				@@include('blocks/button/button.html', {
-				"style": "bg-pink",
-				"class": "aside-section__btn",
-				"text": "@@btn"
-				})
-			</div>
-		</div>
-	</div>
+    <div class="aside-section__body">
+        <div class="container">
+            <div class="aside-section__inner">
+                <div class="aside-section__content">
+                    @@include('blocks/title/title.html', {
+                    "level": "2",
+                    "class": "section-title aside-section__title",
+                    "text": "@@title"
+                    })
+                    @@if(context.text){
+                    <p class="color-default">@@text</p>
+                    }
+                </div>
+                @@include('blocks/button/button.html', {
+                "style": "bg-pink",
+                "class": "aside-section__btn",
+                "text": "@@btn"
+                })
+            </div>
+        </div>
+    </div>
 </aside>

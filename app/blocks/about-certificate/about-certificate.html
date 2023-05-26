@@ -5,23 +5,34 @@
             "text": "действует до",
             "date": "true",
             })
-            <h2 class="section-title section-title--size_mob-24">Катание на квадроциклах в группе на Уручье </h2>
+            @@include('blocks/title/title.html', {
+            "level": "2",
+            "class": "section-title section-title--size_mob-24",
+            "text": "Катание на квадроциклах в группе на Уручье"
+            })
         </header>
         <div class="about-certificate__row">
             <div class="about-certificate__contacts">
                 <section class="contact-block">
-                    <h4 class="contact-block__title">Место проведения</h4>
+                    @@include('blocks/title/title.html', {
+                    "level": "4",
+                    "class": "contact-block__title",
+                    "text": "Место проведения"
+                    })
                     <div class="contact contact-block__item contact--icon-mr_20">
-                        <svg class="icon" aria-hidden="true">
+                        <svg class="icon"
+                             aria-hidden="true">
                             <use xlink:href="assets/images/sprite.svg#pin"></use>
                         </svg>
                         <p class="color-default">г.&nbsp;Минск, ул.&nbsp;Раковская, 18, офис&nbsp;11</p>
                     </div>
                 </section>
                 <section class="contact-block">
-                    <h4 class="contact-block__title">
-                        Телефон для предварительной записи
-                    </h4>
+                    @@include('blocks/title/title.html', {
+                    "level": "4",
+                    "class": "contact-block__title",
+                    "text": "Телефон для предварительной записи"
+                    })
                     <ul class="contact-block__phones">
                         <li>
                             <a class="contact"
@@ -43,7 +54,11 @@
                 <iframe src="https://www.google.com/maps/d/embed?mid=1ii2UpWUzphKwb8CUqHhvZTAEumnuQP4&ehbc=2E312F"></iframe>
             </div>
             <section class="about-certificate__content">
-                <h3 class="section-title section-title--size_mob-24">Важно знать</h3>
+                @@include('blocks/title/title.html', {
+                "level": "3",
+                "class": "section-title section-title--size_mob-24",
+                "text": "Важно знать"
+                })
                 <ul class="check-list check-list--offset_m">
                     <li>
                         Перед поездкой в “Мустанг” необходимо предварительно записаться на удобный день и выбрать время
