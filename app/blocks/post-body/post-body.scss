@@ -24,7 +24,7 @@
 .post-gallery-thumbs {
     display: none;
 
-    @media(min-width: 768px) {
+    @media(min-width: $md) {
         display: block;
 
         .swiper-slide {

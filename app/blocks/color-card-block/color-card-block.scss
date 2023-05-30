@@ -3,7 +3,7 @@
     flex-wrap: wrap;
     margin-bottom: calc(var(--offset-l) * (-1));
 
-    @media(min-width: 1025px) {
+    @media(min-width: $xl) {
         margin-left: calc(var(--offset-l) * (-1));
     }
 
@@ -14,7 +14,7 @@
     > * {
         margin-bottom: var(--offset-l);
 
-        @media(min-width: 1025px) {
+        @media(min-width: $xl) {
             margin-left: var(--offset-l);
             width: calc(50% - var(--offset-l));
         }
@@ -35,7 +35,7 @@
 
                 .color-card {
                     &__img {
-                        @media(min-width: 768px) {
+                        @media(min-width: $md) {
                             margin-right: var(--offset-xl);
                         }
                     }

@@ -1,30 +1,80 @@
-<div class="promo-combo">
+<div class="promo-combo@@if(context.set){ promo-combo--set}">
     <span class="mob-rating">
         <span class="mob-rating__num">5.0</span>
     </span>
-    <div class="promo-combo__img promo-combo__img--left">
-        @@include('blocks/img/img.html', {
-        "class": "img-cover",
-        "src": "assets/images/content/catalog/01",
-        "width": "720",
-        "height": "450",
+    @@if(context.combo) {
+        <div class="promo-combo__img promo-combo__img--left">
+            @@include('blocks/img/img.html', {
+                "class": "img-cover",
+                "src": "assets/images/content/catalog/01",
+                "width": "720",
+                "height": "450",
+            })
+        </div>
+        <div class="promo-combo__img promo-combo__img--right">
+            @@include('blocks/img/img.html', {
+                "class": "img-cover",
+                "src": "assets/images/content/catalog/02",
+                "width": "720",
+                "height": "450",
+            })
+        </div>
+        @@loop('blocks/title/title.html', [{
+            "tag": "div",
+            "class": "promo-combo__box promo-combo__box--1 promo-combo__box--style_bg-green",
+            "text": "Массаж"
+        }, {
+            "tag": "div",
+            "class": "promo-combo__box promo-combo__box--2 promo-combo__box--style_bg-blue",
+            "text": "Массаж"
+        }])
+    }
+    @@if(context.set) {
+        <div class="promo-combo__img promo-combo__img--1">
+            @@include('blocks/img/img.html', {
+                "class": "img-cover",
+                "src": "assets/images/content/catalog/01",
+                "width": "720",
+                "height": "450",
+            })
+        </div>
+        <div class="promo-combo__img promo-combo__img--2">
+            @@include('blocks/img/img.html', {
+                "class": "img-cover",
+                "src": "assets/images/content/catalog/06",
+                "width": "720",
+                "height": "450",
+            })
+        </div>
+        <div class="promo-combo__img promo-combo__img--3">
+            @@include('blocks/img/img.html', {
+                "class": "img-cover",
+                "src": "assets/images/content/catalog/02",
+                "width": "720",
+                "height": "450",
+            })
+        </div>
+        <div class="promo-combo__img promo-combo__img--4">
+            @@include('blocks/img/img.html', {
+                "class": "img-cover",
+                "src": "assets/images/content/catalog/06",
+                "width": "720",
+                "height": "450",
+            })
+        </div>
+        <div class="promo-combo__box promo-combo__box--1 promo-combo__box--style_bg-green">
+            @@include('blocks/img/img.html', {
+                "withoutPicture": "true",
+                "src": "assets/images/logo/srprs",
+                "format": "svg",
+                "width": "118",
+                "height": "98",
+            })
+        </div>
+        @@include('blocks/title/title.html', {
+            "tag": "div",
+            "class": "promo-combo__box promo-combo__box--2 promo-combo__box--style_bg-blue",
+            "text": "Сертификат на выбор"
         })
-    </div>
-    <div class="promo-combo__img promo-combo__img--right">
-        @@include('blocks/img/img.html', {
-        "class": "img-cover",
-        "src": "assets/images/content/catalog/02",
-        "width": "720",
-        "height": "450",
-        })
-    </div>
-    @@loop('blocks/title/title.html', [{
-    "tag": "div",
-    "class": "promo-combo__title promo-combo__title--1 promo-combo__title--style_bg-green",
-    "text": "Массаж"
-    }, {
-    "tag": "div",
-    "class": "promo-combo__title promo-combo__title--1 promo-combo__title--style_bg-blue",
-    "text": "Массаж"
-    }])
+    }
 </div>

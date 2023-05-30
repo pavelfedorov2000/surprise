@@ -2,7 +2,7 @@
     box-shadow: var(--bsh);
     overflow-x: auto;
 
-    @media(min-width: 768px) {
+    @media(min-width: $md) {
         border-radius: var(--brs-card-xl);
     }
 }
@@ -24,7 +24,7 @@
 .compare-table {
     background-color: var(--green-light);
 
-    @media(min-width: 768px) {
+    @media(min-width: $md) {
         border-radius: var(--brs-card-xl);
     }
 
@@ -46,7 +46,7 @@
         }
 
         &:not(:first-child) {
-            @media(min-width: 768px) {
+            @media(min-width: $md) {
                 border-left: 1px solid #D7EDEC;
             }
         }

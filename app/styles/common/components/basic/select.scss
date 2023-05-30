@@ -42,7 +42,7 @@
         }
 
         &[aria-expanded="true"] {
-            @media(min-width: 576px) {
+            @media(min-width: $sm) {
                 border-color: var(--green);
             }
 

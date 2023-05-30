@@ -18,7 +18,7 @@
 			gap: var(--offset-l);
 		}
 
-		@media (min-width: 768px) {
+		@media (min-width: $md) {
 			grid-template-areas:
 				'info info info info menu menu catalog catalog'
 				'address address address address contacts contacts contacts contacts'
@@ -38,7 +38,7 @@
 		@include row-grid(var(--offset-l));
 		align-content: start;
 
-		@media (min-width: 768px) and (max-width: $xl) {
+		@media (min-width: $md) and (max-width: $xl) {
 			grid-column: span 2;
 		}
 
@@ -56,37 +56,37 @@
 		&--contacts {
 			display: none;
 
-			@media(min-width: 768px) {
+			@media(min-width: $md) {
 				display: grid;
 			}
 		}
 
 		&--info {
-			@media(min-width: 768px) {
+			@media(min-width: $md) {
 				grid-area: info;
 			}
 		}
 
 		&--catalog {
-			@media(min-width: 768px) {
+			@media(min-width: $md) {
 				grid-area: catalog;
 			}
 		}
 
 		&--menu {
-			@media(min-width: 768px) {
+			@media(min-width: $md) {
 				grid-area: menu;
 			}
 		}
 
 		&--address {
-			@media(min-width: 768px) {
+			@media(min-width: $md) {
 				grid-area: address;
 			}
 		}
 
 		&--contacts {
-			@media(min-width: 768px) {
+			@media(min-width: $md) {
 				grid-area: contacts;
 			}
 		}
@@ -105,7 +105,7 @@
 	}
 
 	&__social {
-		@media(min-width: 768px) {
+		@media(min-width: $md) {
 			margin-left: -14px;
 		}
 	}
@@ -152,7 +152,7 @@
 	&__title {
 		display: none;
 
-		@media(min-width: 768px) {
+		@media(min-width: $md) {
 			display: block;
 			font-size: 20px;
 			text-transform: uppercase;
@@ -204,7 +204,7 @@
 	&__btn {
 		display: none;
 
-		@media(min-width: 768px) {
+		@media(min-width: $md) {
 			display: flex;
 			justify-content: center;
 			width: 100%;

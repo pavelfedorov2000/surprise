@@ -438,7 +438,7 @@
 			// .dropdown-filter__col--cols_2
 
 			&_2 {
-				@media(min-width: 768px) {
+				@media(min-width: $md) {
 					gap: var(--offset-m);
 					grid-template-columns: repeat(2, auto);
 				}

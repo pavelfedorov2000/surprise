@@ -30,14 +30,14 @@
     box-shadow: var(--bsh);
     padding: var(--offset-xl) var(--offset-xxl) var(--offset-xxl);
 
-    @media(min-width: 768px) {
+    @media(min-width: $md) {
         top: var(--offset-xxl);
         left: 50%;
         transform: translate(-50%, 0);
         border-radius: var(--brs-card-xl);
     }
 
-    @media(min-width: 1025px) {
+    @media(min-width: $xl) {
         top: 50%;
         transform: translate(-50%, -50%);
     }
@@ -103,7 +103,7 @@
             padding: var(--offset-l);
             border-radius: var(--brs);
 
-            @media(min-width: 768px) {
+            @media(min-width: $md) {
                 border-radius: var(--brs);
             }
 
@@ -161,11 +161,11 @@
         scrollbar-width: 0;
     }
 
-    @media(min-width: 768px) {
+    @media(min-width: $md) {
         transform: none;
     }
 
-    @media(min-width: 1025px) {
+    @media(min-width: $xl) {
         transform: none;
     }
 
@@ -174,7 +174,7 @@
     &__body {
         display: none;
 
-        @media(min-width: 768px) {
+        @media(min-width: $md) {
             display: grid;
             grid-template-columns: 234px 1fr;
             gap: var(--offset-m);

@@ -3,7 +3,7 @@
 	// .team-section__img
 
 	&__img {
-		@media(min-width: 1025px) {
+		@media(min-width: $xl) {
 			flex: 0 0 516px;
 		}
 

@@ -1,8 +1,7 @@
 .aside-choose {
-    //@include sticky(var(--offset-xl));
     @include row-grid(var(--offset-l));
     align-content: start;
-    width: 503px;
+    max-width: 503px;
     max-width: 100%;
     margin-left: auto;
     padding: var(--offset-xl);

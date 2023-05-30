@@ -16,7 +16,7 @@
             @include row-grid(var(--offset-l));
         }
 
-        @media(min-width: 1025px) {
+        @media(min-width: $xl) {
             display: flex;
             align-items: center;
             justify-content: space-between;
@@ -24,7 +24,7 @@
     }
 
     &__img {
-        @media(min-width: 1025px) {
+        @media(min-width: $xl) {
             flex: 0 0 609px;
         }
     }
@@ -32,7 +32,7 @@
     // .corporate-certificates__text
 
     &__text {
-        @media(min-width: 1025px) {
+        @media(min-width: $xl) {
             padding-right: 75px;
         }
     }
@@ -51,7 +51,7 @@
         @include row-grid(var(--offset-xl));
         padding: 20px 35px;
 
-        @media(min-width: 1025px) {
+        @media(min-width: $xl) {
             width: 50%;
         }
     }

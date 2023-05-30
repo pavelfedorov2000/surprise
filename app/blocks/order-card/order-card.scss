@@ -51,7 +51,7 @@
         @include row-grid(var(--offset-m));
         justify-items: start;
 
-        @media(min-width: 768px) {
+        @media(min-width: $md) {
             align-content: start;
             flex-shrink: 0;
         }
@@ -75,7 +75,7 @@
     &__content {
         @include row-grid(var(--offset-s));
 
-        @media(min-width: 768px) {
+        @media(min-width: $md) {
             align-content: start;
             flex: 1 1 29.075%;
         }
@@ -86,7 +86,7 @@
     &__img {
         flex: 0 0 215px;
 
-        @media(min-width: 768px) {
+        @media(min-width: $md) {
             margin-left: var(--offset-ls);
         }
 

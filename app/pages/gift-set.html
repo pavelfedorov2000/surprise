@@ -1,4 +1,4 @@
-@@include("blocks/head/head.html", {"title": "Комбо"})
+@@include("blocks/head/head.html", {"title": "Подарочный набор"})
 <div class="wrapper">
     @@include("blocks/layout/layout.html")
     <main class="page page--padding-top_ls page--padding-bottom_none">
@@ -12,7 +12,7 @@
                     @@include('blocks/title/title.html', {
                         "level": "1",
                         "class": "page-title page-title--size_xs",
-                        "text": "Комбо"
+                        "text": "Подарочный набор «Живи ярко»"
                     })
                     @@include('blocks/rating/rating.html', {
                         "mobHidden": true,
@@ -22,24 +22,24 @@
                     })
                 </header>
                 @@include('blocks/promo-combo/promo-combo.html', {
-                    "combo": true
+                    "set": true
                 })
             </div>
             <div class="section grid-row">
-                <div class="grid-col-xl-8 grid-col-7 certificate-content">
+                <div class="grid-col-xl-8 grid-col-8 certificate-content">
                     @@include('blocks/unique-package/unique-package.html')
                     <div class="certificate-content__section">
                         @@include('blocks/icons-list/icons-list.html', {
                             "combo": true
                         })
                     </div>
-                    @@include('blocks/combo-block/combo-block.html')
+                    @@include('blocks/set-items/set-items.html')
                     @@include('blocks/combo-description/combo-description.html')
                     @@include('blocks/certificate-reviews/certificate-reviews.html', {
                         "combo": true
                     })
                 </div>
-                <div class="grid-col-xl-4 grid-col-5">
+                <div class="grid-col-xl-4 grid-col-4">
                     @@include("blocks/aside-choose/aside-choose.html", {
                         "combo": true
                     })

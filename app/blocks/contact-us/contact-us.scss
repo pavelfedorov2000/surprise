@@ -16,7 +16,7 @@
     // .contact-us__inner 
 
     &__inner {
-        @media(min-width: 1025px) {
+        @media(min-width: $xl) {
             display: flex;
             align-items: center;
             justify-content: space-between;
@@ -32,7 +32,7 @@
     &__content {
         @include row-grid(var(--offset-xxls));
 
-        @media(min-width: 1025px) {
+        @media(min-width: $xl) {
             padding-right: calc(145 / #{$container} * 100%);
         }
 
@@ -52,7 +52,7 @@
     &__form {
         padding: var(--offset-xxl) var(--offset-xxxl);
 
-        @media(min-width: 1025px) {
+        @media(min-width: $xl) {
             flex: 0 0 528px;
         }
 

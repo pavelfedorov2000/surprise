@@ -8,14 +8,14 @@
         width: 100%;
     }
 
-    @media(min-width: 768px) {
+    @media(min-width: $md) {
         flex-direction: column;
     }
 
     // .combo-result-item__img
 
     &__img {
-        @media(min-width: 768px) {
+        @media(min-width: $md) {
             flex-grow: 1;
             max-height: 174px;
         }
@@ -32,7 +32,7 @@
         margin-top: auto;
         @include row-grid(var(--offset-s));
 
-        @media(min-width: 768px) {
+        @media(min-width: $md) {
             justify-items: center;
             text-align: center;
         }
@@ -59,7 +59,7 @@
     &__text {
         display: none;
 
-        @media(min-width: 768px) {
+        @media(min-width: $md) {
             display: block;
             margin-bottom: var(--offset-xxs);
             font-size: 16px;

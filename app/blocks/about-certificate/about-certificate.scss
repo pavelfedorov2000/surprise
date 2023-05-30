@@ -15,7 +15,7 @@
             flex-wrap: wrap;
         }
 
-        @media(min-width: 768px) {
+        @media(min-width: $md) {
             @include margin-x(-42px);
 
             > * {
@@ -33,11 +33,11 @@
     &__contacts {
         @include row-grid(var(--offset-xxxl));
 
-        @media(min-width: 768px) {
+        @media(min-width: $md) {
             flex: 0 0 calc((306 + 42 * 2) / #{$container} * 100%);
         }
 
-        @media(min-width: 1025px) {
+        @media(min-width: $xl) {
             align-content: center;
         }
 
@@ -53,7 +53,7 @@
     &__map {
         //padding-bottom: 92.175%;
 
-        @media(min-width: 768px) {
+        @media(min-width: $md) {
             flex: 0 0 calc((460 + 42 * 2) / #{$container} * 100%);
         }
 

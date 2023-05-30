@@ -1,60 +1,65 @@
 <article class="catalog-card catalog-card--type_combo">
+    @@if(context.favorite){
+        @@include('blocks/favorite-btn/favorite-btn.html', {
+        "class": "catalog-card__favorite"
+        })
+    }
     <div class="catalog-card__slider swiper">
         <div class="swiper-wrapper">
             <div class="swiper-slide">
                 @@include('blocks/img/img.html', {
-                "class": "img-cover",
-                "src": "assets/images/content/catalog/01",
-                "width": "268",
-                "height": "200"
+                    "class": "img-cover",
+                    "src": "assets/images/content/catalog/01",
+                    "width": "268",
+                    "height": "200"
                 })
             </div>
             <div class="swiper-slide">
                 @@include('blocks/img/img.html', {
-                "class": "img-cover",
-                "src": "assets/images/content/catalog/02",
-                "width": "268",
-                "height": "200"
+                    "class": "img-cover",
+                    "src": "assets/images/content/catalog/02",
+                    "width": "268",
+                    "height": "200"
                 })
             </div>
             <div class="swiper-slide">
                 @@include('blocks/img/img.html', {
-                "class": "img-cover",
-                "src": "assets/images/content/catalog/03",
-                "width": "268",
-                "height": "200"
+                    "class": "img-cover",
+                    "src": "assets/images/content/catalog/03",
+                    "width": "268",
+                    "height": "200"
                 })
             </div>
             <div class="swiper-slide">
                 @@include('blocks/img/img.html', {
-                "class": "img-cover",
-                "src": "assets/images/content/catalog/04",
-                "width": "268",
-                "height": "200"
+                    "class": "img-cover",
+                    "src": "assets/images/content/catalog/04",
+                    "width": "268",
+                    "height": "200"
                 })
             </div>
             <div class="swiper-slide">
                 @@include('blocks/img/img.html', {
-                "class": "img-cover",
-                "src": "assets/images/content/catalog/05",
-                "width": "268",
-                "height": "200"
+                    "class": "img-cover",
+                    "src": "assets/images/content/catalog/05",
+                    "width": "268",
+                    "height": "200"
                 })
             </div>
             <div class="swiper-slide">
                 @@include('blocks/img/img.html', {
-                "class": "img-cover",
-                "src": "assets/images/content/catalog/06",
-                "width": "268",
-                "height": "200"
+                    "class": "img-cover",
+                    "src": "assets/images/content/catalog/06",
+                    "width": "268",
+                    "height": "200"
                 })
             </div>
             <div class="swiper-slide">
                 @@include('blocks/img/img.html', {
-                "class": "img-cover",
-                "src": "assets/images/content/catalog/07",
-                "width": "268",
-                "height": "200"
+                    "class": "img-cover",
+                    "src": "assets/images/content/catalog/07",
+                    "width": "268",
+                    "height": "200"
                 })
             </div>
         </div>
@@ -92,10 +97,10 @@
     </div>
     <div class="catalog-card__img">
         @@include('blocks/img/img.html', {
-        "class": "img-cover",
-        "src": "assets/images/content/catalog/01",
-        "width": "80",
-        "height": "66"
+            "class": "img-cover",
+            "src": "assets/images/content/catalog/01",
+            "width": "80",
+            "height": "66"
         })
     </div>
     <div class="catalog-card__content">
@@ -120,9 +125,11 @@
                 </dd>
             </div>
         </dl>
-        <div class="prices catalog-card__prices">
-            <b class="price">59</b>
-            <span>руб.</span>
-        </div>
+        @@if(context.combo) {
+            <div class="prices catalog-card__prices">
+                <b class="price">59</b>
+                <span>руб.</span>
+            </div>
+        }
     </div>
 </article>

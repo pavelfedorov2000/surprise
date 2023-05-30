@@ -104,7 +104,7 @@ h {
     }
 
     &.pc-hidden {
-        @media(min-width: 1025px) {
+        @media(min-width: $xl) {
             display: none;
         }
     }

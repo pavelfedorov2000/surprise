@@ -16,7 +16,7 @@
             grid-template-columns: minmax(268px, 1fr) var(--icon-size) minmax(268px, 1fr) var(--icon-size) 190px;
         }
 
-        @media(min-width: 768px) and (max-width: $xl) {
+        @media(min-width: $md) and (max-width: $xl) {
             overflow-x: auto;
         }
 

@@ -21,7 +21,7 @@
         background-size: cover;
         background-repeat: no-repeat;
 
-        @media(min-width: 1025px) {
+        @media(min-width: $xl) {
             background-position: center;
         }
 

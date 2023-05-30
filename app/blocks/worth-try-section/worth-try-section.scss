@@ -5,11 +5,11 @@
     &__row {
         display: grid;
 
-        @media(min-width: 768px) {
+        @media(min-width: $md) {
             gap: 44px;
         }
 
-        @media(min-width: 1025px) {
+        @media(min-width: $xl) {
             grid-template-columns: 1fr 357px 1fr;
             grid-template-areas: 'contentLeft img contentRight';
             align-content: start;
@@ -27,13 +27,13 @@
         }
 
         &--left {
-            @media(min-width: 1025px) {
+            @media(min-width: $xl) {
                 grid-area: contentLeft;
             }
         }
 
         &--right {
-            @media(min-width: 1025px) {
+            @media(min-width: $xl) {
                 grid-area: contentRight;
             }
         }
@@ -42,7 +42,7 @@
     // .worth-try-section__img
 
     &__img {
-        @media(min-width: 1025px) {
+        @media(min-width: $xl) {
             grid-area: img;
         }
 

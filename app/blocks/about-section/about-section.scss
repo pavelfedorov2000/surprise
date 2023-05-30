@@ -1,7 +1,7 @@
 .about-section {
 
 	&__content {
-		@media(min-width: 1025px) {
+		@media(min-width: $xl) {
 			max-width: 643px;
 			padding-right: var(--offset-l);
 		}
@@ -10,7 +10,7 @@
 	// .about-section__img
 
 	&__img {
-		@media(min-width: 1025px) {
+		@media(min-width: $xl) {
 			flex: 0 0 547px;
 		}
 

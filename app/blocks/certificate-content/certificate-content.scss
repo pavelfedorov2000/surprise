@@ -1,4 +1,5 @@
 .certificate-content {
+    max-width: 877px;
     display: flex;
     flex-direction: column;
 
@@ -21,6 +22,12 @@
     &__subsection-title {
         font-size: 24px;
         margin-bottom: var(--offset-xxs);
+    }
+
+    &__cards {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(268px, 1fr));
+        gap: var(--offset-l) var(--offset-ls);
     }
 
     .combo-block {

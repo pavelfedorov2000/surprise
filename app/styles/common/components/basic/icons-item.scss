@@ -22,7 +22,7 @@
 			}
 
 			&_xl {
-				@media(min-width: 768px) {
+				@media(min-width: $md) {
 					margin-right: var(--offset-xl);
 				}
 			}

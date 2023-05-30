@@ -6,7 +6,7 @@
     // .mascot-section__img
 
     &__img {
-        @media(min-width: 1025px) {
+        @media(min-width: $xl) {
             flex: 0 0 592px;
         }
 
@@ -18,7 +18,7 @@
     // .mascot-section__content
 
     &__content {
-        @media(min-width: 1025px) {
+        @media(min-width: $xl) {
             position: relative;
             padding-top: 75px;
             padding-left: 82px;

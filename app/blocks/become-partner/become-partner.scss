@@ -1,5 +1,5 @@
 .become-partner {
-	@media(min-width: 1025px) {
+	@media(min-width: $xl) {
 		background-image: url(../images/decor/contacts-bg.svg);
 		background-size: cover;
 		background-position: center;
@@ -39,7 +39,7 @@
 	}
 
 	&__title {
-		@media(min-width: 768px) {
+		@media(min-width: $md) {
 			margin-bottom: -20px;
 		}
 	}

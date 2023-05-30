@@ -27,7 +27,7 @@
         display: flex;
         gap: var(--offset-m);
 
-        @media(min-width: 768px) {
+        @media(min-width: $md) {
             flex-wrap: wrap;
         }
 
@@ -69,11 +69,11 @@
         @include row-grid(var(--offset-s));
         flex: 1 0 calc(349 / 1005 * 100%);
 
-        @media(min-width: 768px) {
+        @media(min-width: $md) {
             padding-left: calc(40 / 1005 * 100%);
         }
 
-        @media(min-width: 1025px) {
+        @media(min-width: $xl) {
             padding-right: calc(20 / 1005 * 100%);
         }
     }

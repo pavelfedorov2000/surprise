@@ -19,12 +19,12 @@
 
     &--items {
         &_2 {
-            @media(min-width: 768px) {
+            @media(min-width: $md) {
                 margin-left: calc(var(--offset-l) * (-1));
             }
 
             > * {
-                @media(min-width: 768px) {
+                @media(min-width: $md) {
                     width: calc(50% - var(--offset-l));
                     margin-left: var(--offset-l);
                 }

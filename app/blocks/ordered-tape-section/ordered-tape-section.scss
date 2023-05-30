@@ -2,7 +2,7 @@
 	// .ordered-tape-section__item
 
 	&__items {
-		@media(min-width: 1025px) {
+		@media(min-width: $xl) {
 			display: grid;
 			grid-template-columns: repeat(4, 1fr);
 			gap: var(--offset-xxxl);
@@ -27,7 +27,7 @@
 		}
 
 		&.swiper-slide-next {
-			@media(min-width: 768px) and (max-width: $lg) {
+			@media(min-width: $md) and (max-width: $lg) {
 				opacity: 1;
 			}
 		}

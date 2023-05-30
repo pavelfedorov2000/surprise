@@ -28,14 +28,14 @@
 		display: grid;
 		gap: var(--offset-xxxl) 72px;
 
-		@media(min-width: 1025px) {
+		@media(min-width: $xl) {
 			grid-template-columns: repeat(2, 1fr);
 		}
 	}
 
 	&__section {
 		&--span-2 {
-			@media(min-width: 1025px) {
+			@media(min-width: $xl) {
 				grid-column: span 2;
 			}
 		}
@@ -60,7 +60,7 @@
 		display: grid;
 		gap: var(--offset-m);
 
-		@media(min-width: 1025px) {
+		@media(min-width: $xl) {
 			grid-template-columns: repeat(2, 1fr);
 		}
 	}
@@ -73,7 +73,7 @@
 
 	&__field {
 		&--span-2 {
-			@media(min-width: 768px) {
+			@media(min-width: $md) {
 				grid-column: span 2;
 			}
 
@@ -81,12 +81,12 @@
 				&__radios {
 					gap: var(--offset-xxs) var(--offset-m);
 
-					@media(min-width: 768px) {
+					@media(min-width: $md) {
 						grid-template-columns: repeat(2, 1fr);
 					}
 
 					>* {
-						@media(min-width: 768px) {
+						@media(min-width: $md) {
 							grid-column: 1 / 2;
 						}
 					}

@@ -2,7 +2,7 @@ html {
     box-sizing: border-box;
 
     &.disable-fix {
-        @media (min-width: 1025px) {
+        @media (min-width: $xl) {
             padding-right: 17px;
         }
     }

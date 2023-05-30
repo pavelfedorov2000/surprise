@@ -139,7 +139,7 @@
 	&__bottom {
 		@include row-grid(var(--offset-m));
 
-		@media(min-width: 768px) {
+		@media(min-width: $md) {
 			margin-top: auto;
 		}
 	}
@@ -147,7 +147,7 @@
 	// .catalog-card__info
 
 	&__info {
-		@media(min-width: 576px) {
+		@media(min-width: $sm) {
 			display: flex;
 			align-items: flex-end;
 			justify-content: space-between;

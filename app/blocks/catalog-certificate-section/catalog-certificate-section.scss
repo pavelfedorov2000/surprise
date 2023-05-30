@@ -15,7 +15,7 @@
             gap: var(--offset-l);
         }
 
-        @media(min-width: 768px) {
+        @media(min-width: $md) {
             grid-template-columns: repeat(2, 1fr);
         }
 
@@ -39,7 +39,7 @@
         }
 
         &:last-child {
-            @media(min-width: 768px) and (max-width: $xl) {
+            @media(min-width: $md) and (max-width: $xl) {
                 grid-column: span 2;
             }
         }

@@ -126,13 +126,13 @@ textarea {
     &-label {
         @extend %museo-500;
 
-        @media(min-width: 768px) {
+        @media(min-width: $md) {
             display: flex;
             align-items: center;
         }
 
         > * {
-            @media(min-width: 768px) {
+            @media(min-width: $md) {
                 margin-left: var(--offset-xs);
             }
         }

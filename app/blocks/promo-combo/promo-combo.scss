@@ -1,11 +1,12 @@
 .promo-combo {
+    $this: &;
+
     position: relative;
     display: grid;
     grid-template-columns: repeat(4, 1fr);
 
-    @media(min-width: 1025px) {
-        min-height: 450px;
-        grid-template-rows: auto 1fr auto;
+    @media(min-width: $xl) {
+        grid-template-rows: minmax(160px, max-content) 128px minmax(160px, max-content);
     }
 
     @media(max-width: $lg) {
@@ -27,23 +28,23 @@
             }
         }
 
-        @media(min-width: 1025px) {
+        @media(min-width: $xl) {
             grid-row: 1 / -1;
         }
 
         &--left {
-            @media(min-width: 1025px) {
+            @media(min-width: $xl) {
                 grid-column: 1 / 3;
-                border-radius: 0 0 var(--brs-card-xl) var(--brs-card-xl);
+                border-radius: var(--brs-card-xl) 0 0 var(--brs-card-xl);
 
                 img {
-                    border-radius: 0 0 var(--brs-card-xl) var(--brs-card-xl);
+                    border-radius: var(--brs-card-xl) 0 0 var(--brs-card-xl);
                 }
             }
         }
 
         &--right {
-            @media(min-width: 1025px) {
+            @media(min-width: $xl) {
                 grid-column: 3 / -1;
                 border-radius: 0 var(--brs-card-xl) var(--brs-card-xl) 0;
 
@@ -52,14 +53,50 @@
                 }
             }
         }
+
+        &--1 {
+            display: none;
+
+            @media(min-width: $xl) {
+                display: block;
+                grid-area: img-1;
+                border-radius: var(--brs-card-xl) 0 0 var(--brs-card-xl);
+
+                img {
+                    border-radius: var(--brs-card-xl) 0 0 var(--brs-card-xl);
+                }
+            }
+        }
+
+        &--2 {
+            grid-area: img-2;
+        }
+
+        &--3 {
+            grid-area: img-3;
+        }
+
+        &--4 {
+            display: none;
+
+            @media(min-width: $xl) {
+                display: block;
+                grid-area: img-4;
+                border-bottom-right-radius: var(--brs-card-xl);
+
+                img {
+                    border-bottom-right-radius: var(--brs-card-xl);
+                }
+            }
+        }
     }
 
     // .promo-combo__title
 
-    &__title {
+    &__box {
         display: none;
 
-        @media(min-width: 1025px) {
+        @media(min-width: $xl) {
             display: block;
             padding: 61.5px;
             display: grid;
@@ -67,6 +104,7 @@
             font-size: 32px;
             line-height: calc(38 / 32 * 100%);
             color: var(--white);
+            text-align: center;
         }
 
         &--style {
@@ -82,7 +120,7 @@
         }
 
         &--1 {
-            @media(min-width: 1025px) {
+            @media(min-width: $xl) {
                 grid-column: -2 / -1;
                 grid-row: 1 / 2;
                 border-radius: 0 var(--brs-card-xl) 0 0;
@@ -90,7 +128,7 @@
         }
 
         &--2 {
-            @media(min-width: 1025px) {
+            @media(min-width: $xl) {
                 grid-column: 2 / 3;
                 grid-row: -2 / -1;
             }
@@ -101,6 +139,33 @@
         @media(max-width: $md) {
             top: 20px;
             right: 18px;
+        }
+    }
+
+    &--set {
+        grid-template-areas:
+        'img-2 img-3'
+        'box-2 img-3'
+        ;
+
+        @media(max-width: $lg) {
+            grid-template-columns: calc(169 / 375 * 100%) 1fr;
+        }
+
+        @media(min-width: $xl) {
+            grid-template-rows: repeat(2, minmax(224px, auto));
+            grid-template-areas:
+            'img-1 img-2 img-3 box-1'
+            'img-1 box-2 img-3 img-4'
+            ;
+        }
+
+        #{$this} {
+            &__box {
+                &--1 {
+                    display: block;
+                }
+            }
         }
     }
 }

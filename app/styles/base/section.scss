@@ -107,26 +107,26 @@
 		}
 
 		&--reverse {
-			@media(min-width: 1025px) {
+			@media(min-width: $xl) {
 				flex-direction: row-reverse;
 			}
 		}
 
 		&--align-items {
 			&_flex-end {
-				@media(min-width: 1025px) {
+				@media(min-width: $xl) {
 					align-items: flex-end;
 				}
 			}
 		}
 
 		&_50-50 {
-			@media(min-width: 1025px) {
+			@media(min-width: $xl) {
 				@include margin-x(calc(var(--offset-l) * (-1)));
 			}
 
 			>* {
-				@media(min-width: 1025px) {
+				@media(min-width: $xl) {
 					width: calc(50% - var(--offset-l));
 					@include padding-x(var(--offset-l));
 				}
