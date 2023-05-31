@@ -38,7 +38,7 @@
 		@include row-grid(var(--offset-l));
 		align-content: start;
 
-		@media (min-width: $md) and (max-width: $xl) {
+		@media (min-width: $md) and (max-width: $xxl) {
 			grid-column: span 2;
 		}
 
@@ -98,7 +98,7 @@
 		max-width: 238px;
 		height: 32px;
 
-		@media(max-width: $xl) {
+		@media(max-width: $xxl) {
 			width: 214px;
 			height: 28px;
 		}

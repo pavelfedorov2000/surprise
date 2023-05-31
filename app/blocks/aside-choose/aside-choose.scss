@@ -4,7 +4,7 @@
     max-width: 503px;
     max-width: 100%;
     margin-left: auto;
-    padding: var(--offset-xl);
+    padding: var(--offset-xl) var(--offset-ls);
     background-color: var(--white);
     box-shadow: var(--bsh);
 
@@ -12,7 +12,7 @@
         border-radius: var(--brs-card-xl);
     }
 
-    @media(max-width: $xl) {
+    @media(max-width: $xxl) {
         position: fixed;
         bottom: -150%;
         right: 0;
@@ -21,8 +21,8 @@
         height: 100%;
         overflow-y: auto;
         z-index: 101;
-        padding: var(--offset-l) var(--container-padding);
-        transition: 1s bottom;
+        padding: var(--offset-xls) var(--container-padding);
+        transition: var(--transition-long) bottom;
     }
 
     @media(max-width: $sm) {
@@ -30,7 +30,7 @@
     }
 
     &.active {
-        @media(max-width: $xl) {
+        @media(max-width: $xxl) {
             bottom: 0;
         }
     }

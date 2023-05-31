@@ -6,12 +6,12 @@
     grid-template-columns: minmax(var(--container-padding), calc((100% - var(--container-width)) / 2)) 1fr minmax(var(--container-padding), calc((100% - var(--container-width)) / 2));
     grid-template-rows: calc(#{$banner-height} - var(--section-padding-xs)) repeat(2, var(--section-padding-xs));
 
-    @media(max-width: $xl) {
-        grid-template-rows: calc(#{$banner-height} - var(--offset-xxls) - 10px) var(--offset-xxls) 10px auto;
+    @media(max-width: $xxl) {
+        grid-template-rows: calc(#{$banner-height} - var(--offset-xxls) - var(--offset-x)) var(--offset-xxls) var(--offset-x) auto;
     }
 
-    @media(max-width: $xl) {
-        grid-template-rows: calc(#{$banner-height-mob} - var(--offset-xxls) - 10px) var(--offset-xxls) 10px auto;
+    @media(max-width: $xxl) {
+        grid-template-rows: calc(#{$banner-height-mob} - var(--offset-xxls) - var(--offset-x)) var(--offset-xxls) var(--offset-x) auto;
     }
 
     &__body {
@@ -21,7 +21,7 @@
         background-size: cover;
         background-repeat: no-repeat;
 
-        @media(min-width: $xl) {
+        @media(min-width: $xxl) {
             background-position: center;
         }
 
@@ -34,7 +34,7 @@
         grid-column: 2 / 3;
         grid-row: -3 / -1;
 
-        @media(max-width: $xl) {
+        @media(max-width: $xxl) {
             grid-row: -4 / -1;
         }
     }

@@ -1,18 +1,24 @@
 <li>
-    <a href="#"
-       class="small-card">
+    <a href="#" class="small-card@@if(context.style){ small-card--style_@@style}">
         @@include('blocks/img/img.html', {
-        "class": "small-card__img",
-        "src": "@@src",
-        "width": "80",
-        "height": "80",
+            "class": "small-card__img",
+            "src": "@@src",
+            "width": "@@if(!context.style){80}@@if(context.style == 'xl'){140}",
+            "height": "@@if(!context.style){80}@@if(context.style == 'xl'){140}",
         })
         @@if(context.title){
-        @@include('blocks/title/title.html', {
-        "tag": "span",
-        "class": "small-card__title",
-        "text": "@@title"
-        })
+            @@include('blocks/title/title.html', {
+                "tag": "span",
+                "class": "small-card__title",
+                "text": "@@title"
+            })
+        }
+        @@if(context.price) {
+            <div class="prices">
+                <span>от</span>
+                <b class="price">@@price</b>
+                <span>руб.</span>
+            </div>
         }
     </a>
 </li>

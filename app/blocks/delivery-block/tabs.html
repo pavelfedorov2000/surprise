@@ -1,39 +1,41 @@
 <nav class="tabs delivery-block__tabs tabs--style_line">
 	<ul class="tabs__list">
-		<li>
-			<button id="delivery_tab_1" class="tab active tab--style_radio" type="button" role="tab"
-				aria-selected="true" aria-controls="delivery-tabs-content-1">
-				<span class="tab__circle"></span>
-				<span class="tab__text">Курьером по Минску</span>
-			</button>
-		</li>
-		<li>
-			<button id="delivery_tab_2" class="tab tab--style_radio" type="button" role="tab" aria-selected="false"
-				aria-controls="delivery-tabs-content-2">
-				<span class="tab__circle"></span>
-				<span class="tab__text">Самовывоз</span>
-			</button>
-		</li>
-		<li>
-			<button id="delivery_tab_3" class="tab tab--style_radio" type="button" role="tab" aria-selected="false"
-				aria-controls="delivery-tabs-content-3">
-				<span class="tab__circle"></span>
-				<span class="tab__text">Доставка почтой</span>
-			</button>
-		</li>
-		<li>
-			<button id="delivery_tab_4" class="tab tab--style_radio" type="button" role="tab" aria-selected="false"
-				aria-controls="delivery-tabs-content-4">
-				<span class="tab__circle"></span>
-				<span class="tab__text">Электронный сертификат </span>
-			</button>
-		</li>
-		<li>
-			<button id="delivery_tab_5" class="tab tab--style_radio" type="button" role="tab" aria-selected="false"
-				aria-controls="delivery-tabs-content-5">
-				<span class="tab__circle"></span>
-				<span class="tab__text">Для юр. лиц и ИП</span>
-			</button>
-		</li>
+        @@loop('blocks/tab/tab.html', [{
+            "listItem": true,
+            "style": "radio",
+            "id": "delivery_tab_1",
+            "controls": "delivery-tabs-content-1",
+            "circle": true,
+            "text": "Курьером по Минску",
+            "isActive": true
+        }, {
+            "listItem": true,
+            "style": "radio",
+            "id": "delivery_tab_2",
+            "controls": "delivery-tabs-content-2",
+            "circle": true,
+            "text": "Самовывоз",
+        }, {
+            "listItem": true,
+            "style": "radio",
+            "id": "delivery_tab_3",
+            "controls": "delivery-tabs-content-3",
+            "circle": true,
+            "text": "Доставка почтой",
+        }, {
+            "listItem": true,
+            "style": "radio",
+            "id": "delivery_tab_4",
+            "controls": "delivery-tabs-content-4",
+            "circle": true,
+            "text": "Электронный сертификат",
+        }, {
+            "listItem": true,
+            "style": "radio",
+            "id": "delivery_tab_5",
+            "controls": "delivery-tabs-content-5",
+            "circle": true,
+            "text": "Для юр. лиц и ИП",
+        }])
 	</ul>
 </nav>

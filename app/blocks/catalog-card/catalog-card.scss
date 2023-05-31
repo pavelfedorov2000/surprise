@@ -15,8 +15,8 @@
 
 	&__favorite {
 		position: absolute;
-		top: 20px;
-		right: 20px;
+		top: var(--offset-sm);
+		right: var(--offset-sm);
 		z-index: 1;
 
 		@media(max-width: $sm) {
@@ -231,7 +231,9 @@
 
 					.leader__item {
 						&:not(:last-child) {
-							font-size: 18px;
+							@media (min-width: $xl) {
+                                font-size: 18px;
+                            }
 						}
 
 						&:last-child {
@@ -242,12 +244,12 @@
 					}
 				}
 
-				&__leader,
+				/* &__leader,
 				&__prices {
 					@media(max-width: $md) {
 						display: none;
 					}
-				}
+				} */
 			}
 		}
 	}

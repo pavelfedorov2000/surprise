@@ -5,7 +5,7 @@
 	grid-template-columns: repeat(auto-fit, minmax(var(--baseWidth), 1fr));
 	gap: var(--offset-xxxl);
 
-	@media(max-width: $xl) {
+	@media(max-width: $xxl) {
 		gap: var(--offset-xls) var(--offset-l);
 	}
 

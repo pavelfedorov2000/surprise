@@ -20,7 +20,7 @@
 
             &__body {
                 order: 2;
-                margin-left: 10px;
+                margin-left: var(--offset-x);
                 margin-right: var(--offset-m);
             }
         }
@@ -85,7 +85,7 @@
     &__num {
         @extend %museo-700;
         font-size: 20px;
-        margin-left: 10px;
+        margin-left: var(--offset-x);
 
         &.hidden {
             display: none;
@@ -129,7 +129,7 @@
 
     &__num {
         position: relative;
-        padding-left: 20px;
+        padding-left: var(--offset-sm);
 
         &::before {
             content: '';

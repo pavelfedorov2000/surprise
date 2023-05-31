@@ -1,55 +1,55 @@
 <fieldset class="cart__section cart-section">
     @@include('blocks/title/title.html', {
-    "tag": "legend",
-    "class": "section-title cart-section__title",
-    "text": "Cпособ оплаты"
+        "tag": "legend",
+        "class": "section-title cart-section__title",
+        "text": "Cпособ оплаты"
     })
     <div class="cart-section__inner">
         <div class="cart-section__radios">
             @@loop('blocks/radio/radio.html', [{
-            "style": "payment",
-            "name": "PAYMENT_OPTION",
-            "icon": "blocks/icons/yandex.html",
-            "body": {
-            "text": "Наличными при получении",
-            },
-            "dropdown": {
-            "label": "С какой суммы подтребуется сдача?",
-            "placeholder": "0 руб."
-            },
-            "isChecked": true
+                "style": "payment",
+                "name": "PAYMENT_OPTION",
+                "icon": "blocks/icons/yandex.html",
+                "body": {
+                    "text": "Наличными при получении",
+                },
+                "dropdown": {
+                    "label": "С какой суммы подтребуется сдача?",
+                    "placeholder": "0 руб."
+                },
+                "isChecked": true
             }, {
-            "style": "payment",
-            "name": "PAYMENT_OPTION",
-            "sprite": "credit-card-yellow",
-            "body": {
-            "text": "Картой при получении",
-            }
+                "style": "payment",
+                "name": "PAYMENT_OPTION",
+                "sprite": "credit-card-yellow",
+                "body": {
+                    "text": "Картой при получении",
+                }
             }, {
-            "style": "payment",
-            "name": "PAYMENT_OPTION",
-            "sprite": "credit-card-blue",
-            "body": {
-            "text": "Картой онлайн",
-            }
+                "style": "payment",
+                "name": "PAYMENT_OPTION",
+                "sprite": "credit-card-blue",
+                "body": {
+                    "text": "Картой онлайн",
+                }
             }, {
-            "style": "payment",
-            "name": "PAYMENT_OPTION",
-            "img": {
-            "src": "assets/images/icons/erip.svg",
-            "alt": "ЕРИП",
-            "width": "49",
-            "height": "24"
-            },
-            "body": {
-            "text": "Через Ерип",
-            }
+                "style": "payment",
+                "name": "PAYMENT_OPTION",
+                "img": {
+                    "src": "assets/images/icons/erip.svg",
+                    "alt": "ЕРИП",
+                    "width": "49",
+                    "height": "24"
+                },
+                "body": {
+                    "text": "Через Ерип",
+                }
             }])
         </div>
         @@include('blocks/checkbox/checkbox.html', {
-        "style": 2,
-        "isChecked": true,
-        "text": "Списать <b>10.80</b> с внутреннего баланса"
+            "style": 2,
+            "isChecked": true,
+            "text": "Списать <b>10.80</b> с внутреннего баланса"
         })
     </div>
 </fieldset>

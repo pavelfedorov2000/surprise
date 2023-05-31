@@ -1,36 +1,36 @@
 <@@if(context.form){form}@@if(!context.form){div} @@if(context.form){action="#" }
 	class="form form--style_flex-element@@if(context.form){ js-form}">
 	@@loop('blocks/form-item/form-item.html', [{
-	"label": "Код активации",
-	"placeholder": "123****12",
-	"required": true,
-	"requiredMessage": "Поле не может быть пустым"
+        "label": "Код активации",
+        "placeholder": "123****12",
+        "required": true,
+        "requiredMessage": "Поле не может быть пустым"
 	}, {
-	"label": "Ваше имя",
-	"placeholder": "Ваше имя",
-	"required": true,
-	"requiredMessage": "Поле не может быть пустым"
+        "label": "Ваше имя",
+        "placeholder": "Ваше имя",
+        "required": true,
+        "requiredMessage": "Поле не может быть пустым"
 	}, {
-	"label": "Ваш номер телефона",
-	"inputType": "tel",
-	"placeholder": "+ 375 ()",
-	"required": true,
-	"requiredMessage": "Поле не может быть пустым"
+        "label": "Ваш номер телефона",
+        "inputType": "tel",
+        "placeholder": "+ 375 ()",
+        "required": true,
+        "requiredMessage": "Поле не может быть пустым"
 	}, {
-	"label": "Ваш email",
-	"inputType": "email",
-	"placeholder": "example@mail.com",
-	"required": true,
-	"requiredMessage": "Поле не может быть пустым",
-	"emailMessage": "Некорректный email"
+        "label": "Ваш email",
+        "inputType": "email",
+        "placeholder": "example@mail.com",
+        "required": true,
+        "requiredMessage": "Поле не может быть пустым",
+        "emailMessage": "Некорректный email"
 	}])
 	@@include('blocks/button/button.html', {
-	"style": "bg-pink",
-	"class": "form__btn",
-	"type": "submit",
-	"text": "@@submit"
+        "style": "bg-pink",
+        "class": "form__btn",
+        "type": "submit",
+        "text": "@@submit"
 	})
 	@@if(context.small){
-	<small class="form-small">@@small</small>
+	    <small class="form-small">@@small</small>
 	}
 </@@if(context.form){form}@@if(!context.form){div}>

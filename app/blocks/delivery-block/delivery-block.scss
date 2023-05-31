@@ -46,7 +46,7 @@
 
     &__text {
         &:not(:last-child) {
-            margin-bottom: 20px;
+            margin-bottom: var(--offset-sm);
         }
     }
 

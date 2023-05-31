@@ -67,7 +67,7 @@
         .leader__item {
             dt {
                 min-width: 123px;
-                margin-right: 10px;
+                margin-right: var(--offset-x);
             }
         }
     }

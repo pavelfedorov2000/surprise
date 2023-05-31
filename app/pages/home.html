@@ -15,21 +15,13 @@
 			</div>
 		</section>
 		@@include('blocks/ordered-tape-section/ordered-tape-section.html', {
-		"title": "Лучший подарок на празднике - ваш!"
+		    "title": "Лучший подарок на празднике - ваш!"
 		})
 		@@include('blocks/favorite-categories/favorite-categories.html')
-		<section class="section">
-			<div class="container">
-				<div class="section__top">
-					<h2 class="section-title">Новинки</h2>
-				</div>
-				@@include('blocks/catalog-grid/catalog-grid.html')
-				@@include("blocks/load-more/load-more.html")
-			</div>
-		</section>
+		@@include('blocks/new-goods/new-goods.html')
 		@@include('blocks/aside-section/aside-section.html', {
-		"title": "Нужна помощь в подборе подарка?",
-		"btn": "Написать"
+            "title": "Нужна помощь в подборе подарка?",
+            "btn": "Написать"
 		})
 		@@include('blocks/reviews-section/reviews-section.html')
 		@@include('blocks/blog-section/blog-section.html')

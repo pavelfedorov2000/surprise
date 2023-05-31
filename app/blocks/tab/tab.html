@@ -1,0 +1,33 @@
+@@if(context.listItem){
+    <li>
+        <button id="@@id"
+                class="tab@@if(context.class){ @@class}@@if(context.isActive){ active}@@if(context.style){ tab--style_@@style}"
+                type="button"
+                role="tab"
+                aria-selected="@@if(context.isActive){true}@@if(!context.isActive){false}"
+                @@if(context.controls){aria-controls="@@controls"}>
+            @@if(context.circle){
+                <span class="tab__circle"></span>
+            }
+            <span class="tab__text">
+                @@text
+            </span>
+        </button>
+    </li>
+}
+
+@@if(!context.listItem){
+    <button id="@@id"
+            class="tab@@if(context.class){ @@class}@@if(context.isActive){ active}@@if(context.style){ tab--style_@@style}"
+            type="button"
+            role="tab"
+            aria-selected="@@if(context.isActive){true}@@if(!context.isActive){false}"
+            aria-controls="@@controls">
+        @@if(context.circle){
+            <span class="tab__circle"></span>
+        }
+        <span class="tab__text">
+            @@text
+        </span>
+    </button>
+}

@@ -27,7 +27,7 @@
         align-items: start;
     }
 
-    @media(max-width: $xl) {
+    @media(max-width: $xxl) {
         grid-auto-rows: max-content;
         row-gap: var(--offset-xxxl);
     }

@@ -1,0 +1,69 @@
+@@include("blocks/head/head.html", {"title": "Универсальный сертификат на сумму"})
+<div class="wrapper">
+	@@include("blocks/layout/layout.html")
+	<main class="page page--padding-top_ls page--padding-bottom_none">
+		<div class="container">
+			@@include('blocks/breadcrumbs/breadcrumbs.html', {
+                "prev": "Все сертификаты",
+                "current": "Универсальный подарочный сертификат"
+			})
+			<div class="certificate-preview">
+				<header class="certificate-preview__top">
+                    @@include('blocks/title/title.html', {
+                        "level": "1",
+                        "class": "page-title page-title--size_xs",
+                        "text": "Универсальный сертификат"
+                    })
+					@@include('blocks/rating/rating.html', {
+                        "mobHidden": true,
+                        "reverse": true,
+                        "link": "20 отзывов",
+                        "num": "5.0"
+					})
+				</header>
+				@@include('blocks/photogallery/photogallery.html')
+			</div>
+			@@include('blocks/unique-package/unique-package.html')
+			<div class="section grid-row">
+				<div class="grid-col-8 certificate-content">
+					<div class="certificate-content__section">
+						@@include('blocks/icons-list/icons-list.html')
+					</div>
+					<div class="certificate-content__section">
+						<div>
+                            @@include('blocks/title/title.html', {
+                                "tag": "div",
+                                "class": "section-title section-title--mb_m",
+                                "text": "Универсальный вариант на любой случай"
+                            })
+							<p>
+								Что делать, если иссякли идеи для подарков, а так хочется доставить радость близкому человеку? Записывайте название самого действенного средства на любой случай от Surprise.by — универсальный подарочный сертификат. Один небольшой, но стильный конверт, в котором именно тот подарок, который человек выбирает сам!
+							</p>
+						</div>
+					</div>
+					@@include('blocks/certificate-reviews/certificate-reviews.html')
+				</div>
+				<div class="grid-col-4">
+					@@include("blocks/aside-choose/aside-choose.html", {
+                        "universal": true
+                    })
+				</div>
+			</div>
+		</div>
+        @@include('blocks/services-list/services-list.html')
+		@@include('blocks/ordered-tape-section/ordered-tape-section.html', {
+		    "title": "Как это работает"
+		})
+		@@include('blocks/delivery-section/delivery-section.html')
+		@@include('blocks/faq-section/faq-section.html', {
+		    "src": "assets/images/content/kvadro-faq"
+		})
+        @@include('blocks/new-goods/new-goods.html')
+		@@include('blocks/aside-choose-tape/aside-choose-tape.html')
+	</main>
+	@@include("blocks/footer/footer.html")
+</div>
+@@include("blocks/link/link.html")
+</body>
+
+</html>

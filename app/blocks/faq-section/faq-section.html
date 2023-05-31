@@ -3,9 +3,9 @@
         <div class="faq-section__inner">
             <div class="faq-section__content">
                 @@include('blocks/title/title.html', {
-                "level": "2",
-                "class": "section-title section-title--mb_l",
-                "text": "Остались вопросы?<br> У нас есть ответы на них!"
+                    "level": "2",
+                    "class": "section-title section-title--mb_l",
+                    "text": "Остались вопросы?<br> У нас есть ответы на них!"
                 })
                 <div class="accordion-block">
                     @@loop('blocks/accordion-item/accordion-item.html', "../resources/assets/faq.json")
@@ -13,10 +13,10 @@
             </div>
             <div class="faq-section__img">
                 @@include('blocks/img/img.html', {
-                "class": "img-cover",
-                "src": "@@src",
-                "width": "627",
-                "height": "470",
+                    "class": "img-cover",
+                    "src": "@@src",
+                    "width": "627",
+                    "height": "470",
                 })
             </div>
         </div>

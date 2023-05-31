@@ -2,7 +2,7 @@ $container: 1440;
 
 :root {
     // colors (pallette)
-    --white: #fff;
+    --white: #fff;  
     --pink: #F395A9;
     --pink-hover: #E6859A;
     --pink-pressed: #EDA2B2;
@@ -59,8 +59,10 @@ $container: 1440;
     --offset-ls: 36px;
     --offset-l: 32px;
     --offset-m: 24px;
+    --offset-sm: 20px;
     --offset-s: 16px;
     --offset-xs: 12px;
+    --offset-x: 10px;
     --offset-xxs: 8px;
     --offset-xxxs: 4px;
 
@@ -89,6 +91,7 @@ $container: 1440;
     --duration--long: 1s;
     --delay: var(--duration);
     --transition: var(--duration) var(--transition-timing);
+    --transition-long: var(--duration--long) var(--transition-timing);
 
     // typography
     --font-size: 16px;
@@ -96,7 +99,7 @@ $container: 1440;
     --color-default: var(--black);
     --border: 1px solid var(--line-color);
 
-    @media(max-width: $xl) {
+    @media(max-width: $xxl) {
         --container-padding: 16px;
     }
 }

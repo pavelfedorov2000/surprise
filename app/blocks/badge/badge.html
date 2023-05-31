@@ -1,13 +1,13 @@
 <span class="badge@@if(context.class){ @@class__badge}@@if(context.color){ badge--color_@@color}">
     <span class="badge__text">
         @@if(context.text){
-        @@text
+            @@text
         }
         @@if(context.date){
-        @@include('blocks/datetime/datetime.html', {
-        "formattedDate": "2022-12-13",
-        "date": "13.12.2022"
-        })
+            @@include('blocks/datetime/datetime.html', {
+                "formattedDate": "2022-12-13",
+                "date": "13.12.2022"
+            })
         }
     </span>
 </span>

@@ -14,7 +14,7 @@
         gap: var(--offset-l) 108px;
 
         @media(max-width: $md) {
-            gap: 20px 21.5px;
+            gap: var(--offset-sm) 21.5px;
         }
     }
 

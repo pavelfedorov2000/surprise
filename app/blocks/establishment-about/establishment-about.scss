@@ -1,7 +1,7 @@
 .establishment-about {
 
 	&__row {
-		@media(max-width: $xl) {
+		@media(max-width: $xxl) {
 			grid-template-columns: calc(100vw - var(--container-padding) * 2);
 			@include row-grid(var(--offset-xls));
 		}

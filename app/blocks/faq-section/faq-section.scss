@@ -9,7 +9,7 @@
 			justify-content: space-between;
 		}
 
-		@media(max-width: $xl) {
+		@media(max-width: $xxl) {
 			@include row-grid(var(--offset-l));
 		}
 	}
@@ -28,7 +28,7 @@
 		position: relative;
 		padding-bottom: 32.639%;
 
-		@media(max-width: $xl) {
+		@media(max-width: $xxl) {
 			padding-bottom: 50%;
 		}
 

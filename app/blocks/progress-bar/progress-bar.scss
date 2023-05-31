@@ -19,6 +19,6 @@ $progress-bar-size: 68px;
         stroke-dashoffset: 100;
         stroke-linecap: round;
         stroke-width: $progress-bar-stroke-width;
-        transition: stroke-dashoffset 1s ease-in-out;
+        transition: stroke-dashoffset var(--duration--long) ease-in-out;
     }
 }

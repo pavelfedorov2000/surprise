@@ -40,7 +40,7 @@
 
 	&__title {
 		@media(min-width: $md) {
-			margin-bottom: -20px;
+			margin-bottom: calc(var(--offset-sm) * (-1));
 		}
 	}
 

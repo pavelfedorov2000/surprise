@@ -1,7 +1,7 @@
 .photogallery {
     $this: &;
 
-    @media(max-width: $xl) {
+    @media(max-width: $xxl) {
         @include margin-x(calc(var(--container-padding) * (-1)));
     }
 
@@ -10,7 +10,7 @@
     }
 
     .mob-rating {
-        top: 20px;
+        top: var(--offset-sm);
         right: 18px;
     }
 

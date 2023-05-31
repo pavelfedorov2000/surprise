@@ -11,7 +11,7 @@
             justify-content: flex-end;
         }
 
-        @media(max-width: $xl) {
+        @media(max-width: $xxl) {
             flex-direction: column;
         }
     }
@@ -23,7 +23,7 @@
             margin-left: var(--offset-xls);
         }
 
-        @media(max-width: $xl) {
+        @media(max-width: $xxl) {
             align-self: center;
         }
     }

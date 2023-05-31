@@ -5,7 +5,7 @@
         @include sticky(50px);
     }
 
-    @media(max-width: $xl) {
+    @media(max-width: $xxl) {
         padding-top: var(--offset-xxxl);
     }
 
@@ -16,7 +16,7 @@
         position: relative;
         padding: 42px 25px 88px var(--offset-l);
 
-        @media(max-width: $xl) {
+        @media(max-width: $xxl) {
             padding: 42px 0;
         }
 
@@ -37,7 +37,7 @@
             background-color: rgba(#F6DFE3, .2);
             border-radius: var(--brs-card-xl);
 
-            @media(max-width: $xl) {
+            @media(max-width: $xxl) {
                 left: 35px;
             }
         }

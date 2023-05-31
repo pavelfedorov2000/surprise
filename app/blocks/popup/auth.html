@@ -1,28 +1,36 @@
 <div id="auth" class="popup" role="dialog">
 	@@include('blocks/close-btn/close-btn.html', {
-	"class": "popup",
-	"ariaLabel": "Закрыть авторизацию"
+        "class": "popup",
+        "ariaLabel": "Закрыть авторизацию"
 	})
-	<nav class="popup__tabs" aria-label="Tabs">
+	<nav class="popup__tabs" aria-label="Табы">
 		<div class="tabs tabs--items_2" role="tablist">
-			<button class="tab popup__tab active tab--style_2" id="auth_tab_1" role="tab" aria-selected="true"
-				aria-controls="auth-tabs-content-1" type="button">
-				Авторизация
-			</button>
-			<button class="tab popup__tab tab--style_2" id="auth_tab_2" role="tab" aria-selected="false"
-				aria-controls="auth-tabs-content-2" type="button">
-				Регистрация
-			</button>
+            @@loop('blocks/tab/tab.html', [{
+                "class": "popup__tab",
+                "style": "2",
+                "id": "auth_tab_1",
+                "controls": "auth-tabs-content-1",
+                "text": "Авторизация",
+                "isActive": true
+            }, {
+                "class": "popup__tab",
+                "style": "2",
+                "id": "auth_tab_2",
+                "controls": "auth-tabs-content-2",
+                "text": "Регистрация",
+            }])
 		</div>
 	</nav>
 	<form action="#" id="auth-tabs-content-1" aria-labelledby="auth_tab_1" class="tabs-content js-form"
 		style="display: block;" role="tabpanel">
 		<div class="popup__form">
-			<label class="form-item">
-				<span class="form-label">Телефон *</span>
-				<input type="tel" class="input" placeholder="123****12" required
-					data-pristine-required-message="Поле не может быть пустым">
-			</label>
+            @@include('blocks/form-item/form-item.html', {
+                "inputType": "tel",
+                "label": "Телефон",
+                "placeholder": "123****12",
+                "required": true,
+                "requiredMessage": "Поле не может быть пустым"
+            })
 			<label class="form-item">
 				<span class="form-label">Пароль *</span>
 				<span class="input-wrap">
@@ -36,49 +44,54 @@
 			</label>
 			<div class="form-item form-item--flex">
 				@@include('blocks/checkbox/checkbox.html', {
-				"text": "Запомнить пароль"
+				    "text": "Запомнить пароль"
 				})
 				@@include('blocks/button/button.html', {
-				"class": "js-forgot-password",
-				"style": "link-3",
-				"text": "Забыли пароль?"
+                    "class": "js-forgot-password",
+                    "style": "link-3",
+                    "text": "Забыли пароль?"
 				})
 			</div>
 			@@include('blocks/button/button.html', {
-			"type": "submit",
-			"style": "bg-pink",
-			"text": "Войти"
+                "class": "popup__btn",
+                "type": "submit",
+                "style": "bg-pink",
+                "text": "Войти"
 			})
 		</div>
 		<div class="popup__btn">
 			@@include('blocks/button/button.html', {
-			"class": "js-get-auth-code",
-			"style": "link",
-			"text": "Получить код авторизации"
+                "class": "js-get-auth-code",
+                "style": "link",
+                "text": "Получить код авторизации"
 			})
 		</div>
 	</form>
 	<form action="#" id="auth-tabs-content-2" aria-labelledby="auth_tab_2" class="tabs-content js-form" role="tabpanel">
 		<div class="popup__form">
-			<label class="popup__form-item form-item">
-				<span class="form-label">E-mail*</span>
-				<input type="email" class="input" placeholder="example@mail.com" required
-					data-pristine-required-message="Поле не может быть пустым">
-			</label>
-			<label class="popup__form-item form-item">
-				<span class="form-label">Телефон*</span>
-				<input type="tel" class="input" placeholder="123****12" required
-					data-pristine-required-message="Поле не может быть пустым">
-			</label>
-			<label class="popup__form-item form-item">
-				<span class="form-label">Ваше имя*</span>
-				<input class="input" placeholder="Имя" required
-					data-pristine-required-message="Поле не может быть пустым">
-			</label>
+            @@loop('blocks/form-item/form-item.html', [{
+                "inputType": "email",
+                "label": "E-mail",
+                "placeholder": "example@mail.com",
+                "required": true,
+                "requiredMessage": "Поле не может быть пустым"
+            }, {
+                "inputType": "tel",
+                "label": "Телефон",
+                "placeholder": "123****12",
+                "required": true,
+                "requiredMessage": "Поле не может быть пустым"
+            }, {
+                "label": "Ваше имя",
+                "placeholder": "Имя",
+                "required": true,
+                "requiredMessage": "Поле не может быть пустым"
+            }])
 			@@include('blocks/button/button.html', {
-			"type": "submit",
-			"style": "bg-pink",
-			"text": "Зарегистрироваться"
+                "class": "popup__btn",
+                "type": "submit",
+                "style": "bg-pink",
+                "text": "Зарегистрироваться"
 			})
 		</div>
 	</form>

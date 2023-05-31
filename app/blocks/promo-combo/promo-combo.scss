@@ -95,16 +95,21 @@
 
     &__box {
         display: none;
+        padding: 30px;
+        place-items: center;
+        font-size: 15px;
+        line-height: calc(18 / 15 * 100%);
+        color: var(--white);
+        text-align: center;
 
         @media(min-width: $xl) {
-            display: block;
-            padding: 61.5px;
             display: grid;
-            place-items: center;
+        }
+
+        @media(min-width: 1201px) {
+            padding: 61.5px;
             font-size: 32px;
             line-height: calc(38 / 32 * 100%);
-            color: var(--white);
-            text-align: center;
         }
 
         &--style {
@@ -143,6 +148,7 @@
     }
 
     &--set {
+        grid-template-rows: repeat(2, minmax(105px, auto));
         grid-template-areas:
         'img-2 img-3'
         'box-2 img-3'
@@ -162,8 +168,14 @@
 
         #{$this} {
             &__box {
-                &--1 {
-                    display: block;
+                &--2 {
+                    display: grid;
+                }
+            }
+
+            &__img {
+                @media(max-width: $lg) {
+                    padding-bottom: 59.54%;
                 }
             }
         }

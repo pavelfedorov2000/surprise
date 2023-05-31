@@ -1,6 +1,8 @@
 <section class="combo-block certificate-content__section">
     <div class="combo-block__inner">
-        @@include('blocks/combo-card/combo-card.html')
+        @@include('blocks/combo-card/combo-card.html', {
+            "combo": true
+        })
         @@include('blocks/img/img.html', {
             "withoutPicture": "true",
             "class": "combo-block__plus",
@@ -9,7 +11,9 @@
             "width": "24",
             "height": "24"
         })
-        @@include('blocks/combo-card/combo-card.html')
+        @@include('blocks/combo-card/combo-card.html', {
+            "combo": true
+        })
         @@include('blocks/img/img.html', {
             "withoutPicture": "true",
             "class": "combo-block__equals",

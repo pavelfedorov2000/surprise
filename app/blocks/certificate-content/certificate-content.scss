@@ -1,7 +1,10 @@
 .certificate-content {
-    max-width: 877px;
     display: flex;
     flex-direction: column;
+
+    @media (min-width: 1201px) {
+        max-width: 877px;
+    }
 
     &__section {
         @include row-grid(var(--offset-xl));

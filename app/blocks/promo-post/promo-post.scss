@@ -1,14 +1,14 @@
 .promo-post {
     --bottom-offset: 190px;
 
-    @media(max-width: $xl) {
+    @media(max-width: $xxl) {
         --bottom-offset: 150px;
     }
 
     padding-top: 150px;
     position: relative;
 
-    @media(max-width: $xl) {
+    @media(max-width: $xxl) {
         @include padding-y(var(--offset-xxxl));
     }
 
@@ -36,7 +36,7 @@
     &__content {
         grid-row: 1 / 3;
 
-        @media(max-width: $xl) {
+        @media(max-width: $xxl) {
             margin-bottom: 42px;
         }
     }

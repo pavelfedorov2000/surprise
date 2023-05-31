@@ -1,0 +1,54 @@
+<section class="section">
+    <div class="container">
+        <div class="section__top">
+            @@include('blocks/title/title.html', {
+                "level": "2",
+                "class": "section-title",
+                "text": "Получатель сможет выбрать любую услугу на определенную сумму!"
+            })
+        </div>
+        <ul class="services-list">
+            @@loop('blocks/small-card/small-card.html', [{
+                "style": "xl",
+                "src": "assets/images/content/favorite-categories/05",
+                "title": "Все сертификаты",
+                "price": "59"
+            }, {
+                "style": "xl",
+                "src": "assets/images/content/favorite-categories/02",
+                "title": "Активный отдых",
+                "price": "59"
+            }, {
+                "style": "xl",
+                "src": "assets/images/content/favorite-categories/03",
+                "title": "Подарки на День Рождения",
+                "price": "59"
+            }, {
+                "style": "xl",
+                "src": "assets/images/content/favorite-categories/04",
+                "title": "СПА",
+                "price": "59"
+            }, {
+                "style": "xl",
+                "src": "assets/images/content/favorite-categories/07",
+                "title": "Все сертификаты",
+                "price": "59"
+            }, {
+                "style": "xl",
+                "src": "assets/images/content/favorite-categories/06",
+                "title": "Активный отдых",
+                "price": "59"
+            }, {
+                "style": "xl",
+                "src": "assets/images/content/favorite-categories/05",
+                "title": "Подарки на День Рождения",
+                "price": "59"
+            }, {
+                "style": "xl",
+                "src": "assets/images/content/favorite-categories/02",
+                "title": "СПА",
+                "price": "59"
+            }])
+        </ul>
+    </div>
+</section>

@@ -2,7 +2,7 @@
     display: grid;
     gap: var(--offset-xxxl);
 
-    @media(max-width: $xl) {
+    @media(max-width: $xxl) {
         margin-bottom: calc(var(--offset-xxxl) * (-3));
     }
 
@@ -20,7 +20,7 @@
         @include row-grid(var(--offset-xxxl));
         align-content: start;
 
-        @media(max-width: $xl) {
+        @media(max-width: $xxl) {
             order: 1;
         }
     }
@@ -33,7 +33,7 @@
 
     &__badge {
         @media(max-width: $lg) {
-            margin-bottom: 10px;
+            margin-bottom: var(--offset-x);
         }
     }
 
@@ -116,7 +116,7 @@
     }
 
     &__answers {
-        margin-top: 20px;
+        margin-top: var(--offset-sm);
 
         @media(max-width: $sm) {
             row-gap: var(--offset-s);
@@ -177,7 +177,7 @@
 .reactions {
     display: flex;
     flex-wrap: wrap;
-    gap: var(--offset-xxs) 10px;
+    gap: var(--offset-xxs) var(--offset-x);
 
     @media(max-width: $lg) {
         padding-bottom: var(--offset-xs);
@@ -214,7 +214,7 @@
     }
 
     &__author + &__author {
-        margin-left: -10px;
+        margin-left: calc(var(--offset-x) * (-1));
     }
 }
 

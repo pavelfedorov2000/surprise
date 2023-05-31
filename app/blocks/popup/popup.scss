@@ -192,12 +192,6 @@
     &__tabs {
         @include sticky(0);
     }
-
-    /* &__tabs-content {
-        position: absolute;
-        top: 0;
-        left: calc(234px + var(--offset-m));
-    } */
 }
 
 .congratulation-item {

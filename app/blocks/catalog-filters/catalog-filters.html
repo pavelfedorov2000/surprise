@@ -5,22 +5,22 @@
             type="button">Фильтр</button>
     <div class="catalog-filters__radios">
         @@loop('blocks/radio/radio.html', [{
-        "class": "catalog-filters__radio",
-        "style": "filter",
-        "name": "catalog-radio-filter",
-        "body": {
-        "text": "В подарок",
-        },
-        "icon": "blocks/icons/gift.html",
-        "isChecked": true
+            "class": "catalog-filters__radio",
+            "style": "filter",
+            "name": "catalog-radio-filter",
+            "body": {
+                "text": "В подарок",
+            },
+            "icon": "blocks/icons/gift.html",
+            "isChecked": true
         }, {
-        "class": "catalog-filters__radio",
-        "style": "filter",
-        "name": "catalog-radio-filter",
-        "body": {
-        "text": "Для себя",
-        },
-        "icon": "blocks/icons/user.html",
+            "class": "catalog-filters__radio",
+            "style": "filter",
+            "name": "catalog-radio-filter",
+            "body": {
+                "text": "Для себя",
+            },
+            "icon": "blocks/icons/user.html",
         }])
     </div>
     <div class="catalog-filters__row">
@@ -62,63 +62,63 @@
                         <div class="dropdown-filter__col dropdown-filter__col--cols_2">
                             <div class="dropdown-filter__col-item">
                                 @@include('blocks/checkbox/checkbox.html', {
-                                "text": "Спа, красота, здоровье"
+                                    "text": "Спа, красота, здоровье"
                                 })
                                 @@include('blocks/checkbox/checkbox.html', {
-                                "text": "Полеты"
+                                    "text": "Полеты"
                                 })
                                 @@include('blocks/checkbox/checkbox.html', {
-                                "text": "Бары и рестораны"
+                                    "text": "Бары и рестораны"
                                 })
                                 @@include('blocks/checkbox/checkbox.html', {
-                                "text": "Романтические подарки"
+                                    "text": "Романтические подарки"
                                 })
                                 @@include('blocks/checkbox/checkbox.html', {
-                                "text": "Мастер-классы и обучение"
+                                    "text": "Мастер-классы и обучение"
                                 })
                                 @@include('blocks/checkbox/checkbox.html', {
-                                "text": "Подарочные карты магазинов"
+                                    "text": "Подарочные карты магазинов"
                                 })
                             </div>
                             <div class="dropdown-filter__col-item">
                                 @@include('blocks/checkbox/checkbox.html', {
-                                "text": "Свидания и вечеринки"
+                                    "text": "Свидания и вечеринки"
                                 })
                                 @@include('blocks/checkbox/checkbox.html', {
-                                "text": "Квесты"
+                                    "text": "Квесты"
                                 })
                                 @@include('blocks/checkbox/checkbox.html', {
-                                "text": "Квесты"
+                                    "text": "Квесты"
                                 })
                                 @@include('blocks/checkbox/checkbox.html', {
-                                "text": "Активный отдых"
+                                    "text": "Активный отдых"
                                 })
                                 @@include('blocks/checkbox/checkbox.html', {
-                                "text": "На День Рождения"
+                                    "text": "На День Рождения"
                                 })
                             </div>
                         </div>
                         <div class="dropdown-filter__col">
                             @@loop('blocks/checkbox/checkbox.html', [{
-                            "content": true,
-                            "title": "Универсальный сертификат",
-                            "subtitle": "Сертификат на сумму"
+                                "content": true,
+                                "title": "Универсальный сертификат",
+                                "subtitle": "Сертификат на сумму"
                             }, {
-                            "content": true,
-                            "title": "Комбо",
-                            "subtitle": "2 впечатления в 1"
+                                "content": true,
+                                "title": "Комбо",
+                                "subtitle": "2 впечатления в 1"
                             }, {
-                            "content": true,
-                            "title": "Наборы",
-                            "subtitle": "Сертификат на выбор"
+                                "content": true,
+                                "title": "Наборы",
+                                "subtitle": "Сертификат на выбор"
                             }])
                         </div>
                     </div>
                     @@include('blocks/button/button.html', {
-                    "class": "reset-btn",
-                    "style": "reset",
-                    "icon": "reset",
-                    "text": "Сбросить"
+                        "class": "reset-btn",
+                        "style": "reset",
+                        "icon": "reset",
+                        "text": "Сбросить"
                     })
                 </div>
             </div>
@@ -138,32 +138,32 @@
                     <div class="dropdown-filter__col dropdown-filter__col--cols_2">
                         <div class="dropdown-filter__col-item">
                             @@include('blocks/checkbox/checkbox.html', {
-                            "text": "Для нее"
+                                "text": "Для нее"
                             })
                             @@include('blocks/checkbox/checkbox.html', {
-                            "text": "Для него"
+                                "text": "Для него"
                             })
                             @@include('blocks/checkbox/checkbox.html', {
-                            "text": "Детям"
+                                "text": "Детям"
                             })
                         </div>
                         <div class="dropdown-filter__col-item">
                             @@include('blocks/checkbox/checkbox.html', {
-                            "text": "На двоих"
+                                "text": "На двоих"
                             })
                             @@include('blocks/checkbox/checkbox.html', {
-                            "text": "Для компании"
+                                "text": "Для компании"
                             })
                             @@include('blocks/checkbox/checkbox.html', {
-                            "text": "Семье"
+                                "text": "Семье"
                             })
                         </div>
                     </div>
                     @@include('blocks/button/button.html', {
-                    "class": "reset-btn",
-                    "style": "reset",
-                    "icon": "reset",
-                    "text": "Сбросить"
+                        "class": "reset-btn",
+                        "style": "reset",
+                        "icon": "reset",
+                        "text": "Сбросить"
                     })
                 </div>
             </div>
@@ -179,10 +179,10 @@
             @@include('blocks/price-filter/price-filter.html')
         </div>
         @@include('blocks/button/button.html', {
-        "style": "bg-green",
-        "class": "catalog-filters__btn",
-        "type": "submit",
-        "text": "Подобрать сертификат"
+            "style": "bg-green",
+            "class": "catalog-filters__btn",
+            "type": "submit",
+            "text": "Подобрать сертификат"
         })
     </div>
 </form>

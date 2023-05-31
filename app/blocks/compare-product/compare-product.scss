@@ -42,7 +42,7 @@
 	&__content {
 		@include row-grid(var(--offset-xxs));
 		justify-items: start;
-		padding-top: 20px;
+		padding-top: var(--offset-sm);
 
 		@media(max-width: $sm) {
 			padding-top: var(--offset-s);

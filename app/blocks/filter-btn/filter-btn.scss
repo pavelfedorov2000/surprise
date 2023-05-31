@@ -7,17 +7,17 @@
 	bottom: var(--offset-s);
 	z-index: 99;
 
-	@media(max-width: $xl) {
+	@media(max-width: $xxl) {
 		display: flex;
 	}
 
 	&.hidden {
-		@media(max-width: $xl) {
+		@media(max-width: $xxl) {
 			@include hide();
 		}
 	}
 
 	.btn__icon {
-		margin-right: 10px;
+		margin-right: var(--offset-x);
 	}
 }

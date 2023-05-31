@@ -1,0 +1,10 @@
+.services-list {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: var(--offset-xl) var(--offset-l);
+
+    @media (max-width: $md) {
+        grid-template-columns: repeat(2, 1fr);
+        gap: var(--offset-s);
+    }
+}

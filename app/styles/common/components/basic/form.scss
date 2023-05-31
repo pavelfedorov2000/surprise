@@ -65,7 +65,7 @@ textarea {
 .js-toggle-password {
     position: absolute;
     top: 50%;
-    right: 20px;
+    right: var(--offset-sm);
     transform: translateY(-50%);
 
     .icon {
@@ -115,7 +115,7 @@ textarea {
     box-shadow: var(--bsh);
     border-radius: var(--brs-card-xl);
 
-    @media(max-width: $xl) {
+    @media(max-width: $xxl) {
         padding: var(--offset-xxxl);
     }
 

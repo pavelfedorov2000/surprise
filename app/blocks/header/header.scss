@@ -114,14 +114,14 @@
         margin-right: calc(var(--offset-m) * (-1));
 
         @media(max-width: $md) {
-            margin-right: -20px;
+            margin-right: calc(var(--offset-sm) * (-1));
         }
     }
 
     &__btn {
         margin-left: calc(var(--offset-xxxl) - var(--offset-xxxs));
 
-        @media(max-width: $xl) {
+        @media(max-width: $xxl) {
             display: none;
         }
     }

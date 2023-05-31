@@ -9,7 +9,7 @@
 	}
 
 	&.fixed {
-		@media(max-width: $xl) {
+		@media(max-width: $xxl) {
 			position: fixed;
 			top: 0;
 			left: -100%;
@@ -33,7 +33,7 @@
 				}
 
 				&__radios {
-					@include margin-x(20px);
+					@include margin-x(var(--offset-sm));
 				}
 
 				&__radio {
@@ -59,7 +59,7 @@
 					flex-direction: column;
 					flex-grow: 1;
 					filter: none;
-					@include padding-x(20px);
+					@include padding-x(var(--offset-sm));
 
 					>.select {
 						.select {
@@ -72,7 +72,7 @@
 							}
 
 							&__content {
-								padding-bottom: 20px;
+								padding-bottom: var(--offset-sm);
 							}
 
 							&__label {
@@ -199,7 +199,7 @@
 	&__back-btn {
 		@extend %museo-700;
 		position: relative;
-		padding: 30px 20px var(--offset-l) var(--offset-xxls);
+		padding: 30px var(--offset-sm) var(--offset-l) var(--offset-xxls);
 		font-size: 24px;
 		line-height: 1.5;
 		color: var(--color-default);
@@ -210,7 +210,7 @@
 			position: absolute;
 			top: 50%;
 			transform: translateY(-50%);
-			left: 20px;
+			left: var(--offset-sm);
 			width: var(--icon-size);
 			height: var(--icon-size);
 			background-image: url(../images/icons/back.svg);
@@ -256,7 +256,7 @@
 					height: 100%;
 				}
 
-				@media(max-width: $xl) {
+				@media(max-width: $xxl) {
 					min-height: var(--offset-xxls);
 
 					&::after {
@@ -270,7 +270,7 @@
 			}
 
 			&__content {
-				@media(max-width: $xl) {
+				@media(max-width: $xxl) {
 					position: static;
 					border-radius: 0;
 					box-shadow: none;
@@ -290,7 +290,7 @@
 			gap: 2px;
 		}
 
-		@media(max-width: $xl) {
+		@media(max-width: $xxl) {
 			gap: 0;
 			grid-auto-columns: unset;
 			grid-auto-flow: row;
@@ -318,7 +318,7 @@
 			border-bottom-left-radius: 0;
 		}
 
-		@media(max-width: $xl) {
+		@media(max-width: $xxl) {
 			border-top-right-radius: 0;
 		}
 	}
@@ -345,7 +345,7 @@
 		transition: var(--transition) box-shadow,
 			var(--transition) border-color;
 
-		@media(max-width: $xl) {
+		@media(max-width: $xxl) {
 			min-height: 60px;
 			border-top: 1px solid var(--gray);
 		}
@@ -373,7 +373,7 @@
 		}
 
 		/* &[aria-expanded="true"] {
-            @media(max-width: $xl) {
+            @media(max-width: $xxl) {
                 border-color: var(--green);
             }
         } */
@@ -463,7 +463,7 @@
 			border-left: 1px solid #D5D5D5;
 		}
 
-		@media(max-width: $xl) {
+		@media(max-width: $xxl) {
 			margin-top: 22px;
 			padding-top: 22px;
 			border-top: 1px solid #D5D5D5;

@@ -26,7 +26,7 @@
 .adaptive-grid-row {
 	@include grid-auto-fit(350px, var(--offset-xxxl));
 
-	@media(max-width: $xl) {
+	@media(max-width: $xxl) {
 		gap: var(--offset-l);
 	}
 
@@ -52,7 +52,7 @@
 
 	&--gap {
 		&_xls {
-			@media(max-width: $xl) {
+			@media(max-width: $xxl) {
 				gap: var(--offset-xls);
 			}
 		}
@@ -135,20 +135,8 @@
 			grid-column: span 7;
 		}
 
-		@media(max-width: $xl) {
+		@media(max-width: $xxl) {
 			grid-column: 1 / -1;
-		}
-	}
-
-	&-xl-4 {
-		@media(min-width: 1201px) and (max-width: 1440px) {
-			grid-column: span 4;
-		}
-	}
-
-	&-xl-8 {
-		@media(min-width: 1201px) and (max-width: 1440px) {
-			grid-column: span 8;
 		}
 	}
 

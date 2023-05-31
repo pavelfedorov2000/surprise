@@ -4,21 +4,21 @@
 	<main class="page page--padding-top_ls page--padding-bottom_none">
 		<div class="container">
 			@@include('blocks/breadcrumbs/breadcrumbs.html', {
-			"prev": "Все сертификаты",
-			"current": "Катание на квадроциклах"
+                "prev": "Все сертификаты",
+                "current": "Катание на квадроциклах"
 			})
 			<div class="certificate-preview">
 				<header class="certificate-preview__top">
                     @@include('blocks/title/title.html', {
-                    "level": "1",
-                    "class": "page-title page-title--size_xs",
-                    "text": "Катание на квадроциклах в группе"
+                        "level": "1",
+                        "class": "page-title page-title--size_xs",
+                        "text": "Катание на квадроциклах в группе"
                     })
 					@@include('blocks/rating/rating.html', {
-					"mobHidden": true,
-					"reverse": true,
-					"link": "20 отзывов",
-					"num": "5.0"
+                        "mobHidden": true,
+                        "reverse": true,
+                        "link": "20 отзывов",
+                        "num": "5.0"
 					})
 				</header>
 				@@include('blocks/photogallery/photogallery.html')
@@ -26,33 +26,35 @@
 			<div class="tabs-block tabs-block--padding-bottom_xl">
 				<div class="tabs tabs--style_line">
 					<ul class="tabs__list tabs__list--items_2">
-						<li>
-							<button id="certificate_tab_gift" class="tab active js-certificate-tab tab--style_radio"
-								type="button" role="tab" aria-selected="true">
-								<span class="tab__circle"></span>
-								<span class="tab__text">В подарок</span>
-							</button>
-						</li>
-						<li>
-							<button id="certificate_tab_own" class="tab js-certificate-tab tab--style_radio"
-								type="button" role="tab" aria-selected="false">
-								<span class="tab__circle"></span>
-								<span class="tab__text">Для себя</span>
-							</button>
-						</li>
+                        @@loop('blocks/tab/tab.html', [{
+                            "listItem": true,
+                            "class": "js-certificate-tab",
+                            "style": "radio",
+                            "id": "certificate_tab_gift",
+                            "circle": true,
+                            "text": "В подарок",
+                            "isActive": true
+                        }, {
+                            "listItem": true,
+                            "class": "js-certificate-tab",
+                            "style": "radio",
+                            "id": "certificate_tab_own",
+                            "circle": true,
+                            "text": "Для себя",
+                        }])
 					</ul>
 				</div>
 			</div>
 			@@include('blocks/unique-package/unique-package.html')
 			<div class="section grid-row">
-				<div class="grid-col-7 certificate-content">
+				<div class="grid-col-8 certificate-content">
 					<div class="certificate-content__section">
 						@@include('blocks/icons-list/icons-list.html')
 						<section class="card card-box card--style_bg-pink card-box--padding_xl">
                             @@include('blocks/title/title.html', {
-                            "level": "2",
-                            "class": "card-box__title",
-                            "text": "Особенности"
+                                "level": "2",
+                                "class": "card-box__title",
+                                "text": "Особенности"
                             })
 							<ul class="check-list">
 								<li>Необходимо иметь с собой паспорт.</li>
@@ -84,9 +86,9 @@
                                     "format": "png"
                                 })
                                 @@include('blocks/title/title.html', {
-                                "level": "4",
-                                "class": "card-box__title",
-                                "text": "Важно знать"
+                                    "level": "4",
+                                    "class": "card-box__title",
+                                    "text": "Важно знать"
                                 })
 								<ul class="check-list card__list">
 									<li>
@@ -97,9 +99,9 @@
 									<li>Кататься можно каждый день при благоприятных погодных условиях.</li>
 								</ul>
 								@@include('blocks/button/button.html', {
-								"href": "#",
-								"style": "link-2",
-								"text": "Подробнее"
+                                    "href": "#",
+                                    "style": "link-2",
+                                    "text": "Подробнее"
 								})
 							</section>
 							<section class="card">
@@ -110,9 +112,9 @@
                                     "format": "png"
                                 })
                                 @@include('blocks/title/title.html', {
-                                "level": "4",
-                                "class": "card-box__title",
-                                "text": "О безопасности"
+                                    "level": "4",
+                                    "class": "card-box__title",
+                                    "text": "О безопасности"
                                 })
 								<ul class="check-list">
 									<li>Спасательный жилет. Если не умеете плавать, жилет — это ваша безопасность.</li>
@@ -123,17 +125,17 @@
 									</li>
 								</ul>
 								@@include('blocks/button/button.html', {
-								"href": "#",
-								"style": "link-2",
-								"text": "Подробнее"
+                                    "href": "#",
+                                    "style": "link-2",
+                                    "text": "Подробнее"
 								})
 							</section>
 						</div>
 						<section class="certificate-content__subsection">
                             @@include('blocks/title/title.html', {
-                            "level": "2",
-                            "class": "certificate-content__subsection-title",
-                            "text": "Как проходит SUP-серфинг?"
+                                "level": "2",
+                                "class": "certificate-content__subsection-title",
+                                "text": "Как проходит SUP-серфинг?"
                             })
 							<ul class="check-list">
 								<li>Подробный инструктаж. Вам объяснят, как и что делать, как держать равновесие и
@@ -148,9 +150,9 @@
 						</section>
 						<section class="certificate-content__subsection">
                             @@include('blocks/title/title.html', {
-                            "level": "2",
-                            "class": "certificate-content__subsection-title",
-                            "text": "Кому подойдет сертификат на SUP-серфинг в подарок?"
+                                "level": "2",
+                                "class": "certificate-content__subsection-title",
+                                "text": "Кому подойдет сертификат на SUP-серфинг в подарок?"
                             })
 							<ul class="check-list">
 								<li>Второй половинке. Проведите пару часов наедине с любимым человеком.</li>
@@ -167,18 +169,20 @@
 					</div>
 					@@include('blocks/certificate-reviews/certificate-reviews.html')
 				</div>
-				<div class="grid-col-5">
-					@@include("blocks/aside-choose/aside-choose.html")
+				<div class="grid-col-4">
+					@@include("blocks/aside-choose/aside-choose.html", {
+                        "choose": true
+                    })
 				</div>
 			</div>
 		</div>
 		@@include('blocks/ordered-tape-section/ordered-tape-section.html', {
-		"title": "Как это работает"
+		    "title": "Как это работает"
 		})
 		@@include('blocks/delivery-section/delivery-section.html')
 		@@include('blocks/compare-section/compare-section.html')
 		@@include('blocks/faq-section/faq-section.html', {
-		"src": "assets/images/content/kvadro-faq"
+		    "src": "assets/images/content/kvadro-faq"
 		})
 		@@include('blocks/aside-choose-tape/aside-choose-tape.html')
 	</main>

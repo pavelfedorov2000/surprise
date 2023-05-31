@@ -1,11 +1,10 @@
 <div
 	class="rating@@if(context.class){ @@class__rating}@@if(context.reverse){ rating--reverse}@@if(context.mobHidden){ mob-hidden}">
 	@@if(context.title) {
-	<div class="rating__title">Рейтинг: <span class="rating__num">@@title</span>
-	</div>
+	    <div class="rating__title">Рейтинг: <span class="rating__num">@@title</span></div>
 	}
 	@@if(context.text) {
-	<p class="rating__text">@@text</p>
+	    <p class="rating__text">@@text</p>
 	}
 	<div class="rating__body">
 		<div class="rating__active"></div>
@@ -18,13 +17,13 @@
 		</div>
 	</div>
 	@@if(context.link) {
-	@@include('blocks/button/button.html', {
-	"href": "#",
-	"class": "menu-link menu-link--underlined",
-	"text": "@@link"
-	})
+        @@include('blocks/button/button.html', {
+            "href": "#",
+            "class": "menu-link menu-link--underlined",
+            "text": "@@link"
+        })
 	}
 	@@if(context.num) {
-	<b class="rating__num@@if(context.numHidden){ hidden}">@@num</b>
+	    <b class="rating__num@@if(context.numHidden){ hidden}">@@num</b>
 	}
 </div>

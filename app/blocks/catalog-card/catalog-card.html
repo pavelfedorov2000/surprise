@@ -2,65 +2,65 @@
     <article class="catalog-card">
         @@if(context.favorite){
             @@include('blocks/favorite-btn/favorite-btn.html', {
-            "class": "catalog-card__favorite"
+                "class": "catalog-card__favorite"
             })
         }
         <div class="catalog-card__slider swiper">
             <div class="swiper-wrapper">
                 <div class="swiper-slide">
                     @@include('blocks/img/img.html', {
-                    "class": "img-cover",
-                    "src": "assets/images/content/catalog/@@src",
-                    "width": "437",
-                    "height": "280",
+                        "class": "img-cover",
+                        "src": "assets/images/content/catalog/@@src",
+                        "width": "437",
+                        "height": "280",
                     })
                 </div>
                 <div class="swiper-slide">
                     @@include('blocks/img/img.html', {
-                    "class": "img-cover",
-                    "src": "assets/images/content/catalog/@@src",
-                    "width": "437",
-                    "height": "280",
+                        "class": "img-cover",
+                        "src": "assets/images/content/catalog/@@src",
+                        "width": "437",
+                        "height": "280",
                     })
                 </div>
                 <div class="swiper-slide">
                     @@include('blocks/img/img.html', {
-                    "class": "img-cover",
-                    "src": "assets/images/content/catalog/@@src",
-                    "width": "437",
-                    "height": "280",
+                        "class": "img-cover",
+                        "src": "assets/images/content/catalog/@@src",
+                        "width": "437",
+                        "height": "280",
                     })
                 </div>
                 <div class="swiper-slide">
                     @@include('blocks/img/img.html', {
-                    "class": "img-cover",
-                    "src": "assets/images/content/catalog/@@src",
-                    "width": "437",
-                    "height": "280",
+                        "class": "img-cover",
+                        "src": "assets/images/content/catalog/@@src",
+                        "width": "437",
+                        "height": "280",
                     })
                 </div>
                 <div class="swiper-slide">
                     @@include('blocks/img/img.html', {
-                    "class": "img-cover",
-                    "src": "assets/images/content/catalog/@@src",
-                    "width": "437",
-                    "height": "280",
+                        "class": "img-cover",
+                        "src": "assets/images/content/catalog/@@src",
+                        "width": "437",
+                        "height": "280",
                     })
                 </div>
                 <div class="swiper-slide">
                     @@include('blocks/img/img.html', {
-                    "class": "img-cover",
-                    "src": "assets/images/content/catalog/@@src",
-                    "width": "437",
-                    "height": "280",
+                        "class": "img-cover",
+                        "src": "assets/images/content/catalog/@@src",
+                        "width": "437",
+                        "height": "280",
                     })
                 </div>
                 <div class="swiper-slide">
                     @@include('blocks/img/img.html', {
-                    "class": "img-cover",
-                    "src": "assets/images/content/catalog/@@src",
-                    "width": "437",
-                    "height": "280",
+                        "class": "img-cover",
+                        "src": "assets/images/content/catalog/@@src",
+                        "width": "437",
+                        "height": "280",
                     })
                 </div>
             </div>
@@ -102,51 +102,51 @@
                    href="#">@@title</a>
             </div>
             @@if(context.text){
-            <p class="catalog-card__text">
-                @@text
-            </p>
+                <p class="catalog-card__text">
+                    @@text
+                </p>
             }
             @@if(context.bottom){
             <div class="catalog-card__bottom">
                 <div class="catalog-card__info">
                     @@include('blocks/rating/rating.html', {
-                    "class": "catalog-card",
-                    "link": "20 отзывов",
-                    "num": "@@if(context.rating){@@rating}@@if(!context.rating){4.0}",
-                    "numHidden": true
+                        "class": "catalog-card",
+                        "link": "20 отзывов",
+                        "num": "@@if(context.rating){@@rating}@@if(!context.rating){4.0}",
+                        "numHidden": true
                     })
                     <div class="prices">
                         @@if(context.price){
-                        <b class="price">@@price</b>
-                        <span>руб.</span>
+                            <b class="price">@@price</b>
+                            <span>руб.</span>
                         }
                         @@if(context.priceFrom){
-                        <span>от</span>
-                        <b class="price">@@priceFrom</b>
+                            <span>от</span>
+                            <b class="price">@@priceFrom</b>
                         }
                         @@if(context.priceTo){
-                        <span>до</span>
-                        <b class="price">118</b>
-                        <span>руб.</span>
+                            <span>до</span>
+                            <b class="price">118</b>
+                            <span>руб.</span>
                         }
                     </div>
                 </div>
                 @@if(!context.withoutButtons){
-                <div class="btns catalog-card__btns">
-                    @@loop('blocks/button/button.html', [{
-                    "href": "#",
-                    "class": "catalog-card__btn btn--padding_xs",
-                    "style": "bg-yellow",
-                    "sprite": "user",
-                    "text": "Для себя"
-                    }, {
-                    "href": "#",
-                    "class": "catalog-card__btn btn--padding_xs",
-                    "style": "bg-pink",
-                    "sprite": "gift-white",
-                    "text": "В подарок"
-                    }])
-                </div>
+                    <div class="btns catalog-card__btns">
+                        @@loop('blocks/button/button.html', [{
+                            "href": "#",
+                            "class": "catalog-card__btn btn--padding_xs",
+                            "style": "bg-yellow",
+                            "sprite": "user",
+                            "text": "Для себя"
+                        }, {
+                            "href": "#",
+                            "class": "catalog-card__btn btn--padding_xs",
+                            "style": "bg-pink",
+                            "sprite": "gift-white",
+                            "text": "В подарок"
+                        }])
+                    </div>
                 }
             </div>
             }

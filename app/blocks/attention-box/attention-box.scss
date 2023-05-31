@@ -1,3 +1,19 @@
 .attention-box {
-  // your code
+    padding: var(--offset-xs);
+    background-color: var(--green-light);
+    border-radius: var(--brs);
+    display: flex;
+    align-items: flex-start;
+
+	// .attention-box__icon
+	&__icon {
+        margin-right: var(--offset-x);
+	}
+
+	// .attention-box__text
+	&__text {
+        font-size: 16px;
+        line-height: calc(24 / 16 * 100%);
+        font-weight: 300;
+	}
 }

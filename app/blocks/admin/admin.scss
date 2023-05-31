@@ -3,7 +3,7 @@
     align-items: center;
 
     @media(max-width: $md) {
-        @include padding-y(20px);
+        @include padding-y(var(--offset-sm));
     }
 
     // .admin__img
@@ -19,7 +19,7 @@
             content: '';
             position: absolute;
             bottom: 15px;
-            right: 10px;
+            right: var(--offset-x);
             width: 45px;
             height: 33px;
             background-image: url(../images/decor/admin-decor.svg);
@@ -28,7 +28,6 @@
 
             @media(max-width: $md) {
                 bottom: 5px;
-                right: 10px;
                 width: 30px;
                 height: 21px;
             }
@@ -56,7 +55,7 @@
         @include row-grid(var(--offset-xs));
 
         @media(max-width: $sm) {
-            row-gap: 20px;
+            row-gap: var(--offset-sm);
         }
 
         .contact {

@@ -12,6 +12,10 @@
     "href": "gift-set.html",
     "title": "Подарочный набор"
 }, {
+    "new": true,
+    "href": "universal-certificate.html",
+    "title": "Универсальный сертификат на сумму"
+}, {
     "href": "catalog.html",
     "title": "Каталог"
 }, {

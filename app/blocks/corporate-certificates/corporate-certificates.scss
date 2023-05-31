@@ -42,14 +42,14 @@
     &__row {
         display: flex;
         flex-wrap: wrap;
-        margin: -20px -35px;
+        margin: calc(var(--offset-sm) * (-1)) -35px;
     }
 
     // .corporate-certificates__col
 
     &__col {
         @include row-grid(var(--offset-xl));
-        padding: 20px 35px;
+        padding: var(--offset-sm) 35px;
 
         @media(min-width: $xl) {
             width: 50%;

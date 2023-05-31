@@ -4,18 +4,18 @@
             <div class="aside-section__inner">
                 <div class="aside-section__content">
                     @@include('blocks/title/title.html', {
-                    "level": "2",
-                    "class": "section-title aside-section__title",
-                    "text": "@@title"
+                        "level": "2",
+                        "class": "section-title aside-section__title",
+                        "text": "@@title"
                     })
                     @@if(context.text){
-                    <p class="color-default">@@text</p>
+                        <p class="color-default">@@text</p>
                     }
                 </div>
                 @@include('blocks/button/button.html', {
-                "style": "bg-pink",
-                "class": "aside-section__btn",
-                "text": "@@btn"
+                    "style": "bg-pink",
+                    "class": "aside-section__btn",
+                    "text": "@@btn"
                 })
             </div>
         </div>

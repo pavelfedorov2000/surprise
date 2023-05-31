@@ -1,5 +1,5 @@
 .pay-card {
-    @include row-grid(20px);
+    @include row-grid(var(--offset-sm));
     justify-items: center;
     padding: var(--offset-xl) var(--offset-m);
     background-color: var(--white);

@@ -10,7 +10,7 @@
             justify-content: space-between;
         }
 
-        @media(max-width: $xl) {
+        @media(max-width: $xxl) {
             @include row-grid(var(--offset-xxxl));
             justify-items: center;
         }

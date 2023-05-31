@@ -1,31 +1,31 @@
 <div class="success-block">
     @@include('blocks/img/img.html', {
-    "withoutPicture": true,
-    "class": "success-block__img",
-    "src": "assets/images/icons/circle-check",
-    "format": "svg"
+        "withoutPicture": true,
+        "class": "success-block__img",
+        "src": "assets/images/icons/circle-check",
+        "format": "svg"
     })
     @@include('blocks/title/title.html', {
-    "level": "1",
-    "class": "page-title success-block__title page-title--size_xs",
-    "text": "@@title"
+        "level": "1",
+        "class": "page-title success-block__title page-title--size_xs",
+        "text": "@@title"
     })
     @@if(context.text){
-    <div class="success-block__text">
-        <p>
-            Ваш заказ <span>№104270</span> от <span>
-                @@include('blocks/datetime/datetime.html', {
-                "date": "13.09.2022",
-                "formattedDate": "2022-09-13",
-                "time": "18:02:17"
-                })
-            </span>
-            успешно создан.
-        </p>
-        <p>
-            Вы можете следить за выполнением своего заказа в Личном кабинете. Данные для входа мы отправили вам на
-            почту.
-        </p>
-    </div>
+        <div class="success-block__text">
+            <p>
+                Ваш заказ <span>№104270</span> от <span>
+                    @@include('blocks/datetime/datetime.html', {
+                        "date": "13.09.2022",
+                        "formattedDate": "2022-09-13",
+                        "time": "18:02:17"
+                    })
+                </span>
+                успешно создан.
+            </p>
+            <p>
+                Вы можете следить за выполнением своего заказа в Личном кабинете. Данные для входа мы отправили вам на
+                почту.
+            </p>
+        </div>
     }
 </div>

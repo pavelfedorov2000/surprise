@@ -2,17 +2,17 @@
     <a href="#"
        class="cart-item__img">
         @@include('blocks/img/img.html', {
-        "class": "img-cover",
-        "src": "assets/images/content/catalog/01",
-        "width": "212",
-        "height": "164"
+            "class": "img-cover",
+            "src": "assets/images/content/catalog/01",
+            "width": "212",
+            "height": "164"
         })
     </a>
     <div class="cart-item__info">
         @@include('blocks/title/title.html', {
-        "tag": "a",
-        "class": "cart-item__title",
-        "text": "Комплексная мойка авто с нанесением кварцевого покрытия"
+            "tag": "a",
+            "class": "cart-item__title",
+            "text": "Комплексная мойка авто с нанесением кварцевого покрытия"
         })
         <dl class="leader cart-item__list">
             <div class="leader__item">
@@ -56,33 +56,33 @@
     </div>
     <div class="cart-item__actions">
         @@include('blocks/action-btn/action-btn.html', {
-        "button": true,
-        "class": "cart-item__trash js-trash-btn",
-        "ariaLabel": "Удалить из корзины",
-        "icon": "trash"
+            "button": true,
+            "class": "cart-item__trash js-trash-btn",
+            "ariaLabel": "Удалить из корзины",
+            "icon": "trash"
         })
         @@include('blocks/counter/counter.html', {
-        "class": "cart-item",
-        "value": 2
+            "class": "cart-item",
+            "value": 2
         })
         <div class="prices cart-item__prices">
             <b class="price">118</b>
             <span>руб.</span>
         </div>
         @@include('blocks/button/button.html', {
-        "style": "link-toggle",
-        "class": "cart-item__toggle js-toggle-certificate",
-        "text": "Подписать сертификат",
-        "ariaExpanded": true
+            "style": "link-toggle",
+            "class": "cart-item__toggle js-toggle-certificate",
+            "text": "Подписать сертификат",
+            "ariaExpanded": true
         })
     </div>
     <div class="cart-item__dropdown">
         <div class="dropdown-certificate-fields">
             @@include('blocks/dropdown-certificate-field/dropdown-certificate-field.html', {
-            "title": "Сертификат 1"
+                "title": "Сертификат 1"
             })
             @@include('blocks/dropdown-certificate-field/dropdown-certificate-field.html', {
-            "title": "Сертификат 2"
+                "title": "Сертификат 2"
             })
         </div>
     </div>
