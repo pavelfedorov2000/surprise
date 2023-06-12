@@ -2,9 +2,9 @@
 	aria-label="@@ariaLabel" @@if(context.button){type="button" } @@if(context.popup){aria-expanded="false"
 	data-popup="@@popup" aria-controls="@@popup" }>
 	@@if(context.icon){
-        <svg class="icon" aria-hidden="true">
-            <use xlink:href="assets/images/sprite.svg#@@icon"></use>
-        </svg>
+        @@include('blocks/sprite/sprite.html', {
+            "icon": "@@icon"
+        })
 	}
     @@if(context.count){
 	    <span>@@count</span>

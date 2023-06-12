@@ -1,36 +1,39 @@
 <div class="admin">
 	<div class="admin__img">
 		@@include('blocks/img/img.html', {
-		"class": "img-cover",
-		"src": "assets/images/content/admin",
-		"format": "png",
-		"width": "160",
-		"height": "160",
+            "class": "img-cover",
+            "src": "assets/images/content/admin",
+            "format": "png",
+            "width": "160",
+            "height": "160",
 		})
 	</div>
 	<div class="admin__content">
 		@@if(context.name){
-		<div class="admin__name">@@name</div>
+		    <div class="admin__name">@@name</div>
 		}
 		<a class="contact" href="tel:+375296670062">
-			<svg class="icon contact__icon" aria-hidden="true">
-				<use xlink:href="assets/images/sprite.svg#phone"></use>
-			</svg>
+            @@include('blocks/sprite/sprite.html', {
+                "class": "contact__icon",
+                "icon": "phone"
+            })
 			<span>+375 29 667 00 62</span>
 		</a>
 		<a class="contact" href="mailto:info@surprise.by">
-			<svg class="icon contact__icon" aria-hidden="true">
-				<use xlink:href="assets/images/sprite.svg#email"></use>
-			</svg>
+			@@include('blocks/sprite/sprite.html', {
+                "class": "contact__icon",
+                "icon": "email"
+            })
 			<span>info@surprise.by</span>
 		</a>
 		@@if(context.telegram){
-		<a class="contact" href="#">
-			<svg class="icon contact__icon" aria-hidden="true">
-				<use xlink:href="assets/images/sprite.svg#email"></use>
-			</svg>
-			<span>@@telegram</span>
-		</a>
+            <a class="contact" href="#">
+                @@include('blocks/sprite/sprite.html', {
+                    "class": "contact__icon",
+                    "icon": "email"
+                })
+                <span>@@telegram</span>
+            </a>
 		}
 	</div>
 </div>

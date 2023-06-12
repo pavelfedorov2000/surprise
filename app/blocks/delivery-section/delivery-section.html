@@ -2,19 +2,18 @@
     <div class="container">
         <div class="section__top">
             @@include('blocks/title/title.html', {
-            "level": "2",
-            "class": "section-title",
-            "text": "Доставка"
+                "level": "2",
+                "class": "section-title",
+                "text": "Доставка"
             })
         </div>
         <ul class="delivery-section__items">
             <li class="delivery-section__item">
                 <span class="icon-circle icon-circle--style_bg-pink
 						icon-circle--position_bottom-right">
-                    <svg class="icon"
-                         aria-hidden="true">
-                        <use xlink:href="assets/images/sprite.svg#file"></use>
-                    </svg>
+                    @@include('blocks/sprite/sprite.html', {
+                        "icon": "file"
+                    })
                 </span>
                 <div class="delivery-section__item-content">
                     <div class="delivery-section__item-title">Электронный сертификат</div>
@@ -25,10 +24,9 @@
             <li class="delivery-section__item">
                 <span class="icon-circle icon-circle--style_bg-yellow
 						icon-circle--position_top-left">
-                    <svg class="icon"
-                         aria-hidden="true">
-                        <use xlink:href="assets/images/sprite.svg#email"></use>
-                    </svg>
+                    @@include('blocks/sprite/sprite.html', {
+                        "icon": "email"
+                    })
                 </span>
                 <div class="delivery-section__item-content">
                     <div class="delivery-section__item-title">Доставка почтой (по РБ)</div>
@@ -39,10 +37,9 @@
             <li class="delivery-section__item">
                 <span class="icon-circle icon-circle--style_bg-blue
 						icon-circle--position_bottom-left">
-                    <svg class="icon"
-                         aria-hidden="true">
-                        <use xlink:href="assets/images/sprite.svg#truck"></use>
-                    </svg>
+                    @@include('blocks/sprite/sprite.html', {
+                        "icon": "truck"
+                    })
                 </span>
                 <div class="delivery-section__item-content">
                     <div class="delivery-section__item-title">Доставка курьером (по Минску) </div>
@@ -53,10 +50,9 @@
             <li class="delivery-section__item">
                 <span class="icon-circle icon-circle--style_bg-pink
 						icon-circle--position_top-right">
-                    <svg class="icon"
-                         aria-hidden="true">
-                        <use xlink:href="assets/images/sprite.svg#pin"></use>
-                    </svg>
+                    @@include('blocks/sprite/sprite.html', {
+                        "icon": "pin"
+                    })
                 </span>
                 <div class="delivery-section__item-content">
                     <div class="delivery-section__item-title">Самовывоз</div>
@@ -66,7 +62,7 @@
             </li>
         </ul>
         @@include("blocks/load-more/load-more.html", {
-        "text": "Читать больше"
+            "text": "Читать больше"
         })
     </div>
 </section>

@@ -1,10 +1,9 @@
 <ul class="icons-list icons-list--grid_cols-2 icons-list--item-align_center">
     <li class="icons-item">
         <span class="icon-circle icons-item__icon icon-circle--style_bg-pink icon-circle--position_bottom-right">
-            <svg class="icon"
-                 aria-hidden="true">
-                <use xlink:href="assets/images/sprite.svg#cart"></use>
-            </svg>
+            @@include('blocks/sprite/sprite.html', {
+                "icon": "cart"
+            })
         </span>
         <div class="icons-item__content">
             <span class="icons-item__text">Сертификат в уникальной упаковке</span>
@@ -12,10 +11,9 @@
     </li>
     <li class="icons-item">
         <span class="icon-circle icons-item__icon icon-circle--style_bg-yellow icon-circle--position_bottom-right">
-            <svg class="icon"
-                 aria-hidden="true">
-                <use xlink:href="assets/images/sprite.svg#pin"></use>
-            </svg>
+            @@include('blocks/sprite/sprite.html', {
+                "icon": "pin"
+            })
         </span>
         <div class="icons-item__content">
             <span class="icons-item__text">
@@ -25,10 +23,9 @@
     </li>
     <li class="icons-item">
         <span class="icon-circle icons-item__icon icon-circle--style_bg-yellow icon-circle--position_bottom-left">
-            <svg class="icon"
-                 aria-hidden="true">
-                <use xlink:href="assets/images/sprite.svg#user"></use>
-            </svg>
+            @@include('blocks/sprite/sprite.html', {
+                "icon": "user"
+            })
         </span>
         <div class="icons-item__content">
             <span class="icons-item__text">1, 2 или 5 человек</span>
@@ -36,10 +33,9 @@
     </li>
     <li class="icons-item">
         <span class="icon-circle icons-item__icon icon-circle--style_bg-blue icon-circle--position_top-left">
-            <svg class="icon"
-                 aria-hidden="true">
-                <use xlink:href="assets/images/sprite.svg#clock"></use>
-            </svg>
+            @@include('blocks/sprite/sprite.html', {
+                "icon": "clock"
+            })
         </span>
         <div class="icons-item__content">
             <span class="icons-item__text">
@@ -49,10 +45,9 @@
     </li>
     <li class="icons-item">
         <span class="icon-circle icons-item__icon icon-circle--style_bg-blue icon-circle--position_bottom-right">
-            <svg class="icon"
-                 aria-hidden="true">
-                <use xlink:href="assets/images/sprite.svg#sun"></use>
-            </svg>
+            @@include('blocks/sprite/sprite.html', {
+                "icon": "sun"
+            })
         </span>
         <div class="icons-item__content">
             <span class="icons-item__text">
@@ -62,10 +57,9 @@
     </li>
     <li class="icons-item">
         <span class="icon-circle icons-item__icon icon-circle--style_bg-pink icon-circle--position_top-right">
-            <svg class="icon"
-                 aria-hidden="true">
-                <use xlink:href="assets/images/sprite.svg#calendar"></use>
-            </svg>
+            @@include('blocks/sprite/sprite.html', {
+                "icon": "calendar"
+            })
         </span>
         <div class="icons-item__content">
             <span class="icons-item__text">
@@ -74,19 +68,18 @@
         </div>
     </li>
     @@if(!context.combo){
-    <li class="icons-item">
-        <span class="icon-circle icons-item__icon icon-circle--style_bg-pink icon-circle--position_top-left">
-            <svg class="icon"
-                 aria-hidden="true">
-                <use xlink:href="assets/images/sprite.svg#cash"></use>
-            </svg>
-        </span>
-        <div class="icons-item__content">
-            <span class="icons-item__text">
-                Цена только за подарок без наценок
-                и комиссий.
+        <li class="icons-item">
+            <span class="icon-circle icons-item__icon icon-circle--style_bg-pink icon-circle--position_top-left">
+                @@include('blocks/sprite/sprite.html', {
+                    "icon": "cash"
+                })
             </span>
-        </div>
-    </li>
+            <div class="icons-item__content">
+                <span class="icons-item__text">
+                    Цена только за подарок без наценок
+                    и комиссий.
+                </span>
+            </div>
+        </li>
     }
 </ul>

@@ -1,16 +1,18 @@
 <li>
     <article class="shop-card">
-        <img class="shop-card__logo"
-             src="@@src"
-             alt="фото"
-             width="180"
-             height="29"
-             loading="lazy">
+        @@include('blocks/img/img.html', {
+            "withoutPicture": true,
+            "class": "shop-card__logo",
+            "src": "@@src",
+            "format": "@@format",
+            "width": "180",
+            "height": "29"
+        })
         <div class="contact">
-            <svg class="icon mr-20"
-                 aria-hidden="true">
-                <use xlink:href="assets/images/sprite.svg#pin"></use>
-            </svg>
+            @@include('blocks/sprite/sprite.html', {
+                "class": "mr-20",
+                "icon": "pin"
+            })
             <div class="contact__content">
                 @@include('blocks/title/title.html', {
                     "tag": "div",
@@ -21,10 +23,10 @@
             </div>
         </div>
         <div class="contact">
-            <svg class="icon mr-20"
-                 aria-hidden="true">
-                <use xlink:href="assets/images/sprite.svg#clock"></use>
-            </svg>
+            @@include('blocks/sprite/sprite.html', {
+                "class": "mr-20",
+                "icon": "clock"
+            })
             <div class="contact__content">
                 @@include('blocks/title/title.html', {
                     "tag": "div",
@@ -35,10 +37,10 @@
             </div>
         </div>
         <div class="contact">
-            <svg class="icon mr-20"
-                 aria-hidden="true">
-                <use xlink:href="assets/images/sprite.svg#cash"></use>
-            </svg>
+            @@include('blocks/sprite/sprite.html', {
+                "class": "mr-20",
+                "icon": "cash"
+            })
             <div class="contact__content">
                 @@include('blocks/title/title.html', {
                     "tag": "div",

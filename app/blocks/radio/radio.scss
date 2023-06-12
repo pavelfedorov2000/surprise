@@ -287,6 +287,10 @@
                                 border-bottom-color: var(--green);
                                 box-shadow: var(--bsh);
 
+                                @media(max-width: $xxl) {
+                                    color: var(--white);
+                                }
+
                                 /* &::after {
                                     width: 100%;
                                 } */
@@ -294,12 +298,20 @@
                                 .icon,
                                 #{$this}__icon {
                                     stroke: var(--green);
+
+                                    @media(max-width: $xxl) {
+                                        stroke: var(--white);
+                                    }
                                 }
 
                                 #{$this} {
                                     &__text {
                                         @extend %museo-700;
                                         color: var(--green);
+
+                                        @media(max-width: $xxl) {
+                                            color: var(--white);
+                                        }
                                     }
                                 }
                             }

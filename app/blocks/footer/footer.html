@@ -3,12 +3,12 @@
         <div class="container">
             <div class="footer__row">
                 <section class="footer__col footer__col--info">
-                    <a class="logo footer__logo"
-                       href="#">
-                        <img class="logo__img"
-                             src="assets/images/logo/logo.svg"
-                             alt="Логотип Surprise">
-                    </a>
+                    @@include('blocks/logo/logo.html', {
+                        "class": "footer__logo",
+                        "src": "assets/images/logo/logo",
+                        "width": "238",
+                        "height": "32"
+                    })
                     @@include('blocks/social/social.html', {"class": "footer"})
                     <div class="footer__info"
                          data-da=".footer__row, 767, 2">
@@ -145,34 +145,34 @@
                     <address class="contacts">
                         <a href="tel:+375297333368"
                            class="contact">
-                            <svg class="icon contact__icon"
-                                 aria-hidden="true">
-                                <use xlink:href="assets/images/sprite.svg#phone"></use>
-                            </svg>
+                            @@include('blocks/sprite/sprite.html', {
+                                "class": "contact__icon",
+                                "icon": "phone"
+                            })
                             <span>+375 29 7 3333 68 (MTC)</span>
                         </a>
                         <a href="tel:+375297333368"
                            class="contact">
-                            <svg class="icon contact__icon"
-                                 aria-hidden="true">
-                                <use xlink:href="assets/images/sprite.svg#phone"></use>
-                            </svg>
+                            @@include('blocks/sprite/sprite.html', {
+                                "class": "contact__icon",
+                                "icon": "phone"
+                            })
                             <span>+375 29 7 3333 68 (A1)</span>
                         </a>
                         <a href="tel:+375297333368"
                            class="contact">
-                            <svg class="icon contact__icon"
-                                 aria-hidden="true">
-                                <use xlink:href="assets/images/sprite.svg#phone"></use>
-                            </svg>
+                            @@include('blocks/sprite/sprite.html', {
+                                "class": "contact__icon",
+                                "icon": "phone"
+                            })
                             <span>+375 29 7 3333 68 (Life)</span>
                         </a>
                         <a href="mailto:info@surprise.by"
                            class="contact">
-                            <svg class="icon contact__icon"
-                                 aria-hidden="true">
-                                <use xlink:href="assets/images/sprite.svg#email"></use>
-                            </svg>
+                            @@include('blocks/sprite/sprite.html', {
+                                "class": "contact__icon",
+                                "icon": "email"
+                            })
                             <span>info@surprise.by</span>
                         </a>
                     </address>

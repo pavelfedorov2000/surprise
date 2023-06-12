@@ -3,45 +3,45 @@
 		<div class="container header__inner">
 			<address class="contacts header__contacts contacts--style_flex">
 				<a href="tel:+375297333368" class="contact">
-					<svg class="icon" aria-hidden="true">
-						<use xlink:href="assets/images/sprite.svg#phone"></use>
-					</svg>
+                    @@include('blocks/sprite/sprite.html', {
+                        "icon": "phone"
+                    })
 					<span>+375 29 7 3333 68 (MTC)</span>
 				</a>
 				<div class="contact">
-					<svg class="icon" aria-hidden="true">
-						<use xlink:href="assets/images/sprite.svg#clock"></use>
-					</svg>
+					@@include('blocks/sprite/sprite.html', {
+                        "icon": "clock"
+                    })
 					<span>с 09:00 до 22:00, Без выходных</span>
 				</div>
 			</address>
 			<nav class="header__menu header-menu">
 				<ul class="header-menu__list">
 					@@loop('blocks/button/button.html', [{
-					"listItem": true,
-					"href": "#",
-					"class": "header-menu__link menu-link",
-					"text": "Новинки"
+                        "listItem": true,
+                        "href": "#",
+                        "class": "header-menu__link menu-link",
+                        "text": "Новинки"
 					}, {
-					"listItem": true,
-					"href": "#",
-					"class": "header-menu__link menu-link",
-					"text": "Где купить"
+                        "listItem": true,
+                        "href": "#",
+                        "class": "header-menu__link menu-link",
+                        "text": "Где купить"
 					}, {
-					"listItem": true,
-					"href": "#",
-					"class": "header-menu__link menu-link",
-					"text": "Доставка и оплата"
+                        "listItem": true,
+                        "href": "#",
+                        "class": "header-menu__link menu-link",
+                        "text": "Доставка и оплата"
 					}, {
-					"listItem": true,
-					"href": "#",
-					"class": "header-menu__link menu-link",
-					"text": "Корпоративные подарки"
+                        "listItem": true,
+                        "href": "#",
+                        "class": "header-menu__link menu-link",
+                        "text": "Корпоративные подарки"
 					}, {
-					"listItem": true,
-					"href": "#",
-					"class": "header-menu__link menu-link",
-					"text": "Стать нашим партнером"
+                        "listItem": true,
+                        "href": "#",
+                        "class": "header-menu__link menu-link",
+                        "text": "Стать нашим партнером"
 					}])
 				</ul>
 			</nav>
@@ -60,27 +60,27 @@
 				<div class="actions-header__items">
 					@@include('blocks/search-form/search-form.html')
 					@@loop('blocks/action-btn/action-btn.html', [{
-					"button": true,
-					"class": "actions-header__item",
-					"ariaLabel": "Авторизоваться",
-					"popup": "auth",
-					"icon": "user"
+                        "button": true,
+                        "class": "actions-header__item",
+                        "ariaLabel": "Авторизоваться",
+                        "popup": "auth",
+                        "icon": "user"
 					}, {
-					"class": "actions-header__item",
-					"ariaLabel": "Перейти в избранное",
-					"icon": "favorite"
+                        "class": "actions-header__item",
+                        "ariaLabel": "Перейти в избранное",
+                        "icon": "favorite"
 					}, {
-					"class": "actions-header__item",
-					"ariaLabel": "Перейти в корзину",
-					"icon": "cart",
-					"count": "2"
+                        "class": "actions-header__item",
+                        "ariaLabel": "Перейти в корзину",
+                        "icon": "cart",
+                        "count": "2"
 					}])
 				</div>
 				@@include('blocks/button/button.html', {
-				"href": "#",
-				"style": "bg-pink",
-				"class": "actions-header__btn",
-				"text": "Активировать сертификат"
+                    "href": "#",
+                    "style": "bg-pink",
+                    "class": "actions-header__btn",
+                    "text": "Активировать сертификат"
 				})
 			</div>
 		</div>

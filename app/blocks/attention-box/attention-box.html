@@ -1,7 +1,8 @@
 <div class="attention-box">
-    <svg class="icon attention-box__icon">
-        <use xlink:href="assets/images/sprite.svg#attention-black"></use>
-    </svg>
+    @@include('blocks/sprite/sprite.html', {
+        "class": "attention-box__icon",
+        "icon": "attention-black"
+    })
     <span class="attention-box__text">
         Получатель может выбрать 1 услугу из набора!
     </span>

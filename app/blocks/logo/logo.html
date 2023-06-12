@@ -1,0 +1,11 @@
+<a href="#" class="logo@@if(context.class){ @@class}@@if(context.style){ logo--style_@@style}">
+	@@include("blocks/img/img.html", {
+        "withoutPicture": true,
+        "class": "logo__img",
+        "src": "@@src",
+        "format": "svg",
+        "alt": "Логотип Surprise",
+        "width": "@@width",
+        "height": "@@height"
+	})
+</a>

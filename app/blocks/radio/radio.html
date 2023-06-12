@@ -2,92 +2,93 @@
 	<input class="radio-input@@if(context.inputClass){ @@inputClass}" type="radio" name="@@name"
 		@@if(context.isChecked){checked} @@if(context.expanded){@@if(context.expanded == 'true'){true}@@if(context.expanded == 'false'){false}}>
 	@@if(context.radioStyle){
-	<span class="radio-style@@if(context.radioStyle.mr){ radio-style--mr_@@radioStyle.mr}"></span>
+	    <span class="radio-style@@if(context.radioStyle.mr){ radio-style--mr_@@radioStyle.mr}"></span>
 	}
     @@if(context.color){
         <span class="color__style" style="background-color: @@color.hex;"></span>
     }
 	@@if(context.body){
-	<span class="radio__content">
-		@@if(context.icon){
-		@@include('@@icon')
-		}
-		@@if(context.sprite){
-		<svg aria-hidden="true" class="radio__icon">
-			<use xlink:href="assets/images/sprite.svg#@@sprite"></use>
-		</svg>
-		}
-		@@if(context.img){
-		<img class="radio__icon" src="@@img.src" alt="@@img.alt" width="@@img.width" height="@@img.height">
-		}
-		<span class="radio__text">@@body.text</span>
-	</span>
+        <span class="radio__content">
+            @@if(context.icon){
+                @@include('@@icon')
+            }
+            @@if(context.sprite){
+                @@include('blocks/sprite/sprite.html', {
+                    "class": "radio__icon",
+                    "icon": "@@sprite"
+                })
+            }
+            @@if(context.img){
+                <img class="radio__icon" src="@@img.src" alt="@@img.alt" width="@@img.width" height="@@img.height">
+            }
+            <span class="radio__text">@@body.text</span>
+        </span>
 	}
 	@@if(context.text){
-	<span class="radio__text">
-        @@if(!context.text.key){
-            @@text
-        }
-        @@if(context.text.key){
-            <span class="radio__key">@@text.key</span>
-            <span class="radio__value">@@text.value</span>
-        }
-    </span>
+        <span class="radio__text">
+            @@if(!context.text.key){
+                @@text
+            }
+            @@if(context.text.key){
+                <span class="radio__key">@@text.key</span>
+                <span class="radio__value">@@text.value</span>
+            }
+        </span>
 	}
 	@@if(context.inner){
-	<span class="radio__inner">
-		@@if(context.inner.title){
-		<span class="radio__title">@@inner.title</span>
-		}
-		@@if(context.inner.text){
-		<span class="radio__text radio__text--light">@@inner.text</span>
-		}
-		@@if(inner.dropdown){
-		<span class="radio__dropdown">
-			<div class="radio__dropdown-fields">
-				<label class="radio__dropdown-field">
-					@@if(context.inner.dropdown.label){
-					<span class="form-label">@@inner.dropdown.label</span>
-					}
-					<input class="input radio__field" placeholder="@@inner.dropdown.placeholder"
-						@@if(context.inner.dropdown.inputType){type="@@inner.dropdown.inputType" }>
-				</label>
-				@@if(context.inner.dropdown.placeholder2) {
-				<label class="radio__dropdown-field">
-					<input class="input radio__field" placeholder="@@inner.dropdown.placeholder2">
-				</label>
-				}
-				@@if(context.inner.dropdown.placeholder3) {
-				<label class="radio__dropdown-field">
-					<input class="input radio__field" placeholder="@@inner.dropdown.placeholder3" type="tel">
-				</label>
-				}
-			</div>
-		</span>
-		}
-		}
-	</span>
+        <span class="radio__inner">
+            @@if(context.inner.title){
+                <span class="radio__title">@@inner.title</span>
+            }
+            @@if(context.inner.text){
+                <span class="radio__text radio__text--light">@@inner.text</span>
+            }
+            @@if(inner.dropdown){
+                <span class="radio__dropdown">
+                    <div class="radio__dropdown-fields">
+                        <label class="radio__dropdown-field">
+                            @@if(context.inner.dropdown.label){
+                                <span class="form-label">@@inner.dropdown.label</span>
+                            }
+                            <input class="input radio__field" placeholder="@@inner.dropdown.placeholder"
+                                @@if(context.inner.dropdown.inputType){type="@@inner.dropdown.inputType" }>
+                        </label>
+                        @@if(context.inner.dropdown.placeholder2) {
+                            <label class="radio__dropdown-field">
+                                <input class="input radio__field" placeholder="@@inner.dropdown.placeholder2">
+                            </label>
+                        }
+                        @@if(context.inner.dropdown.placeholder3) {
+                            <label class="radio__dropdown-field">
+                                <input class="input radio__field" placeholder="@@inner.dropdown.placeholder3" type="tel">
+                            </label>
+                        }
+                    </div>
+                </span>
+            }
+            }
+        </span>
 	@@if(context.dropdown){
-	<span class="radio__dropdown">
-		<span class="radio__dropdown-fields">
-			<label class="radio__dropdown-field">
-				@@if(context.dropdown.label){
-				<span class="form-label">@@dropdown.label</span>
-				}
-				<input class="input radio__field" @@if(context.dropdown.inputType){type="@@dropdown.inputType" }
-					placeholder="@@dropdown.placeholder">
-			</label>
-			@@if(context.dropdown.placeholder2) {
-			<label class="radio__dropdown-field">
-				<input class="input radio__field" placeholder="@@dropdown.placeholder2">
-			</label>
-			}
-			@@if(context.dropdown.placeholder3) {
-			<label class="radio__dropdown-field">
-				<input class="input radio__field" placeholder="@@dropdown.placeholder3" type="tel">
-			</label>
-			}
-		</span>
-	</span>
+        <span class="radio__dropdown">
+            <span class="radio__dropdown-fields">
+                <label class="radio__dropdown-field">
+                    @@if(context.dropdown.label){
+                        <span class="form-label">@@dropdown.label</span>
+                    }
+                    <input class="input radio__field" @@if(context.dropdown.inputType){type="@@dropdown.inputType" }
+                        placeholder="@@dropdown.placeholder">
+                </label>
+                @@if(context.dropdown.placeholder2) {
+                    <label class="radio__dropdown-field">
+                        <input class="input radio__field" placeholder="@@dropdown.placeholder2">
+                    </label>
+                }
+                @@if(context.dropdown.placeholder3) {
+                    <label class="radio__dropdown-field">
+                        <input class="input radio__field" placeholder="@@dropdown.placeholder3" type="tel">
+                    </label>
+                }
+            </span>
+        </span>
 	}
 </label>

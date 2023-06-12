@@ -1,9 +1,9 @@
 <li class="pay-card">
 	@@if(context.icon){
         <span class="icon-circle pay-card__img icon-circle--style_bg-pink icon-circle--position_bottom-right">
-            <svg class="icon" aria-hidden="true">
-                <use xlink:href="assets/images/sprite.svg#cash"></use>
-            </svg>
+            @@include('blocks/sprite/sprite.html', {
+                "icon": "cash"
+            })
         </span>
 	}
 	@@if(context.src){

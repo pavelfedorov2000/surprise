@@ -1,7 +1,7 @@
 <strong class="notify-box">
-    <svg class="icon notify-box__icon"
-         aria-hidden="true">
-        <use xlink:href="assets/images/sprite.svg#attention-black"></use>
-    </svg>
+    @@include('blocks/sprite/sprite.html', {
+        "class": "notify-box__icon",
+        "icon": "attention-black"
+    })
     <span class="notify-box__text">@@text</span>
 </strong>

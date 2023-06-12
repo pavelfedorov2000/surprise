@@ -1,7 +1,8 @@
 <button class="btn filter-btn btn--style_bg-green@@if(context.hidden){ hidden}" type="button"
 	aria-controls="catalog-filters">
-	<svg class="icon btn__icon">
-		<use xlink:href="assets/images/sprite.svg#filter"></use>
-	</svg>
+	@@include('blocks/sprite/sprite.html', {
+        "class": "btn__icon",
+        "icon": "filter"
+    })
 	<span class="btn__text">Фильтр</span>
 </button>

@@ -45,9 +45,9 @@
 	<ul class="icons-list menu__items">
 		<li class="icons-item icons-item--align-items_center">
 			<span class="icon-circle icons-item__icon icon-circle--style_bg-pink icon-circle--position_bottom-right">
-				<svg class="icon" aria-hidden="true">
-					<use xlink:href="assets/images/sprite.svg#file-doc"></use>
-				</svg>
+				@@include('blocks/sprite/sprite.html', {
+                    "icon": "file-doc"
+                })
 			</span>
 			<div class="icons-item__content">
 				<a href="#" class="icons-item__title">Универсальный сертификат</a>
@@ -66,9 +66,9 @@
 		</li>
 		<li class="icons-item icons-item--align-items_center">
 			<span class="icon-circle icons-item__icon icon-circle--style_bg-green icon-circle--position_top-right">
-				<svg class="icon" aria-hidden="true">
-					<use xlink:href="assets/images/sprite.svg#layers"></use>
-				</svg>
+				@@include('blocks/sprite/sprite.html', {
+                    "icon": "layers"
+                })
 			</span>
 			<div class="icons-item__content">
 				<a href="#" class="icons-item__title">Наборы</a>
@@ -110,15 +110,17 @@
 
 	<address class="menu__contacts">
 		<a href="tel:+375297333368" class="contact">
-			<svg class="icon contact__icon" aria-hidden="true">
-				<use xlink:href="assets/images/sprite.svg#phone"></use>
-			</svg>
+			@@include('blocks/sprite/sprite.html', {
+                "class": "contact__icon",
+                "icon": "phone"
+            })
 			<span>+375 29 7 3333 68 (MTC)</span>
 		</a>
 		<div class="contact">
-			<svg class="icon contact__icon" aria-hidden="true">
-				<use xlink:href="assets/images/sprite.svg#clock"></use>
-			</svg>
+			@@include('blocks/sprite/sprite.html', {
+                "class": "contact__icon",
+                "icon": "clock"
+            })
 			<span>с 09:00 до 22:00, Без выходных</span>
 		</div>
 		@@include('blocks/social/social.html')
