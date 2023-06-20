@@ -52,8 +52,8 @@
         @media(min-width: $md) {
             display: inline-flex;
             position: absolute;
-            top: var(--offset-sm);
-            right: var(--offset-sm);
+            top: var(--offset-s);
+            right: var(--offset-s);
         }
     }
 
