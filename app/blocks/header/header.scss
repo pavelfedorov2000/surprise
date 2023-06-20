@@ -8,6 +8,7 @@
 
 
         @media(min-width: 1201px) {
+            @include padding-y(var(--offset-xxs));
             display: block;
             background-color: var(--gray);
         }
