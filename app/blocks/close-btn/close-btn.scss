@@ -1,9 +1,8 @@
 .close-btn {
     display: inline-flex;
     align-items: center;
-    padding: var(--offset-xxxs);
+    padding: var(--offset-xxs);
     border-radius: 50%;
-    padding: var(--offset-xxxs);
     transition: var(--transition) background-color;
 
     @media (any-hover: hover) {

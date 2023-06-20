@@ -15,36 +15,9 @@
 					<span>с 09:00 до 22:00, Без выходных</span>
 				</div>
 			</address>
-			<nav class="header__menu header-menu">
-				<ul class="header-menu__list">
-					@@loop('blocks/button/button.html', [{
-                        "listItem": true,
-                        "href": "#",
-                        "class": "header-menu__link menu-link",
-                        "text": "Новинки"
-					}, {
-                        "listItem": true,
-                        "href": "#",
-                        "class": "header-menu__link menu-link",
-                        "text": "Где купить"
-					}, {
-                        "listItem": true,
-                        "href": "#",
-                        "class": "header-menu__link menu-link",
-                        "text": "Доставка и оплата"
-					}, {
-                        "listItem": true,
-                        "href": "#",
-                        "class": "header-menu__link menu-link",
-                        "text": "Корпоративные подарки"
-					}, {
-                        "listItem": true,
-                        "href": "#",
-                        "class": "header-menu__link menu-link",
-                        "text": "Стать нашим партнером"
-					}])
-				</ul>
-			</nav>
+			@@include('blocks/header-menu/header-menu.html', {
+                "class": "header__menu"
+            })
 		</div>
 	</div>
 	<div class="header__bottom">
@@ -56,33 +29,7 @@
 					<img class="logo__img" src="assets/images/logo/logo.svg" alt="Логотип Surprise">
 				</picture>
 			</a>
-			<div class="header__actions actions-header">
-				<div class="actions-header__items">
-					@@include('blocks/search-form/search-form.html')
-					@@loop('blocks/action-btn/action-btn.html', [{
-                        "button": true,
-                        "class": "actions-header__item",
-                        "ariaLabel": "Авторизоваться",
-                        "popup": "auth",
-                        "icon": "user"
-					}, {
-                        "class": "actions-header__item",
-                        "ariaLabel": "Перейти в избранное",
-                        "icon": "favorite"
-					}, {
-                        "class": "actions-header__item",
-                        "ariaLabel": "Перейти в корзину",
-                        "icon": "cart",
-                        "count": "2"
-					}])
-				</div>
-				@@include('blocks/button/button.html', {
-                    "href": "#",
-                    "style": "bg-pink",
-                    "class": "actions-header__btn",
-                    "text": "Активировать сертификат"
-				})
-			</div>
+			@@include('blocks/actions-header/actions-header.html')
 		</div>
 	</div>
 </header>

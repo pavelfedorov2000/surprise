@@ -1,12 +1,15 @@
 .worth-try-section {
-
-    // .worth-try-section__row
-
     &__row {
         display: grid;
 
         @media(min-width: $md) {
-            gap: 44px;
+            gap: var(--offset-m) 44px;
+            grid-template-columns: 1fr 357px;
+            grid-template-areas:
+            'contentLeft img'
+            'contentRight img'
+            ;
+            align-items: center;
         }
 
         @media(min-width: $xl) {
@@ -27,13 +30,13 @@
         }
 
         &--left {
-            @media(min-width: $xl) {
+            @media(min-width: $md) {
                 grid-area: contentLeft;
             }
         }
 
         &--right {
-            @media(min-width: $xl) {
+            @media(min-width: $md) {
                 grid-area: contentRight;
             }
         }
@@ -42,13 +45,8 @@
     // .worth-try-section__img
 
     &__img {
-        @media(min-width: $xl) {
+        @media(min-width: $md) {
             grid-area: img;
         }
-
-        /* @media(max-width: $sm) {
-            position: relative;
-            padding-bottom: 79.304%;
-        } */
     }
 }

@@ -1,0 +1,27 @@
+<div class="header__actions actions-header">
+	<div class="actions-header__items">
+		@@include('blocks/search-form/search-form.html')
+		@@loop('blocks/action-btn/action-btn.html', [{
+            "button": true,
+            "class": "actions-header__item",
+            "ariaLabel": "Авторизоваться",
+            "popup": "auth",
+            "icon": "user"
+		}, {
+            "class": "actions-header__item",
+            "ariaLabel": "Перейти в избранное",
+            "icon": "favorite"
+		}, {
+            "class": "actions-header__item",
+            "ariaLabel": "Перейти в корзину",
+            "icon": "cart",
+            "count": "2"
+		}])
+	</div>
+	@@include('blocks/button/button.html', {
+        "href": "#",
+        "style": "bg-pink",
+        "class": "actions-header__btn",
+        "text": "Активировать сертификат"
+	})
+</div>

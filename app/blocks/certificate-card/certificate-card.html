@@ -12,7 +12,11 @@
 			})
 		</div>
 		<div class="certificate-card__content">
-			<div class="certificate-card__title">Посещение экспозиции</div>
+            @@include("blocks/title/title.html", {
+                "class": "certificate-card__title",
+                "tag": "div",
+                "text": "Посещение экспозиции",
+            })
 			<dl class="leader certificate-card__leader">
 				<div class="leader__item">
 					<dt>Трасса:</dt>
@@ -28,9 +32,7 @@
 			</dl>
 			<div class="certificate-card__info">
 				<div class="certificate-card__info-text">
-					Согласовать время использования сертификатов можно по: <a class="menu-link"
-						href="tel:+375296595440">+ 375 29
-						659-54-40</a>
+					Согласовать время использования сертификатов можно по: <a class="menu-link" href="tel:+375296595440">+ 375 29 659-54-40</a>
 				</div>
 				<div class="certificate-card__info-text certificate-card__info-text--bold">
 					Ресторан “Публика”, г. Минск, пр-т Победителей, 21

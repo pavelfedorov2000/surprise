@@ -1,0 +1,15 @@
+.header-menu {
+    // .header-menu__list
+
+    &__list {
+        display: flex;
+        margin-right: calc(var(--offset-s) * (-1));
+    }
+
+    // .header-menu__link
+
+    &__link {
+        padding: var(--offset-xs) var(--offset-s);
+        white-space: nowrap;
+    }
+}

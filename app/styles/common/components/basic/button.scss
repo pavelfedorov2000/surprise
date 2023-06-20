@@ -439,9 +439,9 @@
 }
 
 .btns {
-	display: grid;
+	display: flex;
+    align-items: center;
 	gap: var(--offset-m);
-	align-items: center;
 }
 
 .action-btn {
@@ -449,7 +449,7 @@
 	align-items: center;
 	justify-content: center;
 	border-radius: 50%;
-	padding: var(--offset-xxxs);
+	padding: var(--offset-xxs);
 	transition: var(--transition) background-color;
 
 	@media (any-hover: hover) {

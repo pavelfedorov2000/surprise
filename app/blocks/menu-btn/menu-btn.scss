@@ -8,8 +8,8 @@
     transition: var(--transition) all;
 
     @media(max-width: $lg) {
-        padding: var(--offset-xxxs);
-        margin-left: calc(var(--offset-xxxs) * (-1));
+        padding: var(--offset-xxs);
+        margin-left: calc(var(--offset-xxs) * (-1));
     }
 
     &[aria-expanded="true"] {

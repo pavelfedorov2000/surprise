@@ -7,7 +7,9 @@
             type="button"
             aria-label="Открыть поиск по сайту"
             aria-controls="search-form">
-        @@include('blocks/icons/search.html')
+        @@include('blocks/icons/search.html', {
+            "class": "search-form__btn-icon"
+        })
     </button>
     @@include('blocks/drop-search/drop-search.html')
 </form>

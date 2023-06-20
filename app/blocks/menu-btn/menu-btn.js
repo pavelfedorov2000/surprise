@@ -10,8 +10,8 @@ app.menu = {
                 $('body').addClass('_lock');
                 $('.overlay--menu').fadeIn();
                 $('.menu').addClass('active');
+                $menuBtn.attr('aria-expanded', true);
                 if ($(window).width() < 768) {
-                    $menuBtn.attr('aria-expanded', true);
                     $menuBtn.attr('aria-label', 'Закрыть меню');
                 }
             } else {
@@ -19,8 +19,8 @@ app.menu = {
                 $('.overlay--menu').fadeOut();
                 $('body').removeClass('_lock');
                 $('html').removeClass('disable-fix');
+                $menuBtn.attr('aria-expanded', false);
                 if ($(window).width() < 768) {
-                    $menuBtn.attr('aria-expanded', false);
                     $menuBtn.attr('aria-label', 'Открыть меню');
                 }
             }

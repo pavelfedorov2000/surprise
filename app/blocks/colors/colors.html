@@ -1,8 +1,10 @@
 <div class="colors">
 	@@if(context.title){
-        <div class="colors__title">
-            Выбери цвет упаковки
-        </div>
+        @@include("blocks/title/title.html", {
+            "class": "colors__title",
+            "tag": "div",
+            "text": "Выбери цвет упаковки",
+        })
 	}
 	<div class="colors__list">
         @@loop('blocks/radio/radio.html', [{
