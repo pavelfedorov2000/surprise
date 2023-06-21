@@ -43,7 +43,7 @@
 		&:checked {
 			&~#{$this} {
 				&__style {
-					border-color: var(--black);
+					border-color: var(--dark);
 				}
 			}
 		}

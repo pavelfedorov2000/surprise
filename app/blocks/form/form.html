@@ -1,22 +1,25 @@
-<@@if(context.form){form}@@if(!context.form){div} @@if(context.form){action="#" }
-	class="form form--style_flex-element@@if(context.form){ js-form}">
+<@@if(context.form){form}@@if(!context.form){div} @@if(context.form){action="#"} class="form form--style_flex-element@@if(context.form){ js-form}">
 	@@loop('blocks/form-item/form-item.html', [{
+        "id": "certificate-activation-code",
         "label": "Код активации",
         "placeholder": "123****12",
         "required": true,
         "requiredMessage": "Поле не может быть пустым"
 	}, {
+        "id": "certificate-activation-name",
         "label": "Ваше имя",
         "placeholder": "Ваше имя",
         "required": true,
         "requiredMessage": "Поле не может быть пустым"
 	}, {
+        "id": "certificate-activation-phone",
         "label": "Ваш номер телефона",
         "inputType": "tel",
         "placeholder": "+ 375 ()",
         "required": true,
         "requiredMessage": "Поле не может быть пустым"
 	}, {
+        "id": "certificate-activation-email",
         "label": "Ваш email",
         "inputType": "email",
         "placeholder": "example@mail.com",

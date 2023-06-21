@@ -1,12 +1,10 @@
-<time @@if(context.class){class="@@class"
-      }
-      datetime="@@formattedDate@@if(context.time){T@@time}">
+<time @@if(context.class){class="@@class"} datetime="@@formattedDate@@if(context.time){T@@time}">
     @@if(!context.day){
-    @@date
+        @@date
     }
     @@if(context.day){
-    <span>@@day</span>
-    <span>@@month</span>
-    <span>@@year</span>
+        <span>@@day</span>
+        <span>@@month</span>
+        <span>@@year</span>
     }
 </time>

@@ -24,7 +24,7 @@ app.validation = {
             form.addEventListener('submit', function (e) {
                 e.preventDefault();
 
-                pristine.validate(); // returns true or false
+                pristine.validate();
             });
         });
 

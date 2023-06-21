@@ -2,6 +2,7 @@ $container: 1440;
 
 :root {
     // colors (pallette)
+    --black: #000;
     --white: #fff;  
     --pink: #F395A9;
     --pink-hover: #E6859A;
@@ -22,7 +23,7 @@ $container: 1440;
     --blue: #D7EDEC;
     --dark-blue: #1F5469;
     --green-light: #F5F8F8;
-    --black: #1E1E1E;
+    --dark: #1E1E1E;
     --text-color: #535353;
     --text-color-light: #656565;
     --gray: #F6F6F6;
@@ -67,6 +68,7 @@ $container: 1440;
     --offset-xxxs: 4px;
 
     // icon sizes
+    --icon-size_s: 20px;
     --icon-size: 24px;
     --icon-size_l: 32px;
 
@@ -96,7 +98,7 @@ $container: 1440;
     // typography
     --font-size: 16px;
     --main-font: 'Museo Sans Cyrl 500', sans-serif;
-    --color-default: var(--black);
+    --color-default: var(--dark);
     --border: 1px solid var(--line-color);
 
     @media(max-width: $xxl) {

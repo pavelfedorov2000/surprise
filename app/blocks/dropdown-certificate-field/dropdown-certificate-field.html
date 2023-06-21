@@ -5,26 +5,26 @@
         "text": "@@title"
     })
     <div class="dropdown-certificate-field__items">
-        <label class="dropdown-certificate-field__item">
-            <span class="form-label">От кого</span>
-            <input class="input dropdown-certificate-field__input"
-                   placeholder="Ваше имя">
-        </label>
-        <label class="dropdown-certificate-field__item dropdown-certificate-field__item--textarea">
-            <span class="form-label">
-                Ваше пожелание
+        <div class="dropdown-certificate-field__item">
+            <div class="form-label">
+                <label for="certificate-@@inputId">От кого</label>
+            </div>
+            <input id="certificate-@@inputId" class="input dropdown-certificate-field__input" placeholder="Ваше имя">
+        </div>
+        <div class="dropdown-certificate-field__item dropdown-certificate-field__item--textarea">
+            <div class="form-label">
+                <label for="certificate-@@textareaId">Ваше пожелание</label>
                 <button class="btn btn--style_link-3"
                         data-popup="congratulations-popup"
                         aria-controls="congratulations-popup"
                         type="button">
                     <span class="btn__text">Выбрать из наших вариантов</span>
                 </button>
-            </span>
-            <div class="textarea">
-                <textarea class="input"
-                          placeholder="Поздравляю с Днем Рождения!"></textarea>
             </div>
-        </label>
+            <div class="textarea">
+                <textarea id="certificate-@@textareaId" class="input" placeholder="Поздравляю с Днем Рождения!"></textarea>
+            </div>
+        </div>
     </div>
     @@include('blocks/button/button.html', {
         "class": "dropdown-certificate-field__btn",

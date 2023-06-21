@@ -19,6 +19,10 @@
         display: flex;
         justify-content: space-between;
     }
+
+    &__social {
+        margin-left: -14px;
+    }
 }
 
 .post-gallery-thumbs {

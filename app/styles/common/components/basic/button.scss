@@ -29,7 +29,7 @@
 	}
 
 	&__text {
-		white-space: nowrap;
+		//white-space: nowrap;
 		transition: var(--transition) color;
 	}
 
@@ -66,7 +66,7 @@
 
 			&-yellow {
 				background-color: var(--yellow);
-				color: var(--black);
+				color: var(--dark);
 
 				&:focus,
 				&:active {
@@ -439,7 +439,7 @@
 }
 
 .btns {
-	display: flex;
+	display: grid;
     align-items: center;
 	gap: var(--offset-m);
 }

@@ -11,9 +11,8 @@
 	border-radius: var(--brs-xs);
 
 	&__icon {
-		stroke: var(--black);
-		transition: var(--transition) stroke,
-			var(--transition) fill;
+		stroke: var(--dark);
+		transition: var(--transition) stroke, var(--transition) fill;
 	}
 
 	@media (any-hover: hover) {

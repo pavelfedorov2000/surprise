@@ -4,45 +4,48 @@
             <div class="contact-us__content">
                 <div>
                     @@include('blocks/title/title.html', {
-                    "tag": "div",
-                    "class": "section-title contact-us__title",
-                    "text": "Анастасия Бакшевич"
+                        "tag": "div",
+                        "class": "section-title contact-us__title",
+                        "text": "Анастасия Бакшевич"
                     })
                     <p>Специалист по работе с ключевыми клиентами</p>
                 </div>
                 @@include('blocks/admin/admin.html', {
-                "telegram": "t.me/Surprise_corp"
+                    "telegram": "t.me/Surprise_corp"
                 })
             </div>
             <div class="contact-us__form card">
                 @@include('blocks/title/title.html', {
-                "level": "2",
-                "class": "section-title contact-us__form-title",
-                "text": "Оставить заявку"
+                    "level": "2",
+                    "class": "section-title contact-us__form-title",
+                    "text": "Оставить заявку"
                 })
                 <form class="form js-form">
                     @@loop('blocks/form-item/form-item.html', [{
-                    "label": "Ваше имя",
-                    "placeholder": "Ваше имя",
-                    "required": true,
-                    "requiredMessage": "Поле не может быть пустым"
+                        "id": "contact-name",
+                        "label": "Ваше имя",
+                        "placeholder": "Ваше имя",
+                        "required": true,
+                        "requiredMessage": "Поле не может быть пустым"
                     }, {
-                    "label": "Ваша почта",
-                    "inputType": "email",
-                    "placeholder": "example@mail.com",
-                    "required": true,
-                    "requiredMessage": "Поле не может быть пустым",
-                    "emailMessage": "Некорректный email"
+                        "id": "contact-email",
+                        "label": "Ваша почта",
+                        "inputType": "email",
+                        "placeholder": "example@mail.com",
+                        "required": true,
+                        "requiredMessage": "Поле не может быть пустым",
+                        "emailMessage": "Некорректный email"
                     }, {
-                    "label": "Сообщение",
-                    "textarea": true,
-                    "placeholder": "Placeholder",
+                        "id": "contact-message",
+                        "label": "Сообщение",
+                        "textarea": true,
+                        "placeholder": "Placeholder",
                     }])
                     @@include('blocks/button/button.html', {
-                    "class": "form__btn",
-                    "type": "submit",
-                    "style": "bg-pink",
-                    "text": "Отправить"
+                        "class": "form__btn",
+                        "type": "submit",
+                        "style": "bg-pink",
+                        "text": "Отправить"
                     })
                 </form>
             </div>

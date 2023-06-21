@@ -34,7 +34,7 @@
                 @extend .section-title;
                 content: counter(list-1)'.';
                 counter-increment: list-1;
-                color: #000;
+                color: var(--black);
             }
         }
 
@@ -67,7 +67,7 @@
 
     h2 {
         @extend .section-title;
-        color: #000;
+        color: var(--black);
         position: relative;
     }
 }

@@ -34,7 +34,7 @@ textarea {
     border-radius: var(--brs);
     font-size: var(--font-size);
     line-height: 21px;
-    color: var(--black);
+    color: var(--dark);
     transition: var(--transition) border-color,
         var(--transition) box-shadow;
 
@@ -69,7 +69,7 @@ textarea {
     transform: translateY(-50%);
 
     .icon {
-        fill: #000;
+        fill: var(--black);
 
         &.show {
             display: none;
@@ -129,12 +129,7 @@ textarea {
         @media(min-width: $md) {
             display: flex;
             align-items: center;
-        }
-
-        > * {
-            @media(min-width: $md) {
-                margin-left: var(--offset-xs);
-            }
+            gap: var(--offset-xs);
         }
     }
 

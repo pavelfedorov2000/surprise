@@ -11,11 +11,8 @@ app.asideChoose = {
             const $radioInputNotThis = $choosePackageItems.find('input[type=radio]');
             const $choosePackageDropdownNotThis = $choosePackageItems.find('.choose-package__dropdown');
 
-            $radioInputNotThis.attr('aria-expanded', false);
             $radioInputNotThis.prop('checked', false);
             $choosePackageDropdownNotThis.slideUp();
-
-            $radioInput.attr('aria-expanded', true);
             $choosePackageDropdown.slideDown();
         });
 

@@ -1,6 +1,4 @@
-<form action="#"
-      id="aside-choose"
-      class="aside-choose">
+<form action="#" id="aside-choose" class="aside-choose">
     @@include('blocks/close-btn/close-btn.html', {
         "class": "aside-choose",
         "visibilityClass": "pc-hidden",
@@ -22,8 +20,7 @@
         </fieldset>
     }
     @@if(context.choose){
-        <fieldset data-tab
-                class="aside-choose__item aside-choose__item--with_mb">
+        <fieldset data-tab class="aside-choose__item aside-choose__item--with_mb">
             @@include('blocks/title/title.html', {
                 "tag": "legend",
                 "class": "aside-choose__item-title",
@@ -46,8 +43,7 @@
                 }])
             </div>
         </fieldset>
-        <fieldset data-tab
-                class="aside-choose__item aside-choose__item--with_mb">
+        <fieldset data-tab class="aside-choose__item aside-choose__item--with_mb">
             @@include('blocks/title/title.html', {
                 "tag": "legend",
                 "class": "aside-choose__item-title",
@@ -78,8 +74,7 @@
                 }])
             </div>
         </fieldset>
-        <fieldset data-tab
-                class="aside-choose__item">
+        <fieldset data-tab class="aside-choose__item">
             @@include('blocks/title/title.html', {
                 "tag": "legend",
                 "class": "aside-choose__item-title",
@@ -98,7 +93,7 @@
                         class="select__input"
                         type="radio"
                         name="CHOOSE_CAR"
-                        checked />
+                        checked>
                     <label for="car0"
                         tabindex="0"
                         class="select__label">
@@ -114,7 +109,7 @@
                     <input id="car1"
                         class="select__input"
                         type="radio"
-                        name="CHOOSE_CAR" />
+                        name="CHOOSE_CAR">
                     <label for="car1"
                         tabindex="0"
                         class="select__label">
@@ -138,8 +133,7 @@
         "class": "aside-choose__item",
         "title": "@@if(context.choose){4.}@@if(context.universal){2.} Выбери упаковку"
     })
-    <fieldset data-tab="gift"
-              class="aside-choose__item">
+    <fieldset data-tab="gift" class="aside-choose__item">
         @@include('blocks/title/title.html', {
             "tag": "legend",
             "class": "aside-choose__item-title",

@@ -3,4 +3,11 @@
 	flex-shrink: 0;
 	width: var(--icon-size);
 	height: var(--icon-size);
+
+    &--size {
+        &_s {
+            width: var(--icon-size_s);
+	        height: var(--icon-size_s);
+        }
+    }
 }

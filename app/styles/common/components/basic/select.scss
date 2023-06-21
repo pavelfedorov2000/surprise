@@ -64,7 +64,7 @@
     &__arrow {
         position: relative;
         z-index: 2;
-        fill: var(--black);
+        fill: var(--dark);
         transition: var(--transition) transform,
             var(--transition) fill;
     }
@@ -161,7 +161,7 @@
                 &__title {
                     @include padding-y(13.5px);
                     padding-right: var(--offset-xxxl);
-                    color: var(--black);
+                    color: var(--dark);
                 }
             }
         }

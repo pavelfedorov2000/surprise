@@ -17,37 +17,39 @@
                        class="select__input"
                        type="radio"
                        name="DELIVERY_OPTION"
-                       checked />
+                       checked>
                 <label for="car0"
                        tabindex="0"
                        class="select__label">
-                    <div class="select__wrap">
+                    <span class="select__wrap">
                         <span class="select__key"
                               data-value="Доставка курьером (по Минску)">Доставка курьером (по
                             Минску)</span>
-                    </div>
-                    <div class="select__value"
-                         data-value="7 руб.">7 руб.</div>
+                    </span>
+                    <span class="select__value"
+                         data-value="7 руб.">7 руб.</span>
                 </label>
                 <input id="car1"
                        class="select__input"
                        type="radio"
-                       name="DELIVERY_OPTION" />
+                       name="DELIVERY_OPTION">
                 <label for="car1"
                        tabindex="0"
                        class="select__label">
-                    <div class="select__wrap">
+                    <span class="select__wrap">
                         <span class="select__key"
                               data-value="Самовывоз Минск">Самовывоз Минск</span>
-                    </div>
-                    <div class="select__value"
-                         data-value="0 руб.">0 руб.</div>
+                    </span>
+                    <span class="select__value"
+                         data-value="0 руб.">0 руб.</span>
                 </label>
             </div>
         </div>
         <div class="tabs-content active">
             <div class="cart-section__radios">
                 @@loop('blocks/radio/radio.html', [{
+                    "innerLabel": true,
+                    "id": "delivery-option-1",
                     "inputClass": "js-radio-toggle",
                     "radioStyle": {
                         "mr": "xs"
@@ -65,6 +67,8 @@
                     },
                     "isChecked": true
                 }, {
+                    "innerLabel": true,
+                    "id": "delivery-option-2",
                     "inputClass": "js-radio-toggle",
                     "radioStyle": {
                         "mr": "xs"
@@ -85,6 +89,8 @@
         <div class="tabs-content">
             <div class="cart-section__radios">
                 @@loop('blocks/radio/radio.html', [{
+                    "innerLabel": true,
+                    "id": "pickup-option-1",
                     "radioStyle": {
                         "mr": "xs"
                     },
@@ -95,6 +101,8 @@
                     },
                     "isChecked": true
                 }, {
+                    "innerLabel": true,
+                    "id": "pickup-option-2",
                     "radioStyle": {
                         "mr": "xs"
                     },
@@ -104,6 +112,8 @@
                         "text": 'г. Минск, ул. Притыцкого 156/1, первый этаж ( напротив магазина "Кравт").<br>с 10:00 до 20:00, без выходных',
                     }
                 }, {
+                    "innerLabel": true,
+                    "id": "pickup-option-3",
                     "radioStyle": {
                         "mr": "xs"
                     },

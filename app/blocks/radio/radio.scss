@@ -2,7 +2,17 @@
     $this: &; // .radio
 
     cursor: pointer;
+    position: relative;
     display: flex;
+
+    > label {
+        position: absolute;
+        top: 0;
+        left: 0;
+        bottom: 0;
+        right: 0;
+        z-index: 1;
+    }
 
     &-input {
         width: 1px;
@@ -182,6 +192,8 @@
     }
 
     &__field {
+        position: relative;
+        z-index: 2;
         width: 100%;
     }
 
@@ -253,20 +265,9 @@
                         margin-right: var(--offset-xs);
                         width: var(--icon-size);
                         height: var(--icon-size);
-                        stroke: var(--black);
+                        stroke: var(--dark);
                         transition: var(--transition) stroke;
                     }
-
-                    /* &::after {
-                        content: '';
-                        position: absolute;
-                        bottom: 0;
-                        left: 0;
-                        width: 0%;
-                        height: 2px;
-                        background-color: var(--green);
-                        transition: var(--transition) width;
-                    } */
 
                     @media (any-hover: hover) {
                         &:hover {
@@ -287,31 +288,15 @@
                                 border-bottom-color: var(--green);
                                 box-shadow: var(--bsh);
 
-                                @media(max-width: $xxl) {
-                                    color: var(--white);
-                                }
-
-                                /* &::after {
-                                    width: 100%;
-                                } */
-
                                 .icon,
                                 #{$this}__icon {
                                     stroke: var(--green);
-
-                                    @media(max-width: $xxl) {
-                                        stroke: var(--white);
-                                    }
                                 }
 
                                 #{$this} {
                                     &__text {
                                         @extend %museo-700;
                                         color: var(--green);
-
-                                        @media(max-width: $xxl) {
-                                            color: var(--white);
-                                        }
                                     }
                                 }
                             }
@@ -396,6 +381,35 @@
                                                 }
                                             }
                                         }
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+.catalog-filters {
+    &.active {
+        .radio--style_filter {
+            .radio {
+                &-input {
+                    &:checked {
+                        & ~ {
+                            .radio {
+                                &__content {
+                                    color: var(--white);
+
+                                    .icon,
+                                    .radio__icon {
+                                        stroke: var(--white);
+                                    }
+
+                                    .radio__text {
+                                        color: var(--white);
                                     }
                                 }
                             }

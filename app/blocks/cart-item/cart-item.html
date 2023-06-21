@@ -24,8 +24,8 @@
                 <dd>3 чел</dd>
             </div>
             <div class="leader__item">
-                <dd>2 машины, 2-местные <span>(400-500 см3)</span>
-                </dd>
+                <dt class="visually-hidden">Транспорт:</dt>
+                <dd>2 машины, 2-местные <span>(400-500 см3)</span></dd>
             </div>
         </dl>
         <div class="cart-item__info-bottom">
@@ -79,10 +79,14 @@
     <div class="cart-item__dropdown">
         <div class="dropdown-certificate-fields">
             @@include('blocks/dropdown-certificate-field/dropdown-certificate-field.html', {
-                "title": "Сертификат 1"
+                "title": "Сертификат 1",
+                "inputId": "name-1",
+                "textareaId": "wish-1"
             })
             @@include('blocks/dropdown-certificate-field/dropdown-certificate-field.html', {
-                "title": "Сертификат 2"
+                "title": "Сертификат 2",
+                "inputId": "name-2",
+                "textareaId": "wish-2"
             })
         </div>
     </div>

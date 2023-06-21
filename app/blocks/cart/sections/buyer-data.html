@@ -6,12 +6,14 @@
     })
     <div class="cart-section__fields">
         @@loop('blocks/form-item/form-item.html', [{
+            "id": "buyer-name",
             "class": "cart-section__field",
             "label": "Ваше имя",
             "placeholder": "Ваше имя",
             "required": true,
             "requiredMessage": "Поле не может быть пустым"
         }, {
+            "id": "buyer-phone",
             "class": "cart-section__field",
             "inputType": "tel",
             "label": "Ваш номер телефона",
@@ -23,6 +25,8 @@
             <span class="form-label">Выберите вариант для отправки письма, подтверждающего статус вашего заказа:</span>
             <div class="cart-section__radios">
                 @@loop('blocks/radio/radio.html', [{
+                    "innerLabel": true,
+                    "id": "buyer-viber",
                     "inputClass": "js-radio-toggle",
                     "radioStyle": {
                         "mr": "xs"
@@ -37,6 +41,8 @@
                     },
                     "isChecked": true
                 }, {
+                    "innerLabel": true,
+                    "id": "buyer-viber-second",
                     "inputClass": "js-radio-toggle",
                     "radioStyle": {
                         "mr": "xs"
@@ -50,6 +56,8 @@
                         }
                     }
                 }, {
+                    "innerLabel": true,
+                    "id": "buyer-email",
                     "inputClass": "js-radio-toggle",
                     "radioStyle": {
                         "mr": "xs"
@@ -66,6 +74,7 @@
             </div>
         </div>
         @@include('blocks/form-item/form-item.html', {
+            "id": "buyer-comment",
             "class": "cart-section__field cart-section__field--span-2",
             "label": "Комментарии к заказу:",
             "placeholder": "Ваш комментарий"

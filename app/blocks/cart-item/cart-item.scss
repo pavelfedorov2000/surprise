@@ -111,6 +111,7 @@
 
 	&__trash {
 		grid-area: trash;
+        margin-right: calc(var(--offset-xxs) * (-1));
 	}
 
 	&__prices,
