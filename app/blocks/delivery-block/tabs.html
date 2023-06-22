@@ -1,7 +1,6 @@
 <nav class="tabs delivery-block__tabs tabs--style_line">
-	<ul class="tabs__list">
+	<div class="tabs__list" role="tablist">
         @@loop('blocks/tab/tab.html', [{
-            "listItem": true,
             "style": "radio",
             "id": "delivery_tab_1",
             "controls": "delivery-tabs-content-1",
@@ -9,33 +8,29 @@
             "text": "Курьером по Минску",
             "isActive": true
         }, {
-            "listItem": true,
             "style": "radio",
             "id": "delivery_tab_2",
             "controls": "delivery-tabs-content-2",
             "circle": true,
             "text": "Самовывоз",
         }, {
-            "listItem": true,
             "style": "radio",
             "id": "delivery_tab_3",
             "controls": "delivery-tabs-content-3",
             "circle": true,
             "text": "Доставка почтой",
         }, {
-            "listItem": true,
             "style": "radio",
             "id": "delivery_tab_4",
             "controls": "delivery-tabs-content-4",
             "circle": true,
             "text": "Электронный сертификат",
         }, {
-            "listItem": true,
             "style": "radio",
             "id": "delivery_tab_5",
             "controls": "delivery-tabs-content-5",
             "circle": true,
             "text": "Для юр. лиц и ИП",
         }])
-	</ul>
+	</div>
 </nav>

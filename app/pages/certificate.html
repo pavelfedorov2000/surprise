@@ -25,9 +25,8 @@
 			</div>
 			<div class="tabs-block tabs-block--padding-bottom_xl">
 				<div class="tabs tabs--style_line">
-					<ul class="tabs__list tabs__list--items_2">
+					<div class="tabs__list tabs__list--items_2" role="tablist">
                         @@loop('blocks/tab/tab.html', [{
-                            "listItem": true,
                             "class": "js-certificate-tab",
                             "style": "radio",
                             "id": "certificate_tab_gift",
@@ -35,14 +34,13 @@
                             "text": "В подарок",
                             "isActive": true
                         }, {
-                            "listItem": true,
                             "class": "js-certificate-tab",
                             "style": "radio",
                             "id": "certificate_tab_own",
                             "circle": true,
                             "text": "Для себя",
                         }])
-					</ul>
+					</div>
 				</div>
 			</div>
 			@@include('blocks/unique-package/unique-package.html')
@@ -83,7 +81,9 @@
                                     "withoutPicture": true,
                                     "class": "card__icon",
                                     "src": "assets/images/icons/attention",
-                                    "format": "png"
+                                    "format": "png",
+                                    "width": "64",
+                                    "height": "56"
                                 })
                                 @@include('blocks/title/title.html', {
                                     "level": "4",
@@ -109,7 +109,9 @@
                                     "withoutPicture": true,
                                     "class": "card__icon",
                                     "src": "assets/images/icons/lock",
-                                    "format": "png"
+                                    "format": "png",
+                                    "width": "64",
+                                    "height": "56"
                                 })
                                 @@include('blocks/title/title.html', {
                                     "level": "4",

@@ -22,7 +22,7 @@
             type="button"
             role="tab"
             aria-selected="@@if(context.isActive){true}@@if(!context.isActive){false}"
-            aria-controls="@@controls">
+            @@if(context.controls){aria-controls="@@controls"}>
         @@if(context.circle){
             <span class="tab__circle"></span>
         }
