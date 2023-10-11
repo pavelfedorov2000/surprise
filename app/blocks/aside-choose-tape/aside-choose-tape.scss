@@ -8,11 +8,15 @@
 	padding: var(--offset-s) var(--container-padding);
 	align-items: center;
 	justify-content: space-between;
-	background-color: #fff;
+	background-color: var(--white);
 	box-shadow: $bsh;
 
 	@media(max-width: $xl) {
 		display: flex;
+	}
+
+	@media(max-width: $lg) {
+		bottom: var(--bottom-bar-height);
 	}
 
 	&__value {

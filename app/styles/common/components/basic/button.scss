@@ -11,7 +11,7 @@
 	font-family: $ff;
 	font-size: #{$fz}px;
 	line-height: 1.5;
-	color: #fff;
+	color: var(--white);
 	text-align: left;
 	transition: $transition all;
 
@@ -40,7 +40,7 @@
 
 	&__text {
 		white-space: nowrap;
-		transition: $transition color;
+		//transition: $transition color;
 	}
 
 	&--style {
@@ -61,6 +61,24 @@
 				@media (any-hover: hover) {
 					&:hover {
 						background-color: var(--green-hover);
+					}
+				}
+			}
+
+			&-green-light {
+				background-color: var(--green-light);
+				color: var(--green);
+
+				&:focus,
+				&:active {
+					background-color: var(--blue);
+					color: var(--green);
+				}
+
+				@media (any-hover: hover) {
+					&:hover {
+						background-color: var(--blue);
+						color: var(--green);
 					}
 				}
 			}
@@ -197,6 +215,29 @@
 					&::after {
 						background-color: var(--green-hover);
 					}
+				}
+			}
+		}
+
+		&_link-5 {
+			padding: 0;
+			justify-content: flex-start;
+			background-color: transparent;
+			color: var(--green);
+
+			&:focus,
+			&:active {
+				background-color: transparent;
+			}
+
+			&[disabled] {
+				color: var(--gray);
+			}
+
+			@media (any-hover: hover) {
+				&:hover {
+					background-color: transparent;
+					color: var(--green-hover);
 				}
 			}
 		}
@@ -389,7 +430,7 @@
 	align-items: center;
 	justify-content: center;
 	border-radius: 50%;
-	padding: var(--offset-xxxs);
+	padding: var(--offset-xxs);
 	transition: $transition background-color;
 
 	@media (any-hover: hover) {

@@ -1,6 +1,6 @@
 .order-card {
 	@include row-grid(var(--offset-m));
-	background-color: #fff;
+	background-color: var(--white);
 	box-shadow: $bsh;
 	padding: var(--offset-xl) var(--offset-l);
 

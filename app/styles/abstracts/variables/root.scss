@@ -1,6 +1,8 @@
 $container: 1440;
 
 :root {
+	--white: #fff;
+	--black: #1E1E1E;
 	--pink: #F395A9;
 	--pink-hover: #E6859A;
 	--pink-pressed: #EDA2B2;
@@ -11,16 +13,16 @@ $container: 1440;
 	--yellow-hover: #E4ED36;
 	--yellow-pressed: #F0F592;
 	--yellow-light: #FDFFC7;
-	--yellow-gradient: linear-gradient(90deg, #FDFBF6 0%, #F9F4E6 100%), #FFF;
+	--yellow-gradient: linear-gradient(90deg, #FDFBF6 0%, #F9F4E6 100%), var(--white);
 	--green: #258884;
 	--green-hover: #1F6F6C;
 	--green-pressed: #369A96;
 	--green-disabled: #D7EDEC;
-	--green-gradient: linear-gradient(90deg, #F2FBFB 0%, #E8F7F7 100%), linear-gradient(90deg, #FDFBF6 0%, #F9F4E6 100%), #FFF;
+	--green-gradient: linear-gradient(90deg, #F2FBFB 0%, #E8F7F7 100%), linear-gradient(90deg, #FDFBF6 0%, #F9F4E6 100%), var(--white);
 	--blue: #D7EDEC;
+	--blue-gradient: linear-gradient(90deg, #F2FBFB 0%, #E8F7F7 100%), linear-gradient(90deg, #FCF6F6 0%, #FFF3F4 100%), var(--white);
 	--dark-blue: #1F5469;
 	--green-light: #F5F8F8;
-	--black: #1E1E1E;
 	--text-color: #535353;
 	--text-color-light: #656565;
 	--gray: #F6F6F6;
@@ -41,6 +43,8 @@ $container: 1440;
 	--section-padding-xl: 120px;
 	--section-padding-xxl: 140px;
 
+	--bottom-bar-height: 62px;
+
 	--page-decor-w: 1026px;
 	--page-decor-h: 707px;
 
@@ -53,8 +57,10 @@ $container: 1440;
 	--offset-ls: 36px;
 	--offset-l: 32px;
 	--offset-m: 24px;
+	--offset-sm: 20px;
 	--offset-s: 16px;
 	--offset-xs: 12px;
+	--offset-x: 10px;
 	--offset-xxs: 8px;
 	--offset-xxxs: 4px;
 

@@ -1,12 +1,9 @@
 @@include("blocks/head/head.html", {"title": "Заказ сформирован"})
 <div class="wrapper">
 	@@include("blocks/layout/layout.html")
-	<main class="page page--padding page--padding-bottom_xl">
+	<main class="page page--padding page--padding-bottom_xl page--with_decor">
 		<div class="container">
-			@@include('blocks/success-block/success-block.html', {
-			"title": "Заказ сформирован",
-			"text": true
-			})
+			@@include('blocks/order-ready/order-ready.html')
 		</div>
 	</main>
 	@@include('blocks/footer/footer.html')

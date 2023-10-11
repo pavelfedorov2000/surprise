@@ -6,10 +6,10 @@
 	min-height: 184px;
 	height: 100%;
 	padding: var(--offset-m) 20px 20px;
-	background-color: #fff;
+	background-color: var(--white);
 	box-shadow: $bsh;
 	border-radius: $brs-card-xl;
-	border-bottom: 3px solid #fff;
+	border-bottom: 3px solid var(--white);
 	transition: $transition border-bottom-color;
 
 	@media(max-width: $sm) {

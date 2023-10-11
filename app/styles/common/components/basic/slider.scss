@@ -1,5 +1,48 @@
-.swiper-pagination {
+.swiper-horizontal>.swiper-pagination-bullets,
+.swiper-pagination-bullets.swiper-pagination-horizontal {
+	display: flex;
+	justify-content: center;
+}
 
+.swiper-horizontal>.swiper-pagination-bullets .swiper-pagination-bullet,
+.swiper-pagination-horizontal.swiper-pagination-bullets .swiper-pagination-bullet {
+	position: relative;
+	width: var(--offset-s);
+	height: var(--offset-s);
+	border-radius: 50%;
+	background-color: transparent;
+	opacity: 1;
+	margin: 0;
+
+	&::before {
+		content: '';
+		position: absolute;
+		top: 50%;
+		left: 50%;
+		transform: translate(-50%, -50%);
+		width: 8px;
+		height: 8px;
+		border-radius: 50%;
+		background-color: var(--line-color);
+		transition: $transition background-color;
+	}
+
+	@media (any-hover: hover) {
+		&:hover {
+			&:before {
+				background-color: var(--pink);
+			}
+		}
+	}
+
+	&-active {
+		&:before {
+			background-color: var(--pink);
+		}
+	}
+}
+
+.swiper-pagination {
 	&-fraction {
 		bottom: var(--offset-s);
 		left: var(--offset-s);

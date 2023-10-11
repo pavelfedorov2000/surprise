@@ -8,7 +8,7 @@ $progress-bar-size: 68px;
 
     &__background {
         fill: none;
-        stroke: #fff;
+        stroke: var(--white);
         stroke-width: $progress-bar-stroke-width;
     }
 

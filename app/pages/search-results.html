@@ -1,16 +1,13 @@
 @@include("blocks/head/head.html", {"title": "Результаты поиска"})
 <div class="wrapper">
 	@@include("blocks/layout/layout.html")
-	<main class="page page--padding page--padding-top_ls">
-		<div class="container">
-			@@include('blocks/breadcrumbs/breadcrumbs.html', {
-			"current": "Поиск по сайту"
-			})
-			<div class="page__top page__top--margin-bottom_ls">
-				<h1 class="page-title page-title--size_xs">Результаты поиска по запросу «вин»</h1>
+	<main class="page">
+		@@include('blocks/search-results-promo/search-results-promo.html')
+		<div class="section section--with_padding-top">
+			<div class="container">
+				@@include('blocks/catalog-grid/catalog-grid.html')
+				@@include("blocks/load-more/load-more.html")
 			</div>
-			@@include('blocks/catalog-grid/catalog-grid.html')
-			@@include("blocks/load-more/load-more.html")
 		</div>
 	</main>
 	@@include('blocks/footer/footer.html')

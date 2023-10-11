@@ -7,6 +7,8 @@
 
 	&__item {
 		display: flex;
+		flex-wrap: wrap;
+		gap: var(--offset-xxxs);
 
 		@media(max-width: $sm) {
 			font-size: 14px;
@@ -14,7 +16,6 @@
 
 		dt {
 			@extend %museo-300;
-			margin-right: var(--offset-xxxs);
 			color: var(--text-color-light);
 			transition: $transition color;
 		}

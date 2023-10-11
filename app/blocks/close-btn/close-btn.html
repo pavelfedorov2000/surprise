@@ -1,6 +1,6 @@
 <button class="close-btn@@if(context.class){ @@class__close}@@if(context.visibilityClass){ @@visibilityClass}"
         aria-label="@@ariaLabel"
-        type="button">
+        type="button" @@if(context.data){data-@@data.attr}>
     <svg class="icon"
          aria-hidden="true">
         <use xlink:href="assets/images/sprite.svg#close"></use>

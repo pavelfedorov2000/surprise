@@ -2,7 +2,7 @@
     @include row-grid(20px);
     justify-items: center;
     padding: var(--offset-xl) var(--offset-m);
-    background-color: #fff;
+    background-color: var(--white);
     border-radius: $brs-card-xl;
     box-shadow: $bsh;
     text-align: center;

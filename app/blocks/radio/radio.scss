@@ -60,7 +60,7 @@
 					#{$this} {
 						&-style {
 							&:before {
-								border-color: #fff;
+								border-color: var(--white);
 							}
 
 							&:after {
@@ -285,7 +285,7 @@
 					&:checked~ {
 						#{$this} {
 							&__content {
-								background-color: #fff;
+								background-color: var(--white);
 								border-bottom-color: var(--green);
 								box-shadow: $bsh;
 
@@ -331,7 +331,7 @@
 							&-text {
 								background-color: var(--green);
 								border-color: var(--green);
-								color: #fff;
+								color: var(--white);
 							}
 						}
 					}
@@ -369,13 +369,13 @@
 							#{$this} {
 								&__content {
 									background-color: var(--green);
-									color: #fff;
+									color: var(--white);
 
 									#{$this} {
 										&__icon {
 											&--yandex {
 												path {
-													fill: #fff;
+													fill: var(--white);
 												}
 											}
 

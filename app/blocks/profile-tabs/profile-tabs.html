@@ -1,30 +1,16 @@
-<nav class="profile-block__tabs"
-     aria-label="Tabs">
-    <div class="tabs tabs--items_3"
-         role="tablist">
-        <button id="profile_tab_1"
-                class="tab active tab--style_2"
-                type="button"
-                role="tab"
-                aria-selected="true"
-                aria-controls="profile-tabs-content-1">
+<nav class="profile-block__tabs">
+    <div class="tabs tabs--style_col">
+        <a href="#" class="tab@@if(context.firstActive){ active} tab--style_2">
+            Календарь подарков
+        </a>
+        <a href="#" class="tab@@if(context.secondActive){ active} tab--style_2">
             Неоплаченные заказы
-        </button>
-        <button id="profile_tab_2"
-                class="tab tab--style_2"
-                type="button"
-                role="tab"
-                aria-selected="false"
-                aria-controls="profile-tabs-content-2">
+        </a>
+        <a href="#" class="tab@@if(context.thirdActive){ active} tab--style_2">
             История заказов
-        </button>
-        <button id="profile_tab_3"
-                class="tab tab--style_2"
-                type="button"
-                role="tab"
-                aria-selected="false"
-                aria-controls="profile-tabs-content-3">
+        </a>
+        <a href="#" class="tab@@if(context.fourthActive){ active} tab--style_2">
             Электронные сертификаты
-        </button>
+        </a>
     </div>
 </nav>

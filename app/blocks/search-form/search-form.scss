@@ -1,9 +1,7 @@
 .search-form {
 	position: relative;
-	width: 296px;
 
 	@media(max-width: $md) {
-		width: auto;
 		transition: $transition all;
 	}
 
@@ -16,29 +14,14 @@
 			margin-left: 0;
 			width: 100%;
 			height: var(--header-height-mob);
-			background-color: #fff;
+			background-color: var(--white);
 		}
 	}
 
 	&__input {
+		padding: var(--offset-s) var(--offset-m);
 		width: 100%;
-		padding: 0;
-		opacity: 0;
-		visibility: hidden;
-		pointer-events: none;
 		transition: $transition all;
-
-		@media(max-width: $md) {
-			height: 100%;
-			border: none;
-		}
-
-		&.active {
-			padding: 15.5px calc(var(--offset-m) * 3) 17.5px var(--offset-m);
-			opacity: 1;
-			visibility: visible;
-			pointer-events: auto;
-		}
 	}
 
 	// .search-form__btn
@@ -47,13 +30,13 @@
 		position: absolute;
 		top: 50%;
 		transform: translateY(-50%);
-		right: calc(var(--offset-m) - var(--offset-xxxs));
+		right: calc(var(--offset-m) - var(--offset-xxs));
 		display: inline-flex;
 		align-items: center;
 		border-radius: 50%;
-		padding: var(--offset-xxxs);
+		padding: var(--offset-xxs);
 		font-size: 24px;
-		transition: $transition background-color;
+		transition: $transition background-color, $transition left, $transition right;
 
 		@media (any-hover: hover) {
 			&:hover {

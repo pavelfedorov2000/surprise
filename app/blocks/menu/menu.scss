@@ -10,7 +10,7 @@
     flex-direction: column;
     width: 575px;
     padding: var(--offset-xxxl) var(--section-padding-xs);
-    background-color: #fff;
+    background-color: var(--white);
     overflow-y: auto;
     transition: $transition left;
 
@@ -80,7 +80,7 @@
         padding: 20px var(--offset-l);
         border-radius: $brs;
         font-size: 20px;
-        border-left: 3px solid #fff;
+        border-left: 3px solid var(--white);
         transition: $transition all;
 
         @media(max-width: $md) {

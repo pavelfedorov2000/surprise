@@ -125,7 +125,7 @@
 			&~ {
 				#{$this}__inner {
 					background-color: var(--green);
-					color: #fff;
+					color: var(--white);
 
 					.menu-link {
 						@media (any-hover: hover) {
@@ -139,7 +139,7 @@
 
 						dt,
 						dd span {
-							color: #fff;
+							color: var(--white);
 						}
 					}
 				}
@@ -147,11 +147,11 @@
 
 			&~.radio-style {
 				&:before {
-					border-color: #fff;
+					border-color: var(--white);
 				}
 
 				&:after {
-					background-color: #fff;
+					background-color: var(--white);
 				}
 			}
 		}

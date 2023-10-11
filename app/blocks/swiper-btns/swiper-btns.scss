@@ -40,12 +40,13 @@
 	position: absolute;
 	top: 50%;
 	transform: translateY(-50%);
-	display: grid;
-	place-items: center;
+	display: flex;
+	align-items: center;
+	justify-content: center;
 	width: var(--offset-xxl);
 	height: var(--offset-xxl);
 	border-radius: 50%;
-	background-color: #fff;
+	background-color: var(--white);
 	z-index: 20;
 	box-shadow: $bsh-3;
 	transition: $transition all;
@@ -71,7 +72,7 @@
 			#{$this} {
 				&__icon {
 					path {
-						fill: #fff;
+						fill: var(--white);
 					}
 				}
 			}
@@ -82,7 +83,7 @@
 		&_xs {
 			width: var(--offset-l);
 			height: var(--offset-l);
-			box-shadow: none;
+			//box-shadow: none;
 
 			#{$this} {
 				&__icon {

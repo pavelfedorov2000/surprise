@@ -46,26 +46,57 @@
 				</picture>
 			</a>
 			<div class="header__actions actions-header">
+				@@include('blocks/calendar-dropdown/calendar-dropdown.html')
 				<div class="actions-header__items">
-					@@include('blocks/search-form/search-form.html')
 					@@include('blocks/action-btn/action-btn.html', {
-					"button": true,
-					"class": "actions-header__item",
-					"ariaLabel": "Авторизоваться",
-					"popup": "auth",
-					"icon": "user"
+						"button": true,
+						"class": "actions-header__item js-calendar mob-hidden",
+						"ariaLabel": "Открыть календарь",
+						"icon": "calendar",
+						"popup": "calendar-dropdown",
+						"dropdown": true,
 					})
-					@@include('blocks/action-btn/action-btn.html', {
-					"class": "actions-header__item",
-					"ariaLabel": "Перейти в избранное",
-					"icon": "favorite"
+					@@include('blocks/search-form/search-form.html', {
+						"id": "search-form",
+						"class": "actions-header__search",
+						"form": true,
+						"ariaLabel": "Открыть поиск по сайту",
+						"placeholder": "Поиск..."
 					})
-					@@include('blocks/action-btn/action-btn.html', {
-					"class": "actions-header__item",
-					"ariaLabel": "Перейти в корзину",
-					"icon": "cart",
-					"count": "2"
-					})
+					<!-- @@include('blocks/action-btn/action-btn.html', {
+						"class": "actions-header__item mob-hidden",
+						"ariaLabel": "Открыть поиск по сайту",
+						"icon": "search"
+					}) -->
+				</div>
+			</div>
+			<div class="header__actions actions-header">
+				@@include('blocks/notifications-dropdown/notifications-dropdown.html')
+				<div class="actions-header__items">
+					@@loop('blocks/action-btn/action-btn.html', [{
+						"button": true,
+						"class": "actions-header__item js-notifications mob-hidden",
+						"ariaLabel": "Открыть уведомления",
+						"icon": "notification",
+						"count": "2",
+						"popup": "notifications",
+						"dropdown": true,
+					}, {
+						"class": "actions-header__item",
+						"ariaLabel": "Перейти в избранное",
+						"icon": "favorite"
+					}, {
+						"button": true,
+						"class": "actions-header__item",
+						"ariaLabel": "Авторизоваться",
+						"popup": "auth",
+						"icon": "user"
+					}, {
+						"class": "actions-header__item",
+						"ariaLabel": "Перейти в корзину",
+						"icon": "cart",
+						"count": "2"
+					}])
 				</div>
 				<a href="#" class="btn actions-header__btn">
 					<span class="btn__text">Активировать сертификат</span>

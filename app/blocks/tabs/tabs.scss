@@ -62,6 +62,42 @@
                 width: 100%;
             }
         }
+
+        &_col {
+            @media (max-width: $md) {
+                @include row-grid(var(--offset-xs));
+                overflow-x: visible;
+
+                .tab {
+                    padding: 18px var(--offset-m);
+                    background-color: var(--white);
+                    border-radius: $brs;
+                    box-shadow: $bsh;
+                    border-bottom: none;
+                    justify-content: flex-start;
+                    font-family: 'Museo Sans Cyrl 500', sans-serif;
+	                font-weight: 500;
+
+                    &:first-child {
+                        position: relative;
+                        background-color: var(--pink);
+                        color: var(--white);
+
+                        &::after {
+                           content: '';
+                           position: absolute;
+                           top: -25px;
+                           right: 17px;
+                           width: 86px;
+                           height: 86px;
+                           background-image: url(../images/icons/calendar.png);
+                           background-size: contain;
+                           background-repeat: no-repeat;
+                        }
+                    }
+                }
+            }
+        }
     }
 
     &--items {
@@ -108,6 +144,19 @@
     margin-right: var(--offset-s);
     transition: $transition all;
 
+    &--style {
+        &_bg-green {
+            background-color: var(--green);
+            color: var(--white);
+        }
+    }
+
+    &--size {
+        &_xs {
+            padding: var(--offset-xxxs) var(--offset-xs);
+        }
+    }
+
     &__circle {
         position: relative;
         flex-shrink: 0;
@@ -141,7 +190,7 @@
             width: var(--offset-xs);
             height: var(--offset-xs);
             border-radius: 50%;
-            background-color: #fff;
+            background-color: var(--white);
             opacity: 0;
             transition: $transition opacity;
         }
@@ -150,12 +199,12 @@
     &.active,
     &[aria-selected="true"] {
         background-color: var(--green);
-        color: #fff;
+        color: var(--white);
 
         #{$this} {
             &__circle {
                 &:before {
-                    border-color: #fff;
+                    border-color: var(--white);
                 }
 
                 &:after {
@@ -168,7 +217,7 @@
     @media (any-hover: hover) {
         &:hover {
             background-color: var(--green);
-            color: #fff;
+            color: var(--white);
         }
     }
 
@@ -203,7 +252,7 @@
             font-size: 16px;
             padding: var(--offset-xs) var(--offset-m);
             border-radius: $brs;
-            border-left: 3px solid #fff;
+            border-left: 3px solid var(--white);
             background-color: transparent;
             transition: $transition all;
 
@@ -257,13 +306,13 @@
             &.active,
             &[aria-selected="true"] {
                 @extend %museo-700;
-                color: #fff;
+                color: var(--white);
                 background-color: var(--green);
 
                 #{$this} {
                     &__circle {
                         &:before {
-                            border-color: #fff;
+                            border-color: var(--white);
                         }
 
                         &:after {

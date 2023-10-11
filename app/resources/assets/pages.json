@@ -8,6 +8,12 @@
     "href": "combo.html",
     "title": "Комбо"
 }, {
+    "href": "gift-set.html",
+    "title": "Подарочный набор"
+}, {
+    "href": "universal-certificate.html",
+    "title": "Универсальный сертификат на сумму"
+}, {
     "href": "catalog.html",
     "title": "Каталог"
 }, {
@@ -15,7 +21,7 @@
     "title": "Корзина"
 }, {
     "href": "profile.html",
-    "title": "Личный кабинет - Неоплаченные заказы"
+    "title": "Личный кабинет - Разводящая"
 }, {
     "href": "profile-empty.html",
     "title": "Личный кабинет - Неоплаченные заказы (пустая)"

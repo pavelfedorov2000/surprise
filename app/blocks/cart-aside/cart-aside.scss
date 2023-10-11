@@ -1,7 +1,7 @@
 .cart-aside {
 	@include row-grid(var(--offset-l));
 	padding: var(--offset-xl);
-	background-color: #fff;
+	background-color: var(--white);
 	box-shadow: $bsh;
 	border-radius: $brs-card-xl;
 

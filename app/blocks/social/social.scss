@@ -36,7 +36,7 @@
 			}
 
 			.icon {
-				fill: #fff;
+				fill: var(--white);
 			}
 
 			@media (any-hover: hover) {
@@ -48,7 +48,7 @@
 					}
 
 					.icon {
-						fill: #fff;
+						fill: var(--white);
 					}
 				}
 			}

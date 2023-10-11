@@ -1,14 +1,11 @@
 h {
-
     &1,
     &2,
     &3,
     &4,
     &5,
     &6 {
-        font-family: 'Museo Sans Cyrl 500',
-            sans-serif;
-        font-weight: 500;
+        @extend %museo-500;
     }
 
     &1 {
@@ -20,6 +17,11 @@ h {
             line-height: 48px;
         }
     }
+}
+
+.title-24 {
+    @extend %museo-700;
+    font-size: 24px;
 }
 
 .page-title {

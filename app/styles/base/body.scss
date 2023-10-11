@@ -11,14 +11,14 @@ body {
     &.sticky {
         overflow-x: visible;
 
-        @media(max-width: $lg) {
+        @media(max-width: $xl) {
             overflow-x: hidden;
         }
 
         .wrapper {
             overflow-x: visible;
 
-            @media(max-width: $lg) {
+            @media(max-width: $xl) {
                 overflow-x: hidden;
             }
         }

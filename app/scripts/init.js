@@ -10,9 +10,32 @@ $(function () {
     app.popup.init();
     app.validation.init();
     app.progressbar.init();
+    app.compareSection.init();
 
-    $(document).on('click', '.profile-block__empty-btn', function () {
-        $(`.tab[aria-controls=${$(this).attr('aria-controls')}]`).trigger('click');
+    new AirDatepicker('#calendar', {
+        selectedDates: [new Date()]
+    });
+
+    new AirDatepicker('.profile-block__date', {
+        selectedDates: [new Date()],
+        position: $(window).width() < 768 ? 'bottom right' : 'bottom left',
+    });
+
+    new AirDatepicker('#add-event .input[data-date]', {
+        position: 'top center'
+    });
+
+    new AirDatepicker('#edit-event .input[data-date]', {
+        selectedDates: [new Date($('#edit-event .input[data-date]').val())],
+        position: 'top center'
+    });
+    
+    $(document).on('click', '.js-add-field', function () {
+        $(this).replaceWith(`
+            <label class="form-item">
+                <input class="input">
+            </label>
+        `);
     });
 
     const moreButtonTextArray = ['Подробнее', 'Скрыть'];
@@ -50,33 +73,71 @@ $(function () {
         }
     });
 
-    const table = document.querySelector('.table-wrap');
-    const tableVisibleWidth = table.getBoundingClientRect().width;
-    const tableWidth = table.scrollWidth;
-    const ths = table.querySelectorAll('th');
-    const compareProductItems = document.querySelectorAll('.compare-product');
-    const compareProducts = [...ths].slice(1);
-    const thWidth = compareProducts[0].getBoundingClientRect().width;
-    const compareProductsWidth = thWidth * compareProducts.length;
-    const compareProductsOffsets = compareProducts.map((item) => item.offsetLeft);
-    const firstThWidth = tableWidth - compareProductsWidth;
-    const visibleProductsWidth = tableVisibleWidth - firstThWidth;
-    const deltaVisible = visibleProductsWidth - thWidth;
+    $(document).on('click', '.js-notifications', function () {
+        const $notificationsBtn = $(this);
+        const $notificationsDropdown = $('.notifications-dropdown');
 
-    table.onscroll = function () {
-        const scrollX = table.scrollLeft;
-        const delta = deltaVisible + scrollX;
+        if ($notificationsBtn.attr('aria-expanded') === 'false') {
+            $notificationsBtn.attr('aria-expanded', true);
+            $notificationsBtn.attr('aria-label', 'Закрыть уведомления');
+            $notificationsDropdown.addClass('active');
+        } else {
+            $notificationsBtn.attr('aria-expanded', false);
+            $notificationsBtn.attr('aria-label', 'Открыть уведомления');
+            $notificationsDropdown.removeClass('active');
+        }
+    });
 
-        compareProductsOffsets.forEach((_, index) => {
-            if (index > 0) {
-                if (delta >= compareProductsOffsets[index - 1]) {
-                    compareProductItems[index].classList.add('in-view');
-                } else {
-                    compareProductItems[index].classList.remove('in-view');
-                }
+    $(document).on('click', '.js-calendar', function () {
+        const $calendarBtn = $(this);
+        const $calendarDropdown = $('.calendar-dropdown');
+
+        if ($calendarBtn.attr('aria-expanded') === 'false') {
+            $calendarBtn.attr('aria-expanded', true);
+            $calendarBtn.attr('aria-label', 'Закрыть календарь событий');
+            $calendarDropdown.addClass('active');
+
+            if ($(window).width() <= 767) {
+                $('body').addClass('_lock');
             }
-        });
-    };
+        } else {
+            $calendarBtn.attr('aria-expanded', false);
+            $calendarBtn.attr('aria-label', 'Открыть календарь событий');
+            $calendarDropdown.removeClass('active');
+
+            if ($(window).width() <= 767) {
+                $('body').removeClass('_lock');
+            }
+        }
+    });
+
+    $('#remove-event .popup__btn:last-child').on('click', function() {
+        $(this).closest('.popup').fadeOut();
+        $('.overlay').fadeOut();
+        $('body').removeClass('_lock');
+    });
+
+    $(document).on('mousedown', function (e) {
+        const $calendarDropdown = $('.calendar-dropdown');
+        const $calendarBtn = $('.js-calendar');
+
+        if (!$calendarBtn.is(e.target) && !$calendarBtn.find('svg').is(e.target)) {
+            $calendarBtn.attr('aria-expanded', false);
+            $calendarBtn.attr('aria-label', 'Открыть календарь событий');
+            $calendarDropdown.removeClass('active');
+        }
+    });
+
+    $(document).on('mousedown', function (e) {
+        const $notificationsDropdown = $('.notifications-dropdown');
+        const $notificationsBtn = $('.js-notifications');
+
+        if (!$notificationsBtn.is(e.target) && !$notificationsBtn.find('svg').is(e.target)) {
+            $notificationsBtn.attr('aria-expanded', false);
+            $notificationsBtn.attr('aria-label', 'Открыть календарь событий');
+            $notificationsDropdown.removeClass('active');
+        }
+    });
 
     // Скрипт динамического адаптива (для перемещения ДОМ-элементов в другое место если нужно без дублирования кода)
     function DynamicAdapt(type) {

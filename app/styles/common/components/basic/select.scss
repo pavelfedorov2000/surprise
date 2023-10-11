@@ -9,16 +9,17 @@
         display: flex;
         align-items: center;
         justify-content: space-between;
-        background-color: #fff;
-        border: 1px solid #fff;
-        transition: $transition box-shadow,
-            $transition border-color;
+        column-gap: var(--offset-xxs);
+        background-color: var(--white);
+        border: 1px solid var(--white);
+        white-space: nowrap;
+        transition: $transition box-shadow, $transition border-color;
 
         @media(max-width: $xl) {
             @include padding-y(17px);
         }
 
-        &::after {
+        /* &::after {
             content: "";
             position: absolute;
             top: calc(50% - var(--icon-size) / 2);
@@ -27,7 +28,7 @@
             height: var(--icon-size);
             background-image: url(../images/icons/drop-arrow.svg);
             transition: $transition all;
-        }
+        } */
 
         @media (any-hover: hover) {
             &:hover {
@@ -99,12 +100,13 @@
         top: 100%;
         left: 0;
         right: 0;
-        width: 100%;
+        width: max-content;
+        min-width: 100%;
         @include padding-y(var(--offset-m));
         box-shadow: $bsh;
         border-radius: $brs;
         z-index: 30;
-        background-color: #fff;
+        background-color: var(--white);
         display: none;
 
         @media(max-width: $md) {
@@ -129,6 +131,7 @@
         width: 100%;
         cursor: pointer;
         overflow: hidden;
+        white-space: nowrap;
         transition: $transition color;
 
         @media(max-width: $md) {
@@ -150,6 +153,10 @@
                     border: 1px solid var(--line-color);
                     border-radius: $brs;
                     color: var(--text-color);
+
+                    @media (max-width: $sm) {
+                        @include padding-y(11px);
+                    }
                 }
             }
         }

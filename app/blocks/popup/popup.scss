@@ -5,7 +5,7 @@
     right: 0;
     bottom: 0;
     left: 0;
-    z-index: 200;
+    z-index: 201;
     background-color: rgba(0, 0, 0, 0.28);
 
     &--menu {
@@ -19,6 +19,53 @@
     }
 }
 
+.fancybox__container {
+    --fancybox-bg: rgba(0, 0, 0, 0.28);
+
+    .popup {
+        @media (max-width: $sm) {
+            display: flex !important;
+            flex-direction: column;
+            justify-content: flex-end;
+            gap: var(--offset-s);
+            background-color: transparent;
+            padding: var(--offset-s);
+
+            &__body {
+                padding: var(--offset-l) var(--offset-m);
+                background-color: var(--white);
+                box-shadow: $bsh;
+                border-radius: $brs-card;
+                overflow-y: auto;
+            }
+        }
+
+        &__form {
+            row-gap: var(--offset-s);
+        }
+
+        &__btn {
+            @media (max-width: $sm) {
+                margin-top: 0;
+            }
+        }
+
+        &__close {
+            @media (max-width: $sm) {
+                position: static;
+                align-self: center;
+                width: 63px;
+                height: 32px;
+                background-image: url(../images/icons/fancybox-close-arrow.svg);
+    
+                svg {
+                    display: none;
+                }
+            }
+        }
+    }
+}
+
 .popup {
     $this: &;
 
@@ -26,7 +73,7 @@
     position: absolute;
     z-index: 102;
     width: 470px;
-    background-color: #fff;
+    background-color: var(--white);
     box-shadow: $bsh;
     padding: var(--offset-xl) var(--offset-xxl) var(--offset-xxl);
 
@@ -78,22 +125,77 @@
 
     &__top {
         margin-bottom: var(--offset-m);
+
+        @media (max-width: $sm) {
+            margin-bottom: var(--offset-s);
+        }
     }
 
     &__title {
         font-size: 20px;
+
+        &--l {
+            font-size: 32px;
+            
+            @media (max-width: $sm) {
+                font-size: 28px;
+            }
+        }
+
+        &--center {
+            text-align: center;
+        }
+
+        @media(max-width: $sm) {
+            text-align: center;
+        }
+    }
+
+    &__items {
+        @include row-grid(var(--offset-l));
     }
 
     // .popup__form
 
     &__form {
         @include row-grid(var(--offset-m));
+
+        &-btn {
+            @include padding-y(14px);
+        }
+    }
+
+    &__add-btn {
+        justify-self: start;
+        justify-content: flex-start;
+    }
+
+    &__btns {
+        margin-top: var(--offset-m);
+        grid-template-columns: repeat(2, 1fr);
+        gap: var(--offset-s);
+
+        @media(max-width: $sm) {
+            gap: var(--offset-xxs);
+        }
+
+        .popup__btn {
+            margin-top: 0;
+            padding: var(--offset-s) var(--offset-l);
+            line-height: 1.25;
+        }
     }
 
     &__btn {
         display: flex;
         justify-content: center;
         margin-top: var(--offset-l);
+
+        &--center {
+            @media (min-width: 768px) {
+                @include margin-x(auto);
+            }
+        }
     }
 
     &--width {
@@ -134,6 +236,15 @@
             @media(max-width: $md) {
                 width: 100%;
                 border-radius: 0;
+            }
+        }
+
+        &_xxl {
+            padding: var(--offset-xxxl) var(--offset-xls);
+            width: 700px;
+
+            @media(max-width: $md) {
+                width: 100%;
             }
         }
     }
@@ -214,5 +325,21 @@
         p {
             color: var(--green);
         }
+    }
+}
+
+#remove-event {
+    @media(max-width: $lg) {
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+    }
+
+    @media(max-width: $sm) {
+        padding: var(--offset-l) var(--offset-m);
+        width: calc(100% - var(--container-padding) * 2);
+        height: auto;
+        border-radius: $brs-card-xl;
+        box-shadow: $bsh;
     }
 }

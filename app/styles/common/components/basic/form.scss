@@ -48,6 +48,10 @@ textarea {
 	transition: $transition border-color,
 		$transition box-shadow;
 
+	@media (max-width: $sm) {
+		@include padding-y(var(--offset-xs));
+	}
+
 	&::placeholder {
 		color: var(--line-color);
 	}
@@ -69,6 +73,36 @@ textarea {
 		.input {
 			width: 100%;
 		}
+	}
+
+	&[data-date] {
+		background-image: url(../images/icons/calendar.svg);
+		background-size: var(--icon-size);
+		background-position: calc(100% - var(--offset-m)) center;
+		background-repeat: no-repeat;
+	}
+}
+
+.date-input {
+	padding-left: var(--offset-l);
+	background-image: url(../images/icons/calendar.svg);
+	background-size: var(--icon-size);
+	background-position: left center;
+	background-repeat: no-repeat;
+	font-size: 16px;
+	color: var(--text-color);
+
+	@media (max-width: $md) {
+		padding-left: 0;
+		width: var(--icon-size);
+		height: var(--icon-size);
+		font-size: 0;
+	}
+
+	&:active,
+	&:focus {
+		background-image: url(../images/icons/calendar-green.svg);
+		color: var(--green);
 	}
 }
 
@@ -121,7 +155,7 @@ textarea {
 
 .form {
 	@include row-grid(var(--offset-m));
-	background-color: #fff;
+	background-color: var(--white);
 	border-radius: $brs-card-xl;
 	box-shadow: $bsh;
 	border-radius: $brs-card-xl;

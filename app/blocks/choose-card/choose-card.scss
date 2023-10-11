@@ -4,7 +4,7 @@
 	height: 100%;
 	display: flex;
 	flex-direction: column;
-	border-bottom: 3px solid #fff;
+	border-bottom: 3px solid var(--white);
 	border-radius: $brs-card-xl;
 	transition: $transition border-bottom-color;
 
@@ -50,7 +50,7 @@
 		display: flex;
 		flex-direction: column;
 		align-items: flex-start;
-		background-color: #fff;
+		background-color: var(--white);
 		box-shadow: $bsh;
 		border-radius: 0 0 $brs-card-xl $brs-card-xl;
 

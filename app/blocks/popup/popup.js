@@ -76,6 +76,26 @@ app.popup = {
             $('body').removeClass('_lock');
             $('html').removeClass('disable-fix');
         });
+
+        Fancybox.bind('[data-fancybox]', {
+            autoFocus: false,
+            dragToClose: false,
+            closeButton: false,
+            showClass: 'fancybox-fadeIn',
+            Toolbar: {
+                display: {
+                    left: [],
+                    middle: [],
+                    right: [
+                        'iterateZoom',
+                        'close',
+                    ],
+                },
+            },
+            Thumbs: {
+                showOnStart: false,
+            },
+        });
     },
 };
 
