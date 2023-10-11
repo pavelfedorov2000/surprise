@@ -1,0 +1,17 @@
+<div id="remove-event"
+     class="popup"
+     role="dialog">
+    @@include('blocks/close-btn/close-btn.html', {
+        "class": "popup",
+        "ariaLabel": "Закрыть окно удаления"
+    })
+    <div class="popup__title popup__title--l popup__title--center">Вы уверены, что хотите удалить?</div>
+    <div class="btns popup__btns">
+        <button class="btn popup__btn btn--style_bg-yellow" type="button">
+            <span class="btn__text">Да</span>
+        </button>
+        <button class="btn popup__btn btn--style_bg-pink" type="button">
+            <span class="btn__text">Нет</span>
+        </button>
+    </div>
+</div>

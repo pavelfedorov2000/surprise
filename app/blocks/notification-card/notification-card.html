@@ -1,0 +1,20 @@
+<div class="notification-card@@if(context.new){ new}">
+  @@if(context.new){
+    <span class="notification-card__dot"></span>
+  }
+  <div class="notification-card__title">@@title</div>
+  <time class="notification-card__date" datetime="2023-09-08">08.09.2023</time>
+  <p class="notification-card__text">
+    Мы узнали, что у вас с Еленой 14 сентября годовщина. Хотите добавить событие в “Календарь подарков”, чтобы не забыть поздравить?
+  </p>
+  @@if(context.new) {
+    <div class="notification-card__btns">
+      <button class="btn notification-card__btn btn--style_bg-yellow">
+        <span class="btn__text">Нет</span>
+      </button>
+      <button class="btn notification-card__btn btn--style_bg-pink">
+        <span class="btn__text">Да</span>
+      </button>
+    </div>
+  }
+</div>

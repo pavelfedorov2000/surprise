@@ -1,0 +1,23 @@
+<div style="display: none;" id="previous-gifts" class="popup popup--previous-gifts popup--width_xxl" role="dialog">
+    @@include('blocks/close-btn/close-btn.html', {
+        "data": {
+            "attr": "fancybox-close"
+        },
+        "class": "popup",
+        "ariaLabel": "Закрыть предыдущие подарки"
+    })
+    <div class="popup__body">
+        <div class="popup__top">
+            <div class="popup__title popup__title--l">
+                Предыдущие подарки
+            </div>
+        </div>
+        <div class="popup__items">
+            @@include('blocks/gift-item/gift-item.html')
+            @@include('blocks/gift-item/gift-item.html')
+        </div>
+        <button data-da=".popup--previous-gifts, 576, last" class="btn popup__btn btn--style_bg-pink popup__btn--center" type="button">
+            <span class="btn__text">Выбрать новый подарок</span>
+        </button>
+    </div>
+</div>

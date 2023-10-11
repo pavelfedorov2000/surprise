@@ -1,0 +1,20 @@
+.order-ready {
+  padding: var(--offset-xls);
+  max-width: 628px;
+  margin: 0 auto;
+  background-color: var(--white);
+  border-radius: var(--brs-card-xl);
+  box-shadow: var(--bsh);
+
+  &__form-title {
+    @extend %museo-700;
+    font-size: 24px;
+    text-align: center;
+    margin-top: var(--offset-l);
+    margin-bottom: var(--offset-xxs);
+  }
+  
+  &__form {
+    @include row-grid(15px);
+  }
+}

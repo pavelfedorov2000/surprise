@@ -1,0 +1,94 @@
+<div class="order-ready">
+  @@include('blocks/success-block/success-block.html', {
+    "title": "Заказ сформирован",
+    "text": true
+  })
+  <div class="order-ready__form-title">Сохраните повод</div>
+  <form action="#" class="order-ready__form">
+    <label class="form-item">
+      <span class="form-label">Имя</span>
+      <input class="input" placeholder="Placeholder">
+    </label>
+    <div class="form-item">
+      <span class="form-label">Кому</span>
+      <div class="select select--style_border">
+        <div class="select__title">
+          <span>Placeholder</span>
+          <svg class="icon select__arrow"
+               aria-hidden="true"
+               viewBox="0 0 24 24"
+               fill="none"
+               xmlns="http://www.w3.org/2000/svg">
+            <path fill-rule="evenodd" clip-rule="evenodd"
+              d="M17.2929 8.29289C17.6834 7.90237 18.3166 7.90237 18.7071 8.29289C19.0976 8.68342 19.0976 9.31658 18.7071 9.70711L17.2929 8.29289ZM12 15L12.7071 15.7071L12 16.4142L11.2929 15.7071L12 15ZM5.29289 9.70711C4.90237 9.31658 4.90237 8.68342 5.29289 8.29289C5.68342 7.90237 6.31658 7.90237 6.70711 8.29289L5.29289 9.70711ZM18.7071 9.70711L12.7071 15.7071L11.2929 14.2929L17.2929 8.29289L18.7071 9.70711ZM11.2929 15.7071L5.29289 9.70711L6.70711 8.29289L12.7071 14.2929L11.2929 15.7071Z" />
+          </svg>
+        </div>
+        <div class="select__content">
+          <input id="whomn0" class="select__input" type="radio" name="whom" checked />
+          <label for="whomn0" tabindex="0" class="select__label" data-value="Ему">Ему</label>
+          <input id="whomn1" class="select__input" type="radio" name="whom" />
+          <label for="whomn1" tabindex="0" class="select__label" data-value="Ей">Ей</label>
+        </div>
+      </div>
+    </div>
+    <div class="form-item">
+      <span class="form-label">Выберите повод</span>
+      <div class="select select--style_border">
+        <div class="select__title">
+          <span>Placeholder</span>
+          <svg class="icon select__arrow"
+               aria-hidden="true"
+               viewBox="0 0 24 24"
+               fill="none"
+               xmlns="http://www.w3.org/2000/svg">
+            <path fill-rule="evenodd" clip-rule="evenodd"
+              d="M17.2929 8.29289C17.6834 7.90237 18.3166 7.90237 18.7071 8.29289C19.0976 8.68342 19.0976 9.31658 18.7071 9.70711L17.2929 8.29289ZM12 15L12.7071 15.7071L12 16.4142L11.2929 15.7071L12 15ZM5.29289 9.70711C4.90237 9.31658 4.90237 8.68342 5.29289 8.29289C5.68342 7.90237 6.31658 7.90237 6.70711 8.29289L5.29289 9.70711ZM18.7071 9.70711L12.7071 15.7071L11.2929 14.2929L17.2929 8.29289L18.7071 9.70711ZM11.2929 15.7071L5.29289 9.70711L6.70711 8.29289L12.7071 14.2929L11.2929 15.7071Z" />
+          </svg>
+        </div>
+        <div class="select__content">
+          <input id="occasion0" class="select__input" type="radio" name="occasion" checked />
+          <label for="occasion0" tabindex="0" class="select__label" data-value="День Рождения">День Рождения</label>
+          <input id="occasion1" class="select__input" type="radio" name="occasion" />
+          <label for="occasion1" tabindex="0" class="select__label" data-value="Свадьба">Свадьба</label>
+          <input id="occasion2" class="select__input" type="radio" name="occasion" />
+          <label for="occasion2" tabindex="0" class="select__label" data-value="Годовщина">Годовщина</label>
+          <input id="occasion3" class="select__input" type="radio" name="occasion" />
+          <label for="occasion3" tabindex="0" class="select__label" data-value="8 Марта">8 Марта</label>
+        </div>
+      </div>
+    </div>
+    <label class="form-item">
+      <span class="form-label">Дата</span>
+      <input class="input" placeholder="Placeholder">
+    </label>
+    <div class="form-item">
+      <span class="form-label">Откуда вы о нас узнали</span>
+      <div class="select select--style_border">
+        <div class="select__title">
+          <span>Placeholder</span>
+          <svg class="icon select__arrow"
+               aria-hidden="true"
+               viewBox="0 0 24 24"
+               fill="none"
+               xmlns="http://www.w3.org/2000/svg">
+            <path fill-rule="evenodd" clip-rule="evenodd"
+              d="M17.2929 8.29289C17.6834 7.90237 18.3166 7.90237 18.7071 8.29289C19.0976 8.68342 19.0976 9.31658 18.7071 9.70711L17.2929 8.29289ZM12 15L12.7071 15.7071L12 16.4142L11.2929 15.7071L12 15ZM5.29289 9.70711C4.90237 9.31658 4.90237 8.68342 5.29289 8.29289C5.68342 7.90237 6.31658 7.90237 6.70711 8.29289L5.29289 9.70711ZM18.7071 9.70711L12.7071 15.7071L11.2929 14.2929L17.2929 8.29289L18.7071 9.70711ZM11.2929 15.7071L5.29289 9.70711L6.70711 8.29289L12.7071 14.2929L11.2929 15.7071Z" />
+          </svg>
+        </div>
+        <div class="select__content">
+          <input id="occasion0" class="select__input" type="radio" name="occasion" checked />
+          <label for="occasion0" tabindex="0" class="select__label" data-value="День Рождения">День Рождения</label>
+          <input id="occasion1" class="select__input" type="radio" name="occasion" />
+          <label for="occasion1" tabindex="0" class="select__label" data-value="Свадьба">Свадьба</label>
+          <input id="occasion2" class="select__input" type="radio" name="occasion" />
+          <label for="occasion2" tabindex="0" class="select__label" data-value="Годовщина">Годовщина</label>
+          <input id="occasion3" class="select__input" type="radio" name="occasion" />
+          <label for="occasion3" tabindex="0" class="select__label" data-value="8 Марта">8 Марта</label>
+        </div>
+      </div>
+    </div>
+    <button class="btn btn--style_bg-yellow" type="submit">
+      <span class="btn__text">Добавить</span>
+    </button>
+  </form>
+</div>

@@ -1,0 +1,37 @@
+.event-card {
+  padding: var(--offset-m);
+  display: flex;
+  flex-direction: column;
+  background-color: var(--white);
+  border-radius: var(--brs-xs);
+  box-shadow: 0 2.39535px 17.96512px 0 rgba(170, 154, 154, 0.25);
+
+  &__top {
+    margin-bottom: var(--offset-m);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  &__btns {
+    margin-right: calc(var(--offset-xxs) * (-1));
+  }
+
+  &__middle {
+    margin-bottom: var(--offset-sm);
+    display: flex;
+    align-items: flex-end;
+    justify-content: space-between;
+  }
+
+  &__line {
+    margin-bottom: var(--offset-m);
+    display: flex;
+    justify-content: space-between;
+  }
+
+  &__name {
+    @extend %museo-700;
+    font-size: 24px;
+  }
+}

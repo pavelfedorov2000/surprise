@@ -1,0 +1,46 @@
+@@include("blocks/head/head.html", {
+    "title": "Календарь подарков",
+    "sticky": true
+    })
+    <div class="wrapper">
+        @@include("blocks/layout/layout.html")
+        <main class="page profile-page page--padding page--padding-top_ls">
+            <div class="container">
+                @@include('blocks/breadcrumbs/breadcrumbs.html', {
+                "current": "Личный кабинет"
+                })
+                <div class="page__top page__top--margin-bottom_ls">
+                    <h1 class="page-title">Личный кабинет</h1>
+                </div>
+                <div class="page__top page__top--margin-bottom_m page__top--mobile">
+                    <svg class="icon">
+                        <use xlink:href="assets/images/sprite.svg#back"></use>
+                    </svg>
+                    <h1 class="title-24">
+                        <a href="#" class="full-link">Неоплаченные заказы</a>
+                    </h1>
+                </div>
+                <div class="profile-block">
+                    @@include('blocks/profile-sidebar/profile-sidebar.html')
+                    <div class="profile-block__content">
+                        @@include('blocks/profile-tabs/profile-tabs.html', {
+                            "secondActive": true
+                        })
+                        <div class="profile-block__content">
+                            <ul class="profile-block__list">
+                                <li>
+                                    @@include('blocks/order-card/order-card.html')
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </main>
+        @@include("blocks/footer/footer.html")
+    </div>
+    @@include("blocks/link/link.html")
+    </body>
+    
+    </html>
+    

@@ -1,0 +1,25 @@
+<div style="display: none;" id="notifications-modal" class="popup" role="dialog">
+    @@include('blocks/close-btn/close-btn.html', {
+        "data": {
+            "attr": "fancybox-close"
+        },
+        "class": "popup",
+        "ariaLabel": "Закрыть уведомления"
+    })
+    <div class="popup__body">
+        <div class="popup__top">
+            <div class="popup__title popup__title--l">
+                Уведомления
+            </div>
+        </div>
+        <div class="popup__items">
+            @@include('blocks/notification-card/notification-card.html', {
+                "new": true,
+                "title": "Добавь событие"
+            })
+            @@include('blocks/notification-card/notification-card.html', {
+                "title": "Ваш подарок ожидает на точке самовывоза"
+            })
+        </div>
+    </div>
+</div>

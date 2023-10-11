@@ -1,0 +1,20 @@
+<div class="add-event-box@@if(context.class){ @@class}@@if(context.modifier){ add-event-box--@@modifier}">
+  <div class="add-event-box__title">
+    Здесь можно добавить<br> важную дату
+  </div>
+  <div class="important-date">
+    <div class="important-date__name">Имя</div>
+    <div class="important-date__occasion">Повод</div>
+    <div class="important-date__gift">
+      <svg class="icon">
+       <use xlink:href="assets/images/sprite.svg#gift"></use>
+      </svg>
+    </div>
+  </div>
+  <button class="btn add-event-box__btn btn--style_bg-green-light" data-fancybox data-src="#add-event">
+    <svg class="icon btn__icon">
+     <use xlink:href="assets/images/sprite.svg#plus-green"></use>
+    </svg>
+    <span class="btn__text">Добавить событие</span>
+  </button>
+</div>

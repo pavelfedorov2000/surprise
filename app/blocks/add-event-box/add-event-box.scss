@@ -1,0 +1,84 @@
+.add-event-box {
+  position: relative;
+  padding: var(--offset-m);
+  border: 1px dashed var(--line-color);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 21px;
+
+  @media (max-width: $sm) {
+    &::after {
+      content: '';
+      position: absolute;
+      bottom: -38px;
+      left: 90px;
+      width: 38px;
+      height: 43px;
+      background-image: url(../images/icons/calendar-arrow.svg);
+    }
+  }
+  
+  &__title {
+    text-align: center;
+  }
+
+  &__btn {
+    @media (max-width: $sm) {
+      display: none;
+    }
+  }
+
+  &--card {
+    padding: var(--offset-xxs);
+    border: none;
+    gap: var(--offset-l);
+  }
+}
+
+.important-date {
+  padding-left: var(--offset-s);
+  border-left: 4px solid var(--blue);
+  display: grid;
+  grid-template-columns: 1fr auto;
+  grid-template-rows: min-content min-content;
+  gap: var(--offset-xxxs) var(--offset-xl);
+  align-items: center;
+
+  &__occasion {
+    @extend %museo-300;
+    font-size: 12px;
+  }
+
+  &__gift,
+  &__btn {
+    grid-column: -2 / -1;
+    grid-row: 1 / -1;
+  }
+
+  &__gift {
+    width: 48px;
+    height: 48px;
+    border-radius: var(--brs-xs);
+    background-color: var(--green-light);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  &__btn {
+    padding: var(--offset-x) var(--offset-xs);
+  }
+
+  &--pink {
+    border-left-color: var(--pink);
+  }
+
+  &--green {
+    border-left-color: var(--green);
+  }
+
+  &--yellow {
+    border-left-color: var(--yellow);
+  }
+}

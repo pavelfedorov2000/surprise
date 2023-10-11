@@ -1,0 +1,56 @@
+.gift-item {
+  display: flex;
+  gap: var(--offset-s) var(--offset-xl);
+
+  @media(max-width: $sm) {
+    gap: var(--offset-s);
+  }
+
+  &__img {
+    flex-shrink: 0;
+    width: 212px;
+
+    @media(max-width: $sm) {
+      width: calc(90 / 343 * 100%);
+    }
+    
+    picture {
+      display: block;
+      aspect-ratio: 106 / 66;
+
+      @media(max-width: $sm) {
+        aspect-ratio: 45 / 55;
+      }
+
+      img {
+        border-radius: var(--brs);
+      }
+    }
+  }
+
+  &__content {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: var(--offset-s);
+
+    @media(max-width: $sm) {
+      gap: var(--offset-xxs);
+    }
+  }
+
+  &__title {
+    @extend %museo-700;
+    font-size: 20px;
+
+    @media(max-width: $sm) {
+      font-size: 16px;
+    }
+  }
+
+  &__link {
+    @media (min-width: 768px) {
+      display: none;
+    }
+  }
+}

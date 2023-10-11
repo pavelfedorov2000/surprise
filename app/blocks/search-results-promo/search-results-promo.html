@@ -1,0 +1,56 @@
+<div class="search-results-promo">
+    <div class="container">
+        @@include('blocks/breadcrumbs/breadcrumbs.html', {
+        "current": "Каталог"
+        })
+        <h1 class="page-title search-results-promo__title">Наши рекомендации</h1>
+        <div class="search-results-promo__row">
+            <div class="search-results-promo__box">
+                <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.</p>
+            </div>
+            <div class="search-results-promo__admin">
+                <picture class="search-results-promo__admin-decor">
+                    <source type="image/webp"
+                            srcset="assets/images/content/girl-2.webp">
+                    <img
+                         src="assets/images/content/girl-2.png"
+                         alt="фото"
+                         width="263"
+                         height="599"
+                         loading="lazy">
+                </picture>
+                <div class="admin admin--col">
+                    <div class="admin__img admin__img--small">
+                        <picture>
+                            <source type="image/webp"
+                                    srcset="assets/images/content/admin.webp">
+                            <img class="img-cover"
+                                 src="assets/images/content/admin.png"
+                                 alt="фото"
+                                 width="85"
+                                 height="85"
+                                 loading="lazy">
+                        </picture>
+                    </div>
+                    <div class="admin__name">Анастасия Бакшевич</div>
+                    <p class="admin__descr">
+                        <span>Специалист по работе 
+                        с ключевыми клиентами</span>
+                        <span class="mob-visible">Ваш менеджер</span>
+                    </p>
+                    <a class="contact admin__contact"
+                       href="tel:+375296670062">
+                        <svg class="icon contact__icon"
+                             aria-hidden="true">
+                            <use xlink:href="assets/images/sprite.svg#phone"></use>
+                        </svg>
+                        <span>+375 29 667 00 62</span>
+                    </a>
+                    <button class="btn admin__btn btn--style_bg-pink">
+                        <span class="btn__text">Написать в онлайн чат</span>
+                    </button>
+                </div>						
+            </div>
+        </div>
+    </div>
+</div>

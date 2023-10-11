@@ -1,0 +1,101 @@
+@@include("blocks/head/head.html", {
+"title": "Календарь подарков",
+"sticky": true
+})
+<div class="wrapper">
+	@@include("blocks/layout/layout.html")
+	<main class="page profile-page page--padding page--padding-top_ls">
+		<div class="container">
+			@@include('blocks/breadcrumbs/breadcrumbs.html', {
+			"current": "Личный кабинет"
+			})
+			<div class="page__top page__top--margin-bottom_m">
+				<h1 class="page-title">Личный кабинет</h1>
+			</div>
+			<div class="page__top page__top--margin-bottom_m page__top--mobile">
+				<svg class="icon">
+					<use xlink:href="assets/images/sprite.svg#back"></use>
+				</svg>
+				<h1 class="title-24">
+					<a href="#" class="full-link">Календарь подарков</a>
+				</h1>
+			</div>
+			<div class="profile-block">
+				@@include('blocks/profile-sidebar/profile-sidebar.html')
+				<div class="profile-block__content">
+					@@include('blocks/profile-tabs/profile-tabs.html', {
+						"firstActive": true
+					})
+					<div class="profile-block__filters">
+						<div class="select profile-block__filter-select select--type_sort">
+							<div class="select__title">
+								<span>По алфавиту</span>
+								<svg class="icon select__arrow"
+									 aria-hidden="true"
+									 viewBox="0 0 24 24"
+									 fill="none"
+									 xmlns="http://www.w3.org/2000/svg">
+									<path fill-rule="evenodd" clip-rule="evenodd"
+										d="M17.2929 8.29289C17.6834 7.90237 18.3166 7.90237 18.7071 8.29289C19.0976 8.68342 19.0976 9.31658 18.7071 9.70711L17.2929 8.29289ZM12 15L12.7071 15.7071L12 16.4142L11.2929 15.7071L12 15ZM5.29289 9.70711C4.90237 9.31658 4.90237 8.68342 5.29289 8.29289C5.68342 7.90237 6.31658 7.90237 6.70711 8.29289L5.29289 9.70711ZM18.7071 9.70711L12.7071 15.7071L11.2929 14.2929L17.2929 8.29289L18.7071 9.70711ZM11.2929 15.7071L5.29289 9.70711L6.70711 8.29289L12.7071 14.2929L11.2929 15.7071Z" />
+								</svg>
+							</div>
+							<div class="select__content">
+								<input id="sortFilter0" class="select__input" type="radio" name="sort" checked />
+								<label for="sortFilter0" tabindex="0" class="select__label" data-value="По алфавиту">По алфавиту</label>
+								<input id="sortFilter1" class="select__input" type="radio" name="catalogSort" />
+								<label for="sortFilter1" tabindex="0" class="select__label" data-value="По дате добавления">По дате
+									добавления</label>
+							</div>
+						</div>
+						<input class="date-input profile-block__date">
+						@@include('blocks/search-form/search-form.html', {
+							"id": "gifts-calendar-search",
+							"class": "profile-block__search",
+							"placeholder": "Поиск по имени..."
+						})
+						<div class="tabs profile-block__filter-tabs">
+							<ul class="tabs__list">
+								<li>
+									<a href="#" class="tab active">Маме</a>
+								</li>
+								<li>
+									<a href="#" class="tab">Папе</a>
+								</li>
+								<li>
+									<a href="#" class="tab">Второй половинке</a>
+								</li>
+								<li>
+									<a href="#" class="tab">Подруге</a>
+								</li>
+								<li>
+									<a href="#" class="tab">Другу</a>
+								</li>
+								<li>
+									<a href="#" class="tab">Коллеге</a>
+								</li>
+							</ul>
+						</div>
+					</div>
+					<div class="profile-block__items">
+						<div class="event-card">
+							@@include('blocks/add-event-box/add-event-box.html', {
+								"modifier": "card"
+							})
+						</div>
+						@@include('blocks/event-card/event-card.html')
+						@@include('blocks/event-card/event-card.html')
+						@@include('blocks/event-card/event-card.html', {
+							"historyBtn": true
+						})
+					</div>
+					@@include("blocks/load-more/load-more.html")
+				</div>
+			</div>
+		</div>
+	</main>
+	@@include("blocks/footer/footer.html")
+</div>
+@@include("blocks/link/link.html")
+</body>
+
+</html>
