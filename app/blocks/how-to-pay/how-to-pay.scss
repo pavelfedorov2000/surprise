@@ -17,7 +17,7 @@
         grid-template-columns: repeat(auto-fit, minmax(245px, 1fr));
         gap: 52px;
 
-        @media(max-width: $md) {
+        @media(max-width: $ms) {
             gap: var(--offset-l);
         }
     }

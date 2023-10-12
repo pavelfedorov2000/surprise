@@ -20,11 +20,11 @@
             overflow-x: auto;
         }
 
-        @media(min-width: 1201px) {
+        @media(min-width: $xxxl) {
             max-width: 877px;
         }
 
-        @media(max-width: $md) {
+        @media(max-width: $ms) {
             grid-template-columns: 1fr var(--icon-size) 1fr;
             grid-template-rows: auto var(--icon-size) auto var(--icon-size) auto;
             grid-template-areas:

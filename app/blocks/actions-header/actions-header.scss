@@ -9,7 +9,7 @@
         > * {
             margin-left: var(--offset-m);
 
-            @media(max-width: $md) {
+            @media(max-width: $ms) {
                 margin-left: var(--offset-xxs);
             }
         }
@@ -30,15 +30,69 @@
             font-size: 11px;
             line-height: 13px;
         }
-    }
 
-    &__search {
-        margin-right: calc(var(--offset-sm) * (-1));
-
-        @media(max-width: $md) {
-            margin-right: calc(var(--offset-s) * (-1));
+        &.mob-hidden {
+            @media (max-width: $lg) {
+                display: none;
+            }
         }
     }
+
+    /* &__search {
+        @media(max-width: $ms) {
+            margin-right: calc(var(--offset-sm) * (-1));
+        }
+    } */
+
+    /* &__search {
+        width: 296px;
+
+        @media (min-width: 1025px) {
+            margin-right: calc(var(--offset-m) * (-1));
+        }
+
+        @media(max-width: $ms) {
+            margin-right: calc(var(--offset-sm) * (-1));
+            width: auto;
+        }
+
+        .search-form {
+            &__input {
+                padding: 0;
+                opacity: 0;
+                visibility: hidden;
+                pointer-events: none;
+
+                @media(max-width: $ms) {
+                    height: 100%;
+                    border: none;
+                }
+    
+                &.active {
+                    padding: 15.5px calc(var(--offset-m) * 3) 17.5px var(--offset-m);
+                    opacity: 1;
+                    visibility: visible;
+                    pointer-events: auto;
+                }
+            }
+
+            &__btn {
+                @media (min-width: 1025px) {
+                    left: 0;
+                    right: auto;
+                }
+            }
+        }
+
+        &.active {
+            .search-form__btn {
+                @media (min-width: 1025px) {
+                    left: auto;
+                    right: calc(var(--offset-m) - var(--offset-xxxs));
+                }
+            }
+        }
+    } */
 
     &__btn {
         margin-left: calc(var(--offset-xxxl) - var(--offset-xxs));

@@ -9,13 +9,13 @@
 
 .compare-section {
     .container {
-        @media(max-width: $md) {
+        @media(max-width: $ms) {
             @include padding-x(0);
         }
     }
 
     .section__top {
-        @media(max-width: $md) {
+        @media(max-width: $ms) {
             @include padding-x(var(--container-padding));
         }
     }

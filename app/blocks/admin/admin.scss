@@ -1,8 +1,10 @@
 .admin {
+    $this: &;
+
     display: flex;
     align-items: center;
 
-    @media(max-width: $md) {
+    @media(max-width: $ms) {
         @include padding-y(var(--offset-sm));
     }
 
@@ -26,17 +28,29 @@
             background-size: contain;
             background-repeat: no-repeat;
 
-            @media(max-width: $md) {
+            @media(max-width: $ms) {
                 bottom: 5px;
                 width: 30px;
                 height: 21px;
             }
         }
 
-        @media(max-width: $md) {
+        @media(max-width: $ms) {
             width: 105px;
             height: 105px;
             margin-right: var(--offset-m);
+        }
+
+        &--small {
+            width: 85px;
+            height: 85px;
+
+            &::before {
+                right: 2px;
+                bottom: 3px;
+                width: 24px;
+                height: 19px;
+            }
         }
 
         img {
@@ -60,6 +74,102 @@
 
         .contact {
             color: var(--text-color);
+        }
+    }
+
+    &__descr {
+        span {
+            @media (max-width: $sm) {
+                display: none;
+            }
+
+            &.mob-visible {
+                display: none;
+
+                @media (max-width: $sm) {
+                    display: inline-block;
+                }
+            }
+        }
+    }
+
+    &--col {
+        max-width: 237px;
+        flex-direction: column;
+        text-align: center;
+
+        @media (max-width: $sm) {
+            max-width: 197px;
+            display: grid;
+            grid-template-columns: auto 1fr;
+            grid-template-areas:
+            'img name'
+            'img descr'
+            'contact contact'
+            'btn btn'
+            ;
+            gap: 2px var(--offset-s);
+            text-align: left;
+        }
+
+        #{$this} {
+            &__img {
+                grid-area: img;
+                margin-right: 0;
+                margin-bottom: 13px;
+
+                @media (max-width: $sm) {
+                    margin-bottom: 0;
+                    width: 65px;
+                    height: 65px;
+                }
+            }
+
+            &__name {
+                grid-area: name;
+                margin-bottom: var(--offset-xxxs);
+                @extend %museo-500;
+                font-size: 20px;
+
+                @media (max-width: $sm) {
+                    margin-bottom: 0;
+                    font-size: 16px;
+                }
+            }
+
+            &__descr {
+                grid-area: descr;
+
+                &:not(:last-child) {
+                    margin-bottom: 26px;
+
+                    @media (max-width: $sm) {
+                        margin-bottom: 0;
+                        font-size: 12px;
+                    }
+                }
+            }
+
+            &__contact {
+                grid-area: contact;
+
+                &:not(:last-child) {
+                    margin-bottom: 42px;
+
+                    @media (max-width: $sm) {
+                        margin-top: 14px;
+                        margin-bottom: 18px;
+                    }
+                }
+            }
+
+            &__btn {
+                grid-area: btn;
+
+                @media (max-width: $sm) {
+                    @include padding-y(var(--offset-s));
+                }
+            }
         }
     }
 }

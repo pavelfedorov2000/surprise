@@ -3,7 +3,7 @@
     grid-template-columns: repeat(3, var(--offset-xxl));
     grid-template-rows: var(--offset-xxl);
 
-    @media(max-width: $md) {
+    @media(max-width: $ms) {
         grid-template-rows: var(--offset-xls);
     }
 

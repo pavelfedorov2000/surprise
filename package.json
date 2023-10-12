@@ -101,6 +101,8 @@
     "stylelint-scss": "^3.19.0"
   },
   "dependencies": {
+    "@fancyapps/ui": "^5.0.22",
+    "air-datepicker": "^3.4.0",
     "gulp-sass": "^5.0.0",
     "gulp-webp": "^4.0.1",
     "jquery": "^3.6.0",

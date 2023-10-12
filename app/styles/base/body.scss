@@ -11,18 +11,18 @@ body {
 	&.sticky {
 		overflow-x: visible;
 
-		@media(max-width: $lg) {
-			overflow-x: hidden;
-		}
+        @media(max-width: $xxl) {
+            overflow-x: hidden;
+        }
 
 		.wrapper {
 			overflow-x: visible;
 
-			@media(max-width: $lg) {
-				overflow-x: hidden;
-			}
-		}
-	}
+            @media(max-width: $xxl) {
+                overflow-x: hidden;
+            }
+        }
+    }
 
 	&._lock {
 		overflow-y: hidden;

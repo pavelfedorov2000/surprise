@@ -4,7 +4,7 @@
     padding: var(--offset-l) var(--offset-l) var(--offset-l) 0;
     border-radius: var(--brs-card-xl);
 
-    @media(max-width: $md) {
+    @media(max-width: $ms) {
         padding: var(--offset-m) var(--offset-m) var(--offset-m) 0;
     }
 
@@ -16,7 +16,7 @@
         width: 122px;
         height: 125px;
 
-        @media(max-width: $md) {
+        @media(max-width: $ms) {
             margin-right: var(--offset-m);
             width: 75px;
             height: 102px;
@@ -39,7 +39,7 @@
         @extend %museo-700;
         font-size: 24px;
 
-        @media(max-width: $md) {
+        @media(max-width: $ms) {
             font-size: 18px;
         }
     }

@@ -1,0 +1,40 @@
+<div class="add-bouquet cart__section cart__section--span-2">
+  <div class="add-bouquet__inner">
+    <div class="add-bouquet__btns">
+      @@include("blocks/button/button.html", {
+        "transparent": true,
+        "class": "add-bouquet__btn active",
+        "text": "Цветы",
+      })
+      @@include("blocks/button/button.html", {
+        "transparent": true,
+        "fancybox": true,
+        "class": "add-bouquet__btn",
+        "text": "Адвент-календарь",
+        "data": {
+          "attr": "src",
+          "value": "#advent-calendar"
+        }
+      })
+      @@include("blocks/button/button.html", {
+        "transparent": true,
+        "class": "add-bouquet__btn",
+        "text": "Игра",
+      })
+    </div>
+    <div class="add-bouquet__items">
+      @@include('blocks/bouquet-item/bouquet-item.html', {
+        "src": "assets/images/content/flowers/01",
+        "title": "Цветочный комплемент"
+      })
+      @@include('blocks/bouquet-item/bouquet-item.html', {
+        "src": "assets/images/content/flowers/02",
+        "title": "Нежное послание"
+      })
+      @@include('blocks/bouquet-item/bouquet-item.html', {
+        "src": "assets/images/content/flowers/01",
+        "title": "Нежное послание"
+      })
+    </div>
+  </div>
+</div>

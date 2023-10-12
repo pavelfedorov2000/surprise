@@ -29,6 +29,31 @@
 					<img class="logo__img" src="assets/images/logo/logo.svg" alt="Логотип Surprise">
 				</picture>
 			</a>
+			<div class="header__actions actions-header">
+				@@include('blocks/calendar-dropdown/calendar-dropdown.html')
+				<div class="actions-header__items">
+					@@include('blocks/action-btn/action-btn.html', {
+						"button": true,
+						"class": "actions-header__item js-calendar mob-hidden",
+						"ariaLabel": "Открыть календарь",
+						"icon": "calendar",
+						"popup": "calendar-dropdown",
+						"dropdown": true,
+					})
+					@@include('blocks/search-form/search-form.html', {
+						"id": "search-form",
+						"class": "actions-header__search",
+						"form": true,
+						"ariaLabel": "Открыть поиск по сайту",
+						"placeholder": "Поиск..."
+					})
+					<!-- @@include('blocks/action-btn/action-btn.html', {
+						"class": "actions-header__item mob-hidden",
+						"ariaLabel": "Открыть поиск по сайту",
+						"icon": "search"
+					}) -->
+				</div>
+			</div>
 			@@include('blocks/actions-header/actions-header.html')
 		</div>
 	</div>

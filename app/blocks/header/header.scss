@@ -1,13 +1,18 @@
 .header {
     $this: &;
 
+    @media (max-width: $lg) {
+        position: relative;
+        z-index: 100;
+    }
+
     // .header__top
 
     &__top {
         display: none;
 
 
-        @media(min-width: 1201px) {
+        @media(min-width: $xxxl) {
             @include padding-y(var(--offset-xxs));
             display: block;
             background-color: var(--gray);
@@ -29,7 +34,7 @@
         background-color: var(--white);
         box-shadow: var(--bsh);
 
-        @media(max-width: $md) {
+        @media(max-width: $ms) {
             display: flex;
             align-items: center;
             height: var(--header-height-mob);
@@ -43,20 +48,46 @@
         width: 162px;
         height: 22px;
         margin-left: var(--offset-xxl);
-        margin-right: auto;
+        margin-right: var(--offset-m);
 
         @media(max-width: $lg) {
             width: 32px;
             height: 27px;
-            margin-left: var(--offset-m);
+            margin-left: var(--offset-l);
+            margin-right: auto;
         }
     }
 
     // .header__actions
 
     &__actions {
-        margin-right: calc(var(--offset-xxs) * (-1));
+        position: relative;
         display: flex;
         align-items: center;
+
+        @media (max-width: $lg) {
+            position: static;
+        }
     }
+
+    &__actions + &__actions {
+        margin-left: auto;
+
+        @media (max-width: $lg) {
+            margin-left: calc(var(--offset-s) * (-1));
+        }
+
+        /* @media (max-width: $md) {
+            margin-left: 0;
+        } */
+    }
+}
+
+.count {
+    position: absolute;
+    border-radius: 50%;
+    padding: 2.05px 5.5px;
+    background-color: var(--yellow);
+    font-size: 11px;
+    line-height: 13px;
 }

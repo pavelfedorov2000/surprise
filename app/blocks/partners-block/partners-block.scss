@@ -1,7 +1,7 @@
 .partners-block {
     --logo-size: 150px;
 
-    @media(max-width: $md) {
+    @media(max-width: $ms) {
         --logo-size: 100px
     }
 
@@ -13,7 +13,7 @@
         grid-auto-rows: minmax(var(--logo-size), auto);
         gap: var(--offset-l) 108px;
 
-        @media(max-width: $md) {
+        @media(max-width: $ms) {
             gap: var(--offset-sm) 21.5px;
         }
     }

@@ -2,9 +2,13 @@
 	--cart-aside: 448;
 
 	display: grid;
-	gap: calc(115 / $container * 100%);
+	gap: 115px;
 
-	@media(min-width: 1201px) {
+	/* @media(max-width: 1399px) {
+		gap: var(--offset-xxxl);
+	} */
+
+	@media(min-width: $xxxl) {
 		grid-template-columns: 1fr calc(var(--cart-aside) / $container * 100%);
 	}
 
@@ -19,7 +23,7 @@
 	&__body-inner {
 		@include row-grid(var(--offset-xxl));
 
-		@media(max-width: $md) {
+		@media(max-width: $ms) {
 			row-gap: calc(var(--offset-xl) + var(--offset-xxxs));
 		}
 	}

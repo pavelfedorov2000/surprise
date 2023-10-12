@@ -30,7 +30,7 @@
 		gap: var(--offset-l);
 	}
 
-	@media(max-width: $md) {
+	@media(max-width: $ms) {
 		grid-template-columns: repeat(auto-fit, minmax(calc(320px - var(--container-padding) * 2)), 1fr);
 	}
 
@@ -60,7 +60,7 @@
 		&_xl {
 			gap: var(--offset-xl);
 
-			@media(max-width: $md) {
+			@media(max-width: $ms) {
 				gap: var(--offset-m);
 			}
 		}
@@ -70,7 +70,7 @@
 		&_xl {
 			row-gap: var(--offset-xl);
 
-			@media(max-width: $md) {
+			@media(max-width: $ms) {
 				row-gap: var(--offset-m);
 			}
 		}
@@ -78,7 +78,7 @@
 		&_xls {
 			row-gap: var(--offset-xls);
 
-			@media(max-width: $md) {
+			@media(max-width: $ms) {
 				row-gap: var(--offset-l);
 			}
 		}
@@ -86,7 +86,7 @@
 }
 
 .grid-row {
-	@media(min-width: 1201px) {
+	@media(min-width: $xxxl) {
 		display: grid;
 		grid-template-columns: repeat(12, 1fr);
 		gap: var(--offset-xxxl);
@@ -94,7 +94,7 @@
 
 	&--cols {
 		&_2 {
-			@media(min-width: 1201px) {
+			@media(min-width: $xxxl) {
 				grid-template-columns: repeat(2, 1fr);
 			}
 		}
@@ -113,25 +113,25 @@
 
 .grid-col {
 	&-4 {
-		@media(min-width: 1201px) {
+		@media(min-width: $xxxl) {
 			grid-column: span 4;
 		}
 	}
 
 	&-5 {
-		@media(min-width: 1201px) {
+		@media(min-width: $xxxl) {
 			grid-column: span 5;
 		}
 	}
 
 	&-6 {
-		@media(min-width: 1201px) {
+		@media(min-width: $xxxl) {
 			grid-column: span 6;
 		}
 	}
 
 	&-7 {
-		@media(min-width: 1201px) {
+		@media(min-width: $xxxl) {
 			grid-column: span 7;
 		}
 
@@ -141,7 +141,7 @@
 	}
 
 	&-8 {
-		@media(min-width: 1201px) {
+		@media(min-width: $xxxl) {
 			grid-column: span 8;
 		}
 	}

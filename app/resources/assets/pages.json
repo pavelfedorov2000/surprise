@@ -21,10 +21,19 @@
     "title": "Корзина"
 }, {
     "href": "profile.html",
+    "title": "Личный кабинет - Разводящая (только для мобилы)"
+}, {
+    "href": "unpaid-orders.html",
     "title": "Личный кабинет - Неоплаченные заказы"
 }, {
     "href": "profile-empty.html",
     "title": "Личный кабинет - Неоплаченные заказы (пустая)"
+}, {
+    "href": "orders-history.html",
+    "title": "Личный кабинет - История заказов"
+}, {
+    "href": "electronic0certificates.html",
+    "title": "Личный кабинет - Электронные сертификаты"
 }, {
     "href": "about.html",
     "title": "О нас"

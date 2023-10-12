@@ -4,7 +4,7 @@
     flex-direction: column;
     align-items: flex-start;
 
-    @media(max-width: $md) {
+    @media(max-width: $ms) {
         padding: var(--offset-l) var(--offset-m);
     }
 
@@ -28,8 +28,8 @@
         &_xl {
             padding: var(--offset-xl) var(--section-padding-xs);
 
-            @media(max-width: $md) {
-                @media(max-width: $md) {
+            @media(max-width: $ms) {
+                @media(max-width: $ms) {
                     padding: var(--offset-l) var(--offset-s);
                 }
             }

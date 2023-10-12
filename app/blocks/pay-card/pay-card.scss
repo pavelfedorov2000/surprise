@@ -7,7 +7,7 @@
     box-shadow: var(--bsh);
     text-align: center;
 
-    @media(max-width: $md) {
+    @media(max-width: $ms) {
         padding: var(--offset-m);
     }
 

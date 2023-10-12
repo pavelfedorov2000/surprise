@@ -1,10 +1,10 @@
 .generate-partners {
-    @media(min-width: 1201px) {
+    @media(min-width: $xxxl) {
         padding-top: var(--offset-s);
     }
 
     &__inner {
-        @media(min-width: 1201px) {
+        @media(min-width: $xxxl) {
             display: flex;
             align-items: center;
             justify-content: space-between;
@@ -17,14 +17,14 @@
     }
 
     &__content {
-        @media(min-width: 1201px) {
+        @media(min-width: $xxxl) {
             padding-left: var(--offset-xs);
             flex: 0 0 700px;
         }
     }
 
     &__title {
-        @media(max-width: $md) {
+        @media(max-width: $ms) {
             margin-bottom: var(--offset-s);
         }
     }

@@ -8,7 +8,7 @@
     &__inner {
         padding-bottom: var(--offset-xl);
 
-        @media(max-width: $md) {
+        @media(max-width: $ms) {
             padding-bottom: var(--offset-xls);
         }
 
@@ -59,7 +59,7 @@
     &__item {
         //align-items: flex-start;
 
-        @media(max-width: $md) {
+        @media(max-width: $ms) {
             flex-direction: column;
             align-items: center;
 
@@ -67,7 +67,7 @@
                 &__icon {
                     margin-bottom: var(--offset-m);
 
-                    @media(max-width: $md) {
+                    @media(max-width: $ms) {
                         margin-right: 0;
                     }
                 }

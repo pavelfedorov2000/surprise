@@ -1,15 +1,14 @@
-<form action="#"
-      id="search-form"
-      class="actions-header__search search-form">
-    <input class="search-form__input input"
-           placeholder="Поиск...">
+<@@if(context.form){form action="#"}@@if(!context.form){div}
+      id="@@id"
+      class="search-form@@if(context.class){ @@class}">
+    <input class="search-form__input input" placeholder="@@placeholder">
     <button class="search-form__btn"
             type="button"
-            aria-label="Открыть поиск по сайту"
+            aria-label="@@ariaLabel"
             aria-controls="search-form">
         @@include('blocks/icons/search.html', {
             "class": "search-form__btn-icon"
         })
     </button>
     @@include('blocks/drop-search/drop-search.html')
-</form>
+</@@if(context.form){form}@@if(!context.form){div}>

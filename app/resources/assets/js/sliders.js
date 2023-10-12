@@ -74,7 +74,7 @@ $(function () {
             photogallerySlider = new Swiper('.photogallery', {
                 loop: true,
                 slidesPerView: 1,
-                spaceBetween: 32,
+                //spaceBetween: 32,
                 speed: 1000,
                 pagination: {
                     type: 'fraction',
@@ -175,6 +175,20 @@ $(function () {
         },
         thumbs: {
             swiper: postGalleryThumbs,
+        },
+    });
+
+    new Swiper(".events-slider", {
+        loop: true,
+        slidesPerView: 1,
+        spaceBetween: 32,
+        navigation: {
+            nextEl: "#calendar-dropdown .slider-btn--next",
+            prevEl: "#calendar-dropdown .slider-btn--prev",
+        },
+        pagination: {
+            el: '#calendar-dropdown .swiper-pagination',
+            clickable: true,
         },
     });
 });

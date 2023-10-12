@@ -6,7 +6,7 @@
 	gap: var(--offset-l);
 	padding-bottom: var(--offset-ls);
 
-	@media(min-width: 1201px) {
+	@media(min-width: $xxxl) {
 		padding-top: 54px;
 	}
 

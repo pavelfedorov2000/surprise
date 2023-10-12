@@ -1,5 +1,5 @@
 .how-it-works {
-    @media(min-width: 1201px) {
+    @media(min-width: $xxxl) {
         &::before {
             top: auto;
             bottom: 150px;

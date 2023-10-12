@@ -13,7 +13,7 @@
         }
     }
 
-    @media(max-width: $md) {
+    @media(max-width: $ms) {
         padding-bottom: var(--offset-l);
     }
 }
@@ -66,6 +66,42 @@
                 width: 100%;
             }
         }
+
+        &_col {
+            @media (max-width: $md) {
+                @include row-grid(var(--offset-xs));
+                overflow-x: visible;
+
+                .tab {
+                    padding: 18px var(--offset-m);
+                    background-color: var(--white);
+                    border-radius: var(--brs);
+                    box-shadow: var(--bsh);
+                    border-bottom: none;
+                    justify-content: flex-start;
+                    font-family: 'Museo Sans Cyrl 500', sans-serif;
+	                font-weight: 500;
+
+                    &:first-child {
+                        position: relative;
+                        background-color: var(--pink);
+                        color: var(--white);
+
+                        &::after {
+                           content: '';
+                           position: absolute;
+                           top: -25px;
+                           right: 17px;
+                           width: 86px;
+                           height: 86px;
+                           background-image: url(../images/icons/calendar.png);
+                           background-size: contain;
+                           background-repeat: no-repeat;
+                        }
+                    }
+                }
+            }
+        }
     }
 
     &--items {
@@ -111,6 +147,19 @@
     white-space: nowrap;
     margin-right: var(--offset-s);
     transition: var(--transition) all;
+
+    &--style {
+        &_bg-green {
+            background-color: var(--green);
+            color: var(--white);
+        }
+    }
+
+    &--size {
+        &_xs {
+            padding: var(--offset-xxxs) var(--offset-xs);
+        }
+    }
 
     &__circle {
         position: relative;

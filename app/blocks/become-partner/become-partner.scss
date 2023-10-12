@@ -33,7 +33,7 @@
 			grid-column: 2 / 3;
 		}
 
-		@media(max-width: $md) {
+		@media(max-width: $ms) {
 			row-gap: var(--offset-l);
 		}
 	}

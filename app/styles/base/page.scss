@@ -3,6 +3,7 @@
 	flex: 1 0 auto; // Footer at bottom
 
 	&__top {
+		position: relative;
 		margin-bottom: var(--section-padding);
 		display: flex;
 		flex-direction: column;
@@ -36,6 +37,12 @@
 					justify-content: flex-start;
 				}
 			}
+		}
+
+		&--mobile {
+			flex-direction: row;
+			align-items: center;
+			gap: var(--offset-s);
 		}
 
 		&--margin-bottom {

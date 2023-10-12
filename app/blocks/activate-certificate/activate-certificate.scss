@@ -6,7 +6,7 @@
     &__row {
         display: flex;
 
-        @media(min-width: 1201px) {
+        @media(min-width: $xxxl) {
             align-items: center;
             justify-content: flex-end;
         }
@@ -19,7 +19,7 @@
     // .activate-certificate__img
 
     &__img {
-        @media(min-width: 1201px) {
+        @media(min-width: $xxxl) {
             margin-left: var(--offset-xls);
         }
 
@@ -29,7 +29,7 @@
     }
 
     &__content {
-        @media(min-width: 1201px) {
+        @media(min-width: $xxxl) {
             flex: 0 0 556px;
             margin-left: 125px;
         }

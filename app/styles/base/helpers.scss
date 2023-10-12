@@ -19,33 +19,3 @@
 		left: 0;
 	}
 }
-
-// text border
-/* .border-text {
-	color: black;
-	-webkit-text-fill-color: white;
-	-webkit-text-stroke-width: 1px;
-	-webkit-text-stroke-color: black;
-}
-
-// gradient-text
-.gradient-text {
-	background: -webkit-linear-gradient(#eee, #333);
-	-webkit-background-clip: text;
-	-webkit-text-fill-color: transparent;
-} */
-
-// COUNTER LIST
-/* ol.counter {
-	counter-reset: num;
-
-	li {
-		position: relative;
-
-		&::before {
-			content: counter(num);
-			counter-increment: num;
-			position: absolute;
-		}
-	}
-} */

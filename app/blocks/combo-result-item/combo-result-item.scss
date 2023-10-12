@@ -4,7 +4,7 @@
     grid-area: combo;
     align-self: stretch;
 
-    @media(max-width: $md) {
+    @media(max-width: $ms) {
         width: 100%;
     }
 
@@ -20,7 +20,7 @@
             max-height: 174px;
         }
 
-        @media(max-width: $md) {
+        @media(max-width: $ms) {
             flex-shrink: 0;
             margin-right: 6px;
             width: 90px;
@@ -37,7 +37,7 @@
             text-align: center;
         }
 
-        @media(max-width: $md) {
+        @media(max-width: $ms) {
             align-items: stretch;
         }
     }
@@ -48,7 +48,7 @@
         font-size: 24px;
         text-transform: uppercase;
 
-        @media(max-width: $md) {
+        @media(max-width: $ms) {
             font-size: 20px;
             text-transform: none;
         }

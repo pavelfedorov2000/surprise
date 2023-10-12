@@ -12,7 +12,7 @@
     }
 
     img {
-        @media(max-width: $md) {
+        @media(max-width: $ms) {
             filter: grayscale(100%);
             transition: var(--transition) filter;
         }
@@ -20,7 +20,7 @@
 
     &.swiper-slide-active {
         img {
-            @media(max-width: $md) {
+            @media(max-width: $ms) {
                 filter: none;
             }
         }

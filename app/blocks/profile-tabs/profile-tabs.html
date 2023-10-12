@@ -1,21 +1,16 @@
-<nav class="profile-block__tabs" aria-label="Табы">
-    <div class="tabs tabs--items_3" role="tablist">
-        @@loop('blocks/tab/tab.html', [{
-            "style": "2",
-            "id": "profile_tab_1",
-            "controls": "profile-tabs-content-1",
-            "text": "Неоплаченные заказы",
-            "isActive": true
-        }, {
-            "style": "2",
-            "id": "profile_tab_2",
-            "controls": "profile-tabs-content-2",
-            "text": "История заказов",
-        }, {
-            "style": "2",
-            "id": "profile_tab_3",
-            "controls": "profile-tabs-content-3",
-            "text": "Электронные сертификаты",
-        }])
+<nav class="profile-block__tabs">
+    <div class="tabs tabs--style_col">
+        <a href="#" class="tab@@if(context.firstActive){ active} tab--style_2">
+            Календарь подарков
+        </a>
+        <a href="#" class="tab@@if(context.secondActive){ active} tab--style_2">
+            Неоплаченные заказы
+        </a>
+        <a href="#" class="tab@@if(context.thirdActive){ active} tab--style_2">
+            История заказов
+        </a>
+        <a href="#" class="tab@@if(context.fourthActive){ active} tab--style_2">
+            Электронные сертификаты
+        </a>
     </div>
 </nav>

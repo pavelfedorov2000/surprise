@@ -6,11 +6,11 @@
         display: grid;
         gap: var(--offset-xxxl);
 
-        @media(max-width: $md) {
+        @media(max-width: $ms) {
             gap: var(--offset-l);
         }
 
-        @media(min-width: 1201px) {
+        @media(min-width: $xxxl) {
             grid-template-columns: 438px 1fr;
         }
     }
@@ -56,13 +56,13 @@
     &__top {
         margin-bottom: var(--offset-l);
 
-        @media(max-width: $md) {
+        @media(max-width: $ms) {
             margin-bottom: 0;
             margin-top: var(--offset-m);
         }
     }
 
-    @media(max-width: $md) {
+    @media(max-width: $ms) {
         flex-direction: column-reverse;
     }
 }

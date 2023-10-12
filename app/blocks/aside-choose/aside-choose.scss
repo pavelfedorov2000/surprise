@@ -8,7 +8,7 @@
     background-color: var(--white);
     box-shadow: var(--bsh);
 
-    @media(min-width: 1201px) {
+    @media(min-width: $xxxl) {
         border-radius: var(--brs-card-xl);
     }
 

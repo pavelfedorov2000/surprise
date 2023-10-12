@@ -54,7 +54,7 @@
         box-shadow: var(--bsh);
         border-radius: 0 0 var(--brs-card-xl) var(--brs-card-xl);
 
-        @media(max-width: $md) {
+        @media(max-width: $ms) {
             padding: 30px var(--offset-l) var(--offset-sm);
         }
 

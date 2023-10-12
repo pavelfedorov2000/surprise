@@ -106,7 +106,7 @@
             display: grid;
         }
 
-        @media(min-width: 1201px) {
+        @media(min-width: $xxxl) {
             padding: 61.5px;
             font-size: 32px;
             line-height: calc(38 / 32 * 100%);
@@ -141,7 +141,7 @@
     }
 
     .mob-rating {
-        @media(max-width: $md) {
+        @media(max-width: $ms) {
             top: 20px;
             right: 18px;
         }

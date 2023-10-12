@@ -68,7 +68,7 @@
                                                  }
                                                  @@if(context.data){
                                                  data-@@data.attr="@@data.value"
-                                                 }>
+                                                 } @@if(context.fancybox){data-fancybox}>
     @@if(!context.icon_position_right){
     @@if(context.sprite){
     @@include('blocks/sprite/sprite.html', {

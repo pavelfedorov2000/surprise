@@ -47,7 +47,7 @@
     &__content {
         padding: var(--offset-m) var(--offset-l) var(--offset-xl);
 
-        @media(max-width: $md) {
+        @media(max-width: $ms) {
             padding: var(--offset-m);
         }
 

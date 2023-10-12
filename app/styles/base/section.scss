@@ -58,14 +58,14 @@
 		justify-content: space-between;
 		flex-wrap: wrap;
 
-		@media(max-width: $md) {
+		@media(max-width: $ms) {
 			margin-bottom: var(--offset-l);
 		}
 
 		.section-title {
 			margin-bottom: 0;
 
-			@media(max-width: $md) {
+			@media(max-width: $ms) {
 				margin-bottom: 0;
 			}
 		}
@@ -85,7 +85,7 @@
 	&__content {
 		@include row-grid(var(--offset-xl));
 
-		@media(max-width: $md) {
+		@media(max-width: $ms) {
 			row-gap: var(--offset-m);
 		}
 	}

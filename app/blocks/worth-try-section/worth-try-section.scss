@@ -25,7 +25,7 @@
     &__content {
         @include row-grid(var(--offset-xl));
 
-        @media(max-width: $md) {
+        @media(max-width: $ms) {
             row-gap: var(--offset-m);
         }
 

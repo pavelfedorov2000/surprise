@@ -25,7 +25,7 @@
     // .promo-post__inner
 
     &__inner {
-        @media(min-width: 1201px) {
+        @media(min-width: $xxxl) {
             display: grid;
             grid-template-rows: 130px minmax(calc(544px - var(--bottom-offset)), max-content) var(--bottom-offset);
         }
@@ -54,11 +54,11 @@
     // .promo-post__tabs
 
     &__tabs {
-        @media(min-width: 1201px) {
+        @media(min-width: $xxxl) {
             padding-bottom: var(--offset-xxl);
         }
 
-        @media(max-width: $md) {
+        @media(max-width: $ms) {
             margin-bottom: 42px;
         }
 

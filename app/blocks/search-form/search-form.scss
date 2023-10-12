@@ -1,14 +1,14 @@
 .search-form {
     position: relative;
-    width: 296px;
+    //width: 296px;
 
-    @media(max-width: $md) {
-        width: auto;
+    @media(max-width: $ms) {
+        //width: auto;
         transition: var(--transition) all;
     }
 
     &.active {
-        @media(max-width: $md) {
+        @media(max-width: $ms) {
             position: fixed;
             top: 0;
             left: 0;
@@ -21,18 +21,20 @@
     }
 
     &__input {
-        width: 100%;
+        width: var(--offset-xl);
         padding: 0;
         transition: var(--transition) all;
         @include hide();
 
-        @media(max-width: $md) {
+        @media(max-width: $ms) {
             height: 100%;
             border: none;
         }
 
+
         &.active {
-            padding: 15.5px calc(var(--offset-m) * 3) 17.5px var(--offset-m);
+            width: 100%;
+            padding: var(--offset-s) calc(var(--offset-m) * 3) var(--offset-s) var(--offset-m);
             @include show();
         }
     }
@@ -43,7 +45,7 @@
         position: absolute;
         top: 50%;
         transform: translateY(-50%);
-        right: var(--offset-s);
+        right: calc(var(--offset-m) - var(--offset-xxs));
         padding: var(--offset-xxs);
         display: inline-flex;
         align-items: center;

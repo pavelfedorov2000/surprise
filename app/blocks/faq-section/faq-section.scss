@@ -3,7 +3,7 @@
 	// .faq-section__inner
 
 	&__inner {
-		@media(min-width: 1201px) {
+		@media(min-width: $xxxl) {
 			display: flex;
 			align-items: flex-start;
 			justify-content: space-between;
@@ -17,7 +17,7 @@
 	// .faq-section__content
 
 	&__content {
-		@media(min-width: 1201px) {
+		@media(min-width: $xxxl) {
 			padding-right: var(--section-padding-xs);
 		}
 	}
@@ -36,7 +36,7 @@
 			padding-bottom: 74.93%;
 		}
 
-		@media(min-width: 1201px) {
+		@media(min-width: $xxxl) {
 			flex: 0 0 calc(627 / #{$container} * 100%);
 		}
 

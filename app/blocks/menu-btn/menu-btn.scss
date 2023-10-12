@@ -13,7 +13,7 @@
     }
 
     &[aria-expanded="true"] {
-        @media(max-width: $md) {
+        @media(max-width: $ms) {
             background-image: url(../images/icons/close.svg);
             background-position: center;
             background-repeat: no-repeat;

@@ -11,7 +11,7 @@
         display: grid;
         gap: var(--offset-xl);
 
-        @media(max-width: $md) {
+        @media(max-width: $ms) {
             gap: var(--offset-l);
         }
 
@@ -19,7 +19,7 @@
             grid-template-columns: repeat(2, 1fr);
         }
 
-        @media(min-width: 1201px) {
+        @media(min-width: $xxxl) {
             grid-template-columns: repeat(3, 1fr);
             align-items: flex-start;
         }

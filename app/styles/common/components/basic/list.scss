@@ -27,7 +27,7 @@
 .icons-list {
 	@include row-grid(var(--offset-l));
 
-	@media(max-width: $md) {
+	@media(max-width: $ms) {
 		@include row-grid(var(--offset-m));
 	}
 

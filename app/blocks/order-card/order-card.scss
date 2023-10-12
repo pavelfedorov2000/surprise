@@ -4,7 +4,7 @@
     box-shadow: var(--bsh);
     padding: var(--offset-xl) var(--offset-l);
 
-    @media(max-width: $md) {
+    @media(max-width: $ms) {
         padding: var(--offset-l) var(--offset-m);
     }
 

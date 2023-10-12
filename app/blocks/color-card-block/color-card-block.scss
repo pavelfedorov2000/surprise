@@ -7,7 +7,7 @@
         margin-left: calc(var(--offset-l) * (-1));
     }
 
-    @media(min-width: 1201px) {
+    @media(min-width: $xxxl) {
         margin-left: calc(var(--offset-xxxl) * (-1));
     }
 
@@ -19,7 +19,7 @@
             width: calc(50% - var(--offset-l));
         }
 
-        @media(min-width: 1201px) {
+        @media(min-width: $xxxl) {
             margin-left: var(--offset-xxxl);
             width: calc(50% - var(--offset-xxxl));
         }

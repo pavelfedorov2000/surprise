@@ -3,7 +3,7 @@
 
     position: relative;
 
-    @media(max-width: $md) {
+    @media(max-width: $ms) {
         padding-bottom: 68.8%;
     }
 
@@ -19,7 +19,7 @@
     &--full-width {
         padding-bottom: 34.375%;
 
-        @media(max-width: $md) {
+        @media(max-width: $ms) {
             padding-bottom: 91.47%;
         }
     }

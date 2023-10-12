@@ -8,7 +8,7 @@
 	height: 100%;
 
 	.slider-btn {
-		@media(max-width: $md) {
+		@media(max-width: $ms) {
 			display: none;
 		}
 	}
@@ -51,21 +51,11 @@
 
 		.swiper-horizontal>.swiper-pagination-bullets,
 		.swiper-pagination-bullets.swiper-pagination-horizontal {
-			display: flex;
-			justify-content: center;
 			bottom: var(--offset-xs);
 		}
 
 		.swiper-horizontal>.swiper-pagination-bullets .swiper-pagination-bullet,
 		.swiper-pagination-horizontal.swiper-pagination-bullets .swiper-pagination-bullet {
-			position: relative;
-			width: var(--offset-s);
-			height: var(--offset-s);
-			border-radius: 50%;
-			background-color: transparent;
-			opacity: 1;
-			margin: 0;
-
 			&::before {
 				content: '';
 				position: absolute;
@@ -182,7 +172,7 @@
 
 	&--type {
 		&_combo {
-			@media(max-width: $md) {
+			@media(max-width: $ms) {
 				display: grid;
 				grid-template-columns: 80px 1fr;
 				gap: var(--offset-s);
@@ -192,13 +182,13 @@
 				&__slider {
 					height: 200px;
 
-					@media(max-width: $md) {
+					@media(max-width: $ms) {
 						display: none;
 					}
 				}
 
 				&__img {
-					@media(max-width: $md) {
+					@media(max-width: $ms) {
 						flex-shrink: 0;
 						display: block;
 						height: 66px;
@@ -221,7 +211,7 @@
 				&__content {
 					@include row-grid(var(--offset-xxs));
 
-					@media(max-width: $md) {
+					@media(max-width: $ms) {
 						padding-top: 0;
 					}
 				}
@@ -246,7 +236,7 @@
 
 				/* &__leader,
 				&__prices {
-					@media(max-width: $md) {
+					@media(max-width: $ms) {
 						display: none;
 					}
 				} */

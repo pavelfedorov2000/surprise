@@ -1,0 +1,40 @@
+<div class="bouquet-item">
+  <div class="bouquet-card">
+    @@include("blocks/img/img.html", {
+      "pictureClass": "bouquet-card__picture",
+      "class": "bouquet-card__img",
+      "src": "@@src",
+      "format": "png",
+      "width": "154",
+      "height": "160",
+    })
+    <div class="bouquet-card__content">
+      @@include("blocks/title/title.html", {
+        "class": "bouquet-card__title",
+        "tag": "div",
+        "text": "@@title",
+      })
+      <div class="bouquet-card__bottom">
+        <div class="bouquet-card__price prices">
+          <b class="price">118</b>
+          руб.
+        </div>
+        @@include("blocks/button/button.html", {
+          "transparent": true,
+          "class": "bouquet-card__info-btn",
+          "icon": "info",
+        })
+      </div>
+      @@include("blocks/button/button.html", {
+        "style": "bg-pink",
+        "class": "bouquet-item__btn",
+        "text": "Добавить в заказ",
+      })
+    </div>
+  </div>
+  @@include("blocks/button/button.html", {
+    "style": "bg-pink",
+    "class": "bouquet-item__btn",
+    "text": "Добавить в заказ",
+  })
+</div>

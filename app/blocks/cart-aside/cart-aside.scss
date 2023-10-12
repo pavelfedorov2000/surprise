@@ -5,11 +5,11 @@
     box-shadow: var(--bsh);
     border-radius: var(--brs-card-xl);
 
-    @media(min-width: 1201px) {
+    @media(min-width: $xxxl) {
         @include sticky(var(--offset-l));
     }
 
-    @media(max-width: $md) {
+    @media(max-width: $ms) {
         padding: var(--offset-l) var(--offset-m);
     }
 

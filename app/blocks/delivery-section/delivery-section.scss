@@ -59,7 +59,7 @@
 		}
 
 		&:nth-child(4n + 1) {
-			@media(min-width: 1201px) {
+			@media(min-width: $xxxl) {
 				border-left: none;
 			}
 		}

@@ -15,10 +15,14 @@
         display: flex;
     }
 
-    &__value {
-        color: var(--text-color);
-        border-bottom: 1px solid var(--text-color);
-    }
+	@media(max-width: $lg) {
+		bottom: var(--bottom-bar-height);
+	}
+
+	&__value {
+		color: var(--text-color);
+		border-bottom: 1px solid var(--text-color);
+	}
 
     &__btn {
         @include padding-y(var(--offset-s));

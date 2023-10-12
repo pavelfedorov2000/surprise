@@ -1,0 +1,68 @@
+.add-bouquet {
+  &__inner {
+    @include row-grid(var(--offset-l));
+
+    @media (min-width: $xl) {
+      grid-template-columns: 228px 1fr;
+      gap: var(--offset-s);
+      align-items: flex-start;
+    }
+  }
+
+  &__btns {
+    @include row-grid(var(--offset-xl));
+
+    @media (max-width: $lg) {
+      display: flex;
+      gap: 0;
+      overflow-x: auto;
+      border-bottom: 2px solid var(--green);
+    }
+  }
+
+  &__btn {
+    padding: 0 0 0 var(--offset-m);
+    border-radius: 0;
+    font-size: 20px;
+    font-weight: 600;
+
+    @media (max-width: $lg) {
+      padding: var(--offset-s) var(--offset-m);
+      font-size: 16px;
+      font-family: 'Museo Sans Cyrl 300', sans-serif;
+      font-weight: 300;
+      color: var(--text-color);
+      white-space: nowrap;
+      border-radius: var(--brs-xl) var(--brs-xl) 0 0;
+    }
+
+    @media (any-hover: hover) {
+      &:hover {
+       color: var(--green);
+      }
+    }
+
+    &.active {
+      @media (min-width: $xl) {
+        border-left: 5px solid var(--green);
+        color: var(--green);
+      }
+
+      @media (max-width: $lg) {
+        background-color: var(--green);
+        color: var(--white);
+        font-family: 'Museo Sans Cyrl 500', sans-serif;
+        font-weight: 400;
+      }
+    }
+  }
+
+  &__items {
+    @include row-grid(var(--offset-s));
+
+    @media (min-width: 768px) {
+      grid-template-columns: repeat(3, 1fr);
+      gap: var(--offset-m);
+    }
+  }
+}

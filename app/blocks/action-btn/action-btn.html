@@ -1,6 +1,6 @@
 <@@if(!context.button){a href="#" }@@if(context.button){button} class="action-btn@@if(context.class){ @@class}"
 	aria-label="@@ariaLabel" @@if(context.button){type="button" } @@if(context.popup){aria-expanded="false"
-	data-popup="@@popup" aria-controls="@@popup" }>
+	@@if(!context.dropdown){data-popup="@@popup"} aria-controls="@@popup" }>
 	@@if(context.icon){
         @@include('blocks/sprite/sprite.html', {
             "icon": "@@icon"

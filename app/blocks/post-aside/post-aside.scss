@@ -1,7 +1,7 @@
 .post-aside {
     @include row-grid(var(--offset-l));
 
-    @media(min-width: 1201px) {
+    @media(min-width: $xxxl) {
         @include sticky(50px);
     }
 

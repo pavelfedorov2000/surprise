@@ -10,7 +10,7 @@
     &--margin-bottom {
         &_m {
             > * {
-                @media(max-width: $md) {
+                @media(max-width: $ms) {
                     margin-bottom: var(--offset-m);
                 }
             }

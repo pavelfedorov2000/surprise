@@ -25,13 +25,13 @@
 	width: 100%;
 	height: max-content;
 
-	@media(min-width: 1201px) {
+	@media(min-width: $xxxl) {
 		max-width: 687px;
 	}
 }
 
 .establishment-gallery {
-	@media(min-width: 1201px) {
+	@media(min-width: $xxxl) {
 		margin-bottom: 14px;
 	}
 
@@ -39,7 +39,7 @@
 		position: relative;
 		padding-bottom: 68.415%;
 
-		@media(max-width: $md) {
+		@media(max-width: $ms) {
 			padding-bottom: 61.225%;
 		}
 
@@ -57,7 +57,7 @@
 .establishment-gallery-thumbs {
 	display: none;
 
-	@media(min-width: 1201px) {
+	@media(min-width: $xxxl) {
 		display: block;
 	}
 

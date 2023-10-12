@@ -257,7 +257,7 @@
                     backdrop-filter: blur(2px);
                     transition: var(--transition) all;
 
-                    @media(max-width: $md) {
+                    @media(max-width: $ms) {
                         @include padding-y(18px);
                     }
 

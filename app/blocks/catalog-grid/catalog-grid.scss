@@ -9,7 +9,7 @@
 		gap: var(--offset-xls) var(--offset-l);
 	}
 
-	@media(max-width: $md) {
+	@media(max-width: $ms) {
 		grid-template-columns: minmax(calc(320px - var(--container-padding) * 2), 1fr);
 	}
 
@@ -17,7 +17,7 @@
 		&_xs {
 			--baseWidth: 290px;
 
-			@media(min-width: 1201px) {
+			@media(min-width: $xxxl) {
 				gap: 30px;
 
 				.catalog-card {

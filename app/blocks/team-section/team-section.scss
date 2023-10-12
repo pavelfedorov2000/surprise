@@ -7,7 +7,7 @@
 			flex: 0 0 516px;
 		}
 
-		@media(min-width: 1201px) {
+		@media(min-width: $xxxl) {
 			margin-right: 93px;
 		}
 	}
@@ -18,7 +18,7 @@
 		max-width: 752px;
 		padding-right: 72px;
 
-		@media(max-width: $md) {
+		@media(max-width: $ms) {
 			padding-right: 0;
 		}
 	}

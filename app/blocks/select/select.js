@@ -28,12 +28,12 @@ app.select = {
             }
         });
 
-        $('.select__arrow').on('click', function () {
+        $('.select__arrow-btn').on('click', function () {
             const $selectArrow = $(this);
             const $select = $selectArrow.closest('.select');
             const $selectContent = $select.find('.select__content');
             const $selectNotActive = $select.siblings();
-            const $selectArrowNotActive = $selectNotActive.find('.select__arrow');
+            const $selectArrowNotActive = $selectNotActive.find('.select__arrow-btn');
             const $selectContentNotActive = $selectNotActive.find('.select__content');
             const $catalogFilters = $select.siblings();
             const $catalogFiltersBtns = $catalogFilters.find('.catalog-filter__btn');

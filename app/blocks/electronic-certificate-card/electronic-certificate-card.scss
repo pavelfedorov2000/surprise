@@ -1,12 +1,14 @@
 .electronic-certificate-card {
-    @include row-grid(var(--offset-m));
+    display: flex;
+    flex-direction: column;
+    row-gap: var(--offset-m);
     justify-items: start;
     padding: var(--offset-xl) var(--offset-xl) var(--offset-xls);
     background-color: var(--white);
     box-shadow: var(--bsh);
     border-radius: var(--brs-card-xl);
 
-    @media(max-width: $md) {
+    @media(max-width: $ms) {
         padding: var(--offset-m);
     }
 
@@ -35,7 +37,7 @@
             gap: var(--offset-m);
         }
 
-        @media(max-width: $md) {
+        @media(max-width: $ms) {
             flex-direction: column;
         }
     }
@@ -48,7 +50,7 @@
         padding-bottom: 19.236%;
         flex: 0 0 216px;
 
-        @media(max-width: $md) {
+        @media(max-width: $ms) {
             width: 100%;
             padding-bottom: 55%;
         }
@@ -132,7 +134,7 @@
             flex-wrap: wrap;
         }
 
-        @media(max-width: $md) {
+        @media(max-width: $ms) {
             flex-direction: column;
             align-items: flex-start;
         }

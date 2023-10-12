@@ -20,7 +20,7 @@
             display: flex;
         }
 
-        @media(max-width: $md) {
+        @media(max-width: $ms) {
             padding: var(--offset-l) var(--offset-m);
         }
     }
@@ -61,7 +61,7 @@
             min-width: 200px;
         }
 
-        @media(max-width: $md) {
+        @media(max-width: $ms) {
             margin-bottom: var(--offset-m);
         }
 
@@ -85,7 +85,7 @@
         font-size: 20px;
         margin-bottom: var(--offset-xxs);
 
-        @media(max-width: $md) {
+        @media(max-width: $ms) {
             font-family: 'Museo Sans Cyrl 500',
                 sans-serif;
             font-weight: 500;

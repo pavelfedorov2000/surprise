@@ -3,7 +3,7 @@
     // .benefits-list__item
 
     &__item {
-        @media(max-width: $md) {
+        @media(max-width: $ms) {
             display: none;
         }
 

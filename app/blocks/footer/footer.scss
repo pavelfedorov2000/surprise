@@ -1,8 +1,12 @@
 .footer {
+	@media(max-width: $lg) {
+		padding-bottom: var(--bottom-bar-height);
+	}
+
 	&__body {
 		padding-bottom: 60px;
 
-		@media(max-width: $md) {
+		@media(max-width: $ms) {
 			align-items: center;
 			padding-bottom: var(--offset-l);
 		}
@@ -26,7 +30,7 @@
 			grid-template-columns: repeat(8, 1fr);
 		}
 
-		@media(min-width: 1201px) {
+		@media(min-width: $xxxl) {
 			grid-template-areas: 'info menu catalog address contacts';
 			grid-template-columns: calc(274 / 1440 * 100%) minmax(calc(216 / 1440 * 100%), 1fr) minmax(calc(190 / 1440 * 100%), 1fr) calc(277 / 1440 * 100%) auto;
 		}
@@ -42,12 +46,12 @@
 			grid-column: span 2;
 		}
 
-		@media(max-width: $md) {
+		@media(max-width: $ms) {
 			justify-items: center;
 		}
 
 		&:first-child {
-			@media(min-width: 1201px) {
+			@media(min-width: $xxxl) {
 				row-gap: 51px;
 			}
 		}
@@ -115,11 +119,11 @@
 	&__info {
 		@include row-grid(var(--offset-l));
 
-		@media(min-width: 1201px) {
+		@media(min-width: $xxxl) {
 			margin-top: auto;
 		}
 
-		@media(max-width: $md) {
+		@media(max-width: $ms) {
 			justify-items: center;
 		}
 	}
@@ -129,7 +133,7 @@
 	&__info-text {
 		@include row-grid(var(--offset-xxs));
 
-		@media(max-width: $md) {
+		@media(max-width: $ms) {
 			text-align: center;
 			justify-items: center;
 		}
@@ -142,7 +146,7 @@
 		flex-direction: column;
 		@include row-grid(var(--offset-xxxs));
 
-		@media(max-width: $md) {
+		@media(max-width: $ms) {
 			align-items: center;
 		}
 	}
@@ -164,7 +168,7 @@
 	&__menu {
 		@include margin-y(calc(var(--offset-xxs) * (-1)));
 
-		@media(max-width: $md) {
+		@media(max-width: $ms) {
 			text-align: center;
 			justify-self: stretch;
 		}
@@ -174,7 +178,7 @@
 		display: flex;
 		padding: var(--offset-xxs) 0;
 
-		@media(max-width: $md) {
+		@media(max-width: $ms) {
 			justify-content: center;
 		}
 	}
@@ -184,7 +188,7 @@
 	&__address-items {
 		@include row-grid(var(--offset-m));
 
-		@media(max-width: $md) {
+		@media(max-width: $ms) {
 			justify-items: center;
 		}
 	}
@@ -193,7 +197,7 @@
 		display: flex;
 		flex-direction: column;
 
-		@media(max-width: $md) {
+		@media(max-width: $ms) {
 			text-align: center;
 			align-items: center;
 		}
@@ -231,7 +235,7 @@
 			align-items: center;
 			margin: var(--offset-xxxs) var(--offset-xxs);
 
-			@media(max-width: $md) {
+			@media(max-width: $ms) {
 				@include margin-x(var(--offset-xs));
 				min-width: 48px;
 				max-width: calc(25% - var(--offset-xs) * 2);

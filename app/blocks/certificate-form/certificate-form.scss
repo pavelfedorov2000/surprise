@@ -4,7 +4,7 @@
     align-items: flex-start;
     padding-top: var(--offset-xxxl);
 
-    @media(min-width: 1201px) {
+    @media(min-width: $xxxl) {
         grid-template-columns: 1fr calc(500 / #{$container} * 100%);
     }
 

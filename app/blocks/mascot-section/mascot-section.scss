@@ -1,5 +1,5 @@
 .mascot-section {
-    @media(min-width: 1201px) {
+    @media(min-width: $xxxl) {
         margin-top: calc(var(--offset-xl) * (-1));
     }
 
@@ -34,7 +34,7 @@
             }
         }
 
-        @media(min-width: 1201px) {
+        @media(min-width: $xxxl) {
             margin-left: 80px;
         }
     }

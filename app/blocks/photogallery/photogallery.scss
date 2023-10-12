@@ -15,7 +15,7 @@
     }
 
     &__grid {
-        @media(min-width: 1201px) {
+        @media(min-width: $xxxl) {
             transform: none !important;
             display: grid;
             gap: 15px;
@@ -29,19 +29,19 @@
     &__item {
         position: relative;
 
-        @media(min-width: 1201px) {
+        @media(min-width: $xxxl) {
             width: 100% !important;
             border-radius: var(--brs-card-xl);
         }
 
         &:first-child {
-            @media(min-width: 1201px) {
+            @media(min-width: $xxxl) {
                 grid-row: span 2;
             }
         }
 
         img {
-            @media(min-width: 1201px) {
+            @media(min-width: $xxxl) {
                 border-radius: var(--brs-card-xl);
             }
         }
@@ -78,13 +78,37 @@
         background-position: center;
         background-repeat: no-repeat;
 
-        @media(max-width: $md) {
+        @media(max-width: $ms) {
             background-size: var(--offset-xxxl);
         }
 
-        @media(min-width: 1201px) {
+        @media(min-width: $xxxl) {
             @include hide();
             transition: var(--transition) all;
+        }
+    }
+
+    &--popup {
+        @media(max-width: $xxl) {
+            @include margin-x(0);
+        }
+        
+        #{$this} {
+            &__grid {
+                @media(min-width: $xxxl) {
+                    gap: 7.5px;
+                    grid-template-columns: calc(415 / 700 * 100%) repeat(2, 1fr);
+                    grid-template-rows: repeat(2, 97px);
+                }
+            }
+
+            &__item {
+                img {
+                    @media(max-width: $sm) {
+                        border-radius: var(--brs-xl) var(--brs-xl) 0 0;
+                    }
+                }
+            }
         }
     }
 }
