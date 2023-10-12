@@ -1,9 +1,8 @@
 .search-form {
     position: relative;
-    //width: 296px;
+    transition: var(--transition) width;
 
     @media(max-width: $ms) {
-        //width: auto;
         transition: var(--transition) all;
     }
 
@@ -21,10 +20,10 @@
     }
 
     &__input {
-        width: var(--offset-xl);
-        padding: 0;
+        width: 100%;
+        padding: var(--offset-s) calc(var(--offset-m) * 3) var(--offset-s) var(--offset-m);
         transition: var(--transition) all;
-        @include hide();
+        //@include hide();
 
         @media(max-width: $ms) {
             height: 100%;
@@ -33,9 +32,9 @@
 
 
         &.active {
-            width: 100%;
-            padding: var(--offset-s) calc(var(--offset-m) * 3) var(--offset-s) var(--offset-m);
-            @include show();
+            //width: 100%;
+            //padding: var(--offset-s) calc(var(--offset-m) * 3) var(--offset-s) var(--offset-m);
+            //@include show();
         }
     }
 
@@ -51,7 +50,7 @@
         align-items: center;
         border-radius: 50%;
         font-size: 24px;
-        transition: var(--transition) background-color;
+        transition: var(--transition) background-color, var(--transition) right;
 
         @media (any-hover: hover) {
             &:hover {

@@ -59,7 +59,7 @@
     </div>
     <label class="form-item">
       <span class="form-label">Дата</span>
-      <input class="input" placeholder="Placeholder">
+      <input class="input" placeholder="Placeholder" data-date>
     </label>
     <div class="form-item">
       <span class="form-label">Откуда вы о нас узнали</span>
@@ -87,8 +87,11 @@
         </div>
       </div>
     </div>
-    <button class="btn btn--style_bg-yellow" type="submit">
-      <span class="btn__text">Добавить</span>
-    </button>
+    @@include("blocks/button/button.html", {
+      "type": "submit",
+      "style": "bg-yellow",
+      "class": "order-ready__form-btn",
+      "text": "Добавить",
+    })
   </form>
 </div>

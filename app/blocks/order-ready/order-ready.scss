@@ -16,5 +16,9 @@
   
   &__form {
     @include row-grid(15px);
+
+    &-btn {
+      justify-content: center;
+    }
   }
 }

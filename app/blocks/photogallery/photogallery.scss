@@ -97,9 +97,13 @@
             &__grid {
                 @media(min-width: $xxxl) {
                     gap: 7.5px;
-                    grid-template-columns: calc(415 / 700 * 100%) repeat(2, 1fr);
+                    grid-template-columns: 1fr repeat(2, 86px);
                     grid-template-rows: repeat(2, 97px);
                 }
+            }
+
+            &__player-btn {
+                background-size: 38px 35px;
             }
 
             &__item {

@@ -25,6 +25,10 @@ $(function () {
         position: 'top center'
     });
 
+    new AirDatepicker('.order-ready__form .input[data-date]', {
+        position: 'top center'
+    });
+
     new AirDatepicker('#edit-event .input[data-date]', {
         selectedDates: [new Date($('#edit-event .input[data-date]').val())],
         position: 'top center'
@@ -122,7 +126,7 @@ $(function () {
         const $calendarDropdown = $('.calendar-dropdown');
         const $calendarBtn = $('.js-calendar');
 
-        if (!$calendarBtn.is(e.target) && !$calendarBtn.find('svg').is(e.target)) {
+        if (!$calendarBtn.is(e.target) && !$calendarBtn.find('svg').is(e.target) && !$calendarDropdown.is(e.target) && $calendarDropdown.has(e.target).length === 0) {
             $calendarBtn.attr('aria-expanded', false);
             $calendarBtn.attr('aria-label', 'Открыть календарь событий');
             $calendarDropdown.removeClass('active');
@@ -133,7 +137,7 @@ $(function () {
         const $notificationsDropdown = $('.notifications-dropdown');
         const $notificationsBtn = $('.js-notifications');
 
-        if (!$notificationsBtn.is(e.target) && !$notificationsBtn.find('svg').is(e.target)) {
+        if (!$notificationsBtn.is(e.target) && !$notificationsBtn.find('svg').is(e.target) && !$notificationsDropdown.is(e.target) && $notificationsDropdown.has(e.target).length === 0) {
             $notificationsBtn.attr('aria-expanded', false);
             $notificationsBtn.attr('aria-label', 'Открыть календарь событий');
             $notificationsDropdown.removeClass('active');

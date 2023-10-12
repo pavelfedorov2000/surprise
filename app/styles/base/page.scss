@@ -43,6 +43,11 @@
 			flex-direction: row;
 			align-items: center;
 			gap: var(--offset-s);
+			display: none;
+
+			@media (max-width: $sm) {
+				display: flex;
+			}
 		}
 
 		&--margin-bottom {

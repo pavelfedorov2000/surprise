@@ -57,6 +57,7 @@
 
   &__btn {
     @include padding-y(var(--offset-s));
+    justify-content: center;
     line-height: 1.25;
   }
 }

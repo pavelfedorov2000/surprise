@@ -166,7 +166,7 @@
 	}
 
 	&__btn {
-		@include padding-x(var(--offset-xs));
+		@include padding-x(var(--offset-xxs));
 		justify-content: center;
 	}
 
