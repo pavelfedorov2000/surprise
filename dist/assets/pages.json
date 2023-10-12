@@ -1,0 +1,97 @@
+[{
+    "href": "home.html",
+    "title": "Главная"
+}, {
+    "href": "certificate.html",
+    "title": "Продукт"
+}, {
+    "href": "combo.html",
+    "title": "Комбо"
+}, {
+    "href": "gift-set.html",
+    "title": "Подарочный набор"
+}, {
+    "href": "universal-certificate.html",
+    "title": "Универсальный сертификат на сумму"
+}, {
+    "href": "catalog.html",
+    "title": "Каталог"
+}, {
+    "href": "cart.html",
+    "title": "Корзина"
+}, {
+    "href": "profile.html",
+    "title": "Личный кабинет - Разводящая (только для мобилы)"
+}, {
+    "href": "unpaid-orders.html",
+    "title": "Личный кабинет - Неоплаченные заказы"
+}, {
+    "href": "profile-empty.html",
+    "title": "Личный кабинет - Неоплаченные заказы (пустая)"
+}, {
+    "href": "orders-history.html",
+    "title": "Личный кабинет - История заказов"
+}, {
+    "href": "electronic0certificates.html",
+    "title": "Личный кабинет - Электронные сертификаты"
+}, {
+    "href": "about.html",
+    "title": "О нас"
+}, {
+    "href": "blog.html",
+    "title": "Блог"
+}, {
+    "href": "reviews.html",
+    "title": "Отзывы"
+}, {
+    "href": "activate-certificate.html",
+    "title": "Активация сертификата"
+}, {
+    "href": "activate-certificate-2.html",
+    "title": "Активация сертификата 2"
+}, {
+    "href": "corporate-clients.html",
+    "title": "Корпоративным клиентам"
+}, {
+    "href": "gastrobar.html",
+    "title": "Гастробар 'Правда'"
+}, {
+    "href": "activate-certificate-success.html",
+    "title": "Сертификат успешно активирован"
+}, {
+    "href": "become-partner.html",
+    "title": "Стать партнером"
+}, {
+    "href": "delivery.html",
+    "title": "Доставка и оплата"
+}, {
+    "href": "shops.html",
+    "title": "Где купить"
+}, {
+    "href": "partners.html",
+    "title": "Партнеры"
+}, {
+    "href": "search-results.html",
+    "title": "Результаты поиска"
+}, {
+    "href": "search-results-empty.html",
+    "title": "Результаты поиска (не найдено)"
+}, {
+    "href": "favorite.html",
+    "title": "Избранное"
+}, {
+    "href": "vacancies.html",
+    "title": "Вакансии"
+}, {
+    "href": "policy.html",
+    "title": "Публичный довогор"
+}, {
+    "href": "order-ready.html",
+    "title": "Заказ сформирован"
+}, {
+    "href": "404.html",
+    "title": "Страница не найдена"
+}, {
+    "href": "post.html",
+    "title": "Пост"
+}]
