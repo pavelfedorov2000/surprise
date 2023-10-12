@@ -64,7 +64,9 @@
             }
 
             &__btn {
-                right: 0;
+                @media (min-width: $xl) {
+                    right: 0;
+                }
             }
         }
 
@@ -77,7 +79,9 @@
 
             .search-form {
                 &__btn {
-                    right: calc(var(--offset-m) - var(--offset-xxs));
+                    @media (min-width: $xl) {
+                        right: calc(var(--offset-m) - var(--offset-xxs));
+                    }
                 }
             }
         }

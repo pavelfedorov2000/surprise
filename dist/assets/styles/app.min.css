@@ -2700,8 +2700,10 @@ textarea::-webkit-resizer {
   visibility: visible;
   pointer-events: all;
 }
-.actions-header__search .search-form__btn {
-  right: 0;
+@media (min-width: 1025px) {
+  .actions-header__search .search-form__btn {
+    right: 0;
+  }
 }
 .actions-header__search.active {
   width: 296px;
@@ -2711,8 +2713,10 @@ textarea::-webkit-resizer {
     width: auto;
   }
 }
-.actions-header__search.active .search-form__btn {
-  right: calc(var(--offset-m) - var(--offset-xxs));
+@media (min-width: 1025px) {
+  .actions-header__search.active .search-form__btn {
+    right: calc(var(--offset-m) - var(--offset-xxs));
+  }
 }
 .actions-header__btn {
   margin-left: calc(var(--offset-xxxl) - var(--offset-xxs));
