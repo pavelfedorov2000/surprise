@@ -1,6 +1,4 @@
-<button class="close-btn@@if(context.class){ @@class__close}@@if(context.visibilityClass){ @@visibilityClass}"
-        aria-label="@@ariaLabel"
-        type="button">
+<button class="close-btn@@if(context.class){ @@class__close}@@if(context.visibilityClass){ @@visibilityClass}" aria-label="@@ariaLabel" type="button" @@if(context.data){data-@@data.attr}>
     @@include('blocks/sprite/sprite.html', {
         "icon": "close"
     })

@@ -171,6 +171,7 @@
 
         &-btn {
             @include padding-y(14px);
+            justify-content: center;
         }
     }
 

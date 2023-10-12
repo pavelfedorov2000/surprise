@@ -1137,12 +1137,9 @@ fieldset {
 .btn--style_link-2::after {
   bottom: 3px;
 }
-.btn--style_link-3, .btn--style_link-4, .btn--style_link-5, .btn--style_look {
+.btn--style_link-3, .btn--style_link-4, .btn--style_look {
   font-family: "Museo Sans Cyrl 300", sans-serif;
   font-weight: 300;
-}
-.btn--style_link-5 {
-  text-decoration: underline;
 }
 .btn--style_link-5:focus, .btn--style_link-5:active {
   background-color: transparent;
@@ -7962,6 +7959,7 @@ textarea::-webkit-resizer {
 .popup__form-btn {
   padding-top: 14px;
   padding-bottom: 14px;
+  justify-content: center;
 }
 .popup__add-btn {
   justify-self: start;

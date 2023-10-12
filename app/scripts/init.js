@@ -116,6 +116,12 @@ $(function () {
         }
     });
 
+    $('.add-event-box__btn').on('click', function() {
+        $('.js-calendar').attr('aria-expanded', false);
+        $('.js-calendar').attr('aria-label', 'Открыть календарь событий');
+        $('.calendar-dropdown').removeClass('active');
+    });
+
     $('#remove-event .popup__btn:last-child').on('click', function() {
         $(this).closest('.popup').fadeOut();
         $('.overlay').fadeOut();
