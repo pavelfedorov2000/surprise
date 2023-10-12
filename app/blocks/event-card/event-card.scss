@@ -17,6 +17,10 @@
     margin-right: calc(var(--offset-xxs) * (-1));
   }
 
+  &__btn {
+    justify-content: center;
+  }
+
   &__middle {
     margin-bottom: var(--offset-sm);
     display: flex;

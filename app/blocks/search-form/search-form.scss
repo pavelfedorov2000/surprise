@@ -23,19 +23,6 @@
         width: 100%;
         padding: var(--offset-s) calc(var(--offset-m) * 3) var(--offset-s) var(--offset-m);
         transition: var(--transition) all;
-        //@include hide();
-
-        @media(max-width: $ms) {
-            height: 100%;
-            border: none;
-        }
-
-
-        &.active {
-            //width: 100%;
-            //padding: var(--offset-s) calc(var(--offset-m) * 3) var(--offset-s) var(--offset-m);
-            //@include show();
-        }
     }
 
     // .search-form__btn
