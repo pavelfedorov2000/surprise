@@ -2856,7 +2856,9 @@ textarea::-webkit-resizer {
   text-align: center;
 }
 .add-event-box__btn {
-  padding: var(--offset-xs) var(--offset-s);
+  padding-right: var(--offset-xxs);
+  padding-left: var(--offset-xxs);
+  width: 100%;
   justify-content: center;
 }
 @media (max-width: 576px) {
@@ -2865,6 +2867,8 @@ textarea::-webkit-resizer {
   }
 }
 .add-event-box--card {
+  margin-top: auto;
+  margin-bottom: auto;
   padding: var(--offset-xxs);
   border: none;
   gap: var(--offset-l);
@@ -3468,6 +3472,7 @@ textarea::-webkit-resizer {
 .bottom-bar__count {
   top: var(--offset-s);
   left: 50%;
+  color: var(--text-color);
 }
 .bottom-bar__text {
   font-size: 12px;
@@ -6215,7 +6220,7 @@ textarea::-webkit-resizer {
   display: flex;
   flex-direction: column;
   background-color: var(--white);
-  border-radius: var(--brs-xs);
+  border-radius: var(--brs-card);
   box-shadow: 0 2.39535px 17.96512px 0 rgba(170, 154, 154, 0.25);
 }
 .event-card__top {
@@ -7211,7 +7216,7 @@ textarea::-webkit-resizer {
   width: 348px;
   display: flex;
   flex-direction: column;
-  gap: var(--offset-m);
+  gap: var(--offset-s);
   background-color: var(--white);
   border-radius: var(--brs-xl);
   box-shadow: var(--bsh);
@@ -7251,9 +7256,10 @@ textarea::-webkit-resizer {
 }
 .dropdown__title {
   font-size: 24px;
+  margin-bottom: var(--offset-xxs);
 }
-.dropdown__slider-nav {
-  margin-top: var(--offset-s);
+.dropdown__calendar {
+  margin-bottom: var(--offset-xxs);
 }
 @media (max-width: 576px) {
   .dropdown__add-event {
@@ -8034,7 +8040,7 @@ textarea::-webkit-resizer {
   }
 }
 .popup--width_xxl {
-  padding: var(--offset-xxxl) var(--offset-xls);
+  padding: var(--offset-xls);
   width: 700px;
 }
 @media (max-width: 767px) {

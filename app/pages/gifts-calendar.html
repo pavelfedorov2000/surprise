@@ -40,7 +40,7 @@
 								</svg>
 							</div>
 							<div class="select__content">
-								<input id="sortFilter0" class="select__input" type="radio" name="sort" checked />
+								<input id="sortFilter0" class="select__input" type="radio" name="catalogSort" checked />
 								<label for="sortFilter0" tabindex="0" class="select__label" data-value="По алфавиту">По алфавиту</label>
 								<input id="sortFilter1" class="select__input" type="radio" name="catalogSort" />
 								<label for="sortFilter1" tabindex="0" class="select__label" data-value="По дате добавления">По дате
@@ -78,9 +78,14 @@
 					</div>
 					<div class="profile-block__items">
 						<div class="event-card">
-							@@include('blocks/add-event-box/add-event-box.html', {
-								"modifier": "card"
-							})
+							<div class="add-event-box add-event-box--card">
+								<button class="btn add-event-box__btn btn--style_bg-green-light" data-fancybox data-src="#add-event">
+									<svg class="icon btn__icon">
+										<use xlink:href="assets/images/sprite.svg#plus-green"></use>
+									</svg>
+									<span class="btn__text">Добавить событие</span>
+								</button>
+							</div>
 						</div>
 						@@include('blocks/event-card/event-card.html')
 						@@include('blocks/event-card/event-card.html')

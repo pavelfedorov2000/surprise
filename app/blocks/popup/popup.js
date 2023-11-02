@@ -79,7 +79,7 @@ app.popup = {
 
         Fancybox.bind('[data-fancybox]', {
             autoFocus: false,
-            dragToClose: false,
+            //dragToClose: false,
             closeButton: false,
             showClass: 'fancybox-fadeIn',
             Toolbar: {

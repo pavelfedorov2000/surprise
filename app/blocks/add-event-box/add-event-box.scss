@@ -24,7 +24,8 @@
   }
 
   &__btn {
-    padding: var(--offset-xs) var(--offset-s);
+    @include padding-x(var(--offset-xxs));
+    width: 100%;
     justify-content: center;
 
     @media (max-width: $sm) {
@@ -33,6 +34,7 @@
   }
 
   &--card {
+    @include margin-y(auto);
     padding: var(--offset-xxs);
     border: none;
     gap: var(--offset-l);

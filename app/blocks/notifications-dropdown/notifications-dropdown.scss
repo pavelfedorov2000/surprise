@@ -13,7 +13,7 @@
   width: 348px;
   display: flex;
   flex-direction: column;
-  gap: var(--offset-m);
+  gap: var(--offset-s);
   background-color: var(--white);
   border-radius: var(--brs-xl);
   box-shadow: var(--bsh);
@@ -52,10 +52,11 @@
   &__title {
     @extend %museo-700;
     font-size: 24px;
+    margin-bottom: var(--offset-xxs);
   }
 
-  &__slider-nav {
-    margin-top: var(--offset-s);
+  &__calendar {
+    margin-bottom: var(--offset-xxs);
   }
 
   &__add-event {
